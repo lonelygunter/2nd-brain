@@ -1,0 +1,7 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {I}Libri di testo consigliati}{1}{section.1}%
+\contentsline {section}{\numberline {II}Databases - 28.09.22}{1}{section.2}%
+\contentsline {section}{\numberline {III}Database System Concepts and Architecture - 28.09.22}{1}{section.3}%
+\contentsline {section}{\numberline {IV}Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}{2}{section.4}%
+\contentsline {section}{Riferimenti bibliografici}{2}{section*.2}%

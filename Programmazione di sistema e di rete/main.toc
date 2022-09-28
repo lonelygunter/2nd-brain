@@ -1,0 +1,6 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {I}Libri di testo consigliati}{1}{section.1}%
+\contentsline {section}{\numberline {II}Introduzione}{1}{section.2}%
+\contentsline {section}{\numberline {III}28.09.2022}{1}{section.3}%
+\contentsline {section}{Riferimenti bibliografici}{2}{section*.2}%
