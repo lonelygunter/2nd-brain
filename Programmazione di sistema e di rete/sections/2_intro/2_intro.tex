@@ -8,11 +8,12 @@ Per poi poter "raccontare" tra umani le sequenze di bit che vengono mandate ai p
 Sono effettivamente delle chiamate a funzioni ma poi dal codice assembly puoi capire che è una system call dato che ha dei meccanismi specifici.
 
 Alcuni esempi di chiamate e registri:
-\itemize{}
-	\item \underline{eax} : registro dove metti il \underline{numero della sc}
-	\item \underline{int 0x80}: \underline{avvisa il kernel} che serve chiamare una sc
-	\item \underline{exit()}: chiudere un processo
-	\item \underline{write()}:
+\begin{itemize}
+	\item \textbf{eax} : registro dove metti il \textbf{numero della sc}
+	\item \textbf{int 0x80}: \textbf{avvisa il kernel} che serve chiamare una sc
+	\item \textbf{exit()}: chiudere un processo
+	\item \textbf{write()}:
+\end{itemize}
 
 \begin{lstlisting}
 mov edx,4    ; lunghezza messaggio
