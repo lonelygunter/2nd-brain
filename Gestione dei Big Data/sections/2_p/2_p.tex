@@ -1,9 +1,6 @@
 
-\section{28.09.22}
+\section{Databases - 28.09.22}
 
-RIEPILOGO DI CONCETTI DI BASE DEI DB RELAZIONALI:
-
-cap 1: database
 1. definizioni di base:
 dato: insieme di fatti conosciuti registrati con un significato. Sono detti dati grezzo visto che si suppone che andrò a elaborarlo, questo dato sarà poi archiviato, sarà un fatto conosciuto cioè degli eventi con un significato per un dato tipologia di utenti ed e1 conosciuto dato che c'e1 una sorgente che produce i dati con una cerca velocità.
 
@@ -69,9 +66,7 @@ recovery: se la transazione è stat eseguita e1 stata recorded nel database
 
 
 
-
-cap 2: 
-
+\section{Database System Concepts and Architecture - 28.09.22}
 
 data model: insieme di concetti che descrivon ola struttura di un db, le operaizoni e i vincoli applicati al db
 
@@ -147,5 +142,44 @@ cliets: per far accedere gli utenti
 dbms server: per esegjuire query e transazioni tramite API 
 
 three-tier: abiamo 3 livelli: ...
+
+
+
+
+
+\section{Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}
+
+parto dal minimondo che posso ricevere come descrizione scritta. nella gstione del minimondo serve acrpire cosa serve e cosa no questi sono i requisi ti dati. quindi la mi a applicazione deve gestire alcuni dati e poi parli vedere (requidisti relazionali). dai data requirements ho, tramite il modellista, la conversione in un modello concettuale, poi abbiamo l'applicaizone dell'algoritmo di mapping da parte del modellista il dbms si pccuparà del physics design e il successivo internal schema. per definire le transazioni dal miniworld dobbiamo estrarre i functional reuirements per effettuare una functional analysis che genera delle transazioni ad alto livello.
+
+
+notiamo che le entita si scelgono in base ai sostantivi e le relaizoni in base ai verbi
+
+
+entita (sostatnivi): oggetti o co se specifiche presenti nel minimodno ch ebisogna rappresentare
+
+attributi (proprietà): desirttori per ogni entità
+
+record: insieme degli attributi che si danno ad un entità
+
+tipo dato: tipo per ogni attributo
+	dato singolo: ha un unico valore
+	
+	dato composto: dati da un insieme di più descrittori, possono formare una gerarchia, notazione ...(... , ...)
+	
+	dato multivalore: attributi che hanno n-uple di valori, notazione {...}
+	
+	
+presa la mia entità possiamo identificare univocamente tutti i record tramite gli attributi chiave oppure un unione tra l'attributo chiave ed un altro attributo.
+
+
+le relazione relathiontship son oquello che collegano le entità. il grado di tipo della relazione e1 il numero di partecipanti a quella relazione. bisogna quindi identificare qunate volte la relazione viene persorsa. ER lo scriviamo da sx a dx e da su a giù. i nomi delle entitá vanno al singolare e verbi alla terza persona e attivi o passi per capire da cheparte si deve leggere la relazione. per la caridinalità posso dirla leggendo la relazione e chiedendomi quante volte è valida per l'entità opposta, cercando di capire un solo elemento  quante entità può avere dellaltrao
+
+
+
+entita debole: entita che da sola non può esistere, quindi didpende da un entità più forte
+
+
+
+le cardinalità pssono essere:
 
 
