@@ -1,7 +1,10 @@
 
-\section{Introduzione}
+\section{Introduzione - 23/27.09.22}
 
-\IEEEPARstart{S}{ystem call}: sono \hl{uguali alle funzioni di libreria dal punto di vista sintattico, però cambia il modo di compilarle}. Notare che non possono essere usati i nomi delle SC per delle function call.
+% System call
+\subsection{System call}
+
+Sono \hl{uguali alle funzioni di libreria dal punto di vista sintattico, però cambia il modo di compilarle}. Notare che non possono essere usati i nomi delle SC per delle function call.
 
 Per poi poter "raccontare" tra umani le sequenze di bit che vengono mandate ai processori si usa \hl{assembly}.
 
@@ -23,48 +26,10 @@ mov eax,4    ; numero della sc
 int 0x80	
 \end{lstlisting}
 
-dove nel \hl{file descriptor} indichi a quale file devi mandare l'output. Questo viene usato dato che così non deve sercare il path ogni volta ma lo mantiene aperto riferendosi ad esso tramite il numero
+dove nel \hl{file descriptor} indichi a quale file devi mandare l'output. Questo viene usato dato che così non deve cercare il path ogni volta ma lo mantiene aperto riferendosi ad esso tramite il numero.
 
 
+% Programma Make
+\subsection{Programma Make}
 
-
---------
-\begin{lstlisting}
-aaprile317@hplinux3**:**~/PSR2022/apue.3e**$ find . -type f -perm -0100
-./standards/makeopt.awk
-./standards/makeconf.awk
-./proc/awkexample
-./systype.sh
-./advio/fixup.awk
-\end{lstlisting}
-
-programma Make: sulla base del file: Makefile oppure uso make -f in questo faile ci sono le regole di cosa fare in mod da automatizzare delle azioni per un n numero di file. se durante la compilaizone di massa una di queste da un errore, il programma make si interrompe, per evitare ciò si usa '-i' (ignore)
-
-direttive di preprocessore (-DMACOS -D_DARWIN_C_SOURCE): sono delle indicazioni fatte prima di iniziare la compilaizione, viene detto a gcc. iniziano tutte con # (es: #include) include puo avere libreire di sistema <lib> oppure di librerie fatte da noi e non in directory standard
-
-altre:
-#define:
-
-sostituzione di una stringa con un'altra (detta "macro") (es: #define BUFLEN), utile per #ifdef. possono essere passate a linnea di comando le macro per poterle definire
-function like macro (#define ABSOLUTE_VALUE(x) (((x)<0)?-(x):(x)) ) dove emetterà l'arbomento al posto della x
-#ifdef, #ifndef, #endif
-
-es una macreo è stata definita allora fai ciò che segue:
-#ifdef VAR
-print("hello");
-#endif
-per evitare che più file includano lo stesso si usano degli ifndef in tutto il codice, in modo da evitare doppie definizioni
-
-nella compilaizone creiamo dei file oggetto per ogni file .c (gcc -c bill.c) creando dei file .o (oggetto). un file compilato è un file dove ci son otanti bit che sifgnificano qualcosa per il processore. si va quindi a creare il prototipo della funzione.
-
-tramite il linker si andranno ad unire tutti i file per crearne uno unico con tutto al suo interno(tutte le chiamate) scioglimento dei riferimenti incrociati. dove quandi si vanno a recuperare le definizioni
-
-file dei protipi .h
-file delle definizioni .c
-
-abbiamo già le istruzioni del processore per le funzioni di sistema quindi abbiamo il file sorgente si e no dato che abbiamo direttamente l'eseguibile. jquesto codice si trova in un file di libreia cioè un insieme di file oggetto linkati in un unico file. al suoi interno c'e i lcodice ogetto di tutte le funzioni
-
-libreire dinamiche, stessa cosa ma stanno epr fatti loro (dormienti) e vengono linkate a runtime all'occorrenza
-
-per fare il linking:
-gcc -o program program.o bill.o
+Quando viene avviato verifica la presenza di un file chiamato "Makefile", oppure si usa 'make -f'. In questo file ci sono le \hl{regole di cosa fare per automatizzare delle azioni per un numero n di file}. Se, durante la compilazione di massa, \hl{una di queste da un errore il programma make si interrompe}, per evitare ciò si usa '-i' (ignore).

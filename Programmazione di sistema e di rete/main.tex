@@ -33,7 +33,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% CREA E SCRIVI ALCUNI COMANDI %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  %% Viene creato un nuovo tipo di colonna denominata P.
+\newcolumntype{P}[1]{$>${\centering\arraybackslash}p{#1}}  %% Viene creato un nuovo tipo di colonna denominata P.
 
 % correggere la sillabazione errata qui
 \hyphenation{op-tical net-works semi-conduc-tor} %% Con questo comando si specifica come separare correttamente le sillabe nel caso in cui una parola si trovi in due diverse righe di testo
@@ -133,9 +133,10 @@ INGEGNERIA INFORMATICA \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% SEZIONI DEL DOCUMENTO %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{sections/1_libri/1_libri}
+\input{sections/0_libri/0_libri}
+\input{sections/1_comandi/1_comandi}
 \input{sections/2_intro/2_intro}
-\input{sections/3_p/3_p}
+\input{sections/3_compilazione/3_compilazione}
 
 
 
