@@ -1,0 +1,159 @@
+\documentclass[journal]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% PACCHETTI PRINCIPALI %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{nccmath}
+\usepackage{subfigure}
+\usepackage{amsfonts,latexsym}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{threeparttable}
+\usepackage{array,colortbl}
+\usepackage{ifpdf}
+\usepackage{rotating}
+\usepackage{cite}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{soul}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CREA E SCRIVI ALCUNI COMANDI %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  %% Viene creato un nuovo tipo di colonna denominata P.
+
+% correggere la sillabazione errata qui
+\hyphenation{op-tical net-works semi-conduc-tor} %% Con questo comando si specifica come separare correttamente le sillabe nel caso in cui una parola si trovi in due diverse righe di testo
+
+\graphicspath{ {img/} }  %%Percorso dove si trovano le immagini, se è vuoto indica che le immagini sono all'interno della stessa cartella che contiene il file .tex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% INTESTAZIONE DELLE PAGINE TIPO UNICAFAM %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MYhead}{\smash{\scriptsize
+\hfil\parbox[t][\height][t]{\textwidth}{\centering
+\begin{picture}(0,0) \put(-30,-13){\includegraphics[width=30mm]{logoUnisalento.jpg}} \end{picture} \hspace{6.4cm}
+INGEGNERIA INFORMATICA \\
+\hspace{5.2cm} DIPARTIMENTO DI INGEGNERIA DELL'INNOVAZIONE \hspace{3cm} \\
+\underline{\hspace{ \textwidth}}}\hfil\hbox{}}}
+\makeatletter
+
+% normal pages
+\def\ps@headings{%
+\def\@oddhead{\MYhead}%
+\def\@evenhead{\MYhead}}%
+
+% title page
+\def\ps@IEEEtitlepagestyle{%
+\def\@oddhead{\MYhead}%
+\def\@evenhead{\MYhead}}%
+\makeatother
+
+% make changes take effect
+\pagestyle{headings}
+
+% adjust as needed
+\addtolength{\footskip}{0\baselineskip}
+\addtolength{\textheight}{-1\baselineskip}
+
+%define colors for code language
+\definecolor{codegreen}{rgb}{0,0.7,0.3}
+\definecolor{codegray}{rgb}{0,0,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\definecolor{keywordcolor}{rgb}{0.8,0.3,0}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{keywordcolor},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4
+}
+
+\lstset{style=mystyle}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% INIZIO DEL DOCUMENTO %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TITOLO DEL DOCUMENTO %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Programmazione di Sistema e di Rete}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% AUTORE %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Matteo Aprile\\
+				Professore: Franco Tommasi\\
+        }
+        
+%scrive il titolo
+\maketitle
+
+%scrive l'indice
+\tableofcontents
+\underline{\hspace{ 80 mm }}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SEZIONI DEL DOCUMENTO %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/1_libri/1_libri}
+\input{sections/2_intro/2_intro}
+\input{sections/3_p/3_p}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% BIBLIOGRAFIA %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{1}
+
+\bibitem{nome_bibliografia}
+	\url{https://en.wikibooks.org/wiki/LaTeX/Hyperlinks}
+\end{thebibliography}
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% FINE DEL DOCUMENTO %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
