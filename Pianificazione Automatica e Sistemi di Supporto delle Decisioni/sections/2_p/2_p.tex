@@ -1,0 +1,31 @@
+
+\section{Software solutions and languages for AP and DSS - 29.09.22}
+
+
+tipo operativo strutturato:
+una classe importante è eulad e delle decisioni di tipo operativo o strutturato cioè che si possono prendere tramite una procedura standard che può seguire un manuale o delle normative, automatizzata o no. queste decisioni di breve periodo si collocano in basso a destra in figura  \ref{diadec}. Quindi non sono decisioni dove possiamo solo supportare allora si possono andare a codificare in un linguaggio di programmazione procedurale come c++ java ecc. questo approccio si oppone ad un approccio dove devo far generare delle azioni in seguito di un obiettivo. detto approccio procedurale
+
+approccio dichiarativo: in 2 fasi nella prima modello il problema e nella seconda fase lo descrivo tramite un linguaggio di modellazione (modelling language) che è un linguaggio di programmazione matematico come AMPL, oppure in linguaggi come python con Amply e Pulp. abbiamo altri paradigmi basai sull'inferenza logica e quindi cambia sia il paradigma che il linguaggio. la terza fase abbiamo un solver of the shelf, che può essere un planner che ci darà delle istruzioni per il nostro contesto.
+
+notare che se approcciamo una decisione strutturata implemento una procedura tramite la quale creo un piano con certi vincoli oppure uso un approccio dichiarativo quindi analisi dei requisiti -> linguaggio ->  solver
+
+
+le limitazioni sono che in genere gli approcci dichiarativi sono più flessibili, dato che se cambia un vincolo operativo non devo mettere le mani al codice ma dovrò solo cambiare il modello senza cambiare il solver quindi è quello più economico e flessibile, in genere pero è meno performate se in ambienti realtime devo prendere soluzioni in tempi molto stretti. quindi in questi casi servono approcci procedurali
+
+in caso di alcuni sistemi al soluzoion deve prendere soluzioni nel breve allora si usa C C++, C#
+
+
+
+tipo decisioni non strutturate o desrtrutturate: non possiamo automatizzare. si parte allora dai dati si tirano fuori i dati aggregati per creare statistiche ecc e con l'aiuto di modelli di ottimizzazione. in questi casi si parte da un analisi dei dati sempre diversi. si usa uno spreadsheet per tirare fuori delle statistiche l'unico problema e1 che no riescono a gestire big data e tendono a genrare errori
+
+
+abbiamo anche soluzioni altre di tipo proprietario come SaS, Minitab, IBM
+
+i linguaggio più usato è python ma non e1 la soluzione più efficiente per tutte quelle applicazioni dove il tempo di calcolo è importante dato che è un linguaggio precompilato????
+
+
+strumenti usati: colab https://colab.research.google.com/
+
+nell'ambito delle decisioni semistrutturate dove vogliano solo valutare le prestazione di un certo sistema. tipo quanod parliamo di ssitemk che presentano un comportamento random per un tot di motivi: 1. i server hanno un tempo di risposta che possiamo modellare 2. le richiedste del sistema arrivano in maniera stocastica. 
+
+si usano in questo casi metodi simulativi tramite dei visual interactive modellling system per simulare la rete per la quale passano le informazioni e i server ogniuno con diverse proprietà di ciascun linker 
