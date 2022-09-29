@@ -1,0 +1,54 @@
+
+\section{Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}
+
+Partendo dal mini-world serve \hl{capire i requisiti utili}. Bisognerà far gestire, all'applicazione, alcuni dati per poi visualizzarli (requisiti relazionali).
+
+La procedura sarà:
+
+\begin{enumerate}
+	\item acquisizione dei data requirements
+	\item conversione in un modello concettuale
+	\item applicazione dell'algoritmo di mapping
+	\item DBMS si occupa di physics design ed internal schema
+\end{enumerate}
+
+in parallelo avremo la \hl{gestione delle transazioni} del mini-world estraendo i functional requirements per effettuare una functional analysis che genera delle transazioni ad alto livello.
+
+
+% Entity-Relationship (ER)
+\subsection{Entity-Relationship (ER)}
+
+Per la scelta degli elementi avremo:
+
+\begin{itemize}
+	\item \hl{entita' (sostantivi)}: \textbf{oggetti o cose specifiche} presenti nel mini-world che bisogna rappresentare
+
+	\item \hl{relazioni (verbi)}: \textbf{collegano le entita'}. Il \textbf{grado di tipo} della relazione è il \textbf{numero di partecipanti a quella relazione}, identificando quante volte la relazione viene percorsa
+	
+	\item \hl{attributi (proprieta')}: \textbf{descrittori} per ogni entità
+	
+	\item \hl{record}: \textbf{insieme degli attributi} che si danno ad un entità
+	
+	\item \hl{dato singolo}: ha un unico valore
+	
+	\item \hl{dato composto}: dati da un \textbf{insieme di più descrittori}, notazione: ...(... , ...)
+	
+	\item \hl{dato multivalore}: attributi che hanno \textbf{n-uple di valori}, notazione: {...}
+	
+	\item \hl{attributo chiave}: \textbf{identificare univocamente tutti i record}. Si può usare anche un'unione tra attributo chiave e un altro attributo
+	
+	\item \hl{entita' debole}: entità che \textbf{da sola non può esistere}, quindi didpende da un entità più forte
+	
+\end{itemize}
+
+Piccoli \hl{accorgimenti da avere}:
+
+\begin{itemize}
+	\item scritto da \textbf{sx a dx} e dall'altro verso il basso
+	
+	\item nomi delle \textbf{entita' al singolare}
+	
+	\item \textbf{verbi alla terza persona} e attivi o passi per capire da che parte si deve leggere la relazione
+	
+	\item per la \textbf{carcinalita'} mi chiedendo per un solo elemento  quante entità può avere dell'altro. Può essere 1:1, 1:N, M:N
+\end{itemize}

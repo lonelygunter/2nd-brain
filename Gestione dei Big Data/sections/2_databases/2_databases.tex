@@ -1,0 +1,118 @@
+
+\section{Databases - 28.09.22}
+
+% Definizioni di base
+\subsection{Definizioni di base}
+
+Le definizioni di base da sapere sono:
+\begin{itemize}
+	\item \hl{dato}: \textbf{insieme di fatti conosciuti, registrati e con un significato}. È detto dato grezzo visto che si suppone che andrò ad elaborarlo, questo dato \textbf{sara' poi archiviato}, sarà un \textbf{fatto conosciuto} cioè avremo:
+		\begin{itemize}
+			\item \textbf{eventi con un significato} per un dato tipologia di utenti 
+			\item sorgente che \textbf{produce i dati} con una cerca velocità
+		\end{itemize}
+	
+	\item \hl{DataBase}: \textbf{raccolta di dati altamente organizzati, intercorrelati e strutturati}. È una struttura con dei collegamenti strutturati tra i dati
+
+	\item \hl{DBMS Data Base Managment System}: insieme di \textbf{programmi per accedere ai dati e farci delle operazioni} di 4 tipi: creazione, recupero, aggiornamento e cancellazione, ciclo \textbf{CRUD}. Ne favorisce anche il mantenimento.
+
+	\item \hl{mini-world}: \textbf{parte del mondo reale alla quale si riferiscono i dati presi} andando a \textbf{limitare la modellazione} in un numero n di concetti
+
+	\item \hl{DataBase System}: insieme di DBMS con i dati
+	
+	\item \hl{astrazione}: \textbf{separare i dati dai collegamenti tra le entità per disporle in un modello} senza che esso si occupi di come salvare i dati
+	
+	\item \hl{modello concettuale}: formato da entità e relaizoni
+	
+	\item \hl{modello fisico}: definizione dei tipi dato e dove sono \textbf{conservati}
+	
+	\item \hl{controllo della concorrenza}: garantire che tutte le transazioni sono \textbf{correttamente eseguite}
+	
+	\item \hl{recovery}: se la transazione è stata eseguita è stata conservata nel database
+\end{itemize}
+
+
+% Tipologie di DB
+\subsection{Tipologie di DB}
+
+Esistono molti tipi di DB:
+
+\begin{itemize}
+	\item numerici o testuali
+	\item multimediali
+	\item Geographic Information Systems (GIS)
+	\item Data Warehouses
+\end{itemize}
+
+
+% Ciclo di vita del DB
+\subsection{Ciclo di vita del DB}
+
+È opportuno vedere un \hl{concetto di base dei dati}, cioè il loro ciclo di vita. Il più semplice è:
+
+\begin{enumerate}
+	\item \textbf{acquisizione} (scattered data)
+	\item \textbf{aggregazione} (integrated data)
+	\item \textbf{analisi} (knowledge)
+	\item finisce in un \textbf{applicazione} che genera dei "log data" che saranno poi acquisiti come scattered data
+\end{enumerate}
+
+Da un \hl{punto di vista computazionale} queste fasi si devono prendere in un altro modo:
+
+\begin{enumerate}
+	\item storage dei data
+	\item formattazione e pulizia
+	\item capire cosa dicono i dati
+	\item[?)] se non mi bastano i dati che ho posso integrare dei dati
+\end{enumerate}
+
+
+% Livelli di un DB
+\subsection{Livelli di un DB}
+
+Quando si ha un DB abbiamo 3 livelli da considerare
+
+\begin{enumerate}
+	\item \hl{fisico}: dove sono \textbf{salvati i dati}
+	\item \hl{logico}: indica come i dati sono \textbf{collegati tra loro}
+	\item \hl{view}: \textbf{rappresentazione} che sarà diversa per ogni tipo di utente
+\end{enumerate}
+
+
+% DBMS Data Base Managment System
+\subsection{Data Base Managment System}
+
+Un DBMS offre l'opportunità di:
+
+\begin{itemize}
+	\item \textbf{salvataggio} dei dati
+	\item \textbf{definizione} modelli dati
+	\item \textbf{manipolazione} dei dati
+	\item \textbf{processare} e condividere i dati
+\end{itemize}
+
+Per quanto riguarda l'\hl{interazione con i DB} avremo 2 strumenti:
+
+\begin{itemize}
+	\item \hl{query}: accede a parti differenti di dati e formula una richiesta
+	\item \hl{transazioni}: legge dei dati ed aggiorna alcuni valori, salvandoli nel DB
+\end{itemize}
+
+
+% Mini-world
+\subsection{Mini-world}
+
+Avremo bisogno di \hl{identificare delle entità}, cioè i \textbf{concetti di base} che rappresentano una parte delle cose che inseriremo nel DB relazionale. Poi andremo a \hl{connettere tra loro le entita'}, dette relazioni (\hl{relationships}) (ER), \hl{ne derivano delle tabelle dette relation}.
+
+Il tutto \hl{da derivare dai requisiti} e non dall'esperienza personale.
+
+Le tabelle create dalle entità conterranno i dati che ho a disposizione. Saranno divisi in:
+
+\begin{itemize}
+	\item righe (record)
+	\item colonne (attributi)
+	\item celle (dati grezzi)
+\end{itemize}
+
+
+Si verrà quindi a creare un \hl{catalogo} con vincoli, tipo di dati e la relazione di appartenenza degli attributi.
