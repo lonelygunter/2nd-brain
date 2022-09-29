@@ -12,4 +12,18 @@ $ find . -type f -perm -0100
 ./advio/fixup.awk
 \end{lstlisting}
 
-	
+
+% find
+\subsection{find: trovare file di intestazione del mac come stdio.h}
+
+\begin{lstlisting}
+find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
+\end{lstlisting}
+
+
+% ldd
+\subsection{lld: per capire che librerie usa il codice}
+
+\begin{lstlisting}
+ldd [nomevodice]
+\end{lstlisting}

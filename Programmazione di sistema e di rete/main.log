@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  28 SEP 2022 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  29 SEP 2022 08:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -580,576 +580,77 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 106.
 LaTeX Info: Redefining \pageref on input line 106.
 LaTeX Info: Redefining \nameref on input line 106.
+ (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 \c@lstlisting=\count321
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 129.
+ (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 129.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 129.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Argument of \UTFviii@two@octets@combine has an extra }.
-<inserted text> 
-                \par 
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
+))
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
-Runaway argument?
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Paragraph ended before \UTFviii@two@octets@combine was complete.
-<to be read again> 
-                   \par 
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Argument of \UTFviii@two@octets@combine has an extra }.
-<inserted text> 
-                \par 
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Paragraph ended before \UTFviii@two@octets@combine was complete.
-<to be read again> 
-                   \par 
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Argument of \UTFviii@two@octets@combine has an extra }.
-<inserted text> 
-                \par 
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Paragraph ended before \UTFviii@two@octets@combine was complete.
-<to be read again> 
-                   \par 
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Package inputenc Error: Invalid UTF-8 byte sequence.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Missing { inserted.
-<to be read again> 
-                   }
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Package inputenc Error: Invalid UTF-8 byte sequence.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-The document does not appear to be in UTF-8 encoding.
-Try adding \UseRawInputEncoding as the first line of the file
-or specify an encoding such as \usepackage [latin1]{inputenc}
-in the document preamble.
-Alternatively, save the file in UTF-8 using your editor or another tool
-
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:4: Package soul Error: Reconstruction failed.
-
-See the soul package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...attico, però cambia il modo di compilarle}
-                                                  . Notare che non possono e...
-I came across hyphenatable material enclosed in group braces,
-which I can't handle. Either drop the braces or make the material
-unbreakable using an \mbox (\hbox). Note that a space
-also counts as possible hyphenation point. See page 4 of the manual.
-I'm leaving a black square so that you can see where I am right now.
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 17.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+ (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 32.
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 7.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 direttive di preprocessore (-DMACOS -D_
-                                            DARWIN_C_SOURCE): sono delle ind...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:42: Double subscript.
-l.42 ...ive di preprocessore (-DMACOS -D_DARWIN_C_
-                                                  SOURCE): sono delle indica...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:42: You can't use `macro parameter character #' in math mode.
-l.42 ...e, viene detto a gcc. iniziano tutte con #
-                                                   (es: #include) include pu...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:42: You can't use `macro parameter character #' in math mode.
-l.42 ...e detto a gcc. iniziano tutte con # (es: #
-                                                  include) include puo avere...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:43: Missing $ inserted.
-<inserted text> 
-                $
-l.43 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:43: Missing } inserted.
-<inserted text> 
-                }
-l.43 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-[]\OT1/ptm/m/n/10 direttive di pre-pro-ces-so-re (-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-\OT1/ptm/m/n/10 DMACOS -D$[]\OML/cmm/m/it/10 ARWIN[][]OURCE\OT1/cmr/m/n/10 ) :
- []
-
-
-Overfull \hbox (209.46114pt too wide) in paragraph at lines 42--43
-\OML/cmm/m/it/10 sonodelleindicazionifatteprimadiiniziarelacompilaizione; vienedettoagcc:inizianotuttecon\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 es \OT1/cmr/m/n/10 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-\OML/cmm/m/it/10 include\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 includepuoaverelibreiredisistema <
- []
-
-
-Overfull \hbox (42.71373pt too wide) in paragraph at lines 42--43
-\OML/cmm/m/it/10 lib > oppuredilibreriefattedanoienonindirectorystandard[]$ 
- []
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:45: You can't use `macro parameter character #' in horizontal mode.
-l.45 #
-      define:
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:47: You can't use `macro parameter character #' in horizontal mode.
-l.47 ...tringa con un'altra (detta "macro") (es: #
-                                                  define BUFLEN), utile per ...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:47: You can't use `macro parameter character #' in horizontal mode.
-l.47 ..."macro") (es: #define BUFLEN), utile per #
-                                                  ifdef. possono essere pass...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:48: You can't use `macro parameter character #' in horizontal mode.
-l.48 function like macro (#
-                           define ABSOLUTE_VALUE(x) (((x)<0)?-(x):(x)) ) dov...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:48: Missing $ inserted.
-<inserted text> 
-                $
-l.48 function like macro (#define ABSOLUTE_
-                                           VALUE(x) (((x)<0)?-(x):(x)) ) dov...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 48.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:48: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.48 ...LUE(x) (((x)<0)?-(x):(x)) ) dove emetterà
-                                                   l'arbomento al posto della x
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:48: You can't use `\spacefactor' in math mode.
-\add@accent ... \accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.48 ...LUE(x) (((x)<0)?-(x):(x)) ) dove emetterà
-                                                   l'arbomento al posto della x
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:49: You can't use `macro parameter character #' in math mode.
-l.49 #
-      ifdef, #ifndef, #endif
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:49: You can't use `macro parameter character #' in math mode.
-l.49 #ifdef, #
-              ifndef, #endif
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:49: You can't use `macro parameter character #' in math mode.
-l.49 #ifdef, #ifndef, #
-                       endif
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:50: Missing $ inserted.
-<inserted text> 
-                $
-l.50 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:50: Missing } inserted.
-<inserted text> 
-                }
-l.50 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Missing character: There is no � in font cmex10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--50
-[]\OT1/ptm/m/n/10 sostituzione di una strin-ga con un'al-tra (det-ta
- []
-
-
-Underfull \hbox (badness 7685) in paragraph at lines 47--50
-\OT1/ptm/m/n/10 "ma-cro") (es: de-fi-ne BU-FLEN), uti-le per if-def.
- []
-
-
-Underfull \hbox (badness 5847) in paragraph at lines 47--50
-\OT1/ptm/m/n/10 pos-so-no es-se-re pas-sa-te a lin-nea di co-man-do le
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--50
-\OT1/ptm/m/n/10 ma-cro per po-ter-le de-fi-ni-re func-tion li-ke ma-cro
- []
-
-
-Overfull \hbox (50.70302pt too wide) in paragraph at lines 47--50
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )))\OML/cmm/m/it/10 doveemetter[]l[]arbomentoalpostodellaxifdef; ifndef; endif[]$ 
- []
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:50: Too many }'s.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.50 
-     
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:52: You can't use `macro parameter character #' in horizontal mode.
-l.52 #
-      ifdef VAR
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex:54: You can't use `macro parameter character #' in horizontal mode.
-l.54 #
-      endif
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-<img//logoUnisalento.jpg, id=4, 565.11125pt x 197.73875pt>
+)) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+<img//logoUnisalento.jpg, id=74, 565.11125pt x 197.73875pt>
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 9.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 53.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- </Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg>]
-Underfull \hbox (badness 1789) in paragraph at lines 28--30
-[]\OT1/ptm/m/n/10 per ca-pi-re che li-bre-rie usa il co-di-ce si usa: otool -L
+ </Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg>]) (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+Underfull \hbox (badness 1460) in paragraph at lines 61--62
+[]\OT1/ptm/m/n/10 Per com-pi-la-re con la ver-sio-ne di-na-mi-ca non ser-vo-no
  []
 
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:40: Missing $ inserted.
-<inserted text> 
-                $
-l.40 ... fa -> not found), questa variabile è LD_
-                                                  LIBRARY_PATH=`pwd` ldd use...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \` invalid in math mode on input line 40.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:40: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.40 ...sesite una  libreira sattica lui prenderà
-                                                   la dinamica e dovremo spe...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:40: You can't use `\spacefactor' in math mode.
-\add@accent ... \accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.40 ...sesite una  libreira sattica lui prenderà
-                                                   la dinamica e dovremo spe...
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:41: Missing $ inserted.
-<inserted text> 
-                $
-l.41 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:41: Missing } inserted.
-<inserted text> 
-                }
-l.41 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Missing character: There is no � in font cmex10!
-
-Overfull \hbox (646.13167pt too wide) in paragraph at lines 40--41
-\OT1/cmr/m/n/10 `\OML/cmm/m/it/10 pwd\OT1/cmr/m/n/10 `\OML/cmm/m/it/10 ldduseprovaquindissesiteunalibreirasatticaluiprender[]ladinamicaedovremospecificarelavariabilediambiente:tipicamentelalibreriavienedisrtibuitanelledirecotrydisistemaandandolaad\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 installare\OT1/cmr/m/n/10 "[]$ 
- []
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:41: Too many }'s.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.41 
-     
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:43: You can't use `macro parameter character #' in horizontal mode.
-l.43 ...-dynamiclib libprova.c -o libprova.dylib #
-                                                   Builds the shared library
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:61: Misplaced alignment tab character &.
-l.61 		(cd $$i &
-                & echo "making $$i" && $(MAKE) ) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:61: Misplaced alignment tab character &.
-l.61 		(cd $$i &&
-                  echo "making $$i" && $(MAKE) ) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:61: Misplaced alignment tab character &.
-l.61 		(cd $$i && echo "making $$i" &
-                                     & $(MAKE) ) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:61: Misplaced alignment tab character &.
-l.61 		(cd $$i && echo "making $$i" &&
-                                       $(MAKE) ) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:66: Misplaced alignment tab character &.
-l.66 		(cd $$i &
-                & echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:66: Misplaced alignment tab character &.
-l.66 		(cd $$i &&
-                  echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:66: Misplaced alignment tab character &.
-l.66 		(cd $$i && echo "cleaning $$i" &
-                                       & $(MAKE) clean) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex:66: Misplaced alignment tab character &.
-l.66 		(cd $$i && echo "cleaning $$i" &&
-                                         $(MAKE) clean) || exit 1; \
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-)
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 152.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 141.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [2] (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.aux)
+[2])
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 153.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [3
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7018A89069DEC898727E5C57015E46B0;550.
+] (/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 3EEE4FE09F0041D74DE0C9664F203B52;2630.
  ) 
 Here is how much of TeX's memory you used:
- 14524 strings out of 478994
- 217030 string characters out of 5858185
- 617353 words of memory out of 5000000
- 31697 multiletter control sequences out of 15000+600000
- 441532 words of font info for 108 fonts, out of 8000000 for 9000
+ 14622 strings out of 478994
+ 219192 string characters out of 5858185
+ 706428 words of memory out of 5000000
+ 31711 multiletter control sequences out of 15000+600000
+ 440523 words of font info for 106 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,14n,88p,650b,1470s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" (2 pages, 137097 bytes).
+ 81i,15n,88p,488b,1922s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" (3 pages, 137397 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

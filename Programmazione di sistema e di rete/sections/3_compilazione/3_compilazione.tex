@@ -4,16 +4,16 @@
 \subsection{direttive di preprocessore}
 Sono delle \hl{indicazioni date a gcc prima di iniziare la compilazione}.
 
-Iniziano tutte con '#':
+Iniziano tutte con '\#':
 \begin{itemize}
-	\item \textbf{#include}: serve ad \textbf{includere delle librerie} di sistema ($<$lib.h$>$) oppure di librerie fatte da noi e non in directory standard ("lib.h")
-	\item \textbf{#define}:
+	\item \textbf{\#include}: serve ad \textbf{includere delle librerie} di sistema ($<$lib.h$>$) oppure di librerie fatte da noi e non in directory standard ("lib.h")
+	\item \textbf{\#define}:
 		\begin{itemize}
-			\item permette di \textbf{creare delle "macro"}, che vanno a sostituire una stringa con un'altra (es: #define BUFLEN), può capitare che debbano essere definite delle macro prima che si compili il programma, in questi casi si usa scrivere es: '-DMACOS'
-			\item permette di \textbf{creare delle "function like macro"} (es: #define ABSOLUTE\_VALUE(x) (((x$<$0)?-(x):(x))  
+			\item permette di \textbf{creare delle "macro"}, che vanno a sostituire una stringa con un'altra (es: \#define BUFLEN), può capitare che debbano essere definite delle macro prima che si compili il programma, in questi casi si usa scrivere es: '-DMACOS'
+			\item permette di \textbf{creare delle "function like macro"} (es: \#define ABSOLUTE\_VALUE(x) (((x$<$0)?-(x):(x))  
 		\end{itemize}
 		
-	\item \textbf{#ifdef, #ifndef, #endif}: usata per far accadere qualcosa nel caso un macro sia stata definita
+	\item \textbf{\#ifdef, \#ifndef, \#endif}: usata per far accadere qualcosa nel caso un macro sia stata definita
 \begin{lstlisting}
 #ifdef VAR
 print("hello");
@@ -22,7 +22,7 @@ print("hello");
 
 \end{itemize} 
 
-\hl{Per evitare che più file includano lo stesso si usano degli #ifndef} in tutto il codice, in modo da evitare doppie definizioni.
+\hl{Per evitare che piu' file includano lo stesso si usano degli \#ifndef} in tutto il codice, in modo da evitare doppie definizioni.
 
 
 % Librerie
@@ -113,11 +113,25 @@ Per costruire una \hl{libreria statica per Linux}:
 gcc -fPIC -Wall -g -c libprova.c
 \end{lstlisting}
 
-	\item costruiamo la \textbf{libreria}: gcc -g -shared -Wl,-soname,libprova.so.0 -o libprova.so.0.0 libprova.o -lc (indica che usa libc)
-	\item costruire del \textbf{link simbolico per aggiornare le librerie} senza aggiornare gli eseguibili. quindi si puo usare sempre lo setsso nome del programa ma saprà lui grazie ai link simboliic lo porterrano al file con la versione giusta: ln -sf libprova.so.0.0 libprova.so.0 
-	\item \textbf{linker} per risolve le chiamate: ln -sf libprova.so.0 libprova.so
+	\item costruiamo la \textbf{libreria} (con 0.0=versione della libreira):
+
+\begin{lstlisting}
+gcc -g -shared -Wl,-soname,libprova.so.0 -o libprova.so.0.0 libprova.o -lc 
+\end{lstlisting}
+
+	\item costruire il \textbf{link simbolico per aggiornare le librerie} senza aggiornare gli eseguibili e senza cambiare il nome del programma:
+
+\begin{lstlisting}
+ln -sf libprova.so.0.0 libprova.so.0 
+\end{lstlisting}
+
+	\item \textbf{linker} per risolve le chiamate:
+
+\begin{lstlisting}
+ln -sf libprova.so.0 libprova.so
+\end{lstlisting}
+
 \end{enumerate}
-1. 
 
 
 Per capire che librerie usa il codice si usa:
@@ -126,41 +140,31 @@ Per capire che librerie usa il codice si usa:
 ldd [nomevodice]
 \end{lstlisting}
 
-per defaoult avremko una compilazione dinamica, in caso constrario possiamo aggiungere -static
 
-su linux allora creeremp una variabile di ambiente imposta all'eseguibile (dato che sennò non sa dove trovarla infatti fa -$>$ not found), questa variabile è LD_LIBRARY_PATH=`pwd` ldd useprova quindi s sesite una  libreira sattica lui prenderà la dinamica e dovremo specificare la variabile di ambiente. tipicamente la libreria viene disrtibuita nelle direcotry di sistema andandola ad "installare"
+% Aggiornamento librerie
+\subsection{Aggiornamento librerie}
 
-MACOS:
-la libreria dinamica è: gcc -dynamiclib libprova.c -o libprova.dylib # Builds the shared library
+Su \textbf{Linux} il sistema \hl{andra' a prendere direttamente una libreria dinamica}, per evitare ciò e far trovare la nostra, basterà \hl{impostare una variabile di ambiente}:
 
-eseguendo il programam trova la libreira dato che va a controllare nella directory corrente e quindi non serve creare la variabile di ambiente come si linux
+\begin{lstlisting}
+LD_LIBRARY_PATH=`pwd` ldd useprova
+\end{lstlisting}
 
-i file di intestazione del mac come stdio.h per cercarla uso: find /Applications/Xcode.app/ -name stdio.h 2$>$/dev/null
-
-MAKE:
-andiamo a guardar cosa contine make file per carpire cosa fa:
+Tipicamente la libreria viene distribuita nelle directory di sistema andandola ad "installare".
 
 
+Su \textbf{MacOS} la libreria dinamica è un \hl{.dylib}:
+
+\begin{lstlisting}
+gcc -dynamiclib libprova.c -o libprova.dylib
+\end{lstlisting}
+
+Quindi eseguendo il programma \hl{trovera' la libreria controllando nella directory corrente} e quindi non serve creare la variabile di ambiente come su Linux.
+
+i file di intestazione del mac come stdio.h per cercarla uso:
+
+\begin{lstlisting}
+find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
+\end{lstlisting}
 
 
-DIRS = lib intro sockets advio daemons datafiles db environ \
-	fileio filedir ipc1 ipc2 proc pty relation signals standards \
-	stdio termios threadctl threads printer exercises
-
-all:
-	for i in $(DIRS); do \
-		(cd $$i && echo "making $$i" && $(MAKE) ) || exit 1; \
-	done
-
-clean:
-	for i in $(DIRS); do \
-		(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
-	done
-
-
-
-
-DIRS è tutta quella cosa
-
-i make file hanno delle loro regole per fare delle cose. per esempio all è detto target, cioè la cosa che vuoi fare qundi sarebbe make all. che è la cosa fi defalult dato che è il primo allora scrivendo solo make lo avvieamo. a volte possono essere dei prerequisiti che posson essere a lor volta degli altri target. la figa delle regole è quella che viene dopo i : che vengono però dopo i prerequisiti ed indica che poer fare il target bisogna usare queste regole. 
-i vincoli sintattici sono il tabulatore e poi si mettono i programmi da shell.

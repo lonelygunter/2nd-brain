@@ -4,7 +4,7 @@
 % System call
 \subsection{System call}
 
-Sono \hl{uguali alle funzioni di libreria dal punto di vista sintattico, però cambia il modo di compilarle}. Notare che non possono essere usati i nomi delle SC per delle function call.
+Sono \hl{uguali alle funzioni di libreria dal punto di vista sintattico, pero' cambia il modo di compilarle}. Notare che non possono essere usati i nomi delle SC per delle function call.
 
 Per poi poter "raccontare" tra umani le sequenze di bit che vengono mandate ai processori si usa \hl{assembly}.
 
@@ -30,6 +30,31 @@ dove nel \hl{file descriptor} indichi a quale file devi mandare l'output. Questo
 
 
 % Programma Make
-\subsection{Programma Make}
+\subsection{Programma Make - 28.09.22}
 
 Quando viene avviato verifica la presenza di un file chiamato "Makefile", oppure si usa 'make -f'. In questo file ci sono le \hl{regole di cosa fare per automatizzare delle azioni per un numero n di file}. Se, durante la compilazione di massa, \hl{una di queste da un errore il programma make si interrompe}, per evitare ciò si usa '-i' (ignore).
+
+
+Andiamo a guardare \hl{cosa contiene Makefile}:
+
+\begin{lstlisting}
+DIRS = lib intro sockets advio daemons datafiles db environ \
+	fileio filedir ipc1 ipc2 proc pty relation signals standards \
+	stdio termios threadctl threads printer exercises
+
+all:
+	for i in $(DIRS); do \
+		(cd $$i && echo "making $$i" && $(MAKE) ) || exit 1; \
+	done
+
+clean:
+	for i in $(DIRS); do \
+		(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
+	done
+\end{lstlisting}
+
+dove \hl{all e' detto target}, cioè la cosa che si vuole fare, eseguiremo allora un "make all". \textbf{Essendo il primo target, sarà anche quello di default}.
+
+Possono essere presenti dei \hl{prerequisiti}, dopo i ":", che possono essere a loro volta dei target.
+
+Obbligatoriamente avremo, dopo i prerequisiti, la \hl{riga delle regole} che \hl{indica cosa puo' fare il target}.

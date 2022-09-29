@@ -904,10 +904,22 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestri
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-OUTPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
 OUTPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
+OUTPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
-OUTPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.toc
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.toc
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.toc
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.toc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -931,30 +943,29 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_libri/1_libri.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+OUTPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.toc
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -966,17 +977,17 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/courier/pcrr8c.tfm
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
-INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_p/3_p.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
 INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
 INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
 INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
@@ -992,16 +1003,31 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/courier/pcrr8c.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_compilazione/3_compilazione.tex
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
+INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -1026,10 +1052,8 @@ INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e d
 INPUT /Users/matt/Documents/GitHub/latex-2nd-brain/Programmazione di sistema e di rete/main.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
