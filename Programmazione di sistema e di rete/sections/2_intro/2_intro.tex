@@ -58,3 +58,272 @@ dove \hl{all e' detto target}, cioè la cosa che si vuole fare, eseguiremo allor
 Possono essere presenti dei \hl{prerequisiti}, dopo i ":", che possono essere a loro volta dei target.
 
 Obbligatoriamente avremo, dopo i prerequisiti, la \hl{riga delle regole} che \hl{indica cosa puo' fare il target}.
+
+% Programma Make - 30.09.22
+\textbf{\emph{(LEZIONE - 30.09.22)}}
+
+make file: formato da rule per poter arrivare al target 
+
+a volte abbiamo uno script configure che precede make install dove install è il target. 
+
+il make file si aggiorna tramite l'ultima modifica del file seguendo pero la gerarchia
+
+molto utile il target clean per togliere tutti i file .o che sono inutili dopo la compilazione. sono detti phony perchè target fasulli dato che non sono file ma sole parole
+
+ci sono delle scorciatoie :
+\$@ per riferirsi il target
+\$? tutti i prerequisiti più recenti del target
+\$^ tutti i prerequisiti del target
+https://www.gnu.org/software/make/manual/make.html#Automatic-Variables
+
+
+quando sis scrve make si va a guadare se in quella direcotry di trova un a file chiamato Makefile. quidni se c'e1 viene eseguito
+
+abbimao:
+
+DIRS = lib intro sockets advio daemons datafiles db environ \
+	fileio filedir ipc1 ipc2 proc pty relation signals standards \
+	stdio termios threadctl threads printer exercises
+
+all:
+	for i in $(DIRS); do \
+		(cd $$i && echo "making $$i" && $(MAKE) ) || exit 1; \
+	done
+
+clean:
+	for i in $(DIRS); do \
+		(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
+	done
+	
+	
+a dire si sostituisce quelloa destra dell =
+
+all:
+manda un comando in subshell
+\$\$i sarebbe un riferimento alla varibile i ma con un escape che si fa con \$ in Makefile
+
+\$(MAKE) macro predefinita doce dico che voglio usa la macro anche se sembra essere definita. 
+
+se le regole sono a più righe, ognuna deve iniziare col tabulatore
+
+noi abbimamo pero fartto un cd e poi chiamato \$(MAKE) allora supponiamo che in ogni direcotry ha il suo make file
+
+in apue.3e abbiamo un make file:
+
+root abbiamo la cartella precedente alla cwd
+platform assumera in valore del OS macos o linux
+e poi si include ../Make.defines.macos
+
+abbiamo una altra macro PROGS che elenca.i programmi che vorremmo costruire
+
+si può usare \% per dire che unado c'e quancosa ed il prerequisnito è .c, per esempio, allra esegui la rule. indica un valore qualsisasi come una varibile. una regola implicigta per ogni file c
+
+
+altra macro \$(CC) che indica i lcompilatore dove cc è un link simbolico a clang
+
+\$(CFLAGS) indica una macro predefinite vuote dato che se le riempi danno quello che scrivi ma eseistono anche perche ci sono delle regole rpedefinite usate da delle macro
+
+in ../Make.defines.macos ho:
+
+\begin{lstlisting}
+# Common make definitions, customized for each platform
+
+# Definitions required in all program directories to compile and link
+# C programs using gcc.
+
+CC=gcc
+COMPILE.c=$(CC) $(CFLAGS) $(CPPFLAGS) -c
+LINK.c=$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+LDFLAGS=
+LDDIR=-L$(ROOT)/lib
+LDLIBS=$(LDDIR) -lapue $(EXTRALIBS)
+CFLAGS=-ansi -I$(ROOT)/include -Wall -DMACOS -D_DARWIN_C_SOURCE $(EXTRA)
+RANLIB=ranlib
+AR=ar
+AWK=awk
+LIBAPUE=$(ROOT)/lib/libapue.a
+
+# Common temp files to delete from each directory.
+TEMPFILES=core core.* *.o temp.* *.out
+\end{lstlisting}
+
+
+impostante capire che Make ha delle definizoni di fedault visibili in make -p. così facendo tutti i file passati in all si andrà a vedere se sono .c e se lo sono utilizza la rule di \% se questa rule non ci fosse userebbe la definizione di default
+
+
+se modifichiamo un solo file posisamo fare un compile.sh al quale pasimao come argomento il nome del file .c e al suoi interno mettiamo ilcomando di gcc di compilaizone. questo al posto di usare make
+
+
+gcc -H # To see the hierarchy of the include files
+gcc -E file.c # To see the effect of preprocessor directives
+
+
+
+% Direttive di preprocessore
+\subsection{Direttive di preprocessore - 28.09.22}
+Sono delle \hl{indicazioni date a gcc prima di iniziare la compilazione}.
+
+Iniziano tutte con '\#':
+\begin{itemize}
+	\item \textbf{\#include}: serve ad \textbf{includere delle librerie} di sistema ($<$lib.h$>$) oppure di librerie fatte da noi e non in directory standard ("lib.h")
+	\item \textbf{\#define}:
+		\begin{itemize}
+			\item permette di \textbf{creare delle "macro"}, che vanno a sostituire una stringa con un'altra (es: \#define BUFLEN), può capitare che debbano essere definite delle macro prima che si compili il programma, in questi casi si usa scrivere es: '-DMACOS'
+			\item permette di \textbf{creare delle "function like macro"} (es: \#define ABSOLUTE\_VALUE(x) (((x$<$0)?-(x):(x))  
+		\end{itemize}
+		
+	\item \textbf{\#ifdef, \#ifndef, \#endif}: usata per far accadere qualcosa nel caso un macro sia stata definita
+\begin{lstlisting}
+#ifdef VAR
+print("hello");
+#endif
+\end{lstlisting}
+
+\end{itemize} 
+
+\hl{Per evitare che piu' file includano lo stesso si usano degli \#ifndef} in tutto il codice, in modo da evitare doppie definizioni.
+
+
+% Librerie
+\subsection{Librerie}
+
+Durante la fase di compilazione creiamo dei file oggetto (.o) per ogni file in cui è scritta la descrizione delle funzioni di libreria (.c)
+
+\begin{lstlisting}
+gcc -c bill.c
+\end{lstlisting}
+
+Si andrà poi a creare il \hl{prototipo della funzione (.h)}.
+
+In fine \hl{tramite il linker si andranno ad unire tutti i file per crearne uno unico} con tutte le definizioni delle funzioni incluse nelle librerie, di sistema e non, importate. Si vanno quindi a \hl{sciogliere tutti i riferimenti incrociati}.
+
+\begin{lstlisting}
+	gcc -o program program.o bill.o
+\end{lstlisting}
+
+Per quanto riguarda le \hl{funzioni di sistema} NON abbiamo il file sorgente ma abbiamo direttamente l'eseguibile. In compenso abbiamo un \hl{file di libreria}, cioè un insieme di file oggetto linkati in un unico file, dove c'è il codice oggetto di tutte le funzioni.
+
+Abbiamo \textbf{2 tipi di librerie}:
+\begin{itemize}
+	\item \hl{statiche}: è una \textbf{collezione di file oggetto} che hanno il codice compilato delle funzioni e che verranno \textbf{linkati al momento della compilazione}. Il programma che si crea sarà possibile essere eseguito solo sullo stesso OS.
+		
+		Il \textbf{problema si ha nell'aggiornamento delle librerie al momento della scoperta di un bug}. Una volta coretto servirà ricevere la versione corretta per poter aggiornare il programma.
+		
+	\item \hl{dynamic}: ricordano il concetto di plug-in, quindi \textbf{viene invocato a runtime e caricato in memoria} (es: aggiornamenti dei OS). \textbf{L'eseguibile non viene toccato la correzione avviene solo nella libreria}.
+	
+		Il requisito maggiore è che chi si passa il codice debba avere lo stesso OS dell'altro utente. Notare che \textbf{non cambia il prototipo} dato che sennò bisognerà ricompilare l'intero programma.
+\end{itemize}
+
+
+In generale le \hl{librerie statiche sono molto pericolose} infatti alcuni OS le aboliscono \hl{per le questioni di sistema}. Su linux si ha come libreria statica 'lib.c' che è la libreria con le funzioni più usate in c. Per macos è stata abolita.
+
+Per compilare con la versione dinamica non servono opzioni, per la statica si usa:
+
+\begin{lstlisting}
+gcc -static
+\end{lstlisting}
+
+
+% Creazione librerie
+\subsection{Creazione librerie}
+
+Per costruire una \hl{libreria statica per MacOS}:
+
+\begin{enumerate}
+	\item costruiamo il \textbf{file oggetto}:
+
+\begin{lstlisting}
+gcc -c libprova.c
+\end{lstlisting}
+		
+	\item costruiamo la \textbf{libreria} (con ar=archive, c=create se lib.a non esiste):
+
+\begin{lstlisting}
+ar rcs libprova.a libprova.o
+\end{lstlisting}
+			
+	\item costruire il \textbf{codice} che usa la libreria (con -Wall=verbose warning, -g=debugging, -c=create del file):
+
+\begin{lstlisting}
+gcc -Wall -g -c useprova.c
+\end{lstlisting}
+	
+	\item \textbf{linker} per risolve le chiamate incrociate (con -L.=dove prendere la libreira, -l[nomelib]=usare la libreria):
+
+\begin{lstlisting}
+gcc -g -o useprova useprova.o -L. -lprova 
+\end{lstlisting}
+
+\end{enumerate}
+
+Per capire che librerie usa il codice si usa:
+
+\begin{lstlisting}
+otool -L [nomecodice]
+\end{lstlisting}
+
+
+Per costruire una \hl{libreria statica per Linux}:
+
+\begin{enumerate}
+	\item costruiamo il \textbf{file oggetto}:
+
+\begin{lstlisting}
+gcc -fPIC -Wall -g -c libprova.c
+\end{lstlisting}
+
+	\item costruiamo la \textbf{libreria} (con 0.0=versione della libreira):
+
+\begin{lstlisting}
+gcc -g -shared -Wl,-soname,libprova.so.0 -o libprova.so.0.0 libprova.o -lc 
+\end{lstlisting}
+
+	\item costruire il \textbf{link simbolico per aggiornare le librerie} senza aggiornare gli eseguibili e senza cambiare il nome del programma:
+
+\begin{lstlisting}
+ln -sf libprova.so.0.0 libprova.so.0 
+\end{lstlisting}
+
+	\item \textbf{linker} per risolve le chiamate:
+
+\begin{lstlisting}
+ln -sf libprova.so.0 libprova.so
+\end{lstlisting}
+
+\end{enumerate}
+
+
+Per capire che librerie usa il codice si usa:
+
+\begin{lstlisting}
+ldd [nomevodice]
+\end{lstlisting}
+
+
+% Aggiornamento librerie
+\subsection{Aggiornamento librerie}
+
+Su \textbf{Linux} il sistema \hl{andra' a prendere direttamente una libreria dinamica}, per evitare ciò e far trovare la nostra, basterà \hl{impostare una variabile di ambiente}:
+
+\begin{lstlisting}
+LD_LIBRARY_PATH=`pwd` ldd useprova
+\end{lstlisting}
+
+Tipicamente la libreria viene distribuita nelle directory di sistema andandola ad "installare".
+
+
+Su \textbf{MacOS} la libreria dinamica è un \hl{.dylib}:
+
+\begin{lstlisting}
+gcc -dynamiclib libprova.c -o libprova.dylib
+\end{lstlisting}
+
+Quindi eseguendo il programma \hl{trovera' la libreria controllando nella directory corrente} e quindi non serve creare la variabile di ambiente come su Linux.
+
+i file di intestazione del mac come stdio.h per cercarla uso:
+
+\begin{lstlisting}
+find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
+\end{lstlisting}
+
+
