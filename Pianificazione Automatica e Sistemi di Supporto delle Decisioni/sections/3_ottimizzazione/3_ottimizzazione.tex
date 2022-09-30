@@ -19,122 +19,214 @@ Gli ingredienti principali sanno:
 \end{itemize}
 
 
-
-parlemeno di programmazione lineare con modeli matematici lineare con delle relazioni lineari dato che ci focalizzaiamo su questi perche molti modelli lineari si trovano in modelli piu complessi e anche perche molti modelli della realta sono lineari e possono essere modellati da essi
-
-
-DESCRIZIONE PROBLEMA
-proviamo a risolvere un problema di mix di produzione, cioe un sistema con un impianto co n2 stabilimenti in cui nel primo diamo le materie prime e vengon orealizzati i componenti in uscita abbiamo i componenti realizzati che arrivano nello stabilimento 2 che e1 quello di assemblaggio e in uscita abbiamo i prodotti finiti
-
-supponendo di voler realizzare 2 prodotti A, B. obiettivo: capire quanti prodotti creare in base ai vincoli e dottenre in guadagno piu alto possibile
-
-avremo ovviamente dei vincoli creati dalle risorse come i macchinari o gli addetti che potranno lavorare un numero di ore finito. supponiamo di avere un guadagno diverso da un pallet di prodotto A rispetto a B
+Parleremo di \hl{programmazione lineare con modelli matematici} o relazioni lineari, dato che \hl{molti problemi reali si rifanno a modelli lineari}, per quanto essi possano essere complessi.
 
 
-DATI:
+% Descrizione del problema
+\subsection{Descrizione del problema}
 
-ore di lavoro:
-		  A		|	B		| addetti
-stab 1 | 4 ore	|	2 ore	| 10
-stab 2 | 2 ore	|	4 ore	| 10
+Proviamo a risolvere un problema di mix di produzione, cioè un sistema con un impianto con 2 stabilimenti in cui:
 
-ogni addetto lavora 40 ore/settimana
-
-
-profitto in euro/pallet:
-A	| B
-15k	| 10k
-
-richiesta del prodotto per la prossima settimana:
-A	| B
-40	| 120
+\begin{enumerate}
+	\item nel primo: diamo le materie prime e vengono realizzati i componenti in uscita
+	\item nel secondo: diamo i componenti realizzati che vengono assemblati per creare il prodotto finito
+	\end{enumerate}
 
 
-decisione da prendere: determinare il mix di produzione, cioè quante unità di A e B produrre la prossima settimana.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{st12.jpeg}
+\caption{Catena tra i due stabilimenti} 
+\label{st12}
+\end{figure}
 
-DESCRIZIONE DEL PROBLEMA CON UN MODELLO MATEMATICO:
-modellazione:
-1. identificare le variabili decisionali:
 
-$x_A$: \# di pallet di prodotto A da realizzare
-$x_B$: \# di pallet di prodotto B da realizzare
+Supponendo di voler realizzare 2 prodotti A, B con un differente profitto. Determinare il \hl{mix di produzione}, cioè quante unità di A e B produrre la prossima settimana.
+Saranno presenti dei \hl{vincoli} creati dalle risorse come i macchinari o gli addetti che potranno lavorare un numero di ore finito.
 
-2. definire la funzione obbiettivo (FO), per massimizzare il profitto
 
-VALORE MAX = $z=15x_A+10x_B$
+% Dati del problema
+\subsection{Dati del problema}
 
-3. definire i vincoli espressi come uguaglianza o disuguaglianza. in questo caso abbiamo vincoli legati agli stabilimenti
+\begin{itemize}
+	\item ore di lavoro:
 
-	- vincolo 1: capacità produttiva dello stabilimento 1 $4x_A+2x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti:
-		$4x_A+2x_B <= 400$
-	- vincolo 2: capacità produttiva dello stabilimento 2 $2x_A+4x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti:
-		$4x_A+2x_B <= 400$
-	- vincolo 3: vincolo sulla richiesta di A: $x_A <= 40$
-	- vincolo 4: vincolo sulla richiesta di B: $x_B <= 120$
-	- vincolo 5: vincolo di non-negatività: $x_A, x_B >= 0$
+	\begin{table}[h!]
+		\begin{center}
+			\begin{tabular}{|c | c c c|} 
+ 				\hline
+ 				Stab & A & B & Addetti \\ [0.5ex]
+ 				\hline
+	 			1 & 4 ore & 2 ore & 10 \\
+ 				2 & 2 ore & 4 ore & 10 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Tabella delle ore di lavoro}
+		\label{taborelav}
+	\end{table}
+
+	\item ogni addetto lavora 40 ore/settimana
 	
-nella forma completa il modello complessivo è:
+	\item profitto €/pallet:
+	
+	\begin{table}[h!]
+		\begin{center}
+			\begin{tabular}{| c c|} 
+ 				\hline
+ 				A & B \\ [0.5ex]
+ 				\hline
+ 				15k & 10k \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Tabella del profitto €/pallet}
+		\label{tabprof}
+	\end{table}
+	
+	\item richiesta del prodotto nella prossima settimana:
+	
+	\begin{table}[h!]
+		\begin{center}
+			\begin{tabular}{| c c|} 
+ 				\hline
+ 				A & B \\ [0.5ex]
+ 				\hline
+ 				40 & 120 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Tabella del profitto euro/pallet}
+		\label{tabprof}
+	\end{table}
 
-MAX: $z=15x_A+10x_B$
+\end{itemize}
+
+
+% Descrizione del problema con un modello matematico
+\subsection{Descrizione del problema con un modello matematico}
+
+Per \hl{effettuare una modellazione} faremo:
+
+\begin{enumerate}
+	\item \hl{identificare le variabili decisionali}:
+		\begin{itemize}
+			\item $x_A$: \# di pallet di prodotto A da realizzare
+			\item $x_B$: \# di pallet di prodotto B da realizzare
+		\end{itemize}
+		
+	\item \hl{definire la funzione obbiettivo (FO)}, per massimizzare il profitto
+
+	\item \hl{definire i vincoli espressi come uguaglianza o disuguaglianza}
+		\begin{itemize}
+			\item vincolo 1: capacità produttiva dello stab 1 $4x_A+2x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti: $$4x_A+2x_B <= 400$$
+			\item vincolo 2: capacità produttiva dello stabilimento 2 $2x_A+4x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti: $$4x_A+2x_B <= 400$$
+			\item vincolo 3: vincolo sulla richiesta di A: $$x_A <= 40$$
+			\item vincolo 4: vincolo sulla richiesta di B: $$x_B <= 120$$
+			\item vincolo 5: vincolo di non-negatività: $$x_A, x_B >= 0$$
+		\end{itemize}
+		
+	
+\end{enumerate}
+
+	
+	
+Nella forma completa il \hl{modello complessivo} è:
+
+$$MAX=z=15x_A+10x_B$$
+
 sottoposto ai vincoli (sv):
-- $4x_A+2x_B <= 400$
-- $4x_A+2x_B <= 400$
-- $x_A <= 40$
-- $x_B <= 120$
-- $x_A, x_B >= 0$
+
+\begin{itemize}
+	\item $4x_A+2x_B <= 400$
+	\item $2x_A+4x_B <= 400$
+	\item $x_A <= 40$
+	\item $x_B <= 120$
+	\item $x_A, x_B >= 0$
+\end{itemize}
 
 
-RISOLVERE IL MODELLO MATEMATICO (IN GENERE TRAMITE UN RISOLUTORE):
-rappresentiamo sul piano tutte le soluzioni ammissibili cercando quella che massimizza il nostro risultato
+% Risolvere il modello matematico
+\subsection{Risolvere il modello matematico}
 
-grafichiamo sul piano cartesiano avendo solo valori positivi ci concentriamo sul primo quadrante
+\hl{Rappresentiamo sul piano cartesiano tutte le soluzioni ammissibili} cercando quella che massimizza il nostro risultato
 
-per impostare i primi 2 punti poniamo prina x_A=0 e poi x_B=0. tracciando la retta avremo che al suo interno valgono i vincoli, all'esterno no sarnno quidni punti ammissibili. ed identificano una coppia di punti A e B ammissibili per il primo vincolo. ripetiamo tutto per ogni vincolo chje abbimao
+Impostiamo delle rette per ogni vincolo:
 
-ci verrà fuori una regione ammissibile dove valgono tutti i vincoli dove avremo la nostra soluzione ammissibile. useremo il medoto del gradiente per trovarla:
-
-metodo del gradiente:
-
-vogliamo traovar eil punto che renda massima la nostra funzione z=... 
-
-$\grad{...$ indica la crescita
-
-dove grad z sarà la massima ascesa andando a muoverci in versione concorde al gradiente
-
-tracciando una retta perpendicolare (curve di livello) alla retta del gradiente avremo valori sempre buoni ma più bassi di quelli sul gradiente. facendo attenzione a non uscire dalla regione ammissibile andiamo così a trovare il punto massimo che consente di massimizzare la funzione gradiente e che la segua a che non esce fuori il regime. il punto più estremo alla regione massima sarà il nostro punto
-
-allora la soluzione ottima sarà nel nostro caso quella che fa intersecare le rette del vincolo 2 con il 3: $x_A = 40$ $2*40+4X_B=400$ quindi $x_B=80$
-
-allora la soluzione ottiamle che soddisfa tutti i vincoli ed il profitto massimo possiible e1 in $x_A=40, x_B=80$
+\begin{itemize}
+	\item presa $4x_A+2x_B <= 400$ poniamo = 0, a turno, $x_A$ e $x_B$: (200, 100)
+	\item presa $2x_A+4x_B <= 400$ poniamo = 0, a turno, $x_A$ e $x_B$: (100, 200)
+	\item presa $x_A <= 40$: (40, 0)
+	\item presa $x_B <= 120$: (0, 120)
+\end{itemize}
 
 
-notimao che lo stabilimento 2 viene saturato e quello 1 no dato che la soluzione giace sulla retta del vincolo per il quale si satura 
+Avremo allora una \hl{regione ammissibile} dove valgono tutti i vincoli e nella quale dovrebbe essere presente la nostra soluzione ammissibile. Per trovare il punto che rende massima la funzione $z$ usiamo il \hl{metodo del gradiente}:
+
+$$\nabla z = \left[\begin{array}{c}
+	\dfrac{dz}{dx_A}\\
+	\dfrac{dz}{dx_B}
+\end{array}\right] = \left[\begin{array}{c}
+	15\\
+	10
+\end{array}\right]
+$$
+
+dove $\nabla z$ sarà la massima crescita che viene rappresentata tramite (15, 10).
+
+Tracciando una \hl{retta perpendicolare (curve di livello)} alla retta del gradiente avremo valori sempre buoni ma più bassi di quelli sul gradiente, a patto che siano validi. Troveremo in fine il punto massimo che consente di massimizzare, cioè il più estremo alla regione ammissibile sarà il nostro punto.
+
+\hl{Seguendo la retta del gradiente troviamo che la soluzione ottimale} si trova nell'intersezione tra le rette del vincolo 2 con il 3: $x_A = 40$ $2*40+4X_B=400$ quindi $x_B=80$.
+
+La soluzione ottimale sarà:
+
+$$\begin{cases} 
+    x_A = 40 \\ 
+    2x_A+4x_B = 400
+\end{cases}
+\begin{cases} 
+    x_A = 40 \\ 
+    x_B = 80
+\end{cases}$$
 
 
+Si nota che lo stabilimento 2 viene saturato e quello 1 no, dal fatto che la soluzione giace sulla retta del vincolo per il quale si satura.
 
 
-possiamo avere altre forme di modelli di PL
-fo da minimizzare
-vincoli di ugualinza
-vincoli >=
-variabili negative
-var non vincolate
+% Terminologia
+\subsection{Terminologia}
+
+Possiamo avere altre forme di modelli di PL:
+
+\begin{itemize}
+	\item fo da minimizzare
+	\item vincoli di ugualianza
+	\item vincoli $>$=
+	\item variabili negative
+	\item variabili non vincolate
+\end{itemize}
 
 
-terminologia:
-soluzione: quella di output
-sol ammissibile: soluz, se esiste, che soddisfa tutti i vincoli
-sol inammissibile: se viola almeno un vincolo 
-regione amm: tutti i punti che rispettano i vincoli
-prob inammissi: regione amm vuota
-prob ammissibile:
-	sol ottiuma singola
-	ultiple
-	fo ilimitata
+Terminologie da sapere:
+
+\begin{itemize}
+	\item \hl{soluzione}: quella di output
+	\item \hl{soluzione ammissibile}: soluzione, se esiste, che \textbf{soddisfa tutti i vincoli}
+	\item \hl{soluzione inammissibile}: se \textbf{viola almeno un vincolo} 
+	\item \hl{regione ammissibile}: tutti i punti che rispettano i vincoli
+	\item \hl{prob inammissibile}: \textbf{regione ammissibile vuota}
+	\item \hl{prob ammissibile}:
+		\begin{itemize}
+			\item soluzione ottima singola
+			\item soluzioni multiple
+			\item fo illimitata
+		\end{itemize}
+\end{itemize}
+
 	
 	
-% python pulp
-in pulp:
+% Implementazione in Python
+\subsection{Implementazione in Python}
 
 \begin{lstlisting}
 import pulp as p
