@@ -30,9 +30,11 @@ dove nel \hl{file descriptor} indichi a quale file devi mandare l'output. Questo
 
 
 % Programma Make
-\subsection{Programma Make - 28.09.22}
+\subsection{Programma Make - 30.09.22}
 
 Quando viene avviato verifica la presenza di un file chiamato "Makefile", oppure si usa 'make -f'. In questo file ci sono le \hl{regole di cosa fare per automatizzare delle azioni per un numero n di file}. Se, durante la compilazione di massa, \hl{una di queste da un errore il programma make si interrompe}, per evitare ciò si usa '-i' (ignore).
+
+Il Makefile andrà ad aggiornare una libreria andando a guardare se una delle 3 date di ultima modifica si sono aggiornate.
 
 
 Andiamo a guardare \hl{cosa contiene Makefile}:
@@ -53,109 +55,98 @@ clean:
 	done
 \end{lstlisting}
 
-dove \hl{all e' detto target}, cioè la cosa che si vuole fare, eseguiremo allora un "make all". \textbf{Essendo il primo target, sarà anche quello di default}.
+dove:
+\begin{itemize}
+	\item \hl{DIRS}: lo si associa alle \textbf{stringhe singole} che gli sono state associate
+	\item \hl{all}: nel ciclo for:
+		\begin{itemize}
+			\item manda un comando in subshell
+			\item \$\$i: riferimento alla variabile "i" del for + simbolo escape per il Makefile
+			\item \$(MAKE): macro predefinita per i Makefile
+		\end{itemize}
+ 
+\end{itemize}
 
-Possono essere presenti dei \hl{prerequisiti}, dopo i ":", che possono essere a loro volta dei target.
-
-Obbligatoriamente avremo, dopo i prerequisiti, la \hl{riga delle regole} che \hl{indica cosa puo' fare il target}.
-
-% Programma Make - 30.09.22
-\textbf{\emph{(LEZIONE - 30.09.22)}}
-
-make file: formato da rule per poter arrivare al target 
-
-a volte abbiamo uno script configure che precede make install dove install è il target. 
-
-il make file si aggiorna tramite l'ultima modifica del file seguendo pero la gerarchia
-
-molto utile il target clean per togliere tutti i file .o che sono inutili dopo la compilazione. sono detti phony perchè target fasulli dato che non sono file ma sole parole
-
-ci sono delle scorciatoie :
-\$@ per riferirsi il target
-\$? tutti i prerequisiti più recenti del target
-\$^ tutti i prerequisiti del target
-https://www.gnu.org/software/make/manual/make.html#Automatic-Variables
-
-
-quando sis scrve make si va a guadare se in quella direcotry di trova un a file chiamato Makefile. quidni se c'e1 viene eseguito
-
-abbimao:
-
-DIRS = lib intro sockets advio daemons datafiles db environ \
-	fileio filedir ipc1 ipc2 proc pty relation signals standards \
-	stdio termios threadctl threads printer exercises
-
-all:
-	for i in $(DIRS); do \
-		(cd $$i && echo "making $$i" && $(MAKE) ) || exit 1; \
-	done
-
-clean:
-	for i in $(DIRS); do \
-		(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
-	done
-	
-	
-a dire si sostituisce quelloa destra dell =
-
-all:
-manda un comando in subshell
-\$\$i sarebbe un riferimento alla varibile i ma con un escape che si fa con \$ in Makefile
-
-\$(MAKE) macro predefinita doce dico che voglio usa la macro anche se sembra essere definita. 
-
-se le regole sono a più righe, ognuna deve iniziare col tabulatore
-
-noi abbimamo pero fartto un cd e poi chiamato \$(MAKE) allora supponiamo che in ogni direcotry ha il suo make file
-
-in apue.3e abbiamo un make file:
-
-root abbiamo la cartella precedente alla cwd
-platform assumera in valore del OS macos o linux
-e poi si include ../Make.defines.macos
-
-abbiamo una altra macro PROGS che elenca.i programmi che vorremmo costruire
-
-si può usare \% per dire che unado c'e quancosa ed il prerequisnito è .c, per esempio, allra esegui la rule. indica un valore qualsisasi come una varibile. una regola implicigta per ogni file c
-
-
-altra macro \$(CC) che indica i lcompilatore dove cc è un link simbolico a clang
-
-\$(CFLAGS) indica una macro predefinite vuote dato che se le riempi danno quello che scrivi ma eseistono anche perche ci sono delle regole rpedefinite usate da delle macro
-
-in ../Make.defines.macos ho:
+La struttura è:
 
 \begin{lstlisting}
-# Common make definitions, customized for each platform
-
-# Definitions required in all program directories to compile and link
-# C programs using gcc.
-
-CC=gcc
-COMPILE.c=$(CC) $(CFLAGS) $(CPPFLAGS) -c
-LINK.c=$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
-LDFLAGS=
-LDDIR=-L$(ROOT)/lib
-LDLIBS=$(LDDIR) -lapue $(EXTRALIBS)
-CFLAGS=-ansi -I$(ROOT)/include -Wall -DMACOS -D_DARWIN_C_SOURCE $(EXTRA)
-RANLIB=ranlib
-AR=ar
-AWK=awk
-LIBAPUE=$(ROOT)/lib/libapue.a
-
-# Common temp files to delete from each directory.
-TEMPFILES=core core.* *.o temp.* *.out
+target: prerequisiti
+	rule
 \end{lstlisting}
 
+dove:
 
-impostante capire che Make ha delle definizoni di fedault visibili in make -p. così facendo tutti i file passati in all si andrà a vedere se sono .c e se lo sono utilizza la rule di \% se questa rule non ci fosse userebbe la definizione di default
+\begin{itemize}
+	\item \hl{target}: è l\textbf{a cosa che si vuole fare}, se essendo il primo target, sarà anche quello di default
+	\item \hl{prerequisiti}: \textbf{file e/o target} a loro volta
+	\item \hl{rule}: indica \textbf{cosa puo' fare il target}
+\end{itemize}
+
+Può capitare che prima di eseguire il Makefile ci sia uno \hl{script "configure"}. 
+
+In molti casi si ha un \hl{target "clean"} che permette di pulire i file .o che sono inutili dopo la compilazione, o comunque qualsiasi tipo di file gli si voglia far eliminare. Questo tipo di target che non rappresentano un file, sono detti \hl{"phony"} perchè fasulli, dato che non sono file ma sole parole
+
+\begin{lstlisting}
+file: file.o lib.o
+
+clean:
+	rm file.o
+\end{lstlisting}
+
+Abbiamo delle \hl{variabili automatiche} per rendere il lavoro più facile:
+
+\begin{itemize}
+	\item \textbf{\$@}: per riferirsi il target
+	\item \textbf{\$?}: tutti i prerequisiti più recenti del target
+	\item \textbf{\$\^}: tutti i prerequisiti del target
+	\item \textbf{\url{https://www.gnu.org/software/make/manual/make.html#Automatic-Variables}}
+\end{itemize}
 
 
-se modifichiamo un solo file posisamo fare un compile.sh al quale pasimao come argomento il nome del file .c e al suoi interno mettiamo ilcomando di gcc di compilaizone. questo al posto di usare make
+Un altro esempio di Makefile è:
+
+\begin{lstlisting}
+ROOT=..
+PLATFORM=$(shell $(ROOT)/systype.sh)
+include $(ROOT)/Make.defines.$(PLATFORM)
+
+PROGS =	getcputc hello ls1 mycat shell1 shell2 testerror uidgid
+
+all:	$(PROGS)
+
+%:	%.c $(LIBAPUE)
+	$(CC) $(CFLAGS) $@.c -o $@ $(LDFLAGS) $(LDLIBS)
+
+clean:
+	rm -f $(PROGS) $(TEMPFILES) *.o
+
+include $(ROOT)/Make.libapue.inc
+\end{lstlisting}
+
+dove:
+
+\begin{itemize}
+	\item ROOT: cwd
+	\item PLATFORM: assumera in valore del OS: macos/linux
+	\item include: include un file
+	\item PROGS: elenco dei programmi da usare
+	\item \%: target con nome variabile, indica un file
+	\item \%.c: target con nome variabile ma estensione .c
+	\item \$(CC): indica il compilatore dove cc è un link simbolico a clang
+	\item \$(CFLAGS) indica una macro predefinita dei default vuota che si può usare all'occorrenza
+	\item all: target che prende in carico tutti i programmi che se saranno di tipo .c saranno presi in carico dal target successivo
+\end{itemize}
 
 
-gcc -H # To see the hierarchy of the include files
-gcc -E file.c # To see the effect of preprocessor directives
+\hl{Per la compilazione dei file}, qualsiasi sia il linguaggio, \hl{make saprà come compilarlo} grazie a tutte le definizioni di default presenti in:
+
+\begin{lstlisting}
+make -p
+\end{lstlisting}
+
+notare che \texdtbf{si può mettere un comando custom nelle rule} del target
+
+Nell'eventualità di \hl{voler aggiornare un solo file della libreria senza far aggiornare il resto ci basterà usare uno script} che compila quel file passato a linea di comando.
 
 
 

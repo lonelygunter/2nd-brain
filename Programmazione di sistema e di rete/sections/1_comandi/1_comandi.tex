@@ -13,7 +13,6 @@ $ find . -type f -perm -0100
 \end{lstlisting}
 
 
-% find
 \subsection{find: trovare file di intestazione del mac come stdio.h}
 
 \begin{lstlisting}
@@ -26,4 +25,19 @@ find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
 
 \begin{lstlisting}
 ldd [nomevodice]
+\end{lstlisting}
+
+
+% gcc
+\subsection{gcc: per vedere tutta la gerarchia di file in una libreria}
+
+\begin{lstlisting}
+gcc -H lib.a
+\end{lstlisting}
+
+
+\subsection{gcc: per vedere il codice con tutti i file importati}
+
+\begin{lstlisting}
+gcc -E file.c
 \end{lstlisting}
