@@ -1,0 +1,164 @@
+\section{Introduzione all'ottimizzazione matematica - 30.09.22}
+
+% Introduzione
+\subsection{Introduzione}
+
+Partiamo da un \hl{insieme di formule ed equazioni che modelleranno il problema}. Con questo modello proviamo a trovare una \hl{soluzione} al nostro problema \hl{attraverso algoritmi o risolutori}. L'output è una soluzione per il nostro modello da implementare nel mondo reale.
+
+
+% Ingredienti principali
+\subsection{Ingredienti principali}
+
+Gli ingredienti principali sanno:
+
+\begin{itemize}
+	\item \textbf{dati} del problema
+	\item variabili: dette anche var decisionialli: scelte da fare in merito al problema. rappresesntano queindi le scelte, quello su cui il decisore puo internvenire
+	\item vioncoli: equazioni che defioniscono i valori che le variabili posson assumere
+	\item funzione obietivo: sara una formula che rappresenta una misura di tipo quantitativo per caire quando è buona la soluzione che abbiamo ottenuto. quidni dovremo ottimizzare questo valore in base al contesto
+\end{itemize}
+
+
+
+parlemeno di programmazione lineare con modeli matematici lineare con delle relazioni lineari dato che ci focalizzaiamo su questi perche molti modelli lineari si trovano in modelli piu complessi e anche perche molti modelli della realta sono lineari e possono essere modellati da essi
+
+
+DESCRIZIONE PROBLEMA
+proviamo a risolvere un problema di mix di produzione, cioe un sistema con un impianto co n2 stabilimenti in cui nel primo diamo le materie prime e vengon orealizzati i componenti in uscita abbiamo i componenti realizzati che arrivano nello stabilimento 2 che e1 quello di assemblaggio e in uscita abbiamo i prodotti finiti
+
+supponendo di voler realizzare 2 prodotti A, B. obiettivo: capire quanti prodotti creare in base ai vincoli e dottenre in guadagno piu alto possibile
+
+avremo ovviamente dei vincoli creati dalle risorse come i macchinari o gli addetti che potranno lavorare un numero di ore finito. supponiamo di avere un guadagno diverso da un pallet di prodotto A rispetto a B
+
+
+DATI:
+
+ore di lavoro:
+		  A		|	B		| addetti
+stab 1 | 4 ore	|	2 ore	| 10
+stab 2 | 2 ore	|	4 ore	| 10
+
+ogni addetto lavora 40 ore/settimana
+
+
+profitto in euro/pallet:
+A	| B
+15k	| 10k
+
+richiesta del prodotto per la prossima settimana:
+A	| B
+40	| 120
+
+
+decisione da prendere: determinare il mix di produzione, cioè quante unità di A e B produrre la prossima settimana.
+
+DESCRIZIONE DEL PROBLEMA CON UN MODELLO MATEMATICO:
+modellazione:
+1. identificare le variabili decisionali:
+
+$x_A$: \# di pallet di prodotto A da realizzare
+$x_B$: \# di pallet di prodotto B da realizzare
+
+2. definire la funzione obbiettivo (FO), per massimizzare il profitto
+
+VALORE MAX = $z=15x_A+10x_B$
+
+3. definire i vincoli espressi come uguaglianza o disuguaglianza. in questo caso abbiamo vincoli legati agli stabilimenti
+
+	- vincolo 1: capacità produttiva dello stabilimento 1 $4x_A+2x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti:
+		$4x_A+2x_B <= 400$
+	- vincolo 2: capacità produttiva dello stabilimento 2 $2x_A+4x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti:
+		$4x_A+2x_B <= 400$
+	- vincolo 3: vincolo sulla richiesta di A: $x_A <= 40$
+	- vincolo 4: vincolo sulla richiesta di B: $x_B <= 120$
+	- vincolo 5: vincolo di non-negatività: $x_A, x_B >= 0$
+	
+nella forma completa il modello complessivo è:
+
+MAX: $z=15x_A+10x_B$
+sottoposto ai vincoli (sv):
+- $4x_A+2x_B <= 400$
+- $4x_A+2x_B <= 400$
+- $x_A <= 40$
+- $x_B <= 120$
+- $x_A, x_B >= 0$
+
+
+RISOLVERE IL MODELLO MATEMATICO (IN GENERE TRAMITE UN RISOLUTORE):
+rappresentiamo sul piano tutte le soluzioni ammissibili cercando quella che massimizza il nostro risultato
+
+grafichiamo sul piano cartesiano avendo solo valori positivi ci concentriamo sul primo quadrante
+
+per impostare i primi 2 punti poniamo prina x_A=0 e poi x_B=0. tracciando la retta avremo che al suo interno valgono i vincoli, all'esterno no sarnno quidni punti ammissibili. ed identificano una coppia di punti A e B ammissibili per il primo vincolo. ripetiamo tutto per ogni vincolo chje abbimao
+
+ci verrà fuori una regione ammissibile dove valgono tutti i vincoli dove avremo la nostra soluzione ammissibile. useremo il medoto del gradiente per trovarla:
+
+metodo del gradiente:
+
+vogliamo traovar eil punto che renda massima la nostra funzione z=... 
+
+$\grad{...$ indica la crescita
+
+dove grad z sarà la massima ascesa andando a muoverci in versione concorde al gradiente
+
+tracciando una retta perpendicolare (curve di livello) alla retta del gradiente avremo valori sempre buoni ma più bassi di quelli sul gradiente. facendo attenzione a non uscire dalla regione ammissibile andiamo così a trovare il punto massimo che consente di massimizzare la funzione gradiente e che la segua a che non esce fuori il regime. il punto più estremo alla regione massima sarà il nostro punto
+
+allora la soluzione ottima sarà nel nostro caso quella che fa intersecare le rette del vincolo 2 con il 3: $x_A = 40$ $2*40+4X_B=400$ quindi $x_B=80$
+
+allora la soluzione ottiamle che soddisfa tutti i vincoli ed il profitto massimo possiible e1 in $x_A=40, x_B=80$
+
+
+notimao che lo stabilimento 2 viene saturato e quello 1 no dato che la soluzione giace sulla retta del vincolo per il quale si satura 
+
+
+
+
+possiamo avere altre forme di modelli di PL
+fo da minimizzare
+vincoli di ugualinza
+vincoli >=
+variabili negative
+var non vincolate
+
+
+terminologia:
+soluzione: quella di output
+sol ammissibile: soluz, se esiste, che soddisfa tutti i vincoli
+sol inammissibile: se viola almeno un vincolo 
+regione amm: tutti i punti che rispettano i vincoli
+prob inammissi: regione amm vuota
+prob ammissibile:
+	sol ottiuma singola
+	ultiple
+	fo ilimitata
+	
+	
+% python pulp
+in pulp:
+
+\begin{lstlisting}
+import pulp as p
+
+# 1. creazione del modello
+model = p.LpProblem("ProductMix", p.LpMaximize)
+
+# 2. definisco le variabili decisionall
+x_A = p.LpVariable("x_A", cat="Continuous", lowBound=0)
+x_B = p.LpVariable("x_B", cat="LpContinuous", lowBound=0)
+
+# 3. definisco la funzione obiettivo in funzione delle variabili decisionali
+model += 15 * x_A + 10 * x_B
+
+# 4. definire i vincoli
+model += 4 * x_A + 2 * x_B <= 400
+model += 2 * x_A + 4 * x_B <= 400
+model += x_A <= 40
+model += x_B <= 120
+
+# 5. ricolvere il problema
+model.solve()
+
+# print della soluzione
+print("next week produce {} pallets of A".format(x_A.varValue))
+print("next week produce {} pallets of B".format(x_B.varValue))
+\end{lstlisting}
