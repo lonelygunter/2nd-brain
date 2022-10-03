@@ -223,6 +223,14 @@ Terminologie da sapere:
 		\end{itemize}
 \end{itemize}
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{}
+\caption{Catena tra i due stabilimenti} 
+\label{st12}
+\end{figure}
+
 	
 	
 % Implementazione in Python
@@ -254,3 +262,137 @@ model.solve()
 print("next week produce {} pallets of A".format(x_A.varValue))
 print("next week produce {} pallets of B".format(x_B.varValue))
 \end{lstlisting}
+
+
+% Esercitazione
+\subsection{Esercitazione}
+
+\begin{enumerate}
+	\item Massimizzare la f.o. $z = 8x_1 + 6x_2$, con i vincoli:
+		\begin{itemize}
+			\item $x_1 <= 5$
+			\item $x_2 <= 7$
+			\item $4x_1 + 3x_2 <= 29$
+			\item $x_1, x_2 >= 0$
+		\end{itemize}
+		
+		img
+		
+		$$\nabla z = \left[\begin{array}{c}
+			\dfrac{dz}{dx_A}\\
+			\dfrac{dz}{dx_B}
+		\end{array}\right] = \left[\begin{array}{c}
+			8\\
+			6
+		\end{array}\right]
+		$$
+		
+		\hl{Abbiamo che esiste una curva di livello coincidente con lo spigolo CD, quindi abbiamo delle soluzioni ottime multiple}:
+		\begin{itemize}
+			\item vertice C, prendiamo allora vincolo 2 e 3:
+				$$x_2 = 7 \to x_1 = 2$$
+			
+			\item vertice D, prendiamo allora vincolo 1 e 3:
+				$$x_1 = 5 \to x_2 = 3$$
+		
+			\item punti del segmento CD
+		\end{itemize}
+		
+		Quindi $z = 58$
+	
+	
+	\item Minimizziamo la f.o. $z = 25x_1 + 22x_2$, con i vincoli:
+		\begin{itemize}
+			\item $x_1 + x_2 >= 5$
+			\item $3x_1 + 2x_2 >= 12$
+			\item $3x_1 + 6x_2 >= 18$
+			\item $x_1, x_2 >= 0$
+		\end{itemize}
+		
+		img
+		
+		$$\nabla z = \left[\begin{array}{c}
+			\dfrac{dz}{dx_A}\\
+			\dfrac{dz}{dx_B}
+		\end{array}\right] = \left[\begin{array}{c}
+			25\\
+			22
+		\end{array}\right]
+		$$
+		
+		Per poter minimizzare, tracciando la curva di livello, trovando che la soluzione ottima si troverà dal punto B dato dall'intersezione dei vincoli 1 e 2:
+		$$x_1 = 2, x_2 = 3$$
+		
+		Quindi $z= 116$
+		
+	\item Massimizziamo la f.o. $z = 2x_1 + x_2$, con i vincoli:
+		\begin{itemize}
+			\item $x_1 - x_2 <= 1$
+			\item $2x_1 + x_2 >= 6$
+			\item $x_2 >= 6$
+			\item $x_1, x_2 >= 0$
+		\end{itemize}
+		
+		img
+		
+		$$\nabla z = \left[\begin{array}{c}
+			\dfrac{dz}{dx_A}\\
+			\dfrac{dz}{dx_B}
+		\end{array}\right] = \left[\begin{array}{c}
+			2\\
+			1
+		\end{array}\right]
+		$$
+		
+		\hl{Non raggiungeremo la regione ammissibile, quindi il problema non ammette una soluzione ottima}.
+		
+	\item Minimizziamo la f.o. $z = -2x_1 + 3x_2$, con i vincoli:
+		\begin{itemize}
+			\item $x_1 - 2x_2 >= -2$
+			\item $2x_1 - x_2 <= 3$
+			\item $x_2 >= 4$
+			\item $x_1, x_2 >= 0$
+		\end{itemize}
+		
+		img
+		
+		$$\nabla z = \left[\begin{array}{c}
+			\dfrac{dz}{dx_A}\\
+			\dfrac{dz}{dx_B}
+		\end{array}\right] = \left[\begin{array}{c}
+			-2\\
+			3
+		\end{array}\right]
+		$$
+		
+		\hl{La regione ammissibile è vuota e per tanto i problema è inammissibile, quindi non esiste un punto che soddisfa contemporaneamente tutti i vincoli}.
+		
+	\item L'azienda vuole decide oltre al piano di produzione anche la giusta riallocazione degli addetti (10-10) tra i due reparti.		
+		Le variabili decisionali sono:
+		\begin{itemize}
+			\item $x_A, x_B$: i prodotti
+			\item $n_p$: \# addetti allocati al reparto produzione
+			\item $n_a$: \#addetti allocati al reparto assemblaggio
+		\end{itemize}
+		
+		Quindi andremo ad aggiungere il vincolo per cui $n_p + n_a = 20$.
+		
+		Perciò avremo: $z = 15x_A + 10x_B$, con vincoli:
+		\begin{itemize}
+			\item $4x_A + 2x_B <= 40n_p$
+			\item $2x_A + 4x_B <= 40n_a$
+			\item $x_A <= 40$
+			\item $x_B <= 120$
+			\item $n_a + n_p = 20$
+			\item $x_A, x_B, n_a, n_p >= 0$
+		\end{itemize}
+		
+
+\end{enumerate}
+
+
+
+
+
+
+
