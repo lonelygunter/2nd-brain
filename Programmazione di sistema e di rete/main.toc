@@ -22,4 +22,3 @@
 \contentsline {section}{\numberline {V}System call}{5}{section.5}%
 \contentsline {subsection}{\numberline {\mbox {V-A}}Funzioni e system call}{5}{subsection.5.1}%
 \contentsline {subsection}{\numberline {\mbox {V-B}}Capire se una funzione è una system call}{6}{subsection.5.2}%
-\contentsline {section}{Riferimenti bibliografici}{6}{section*.2}%
