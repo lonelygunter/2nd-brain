@@ -1,4 +1,4 @@
-
+\newpage
 \section{Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}
 
 Partendo dal mini-world serve \hl{capire i requisiti utili}. Bisognerà far gestire, all'applicazione, alcuni dati per poi visualizzarli (requisiti relazionali).
@@ -23,7 +23,17 @@ Per la scelta degli elementi avremo:
 \begin{itemize}
 	\item \hl{entita' (sostantivi)}: \textbf{oggetti o cose specifiche} presenti nel mini-world che bisogna rappresentare
 
-	\item \hl{relazioni (verbi)}: \textbf{collegano le entita'}. Il \textbf{grado di tipo} della relazione è il \textbf{numero di partecipanti a quella relazione}, identificando quante volte la relazione viene percorsa
+	\item \hl{relazioni (verbi)}: \textbf{collegano le entita'}. Il \textbf{grado di tipo} della relazione è il \textbf{numero di partecipanti a quella relazione}, identificando quante volte la relazione viene percorsa.
+		
+		Può:
+		\begin{itemize}
+			\item essere \textbf{ricorsiva} se si riferisce ad una stessa entità
+			\item avere un suo attributo definito dall'azione che sta compiendo
+		
+		\end{itemize}
+		
+		
+
 	
 	\item \hl{attributi (proprieta')}: \textbf{descrittori} per ogni entità
 	
@@ -37,7 +47,7 @@ Per la scelta degli elementi avremo:
 	
 	\item \hl{attributo chiave}: \textbf{identificare univocamente tutti i record}. Si può usare anche un'unione tra attributo chiave e un altro attributo
 	
-	\item \hl{entita' debole}: entità che \textbf{da sola non può esistere}, quindi didpende da un entità più forte
+	\item \hl{entita' debole}: entità che \textbf{da sola non può esistere}, quindi dipende da un entità più forte. Le sue relationship saranno deboli anche esse. Questa entità \textbf{non ha un attributo chiave} ma ha almeno un \textbf{attributo in comune con l'entità forte}.
 	
 \end{itemize}
 
@@ -50,5 +60,26 @@ Piccoli \hl{accorgimenti da avere}:
 	
 	\item \textbf{verbi alla terza persona} e attivi o passi per capire da che parte si deve leggere la relazione
 	
-	\item per la \textbf{carcinalita'} mi chiedendo per un solo elemento  quante entità può avere dell'altro. Può essere 1:1, 1:N, M:N
+	\item per la \textbf{carcinalita'} mi chiedo per un solo elemento quante entità puotrà avere dell'altro a cui è relazionato. Può essere rappresentata tramite:
+	
+		\begin{itemize}
+			\item \textbf{vincoli di dipendenza esistenziale}: 1:1, 1:N, M:N dove bisogna mettere la cardinalità nel lato opposto
+			\item \textbf{min max}: dico che posso avere da un min a un max di record che percorrono la relazione dando in vincolo di intervallo (sarà di aiuto a chi farà il database quando dovrà gestire un warning)
+		\end{itemize}
+	
+	 
 \end{itemize}
+
+
+I database NoSQL saranno esenti da una modellazione così pesante.
+
+
+Potremmo incombere in \hl{relazioni di livello piu' alto} nel caso in cui ci trovassimo a descrivere relazioni con complessità alto. In gnerale \hl{si cerca di evitare e di farlo con relazioni binarie} per evitare complicazioni nell'implementazione.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{relazlivalt.jpeg}
+\caption{Relazione di livello alto} 
+\label{relazlivalt}
+\end{figure}

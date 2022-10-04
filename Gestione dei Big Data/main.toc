@@ -2,6 +2,20 @@
 \babel@toc {italian}{}
 \contentsline {section}{\numberline {I}Libri di testo consigliati}{1}{section.1}%
 \contentsline {section}{\numberline {II}Databases - 28.09.22}{1}{section.2}%
-\contentsline {section}{\numberline {III}Database System Concepts and Architecture - 28.09.22}{1}{section.3}%
-\contentsline {section}{\numberline {IV}Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}{2}{section.4}%
-\contentsline {section}{Riferimenti bibliografici}{2}{section*.2}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Definizioni di base}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Tipologie di DB}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {\mbox {II-C}}Ciclo di vita del DB}{1}{subsection.2.3}%
+\contentsline {subsection}{\numberline {\mbox {II-D}}Livelli di un DB}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {\mbox {II-E}}Data Base Managment System}{2}{subsection.2.5}%
+\contentsline {subsection}{\numberline {\mbox {II-F}}Mini-world}{2}{subsection.2.6}%
+\contentsline {section}{\numberline {III}Database System Concepts and Architecture - 28.09.22}{2}{section.3}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Definizioni sui modelli}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {\mbox {III-B}}Definizioni fondamentali}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Schema}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {\mbox {III-D}}Tipologie di DBMS}{3}{subsection.3.4}%
+\contentsline {section}{\numberline {IV}Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}{3}{section.4}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Entity-Relationship (ER)}{3}{subsection.4.1}%
+\contentsline {section}{\numberline {V}The Enhanced Entity–Relationship (EER) Model - 04.10.22}{4}{section.5}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}Superclassi e sottoclassi}{4}{subsection.5.1}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Graficazione superclassi e sottoclassi}{4}{subsection.5.2}%
+\contentsline {section}{Riferimenti bibliografici}{5}{section*.2}%

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  28 SEP 2022 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  4 OCT 2022 18:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.tex"
-(/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.tex
+**"/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.tex"
+(/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
@@ -499,54 +499,69 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks34
+\SOUL@lasttoken=\toks35
+\SOUL@cmds=\toks36
+\SOUL@buffer=\toks37
+\SOUL@token=\toks38
+\SOUL@spaceskip=\skip76
+\SOUL@ttwidth=\dimen273
+\SOUL@uldp=\dimen274
+\SOUL@ulht=\dimen275
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box62
-) (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.aux)
+) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.aux
+
+LaTeX Warning: Label `gerardisg' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
 
 -- Lines per column: 57 (exact).
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count314
-\scratchdimen=\dimen273
+\scratchdimen=\dimen276
 \scratchbox=\box63
 \nofMPsegments=\count315
 \nofMParguments=\count316
-\everyMPshowfont=\toks34
+\everyMPshowfont=\toks39
 \MPscratchCnt=\count317
-\MPscratchDim=\dimen274
+\MPscratchDim=\dimen277
 \MPnumerator=\count318
 \makeMPintoPDFobject=\count319
-\everyMPtoPDFconversion=\toks35
+\everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \it@ocap on input line 105.
-LaTeX Info: Redefining \it@ccap on input line 105.
+LaTeX Info: Redefining \it@ocap on input line 106.
+LaTeX Info: Redefining \it@ccap on input line 106.
 
 
 File italian.ldf warning: 
@@ -554,9 +569,9 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 105.
+italian.ldf    on input line 106.
 
-Package hyperref Info: Link coloring OFF on input line 105.
+Package hyperref Info: Link coloring OFF on input line 106.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -566,79 +581,161 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 105.
-LaTeX Info: Redefining \pageref on input line 105.
-LaTeX Info: Redefining \nameref on input line 105.
- (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.out) (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.out)
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
+ (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.out) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 \c@lstlisting=\count321
- (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.toc)
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 128.
+ (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 128.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 128.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/sections/1_libri/1_libri.tex) (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/sections/2_p/2_p.tex
-Underfull \hbox (badness 1681) in paragraph at lines 64--66
-\OT1/ptm/m/n/10 sa-zio-ni so-no cor-ret-ta-men-te ese-gui-te re-co-ve-ry: se la
+))
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/1_libri/1_libri.tex) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/2_databases/2_databases.tex
+Underfull \hbox (badness 1394) in paragraph at lines 15--16
+[][]\OT1/ptm/m/n/10 Da[]-[]ta[]-[]Ba[]-[]se: \OT1/ptm/b/n/10 rac-col-ta di da-ti al-ta-men-te or-ga-niz-za-ti,
  []
 
-<img//logoUnisalento.jpg, id=29, 565.11125pt x 197.73875pt>
+
+Underfull \hbox (badness 3460) in paragraph at lines 29--30
+[][]\OT1/ptm/m/n/10 con[]-[]trol[]-[]lo[] [][][]del[]-[]la[] [][][]con[]-[]cor[]-[]ren[]-[]za: ga-ran-ti-re che tut-te le
+ []
+
+<img//logoUnisalento.jpg, id=99, 565.11125pt x 197.73875pt>
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 75.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 61.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- </Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/img//logoUnisalento.jpg>]
-Underfull \hbox (badness 2469) in paragraph at lines 76--77
-[]\OT1/ptm/m/n/10 data mo-del ope-ra-tion: di ba-se (CRUD) o de-fi-ni-te
+ </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//logoUnisalento.jpg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/3_dbSystemArchitecture/3_dbSystemArchitecture.tex
+Underfull \hbox (badness 3168) in paragraph at lines 10--11
+[][]\OT1/ptm/m/n/10 Da[]-[]ta[] [][][]Mo[]-[]del: in-sie-me di \OT1/ptm/b/n/10 con-cet-ti che de-scri-vo-no
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 78--79
-[]\OT1/ptm/m/n/10 modello da-to di ti-po con-cet-tua-le: di al-to li-vel-lo e
+Underfull \hbox (badness 3623) in paragraph at lines 33--34
+[][]\OT1/ptm/m/n/10 sche[]-[]ma[] [][][]dia[]-[]gram: \OT1/ptm/b/n/10 vi-sio-ne rap-pre-sen-ta-ti-va \OT1/ptm/m/n/10 del DB
  []
 
+<img//schcon.jpeg, id=116, 642.4pt x 430.60875pt>
+File: img//schcon.jpeg Graphic file (type jpg)
+<use img//schcon.jpeg>
+Package pdftex.def Info: img//schcon.jpeg  used on input line 38.
+(pdftex.def)             Requested size: 513.9207pt x 344.48746pt.
 
-Underfull \hbox (badness 2671) in paragraph at lines 84--85
-[]\OT1/ptm/m/n/10 modello im-ple-men-ta-tion: pro-vi-de con-cep-ts ta-ht fall
+Overfull \hbox (261.9207pt too wide) in paragraph at lines 38--39
+ [][] 
+ []
+
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 48.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.48 	
+       </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//schcon.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/4_dataModelingER/4_dataModelingER.tex
+Underfull \hbox (badness 1418) in paragraph at lines 4--5
+[]\OT1/ptm/m/n/10 Partendo dal mini-world ser-ve []ca[]-[]pi[]-[]re[] [][][]i[] [][][]re[]-[]qui[]-[]si[]-[]ti[] [][][]uti[]-[]li.
+ []
+
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 77.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[3]
+<img//relazlivalt.jpeg, id=141, 321.2pt x 286.06876pt>
+File: img//relazlivalt.jpeg Graphic file (type jpg)
+<use img//relazlivalt.jpeg>
+Package pdftex.def Info: img//relazlivalt.jpeg  used on input line 82.
+(pdftex.def)             Requested size: 321.19922pt x 286.06805pt.
+
+Overfull \hbox (69.19922pt too wide) in paragraph at lines 82--83
+ [][] 
+ []
+
+) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/5_eer/5_eer.tex
+<img//gerardisg.jpeg, id=142, 642.4pt x 374.39874pt>
+File: img//gerardisg.jpeg Graphic file (type jpg)
+<use img//gerardisg.jpeg>
+Package pdftex.def Info: img//gerardisg.jpeg  used on input line 13.
+(pdftex.def)             Requested size: 513.9207pt x 299.5194pt.
+
+Overfull \hbox (261.9207pt too wide) in paragraph at lines 13--14
+ [][] 
+ []
+
+<img//union.jpeg, id=143, 468.75125pt x 642.4pt>
+File: img//union.jpeg Graphic file (type jpg)
+<use img//union.jpeg>
+Package pdftex.def Info: img//union.jpeg  used on input line 44.
+(pdftex.def)             Requested size: 375.0015pt x 513.9207pt.
+
+Overfull \hbox (123.0015pt too wide) in paragraph at lines 44--45
+ [][] 
  []
 
 )
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 150.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 141.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [2] (/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.aux)
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.141 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.141 
+       </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//relazlivalt.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//gerardisg.jpeg>]
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 154.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.154 \end{document}
+                    
+
+ </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//union.jpeg>] (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4C37A2BCFA327F441E8B1704FB3C12E1;1225.
+(rerunfilecheck)             Checksum: 592B2143B227C22995EF583DCB63FCF8;3717.
  ) 
 Here is how much of TeX's memory you used:
- 14023 strings out of 478994
- 211750 string characters out of 5858185
- 550071 words of memory out of 5000000
- 31223 multiletter control sequences out of 15000+600000
- 436972 words of font info for 99 fonts, out of 8000000 for 9000
+ 14300 strings out of 478994
+ 216344 string characters out of 5858185
+ 578828 words of memory out of 5000000
+ 31436 multiletter control sequences out of 15000+600000
+ 438421 words of font info for 101 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,14n,88p,781b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "/Users/matt/Documents/GitHub/latex-2nd-brain/Gestione dei Big Data/main.pdf" (2 pages, 86833 bytes).
+ 81i,15n,88p,510b,503s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.pdf" (5 pages, 312403 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 189 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
