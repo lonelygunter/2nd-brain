@@ -41,3 +41,38 @@ gcc -H lib.a
 \begin{lstlisting}
 gcc -E file.c
 \end{lstlisting}
+
+
+\subsection{gcc -g: debugging debole}
+
+\begin{lstlisting}
+gcc -g -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
+\end{lstlisting}
+
+
+\subsection{gcc -ggbd: debugging forte}
+
+\begin{lstlisting}
+gcc -ggbd -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
+\end{lstlisting}
+
+
+% xattr
+\subsection{xattr: usato per i file che entrano in quarantena su MacOS}
+
+\begin{lstlisting}
+xattr -d (delete) com.apple.quarantine [path sh]
+\end{lstlisting}
+
+
+
+
+
+\section{Variabili di sistema definite in .bashrc}
+
+% INC
+\subsection{INC}
+
+\begin{lstlisting}
+INC="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
+\end{lstlisting}

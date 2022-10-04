@@ -1,31 +1,53 @@
 
-\section{}
+\section{System call}
 
- gcc -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
- 
- per il debugging si ha uno debole -g ed una forte -ggdb
- 
- 
- 
- 
- fun fuct: il path in unix può avere un 1024 caratteri massimi nella maggiornaza dei casi, invece il nome del file 254
- 
- 
- 
- guardiamo fig 1.3
- 
+% Funzioni e system call
+\subsection{Funzioni e system call}
 
-puntatori sono con indirizzi a 64 o 32 bit in base al sistema
+Se prendiamo un funzionamento più semplice del comando "ls" potrebbe essere:
 
-DIR: 
-struct dirent: tipo struttura che contiene al suo interno diversi tipi di variabili
+\begin{lstlisting}
+#include "apue.h"
+#include <dirent.h>
+
+int
+main(int argc, char *argv[])
+{
+	DIR				*dp;
+	struct dirent	*dirp;
+
+	if (argc != 2)
+		err_quit("usage: ls1 directory_name");
+
+	if ((dp = opendir(argv[1])) == NULL)
+		err_sys("can't open %s", argv[1]);
+	while ((dirp = readdir(dp)) != NULL)
+		printf("%s\n", dirp->d_name);
+
+	closedir(dp);
+	exit(0);
+}
+\end{lstlisting}
 
 
-per capire dove si trovano le cose nei file di intestazione. notiamoc he è una funzione di sistema da:
+dove abbiamo che:
+
+\begin{itemize}
+	\item \hl{DIR}: ??
+	\item \hl{struct dirent}: \textbf{tipo struttura} che contiene al suo interno diversi tipi di variabili. 
+	
+		Per capire se è una funzione di sistema lanciamo:
+		
 \begin{lstlisting}
 grep -rw "struct dirent" $INC
 \end{lstlisting}
-
+		
+		seguiamo il percorso:
+		
+\begin{lstlisting}
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//sys/dirent.h:struct dirent {
+\end{lstlisting}
+		
 \begin{lstlisting}
 #ifndef _SYS_DIRENT_H
 #define _SYS_DIRENT_H
@@ -97,52 +119,71 @@ struct dirent __DARWIN_STRUCT_DIRENTRY;
 \end{lstlisting}
 
 
-dove vediamo che se la varibiale ... è stata definita avremo che la struttura è:
-
+		dove vediamo che se la variabile "__DARWIN_64_BIT_INO_T
+" è stata definita avremo che la struttura di struct dirent è:
+		
 \begin{lstlisting}
-	
+#define __DARWIN_STRUCT_DIRENTRY { \
+	__uint64_t  d_ino;      /* file number of entry */ \
+	__uint64_t  d_seekoff;  /* seek offset (optional, used by servers) */ \
+	__uint16_t  d_reclen;   /* length of this record */ \
+	__uint16_t  d_namlen;   /* length of string in d_name */ \
+	__uint8_t   d_type;     /* file type, see below */ \
+	char      d_name[__DARWIN_MAXPATHLEN]; /* entry name (up to MAXPATHLEN bytes) */ \
+}
+
+#if __DARWIN_64_BIT_INO_T
+struct dirent __DARWIN_STRUCT_DIRENTRY;
+#endif /* __DARWIN_64_BIT_INO_T */
 \end{lstlisting}
 
-poi facciamo un if per fare un cotrllo sugli argomenti passati a linea di comando, dove notiamo tramite:
-
+		
+	\item \hl{if}: esegue un controllo sugli args. Notiamo che "err_quit" non è una funzione di sistema da:
+	
 \begin{lstlisting}
 grep -rw "err_quit" $INC
 \end{lstlisting}
 
-che non è una funzioen di sistema ma sarà contentuta in apue. che è definita come:
-
+		infatti non restituisce nulla. Deve allora essere una funzione di libreria create da noi quindi non presente nella directory standard.
+		
+		La funzione andrà a dare un messaggio di errore e poi esce dal programma.
+		
+		
+	\item \hl{opendir}: serve ad aprire una directory andandola a caricare nella RAM. 
+	
+	\item \hl{while}: leggiamo la directory e la inseriamo nella struttura che poi sarà richiamata tramite:
+	
 \begin{lstlisting}
-...
+dirp->d_name
 \end{lstlisting}
 
-andrà quindia dare un messaggio di errore e poi esce dal programma
+		dove "d_name" è il nome dello slot in cui è contenuto il nome del file.
+		
+		
+	\item \hl{exit}: restituisce l'exit code del programma
+	
+\end{itemize}
 
 
-opendir: apre una directory. questa operazione va a caricare nella ram la nostra directory
+% Capire se una funzione è una system call
+\subsection{Capire se una funzione è una system call}
 
-nel while andiamo a leggere la directory e la si va ad inserire nella struttura andando a stampare il valore d_name della struttura
+Andiamo a \hl{vedere se e' una funzione o una system call tramite "man"}, lo si capisce tramite la dicitura in alto alla pagina del manuale:
 
+	\begin{itemize}
+		\item \textbf{Library Functions} Manual
+		\item \textbf{System Calls} Manual
+	\end{itemize}
 
-
-
-
-xattr -d (delete) com.apple.quarantine [path sh]
-
-
-
-
-
-exit: restituice l'exit code del programma 
+Abbiamo anche \hl{esempi piu' particolari}, come fork, dove è indicata come system call ma in realtà le richiama ma in prima persona.
 
 
+Potremo trovare i simboli di una libreria tramite:
 
-opendir è una sistem call o una funzione? per vederlo la apro con man e capisco se lo è tramite la dicitura ina lto
+\begin{lstlisting}
+nm lib.a
+\end{lstlisting}
 
-ma può capitare che abbiamo una system call che in relata chiama una system call come fa fork.. in questo caso troviamo che trovermo ancora visibile nel file .o
+che ci fa vedere, per ogni file oggetto, i simboli associati per ogni funzione.
 
-
-
-trmite nm lib.a avremo i simboli di una libreira. dirà che c'è una lib.o e nella quale ci sono delle funzioni che iniziano da un dato byte (simbolo) dove con T si intendo "testo"
-
-
-per le system call le troveremo in INC/sys/syscall.h
+Le system call le troveremo in "\$INC/sys/syscall.h"
