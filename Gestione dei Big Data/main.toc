@@ -11,11 +11,10 @@
 \contentsline {section}{\numberline {III}Database System Concepts and Architecture - 28.09.22}{2}{section.3}%
 \contentsline {subsection}{\numberline {\mbox {III-A}}Definizioni sui modelli}{2}{subsection.3.1}%
 \contentsline {subsection}{\numberline {\mbox {III-B}}Definizioni fondamentali}{2}{subsection.3.2}%
-\contentsline {subsection}{\numberline {\mbox {III-C}}Schema}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Schema}{2}{subsection.3.3}%
 \contentsline {subsection}{\numberline {\mbox {III-D}}Tipologie di DBMS}{3}{subsection.3.4}%
 \contentsline {section}{\numberline {IV}Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}{3}{section.4}%
 \contentsline {subsection}{\numberline {\mbox {IV-A}}Entity-Relationship (ER)}{3}{subsection.4.1}%
 \contentsline {section}{\numberline {V}The Enhanced Entity–Relationship (EER) Model - 04.10.22}{4}{section.5}%
 \contentsline {subsection}{\numberline {\mbox {V-A}}Superclassi e sottoclassi}{4}{subsection.5.1}%
 \contentsline {subsection}{\numberline {\mbox {V-B}}Graficazione superclassi e sottoclassi}{4}{subsection.5.2}%
-\contentsline {section}{Riferimenti bibliografici}{5}{section*.2}%
