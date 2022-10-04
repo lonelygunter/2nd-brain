@@ -1,4 +1,4 @@
-
+\newpage
 \section{System call}
 
 % Funzioni e system call
@@ -118,9 +118,7 @@ struct dirent __DARWIN_STRUCT_DIRENTRY;
 #endif /* _SYS_DIRENT_H  */
 \end{lstlisting}
 
-
-		dove vediamo che se la variabile "__DARWIN_64_BIT_INO_T
-" è stata definita avremo che la struttura di struct dirent è:
+		dove vediamo che se la variabile "\_\_DARWIN\_64\_BIT\_INO\_T" è stata definita avremo che la struttura di struct dirent è:
 		
 \begin{lstlisting}
 #define __DARWIN_STRUCT_DIRENTRY { \
@@ -138,7 +136,7 @@ struct dirent __DARWIN_STRUCT_DIRENTRY;
 \end{lstlisting}
 
 		
-	\item \hl{if}: esegue un controllo sugli args. Notiamo che "err_quit" non è una funzione di sistema da:
+	\item \hl{if}: esegue un controllo sugli args. Notiamo che "err\_quit" non è una funzione di sistema da:
 	
 \begin{lstlisting}
 grep -rw "err_quit" $INC
@@ -157,7 +155,7 @@ grep -rw "err_quit" $INC
 dirp->d_name
 \end{lstlisting}
 
-		dove "d_name" è il nome dello slot in cui è contenuto il nome del file.
+		dove "d\_name" è il nome dello slot in cui è contenuto il nome del file.
 		
 		
 	\item \hl{exit}: restituisce l'exit code del programma

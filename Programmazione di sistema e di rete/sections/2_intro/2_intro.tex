@@ -1,4 +1,4 @@
-
+\newpage
 \section{Introduzione - 23/27.09.22}
 
 % System call
@@ -99,7 +99,7 @@ Abbiamo delle \hl{variabili automatiche} per rendere il lavoro più facile:
 	\item \textbf{\$@}: per riferirsi il target
 	\item \textbf{\$?}: tutti i prerequisiti più recenti del target
 	\item \textbf{\$\^}: tutti i prerequisiti del target
-	\item \textbf{\url{https://www.gnu.org/software/make/manual/make.html#Automatic-Variables}}
+	\item \url{https://www.gnu.org/software/make/manual/make.html#Automatic-Variables}
 \end{itemize}
 
 
@@ -138,15 +138,15 @@ dove:
 \end{itemize}
 
 
-\hl{Per la compilazione dei file}, qualsiasi sia il linguaggio, \hl{make saprà come compilarlo} grazie a tutte le definizioni di default presenti in:
+\hl{Per la compilazione dei file}, qualsiasi sia il linguaggio, \hl{make sapra' come compilarlo} grazie a tutte le definizioni di default presenti in:
 
 \begin{lstlisting}
 make -p
 \end{lstlisting}
 
-notare che \texdtbf{si può mettere un comando custom nelle rule} del target
+notare che \textbf{si puo' mettere un comando custom nelle rule} del target
 
-Nell'eventualità di \hl{voler aggiornare un solo file della libreria senza far aggiornare il resto ci basterà usare uno script} che compila quel file passato a linea di comando.
+Nell'eventualità di \hl{voler aggiornare un solo file della libreria senza far aggiornare il resto ci bastera' usare uno script} che compila quel file passato a linea di comando.
 
 \begin{lstlisting}
 gcc -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ${1}.c -o ${1}  -L../lib -lapue
