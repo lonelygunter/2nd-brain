@@ -1,0 +1,148 @@
+
+\section{}
+
+ gcc -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
+ 
+ per il debugging si ha uno debole -g ed una forte -ggdb
+ 
+ 
+ 
+ 
+ fun fuct: il path in unix può avere un 1024 caratteri massimi nella maggiornaza dei casi, invece il nome del file 254
+ 
+ 
+ 
+ guardiamo fig 1.3
+ 
+
+puntatori sono con indirizzi a 64 o 32 bit in base al sistema
+
+DIR: 
+struct dirent: tipo struttura che contiene al suo interno diversi tipi di variabili
+
+
+per capire dove si trovano le cose nei file di intestazione. notiamoc he è una funzione di sistema da:
+\begin{lstlisting}
+grep -rw "struct dirent" $INC
+\end{lstlisting}
+
+\begin{lstlisting}
+#ifndef _SYS_DIRENT_H
+#define _SYS_DIRENT_H
+
+#include <sys/_types.h>
+#include <sys/cdefs.h>
+
+#include <sys/_types/_ino_t.h>
+
+
+#define __DARWIN_MAXNAMLEN      255
+
+#pragma pack(4)
+
+#if !__DARWIN_64_BIT_INO_T
+struct dirent {
+	ino_t d_ino;                    /* file number of entry */
+	__uint16_t d_reclen;            /* length of this record */
+	__uint8_t  d_type;              /* file type, see below */
+	__uint8_t  d_namlen;            /* length of string in d_name */
+	char d_name[__DARWIN_MAXNAMLEN + 1];    /* name must be no longer than this */
+};
+#endif /* !__DARWIN_64_BIT_INO_T */
+
+#pragma pack()
+
+#define __DARWIN_MAXPATHLEN     1024
+
+#define __DARWIN_STRUCT_DIRENTRY { \
+	__uint64_t  d_ino;      /* file number of entry */ \
+	__uint64_t  d_seekoff;  /* seek offset (optional, used by servers) */ \
+	__uint16_t  d_reclen;   /* length of this record */ \
+	__uint16_t  d_namlen;   /* length of string in d_name */ \
+	__uint8_t   d_type;     /* file type, see below */ \
+	char      d_name[__DARWIN_MAXPATHLEN]; /* entry name (up to MAXPATHLEN bytes) */ \
+}
+
+#if __DARWIN_64_BIT_INO_T
+struct dirent __DARWIN_STRUCT_DIRENTRY;
+#endif /* __DARWIN_64_BIT_INO_T */
+
+
+
+#if !defined(_POSIX_C_SOURCE) || defined(_DARWIN_C_SOURCE)
+#define d_fileno        d_ino           /* backward compatibility */
+#define MAXNAMLEN       __DARWIN_MAXNAMLEN
+/*
+ * File types
+ */
+#define DT_UNKNOWN       0
+#define DT_FIFO          1
+#define DT_CHR           2
+#define DT_DIR           4
+#define DT_BLK           6
+#define DT_REG           8
+#define DT_LNK          10
+#define DT_SOCK         12
+#define DT_WHT          14
+
+/*
+ * Convert between stat structure types and directory types.
+ */
+#define IFTODT(mode)    (((mode) & 0170000) >> 12)
+#define DTTOIF(dirtype) ((dirtype) << 12)
+#endif
+
+
+#endif /* _SYS_DIRENT_H  */
+\end{lstlisting}
+
+
+dove vediamo che se la varibiale ... è stata definita avremo che la struttura è:
+
+\begin{lstlisting}
+	
+\end{lstlisting}
+
+poi facciamo un if per fare un cotrllo sugli argomenti passati a linea di comando, dove notiamo tramite:
+
+\begin{lstlisting}
+grep -rw "err_quit" $INC
+\end{lstlisting}
+
+che non è una funzioen di sistema ma sarà contentuta in apue. che è definita come:
+
+\begin{lstlisting}
+...
+\end{lstlisting}
+
+andrà quindia dare un messaggio di errore e poi esce dal programma
+
+
+opendir: apre una directory. questa operazione va a caricare nella ram la nostra directory
+
+nel while andiamo a leggere la directory e la si va ad inserire nella struttura andando a stampare il valore d_name della struttura
+
+
+
+
+
+xattr -d (delete) com.apple.quarantine [path sh]
+
+
+
+
+
+exit: restituice l'exit code del programma 
+
+
+
+opendir è una sistem call o una funzione? per vederlo la apro con man e capisco se lo è tramite la dicitura ina lto
+
+ma può capitare che abbiamo una system call che in relata chiama una system call come fa fork.. in questo caso troviamo che trovermo ancora visibile nel file .o
+
+
+
+trmite nm lib.a avremo i simboli di una libreira. dirà che c'è una lib.o e nella quale ci sono delle funzioni che iniziano da un dato byte (simbolo) dove con T si intendo "testo"
+
+
+per le system call le troveremo in INC/sys/syscall.h
