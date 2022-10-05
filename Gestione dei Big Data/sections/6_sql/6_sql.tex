@@ -1,0 +1,84 @@
+\newpage
+\section{Basic SQL}
+
+
+SQL è un linguaggio che consente di accedere al db in varie modalità ed \hl{ha la funzione di creare e gestire i db}.
+
+
+% Statement - SELECT
+\subsection{Statement - SELECT}
+
+Usato per \hl{recuperare informazioni dal db}. la sua struttura ha 3 clausole (claude):
+
+\begin{lstlisting}
+SELECT <attribute list>
+FROM <table list>
+[ WHERE <condition> ]
+[ ORDER BY <attribute list> ];
+\end{lstlisting}
+
+
+Molto utile usare gli \hl{alias (AS)} per:
+
+\begin{itemize}
+	\item andare a \textbf{definire i campi che ci serviranno in modo da dividere gli attributi di una tabella con quelli di un altra}
+	
+	\item \textbf{accedere ad una stessa tabella ma con 2 alias diversi} perchè per esempio uno rappresenta l'impiegato e l'altro il supervisore
+	
+	\item \textbf{rinominare gli attributi}:
+
+\begin{lstlisting}
+EMPLOYEE AS E(Fn, Mi, ...)
+\end{lstlisting}
+
+
+\end{itemize}
+
+
+\hl{Keyword} da poter usare:
+
+\begin{itemize}
+	\item \textbf{DISTINCT}: restituisce solo valori distinti (diversi) nel set di risultati
+\end{itemize}
+
+
+% Statement - WHERE
+\subsection{Statement - WHERE}
+
+\hl{Esprime una condizione}, se manca è possibile fare il prodotto cartesiano se si usa:
+
+\begin{lstlisting}
+SELECT Ssn, Dname
+FROM EMPLOYEE, DEPARTMENT
+\end{lstlisting}
+
+Si possono usare delle condizioni di tipo:
+
+\begin{itemize}
+	\item numerico:
+
+\begin{lstlisting}
+WHERE Dno = 5
+\end{lstlisting}
+
+	\item pattern matching tra stringhe:
+
+\begin{lstlisting}
+WHERE Ssn LIKE "yes"
+\end{lstlisting}
+	
+		se non è un occorrenza esatta usiamo:
+
+			\begin{itemize}
+				\item \textbf{\%}: indica una qualsiasi sottostringa
+				\item \textbf{\_}: indica un solo carattere in una specifica posizione
+			\end{itemize}
+
+\end{itemize}
+
+
+% Statement - ORDER BY
+\subsection{Statement - ORDER BY}
+
+Per ordinare i risultati con DESC o ASC.
+

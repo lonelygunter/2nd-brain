@@ -1,6 +1,10 @@
 \newpage
 \section{Data Modeling Using the Entity–Relationship (ER) Model - 28.09.22}
 
+
+% Entity-Relationship (ER)
+\subsection{Entity-Relationship (ER)}
+
 Partendo dal mini-world serve \hl{capire i requisiti utili}. Bisognerà far gestire, all'applicazione, alcuni dati per poi visualizzarli (requisiti relazionali).
 
 La procedura sarà:
@@ -14,9 +18,6 @@ La procedura sarà:
 
 in parallelo avremo la \hl{gestione delle transazioni} del mini-world estraendo i functional requirements per effettuare una functional analysis che genera delle transazioni ad alto livello.
 
-
-% Entity-Relationship (ER)
-\subsection{Entity-Relationship (ER)}
 
 Per la scelta degli elementi avremo:
 
@@ -48,6 +49,16 @@ Per la scelta degli elementi avremo:
 	\item \hl{attributo chiave}: \textbf{identificare univocamente tutti i record}. Si può usare anche un'unione tra attributo chiave e un altro attributo
 	
 	\item \hl{entita' debole}: entità che \textbf{da sola non può esistere}, quindi dipende da un entità più forte. Le sue relationship saranno deboli anche esse. Questa entità \textbf{non ha un attributo chiave} ma ha almeno un \textbf{attributo in comune con l'entità forte}.
+	
+	\item \hl{vincoli}: ci sono dei concetti che fungano da vincoli
+	
+		\begin{itemize}
+			\item \textbf{impliciti}: come è definito il modello dati (es: non posso avere una lista come valore di un attiributo, allora userò n colonne per quanti sono i possibili numeri di telefono)
+			
+			\item \textbf{espliciti}: aggiunti dal modellista (es: cardinalità min max)
+			
+			\item \textbf{semantici}: vincoli aggiunti dal programmatore che farà l'applicativo sul quale si base il nostro db (es: la psw deve avere un tot di caratteri e non altri)
+		\end{itemize}
 	
 \end{itemize}
 
