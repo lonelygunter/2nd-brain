@@ -33,7 +33,7 @@ main(int argc, char *argv[])
 dove abbiamo che:
 
 \begin{itemize}
-	\item \hl{DIR}: ??
+	\item \hl{DIR}: struttura dati
 	\item \hl{struct dirent}: \textbf{tipo struttura} che contiene al suo interno diversi tipi di variabili. 
 	
 		Per capire se è una funzione di sistema lanciamo:
@@ -185,3 +185,146 @@ nm lib.a
 che ci fa vedere, per ogni file oggetto, i simboli associati per ogni funzione.
 
 Le system call le troveremo in "\$INC/sys/syscall.h"
+
+
+
+
+
+
+
+---
+
+file descriptor: per accedere a d un file si fa tramite il path che visista e ricerca in tutte le cartelle del path che rimanderanno ad un certo blocco. Per non fare tutto ciò ogni vlta ci si conserva un identificativo per quel file. si da sempre il piu' piccolo numero intero disponibile. viene conservato fino alla chiusura del file.
+
+ogni processo ha, se lanciato da bash, 3 file desc usati 0, 1, 2.
+
+\begin{lstlisting}
+#include "apue.h"
+
+#define	BUFFSIZE	4096
+
+int
+main(void)
+{
+	int		n;
+	char	buf[BUFFSIZE];
+
+	while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0)
+		if (write(STDOUT_FILENO, buf, n) != n)
+			err_sys("write error");
+
+	if (n < 0)
+		err_sys("read error");
+
+	exit(0);
+}
+\end{lstlisting}
+
+questo è un esempio semplificato del comando "cat"
+
+\begin{itemize}
+	\item BUFFSIZE: macro di preprocessore
+	\item read: system call con parametri: STDIB\_FILENO: file descriptor per dire da dove si vuole leggere, buf: inidirizzo di dove sono i dati dell'array, BUFFSIZE: quando deve leggere. n sarà il numero di char che ha letto la read dato che potrebbe leggere meno byte letti di quelli richiesti se il file ne contiene di meno. read si ricorda una "posizione nel file" che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato
+	\item write: richiede gli stessi valori di read tranne per STDOUT\_FILENO e ritorna il numero byte effettivamente letti
+	\item 
+\end{itemize}
+
+
+per capire quando è STDIN\_FILENO:
+
+\begin{lstlisting}
+$ grep -rw "STDIN_FILENO" $INC
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//unistd.h:#define	 STDIN_FILENO	0	/* standard input file descriptor */
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//asl.h: * asl_log_descriptor(c, m, ASL_LEVEL_NOTICE, STDIN_FILENO, ASL_LOG_DESCRIPTOR_READ);
+\end{lstlisting}
+
+abbiamo che un processo per eseguire un programma esegue prima una fork e poi con exec esegue il programma prima di fare la fork il child chiude il file 1 e quando fa una open il file prenderà la 1 he sarà presa quidi dal file nel quale stiamo rendirizzando. questo è il sistema sul quael gioca tutto UINX infatti avviene anche con le pipe "|". questo quindi permette di creare programmi complessi unendo tanti piccoli porgrammi spefializzati in un'unica funzione ogniuno fatto da diversi 
+
+i child erditano i file descriptor dei parendt quindi non è necessario che il porgramma corrente faccia una open dei file descriptor
+
+open va quidni a restituire il numero di rifermento, dopo aver preso il path ed averlo associato al minor numero di sponibile.
+
+notare che si usa ./mycat > outputfile.txt che aspetterà allo standard di input da scrivere dato che STDIN\_FILENO è stato già aperto.
+
+in pratica nboi andiamo a REINDIRIZZARE lo standard output in un file creato da noi ma in realtà stiamo scrivendo nel file già aperto: 1
+
+
+
+un file e1 una serie di meccanismi : apri, leggi, scrivi, chiudi. il che è applicabile a file, cartelle, stampanti ecc solo che per ogni "tipo" i 4 meccanismi si adeguendo a ciò che il caso particolare deve fare.
+
+
+siam onel capitlo unbuffered i/o.
+
+
+le ssytem call raprpesentano una barriera tra kernel e pogrammai. quindi il sistema entra in una modalita1 in cui tutto è possibile detta kernel mode.
+
+
+stdiolib e1 una libreira che ha il meccanismo di avere delle prestazioni migliori se ciò che deve essere scirtto lo consegna tutto insime ee con qualche info aggiuntiva per facilitare il lavoro. ci sara1 allora una picoola riflessione prima di mandare roba al kernel, quidni si va a prendere pianopiano i byte fino ad un certo tetto. quindi ha un buffered i/o che permete di avere dei buffer che una volta riempisono sono mandati al kernel.
+
+img 
+
+
+
+
+
+system call getpid() usata per prendere i prodcess id dell'attuale processo.
+
+
+
+
+
+
+
+prendiamo shell1.c
+
+\begin{lstlisting}
+#include "apue.h"
+#include <sys/wait.h>
+
+int
+main(void)
+{
+	char	buf[MAXLINE];	/* from apue.h */
+	pid_t	pid;
+	int		status;
+
+	printf("%% ");	/* print prompt (printf requires %% to print %) */
+	while (fgets(buf, MAXLINE, stdin) != NULL) {
+		if (buf[strlen(buf) - 1] == '\n')
+			buf[strlen(buf) - 1] = 0; /* replace newline with null */
+
+		if ((pid = fork()) < 0) {
+			err_sys("fork error");
+		} else if (pid == 0) {		/* child */
+			execlp(buf, buf, (char *)0);
+			err_ret("couldn't execute: %s", buf);
+			exit(127);
+		}
+
+		/* parent */
+		if ((pid = waitpid(pid, &status, 0)) < 0)
+			err_sys("waitpid error");
+		printf("%% ");
+	}
+	exit(0);
+}
+\end{lstlisting}
+
+
+
+crea uno schell dal quale eseguire programmi.
+
+\begin{itemize}
+	\item fgets: funzione della stdoutput che legge la riga che dai prima di dare invio e la mette in un buffer. restituisce una triga conun caratere $\n$ alla fine
+	\item MAXLINE: proviene da una nostra libreria
+
+\begin{lstlisting}
+$ grep -rw "MAXLINE" include/
+Binary file include//apue.h.gch matches
+include//apue.h:#define	MAXLINE	4096			/* max line length */
+\end{lstlisting}
+
+	\item stdin: prensente in stdiolib ed è una struttura file che definisce uno standard input tramite un puntatore di un "file"
+
+	\item if 1: permette di avere un null dove prima avevamo $\n$
+\end{itemize}
