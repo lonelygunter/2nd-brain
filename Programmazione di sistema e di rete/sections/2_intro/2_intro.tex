@@ -26,7 +26,7 @@ mov eax,4    ; numero della sc
 int 0x80	
 \end{lstlisting}
 
-dove nel \hl{file descriptor} indichi a quale file devi mandare l'output. Questo viene usato dato che così non deve cercare il path ogni volta ma lo mantiene aperto riferendosi ad esso tramite il numero.
+dove nel \hl{file descriptor} indichi a quale file devi mandare l'output. Questo viene usato dato che così non deve cercare il path ogni volta ma lo mantiene aperto \hl{riferendosi ad esso tramite un numero, cioe' il piu' piccolo disponibile}.
 
 
 % Programma Make

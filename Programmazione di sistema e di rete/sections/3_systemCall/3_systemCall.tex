@@ -187,16 +187,10 @@ che ci fa vedere, per ogni file oggetto, i simboli associati per ogni funzione.
 Le system call le troveremo in "\$INC/sys/syscall.h"
 
 
+% Numeri dei file descriptor
+\subsection{Numeri dei file descriptor}
 
-
-
-
-
----
-
-file descriptor: per accedere a d un file si fa tramite il path che visista e ricerca in tutte le cartelle del path che rimanderanno ad un certo blocco. Per non fare tutto ciò ogni vlta ci si conserva un identificativo per quel file. si da sempre il piu' piccolo numero intero disponibile. viene conservato fino alla chiusura del file.
-
-ogni processo ha, se lanciato da bash, 3 file desc usati 0, 1, 2.
+Prendiamo un esempio semplificato del comando "cat":
 
 \begin{lstlisting}
 #include "apue.h"
@@ -220,11 +214,11 @@ main(void)
 }
 \end{lstlisting}
 
-questo è un esempio semplificato del comando "cat"
+ogni processo ha, se lanciato da bash, 3 file desc usati 0, 1, 2.
 
 \begin{itemize}
-	\item BUFFSIZE: macro di preprocessore
-	\item read: system call con parametri: STDIB\_FILENO: file descriptor per dire da dove si vuole leggere, buf: inidirizzo di dove sono i dati dell'array, BUFFSIZE: quando deve leggere. n sarà il numero di char che ha letto la read dato che potrebbe leggere meno byte letti di quelli richiesti se il file ne contiene di meno. read si ricorda una "posizione nel file" che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato
+	\item \hl{BUFFSIZE}: macro di preprocessore
+	\item \hl{read}: system call con parametri: STDIB\_FILENO: file descriptor per dire da dove si vuole leggere, buf: inidirizzo di dove sono i dati dell'array, BUFFSIZE: quando deve leggere. n sarà il numero di char che ha letto la read dato che potrebbe leggere meno byte letti di quelli richiesti se il file ne contiene di meno. read si ricorda una "posizione nel file" che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato
 	\item write: richiede gli stessi valori di read tranne per STDOUT\_FILENO e ritorna il numero byte effettivamente letti
 	\item 
 \end{itemize}
