@@ -1,0 +1,368 @@
+\newpage
+\section{Formulazioni equivalenti di un problema di programmazione lineare}
+
+
+% Problema in FORMA GENERALE
+\subsection{Problema in FORMA GENERALE}
+
+In generale nella \hl{zona ammissibile} diciamo:
+
+$$X={x \in R^n : A_x >= b, D_x = l, x_j >= 0\ \ \ (*)$$ $$\forall\ \ \ j \in J \subseteq \{1,2,...,n\}$$
+
+dove \hl{definiamo la possibilita' di vincoli di $>$=, = e variabili $>$= 0}.
+
+La funzione obiettivo è definita da: $$z = c_x\ \ \ t.c.\ \ \ z = \min z, x \in X$$
+
+che rappresenta il \hl{problema espresso in forma generale}.
+
+
+% Problema in FORMA CANONICA
+\subsection{Problema in FORMA CANONICA}
+
+Se in (*) abbiamo:
+
+\begin{itemize}
+	\item $D = 0$
+	\item $J = \{1,2,...,n\}$
+\end{itemize}
+
+allora il \hl{problema si dice in forma canonica}: $$min_x\ \ \{z = c_x : A_x >= b, x >= 0\}$$
+
+
+% Problema in FORMA STANDARD
+\subsection{Problema in FORMA STANDARD}
+
+Utile quando nella forma generale la matrice $A = 0$ e tutti i vincoli sono espressi sotto forma di uguaglianze:
+Se in * A = 0, J = {1,2,..,n}, allora il problema: min_x{z = c_x: D_x = l, x >= 0}
+
+questo problema e1 detto problema in forma standard.
+
+
+
+c'e sempre il modo di ricondurci tramite trasformazioni, alla forma standard.
+
+
+
+terminologia:
+
+nella forma standard abbiamo che:
+
+z: la funzione obbiettivo (obiettivo travare il min valore per la funzipone z)
+
+A: matrice dei vincoli
+
+D: matrice di dimensione m x n detta matrice dei coefficienti
+
+l: vettore colonna detto vettore dei termini noti
+
+c: vettore di riga detto vettore dei coefficienti di costo (vettore costo)
+
+
+
+
+
+
+trasfomazioe da effettuare sul modello per ricondusi alla forma standard:
+
+1. variabili non vincolate di segno: x_j t.c. j non appartiene J
+
+	per trasformarla possiamo sostituire a x_j la somma algebrica di 2 variabili non negative: x_j = x_j ^+ - x_j ^- con x_j ^+ >= 0 e x_j ^- >= 0
+
+	se abbiamo k (<= n) variabili non vincolate in segno , possiamo evitare di introdurre k coppie di variabili non negative. È possibile considerare una variabile x_0 >= 0 e sostituire la generica variabile non vincolata di segno con x_j = x_j ^+ - x_0. Così introduciamo "solo" k+1 variabili
+
+
+
+non tutti i voncoli potrebbero essere espressi in forma di ugiaglianza:
+
+2. vincoli del tipo <=
+	sum_(j=i) ^n a_(ij)x_j <= b_i
+	
+	presa una variabile di Slack: S_i >= 0, avremo:
+	
+	sum_(j=i) ^n a_(ij)x_j + S_i = b_i
+	
+	
+	questa varibile misara lo slack che ce per far si che il vincolo sia rispettato per uguaglianza o no (vincolo > 0)
+	
+3. vincoli del tipo >=
+	sum_(j=i) ^n a_(ij)x_j >= b_i
+	
+	presa una variabile di Surplus: S_i >= 0, avremo:
+
+	
+	sum_(j=i) ^n a_(ij)x_j - S_i = b_i
+
+
+
+4. trasformazione di vincoli di uguaglianza in vincoli di disuguaglianza
+
+	basta allora sostituire:
+	
+	sum_(j=i) ^n a_(ij)x_j = b_i
+
+	sostituiamo a questi:
+	
+	sum_(j=i) ^n a_(ij)x_j <= b_i
+	
+	sum_(j=i) ^n a_(ij)x_j >= b_i
+
+
+5. funzione obiettivo
+	se la f.o. è max di z = c_x, è possibile operare la trasformazione:
+	
+	max z = -min {-z} (meno del minimo di -z)
+
+
+esempio 1:
+min z= x_1 + 2 x_2
+
+vincoli:
+6x_1 + 4x_2 <= 24
+4x_1 + 8x_2 <= 32
+x_2 >= 3
+x_1, x_2 >= 0
+
+trasformiamo il problema in forma standard:
+
+se il vincolo e1 in <= allora aggiungiamo una variabile non negativa (slack):
+
+6x_1 + 4x_2 + x_3 = 24
+
+in maniera analoga per il secondo vincolo:
+
+4x_1 + 8x_2 + x_4 = 32
+
+per il terzo vincolo del tipo >= aggiungiamo una variabile ausiliaria non negativa cma la aggiungiamo con un segno negativo:
+
+x_2 - x_5 = 3
+
+
+vinsolo sulle variabili:
+
+x_1, x_2, x_3, x_4, x_5 >= 0
+
+
+qjindi nella formalazione stanard avremo j = 1, .. 5 in precedendza avevamo: j = 1, 2
+
+
+
+esercizio 2:
+
+trasformare in forma standard il seguente problema:
+
+max z = z_1 + z_2
+
+soggetto ai vincoli:
+
+8x_1 + 6x_2 >= 48
+5x_1 + 10x_2 >= 50
+13x_1 + 10x_2 <= 130
+x_1 >= 0
+
+
+prima poniamo x_2 = x_2^+ - x_2^-
+
+
+
+per trasformala in forma standard:
+
+
+
+
+
+max z = -min -z = -x_1 -x_2 = -x_1 -x_2^+ + x_2^-
+
+
+8x_1 + 6x_2^+ - 6x_2^- - x_3 = 48
+
+5x_1 + 10_2^+ - 10x_2^- - x_4 = 50
+
+13x_1 + 10_2^+ - 10x_2^- + x_5 = 130
+
+
+x_1, _2^+, x_2^-, x_3, x_4, x_5 >= 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+classe di problemi di ottimizzazione per i problemi complessi:
+
+
+OPTIMIZATION MMODELS REVIEW:
+
+1. SCHEDULING
+
+reinsta nall'anmito dei problemi dello scheduling dove abbiamo dei task/job gia assegnati. abbiamo a disposizione n macchine/processori. potremmo attrezzare le macchie con dei tools (stumenti per tagliare).
+
+
+intendiamo allocare i tasks alla macchine in modo overtime quidni caoire anche la facia temportale nella quale eseguire il task.
+
+potrebbe esserci un unico tempo di esecuzione ooppure un task puo avere dei tempi di esecuzioen differenti su macchine differenti. 
+
+L'output sarà un digramma di ganth
+
+i task possono avere degli istanti di rilascio dove un task non posterbbe seesere rilasciato dopo un certo istantedi tempo (ready time)
+
+possoono esserci delle realizioni di precedenza tra i task. quidni non posso effetturar eun task se priam non ho conculso l'altro
+
+i ldiagramam mi dice nel tempo a che macchina è associato quale task ed in quali intervallidi tempo e con quale tool.
+
+
+
+
+
+nei prblem idi scheduling osn oiporatnti i project scheduling:
+
+2. PROJECT SCHEDULING
+
+progetto: insieme di attività identificate dai task che son orealizzate al fine di raggungere un goal. la acaratteristica di un progetto è che nel complesso le attivita non sono mai state eseguite in precedenza.
+
+
+lanciare un nuovo prodotto è un progetto dato che e1 un compelsso di attivita mai rilasciate prima
+
+caratterizza un progetto la durata delle attività che non e1 esattamente nota dato che 
+
+tipicamente il progetto e1 a capo del project manager he e1 il responsabile e risponde alla realizzazione del progetto in termini di tempo di realizzazione, costi di produzione, qualità del prodotto.
+
+in genre in project manager usano dei metodi per tener sotto ontrollo il progetto (es: microsoft project) per esempoio degli applicativi che suppostano i p.m. nella schedulaizone e rischedulaizone dei progetti 
+
+
+
+i lpiù semplice modello di modellazione:
+
+un porgetto e1 rappresentato da diverse attività:
+
+expected puration
+
+
+
+
+\begin{table}[h!]
+	\begin{center}
+	\begin{tabular}{|c | c c |} 
+			\hline
+			Attività & Durata stimata d_i & Predecessori \\ [0.5ex]
+			\hline
+ 			1 & 10 & - \\
+			2 & 10 & - \\
+			3 & 10 & 1 \\
+			4 & 10 & 1, 2 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Tabella delle ore di lavoro}
+	\label{taborelav}
+\end{table}
+
+
+questi problemi vengono rapresntati tramite diagramma aciclico:
+
+rapresntazione activity on node (AoN):
+
+dove abbiamo degli "archi" che rappresentano le predecessioni 
+
+(la tabella mi viene fornita dal project manager dopo aver parlato con delgi esperti)
+
+
+
+a volte si introducono dei vertici fittizzi che sono lo start e l'end
+
+start: lo colleghiamo tutte le atticità che non hano predecessori
+end: ci colleghiamo tutte le attivtà finali
+
+
+
+
+vedremo come li p.m. può usare delle risorse per accellerare delle attività
+
+
+prima cosa: cariabili decisionali: nel nostro caso è lo start time. ipotizziamo che i lprogetto inizi al tempo t = 0, quidni per ogni task abbiamo che s_i >= 0 \forall i \in TASKS dove s_i è lo staart time del task i che appartiene a TASKS
+
+in più possiamo definire T >= 0 che è il tempo di completamento del progetto (complition time)
+
+
+in questo modello vogliamo minimizzare il complation time : min z = T
+
+cioè: z = 1T + 0s_1 + 0s_2 + ...sucamiento
+
+
+per quanto riguarda le relaizoni di precedenza:
+
+p_{ij} = { (sistema) 1 <=> i è predecessore di j, 0 altrimenti
+
+con p_{ij} una matrice costate e binaria:
+
+p = 
+
+0 0 1 1
+0 0 0 1
+0 0 0 0
+0 0 0 0
+
+
+
+
+VINCOLI DI PRECEDENZA:
+
+T è un maggiorante del tempo di completamento delle task, quindi:
+
+s_i + d_i <= T
+
+p_j (s_i + d_i) <= s_j \forall i \in TASKS, j \in TASKS
+se p_ij = 1 allora i e1 predecessore di j quindi il tempo di dinizion del task j deve sessere duccessivo o uguale al task i cioe1 s_i + d_i
+
+
+se invece i non e1 predecessore: p_ij = 0 quindi avremo che 0 <= s_j allora il vincolo è ridondante dato che e1 un dato che già abbiamo
+
+
+questo vale per un generico numero di task, mi serve pero un lingiaggi odi modellaizone per scrivere il modello in forma compatta per avere dati e modello divisi
+
+
+per semplifia l'ultimo vicolo possoiamo scrivere 
+s_i + d_i <= s_j \forall i \in TASKS, j \in TASKS, p_{ij} >= 0
+
+
+
+
+
+esempio modello espanso per problemi di istanza con i dati di sopra:
+
+min z = T
+
+s_1 + 10 <= T
+s_2 + 10 <= T
+s_3 + 10 <= T
+s_4 + 10 <= T
+
+s_1 + 10 <= s_3 (p_{13} = 1)
+s_1 + 10 <= s_4 (p_{14} = 1)
+s_2 + 10 <= s_4 (p_{24} = 1)
+
+s_1, s_2, s_3, s_4 >= 0
+T >= 0
+
+
+
