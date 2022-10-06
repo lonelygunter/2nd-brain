@@ -22,3 +22,6 @@
 \contentsline {section}{\numberline {V}System call}{5}{section.5}%
 \contentsline {subsection}{\numberline {\mbox {V-A}}Funzioni e system call}{5}{subsection.5.1}%
 \contentsline {subsection}{\numberline {\mbox {V-B}}Capire se una funzione è una system call}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {\mbox {V-C}}Numeri dei file descriptor}{6}{subsection.5.3}%
+\contentsline {subsection}{\numberline {\mbox {V-D}}Meccanismi dei file}{6}{subsection.5.4}%
+\contentsline {subsection}{\numberline {\mbox {V-E}}Unbuffered I/O}{6}{subsection.5.5}%

@@ -214,17 +214,27 @@ main(void)
 }
 \end{lstlisting}
 
-ogni processo ha, se lanciato da bash, 3 file desc usati 0, 1, 2.
+\hl{ogni processo ha 3 file descriptor usati 0, 1, 2}.
 
 \begin{itemize}
 	\item \hl{BUFFSIZE}: macro di preprocessore
-	\item \hl{read}: system call con parametri: STDIB\_FILENO: file descriptor per dire da dove si vuole leggere, buf: inidirizzo di dove sono i dati dell'array, BUFFSIZE: quando deve leggere. n sarà il numero di char che ha letto la read dato che potrebbe leggere meno byte letti di quelli richiesti se il file ne contiene di meno. read si ricorda una "posizione nel file" che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato
-	\item write: richiede gli stessi valori di read tranne per STDOUT\_FILENO e ritorna il numero byte effettivamente letti
+	\item \hl{read}: \textbf{system call} con parametri: 
+	
+		\begin{itemize}
+			\item \textbf{STDIN\_FILENO}: file descriptor per dire da quale "numero di deve leggere" si vuole leggere. Cioè per leggere dal file indicato nello standard input
+			\item \textbf{buf}: indirizzo dell'\textbf{inizio dell'array}
+			\item \textbf{BUFFSIZE}: quando deve leggere
+		\end{itemize}
+		
+		\hl{Restituisce il numero di char che ha letto}, dato che potrebbe leggere meno byte di quelli richiesti nel caso in cui il file ne contenga di meno. Ad ogni sua iterazione \hl{si ricorda la "posizione nel file"} che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato.
+	
+	\item \hl{write}: richiede gli stessi valori di read tranne per \textbf{STDOUT\_FILENO} e \textbf{ritorna il numero byte effettivamente letti}
 	\item 
 \end{itemize}
 
 
-per capire quando è STDIN\_FILENO:
+per capire \hl{quanto vale STDIN\_FILENO}:
+
 
 \begin{lstlisting}
 $ grep -rw "STDIN_FILENO" $INC
@@ -232,44 +242,56 @@ $ grep -rw "STDIN_FILENO" $INC
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//asl.h: * asl_log_descriptor(c, m, ASL_LEVEL_NOTICE, STDIN_FILENO, ASL_LOG_DESCRIPTOR_READ);
 \end{lstlisting}
 
-abbiamo che un processo per eseguire un programma esegue prima una fork e poi con exec esegue il programma prima di fare la fork il child chiude il file 1 e quando fa una open il file prenderà la 1 he sarà presa quidi dal file nel quale stiamo rendirizzando. questo è il sistema sul quael gioca tutto UINX infatti avviene anche con le pipe "|". questo quindi permette di creare programmi complessi unendo tanti piccoli porgrammi spefializzati in un'unica funzione ogniuno fatto da diversi 
 
-i child erditano i file descriptor dei parendt quindi non è necessario che il porgramma corrente faccia una open dei file descriptor
+Sappiamo che un processo per eseguire un programma, esegue prima una \hl{fork} e poi con \hl{exec} esegue il programma. Prima di eseguire la fork il \hl{child chiude il file 1} e quando fa una \hl{open}, la system call prenderà il file nel quale reindirizzare lo STDOUT e restituirà il numero 1.
 
-open va quidni a restituire il numero di rifermento, dopo aver preso il path ed averlo associato al minor numero di sponibile.
+Su questo sistema si base UINX infatti avviene anche con le pipe "|". Permette di creare programmi complessi unendo tanti piccoli programmi specializzati in un'unica funzione.
 
-notare che si usa ./mycat > outputfile.txt che aspetterà allo standard di input da scrivere dato che STDIN\_FILENO è stato già aperto.
-
-in pratica nboi andiamo a REINDIRIZZARE lo standard output in un file creato da noi ma in realtà stiamo scrivendo nel file già aperto: 1
+È molto importante capire che \hl{ i child ereditano i file descriptor dei parent} quindi non è necessario che il programma corrente faccia una open dei file descriptor.
 
 
+% Meccanismi dei file
+\subsection{Meccanismi dei file}
 
-un file e1 una serie di meccanismi : apri, leggi, scrivi, chiudi. il che è applicabile a file, cartelle, stampanti ecc solo che per ogni "tipo" i 4 meccanismi si adeguendo a ciò che il caso particolare deve fare.
+Un file è in insieme di meccanismi: 
 
-
-siam onel capitlo unbuffered i/o.
-
-
-le ssytem call raprpesentano una barriera tra kernel e pogrammai. quindi il sistema entra in una modalita1 in cui tutto è possibile detta kernel mode.
-
-
-stdiolib e1 una libreira che ha il meccanismo di avere delle prestazioni migliori se ciò che deve essere scirtto lo consegna tutto insime ee con qualche info aggiuntiva per facilitare il lavoro. ci sara1 allora una picoola riflessione prima di mandare roba al kernel, quidni si va a prendere pianopiano i byte fino ad un certo tetto. quindi ha un buffered i/o che permete di avere dei buffer che una volta riempisono sono mandati al kernel.
-
-img 
+\begin{itemize}
+	\item \hl{apri}
+	\item \hl{leggi}
+	\item \hl{scrivi}
+	\item \hl{chiudi}
+\end{itemize}
 
 
+Questi meccanismi sono applicabili a file, cartelle, stampanti ecc..., solo che per ogni "tipo" \hl{i 4 meccanismi si adeguano} a ciò che il caso particolare deve fare.
+
+
+% Unbuffered I/O
+\subsection{Unbuffered I/O}
+
+Le system call rappresentano una barriera tra kernel e programmi, dove avremo rispettivamente \hl{due diverse modalita' di utilizzo}:
+
+\begin{itemize}
+	\item \textbf{kernel mode}: ha tutti i privilegi
+	\item \textbf{user mode}: non può accedere a tutte le celle di memoria
+\end{itemize}
+
+
+Per \hl{ottimizzare la scrittura sulla memoria da parte del kernel si utilizza la libreria STDIOLIB} che incrementa le prestazioni dato che gestisce il passaggio di pacchetti con il kernel in modo da inviare dei pacchetti consistenti ogni tot e non piccoli pacchetti soni secondo. Per fare ciò usa un \hl{buffered i/o} che, una volta riempiti dei buffer, gli manda al kernel.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{unbuffio.jpeg}
+\caption{Schema unbuffered I/O} 
+\label{unbuffio}
+\end{figure}
 
 
 
-system call getpid() usata per prendere i prodcess id dell'attuale processo.
 
-
-
-
-
-
-
-prendiamo shell1.c
+----
+Prendiamo shell1.c che crea uno schell dal quale poter eseguire programmi:
 
 \begin{lstlisting}
 #include "apue.h"
@@ -304,13 +326,13 @@ main(void)
 }
 \end{lstlisting}
 
-
-
-crea uno schell dal quale eseguire programmi.
+avremo allora:
 
 \begin{itemize}
-	\item fgets: funzione della stdoutput che legge la riga che dai prima di dare invio e la mette in un buffer. restituisce una triga conun caratere $\n$ alla fine
-	\item MAXLINE: proviene da una nostra libreria
+	\item \hl{fgets}: funzione della \textbf{stdoutput che legge la riga} che dai prima di dare invio e la mette in un buffer, con argomenti:
+	
+		\begin{itemize}
+			\item \textbf{MAXLINE}: proviene da una nostra libreria
 
 \begin{lstlisting}
 $ grep -rw "MAXLINE" include/
@@ -318,7 +340,10 @@ Binary file include//apue.h.gch matches
 include//apue.h:#define	MAXLINE	4096			/* max line length */
 \end{lstlisting}
 
-	\item stdin: prensente in stdiolib ed è una struttura file che definisce uno standard input tramite un puntatore di un "file"
+			\item \textbf{stdin}: presente in stdiolib ed è una \textbf{struttura file che definisce uno standard input tramite un puntatore di un "file"}
+		\end{itemize}
 
-	\item if 1: permette di avere un null dove prima avevamo $\n$
+	\item \hl{if 1}: permette di avere un null dove prima avevamo \textbackslash n
+	
+	\item 
 \end{itemize}
