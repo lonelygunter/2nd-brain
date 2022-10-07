@@ -155,3 +155,129 @@ s_2 + 10 <= s_4 (p_{24} = 1)
 s_1, s_2, s_3, s_4 >= 0
 T >= 0
 
+
+
+
+
+
+
+
+
+
+il project manager ha un budget per poter velocizzare il porgetto
+
+possiamo comprimere un'attvità. se considero un task "i" con durata ovviamente non costante, sarà allora data da:
+
+d_i^N(valore nominale) durata attivatà orrspondete ad un utilizzo di risorse non extra.
+
+accade però che se usao piu risrose l'attivtà può essere ridotta. un andamento sempplice èuno linare dove all'aumentare delle risorse la durata si riduce in. modo linare. il che e1 vero solo per un certo punto dato che ci può essere un vincolo per il quale sotto un valolre inimo d_i^m non si può scendere perchè l'attivtà non è piú comprimibile
+
+
+le 3 risorse alle quali si possono far riferimento sono le 3M Man, Machine, Money.
+
+
+quindi abbiamo che d_i = d_i^N
+
+w = pendenza: riduzione della durata del task "i" per unità di extra risorse (mesi di lavoro / k euro)
+
+abbiamo allora che: d_i = d_i^N - w_i x_i
+
+con x_i valore in euro che sono stati usati
+
+ma dovrò esprimere un vincolo per la durata minima del problema:
+
+d_i = d_i^N - w_i x_i >= d_i^m
+
+
+tra i nostri dati avremo allora un extra budget "B"
+
+
+
+
+in un modello avremo allora:
+
+funzione obiettivo: $\min z = T$
+
+s.v.:
+
+\begin{itemize}
+	\item $s_i + d_i^N - w_i x_i <= T\ \ \ \forall\ \ \ i \in TASKS$
+	\item $s_i + d_i^N - w_i x_i <= s_j\ \ \ \forall\ \ \ i, j \in TASKS, p_{ij} = 1$
+	\item $d_i^N - w_i x_i >= d_i^m\ \ \ \forall\ \ \ i \in TASKS$
+	\item $\sum_{i \in TASKS} x_i <= B$
+	\item $T >= 0$
+	\item $s_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
+	\item $x_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+LOW SIZING MODELS:
+
+in genere usati da aziende manifatturiere. 
+
+nel nostrao esempi otutto il sistema produttivo è modellato come una black box (processo produttivo) poi abbiamo uno stockaggio e a valle in cliente finale
+
+supponiamo che il tasso di domanda del cliente sia sostante nel tempo. questo tasso di domanda "d" si può esprimere in base al tipo di prodotto.
+
+queta line a di produzione può produrre diversi articoli cioe1 con dei prodotti con diverse differenze tipo yogurt a vari gusti ma poi ogni volta avremo un costo di setup per poter pulire le macchine questo costo fisso "k" per la produzione di un lotto.
+
+la porduzione e1 a lotti quindi se ho un livello delle scorte = 0 allora avremoche la dimnsione del letto e1 q allora il livello salta da 0 a q 
+
+
+img 
+
+
+poiche la domanda e1 ipotizzata costante allora nei giorni successivi il livello delle scrorte diminuisce linearmente con un pendenza che dimende dal tasso di domanda
+
+
+abbiamo costi fissi ogni volta che produciamo un lotto paghiamo k.
+
+abbiamo anche dei costi di scorte e quindi pagherò un costo "h". ovviamente le scrote no staranne ferme in mangazzino ma gireranno e si scambierano tra loro quindi in media avremo q/2 unità di prodotto.
+
+abbaimo aun costo di questa giacenza media per un certo intervallo di tempo: h detto csoto medio di stockaggio.
+
+
+
+caso estermo: gestione di tipo just in time: produco solo sotto commissione del cliente
+
+questo comporta un livello di scorte molto basso (q) quidi il livello medio delle cscorte e1 molto basso e quindi meno costi di inventory. però abbiamo un maggioramnto dei costi del setup. a meno che non costino poso i setup perche molto efficienti. pago k più volte
+
+
+caso ?: produco un quantitativo q pari alla domanda annua e quidni con solo quella soddisfo per tutto l'anno. quindi abbiamo che paghiamo k una sla volta ma ho grandi costi di stockaggio
+
+
+
+per scrivere il modello di ottimizzazione scriviamo:
+
+1. scrivo variabili decisionali(variabile matematica per descriver la mia decisoione): q rappresnta la dimnzione dei miei lotti stockati
+
+2. scrivere funzione obiettivo: obiettvo: costo totale annuale composto dal costo di scorta e quello di setup
+
+z = k d/q (domanda annuale/numero di lotti per anno) + h q/2 
+
+
+h costo medio per un pallet per un anno
+
+
+
+per la soluzione ottima, faccio il gradiente:
+
+dz/dq = 0 <=> -k d/q^2 + h/2 = 0
+
+
+q^* = sqrt({2kd}/h)formula del lotto economico (economico: nel senso che fa minimare i costi)
+
+
+
+img
+
+
