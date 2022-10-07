@@ -36,26 +36,14 @@ Le \hl{caratteristiche di un progetto} sono:
 	\item ha \textbf{a capo un Project Manager}: responsabile del progetto e dei tempi di realizzazione, costi di produzione, ecc...
 \end{itemize}
 
-
-
-in genre in project manager usano dei metodi per tener sotto ontrollo il progetto (es: microsoft project) per esempoio degli applicativi che suppostano i p.m. nella schedulaizone e rischedulaizone dei progetti 
-
-
-
-i lpiù semplice modello di modellazione:
-
-un porgetto e1 rappresentato da diverse attività:
-
-expected puration
-
-
+Un progetto è \hl{rappresentato da diverse attivita'} in una tabella fornita dal Project Manager:
 
 
 \begin{table}[h!]
 	\begin{center}
 	\begin{tabular}{|c | c c |} 
 			\hline
-			Attività & Durata stimata d_i & Predecessori \\ [0.5ex]
+			Attività & Durata stimata $d_i$ & Predecessori \\ [0.5ex]
 			\hline
  			1 & 10 & - \\
 			2 & 10 & - \\
@@ -64,220 +52,276 @@ expected puration
 			\hline
 		\end{tabular}
 	\end{center}
-	\caption{Tabella delle ore di lavoro}
-	\label{taborelav}
+	\caption{Tabella di ore di lavoro e predecessioni delle attività}
+	\label{tabatt}
 \end{table}
 
 
-questi problemi vengono rapresntati tramite diagramma aciclico:
+e in un diagramma aciclico (Activity On Node (AoN)):
 
-rapresntazione activity on node (AoN):
 
-dove abbiamo degli "archi" che rappresentano le predecessioni 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{aon.jpeg}
+\caption{Diagramma Activity On Node} 
+\label{aon}
+\end{figure}
 
-(la tabella mi viene fornita dal project manager dopo aver parlato con delgi esperti)
 
-
-
-a volte si introducono dei vertici fittizzi che sono lo start e l'end
-
-start: lo colleghiamo tutte le atticità che non hano predecessori
-end: ci colleghiamo tutte le attivtà finali
-
-
-
-
-vedremo come li p.m. può usare delle risorse per accellerare delle attività
-
-
-prima cosa: cariabili decisionali: nel nostro caso è lo start time. ipotizziamo che i lprogetto inizi al tempo t = 0, quidni per ogni task abbiamo che s_i >= 0 \forall i \in TASKS dove s_i è lo staart time del task i che appartiene a TASKS
-
-in più possiamo definire T >= 0 che è il tempo di completamento del progetto (complition time)
-
-
-in questo modello vogliamo minimizzare il complation time : min z = T
-
-cioè: z = 1T + 0s_1 + 0s_2 + ...sucamiento
-
-
-per quanto riguarda le relaizoni di precedenza:
-
-p_{ij} = { (sistema) 1 <=> i è predecessore di j, 0 altrimenti
-
-con p_{ij} una matrice costate e binaria:
-
-p = 
-
-0 0 1 1
-0 0 0 1
-0 0 0 0
-0 0 0 0
-
-
-
-
-VINCOLI DI PRECEDENZA:
-
-T è un maggiorante del tempo di completamento delle task, quindi:
-
-s_i + d_i <= T
-
-p_j (s_i + d_i) <= s_j \forall i \in TASKS, j \in TASKS
-se p_ij = 1 allora i e1 predecessore di j quindi il tempo di dinizion del task j deve sessere duccessivo o uguale al task i cioe1 s_i + d_i
-
-
-se invece i non e1 predecessore: p_ij = 0 quindi avremo che 0 <= s_j allora il vincolo è ridondante dato che e1 un dato che già abbiamo
-
-
-questo vale per un generico numero di task, mi serve pero un lingiaggi odi modellaizone per scrivere il modello in forma compatta per avere dati e modello divisi
-
-
-per semplifia l'ultimo vicolo possoiamo scrivere 
-s_i + d_i <= s_j \forall i \in TASKS, j \in TASKS, p_{ij} >= 0
-
-
-
-
-
-esempio modello espanso per problemi di istanza con i dati di sopra:
-
-min z = T
-
-s_1 + 10 <= T
-s_2 + 10 <= T
-s_3 + 10 <= T
-s_4 + 10 <= T
-
-s_1 + 10 <= s_3 (p_{13} = 1)
-s_1 + 10 <= s_4 (p_{14} = 1)
-s_2 + 10 <= s_4 (p_{24} = 1)
-
-s_1, s_2, s_3, s_4 >= 0
-T >= 0
-
-
-
-
-
-
-
-
-
-
-il project manager ha un budget per poter velocizzare il porgetto
-
-possiamo comprimere un'attvità. se considero un task "i" con durata ovviamente non costante, sarà allora data da:
-
-d_i^N(valore nominale) durata attivatà orrspondete ad un utilizzo di risorse non extra.
-
-accade però che se usao piu risrose l'attivtà può essere ridotta. un andamento sempplice èuno linare dove all'aumentare delle risorse la durata si riduce in. modo linare. il che e1 vero solo per un certo punto dato che ci può essere un vincolo per il quale sotto un valolre inimo d_i^m non si può scendere perchè l'attivtà non è piú comprimibile
-
-
-le 3 risorse alle quali si possono far riferimento sono le 3M Man, Machine, Money.
-
-
-quindi abbiamo che d_i = d_i^N
-
-w = pendenza: riduzione della durata del task "i" per unità di extra risorse (mesi di lavoro / k euro)
-
-abbiamo allora che: d_i = d_i^N - w_i x_i
-
-con x_i valore in euro che sono stati usati
-
-ma dovrò esprimere un vincolo per la durata minima del problema:
-
-d_i = d_i^N - w_i x_i >= d_i^m
-
-
-tra i nostri dati avremo allora un extra budget "B"
-
-
-
-
-in un modello avremo allora:
-
-funzione obiettivo: $\min z = T$
-
-s.v.:
+dove abbiamo degli "archi" che rappresentano le predecessioni. Avremo anche dei \hl{vertici fittizzi}:
 
 \begin{itemize}
-	\item $s_i + d_i^N - w_i x_i <= T\ \ \ \forall\ \ \ i \in TASKS$
-	\item $s_i + d_i^N - w_i x_i <= s_j\ \ \ \forall\ \ \ i, j \in TASKS, p_{ij} = 1$
-	\item $d_i^N - w_i x_i >= d_i^m\ \ \ \forall\ \ \ i \in TASKS$
-	\item $\sum_{i \in TASKS} x_i <= B$
-	\item $T >= 0$
-	\item $s_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
-	\item $x_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
+	\item start: lo colleghiamo tutte le attività che non hanno predecessori
+	\item end: ci colleghiamo tutte le attività finali
+\end{itemize}
+
+Una funzione fondamentale del Project Manager è la possibilità di accelerare alcune attività agendo su:
+
+\begin{itemize}
+	\item \hl{Variabili decisionali}:
+		
+		nel nostro caso, è lo \hl{start time $s_i$}. Ipotizziamo che il progetto inizi al tempo $t = 0$, quindi per ogni task abbiamo che:
+
+			$$s_i >= 0\ \ \ \forall\ \ \ i \in TASKS$$
+
+		In più possiamo definire \hl{$T >= 0$ tempo di completamento del progetto} (\textbf{completion time}).
+
+		Minimizziamo il completion time:
+
+			$$\min z = T$$
+
+		con $z = 1T + 0s_1 + 0s_2 + ... + 0s_n$
+		
+		
+	\item \hl{relazioni di precedenza}:
+	
+		relazioni che portano alcuni nodi a dipendere da altri:
+		
+		$$
+		p_{ij}=
+		\begin{cases} 
+		    1 \Leftrightarrow i \in j \\ 
+		    0 altrimenti
+		\end{cases}$$
+		
+		con \hl{$p_{ij}$ matrice} costate e binaria:
+		
+		$$p =
+		\left[ {\begin{array}{cccc}
+		    0 & 0 & 1 & 1 \\
+			0 & 0 & 0 & 1 \\
+		    0 & 0 & 0 & 0 \\
+		    0 & 0 & 0 & 0 \\
+		\end{array} } \right]$$
+		
+	
+	\item \hl{vincoli di precedenza}:
+	
+		Sia \hl{$T$ maggiorante del tempo di completamento delle task}:
+			$$s_i + d_i <= T$$
+
+		allora:
+
+			$$p_{ij} (s_i + d_i) <= s_j\ \ \ \forall\ \ \ i,j \in TASKS$$
+
+		Possiamo avere che:
+
+		\begin{itemize}
+			\item \hl{$p_{ij} = 1$}: allora \textbf{$i$ è predecessore di $j$} quindi il tempo di inizio del task $j$ deve essere successivo o uguale al task $i$ cioè $s_i + d_i$
+	
+			\item \hl{$p_ij = 0$}: $i$ non è predecessore quindi avremo $0 <= s_j$ allora il vincolo è ridondante
+		\end{itemize}
+		
+		scriviamo allora:
+ 
+		$$s_i + d_i <= s_j\ \ \ \forall\ \ \ i,j \in TASKS,\ p_{ij} >= 0$$
+
+
 \end{itemize}
 
 
+% Esempio
+\subsection{Esempio }
+
+Un modello espanso per problemi di istanza:
+
+\begin{enumerate}
+	\item funzione obiettibo: $\min z = T$
+	\item vincoli:
+		\begin{itemize}
+			\item $s_1 + 10 <= T$
+			\item $s_2 + 10 <= T$
+			\item $s_3 + 10 <= T$
+			\item $s_4 + 10 <= T$
+			\item $s_1 + 10 <= s_3 (p_{13} = 1)$
+			\item $s_1 + 10 <= s_4 (p_{14} = 1)$
+			\item $s_2 + 10 <= s_4 (p_{24} = 1)$
+			\item $s_1, s_2, s_3, s_4 >= 0$
+			\item $T >= 0$
+		\end{itemize}
+\end{enumerate}
 
 
+% Velocizzazione del progetto
+\subsection{Velocizzazione del progetto}
+
+Il Project Manager ha un \hl{budget} per poter velocizzare il progetto.
+
+Se considero un \hl{task $i$ con durata non costante ($d_i^N$)}, avremo un valore nominale che dipende da un budget extra.
+
+Il più semplice è l'\hl{andamento lineare} dove all'aumentare delle risorse la durata si riduce in modo lineare. Il che è vero finché non si incontra un \hl{vincolo inferiore $d_i^m$}.
 
 
+Le \hl{3 risorse} alle quali si possono far riferimento sono le \hl{3M}:
+
+\begin{itemize}
+	\item Man
+	\item Machine
+	\item Money
+\end{itemize}
 
 
+quindi $d_i = d_i^N$.
 
 
-
-LOW SIZING MODELS:
-
-in genere usati da aziende manifatturiere. 
-
-nel nostrao esempi otutto il sistema produttivo è modellato come una black box (processo produttivo) poi abbiamo uno stockaggio e a valle in cliente finale
-
-supponiamo che il tasso di domanda del cliente sia sostante nel tempo. questo tasso di domanda "d" si può esprimere in base al tipo di prodotto.
-
-queta line a di produzione può produrre diversi articoli cioe1 con dei prodotti con diverse differenze tipo yogurt a vari gusti ma poi ogni volta avremo un costo di setup per poter pulire le macchine questo costo fisso "k" per la produzione di un lotto.
-
-la porduzione e1 a lotti quindi se ho un livello delle scorte = 0 allora avremoche la dimnsione del letto e1 q allora il livello salta da 0 a q 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{budget.jpeg}
+\caption{Diagramma budget} 
+\label{budget}
+\end{figure}
 
 
-img 
+con:
+
+\begin{itemize}
+	\item \hl{pendenza w}: \textbf{riduzione della durata del task $i$} per unità di extra risorse (mesi di lavoro / k euro)
+	\item $d_i = d_i^N - w_i x_i >= d_i^m$ vincolo del valore minimo per task
+	\item $x_i$: denaro usato per il task $i$
+	\item $B$: budget totale
+
+\end{itemize}
 
 
-poiche la domanda e1 ipotizzata costante allora nei giorni successivi il livello delle scrorte diminuisce linearmente con un pendenza che dimende dal tasso di domanda
+% Esempio velocizzazione progetto
+\subsection{Esempio velocizzazione progetto}
+
+Avremo un modello con:
+
+\begin{enumerate}
+	\item funzione obiettivo: $\min z = T$
+	\item vincoli:
+		
+		\begin{itemize}
+			\item $s_i + d_i^N - w_i x_i <= T\ \ \ \forall\ \ \ i \in TASKS$
+			\item $s_i + d_i^N - w_i x_i <= s_j\ \ \ \forall\ \ \ i, j \in TASKS, p_{ij} = 1$
+			\item $d_i^N - w_i x_i >= d_i^m\ \ \ \forall\ \ \ i \in TASKS$
+			\item $\sum_{i \in TASKS} x_i <= B$
+			\item $T >= 0$
+			\item $s_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
+			\item $x_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
+		\end{itemize}
+\end{enumerate}
 
 
-abbiamo costi fissi ogni volta che produciamo un lotto paghiamo k.
+% Low sizing models
+\subsection{Low sizing models}
 
-abbiamo anche dei costi di scorte e quindi pagherò un costo "h". ovviamente le scrote no staranne ferme in mangazzino ma gireranno e si scambierano tra loro quindi in media avremo q/2 unità di prodotto.
-
-abbaimo aun costo di questa giacenza media per un certo intervallo di tempo: h detto csoto medio di stockaggio.
-
+Sono in genere usati da aziende manifatturiere. 
 
 
-caso estermo: gestione di tipo just in time: produco solo sotto commissione del cliente
-
-questo comporta un livello di scorte molto basso (q) quidi il livello medio delle cscorte e1 molto basso e quindi meno costi di inventory. però abbiamo un maggioramnto dei costi del setup. a meno che non costino poso i setup perche molto efficienti. pago k più volte
-
-
-caso ?: produco un quantitativo q pari alla domanda annua e quidni con solo quella soddisfo per tutto l'anno. quindi abbiamo che paghiamo k una sla volta ma ho grandi costi di stockaggio
-
-
-
-per scrivere il modello di ottimizzazione scriviamo:
-
-1. scrivo variabili decisionali(variabile matematica per descriver la mia decisoione): q rappresnta la dimnzione dei miei lotti stockati
-
-2. scrivere funzione obiettivo: obiettvo: costo totale annuale composto dal costo di scorta e quello di setup
-
-z = k d/q (domanda annuale/numero di lotti per anno) + h q/2 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{prodline.jpeg}
+\caption{Processo produtivo} 
+\label{procprod}
+\end{figure}
 
 
-h costo medio per un pallet per un anno
+Supponendo di avere un \hl{tasso di domanda $d$} costante in base al tipo di prodotto. Ogni tipo di prodotto si differenzia dagli altri con una piccola modifica come può essere un differente gusto per una produzione di yogurt.
+
+Questa differenziazione porta ad un \hl{costo di setup} delle macchine che andranno pulite, generando un costo fisso $k$.
+
+Il livello di scorte sarà rappresentato con dei picchi con ampiezza $q$:
 
 
-
-per la soluzione ottima, faccio il gradiente:
-
-dz/dq = 0 <=> -k d/q^2 + h/2 = 0
-
-
-q^* = sqrt({2kd}/h)formula del lotto economico (economico: nel senso che fa minimare i costi)
-
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{invlev.jpeg}
+\caption{Livello di inventario} 
+\label{invlev}
+\end{figure}
 
 
-img
+avendo una domanda costante, avremo una diminuzione lineare nello scorte di magazzino.
+
+Ovviamente avremo dei \hl{costi medi di stockaggio $h$} dato che le scorte si "muoveranno" scambiandosi con altre scorte che entrano nel magazzino. Quindi andremo a calcolare il costo in base alla giacenza del \hl{numero di scorte medie $\frac{q}{2}$}.
+
+In base alla strategia avremo:
+
+\begin{enumerate}
+	\item \hl{caso estermo}:
+	
+		gestione di tipo \textbf{just in time} dove \textbf{produco solo sotto commissione del cliente}.
+
+		Avremo quindi:
+		
+		\begin{itemize}
+			\item \textbf{livello di scorte molto basso} con un livello medio delle scorte molto basso e dei \textbf{costi di stockaggio bassi}
+			\item \textbf{maggioramento dei costi del setup}
+			\item pago $k$ più volte durante l'anno
+		\end{itemize}
+		
+	\item \hl{caso produzione annua}:
+	
+		si produce un \textbf{quantitativo pari alla domanda annua}.
+		
+		Avremo quindi:
+		
+		\begin{itemize}
+			\item grandi \textbf{costi di stockaggio}
+			\item pago $k$ solo una volta all'anno
+		\end{itemize}
+
+\end{enumerate}
 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{casipart.jpeg}
+\caption{Casi particolari} 
+\label{casipart}
+\end{figure}
+
+
+% Scrivere il modello di ottimizzazione
+\subsection{Scrivere il modello di ottimizzazione}
+
+Le fasi da seguire prevedono la scrittura di:
+
+\begin{enumerate}
+	\item \hl{variabili decisionali}: variabile matematica per descrivere la mia decisione
+	\item \hl{funzione obiettivo}: costo totale annuale composto dal \textbf{costo di scorta e quello di setup}
+\end{enumerate}
+
+Avremo allora:
+
+$$z = k \frac{d}{q} + h \frac{q}{2} $$
+
+
+Per la \hl{soluzione ottima}, faccio il gradiente:
+
+$$\frac{dz}{dq} = 0 \Leftrightarrow -k \frac{d}{q^2} + \frac{h}{2} = 0$$
+
+
+Concludiamo che il \hl{lotto economico}, per minimizzare i costi, sarà raggiunto da:
+
+$$q^* = \sqrt{\frac{2kd}{h}}$$
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{lottoec.jpeg}
+\caption{Caso di lotto economico} 
+\label{lottoec}
+\end{figure}
