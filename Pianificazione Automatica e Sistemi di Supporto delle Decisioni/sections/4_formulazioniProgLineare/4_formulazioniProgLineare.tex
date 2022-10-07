@@ -1,0 +1,186 @@
+\newpage
+\section{Formulazioni equivalenti di un problema di programmazione lineare}
+
+
+% Problema in FORMA GENERALE
+\subsection{Problema in FORMA GENERALE}
+
+In generale nella \hl{zona ammissibile} diciamo:
+
+$$X={x \in R^n : A_x >= b, D_x = l, x_j >= 0\ \ \ (*)$$ $$\forall\ \ \ j \in J \subseteq \{1,2,...,n\}$$
+
+dove \hl{definiamo la possibilita' di vincoli di $>$=, = e variabili $>$= 0}.
+
+La funzione obiettivo è definita da: $$z = c_x\ \ \ t.c.\ \ \ z = \min z, x \in X$$
+
+che rappresenta il \hl{problema espresso in forma generale}.
+
+
+% Problema in FORMA CANONICA
+\subsection{Problema in FORMA CANONICA}
+
+Se in (*) abbiamo:
+
+\begin{itemize}
+	\item $D = 0$
+	\item $J = \{1,2,...,n\}$
+\end{itemize}
+
+allora il \hl{problema si dice in forma canonica}: $$min_x\ \ \{z = c_x : A_x >= b, x >= 0\}$$
+
+
+% Problema in FORMA STANDARD
+\subsection{Problema in FORMA STANDARD}
+
+Se in (*) abbiamo:
+
+\begin{itemize}
+	\item $A = 0$
+	\item $J = {1,2,..,n}$
+\end{itemize}
+
+allora il problema è: $$min_x\ \ \{z = c_x: D_x = l, x >= 0\}$$
+
+Possiamo sempre \hl{ricondurci tramite trasformazioni alla forma standard}.
+
+
+% Terminologia
+\subsection{Terminologia}
+
+Nella forma standard abbiamo che:
+
+\begin{itemize}
+	\item \hl{z}: la \textbf{funzione obbiettivo} per la quale trovare il valore minimo
+	\item \hl{A}: \textbf{matrice dei vincoli}
+	\item \hl{D}: \textbf{matrice dei coefficienti}, matrice di dimensione m x n
+	\item \hl{l}: \textbf{vettore dei termini noti} vettore colonna 
+	\item \hl{c}: \textbf{detto vettore dei coefficienti di costo}, vettore di riga
+\end{itemize}
+
+
+% Trasformazioni per ricondursi alla forma standard
+\subsection{Trasformazioni per ricondursi alla forma standard}
+
+\begin{enumerate}
+	\item \hl{variabili non vincolate di segno}: $$x_j t.c. j \notin J$$
+
+		per trasformarla possiamo \hl{sostituire a $x_j$ la somma algebrica di 2 variabili non negative}: $$x_j = x_j^+ - x_j^-$$ $$\forall\ \ \ x_j^+ >= 0, x_j^- >= 0$$
+
+		Se abbiamo $k$ ($<= n$) variabili non vincolate in segno, possiamo evitare di introdurre $k$ coppie di variabili non negative. È possibile considerare una variabile $x_0 >= 0$ e sostituire la generica variabile non vincolata di segno con $x_j = x_j ^+ - x_0$. \hl{Così introduciamo "solo" $k+1$ variabili}.
+	
+	\item \hl{vincoli non espressi in forma di uguaglianza ($<$=)}
+		
+		$$\sum_{j=i}^n a_{ij} x_j <= b_i$$
+		
+		presa la \hl{variabile di Slack}: $S_i >= 0$, avremo:
+	
+		$$\sum_{j=i}^n a_{ij} x_j + S_i = b_i$$
+	
+	
+		questa variabile misura lo Slack che esiste per far si che \hl{il vincolo sia rispettato per uguaglianza} o no (vincolo $>$ 0)
+		
+	\item \hl{vincoli non espressi in forma di uguaglianza ($>$=)}
+	
+		$$\sum_{j=i}^n a_{ij} x_j >= b_i$$
+		
+		presa una \hl{variabile di Surplus}: $S_i >= 0$, avremo:
+		
+		$$\sum_{j=i}^n a_{ij} x_j - S_i = b_i$$
+		
+	\item \hl{trasformazione di vincoli da uguaglianza in disuguaglianza} sostituendo:
+
+		$$\sum_{j=i}^n a_{ij} x_j = b_i$$
+		
+		\hl{sostituendolo a}:
+		
+		$$\sum_{j=i}^n a_{ij} x_j >= b_i$$
+		$$\sum_{j=i}^n a_{ij} x_j <= b_i$$
+		
+	\item \hl{funzione obiettivo}:
+	
+		Se la f.o. è $\max z = c_x$, si può trasformare:
+	
+		$$\max z = -\min {-z}$$
+
+	
+\end{enumerate}
+
+
+% Esempio 1
+\subsection{Esempio 1}
+
+\begin{enumerate}
+	\item DATI
+	
+		f.o.: $\min z= x_1 + 2 x_2$
+
+		vincoli:
+
+		\begin{itemize}
+			\item $6x_1 + 4x_2 <= 24$
+			\item $4x_1 + 8x_2 <= 32$
+			\item $x_2 >= 3$
+			\item $x_1, x_2 >= 0$
+		\end{itemize}
+		
+	\item TRASFORMAZIONE IN FORMA STANDARd
+	
+		Per il primo vincolo \textbf{del tipo $<$=, aggiungiamo una variabile non negativa} (slack):
+
+		$$6x_1 + 4x_2 + x_3 = 24$$
+
+		per il secondo vincolo operiamo in maniera analoga :
+
+		$$4x_1 + 8x_2 + x_4 = 32$$
+
+		per il terzo vincolo \textbf{del tipo $>$=, aggiungiamo una variabile ausiliaria negativa}:
+		
+		$$x_2 - x_5 = 3$$
+
+		vincolo sulle variabili:
+
+		$$x_1, x_2, x_3, x_4, x_5 >= 0$$
+
+		quindi nella formulazione standard avremo $j = 1,2,3,4,5$ quando in precedenza avevamo: $j = 1, 2$
+	
+\end{enumerate}
+
+
+% Esempio 2
+\subsection{Esempio 2}
+
+\begin{enumerate}
+	\item DATI
+	
+		f.o.: $\max z = z_1 + z_2$
+
+		vincoli:
+
+		\begin{itemize}
+			\item $8x_1 + 6x_2 >= 48$
+			\item $5x_1 + 10x_2 >= 50$
+			\item $13x_1 + 10x_2 <= 130$
+			\item $x_1 >= 0$
+		\end{itemize}
+		
+	\item TRASFORMAZIONE IN FORMA STANDARD
+	
+		Dato che non abbiamo vincoli su $x_2$ poniamo:
+		
+		$$x_2 = x_2^+ - x_2^-$$
+		
+		la f.o. sarà:
+		
+		$$\max z = -\min -z = -x_1 -x_2 = -x_1 -x_2^+ + x_2^-$$
+		
+		invece i vincoli:
+		
+		\begin{itemize}
+			\item $8x_1 + 6x_2^+ - 6x_2^- - x_3 = 48$
+			\item $5x_1 + 10_2^+ - 10x_2^- - x_4 = 50$
+			\item $13x_1 + 10_2^+ - 10x_2^- + x_5 = 130$
+			\item $x_1, _2^+, x_2^-, x_3, x_4, x_5 >= 0$
+		\end{itemize}
+	
+\end{enumerate}
+

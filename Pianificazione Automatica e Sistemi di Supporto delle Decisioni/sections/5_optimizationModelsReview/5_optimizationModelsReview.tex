@@ -1,0 +1,157 @@
+\newpage
+\section{Optimization models review}
+
+% Scheduling
+\subsection{Scheduling}
+
+Nell'ambito dei problemi dello scheduling abbiamo degli elementi ben specificati:
+
+\begin{itemize}
+	\item \hl{task/job} già assegnati
+	\item $n$ \hl{macchine/processori}
+	\item potremmo attrezzare le macchine con dei \hl{tools}
+\end{itemize}
+
+Intendiamo \hl{allocare i tasks alla macchine in "overtime"} quindi capire anche la \hl{fascia temporale nella quale eseguire il task}. Potrebbe esserci un unico tempo di esecuzione oppure un task può avere dei tempi di esecuzione differenti su macchine differenti. 
+
+L'output sarà un diagramma di Ganth.
+
+\hl{I task possono avere degli istanti di rilascio} dove non potrebbe essere rilasciato dopo un certo istante di tempo (\hl{ready time}).
+
+Possono esserci delle \hl{relazioni di precedenza tra i tasks}. Quindi non posso effettuare un task se prima non ho concluso l'altro.
+
+Il diagramma mi dice nel tempo a che macchina è associato quale task ed in quali intervalli di tempo e con quale tool.
+
+
+% Project scheduling
+\subsection{Project scheduling}
+
+Per progetto intendiamo un \hl{insieme di tasks che sono realizzati al fine di raggiungere un goal}. La caratteristica di un progetto è che nel complesso le attività non sono mai state eseguite in precedenza.
+
+Le \hl{caratteristiche di un progetto} sono:
+
+
+\begin{itemize}
+	\item \textbf{durata delle attività} che nota
+	\item ha \textbf{a capo un Project Manager}: responsabile del progetto e dei tempi di realizzazione, costi di produzione, ecc...
+\end{itemize}
+
+
+
+in genre in project manager usano dei metodi per tener sotto ontrollo il progetto (es: microsoft project) per esempoio degli applicativi che suppostano i p.m. nella schedulaizone e rischedulaizone dei progetti 
+
+
+
+i lpiù semplice modello di modellazione:
+
+un porgetto e1 rappresentato da diverse attività:
+
+expected puration
+
+
+
+
+\begin{table}[h!]
+	\begin{center}
+	\begin{tabular}{|c | c c |} 
+			\hline
+			Attività & Durata stimata d_i & Predecessori \\ [0.5ex]
+			\hline
+ 			1 & 10 & - \\
+			2 & 10 & - \\
+			3 & 10 & 1 \\
+			4 & 10 & 1, 2 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Tabella delle ore di lavoro}
+	\label{taborelav}
+\end{table}
+
+
+questi problemi vengono rapresntati tramite diagramma aciclico:
+
+rapresntazione activity on node (AoN):
+
+dove abbiamo degli "archi" che rappresentano le predecessioni 
+
+(la tabella mi viene fornita dal project manager dopo aver parlato con delgi esperti)
+
+
+
+a volte si introducono dei vertici fittizzi che sono lo start e l'end
+
+start: lo colleghiamo tutte le atticità che non hano predecessori
+end: ci colleghiamo tutte le attivtà finali
+
+
+
+
+vedremo come li p.m. può usare delle risorse per accellerare delle attività
+
+
+prima cosa: cariabili decisionali: nel nostro caso è lo start time. ipotizziamo che i lprogetto inizi al tempo t = 0, quidni per ogni task abbiamo che s_i >= 0 \forall i \in TASKS dove s_i è lo staart time del task i che appartiene a TASKS
+
+in più possiamo definire T >= 0 che è il tempo di completamento del progetto (complition time)
+
+
+in questo modello vogliamo minimizzare il complation time : min z = T
+
+cioè: z = 1T + 0s_1 + 0s_2 + ...sucamiento
+
+
+per quanto riguarda le relaizoni di precedenza:
+
+p_{ij} = { (sistema) 1 <=> i è predecessore di j, 0 altrimenti
+
+con p_{ij} una matrice costate e binaria:
+
+p = 
+
+0 0 1 1
+0 0 0 1
+0 0 0 0
+0 0 0 0
+
+
+
+
+VINCOLI DI PRECEDENZA:
+
+T è un maggiorante del tempo di completamento delle task, quindi:
+
+s_i + d_i <= T
+
+p_j (s_i + d_i) <= s_j \forall i \in TASKS, j \in TASKS
+se p_ij = 1 allora i e1 predecessore di j quindi il tempo di dinizion del task j deve sessere duccessivo o uguale al task i cioe1 s_i + d_i
+
+
+se invece i non e1 predecessore: p_ij = 0 quindi avremo che 0 <= s_j allora il vincolo è ridondante dato che e1 un dato che già abbiamo
+
+
+questo vale per un generico numero di task, mi serve pero un lingiaggi odi modellaizone per scrivere il modello in forma compatta per avere dati e modello divisi
+
+
+per semplifia l'ultimo vicolo possoiamo scrivere 
+s_i + d_i <= s_j \forall i \in TASKS, j \in TASKS, p_{ij} >= 0
+
+
+
+
+
+esempio modello espanso per problemi di istanza con i dati di sopra:
+
+min z = T
+
+s_1 + 10 <= T
+s_2 + 10 <= T
+s_3 + 10 <= T
+s_4 + 10 <= T
+
+s_1 + 10 <= s_3 (p_{13} = 1)
+s_1 + 10 <= s_4 (p_{14} = 1)
+s_2 + 10 <= s_4 (p_{24} = 1)
+
+s_1, s_2, s_3, s_4 >= 0
+T >= 0
+
