@@ -17,7 +17,7 @@ $ find . -type f -perm -0100
 \subsection{find: trovare file di intestazione del mac come stdio.h}
 
 \begin{lstlisting}
-find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
+$ find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
 \end{lstlisting}
 
 
@@ -25,7 +25,7 @@ find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
 \subsection{lld: per capire che librerie usa il codice}
 
 \begin{lstlisting}
-ldd [nomevodice]
+$ ldd [nomevodice]
 \end{lstlisting}
 
 
@@ -33,28 +33,28 @@ ldd [nomevodice]
 \subsection{gcc: per vedere tutta la gerarchia di file in una libreria}
 
 \begin{lstlisting}
-gcc -H lib.a
+$ gcc -H lib.a
 \end{lstlisting}
 
 
 \subsection{gcc: per vedere il codice con tutti i file importati}
 
 \begin{lstlisting}
-gcc -E file.c
+$ gcc -E file.c
 \end{lstlisting}
 
 
 \subsection{gcc -g: debugging debole}
 
 \begin{lstlisting}
-gcc -g -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
+$ gcc -g -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
 \end{lstlisting}
 
 
 \subsection{gcc -ggbd: debugging forte}
 
 \begin{lstlisting}
-gcc -ggbd -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
+$ gcc -ggbd -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
 \end{lstlisting}
 
 
@@ -62,7 +62,7 @@ gcc -ggbd -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L.
 \subsection{xattr: usato per i file che entrano in quarantena su MacOS}
 
 \begin{lstlisting}
-xattr -d (delete) com.apple.quarantine [path sh]
+$ xattr -d (delete) com.apple.quarantine [path sh]
 \end{lstlisting}
 
 

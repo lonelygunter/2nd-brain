@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  6 OCT 2022 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  8 OCT 2022 11:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -602,7 +602,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \openout4 = `main.toc'.
 
  (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
-<img//logoUnisalento.jpg, id=129, 565.11125pt x 197.73875pt>
+<img//logoUnisalento.jpg, id=154, 565.11125pt x 197.73875pt>
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
@@ -647,57 +647,80 @@ File: img//logoUnisalento.jpg Graphic file (type jpg)
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 []\OT1/ptm/m/n/10 dove ve-dia-mo che se la va-ria-bi-le
  []
 
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 141.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 139.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
 [5]
-File: img//logoUnisalento.jpg Graphic file (type jpg)
-<use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 281.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [6]
-<img//unbuffio.jpeg, id=422, 614.295pt x 642.4pt>
+<img//unbuffio.jpeg, id=413, 614.295pt x 642.4pt>
 File: img//unbuffio.jpeg Graphic file (type jpg)
 <use img//unbuffio.jpeg>
-Package pdftex.def Info: img//unbuffio.jpeg  used on input line 285.
+Package pdftex.def Info: img//unbuffio.jpeg  used on input line 282.
 (pdftex.def)             Requested size: 245.71364pt x 256.95544pt.
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 346.
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 286.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [6]
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 345.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 346.
-)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
+<img//fork.jpeg, id=449, 247.92625pt x 642.4pt>
+File: img//fork.jpeg Graphic file (type jpg)
+<use img//fork.jpeg>
+Package pdftex.def Info: img//fork.jpeg  used on input line 374.
+(pdftex.def)             Requested size: 173.54718pt x 449.67694pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 143.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 378.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.143 \end{document}
-                     </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//unbuffio.jpeg>] (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.aux)
+l.378 
+       </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//unbuffio.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/4_p/4_p.tex
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+             </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//fork.jpeg>])
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 144.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [9
+
+] (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 11901C6219A83180A7C66B10FCA69ECE;5218.
+(rerunfilecheck)             Checksum: 933534F7282B32A4D720200B69EC4370;5683.
  ) 
 Here is how much of TeX's memory you used:
- 14891 strings out of 478994
- 223415 string characters out of 5858185
- 1102113 words of memory out of 5000000
- 31753 multiletter control sequences out of 15000+600000
+ 14942 strings out of 478994
+ 224363 string characters out of 5858185
+ 1107178 words of memory out of 5000000
+ 31766 multiletter control sequences out of 15000+600000
  437836 words of font info for 94 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  81i,14n,88p,527b,1597s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" (7 pages, 247020 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" (9 pages, 308543 bytes).
 PDF statistics:
- 560 PDF objects out of 1000 (max. 8388607)
- 536 compressed objects within 6 object streams
- 321 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 604 compressed objects within 7 object streams
+ 353 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

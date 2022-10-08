@@ -25,3 +25,8 @@
 \contentsline {subsection}{\numberline {\mbox {V-C}}Numeri dei file descriptor}{6}{subsection.5.3}%
 \contentsline {subsection}{\numberline {\mbox {V-D}}Meccanismi dei file}{6}{subsection.5.4}%
 \contentsline {subsection}{\numberline {\mbox {V-E}}Unbuffered I/O}{6}{subsection.5.5}%
+\contentsline {subsection}{\numberline {\mbox {V-F}}Fork \& Exec}{7}{subsection.5.6}%
+\contentsline {subsection}{\numberline {\mbox {V-G}}Thread}{8}{subsection.5.7}%
+\contentsline {subsection}{\numberline {\mbox {V-H}}Gestione degli errori}{8}{subsection.5.8}%
+\contentsline {section}{\numberline {VI}}{9}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}}{9}{subsection.6.1}%

@@ -39,12 +39,8 @@ dove abbiamo che:
 		Per capire se è una funzione di sistema lanciamo:
 		
 \begin{lstlisting}
-grep -rw "struct dirent" $INC
-\end{lstlisting}
-		
-		seguiamo il percorso:
-		
-\begin{lstlisting}
+$ grep -rw "struct dirent" $INC
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//sys/dirent.h:struct dirent {
 \end{lstlisting}
 		
@@ -139,7 +135,7 @@ struct dirent __DARWIN_STRUCT_DIRENTRY;
 	\item \hl{if}: esegue un controllo sugli args. Notiamo che "err\_quit" non è una funzione di sistema da:
 	
 \begin{lstlisting}
-grep -rw "err_quit" $INC
+$ grep -rw "err_quit" $INC
 \end{lstlisting}
 
 		infatti non restituisce nulla. Deve allora essere una funzione di libreria create da noi quindi non presente nella directory standard.
@@ -179,7 +175,7 @@ Abbiamo anche \hl{esempi piu' particolari}, come fork, dove è indicata come sys
 Potremo trovare i simboli di una libreria tramite:
 
 \begin{lstlisting}
-nm lib.a
+$ nm lib.a
 \end{lstlisting}
 
 che ci fa vedere, per ogni file oggetto, i simboli associati per ogni funzione.
@@ -238,6 +234,7 @@ per capire \hl{quanto vale STDIN\_FILENO}:
 
 \begin{lstlisting}
 $ grep -rw "STDIN_FILENO" $INC
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//unistd.h:#define	 STDIN_FILENO	0	/* standard input file descriptor */
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include//asl.h: * asl_log_descriptor(c, m, ASL_LEVEL_NOTICE, STDIN_FILENO, ASL_LOG_DESCRIPTOR_READ);
 \end{lstlisting}
@@ -288,10 +285,10 @@ Per \hl{ottimizzare la scrittura sulla memoria da parte del kernel si utilizza l
 \end{figure}
 
 
+% Fork & Exec
+\subsection{Fork \& Exec}
 
-
-----
-Prendiamo shell1.c che crea uno schell dal quale poter eseguire programmi:
+Prendiamo il codice di shell1.c che crea uno schell dal quale poter eseguire programmi:
 
 \begin{lstlisting}
 #include "apue.h"
@@ -329,9 +326,11 @@ main(void)
 avremo allora:
 
 \begin{itemize}
-	\item \hl{fgets}: funzione della \textbf{stdoutput che legge la riga} che dai prima di dare invio e la mette in un buffer, con argomenti:
+	\item \hl{fgets}: funzione dello \textbf{stdoutput che legge la stringa} che dai prima di dare invio, ha come argomenti:
 	
 		\begin{itemize}
+			\item \textbf{buf}: buffer nel quale mettere la stringa
+		
 			\item \textbf{MAXLINE}: proviene da una nostra libreria
 
 \begin{lstlisting}
@@ -340,114 +339,90 @@ Binary file include//apue.h.gch matches
 include//apue.h:#define	MAXLINE	4096			/* max line length */
 \end{lstlisting}
 
-			\item \textbf{stdin}: presente in stdiolib ed è una \textbf{struttura file che definisce uno standard input tramite un puntatore di un "file"}
+			\item \textbf{stdin}: presente in stdiolib ed è una \textbf{struttura file che definisce uno standard input} tramite un puntatore ad un "file"
 		\end{itemize}
 
 	\item \hl{if 1}: permette di avere un null dove prima avevamo \textbackslash n
 	
-	\item 
+	\item \hl{if 2}: abbiamo una fork() che dopo che \hl{viene invocata ritorna 2 volte}, questo perché andrà a creare 2 bash identici con memorie uguali nei contenuti ma indipendenti, l'unico cambiamento è il pid. fork() andrà quindi a restituire 0 nel child e il pid del child al parent tramite getppid().
+
+			Se pid $<$ 0 vorrà dire che la fork e fallita.
+			Se pid = 0 vorrà dire che siamo nel child.
+	
+			Il che è molto importante dato che \hl{il codice verra' eseguito sia dal child che dal parent}, e sarà contenuto nella memora virtuale che hanno i programmi grande $2^{32}$ o $2^{64}$ in base all'OS.
+	
+			Appena viene eseguita l'\hl{exec, lo spazio di memoria viene azzerato} ma a discrezione del programma, vengono salvate alcune variabili di ambiente.
+
+
+		\hl{execlp}: serve a far \textbf{eseguire un codice} (buf) del quale abbiamo il sorgente e l'eseguibile
+	
+
+		\hl{if 3}: serve a far andare aventi il parent.
+
+		\hl{waitpid}: aspetta il child nel caso impieghi troppo tempo ad eseguire la sua azione, \textbf{tenendo appeso il prompt}. Con argomenti:
+
+			\begin{itemize}
+				\item \textbf{pid}: pid del child
+				\item \textbf{\&status}: reindirizza l'exit code del child, quando finisce, nella variabile status
+			\end{itemize}
+			
 \end{itemize}
 
 
-
-if 2: abbiamo una fork che in genere viene invocata una volta e ritorna 2 volte dato che si creerà quella nel parent e quella nel child ritorna: 0 al child e pid del child al parent se il chld vuole sapere quelacosa sul parent si usa getppid().
-	se pid < 0 allora la fork è fallita
-	se è = 0 (caso del child)
-	
-	
-	questo if sarà ueseguito sia dal child che dal parent e poi 
-	
-	
-	execlp: serve a far eseguire un altro codice che ha il suo codice sorgente e uno eseguibili. il programma è quello scritto in linea di comando (buf) se la roba va in porto e quinsi il programma eseguibile non esiste, continua con il nostro codice 
-	
-	il child chiude con. la exit 127 e rientra nel loop while
-	
-
-allora va avanti il parent con if 3: waitpid: se do un comando che impiega molto tempo non vedo la stampa del prompt. waitpid va ad aspettare il child quando avviene la fork tenendo appeso il prompt
-
-	pid: pid del child
-	&status: exit code del child qualdo finisce. & indica la restituzione dei parametri di output al posto di quelli di input in modo da inserire in quell'indirizzo dai dati
-	
-
-i processi sono i programi in esecuzione . un programa quando esegue un porc ha un suo spazio di mempria virtuale grande quanto permette l'ndirizzamente dell amachhina su cui siamo: se a 32 bit allora 2^32 bit.
-
-un porcesso pensa di avere tutto questo spazio a disposizione. in questo spazio c'è il codice da eseguire (detto testo in gergo UNIX). poi c'e dello paszio per le varibiali, uno stack. quidni ha bison di uno spazio dove fare le sue operazioni.
-
-appena eseguita la fork si avranno 2 bash identici con lo spesso spazio di memoria (non che cindividono lo spesso spazio ma è solo un duplicato) ma pid diverso. appne fa la exec del programma, lo spazio di memroia viene azzerato e sostotuito dallo spazio di memoria del nuovo porgramma
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{fork.jpeg}
+\caption{Esecuzione di fork ed exec} 
+\label{fork}
+\end{figure}
 
 
-CORREGGERE SOPRA CHE IL CHILD NON HA PID 0 MA È SOLAMENTE UN VARIABILE PER CONTENERE IL RISULTATO DELLA SC fork()
+% Thread
+\subsection{Thread}
 
-NEL WAITPID PID È IL PID DEL PROCESSO CREATO
+Sono dei \hl{processi con lo stesso spazio di memoria del parent}. Per evitare che ogniuno scriva dove vuole, \hl{avviene una sincronizzazione tra le thread}. Questo metodo viene usato nelle macchine unicore per poter svolgere più operazione "contemporaneamente".
 
-
-PRIMA HO SBAGLIATO DOPO EXIT 127 IL CHILD MUORE
-
-
-in pid dopo waitpid c'e il pid del child 
-
-importante capire che dopo la fork abbiamo 2 programmi .c con questo codice uguali in uno abbiamo l'esecuzoinone di un if ed in uno l'altro dato cheuno sarà un child e d uno il parent quidni uno avrà comre return della fork 0 ed nel parente la fork returna il pid del child
-
-il child ceredita l'ambiente del parent che è nello spazio di memoria che si vienee a duplicare. questo fa si che la variabile di amm=biente PATH e1 vista dal child e può usare i programmi ai quali fa riferimnti
-
-dopo le esxec questa può decidere se e quali vaiabili di ambiente gestire
+Tutto questo è \hl{orchestrato dal kernel} che gestisce il \hl{time shearing}.
 
 
-img
+% Gestione degli errori
+\subsection{Gestione degli errori}
+
+Per convenzione una funzione ritorna 0 se è andato tutto bene. Ci sono delle eccezioni, come la read, che ritorna il numero di byte letti.
+
+Ogni valore possibile ritornato è specificato nel manuale:
+
+\begin{lstlisting}
+$ man 2 intro
+...
+1 EPERM Operation not permitted. An attempt was made to perform an operation limited to processes with appropriate privileges or to the owner of a file or other resources.
+
+2 ENOENT No such file or directory. A component of a specified pathname did not exist, or the pathname was an empty string.
+...
+\end{lstlisting}
 
 
-
-THREAD
-
-son ocome dei processi ma hanno la particolarità che ha la stesso spazio di memeroi del processo che lo ha generato.
-
-quindi abbiamo un porbramma che in maniera asincorna al nostro e lavora nel nostro spazio di memoria.
-
-eseguendo nello stesso spazio di memoria non si capisce nulla allora c'è una sincronizzazione tra le thread ma se non c'è ogniuno fa quello che vuole senza limiti. infatti il processo iniziale portà avere anche 2 trame di esecuzione contemporantea tutte nela stessa memoria. infatti si possoonocreare dei programmi multi thread in processori unicore.
-
-i processi pensano di avere tutto il processore e la memoria per se il kernel da ai therad questa illuzione ma fa un time shering andando a far eseguire 10 millisec uno e poi un altro ecc ecc
-
-
-
-
-GESTIONE DEGLI ERRORI
-
-in genere se una funzione ritorna 0 se è andato tutto bene ma ci sono delle eccezionoic come la read che ritrona il numero di byte letti. ogni valore è specificato il suoi significato nel manuale dal quale si capisce cdove sono gli erriori.
-
-le system call quando c'e un errore avvalorano la variabile "errno" che puo essere consultata in un progrmma con 
+Per le \hl{system call}, quando avviene un errore, si \hl{avvalora la variabile "errno"} che può essere consultata in un programma con 
 
 \begin{lstlisting}
 extern int errno;
 \end{lstlisting}
 
-per usare questa variabile la si deve dichiarare come extern e definita nelle libreira di systema dove poi illinker gestisce tutto.
 
-interessatne come variabile dato che viene avvalorata quando c'e un errore. il suo valore ha un isgnificato globale definito nel manuale:
+Con "errno" bisogna tenere in conto che:
 
-\begin{lstlisting}
-$ man 2 intro
-\end{lstlisting}
-
-
-es: 2 ENOENT no sucj file or direcotory 
-
-il problema è che la variabile non viene svuotata quando passiamo l'errore . quindi per sapere quando e1 stato dato un erorre bisgna andare a consultarla quando la system call viene invocata
+\begin{enumerate}
+	\item \hl{non viene svuotata quando passiamo l'errore}. Quindi per sapere quando è stato dato un errore bisogna andare a consultarla quando la system call viene invocata
+	\item \hl{vale 0} se non usata
+\end{enumerate}
 
 
+Per la gestione degli errori useremo:
 
-
-regole di errno:
-
-1. valore amai resettata se non c'e un erroe e quidni bisgono cnsultarla solo quendo c'e1 stat l'errore
-
-2. ha valore 0 se non e1 stata usata mai
-
-delle funzioni per muoversi inquesto contesto sono:
-
-strerror: restituisce la stringa del corrispettivo valore di errno
-
-
-perror: legge errno e stampa un messagio che possiamo passare noi
+\begin{itemize}
+	\item \hl{strerror}: restituisce la \textbf{stringa del valore} di errno
+	\item \hl{perror}: legge errno e stampa un messaggio a piacere
+\end{itemize}
 
 
 \begin{lstlisting}
@@ -465,11 +440,11 @@ main(int argc, char *argv[])
 \end{lstlisting}
 
 
-dove fprinf stampa allo standard che vogliamo noi in questo caso allo starndard error, stampimao un errore
+dove:
 
-poi forziamo l'errore impostando errno ad un errore
-
-perror: legge errno ed usa il nome del programma e poi lo stampa dicend cosa è successo
+\begin{itemize}
+	\item \hl{fprinf}: stampa un errore allo standard specificato
+\end{itemize}
 
 
 

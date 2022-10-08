@@ -141,7 +141,7 @@ dove:
 \hl{Per la compilazione dei file}, qualsiasi sia il linguaggio, \hl{make sapra' come compilarlo} grazie a tutte le definizioni di default presenti in:
 
 \begin{lstlisting}
-make -p
+$ make -p
 \end{lstlisting}
 
 notare che \textbf{si puo' mettere un comando custom nelle rule} del target
@@ -149,7 +149,7 @@ notare che \textbf{si puo' mettere un comando custom nelle rule} del target
 Nell'eventualità di \hl{voler aggiornare un solo file della libreria senza far aggiornare il resto ci bastera' usare uno script} che compila quel file passato a linea di comando.
 
 \begin{lstlisting}
-gcc -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ${1}.c -o ${1}  -L../lib -lapue
+$ gcc -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ${1}.c -o ${1}  -L../lib -lapue
 \end{lstlisting}
 
 
@@ -185,7 +185,7 @@ print("hello");
 Durante la fase di compilazione creiamo dei file oggetto (.o) per ogni file in cui è scritta la descrizione delle funzioni di libreria (.c)
 
 \begin{lstlisting}
-gcc -c bill.c
+$ gcc -c bill.c
 \end{lstlisting}
 
 Si andrà poi a creare il \hl{prototipo della funzione (.h)}.
@@ -193,7 +193,7 @@ Si andrà poi a creare il \hl{prototipo della funzione (.h)}.
 In fine \hl{tramite il linker si andranno ad unire tutti i file per crearne uno unico} con tutte le definizioni delle funzioni incluse nelle librerie, di sistema e non, importate. Si vanno quindi a \hl{sciogliere tutti i riferimenti incrociati}.
 
 \begin{lstlisting}
-	gcc -o program program.o bill.o
+$ gcc -o program program.o bill.o
 \end{lstlisting}
 
 Per quanto riguarda le \hl{funzioni di sistema} NON abbiamo il file sorgente ma abbiamo direttamente l'eseguibile. In compenso abbiamo un \hl{file di libreria}, cioè un insieme di file oggetto linkati in un unico file, dove c'è il codice oggetto di tutte le funzioni.
@@ -215,7 +215,7 @@ In generale le \hl{librerie statiche sono molto pericolose} infatti alcuni OS le
 Per compilare con la versione dinamica non servono opzioni, per la statica si usa:
 
 \begin{lstlisting}
-gcc -static
+$ gcc -static
 \end{lstlisting}
 
 
@@ -228,25 +228,25 @@ Per costruire una \hl{libreria statica per MacOS}:
 	\item costruiamo il \textbf{file oggetto}:
 
 \begin{lstlisting}
-gcc -c libprova.c
+$ gcc -c libprova.c
 \end{lstlisting}
 		
 	\item costruiamo la \textbf{libreria} (con ar=archive, c=create se lib.a non esiste):
 
 \begin{lstlisting}
-ar rcs libprova.a libprova.o
+$ ar rcs libprova.a libprova.o
 \end{lstlisting}
 			
 	\item costruire il \textbf{codice} che usa la libreria (con -Wall=verbose warning, -g=debugging, -c=create del file):
 
 \begin{lstlisting}
-gcc -Wall -g -c useprova.c
+$ gcc -Wall -g -c useprova.c
 \end{lstlisting}
 	
 	\item \textbf{linker} per risolve le chiamate incrociate (con -L.=dove prendere la libreira, -l[nomelib]=usare la libreria):
 
 \begin{lstlisting}
-gcc -g -o useprova useprova.o -L. -lprova 
+$ gcc -g -o useprova useprova.o -L. -lprova 
 \end{lstlisting}
 
 \end{enumerate}
@@ -254,7 +254,7 @@ gcc -g -o useprova useprova.o -L. -lprova
 Per capire che librerie usa il codice si usa:
 
 \begin{lstlisting}
-otool -L [nomecodice]
+$ otool -L [nomecodice]
 \end{lstlisting}
 
 
@@ -264,25 +264,25 @@ Per costruire una \hl{libreria statica per Linux}:
 	\item costruiamo il \textbf{file oggetto}:
 
 \begin{lstlisting}
-gcc -fPIC -Wall -g -c libprova.c
+$ gcc -fPIC -Wall -g -c libprova.c
 \end{lstlisting}
 
 	\item costruiamo la \textbf{libreria} (con 0.0=versione della libreira):
 
 \begin{lstlisting}
-gcc -g -shared -Wl,-soname,libprova.so.0 -o libprova.so.0.0 libprova.o -lc 
+$ gcc -g -shared -Wl,-soname,libprova.so.0 -o libprova.so.0.0 libprova.o -lc 
 \end{lstlisting}
 
 	\item costruire il \textbf{link simbolico per aggiornare le librerie} senza aggiornare gli eseguibili e senza cambiare il nome del programma:
 
 \begin{lstlisting}
-ln -sf libprova.so.0.0 libprova.so.0 
+$ ln -sf libprova.so.0.0 libprova.so.0 
 \end{lstlisting}
 
 	\item \textbf{linker} per risolve le chiamate:
 
 \begin{lstlisting}
-ln -sf libprova.so.0 libprova.so
+$ ln -sf libprova.so.0 libprova.so
 \end{lstlisting}
 
 \end{enumerate}
@@ -291,7 +291,7 @@ ln -sf libprova.so.0 libprova.so
 Per capire che librerie usa il codice si usa:
 
 \begin{lstlisting}
-ldd [nomevodice]
+$ ldd [nomevodice]
 \end{lstlisting}
 
 
@@ -310,7 +310,7 @@ Tipicamente la libreria viene distribuita nelle directory di sistema andandola a
 Su \textbf{MacOS} la libreria dinamica è un \hl{.dylib}:
 
 \begin{lstlisting}
-gcc -dynamiclib libprova.c -o libprova.dylib
+$ gcc -dynamiclib libprova.c -o libprova.dylib
 \end{lstlisting}
 
 Quindi eseguendo il programma \hl{trovera' la libreria controllando nella directory corrente} e quindi non serve creare la variabile di ambiente come su Linux.
@@ -318,7 +318,7 @@ Quindi eseguendo il programma \hl{trovera' la libreria controllando nella direct
 i file di intestazione del mac come stdio.h per cercarla uso:
 
 \begin{lstlisting}
-find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
+$ find /Applications/Xcode.app/ -name stdio.h 2>/dev/null
 \end{lstlisting}
 
 
