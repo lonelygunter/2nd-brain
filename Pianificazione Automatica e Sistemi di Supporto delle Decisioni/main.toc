@@ -42,3 +42,6 @@
 \contentsline {subsection}{\numberline {\mbox {V-E}}Esempio velocizzazione progetto}{11}{subsection.5.5}%
 \contentsline {subsection}{\numberline {\mbox {V-F}}Low sizing models}{11}{subsection.5.6}%
 \contentsline {subsection}{\numberline {\mbox {V-G}}Scrivere il modello di ottimizzazione}{12}{subsection.5.7}%
+\contentsline {subsection}{\numberline {\mbox {V-H}}Esempio modello di ottimizzazione con uso di matrici}{13}{subsection.5.8}%
+\contentsline {section}{\numberline {VI}}{14}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}}{14}{subsection.6.1}%

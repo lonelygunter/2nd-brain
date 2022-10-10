@@ -42,14 +42,14 @@ Un progetto è \hl{rappresentato da diverse attivita'} in una tabella fornita da
 \begin{table}[h!]
 	\begin{center}
 	\begin{tabular}{|c | c c |} 
-			\hline
-			Attività & Durata stimata $d_i$ & Predecessori \\ [0.5ex]
-			\hline
- 			1 & 10 & - \\
-			2 & 10 & - \\
-			3 & 10 & 1 \\
-			4 & 10 & 1, 2 \\
-			\hline
+		\hline
+		Attività & Durata stimata $d_i$ & Predecessori \\ [0.5ex]
+		\hline
+ 		1 & 10 & - \\
+		2 & 10 & - \\
+		3 & 10 & 1 \\
+		4 & 10 & 1, 2 \\
+		\hline
 		\end{tabular}
 	\end{center}
 	\caption{Tabella di ore di lavoro e predecessioni delle attività}
@@ -325,3 +325,214 @@ $$q^* = \sqrt{\frac{2kd}{h}}$$
 \caption{Caso di lotto economico} 
 \label{lottoec}
 \end{figure}
+
+
+
+Questo modello \hl{nella pratica ha dei limiti} dati i possibili vincoli come:
+
+\begin{itemize}
+	\item spazio limite di un magazzino
+	\item produzione di più prodotti contemporaneamente
+	\item vincolo di immobilizio
+	\item vincolo sul capitale
+	\item ecc ...
+\end{itemize}
+
+
+Associati al vincolo di immobilizzo possiamo avere anche un \hl{limite nei prodotti che posso fare di A e di B}. Se si ipotizza una domanda costante, ho che il \hl{costo totale annuale $z$} sarà data dal costo annuale di A e di B:
+
+$$z = (k_A \frac{d_A}{q_A} + h_A \frac{q_A}{2}) + (k_B \frac{d_B}{q_B} + h_B \frac{q_B}{2})$$
+
+
+Avremo che $z$ è dato da 2 termini uno che dipende da A ed uno da B. Per noi supponiamo che $k_A = k_B = k$.
+
+Di conseguenza anche i lotti di approvvigionamento possono essere diversi. Quindi, quando è necessario, avremo che dovremo \hl{decidere quante confezioni produrre di A e quante di B}.
+
+Nel \hl{caso peggiore ipotizzo che la produzione contemporanea di 2 lotti}, quindi non dovrà superare la capacità di magazzino $Q$:
+
+$$q_A + q_B <= Q\ \ \ \forall\ \ \ q_A, q_B >= 0$$
+
+dove la produzione contemporanea indica la \hl{sovrapposizione dei denti di sega}.
+
+Se la \hl{capacita' del magazzino e' minore del lotto economico, la soluzione ottima sara' la nostra capacita'} e non più $q^*$.
+
+Per il \hl{vincolo del capitale}, indiciamo con $c_A$ e $c_B$ il valore di un singolo prodotto di A e B allora:
+
+$$c_Aq_A + c_Bq_B <= C$$
+
+con $C$ capitale massimo.
+
+Dal \hl{punto di vista grafico} avremo 2 variabili $q_A$ e $q_B$ con dei vincoli sono di tipo lineare:
+
+$q_A + q_B <= Q$
+$c_Aq_A + c_Bq_B <= C$
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{lottoec.jpeg}
+\caption{Grafico con linee di livello non lineari} 
+\label{linlivnonlin}
+\end{figure}
+
+
+La \hl{funzione obiettivo non e' lineare} dato che $q_A$ e $q_B$ sono al denominatore. Le \hl{curve di livello non sono delle rette} ma saranno concentriche (su ognuna il costo è sempre costante).
+
+Avremo una \hl{soluzione ottima dalla curva di livello tangente all'insieme di ammissibilita'}. Si vado allora a prendere le curve peggiori fino ad arrivare a quella che interseca la regione ottima.
+
+
+% Esempio modello di ottimizzazione con uso di matrici
+\subsection{Esempio modello di ottimizzazione con uso di matrici}
+
+Ogni problema di ottimizzazione lineare si può \hl{trasformare in forma standard}. Prendiamo un f.o.:
+
+$$min z = c^T x$$
+
+e dei vincoli:
+
+\begin{itemize}
+	\item $\underline{\underline{A}}\ \underline{x} = \underline{b}$
+	\item $\underline{x} >= 0$
+	\item $n > m$
+\end{itemize}
+
+con $n$ righe e $m$ colonne delle matrice $\underline{\underline{A}}$.
+
+Utilizziamo l'\hl{operazione di Pivot}, quindi il vincolo:
+
+$$\underline{\underline{A}}\ \underline{x} = \underline{b}$$
+
+sarà:
+
+
+$$
+\left[ {\begin{array}{cccc}
+	4 & 1 & 5 & 7 \\
+	2 & 3 & 2 & 1 \\
+\end{array} } \right]
+\left[ {\begin{array}{c}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+	x_4 \\
+\end{array} } \right]
+=
+\left[ {\begin{array}{c}
+	10 \\
+	10 \\
+\end{array} } \right]
+$$
+
+Il Pivot che ci viene assegnato è:
+
+$$(r, s) = (1, 3)$$
+
+alla quale coordinata corrisponde il valore della prima riga e terza colonna: $5$.
+
+Dai dati \hl{creiamo un sistema di eq lineari}:
+
+$$
+\begin{cases} 
+    4x_1 + x_2 + 5x_3 + 7x_4 = 10 \\ 
+    2x_1 + 3x_2 + 2x_3 + 1x_4 = 10 
+\end{cases}
+$$
+
+Per eseguire l'operazione di Pivot andremo a far si che \hl{in corrispondenza della colonna di Pivot ($s$) ci sia solo un vettore unitario}:
+
+$$
+\left[ {\begin{array}{cccc}
+	? & ? & 1 & ? \\
+	? & ? & 0 & ? \\
+\end{array} } \right]
+\left[ {\begin{array}{c}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+	x_4 \\
+\end{array} } \right]
+=
+\left[ {\begin{array}{c}
+	? \\
+	? \\
+\end{array} } \right]
+$$
+
+Gli steps da seguire sono:
+
+\begin{enumerate}
+	\item facciamo \hl{$\frac{r}{a_{rs}}$}, con:
+		
+		\begin{itemize}
+			\item $r$: riga Pivot
+			\item $a_{rs} \neq 0$: valore che si trova dal Pivot, nel nostro caso $5$
+		\end{itemize}
+		
+		Diremo quindi che:
+		
+		$$a_{rj} = \frac{a_{rj}}{a{rs}}\ \ \ \forall\ \ \ j = 1, ..., n+1$$
+
+		$$
+		\left[ {\begin{array}{cccc}
+			\frac{4}{5} & \frac{1}{4} & 1 & \frac{7}{5} \\
+			? & ? & 0 & ? \\
+		\end{array} } \right]
+		\left[ {\begin{array}{c}
+			x_1 \\
+			x_2 \\
+			x_3 \\
+			x_4 \\
+		\end{array} } \right]
+		=
+		\left[ {\begin{array}{c}
+			2 \\
+			? \\
+		\end{array} } \right]
+		$$
+	
+	\item per ogni riga non Pivot $i \neq r$ applichiamo il principio di equivalenza per eq non lineari:
+	
+		$$\text{riga } i = \text{riga } i + (-a_{is}) * \text{nuova riga } r$$
+		
+		in questo caso andiamo a sommare $-2$ in modo da avere la configurazione $(1, 3) = 1$ e $(2, 3) = 0$.
+		
+		Diremo quindi che:
+		
+		$$a_{ij} = a{ij} + (-a{is})a_{rj}\ \ \ \forall\ \ \ i = 1, ..., m;\ i \neq r$$
+		
+		\begin{table}[!h]
+		    \begin{center}
+				\def\arraystretch{2}
+		    	\begin{tabular}{| c c c c | c |}
+		    	    \hline
+		    	    \textbf{col 1} & \textbf{col 2} & \textbf{col 3} & \textbf{col 4} & \textbf{ris} \\\hline
+		    	    $\ \ 2$ & $\ \ 3$ & $\ \ 2$ & $\ \ 1$ & $\ 10\ +$ \\
+		     		$-\frac{8}{5}$ & $-\frac{2}{5}$ & $-2$ & $-\frac{14}{5}$ & $-4\ =$ \\\hline
+		     		$\ \frac{2}{5}$ & $\ \frac{13}{5}$ & $\ \ 0$ & $-\frac{9}{5}$ & $\ \ 6$ \\
+					\hline
+		    \end{tabular}
+		\end{center}
+		\end{table}
+		
+		quindi abbiamo:
+		
+		$$
+		\left[ {\begin{array}{cccc}
+			\frac{4}{5} & \frac{1}{4} & 1 & \frac{7}{5} \\
+			\frac{2}{5} & \frac{13}{5} & 0 & -\frac{9}{5} \\
+		\end{array} } \right]
+		\left[ {\begin{array}{c}
+			x_1 \\
+			x_2 \\
+			x_3 \\
+			x_4 \\
+		\end{array} } \right]
+		=
+		\left[ {\begin{array}{c}
+			2 \\
+			6 \\
+		\end{array} } \right]
+		$$
+	
+\end{enumerate}
+
