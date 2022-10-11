@@ -527,120 +527,63 @@ dove rispetto a shell1 abbbiamo come differenze:
 	\item if 1: gestisce un segnale di errore
 		
 		\begin{itemize}
-			\item \hl{signal}: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig_int
-			\item \hl{sig_int}: avrà in ingresso un numero intero, che rappresenta il segnale, dato dal kernel.
+			\item \hl{signal}: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig\_int
+			\item \hl{sig\_int}: avrà in ingresso un numero intero, che rappresenta il segnale, dato dal kernel.
 		\end{itemize}
 		
 	\item definizione della funzione dove viene gestito tramite una stampa
 \end{itemize}
 
-I processi si integacciano con il modo esterno tramite delle funzionnalita dete inter process communication ipc alcune di queste osno i segnali. sono schiamati i segnali anche software interrupt (hardware interrupt: periferiche che fanno arrivare degli interrupt al processore da alcune linee prefissate. arriva un numero detto interrupt hardware che fa capire se è un segnale per la pressione di un tasto o di un mouse. appena arriva il nbumero il sistema ha una tabella deli interrupt dove c'è l'indirizzo di una routine da fare lasciando tutto quello che stava facendo per eseguire l'interrupt endler e poi ricontinua quello che stava facendo)
+I \hl{processi si interfacciano con il modo esterno tramite} delle funzionalità dette \hl{Inter Process Communication (IPC)} alcune di queste sono i \hl{segnali}.
 
+I segnali \hl{fanno parte dei software interrupt} dove il kernel:
 
-nei software interrupt il kernel prende un processo in esecuzione, che esegue le due istruzioni, interrompe l'esecuzione e fa succedere delle cose, nel frattempo l'esecuzione del programma è bloccata. se il segnale non causa danni il porcesso riprende da dove era stato interrotto. è sempre il kernel a mandare i segnali. molto spesso i segnali son ocausati anche da condizioni particolari come divisioni per 0 o il porcesso cerca di accedere ad aree di memoria che ha a disposizione ma cdeve prima chiedere il permesso. un esempi odi richiesta di permesso di utilizzo di una certa area di memroia è la malloc. il messaggio di errore è segmentation folt.
+\begin{enumerate}
+	\item \hl{interrompe l'esecuzione} di un porcesso
+	\item \hl{esegue il codice} definito per quell'interrupt
+	\item se non ci sono danni al processo questo \hl{riprende da dove era stato interrotto}
+\end{enumerate}
 
-un altra condizione è stoppare i programmi dove l'esito non è letale dato che si ferma e basta ma poi lo si può far partire.
+Per quanto riguarda le \hl{hardware interrupt} intendiamo i segnali di interrupt, dati dalle periferiche, che arrivano al processore. \hl{L'interrupt e' un numero identificativo} che fa capire la natura di quell'interrupt tramite una \hl{tabella degli interrupt} dove ad ogni numero corrisponde l'\hl{indirizzo ad una routine}.
 
-arriva un segnale ad un processo. puo succeder che il porcesso si sia cautelato e puo sucedere
+Il kernel invia tutti i segnali che saranno \hl{causati da condizioni particolari o accessi a memoria non autorizzati} ma alle quali ha accesso (es: malloc che richiede l'accesso a memoria).
 
-1. azione di default (prodcesseo non si è caurtelato
-2. ignorare il segnale
-3. gestione del segnale: si riferisce al meccanismo degli hardware interrupt. in pratica possiamo scrivere un signal endler e possiamo fare un maniera asincrona eseguire in signale endler e poi continuare
+Come programmatori bisognerà \hl{occuparsi di gestire i segnali} tramite:
 
-\begin{lstlisting}
-$ man signal
-\end{lstlisting}
+\begin{enumerate}
+	\item azione di \textbf{default}
+	\item \textbf{ignorare} il segnale
+	\item gestione del segnale \textbf{scrivendo il signal endler}
+\end{enumerate}
 
-
-terminate process: 
-
-create core image (before terminate process): fotocopia del core per capire cosa ha fatto eseguire il segnale
-
-
-per far arrivare i sengali usiamo un builtin "kill" per SIGINT oppure usiamo $\textasciicircum\ C$. un altro segnale da tastiera per killare il processo è: SIGQUIT $ \textasciicircum\ \backslash $
-
-
-
-valori del tempo:
-
-il sistema gestisce il tempo che lo gestisce in secondi a partire dalla epoc 01/01/1970. poi il sistema mantiene pe ogni processo 3 tempi
+Tramite il manuale di "signal" possiamo vedere tutti i tipi di segnale che esistono. Come si può notare alcuni hanno le diciture:
 
 \begin{itemize}
-	\item clock time: tempo che è passato dal momento in cui è iniziato il programma quando è terminato
-	\item user clock time: tempo speso dalla cpu che però non richiede l'intervento del kernel
-	\item system clock time: tempo usato dall'intervento del kernel
+	\item \textbf{terminate process}: termina il processo
+	\item \textbf{create core image}: effettua una fotocopia del core prima di terminare il processo in modo da poter effettuare un debug
 \end{itemize}
 
-gli ultimi 2 non sono la somma dato che in mezzo ci sono dei processi che intervengono.
+Potremo \hl{inviare i segnali tramite il comando "kill"}. Per esempio per SIGINT: $\text{ctrl}\ C$ oppure per SIGQUIT: $\text{ctrl}\ \backslash $.
 
-a volte la loro somma può essere superiore alla prima se la somma di tutti i core che la eseguono su un processore multicore hanno un tempo loro
+
+% Valori del tempo
+\subsection{Valori del tempo}
+
+Il sistema gestisce il tempo in secondi a partire dalla \hl{Epoch 01/01/1970} e per ogni processo dà:
+
+\begin{itemize}
+	\item \hl{clock time}: \textbf{tempo effettivo di esecuzione} del processo da quando è nato a quando è terminato
+	\item \hl{user clock time}: tempo che \textbf{non richiede l'intervento del kernel} (speso dalla CPU)
+	\item \hl{system clock time}: tempo che \textbf{richiede l'intervento del kernel}
+\end{itemize}
+
+dove \textbf{il clock time non è la somma di user e system} dato che non si contano i processi che intervengono nel mezzo. La loro somma può essere magiore del clock time se abbiamo un porcessore multicore dato che somma il tempo dai diversi core (il tempo potrebbe essere diverso in base al core).
 
 \begin{lstlisting}
 $ time [nome programma]
+
+...
+real	0m0.006s
+user	0m0.001s
+sys		0m0.005s
 \end{lstlisting}
-
-
-
-
-Standard:
-
-è iniziata la standardizazione da posix nel 1988. gli standard si ponevano di standardizzare le interfaccie queindi i porottipi dele funzionie C fece il suo inquesto. 
-
-con posix 2 entrarono a far parte le utilies negli standard 1992 poi anche le thread nel 1995 con poisx.le
-
-dal 1994 si è stabilito un consorsio che divenne proprietario del marchio UNIX che specificò le singol unit specification SUS che raccolgono tutto ciò c'era stato in prececdensza 
-
-
-tener presente di:
-
-pisix.1-2001 / SUSv3
-posix.1-2008 / SUSv4
-
-che contengono tutto ciò che usiamo ora
-
-hanno definito
-
-- bash come shell standard
-- v3: standardizzazione delle utilitis
-
-
-v4: molte delle cose che erano opzionali sono diventate obbligatorie. ma nessuno tranne 1 è certificato SUSv4
-
-linux ha la cerficazione linux standard based LSB che è quella che più si avvicina alla SUSv4 ma in più si rifersce anche a delle implementazioni standard
-
-non si son ocertificati in molti dato che si sono specificate sullo scambio di informazione in segnali realtime che posson ogestire delle massimizzazioni dei tempi e mandare un certo unmero di dati. quwsto è usato in automazioni aziendali 
-
-SUSv3
-
-http://pubs.opengroup.org/onlinepubs/009604599/
-
-SUSv4
-
-http://pubs.opengroup.org/onlinepubs/9699919799/
-
-
-non stante gli standard ogni OS fa delle sue modifiche su alcune cose esterne alle SUS.
-
-i codici di intestazione .h sono cosparsi di macro per capire cosa si vuole pordurre. queste vongon oin soccorso per imporre delle macro per un certo standard dette featrure test macros in modo da far imporre che vengano scelte alcune parti di codice invece di altre come per -DMACOS o -DLINUX
-
-una macro fondamentale per capire quel compilaizone si vuole è: _XOPEN_SOURCE con 600 SUSv3, 700 SUSv4
-
-\begin{lstlisting}
--D_XOPEN_SOURCE=600
-\end{lstlisting}
-
-in qeusto modo potremo allora andare a compilare tutti i programmi conformi.
-
-notare che le vesioni sono back compatibili. infatti se il sistema è SUSv4 se andiamo ad impostare _XOPEN_SOURCE = 600 allora il sistema si presenterà come SUSv3.
-
-
-macro per dice cosa supporta il sistema: _XOPEN_VERSION.
-
-
-
-limiti:
-abbimao dei limiti di compilazione che possono essere visti nei file di inestazione
-
-runtime limit: si vedono tramite la ufnzione sysconf (es: lunghezza massima del nome dei file che dipende dal filesystem può capirlo tramite pathconf su un file qualunque di quel filesystem)
-
-sysconf:

@@ -12,10 +12,10 @@
 \contentsline {subsection}{\numberline {\mbox {II-H}}xattr: usato per i file che entrano in quarantena su MacOS}{2}{subsection.2.8}%
 \contentsline {section}{\numberline {III}Variabili di sistema definite in .bashrc}{2}{section.3}%
 \contentsline {subsection}{\numberline {\mbox {III-A}}INC}{2}{subsection.3.1}%
-\contentsline {section}{\numberline {IV}Introduzione - 23/27.09.22}{2}{section.4}%
+\contentsline {section}{\numberline {IV}Introduzione}{2}{section.4}%
 \contentsline {subsection}{\numberline {\mbox {IV-A}}System call}{2}{subsection.4.1}%
-\contentsline {subsection}{\numberline {\mbox {IV-B}}Programma Make - 30.09.22}{2}{subsection.4.2}%
-\contentsline {subsection}{\numberline {\mbox {IV-C}}Direttive di preprocessore - 28.09.22}{3}{subsection.4.3}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}Programma Make}{2}{subsection.4.2}%
+\contentsline {subsection}{\numberline {\mbox {IV-C}}Direttive di preprocessore}{3}{subsection.4.3}%
 \contentsline {subsection}{\numberline {\mbox {IV-D}}Librerie}{3}{subsection.4.4}%
 \contentsline {subsection}{\numberline {\mbox {IV-E}}Creazione librerie}{4}{subsection.4.5}%
 \contentsline {subsection}{\numberline {\mbox {IV-F}}Aggiornamento librerie}{4}{subsection.4.6}%
@@ -28,5 +28,9 @@
 \contentsline {subsection}{\numberline {\mbox {V-F}}Fork \& Exec}{7}{subsection.5.6}%
 \contentsline {subsection}{\numberline {\mbox {V-G}}Thread}{8}{subsection.5.7}%
 \contentsline {subsection}{\numberline {\mbox {V-H}}Gestione degli errori}{8}{subsection.5.8}%
-\contentsline {section}{\numberline {VI}}{9}{section.6}%
-\contentsline {subsection}{\numberline {\mbox {VI-A}}}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {V-I}}Keyword in C ed accessi a variabili}{8}{subsection.5.9}%
+\contentsline {subsection}{\numberline {\mbox {V-J}}Segnal e interupt}{9}{subsection.5.10}%
+\contentsline {subsection}{\numberline {\mbox {V-K}}Valori del tempo}{9}{subsection.5.11}%
+\contentsline {section}{\numberline {VI}Gli standard}{10}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}Storia e basi}{10}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {VI-B}}Limiti}{10}{subsection.6.2}%

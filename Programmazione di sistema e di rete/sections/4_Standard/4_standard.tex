@@ -1,6 +1,36 @@
 \newpage
-\section{}
+\section{Gli standard}
 
-% 
-\subsection{}
+% Storia e basi
+\subsection{Storia e basi}
 
+La \hl{standardizzazione di UNIX e' iniziata nel 1988} facendo affidamento ad alcuni \hl{standard di C} dato che fa usi di interfaccie e prototipi.
+
+In definitiva abbiamo gli standard:
+
+\begin{itemize}
+	\item Posix.1-2001 / SUSv3: (\url{http://pubs.opengroup.org/onlinepubs/009604599/})
+	\item Posix.1-2008 / SUSv4:  più usato in ambiti di automazioni aziendali, infatti sono specializzate sullo scambio di informazione in segnali realtime. Per questo la sua certificazione non è stata presa da nessuno se non fa un IBM. (\url{http://pubs.opengroup.org/onlinepubs/9699919799/})
+\end{itemize}
+
+(\hl{PS: le versioni sono back compatibili} quindi se settiamo -D\_XOPEN\_SOURCE=700 non precludiamo la SUSv3)
+
+Nonstante gli standard \hl{ogni OS fa delle sue modifiche su alcune cose esterne alle SUS}.
+
+Per verificare il tipo di standard su un applicativo (\_XOPEN\_SOURCE) o un sistema (\_XOPEN\_VERSION), si fa affidamento alle "\hl{feature test macros}" consultabili dai \textbf{codici di intestazione .h}. Per esempio \_XOPEN\_SOURCE impostata a 600 o 700 indica SUSv3 o SUSv4.
+
+\begin{lstlisting}
+-D_XOPEN_SOURCE=600
+\end{lstlisting}
+
+in questo modo potremo allora andare a compilare tutti i programmi conformi su qualsiasi OS.
+
+
+% Limiti
+\subsection{Limiti}
+
+abbimao dei limiti di compilazione che possono essere visti nei file di inestazione
+
+runtime limit: si vedono tramite la ufnzione sysconf (es: lunghezza massima del nome dei file che dipende dal filesystem può capirlo tramite pathconf su un file qualunque di quel filesystem)
+
+sysconf:
