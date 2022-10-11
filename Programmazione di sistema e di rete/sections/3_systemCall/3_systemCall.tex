@@ -450,41 +450,31 @@ dove:
 % Keyword in C ed accessi a variabili
 \subsection{Keyword in C ed accessi a variabili}
 
-In C le variabili con la keyword const. 
-veidmao lo scope delle varibili in C. se sono un porgramma ed entro in una funzione non vedo le variabili di altre funzioni ma solo quelle locali. se una fnzione vuole lavorare anche sul mondo esterno possiamo:
+In C le variabili con la keyword "\hl{const}" serve a dare l'accesso ad una variabile ma in \hl{sola lettura}. Ciò che la frena è il compilatore.
+
+Se una \hl{funzione vuole lavorare anche al suo esterno} usiamo:
 
 \begin{enumerate}
-	\item attraverso il passaggio di variabili dai parametri
-	\item vengono passati alla funzione gli indirizzi delle vafribili e quidni può modificarne il dato tramite la keyword *
-	\item tramite variabili globali
+	\item attraverso il \textbf{passaggio di variabili dai parametri}
+	\item vengono passati gli \textbf{indirizzi delle variabili} abilitandone la scrittura
+	\item tramite \hl{variabili globali}
 \end{enumerate}
 
-const insieme a * serve a far accedere alla variabile ma senza farci scrivere nulla. chi la fa stare ferma è il compilatore 
-
-altra keyword: restrict
-
-vuol dire che i puntatori non possono essere copiati in altre variabili. posso accedere al dato solo con la variabile con la keyword restrict dato che il compilatore può confondersi con la copia delle variabili. vinee applicato ai parametri
-
-
-User ID: per linux si trova in 
-
 \begin{lstlisting}
-$ cat /etc/passwd | grep -w franco
+const int *x
 \end{lstlisting}
 
-oppure con 
+Un'altra keyword è "\hl{restrict}" che serve a \hl{non far creare copie di una variabile}, questo per fare in modo che il compilatore non si possa confondere con le copie di quella variabile.
 
 \begin{lstlisting}
-$ id
+int *restrict x
 \end{lstlisting}
-
-che contiene: ....
 
 
 % Segnal e interupt
 \subsection{Segnal e interupt}
 
-vediamo shell2.c :
+Guardiamo il file shell2.c :
 
 \begin{lstlisting}
 #include "apue.h"
@@ -533,17 +523,18 @@ sig_int(int signo)
 dove rispetto a shell1 abbbiamo come differenze:
 
 \begin{itemize}
-	\item dichiarazione di funzione: gestore del segnale
-	\item if 1: si parla di segnali:
+	\item dichiarazione di funzione per \hl{gestire un segnale}
+	\item if 1: gestisce un segnale di errore
 		
 		\begin{itemize}
-			\item signal: gli diciamo che se arriva il segnale allora eseguire la nostra funzione
-			\item sig_int: ha un numero intero per forza di cose e lo andrà a mettere il kernel. il numero e1 ovviamnete il numero del sengale
+			\item \hl{signal}: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig_int
+			\item \hl{sig_int}: avrà in ingresso un numero intero, che rappresenta il segnale, dato dal kernel.
 		\end{itemize}
-	\item definizione della funzione: quando il segnale arriva viene stampata una stringa
+		
+	\item definizione della funzione dove viene gestito tramite una stampa
 \end{itemize}
 
-i processi si intergacciano con il modo esterno tramite delle funzionnalita dete inter process communication ipc alcune di queste osno i segnali. sono schiamati i segnali anche software interrupt (hardware interrupt: periferiche che fanno arrivare degli interrupt al processore da alcune linee prefissate. arriva un numero detto interrupt hardware che fa capire se è un segnale per la pressione di un tasto o di un mouse. appena arriva il nbumero il sistema ha una tabella deli interrupt dove c'è l'indirizzo di una routine da fare lasciando tutto quello che stava facendo per eseguire l'interrupt endler e poi ricontinua quello che stava facendo)
+I processi si integacciano con il modo esterno tramite delle funzionnalita dete inter process communication ipc alcune di queste osno i segnali. sono schiamati i segnali anche software interrupt (hardware interrupt: periferiche che fanno arrivare degli interrupt al processore da alcune linee prefissate. arriva un numero detto interrupt hardware che fa capire se è un segnale per la pressione di un tasto o di un mouse. appena arriva il nbumero il sistema ha una tabella deli interrupt dove c'è l'indirizzo di una routine da fare lasciando tutto quello che stava facendo per eseguire l'interrupt endler e poi ricontinua quello che stava facendo)
 
 
 nei software interrupt il kernel prende un processo in esecuzione, che esegue le due istruzioni, interrompe l'esecuzione e fa succedere delle cose, nel frattempo l'esecuzione del programma è bloccata. se il segnale non causa danni il porcesso riprende da dove era stato interrotto. è sempre il kernel a mandare i segnali. molto spesso i segnali son ocausati anche da condizioni particolari come divisioni per 0 o il porcesso cerca di accedere ad aree di memoria che ha a disposizione ma cdeve prima chiedere il permesso. un esempi odi richiesta di permesso di utilizzo di una certa area di memroia è la malloc. il messaggio di errore è segmentation folt.
