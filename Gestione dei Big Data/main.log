@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  7 OCT 2022 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  12 OCT 2022 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,7 +615,7 @@ Underfull \hbox (badness 3460) in paragraph at lines 29--30
 [][]\OT1/ptm/m/n/10 con[]-[]trol[]-[]lo[] [][][]del[]-[]la[] [][][]con[]-[]cor[]-[]ren[]-[]za: ga-ran-ti-re che tut-te le
  []
 
-<img//logoUnisalento.jpg, id=124, 565.11125pt x 197.73875pt>
+<img//logoUnisalento.jpg, id=134, 565.11125pt x 197.73875pt>
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 61.
@@ -633,7 +633,7 @@ Underfull \hbox (badness 3623) in paragraph at lines 33--34
 [][]\OT1/ptm/m/n/10 sche[]-[]ma[] [][][]dia[]-[]gram: \OT1/ptm/b/n/10 vi-sio-ne rap-pre-sen-ta-ti-va \OT1/ptm/m/n/10 del DB
  []
 
-<img//schcon.jpeg, id=141, 642.4pt x 430.60875pt>
+<img//schcon.jpeg, id=149, 642.4pt x 430.60875pt>
 File: img//schcon.jpeg Graphic file (type jpg)
 <use img//schcon.jpeg>
 Package pdftex.def Info: img//schcon.jpeg  used on input line 38.
@@ -661,13 +661,13 @@ File: img//logoUnisalento.jpg Graphic file (type jpg)
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 75.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
 [3]
-<img//relazlivalt.jpeg, id=166, 321.2pt x 286.06876pt>
+<img//relazlivalt.jpeg, id=174, 321.2pt x 286.06876pt>
 File: img//relazlivalt.jpeg Graphic file (type jpg)
 <use img//relazlivalt.jpeg>
 Package pdftex.def Info: img//relazlivalt.jpeg  used on input line 93.
 (pdftex.def)             Requested size: 224.83847pt x 200.24675pt.
 ) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/5_eer/5_eer.tex
-<img//gerardisg.jpeg, id=167, 642.4pt x 374.39874pt>
+<img//gerardisg.jpeg, id=175, 642.4pt x 374.39874pt>
 File: img//gerardisg.jpeg Graphic file (type jpg)
 <use img//gerardisg.jpeg>
 Package pdftex.def Info: img//gerardisg.jpeg  used on input line 13.
@@ -677,7 +677,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<img//union.jpeg, id=168, 468.75125pt x 642.4pt>
+<img//union.jpeg, id=176, 468.75125pt x 642.4pt>
 File: img//union.jpeg Graphic file (type jpg)
 <use img//union.jpeg>
 Package pdftex.def Info: img//union.jpeg  used on input line 44.
@@ -698,7 +698,7 @@ l.48
                                                   
 l.48 
       </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//relazlivalt.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//gerardisg.jpeg>]
-<img//notaz.jpeg, id=176, 642.4pt x 370.38374pt>
+<img//notaz.jpeg, id=184, 642.4pt x 370.38374pt>
 File: img//notaz.jpeg Graphic file (type jpg)
 <use img//notaz.jpeg>
 Package pdftex.def Info: img//notaz.jpeg  used on input line 80.
@@ -708,12 +708,12 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 80--81
  [][] 
  []
 
-<img//reifi.jpeg, id=177, 642.4pt x 574.145pt>
+<img//reifi.jpeg, id=185, 642.4pt x 574.145pt>
 File: img//reifi.jpeg Graphic file (type jpg)
 <use img//reifi.jpeg>
 Package pdftex.def Info: img//reifi.jpeg  used on input line 94.
 (pdftex.def)             Requested size: 192.72148pt x 172.24483pt.
-<img//termformtab.jpeg, id=178, 642.4pt x 181.67876pt>
+<img//termformtab.jpeg, id=186, 642.4pt x 181.67876pt>
 File: img//termformtab.jpeg Graphic file (type jpg)
 <use img//termformtab.jpeg>
 Package pdftex.def Info: img//termformtab.jpeg  used on input line 129.
@@ -752,33 +752,38 @@ l.1 \newpage
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 13.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
+)) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/7_q/7_q.tex
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 145.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 58.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [6
+ [6])
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 146.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [7
 
 ] (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6E106D76C123D59AA62D52B962BCA5B2;4327.
+(rerunfilecheck)             Checksum: 06B7D7F88473EF22742C7E35A6EC189B;4444.
  ) 
 Here is how much of TeX's memory you used:
- 14655 strings out of 478994
- 219894 string characters out of 5858185
- 593391 words of memory out of 5000000
- 31753 multiletter control sequences out of 15000+600000
+ 14666 strings out of 478994
+ 220242 string characters out of 5858185
+ 611260 words of memory out of 5000000
+ 31756 multiletter control sequences out of 15000+600000
  441954 words of font info for 107 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,14n,88p,510b,1153s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,14n,88p,857b,1153s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.pdf" (6 pages, 457345 bytes).
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.pdf" (7 pages, 461951 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
