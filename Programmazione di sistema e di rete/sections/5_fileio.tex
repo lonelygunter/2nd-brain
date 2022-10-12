@@ -1,0 +1,29 @@
+\newpage
+\section{File I/O}
+
+
+% Introduzione
+\subsection{Chiamata open}
+
+I file I/O sono le \hl{funzioni che gestisce buffered I/O} ed in contrapposizione da quelle della librerira "stdlib". La chiamata open() fa parte di queste funzioni, i suoi argomenti sono:
+
+\begin{itemize}
+	\item \hl{arg}: path assoluto o relativo
+	\item \hl{flag}: bit che indica l'\texybf{attivazione di alcune modalita'}. Si avrà allora a \textbf{settare il bit della flag a 1}:
+	\item \hl{mode}: serve a dare i \textbf{privilegi con cui i file deve essere creato} (\textbf{da usare solo nella creazione del file})
+\begin{lstlisting}
+open(file, O_RDWR | O_APPEND | O_CREAT | O_TRUNC, file_mode)
+\end{lstlisting}
+
+		avremo allora: $11000001010$
+
+		con O\_RDWR: 2, O\_APPEND: 8, O\_CREAT: 512, O\_TRUNC: 1024
+		
+		
+\end{itemize}
+
+Appena \hl{aperto il file questo avra' la "current position" a 0}, cioè ad inizio file. Iniziando a scrivere avremo che alla prima lettura la nostra current position si sarà spostata fino a dopo abbiamo finito di scrivere.
+
+Per quanto riguarda \hl{read e write i bit delle flag ....}
+
+Una \hl{variante e' openat()} che \hl{prende il file descriptor (passato dalla open() sulla directory) di una directory per passare il path relativo a quella directory}. Abbiamo quindi la \hl{possibilita' di accedere a delle direcotry anceh senza avere i privilegi}. ???
