@@ -29,33 +29,40 @@ in questo modo potremo allora andare a compilare tutti i programmi conformi su q
 % Limiti
 \subsection{Limiti}
 
-Abbiamo dei limiti di compilazione che possono essere visti nei file di inestazione
+Abbiamo dei \hl{limiti di compilazione} che possono essere visti nei file di intestazione.
 
-runtime limit: si vedono tramite la ufnzione sysconf (es: lunghezza massima del nome dei file che dipende dal filesystem può capirlo tramite pathconf su un file qualunque di quel filesystem)
+Possiamo visualizzare i runtime limit che tramite le funzioni: sysconf (es: lunghezza massima del nome dei file che dipende dal filesystem può capirlo tramite pathconf su un file qualunque di quel filesystem)
 
-sysconf: chiamata che si può fare in qualsiasi momento e prende come argomento un name: i name argument ti restituiscono una chiave in base a cosa vuoi indagare. in pratica fanno riferimento ad un nome simbolico che si riferisce ad un valore. si fa ciò dato che questi valori potrebbero essere inseriti dnei file di include ma vicono sempre quelli di sysconf (sono precedute da \_SC\_)
+\begin{itemize}
+	\item \hl{sysconf}: usato per \textbf{determinare il valore corrente di un limite}
+	
+	\item \hl{pathconf}: da \textbf{informazioni sul file system} e per fare ciò gli serve poter arrivare ad un qualunque file del filesystem
+	
+	\item \hl{fpathconf}: come pathconf ma \textbf{prende il file descriptor}
+\end{itemize}
 
-pathconf: da info sul file system e per fare ciò gli serve poter arrivare ad un qualunque file del fs.
+Tutti e 3 prendono come \hl{parametro}:
 
-fpathconf: uguale ma dai il file descriptor
+\begin{lstlisting}
+int name
+\end{lstlisting}
 
-entrambe prendono un name che ha lestesse funzionalità solo è preceduto da \_PC\_
+che \hl{restituisce una chiave} in base a cosa si vuole indagare. In pratica \hl{fanno riferimento ad un nome simbolico che si riferisce ad un valore}.
+Tutte queste chiamate fanno si di avere più \textbf{portabilta'}. Se queste chiamate sono fatte da file include \hl{vincono sempre quelli di sysconf. Saranno precedute da \_SC\_ per i sysconf e da \_PC\_ per i pathconf.
 
 
+% Determinare l'allocazione
+\subsection{Determinare l'allocazione}
 
+Supponendo di avere \hl{bisogno di uno spazio} dove mettere un nome di file (path) per poterlo gestire. Per capire quanto spazio devo allocare si utilizza una funzione "path\_alloc". Questa funzione \hl{retituisce un puntatore ad una memoria capace di contenere il massimo dei caratteri}.
 
-funzione path\_alloc fig 2.16 
-
-supponendo di avere bisongo di uno sapzio dove mettere un nome di file (path) per poterlo gestire. com faccio a acapire quanto quanto spazio mi serve e quindi quanto allocarne? invece di fare un allocazione fissa ne facio una dinamica. la nostra funzione path\_alloc retiotuisce un puntatore ad una dimensione ad una memoria che può contenere il massimo di caratteri rispetto a quanto i lsistema può allocare come massima lunghezza di path. per vedere qual'è la lunghezza usaiamo la variabile limite: NAME\_MAX = 255
+Per vedere qual'è la lunghezza usiamo la variabile limite:
 
 \begin{lstlisting}
 pathconf(_PC_NAME_MAX)
 \end{lstlisting}
 
-
-
-
-
+in genere avremo NAME\_MAX = 255.
 
 
 % Definizione di un tipo
