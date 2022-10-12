@@ -326,7 +326,7 @@ main(void)
 avremo allora:
 
 \begin{itemize}
-	\item \hl{fgets}: funzione dello \textbf{stdoutput che legge la stringa} che dai prima di dare invio, ha come argomenti:
+	\item \hl{fgets}: funzione dello \textbf{stdoutput che legge la stringa} che dai prima di dare invio, quando una system call viene interrotta la fgets restituisce null facendo fermare il loop. Ha come argomenti:
 	
 		\begin{itemize}
 			\item \textbf{buf}: buffer nel quale mettere la stringa
@@ -527,7 +527,7 @@ dove rispetto a shell1 abbbiamo come differenze:
 	\item if 1: gestisce un segnale di errore
 		
 		\begin{itemize}
-			\item \hl{signal}: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig\_int
+			\item \hl{signal}: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig\_int. In caso contrario, viene restituito SIG\_ERR e la variabile globale errno viene impostata per indicare l'errore.
 			\item \hl{sig\_int}: avrà in ingresso un numero intero, che rappresenta il segnale, dato dal kernel.
 		\end{itemize}
 		
@@ -563,7 +563,13 @@ Tramite il manuale di "signal" possiamo vedere tutti i tipi di segnale che esist
 	\item \textbf{create core image}: effettua una fotocopia del core prima di terminare il processo in modo da poter effettuare un debug
 \end{itemize}
 
-Potremo \hl{inviare i segnali tramite il comando "kill"}. Per esempio per SIGINT: $\text{ctrl}\ C$ oppure per SIGQUIT: $\text{ctrl}\ \backslash $.
+Potremo \hl{inviare i segnali tramite il comando "kill"}. Per esempio:
+
+\begin{itemize}
+	\item SIGINT: $\text{ctrl}\ C$
+	\item SIGQUIT: $\text{ctrl}\ \backslash $
+	\item SIGSTOP: $\text{Ctrl}\ Z$
+\end{itemize}
 
 
 % Valori del tempo

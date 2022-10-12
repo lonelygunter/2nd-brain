@@ -15,7 +15,7 @@ In definitiva abbiamo gli standard:
 
 (\hl{PS: le versioni sono back compatibili} quindi se settiamo -D\_XOPEN\_SOURCE=700 non precludiamo la SUSv3)
 
-Nonstante gli standard \hl{ogni OS fa delle sue modifiche su alcune cose esterne alle SUS}.
+Nonostante gli standard \hl{ogni OS fa delle sue modifiche su alcune cose esterne alle SUS}.
 
 Per verificare il tipo di standard su un applicativo (\_XOPEN\_SOURCE) o un sistema (\_XOPEN\_VERSION), si fa affidamento alle "\hl{feature test macros}" consultabili dai \textbf{codici di intestazione .h}. Per esempio \_XOPEN\_SOURCE impostata a 600 o 700 indica SUSv3 o SUSv4.
 
@@ -29,8 +29,91 @@ in questo modo potremo allora andare a compilare tutti i programmi conformi su q
 % Limiti
 \subsection{Limiti}
 
-abbimao dei limiti di compilazione che possono essere visti nei file di inestazione
+Abbiamo dei limiti di compilazione che possono essere visti nei file di inestazione
 
 runtime limit: si vedono tramite la ufnzione sysconf (es: lunghezza massima del nome dei file che dipende dal filesystem può capirlo tramite pathconf su un file qualunque di quel filesystem)
 
-sysconf:
+sysconf: chiamata che si può fare in qualsiasi momento e prende come argomento un name: i name argument ti restituiscono una chiave in base a cosa vuoi indagare. in pratica fanno riferimento ad un nome simbolico che si riferisce ad un valore. si fa ciò dato che questi valori potrebbero essere inseriti dnei file di include ma vicono sempre quelli di sysconf (sono precedute da \_SC\_)
+
+pathconf: da info sul file system e per fare ciò gli serve poter arrivare ad un qualunque file del fs.
+
+fpathconf: uguale ma dai il file descriptor
+
+entrambe prendono un name che ha lestesse funzionalità solo è preceduto da \_PC\_
+
+
+
+
+funzione path\_alloc fig 2.16 
+
+supponendo di avere bisongo di uno sapzio dove mettere un nome di file (path) per poterlo gestire. com faccio a acapire quanto quanto spazio mi serve e quindi quanto allocarne? invece di fare un allocazione fissa ne facio una dinamica. la nostra funzione path\_alloc retiotuisce un puntatore ad una dimensione ad una memoria che può contenere il massimo di caratteri rispetto a quanto i lsistema può allocare come massima lunghezza di path. per vedere qual'è la lunghezza usaiamo la variabile limite: NAME\_MAX = 255
+
+\begin{lstlisting}
+pathconf(_PC_NAME_MAX)
+\end{lstlisting}
+
+
+
+
+
+
+
+% Definizione di un tipo
+
+pid\_t sono definiti così dato che il progettista vuole lasciare libero il prgrammatore dal tipo 
+
+HOMEWORK: quanto vale?
+
+\begin{lstlisting}
+$ grep -rw "pid_t" $INC | grep typedef
+
+/sys/_types/_pid_t.h:typedef __darwin_pid_t pid_t;
+/sys/_types.h:typedef __uint32_t __darwin_id_t;
+
+$ grep -rw "__uint32_t" $INC | grep typedef
+
+/i386/_types.h:typedef unsigned int __uint32_t;
+\end{lstlisting}
+
+tutti questi rimandi sono dati dalla \hl{portabilita'}
+
+
+
+NUOVI CAPITOLO: file IO
+
+in file io co sono le funzioni che fanno il buffered io che gestisce lui e si contrappone da quello dello stdlib. 
+
+chiamata open():
+
+1 arg: path che può essere dato come assoluto o relativo 
+
+2: flag: sono dei bit che dicono cosa fare (es: modalità append)
+
+notare che per le read non appena fatte le scritture il file continua a leggere da dove è stata l'ultima "posizione del file" (current posizion) della read
+
+la prossia write sarà alla fine della read. all'inizio sta a 0 inizo file
+
+avremo che si metterà ad 1 il bit del flag che ci serve tramite:
+
+\begin{lstlisting}
+open(file, O_RDWR | O_APPEND | O_CREAT | O_TRUNC, file_mode)
+\end{lstlisting}
+
+avremo allora: $11000001010$
+
+con O\_RDWR: 2, O\_APPEND: 8, O\_CREAT: 512, O\_TRUNC: 1024
+
+per lettura e scrittura invece ...
+
+
+
+possono essere 3 argomenti quando i file lo stai creando
+
+3. mode: privilegi con cui i file deve essere creato
+
+openat():
+si prende il file descriptor di una directory e poi passare un path che viene interpretato con un path relatico a quella directory. quidni ogni cosa viene fatta in questa orecotry anche se nelle directory a monte non si hanno i privilegi
+
+quindi andiamo ad usare open() sulla direcory per avere il file descriptor da usare in openat()
+
+
