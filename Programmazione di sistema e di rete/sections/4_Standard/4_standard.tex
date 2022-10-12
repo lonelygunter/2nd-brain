@@ -38,7 +38,7 @@ Possiamo visualizzare i runtime limit che tramite le funzioni: sysconf (es: lung
 	
 	\item \hl{pathconf}: da \textbf{informazioni sul file system} e per fare ciò gli serve poter arrivare ad un qualunque file del filesystem
 	
-	\item \hl{fpathconf}: come pathconf ma \textbf{prende il file descriptor}
+	\item \hl{fpathconf}: come pathconf ma \textbf{prende anche il file descriptor}
 \end{itemize}
 
 Tutti e 3 prendono come \hl{parametro}:
@@ -48,15 +48,15 @@ int name
 \end{lstlisting}
 
 che \hl{restituisce una chiave} in base a cosa si vuole indagare. In pratica \hl{fanno riferimento ad un nome simbolico che si riferisce ad un valore}.
-Tutte queste chiamate fanno si di avere più \textbf{portabilta'}. Se queste chiamate sono fatte da file include \hl{vincono sempre quelli di sysconf. Saranno precedute da \_SC\_ per i sysconf e da \_PC\_ per i pathconf.
+Tutte queste chiamate fanno si di avere più \textbf{portabilita'}. Se queste chiamate sono fatte da file include \hl{vincono sempre quelli di sysconf}. Saranno precedute da "\_SC\_" per i sysconf e da "\_PC\_" per i pathconf.
 
 
 % Determinare l'allocazione
 \subsection{Determinare l'allocazione}
 
-Supponendo di avere \hl{bisogno di uno spazio} dove mettere un nome di file (path) per poterlo gestire. Per capire quanto spazio devo allocare si utilizza una funzione "path\_alloc". Questa funzione \hl{retituisce un puntatore ad una memoria capace di contenere il massimo dei caratteri}.
+Supponendo di avere \hl{bisogno di uno spazio} dove mettere un nome di file (path) per poterlo gestire. Tramite la funzione "path\_alloc" ci faremo \hl{restituire un puntatore ad una memoria capace di contenere il massimo dei caratteri} gestibili dal sistema (es: $2^32 \to$ 32 bit, $2^64 \to$ 64 bit).
 
-Per vedere qual'è la lunghezza usiamo la variabile limite:
+Per vedere qual è la lunghezza usiamo la variabile limite:
 
 \begin{lstlisting}
 pathconf(_PC_NAME_MAX)
@@ -64,12 +64,7 @@ pathconf(_PC_NAME_MAX)
 
 in genere avremo NAME\_MAX = 255.
 
-
-% Definizione di un tipo
-
-pid\_t sono definiti così dato che il progettista vuole lasciare libero il prgrammatore dal tipo 
-
-HOMEWORK: quanto vale?
+Lo stesso lavoro di riferimenti simbolici uno dopo l'altro è "pid\_t", per poter \hl{lasciare più libertà al programmatore}:
 
 \begin{lstlisting}
 $ grep -rw "pid_t" $INC | grep typedef
@@ -82,45 +77,4 @@ $ grep -rw "__uint32_t" $INC | grep typedef
 /i386/_types.h:typedef unsigned int __uint32_t;
 \end{lstlisting}
 
-tutti questi rimandi sono dati dalla \hl{portabilita'}
-
-
-
-NUOVI CAPITOLO: file IO
-
-in file io co sono le funzioni che fanno il buffered io che gestisce lui e si contrappone da quello dello stdlib. 
-
-chiamata open():
-
-1 arg: path che può essere dato come assoluto o relativo 
-
-2: flag: sono dei bit che dicono cosa fare (es: modalità append)
-
-notare che per le read non appena fatte le scritture il file continua a leggere da dove è stata l'ultima "posizione del file" (current posizion) della read
-
-la prossia write sarà alla fine della read. all'inizio sta a 0 inizo file
-
-avremo che si metterà ad 1 il bit del flag che ci serve tramite:
-
-\begin{lstlisting}
-open(file, O_RDWR | O_APPEND | O_CREAT | O_TRUNC, file_mode)
-\end{lstlisting}
-
-avremo allora: $11000001010$
-
-con O\_RDWR: 2, O\_APPEND: 8, O\_CREAT: 512, O\_TRUNC: 1024
-
-per lettura e scrittura invece ...
-
-
-
-possono essere 3 argomenti quando i file lo stai creando
-
-3. mode: privilegi con cui i file deve essere creato
-
-openat():
-si prende il file descriptor di una directory e poi passare un path che viene interpretato con un path relatico a quella directory. quidni ogni cosa viene fatta in questa orecotry anche se nelle directory a monte non si hanno i privilegi
-
-quindi andiamo ad usare open() sulla direcory per avere il file descriptor da usare in openat()
-
-
+tutti questi rimandi sono dati dalla \hl{portabilita'}.
