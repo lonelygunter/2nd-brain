@@ -1,6 +1,6 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {section}{\numberline {I}Definizioni - 22/23.09.22}{2}{section.1}%
+\contentsline {section}{\numberline {I}Definizioni}{2}{section.1}%
 \contentsline {subsection}{\numberline {\mbox {I-A}}Business Analytics}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {\mbox {I-B}}Decisioni}{2}{subsection.1.2}%
 \contentsline {subsection}{\numberline {\mbox {I-C}}Business Intelligence (BI)}{2}{subsection.1.3}%
@@ -12,11 +12,11 @@
 \contentsline {subsection}{\numberline {\mbox {I-I}}Machine Learning (ML)}{3}{subsection.1.9}%
 \contentsline {subsection}{\numberline {\mbox {I-J}}Deep Leaning}{3}{subsection.1.10}%
 \contentsline {subsection}{\numberline {\mbox {I-K}}Data Mining (DM)}{3}{subsection.1.11}%
-\contentsline {section}{\numberline {II}Software solutions and languages for AP and DSS - 29.09.22}{4}{section.2}%
+\contentsline {section}{\numberline {II}Software solutions and languages for AP and DSS}{4}{section.2}%
 \contentsline {subsection}{\numberline {\mbox {II-A}}Decisioni operative/strutturate}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {\mbox {II-B}}Decisioni non strutturate o destrutturate}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {\mbox {II-C}}Decisioni semistrutturate}{4}{subsection.2.3}%
-\contentsline {section}{\numberline {III}Introduzione all'ottimizzazione matematica - 30.09.22}{5}{section.3}%
+\contentsline {section}{\numberline {III}Introduzione all'ottimizzazione matematica}{5}{section.3}%
 \contentsline {subsection}{\numberline {\mbox {III-A}}Introduzione}{5}{subsection.3.1}%
 \contentsline {subsection}{\numberline {\mbox {III-B}}Ingredienti principali}{5}{subsection.3.2}%
 \contentsline {subsection}{\numberline {\mbox {III-C}}Descrizione del problema}{5}{subsection.3.3}%
@@ -42,6 +42,9 @@
 \contentsline {subsection}{\numberline {\mbox {V-E}}Esempio velocizzazione progetto}{11}{subsection.5.5}%
 \contentsline {subsection}{\numberline {\mbox {V-F}}Low sizing models}{11}{subsection.5.6}%
 \contentsline {subsection}{\numberline {\mbox {V-G}}Scrivere il modello di ottimizzazione}{12}{subsection.5.7}%
-\contentsline {subsection}{\numberline {\mbox {V-H}}Esempio modello di ottimizzazione con uso di matrici}{13}{subsection.5.8}%
-\contentsline {section}{\numberline {VI}}{14}{section.6}%
-\contentsline {subsection}{\numberline {\mbox {VI-A}}}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {V-H}}Algoritmo del simplesso}{13}{subsection.5.8}%
+\contentsline {subsection}{\numberline {\mbox {V-I}}Tableau}{13}{subsection.5.9}%
+\contentsline {subsection}{\numberline {\mbox {V-J}}Esempio Tableau}{14}{subsection.5.10}%
+\contentsline {subsection}{\numberline {\mbox {V-K}}}{14}{subsection.5.11}%
+\contentsline {section}{\numberline {VI}}{15}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}}{15}{subsection.6.1}%

@@ -381,12 +381,12 @@ La \hl{funzione obiettivo non e' lineare} dato che $q_A$ e $q_B$ sono al denomin
 Avremo una \hl{soluzione ottima dalla curva di livello tangente all'insieme di ammissibilita'}. Si vado allora a prendere le curve peggiori fino ad arrivare a quella che interseca la regione ottima.
 
 
-% Esempio modello di ottimizzazione con uso di matrici
-\subsection{Esempio modello di ottimizzazione con uso di matrici}
+% Algoritmo del simplesso
+\subsection{Algoritmo del simplesso}
 
 Ogni problema di ottimizzazione lineare si può \hl{trasformare in forma standard}. Prendiamo un f.o.:
 
-$$min z = c^T x$$
+$$\min z = \underline{c}^T \underline{x}$$
 
 e dei vincoli:
 
@@ -536,3 +536,153 @@ Gli steps da seguire sono:
 	
 \end{enumerate}
 
+
+% Tableau
+\subsection{Tableau}
+
+Possiamo quindi riscrivere la forma standard con il Tableau con una \hl{forma tabellare} del tipo:
+
+$$ \underline{\underline{\overline{A}}} =
+\left[ {\begin{array}{cc}
+	\underline{\underline{A}} & \underline{b} \\
+	c^T & 0 \\
+\end{array} } \right]
+$$
+
+dove $m$ righe e $n$ colonne.
+
+I nostri problemi hanno variabili continue dove usando l'algoritmo del simplesso avremo come \hl{forma generale}:
+
+$$\min c_1x_1 + ... + c_n x_n$$
+
+per i vincoli invece:
+
+\begin{itemize}
+	\item $a_{11}x_1 + ... + a_{an}x_n = b_1$
+	\item \dots
+	\item $a_{m1}x_1 + ... + a_{mn}x_n = b_m$
+	\item $x_1, ..., x_n >= 0$
+\end{itemize}
+
+\hl{Assumiamo che}:
+
+\begin{enumerate}
+	\item $n > m$
+	\item $\text{rank}(\underline{A}) = n$
+\end{enumerate}
+
+così \hl{non avremo vincoli ridondanti}.
+
+Applichiamo poi la definizione di \hl{insieme di base $B$} (con $\underline{x}_B \in R^m$) ed \hl{insieme non di base $N$} (con $\underline{x}_N \in R^{n-m}$).
+
+quindi avrò che:
+
+$$\underline{x} = (\underline{x}_B, \underline{x}_N)$$
+
+allora:
+
+$$\underline{\underline{A}} = [\underline{\underline{B}} | \underline{\underline{N}}]$$
+
+Se la matrice \hl{$B$ non e' singolare posso ricavare una soluzione} imponendo $$\underline{x}_N:=0$$
+
+Per le \hl{variabili $B$} avremo:
+
+$$\underline{\underline{B}}\ \underline{x}_B = \underline{b}\ \ \ \to\ \ \ \underline{x}_B = \underline{\underline{B}}^{-1}\ \underline{b}$$
+
+sarà anche \hl{ammisibile se $>= 0$}
+
+Tutto questo grazie al \hl{teorema fondamentale} che dice:
+
+\begin{enumerate}
+	\item se un problema ha \textbf{soluzione ammissibile}, allora almeno una \textbf{è di base}.
+	\item se \textbf{ammette soluzioni ottime}, c'è n'è almeno \textbf{una di base}
+\end{enumerate}
+
+
+Le soluzioni di base sono quindi più comode dato che sono più piccole in un insieme $R^n$ di soluzioni non ammissibili, ammissibili e ottime.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{inssol.jpeg}
+\caption{Insiemi delle soluzioni} 
+\label{inssol}
+\end{figure}
+
+
+Capiamo allora che i \hl{modi per poter scegliere $x_B$} saranno dati dal numero di combinazioni di $n$ elementi di classe $m$:
+
+$$ \binom{n}{m} = \frac{n!}{m!(n-m)!}$$
+
+
+% Esempio Tableau
+\subsection{Esempio Tableau}
+
+Funzione obiettivo:
+
+$$\min z = 2x_1 + 3x_2 + 4x_3 - 5x_4$$
+
+vincoli:
+
+\begin{itemize}
+	\item $x_1 - x_2 + x_3 + 2x_4 = 3$
+	\item $2x_2 + x_4 = 7$
+	\item $x_1 + 2x_3 = 10$
+	\item $x_1, x_2, x_3, x_4 >= 0$
+\end{itemize}
+
+Supponiamo: $m = 3$ e $n = 4$.
+
+e scegliamo sull'insieme di tutte le variabili, combinazioni lineari di tanti numeri quante sono le equazioni. Prendiamo per esempio:
+
+\begin{itemize}
+	\item $\underline{x}_B = (x_1, x_3, x_4)$
+	\item $\underline{x}_N = (x_2)$
+\end{itemize}
+
+Andiamo allora a prendere i termini delle variabile e ad inserirli in $A$:
+
+$$A =
+\left[ {\begin{array}{cccc}
+	1 & -1 & 1 & 2\\
+	0 & 2 & 0 & 1\\
+	1 & 0 & 2 & 0\\
+\end{array} } \right]
+$$
+
+Dalla f.o. troviamo:
+
+$$c^T = (2, 3, 4, -5)$$
+
+Andremo poi a distribuire ad ogni matrice i suoi dati:
+
+$$B =
+\left[ {\begin{array}{ccc}
+	1 & 1 & 2 \\
+	0 & 0 & 1 \\
+	1 & 2 & 0 \\
+\end{array} } \right]
+$$
+
+$$\underline{c}_B = (2, 4, -5)$$
+
+$$N =
+\left[ {\begin{array}{c}
+	-1 \\
+	2 \\
+	0 \\
+\end{array} } \right]
+$$
+
+nel nostro caso c sarà:
+
+$$\underline{c}_N = (3)$$
+
+
+possiamo allora riscirivere come:
+
+$\min \underline{c}^T_B \underline{x}_B + \underline{c}^T_N \underline{x}_N$
+
+
+%
+\subsection{}
