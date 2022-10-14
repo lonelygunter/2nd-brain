@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  14 OCT 2022 10:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  14 OCT 2022 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -601,8 +601,8 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
-<img//logoUnisalento.jpg, id=189, 565.11125pt x 197.73875pt>
+ (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/0_libri/0_libri.tex
+<img//logoUnisalento.jpg, id=214, 565.11125pt x 197.73875pt>
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
@@ -610,7 +610,7 @@ Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg>]
+ </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//logoUnisalento.jpg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/1_comandi/1_comandi.tex
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 7.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -619,60 +619,68 @@ LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 8.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/2_intro/2_intro.tex
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [2]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 64.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-File: img//logoUnisalento.jpg Graphic file (type jpg)
-<use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 65.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [2]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 [][]$\OT1/ptm/m/n/10 https : / / www . gnu . org / software / make / manual / make . html #
  []
 
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 203.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 142.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
 [3]
 Underfull \hbox (badness 1460) in paragraph at lines 215--216
 []\OT1/ptm/m/n/10 Per com-pi-la-re con la ver-sio-ne di-na-mi-ca non ser-vo-no
  []
 
-) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_systemCall/3_systemCall.tex
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 278.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [4]
+[4]) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/3_systemCall/3_systemCall.tex
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 78.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [5]
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
 []\OT1/ptm/m/n/10 dove ve-dia-mo che se la va-ria-bi-le
  []
 
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 139.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 226.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[5]
-<img//unbuffio.jpeg, id=448, 614.295pt x 642.4pt>
+[6]
+<img//unbuffio.jpeg, id=504, 614.295pt x 642.4pt>
 File: img//unbuffio.jpeg Graphic file (type jpg)
 <use img//unbuffio.jpeg>
 Package pdftex.def Info: img//unbuffio.jpeg  used on input line 282.
 (pdftex.def)             Requested size: 245.71364pt x 256.95544pt.
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 286.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 330.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [6]
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.330 	
+        </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//unbuffio.jpeg>]
 LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 345.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
-<img//fork.jpeg, id=485, 247.92625pt x 642.4pt>
+<img//fork.jpeg, id=547, 247.92625pt x 642.4pt>
 File: img//fork.jpeg Graphic file (type jpg)
 <use img//fork.jpeg>
 Package pdftex.def Info: img//fork.jpeg  used on input line 374.
@@ -682,27 +690,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 378.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.378 
-       </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//unbuffio.jpeg>]
-File: img//logoUnisalento.jpg Graphic file (type jpg)
-<use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 486.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 400.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.486 main(
-           void) </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//fork.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/4_standard/4_standard.tex
+l.400 2 
+        ENOENT No such file or directory. A component of a specified pathnam... </Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/img//fork.jpeg>]
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 548.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [9]
+ [9]) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/4_standard/4_standard.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 []\OT1/ptm/m/n/10 Posix.1-2001 / SU-Sv3: ([]$http : / / pubs . opengroup . org /
  []
@@ -712,40 +711,41 @@ Underfull \hbox (badness 3019) in paragraph at lines 20--21
 []\OT1/ptm/m/n/10 Per ve-ri-fi-ca-re il ti-po di stan-dard su un ap-pli-ca-ti-vo
  []
 
-) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/5_fileio.tex
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 63.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [10]
+[10]) (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/sections/5_fileio.tex
+Underfull \hbox (badness 1502) in paragraph at lines 61--62
+[][]\OT1/ptm/m/n/10 O[]DIRECTORY: \OT1/ptm/b/n/10 li-mi-ta la chia-ma-ta \OT1/ptm/m/n/10 open ad una
+ []
+
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 111.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 81.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [11])
+[11])
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 144.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [12
-
-] (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.aux)
+ [12] (/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E2BAF9950B3F7A4E834899717E441319;6668.
+(rerunfilecheck)             Checksum: 599297DF3CEACE6CB1B7EFC6207772D4;7356.
  ) 
 Here is how much of TeX's memory you used:
- 15119 strings out of 478994
- 227260 string characters out of 5858185
- 1106908 words of memory out of 5000000
- 31774 multiletter control sequences out of 15000+600000
+ 15132 strings out of 478994
+ 227431 string characters out of 5858185
+ 951554 words of memory out of 5000000
+ 31779 multiletter control sequences out of 15000+600000
  437836 words of font info for 94 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,15n,88p,775b,1903s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,15n,88p,527b,1999s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" (12 pages, 343693 bytes).
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" (12 pages, 344873 bytes).
 PDF statistics:
- 874 PDF objects out of 1000 (max. 8388607)
- 839 compressed objects within 9 object streams
- 517 named destinations out of 1000 (max. 500000)
- 312 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 868 compressed objects within 9 object streams
+ 525 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 

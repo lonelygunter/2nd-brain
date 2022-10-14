@@ -5,7 +5,7 @@
 % Introduzione
 \subsection{Chiamata open}
 
-I file I/O sono le \hl{funzioni che gestisce buffered I/O} ed in contrapposizione da quelle della librerira "stdlib". La chiamata open() fa parte di queste funzioni, i suoi argomenti sono:
+I file I/O sono le \hl{funzioni che gestisce buffered I/O} ed in contrapposizione da quelle della libreria "stdlib". La chiamata open() fa parte di queste funzioni, i suoi argomenti sono:
 
 \begin{itemize}
 	\item \hl{arg}: path assoluto o relativo
@@ -15,35 +15,63 @@ I file I/O sono le \hl{funzioni che gestisce buffered I/O} ed in contrapposizion
 open(file, O_RDWR | O_APPEND | O_CREAT | O_TRUNC, file_mode)
 \end{lstlisting}
 
-		avremo allora: $11000001010$
-
-		con O\_RDWR: 2, O\_APPEND: 8, O\_CREAT: 512, O\_TRUNC: 1024
+		avremo allora $11000001010$ con:
 		
+		\begin{itemize}
+			\item[] O\_RDWR = 2
+			\item[] O\_APPEND = 8
+			\item[] O\_CREAT = 512
+			\item[] O\_TRUNC = 1024
+		\end{itemize}
 		
 \end{itemize}
 
-Appena \hl{aperto il file questo avra' la "current position" a 0}, cioè ad inizio file. Iniziando a scrivere avremo che alla prima lettura la nostra current position si sarà spostata fino a dopo abbiamo finito di scrivere.
 
-Per quanto riguarda \hl{read e write i bit delle flag} abbiamo un modo "scomodo":
+% Read e write flag
+\subsection{Read e write flag}
+
+I \hl{bit delle flag} abbiamo un modo "scomodo" per rappresentarle dato che non seguono la normale "accensione dei singoli bit":
 
 \begin{lstlisting}
-#define O_RDONLY        0x0000          /* open for reading only */
-#define O_WRONLY        0x0001          /* open for writing only */
-#define O_RDWR          0x0002          /* open for reading and writing */
-#define O_ACCMODE       0x0003          /* mask for above modes */
+#define O_RDONLY   0x0000 /* reading only */
+#define O_WRONLY   0x0001 /* writing only */
+#define O_RDWR     0x0002 /* reading and writing */
+#define O_ACCMODE  0x0003 /* above modes */
 \end{lstlisting}
 
-sono dette quindi \hl{maschere} per leggere o scrivere.
+sono dette \hl{maschere} per leggere o scrivere.
 
-Una variante e' \hl{openat()} che prende il file descriptor (passato dalla open() sulla directory) di una directory per passare il path relativo a quella directory. Abbiamo quindi la \hl{possibilita' di accedere a delle directory anceh senza avere i privilegi}. ???
 
-il permesso di esecuzione delle directory serve a cercare un nome in una directory. se il permesso è disattivato non si riesce ad arrivare alla foglia, se invece apri una directory il sistema sa già a quale inod andare dato che si salva quello al posto di tutto il path. quindi fai diventare relativi i privilegi per quella directory. 
+% Chiamata openat()
+\subsection{Chiamata openat()}
 
-questa chiamata è interesante per quando le thread vogliono lavorarein un loro ambiente.
+\hl{Prende un file descriptor} (passato dalla open() sulla directory) di una directory per passare il path relativo a quella directory. La sua \hl{falla nel sistema} sta nella possibilità di \hl{continuare ad accedere a file anche dopo che sono cambiati i privilegi}, dato che lasciando aperta la sessione del file non saremo soggetti ai nuovi privilegi.
 
-alla openat è associata una flag alla firectory aperta dalla open, allora usiamo la flag O\_DIRECTORY. nelle flag vediamo la differnza tra UNIX e gli standard dato che ce ne sono un certo numero di base e poi ogni UNIX ne agiunge altri. Gli standard gli troviamo nel manuale del SUSv3 e SUSv4.
+Questa chiamata è \hl{interessante per le Thread} che vogliono lavorare in un loro ambiente.
 
-O\_CREATE: flag per dire che si vuole creare un file. una trappola che c'è è la builtin "umask" usata per dare dei permessi di base. questa umask è presente in ogni processo e la eradita dal padre (ma può comunque modificarla). ci restituisce un numero ottale (perche inizia xon 0) e dice di togliere la scrittura ai gruppi
+
+% Open flags
+\subsection{Open flags}
+
+Abbiamo un certo numero di \hl{flag standard} dichiarate dall'SUSv3, il resto possono essere a discrezione dei sistemi UNIX.
+
+Le flags più usate sono:
+
+\begin{itemize}
+	\item \hl{O\_DIRECTORY}: \textbf{limita la chiamata} open ad una directory specifica
+
+	\item \hl{O\_CREAT}: flag per dire che si vuole \textbf{creare un file}
+
+	\item \hl{O\_TRUNC}: se vuoi creare un file nuovo ed ne esiste già uno, il \textbf{vecchio viene azzerato}
+
+	\item \hl{O\_EXCL}: se il file già esiste fa \textbf{fallire la chiamata}
+\end{itemize}
+
+
+% Builtin umask
+\subsection{Builtin umask}
+
+È un \hl{valore presente in ogni processo} ed ereditato dal parent ma il child può comunque modificarla. Il valore restituito è un numero ottale (inizia con 0):
 
 \begin{lstlisting}
 $ umask
@@ -53,32 +81,40 @@ $ ll file
 -rw-r--r-- 1 docente staff 0 14 Ott 09:02 file
 \end{lstlisting}
 
-quindi la umask taglia i permessi dei file. quidndi se diamo un 666 nella creazione di un file con open ci ritroveremo 644.
-
-altra trappola: se creo un file in sola scrittura e lettura ecc, potremo usare una chiamata per tolgiere dei flag in corsa. 
+quindi la umask \hl{taglia i permessi dei file creati da quel processo}. Quindi, in questo caso, un 666 diventa 644.
 
 
-un altra trappola: la cosa strana è che se apri un file in rw e ottieni i privilegi, se i privilegi vengono cambiati dalla linea di comando togliendo w se vado a scrivere in quel file perchè aperto con la open in precedenza, quel file comunque puoi continuare a scriverlo dato che il permesso non viene revocato
+% Chiamata lseek()
+\subsection{Chiamata lseek()}
 
+Per un file appena creato la sua "current position" si trova all'inizio del file, ci si \hl{potra' muovere nel file} tramite lseek(). Gli argomenti sono:
 
-O\_TRUNC: nella cfreazione dell file se il file esiste ed è aprto per rw viene azzerato il file (se vuoi aprire un file nuovo ed essite già il veccjhio viene azzerato)
+\begin{enumerate}
+	\item \hl{file descriptor}
+	
+	\item \hl{offset}: per dire \textbf{dove ci si vuole spostare}
+	
+	\item \hl{whence}: indica \textbf{da quale punto} si deve applicare l'offset:
+	
+		\begin{itemize}
+			\item SEEK\_SET: valore preciso da dove partire
+			
+			\item SEEK\_CUR: presa la current position inserire un \textbf{gap e poi scrivere} (può essere negativo)
+			
+			\item SEEK\_END: gap dal quale inserire \textbf{rispetto alla fine} del file. Se negativo scrivo prima, se positivo posso lasciare un \textbf{buco di byte} e poi scrivere. Nei nuovi sistemi i blocchi vuoti vengono allocati.
+		\end{itemize}
+	
+	
+\end{enumerate}
 
-O\_EXCL : nella creazione del file se in file già esiste fa fallire la chiamata. qundo si fa una read potrebbe essere appesa per giorni, ma se il file viene aperto con questo file, se non c'è nula da leggere o scrivere ritorna e non le lascia appese
-
-chaiamata lseek: in un dato momento se hai un file descrptior sta in un certo punto del file (se non lo hai toccato stai all'inizio). lseek sui file già aperti permette di spostare la "current position" 
-
-1 arg: file descriptor
-2. offset per dire dove ci si vuole spostare
-3. whence: ("da dove") puo essere: SEEK\_SET valore preciso di dove andare. SEEK\_CUR può ssere neagativo ed indica il gap dopo il quale nadare cioe di quanto sposarsi, SEEK\_END valore rispetto alla file sarà negativo ma se metto valore positivo creun un uco dato che salto alcuni blocchi. nell'inod viene indicato il file buchi compresi, l'inod ricrodiamo che ha 256 byte dove un pò sono usati per i metadati e nel resto abbiamo dei puntatori a dei blocchi che sono a loro volta blocchi di puntatori ecc quidni non c'è il concetto di buco coi blocchi perchè semplicemente ci son u può di blochci da una parte e un pò dall'altra 
-
-Un esempio di buco lo creiamo:
+Un esempio di buco in un file dato da un numero positivo con SEEK\_END:
 
 \begin{lstlisting}
 #include "apue.h"
 #include <fcntl.h>
 
-char	buf1[] = "abcdefghij";
-char	buf2[] = "ABCDEFGHIJ";
+char	buf1[] = "abcdefgh";
+char	buf2[] = "ABCDEFGH";
 
 int
 main(void)
@@ -108,24 +144,24 @@ avremo:
 
 \begin{lstlisting}
 $ xxd file.hole
-00000000: 6162 6364 6566 6768 696a 0000 0000 0000  abcdefghij......
-00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-00000030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-00000040: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-00000050: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-00000060: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-00000070: 4142 4344 4546 4748 494a                 ABCDEFGHIJ
+00000000: 6162 6364 6566 0000    abcdefgh........
+00000010: 0000 0000 0000 0000    ................
+00000020: 0000 0000 0000 0000    ................
+00000030: 0000 0000 0000 0000    ................
+00000040: 0000 0000 0000 0000    ................
+00000050: 0000 0000 0000 0000    ................
+00000060: 0000 0000 0000 0000    ................
+00000070: 4142 4344 4546 4748    ABCDEFGH........
 \end{lstlisting}
 
-abbiamo che la memoria effettiva sul disco è:
+abbiamo che la memoria sul disco è:
 
 \begin{lstlisting}
-$ du file.hole
-3208	file.hole
+$ du -h file.hole 
+1.6M	file.hole
 \end{lstlisting}
 
-invece la size del file viene dichiarata:
+invece la size del file è:
 
 \begin{lstlisting}
 $ stat -x file.hole 
@@ -139,10 +175,7 @@ Change: Fri Oct 14 09:57:59 2022
  Birth: Fri Oct 14 09:47:24 2022
 \end{lstlisting}
 
-
-
-
-esistono dei file descriptor seekble e non che cerca di capire se è un file regolare o meno:
+Possiamo avere dei \hl{file descriptor seekble} se il file è regolare o meno:
 
 \begin{lstlisting}
 #include "apue.h"
@@ -161,9 +194,11 @@ main(void)
 
 
 
-ci sono piu casi in cui il numero di byte letto è minore di quello chiesto:
+
+
+ci sono più casi in cui il numero di byte letto è minore di quello chiesto:
 1. possiamo avere un valore di ritorno di 50 se chiedo di leggere 100 perchè ci sono solo 50 byte
 2. quando legge da un terminale: la read ritorna quando dai invio
-3. quando legge da una rete: puoi leggere 100 byte ma se ne leggi 10 puoi gestire tu cosa fare, in genere se non arriva nulla la read rimane in attesa e non gli arrivano byte rimane appesa sennò se son oarrivati rimane appesa e poi interrompe quando non sente più nulla
+3. quando legge da una rete: puoi leggere 100 byte ma se ne leggi 10 puoi gestire tu cosa fare, in genere se non arriva nulla la read rimane in attesa e non gli arrivano byte rimane appesa sennò se sono arrivati rimane appesa e poi interrompe quando non sente più nulla
 4. quando legge da una pipe: se non arriva nulla rimane appesa, se arriva qualcosa interrompe e restituisce quello che ha letto
 5. quando interrotta da un segnale e alcuni dati sono stati letti gli restituisce
