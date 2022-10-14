@@ -7,7 +7,7 @@
 
 In generale nella \hl{zona ammissibile} diciamo:
 
-$$X={x \in R^n : A_x >= b, D_x = l, x_j >= 0}\ \ \ (*)$$
+$$X={x \in R^n : A_x \geq b, D_x = l, x_j \geq 0}\ \ \ (*)$$
 $$\forall\ \ \ j \in J \subseteq \{1,2,...,n\}$$
 
 dove \hl{definiamo la possibilita' di vincoli di $>$=, = e variabili $>$= 0}.
@@ -27,7 +27,7 @@ Se in (*) abbiamo:
 	\item $J = \{1,2,...,n\}$
 \end{itemize}
 
-allora il \hl{problema si dice in forma canonica}: $$min_x\ \ \{z = c_x : A_x >= b, x >= 0\}$$
+allora il \hl{problema si dice in forma canonica}: $$min_x\ \ \{z = c_x : A_x \geq b, x \geq 0\}$$
 
 
 % Problema in FORMA STANDARD
@@ -40,7 +40,7 @@ Se in (*) abbiamo:
 	\item $J = {1,2,..,n}$
 \end{itemize}
 
-allora il problema è: $$min_x\ \ \{z = c_x: D_x = l, x >= 0\}$$
+allora il problema è: $$min_x\ \ \{z = c_x: D_x = l, x \geq 0\}$$
 
 Possiamo sempre \hl{ricondurci tramite trasformazioni alla forma standard}.
 
@@ -65,15 +65,15 @@ Nella forma standard abbiamo che:
 \begin{enumerate}
 	\item \hl{variabili non vincolate di segno}: $$x_j t.c. j \notin J$$
 
-		per trasformarla possiamo \hl{sostituire a $x_j$ la somma algebrica di 2 variabili non negative}: $$x_j = x_j^+ - x_j^-$$ $$\forall\ \ \ x_j^+ >= 0, x_j^- >= 0$$
+		per trasformarla possiamo \hl{sostituire a $x_j$ la somma algebrica di 2 variabili non negative}: $$x_j = x_j^+ - x_j^-$$ $$\forall\ \ \ x_j^+ \geq 0, x_j^- \geq 0$$
 
-		Se abbiamo $k$ ($<= n$) variabili non vincolate in segno, possiamo evitare di introdurre $k$ coppie di variabili non negative. È possibile considerare una variabile $x_0 >= 0$ e sostituire la generica variabile non vincolata di segno con $x_j = x_j^+ - x_0$. \hl{Cosi' introduciamo "solo" $k+1$ variabili}.
+		Se abbiamo $k$ ($\leq n$) variabili non vincolate in segno, possiamo evitare di introdurre $k$ coppie di variabili non negative. È possibile considerare una variabile $x_0 \geq 0$ e sostituire la generica variabile non vincolata di segno con $x_j = x_j^+ - x_0$. \hl{Cosi' introduciamo "solo" $k+1$ variabili}.
 	
 	\item \hl{vincoli non espressi in forma di uguaglianza ($<$=)}
 		
-		$$\sum_{j=i}^n a_{ij} x_j <= b_i$$
+		$$\sum_{j=i}^n a_{ij} x_j \leq b_i$$
 		
-		presa la \hl{variabile di Slack}: $S_i >= 0$, avremo:
+		presa la \hl{variabile di Slack}: $S_i \geq 0$, avremo:
 	
 		$$\sum_{j=i}^n a_{ij} x_j + S_i = b_i$$
 	
@@ -82,9 +82,9 @@ Nella forma standard abbiamo che:
 		
 	\item \hl{vincoli non espressi in forma di uguaglianza ($>$=)}
 	
-		$$\sum_{j=i}^n a_{ij} x_j >= b_i$$
+		$$\sum_{j=i}^n a_{ij} x_j \geq b_i$$
 		
-		presa una \hl{variabile di Surplus}: $S_i >= 0$, avremo:
+		presa una \hl{variabile di Surplus}: $S_i \geq 0$, avremo:
 		
 		$$\sum_{j=i}^n a_{ij} x_j - S_i = b_i$$
 		
@@ -94,8 +94,8 @@ Nella forma standard abbiamo che:
 		
 		\hl{sostituendolo a}:
 		
-		$$\sum_{j=i}^n a_{ij} x_j >= b_i$$
-		$$\sum_{j=i}^n a_{ij} x_j <= b_i$$
+		$$\sum_{j=i}^n a_{ij} x_j \geq b_i$$
+		$$\sum_{j=i}^n a_{ij} x_j \leq b_i$$
 		
 	\item \hl{funzione obiettivo}:
 	
@@ -118,10 +118,10 @@ Nella forma standard abbiamo che:
 		vincoli:
 
 		\begin{itemize}
-			\item $6x_1 + 4x_2 <= 24$
-			\item $4x_1 + 8x_2 <= 32$
-			\item $x_2 >= 3$
-			\item $x_1, x_2 >= 0$
+			\item $6x_1 + 4x_2 \leq 24$
+			\item $4x_1 + 8x_2 \leq 32$
+			\item $x_2 \geq 3$
+			\item $x_1, x_2 \geq 0$
 		\end{itemize}
 		
 	\item TRASFORMAZIONE IN FORMA STANDARd
@@ -140,7 +140,7 @@ Nella forma standard abbiamo che:
 
 		vincolo sulle variabili:
 
-		$$x_1, x_2, x_3, x_4, x_5 >= 0$$
+		$$x_1, x_2, x_3, x_4, x_5 \geq 0$$
 
 		quindi nella formulazione standard avremo $j = 1,2,3,4,5$ quando in precedenza avevamo: $j = 1, 2$
 	
@@ -158,10 +158,10 @@ Nella forma standard abbiamo che:
 		vincoli:
 
 		\begin{itemize}
-			\item $8x_1 + 6x_2 >= 48$
-			\item $5x_1 + 10x_2 >= 50$
-			\item $13x_1 + 10x_2 <= 130$
-			\item $x_1 >= 0$
+			\item $8x_1 + 6x_2 \geq 48$
+			\item $5x_1 + 10x_2 \geq 50$
+			\item $13x_1 + 10x_2 \leq 130$
+			\item $x_1 \geq 0$
 		\end{itemize}
 		
 	\item TRASFORMAZIONE IN FORMA STANDARD
@@ -180,7 +180,7 @@ Nella forma standard abbiamo che:
 			\item $8x_1 + 6x_2^+ - 6x_2^- - x_3 = 48$
 			\item $5x_1 + 10_2^+ - 10x_2^- - x_4 = 50$
 			\item $13x_1 + 10_2^+ - 10x_2^- + x_5 = 130$
-			\item $x_1, _2^+, x_2^-, x_3, x_4, x_5 >= 0$
+			\item $x_1, _2^+, x_2^-, x_3, x_4, x_5 \geq 0$
 		\end{itemize}
 	
 \end{enumerate}

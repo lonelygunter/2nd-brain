@@ -82,9 +82,9 @@ Una funzione fondamentale del Project Manager è la possibilità di accelerare a
 		
 		nel nostro caso, è lo \hl{start time $s_i$}. Ipotizziamo che il progetto inizi al tempo $t = 0$, quindi per ogni task abbiamo che:
 
-			$$s_i >= 0\ \ \ \forall\ \ \ i \in TASKS$$
+			$$s_i \geq 0\ \ \ \forall\ \ \ i \in TASKS$$
 
-		In più possiamo definire \hl{$T >= 0$ tempo di completamento del progetto} (\textbf{completion time}).
+		In più possiamo definire \hl{$T \geq 0$ tempo di completamento del progetto} (\textbf{completion time}).
 
 		Minimizziamo il completion time:
 
@@ -118,23 +118,23 @@ Una funzione fondamentale del Project Manager è la possibilità di accelerare a
 	\item \hl{vincoli di precedenza}:
 	
 		Sia \hl{$T$ maggiorante del tempo di completamento delle task}:
-			$$s_i + d_i <= T$$
+			$$s_i + d_i \leq T$$
 
 		allora:
 
-			$$p_{ij} (s_i + d_i) <= s_j\ \ \ \forall\ \ \ i,j \in TASKS$$
+			$$p_{ij} (s_i + d_i) \leq s_j\ \ \ \forall\ \ \ i,j \in TASKS$$
 
 		Possiamo avere che:
 
 		\begin{itemize}
 			\item \hl{$p_{ij} = 1$}: allora \textbf{$i$ è predecessore di $j$} quindi il tempo di inizio del task $j$ deve essere successivo o uguale al task $i$ cioè $s_i + d_i$
 	
-			\item \hl{$p_ij = 0$}: $i$ non è predecessore quindi avremo $0 <= s_j$ allora il vincolo è ridondante
+			\item \hl{$p_ij = 0$}: $i$ non è predecessore quindi avremo $0 \leq s_j$ allora il vincolo è ridondante
 		\end{itemize}
 		
 		scriviamo allora:
  
-		$$s_i + d_i <= s_j\ \ \ \forall\ \ \ i,j \in TASKS,\ p_{ij} >= 0$$
+		$$s_i + d_i \leq s_j\ \ \ \forall\ \ \ i,j \in TASKS,\ p_{ij} \geq 0$$
 
 
 \end{itemize}
@@ -146,18 +146,18 @@ Una funzione fondamentale del Project Manager è la possibilità di accelerare a
 Un modello espanso per problemi di istanza:
 
 \begin{enumerate}
-	\item funzione obiettibo: $\min z = T$
+	\item funzione obiettivo: $\min z = T$
 	\item vincoli:
 		\begin{itemize}
-			\item $s_1 + 10 <= T$
-			\item $s_2 + 10 <= T$
-			\item $s_3 + 10 <= T$
-			\item $s_4 + 10 <= T$
-			\item $s_1 + 10 <= s_3 (p_{13} = 1)$
-			\item $s_1 + 10 <= s_4 (p_{14} = 1)$
-			\item $s_2 + 10 <= s_4 (p_{24} = 1)$
-			\item $s_1, s_2, s_3, s_4 >= 0$
-			\item $T >= 0$
+			\item $s_1 + 10 \leq T$
+			\item $s_2 + 10 \leq T$
+			\item $s_3 + 10 \leq T$
+			\item $s_4 + 10 \leq T$
+			\item $s_1 + 10 \leq s_3 (p_{13} = 1)$
+			\item $s_1 + 10 \leq s_4 (p_{14} = 1)$
+			\item $s_2 + 10 \leq s_4 (p_{24} = 1)$
+			\item $s_1, s_2, s_3, s_4 \geq 0$
+			\item $T \geq 0$
 		\end{itemize}
 \end{enumerate}
 
@@ -196,7 +196,7 @@ con:
 
 \begin{itemize}
 	\item \hl{pendenza w}: \textbf{riduzione della durata del task $i$} per unità di extra risorse (mesi di lavoro / k euro)
-	\item $d_i = d_i^N - w_i x_i >= d_i^m$ vincolo del valore minimo per task
+	\item $d_i = d_i^N - w_i x_i \geq d_i^m$ vincolo del valore minimo per task
 	\item $x_i$: denaro usato per il task $i$
 	\item $B$: budget totale
 
@@ -213,13 +213,13 @@ Avremo un modello con:
 	\item vincoli:
 		
 		\begin{itemize}
-			\item $s_i + d_i^N - w_i x_i <= T\ \ \ \forall\ \ \ i \in TASKS$
-			\item $s_i + d_i^N - w_i x_i <= s_j\ \ \ \forall\ \ \ i, j \in TASKS, p_{ij} = 1$
-			\item $d_i^N - w_i x_i >= d_i^m\ \ \ \forall\ \ \ i \in TASKS$
-			\item $\sum_{i \in TASKS} x_i <= B$
-			\item $T >= 0$
-			\item $s_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
-			\item $x_i >= 0\ \ \ \forall\ \ \ i \in TASKS$
+			\item $s_i + d_i^N - w_i x_i \leq T\ \ \ \forall\ \ \ i \in TASKS$
+			\item $s_i + d_i^N - w_i x_i \leq s_j\ \ \ \forall\ \ \ i, j \in TASKS, p_{ij} = 1$
+			\item $d_i^N - w_i x_i \geq d_i^m\ \ \ \forall\ \ \ i \in TASKS$
+			\item $\sum_{i \in TASKS} x_i \leq B$
+			\item $T \geq 0$
+			\item $s_i \geq 0\ \ \ \forall\ \ \ i \in TASKS$
+			\item $x_i \geq 0\ \ \ \forall\ \ \ i \in TASKS$
 		\end{itemize}
 \end{enumerate}
 
@@ -350,7 +350,7 @@ Di conseguenza anche i lotti di approvvigionamento possono essere diversi. Quind
 
 Nel \hl{caso peggiore ipotizzo che la produzione contemporanea di 2 lotti}, quindi non dovrà superare la capacità di magazzino $Q$:
 
-$$q_A + q_B <= Q\ \ \ \forall\ \ \ q_A, q_B >= 0$$
+$$q_A + q_B \leq Q\ \ \ \forall\ \ \ q_A, q_B \geq 0$$
 
 dove la produzione contemporanea indica la \hl{sovrapposizione dei denti di sega}.
 
@@ -358,14 +358,14 @@ Se la \hl{capacita' del magazzino e' minore del lotto economico, la soluzione ot
 
 Per il \hl{vincolo del capitale}, indiciamo con $c_A$ e $c_B$ il valore di un singolo prodotto di A e B allora:
 
-$$c_Aq_A + c_Bq_B <= C$$
+$$c_Aq_A + c_Bq_B \leq C$$
 
 con $C$ capitale massimo.
 
 Dal \hl{punto di vista grafico} avremo 2 variabili $q_A$ e $q_B$ con dei vincoli sono di tipo lineare:
 
-$q_A + q_B <= Q$
-$c_Aq_A + c_Bq_B <= C$
+$q_A + q_B \leq Q$
+$c_Aq_A + c_Bq_B \leq C$
 
 
 \begin{figure}[H]
@@ -392,7 +392,7 @@ e dei vincoli:
 
 \begin{itemize}
 	\item $\underline{\underline{A}}\ \underline{x} = \underline{b}$
-	\item $\underline{x} >= 0$
+	\item $\underline{x} \geq 0$
 	\item $n > m$
 \end{itemize}
 
@@ -561,7 +561,7 @@ per i vincoli invece:
 	\item $a_{11}x_1 + ... + a_{an}x_n = b_1$
 	\item \dots
 	\item $a_{m1}x_1 + ... + a_{mn}x_n = b_m$
-	\item $x_1, ..., x_n >= 0$
+	\item $x_1, ..., x_n \geq 0$
 \end{itemize}
 
 \hl{Assumiamo che}:
@@ -589,7 +589,7 @@ Per le \hl{variabili $B$} avremo:
 
 $$\underline{\underline{B}}\ \underline{x}_B = \underline{b}\ \ \ \to\ \ \ \underline{x}_B = \underline{\underline{B}}^{-1}\ \underline{b}$$
 
-sarà anche \hl{ammissibile se $>= 0$}
+sarà anche \hl{ammissibile se $\geq 0$}
 
 Tutto questo grazie al \hl{teorema fondamentale} che dice:
 
@@ -628,7 +628,7 @@ vincoli:
 	\item $x_1 - x_2 + x_3 + 2x_4 = 3$
 	\item $2x_2 + x_4 = 7$
 	\item $x_1 + 2x_3 = 10$
-	\item $x_1, x_2, x_3, x_4 >= 0$
+	\item $x_1, x_2, x_3, x_4 \geq 0$
 \end{itemize}
 
 Supponiamo: $m = 3$ e $n = 4$.
@@ -684,5 +684,143 @@ possiamo allora riscrivere come:
 $\min \underline{c}^T_B \underline{x}_B + \underline{c}^T_N \underline{x}_N$
 
 
-%
-\subsection{}
+% Forma canonica
+\subsection{Forma canonica}
+
+Con le operazioni Pivot \hl{poniamo il problema in forma canonica rispetto a una base}:
+
+
+$$
+\left[ {\begin{array}{ccccc}
+	2  & 1  & 4   & -2 & 10\\
+	1  & 2  & 4   & 2  & 10\\
+	10 & 10 & -2  & 2  & 0 \\
+\end{array} } \right]
+$$
+
+
+dove:
+
+\begin{itemize}
+	\item \textbf{vincoli} (prime righe):
+
+		\begin{itemize}
+			\item[] $2x_1 + x_2 + 4x_3 - 2x_4 = 10$
+			\item[] $x_1 + 2x_2 + 4x_3 - 2x_4 = 10$
+		\end{itemize}
+
+	\item \textbf{funzione obiettivo} (ultima riga): $$10x_1 + 10x_2 - 2x_3 + 2x_4 + (-z) = 0$$
+
+\end{itemize}
+
+quindi la \hl{funzione obiettivo} è:
+
+$$\min z = 10x_1 + 10x_2 - 2x_3 + 2x_4 + 0$$
+
+ed avrà ovviamente tutte le variabili $\geq  0$.
+
+
+Se effettuo un'\hl{operazione di Pivot} su $(0, 3)$:
+
+
+$$
+\left[ {\begin{array}{ccccc}
+	-1 & -0.5 & -2 & 1 & -5\\
+	3  &   3  & 8  & 0 & 20\\
+	12 &   11 & 2  & 0 & 10\\
+\end{array} } \right]
+$$
+
+ed un'altra operazione di Pivot su $(1, 1)$:
+
+
+$$
+\left[ {\begin{array}{ccccc}
+	-0.5 & 0 & -0.6   & 1 & -1.6\\
+	1  	 & 1 & 2.6    & 0 &  6.6\\
+	1    & 0 & -27.6  & 0 & -63.3\\
+\end{array} } \right]
+$$
+
+
+Il \hl{sistema vincolare e' risolto per $x_2$ e $x_4$} dato che sono quelle \hl{scelte dal Pivot}. Poniamo poi $x_1, x_3 := 0$ ed avremo:
+
+$$x_4 = -1.6,\ x_2 = 6.6$$
+
+quindi avremo una \hl{soluzione base}:
+
+$$\underline{x} = (0, 6.6, 0, -1.6)$$
+
+Questa soluzine è \hl{inammissibile perche' $x_4 \leq 0$} quindi non è Basic Feasible Solution (BFS).
+
+Per esprimere la forma canonica diciamo che gli \hl{indici di colonna delle variabili di $B$ e $N$} sono:
+
+$$I_B = <1, 3>$$
+$$I_N= <0, 2>$$
+
+possiamo dire la \hl{posizione delle variabili in base alle equazioni} con:
+
+$$\beta(0) = 3$$
+$$\beta(1) = 1$$
+
+\hl{Una forma canonica mi da una soluzione base} andando a porre le \hl{variabili non di base $= 0$} e trovando quelle di base.
+
+Il \hl{valore in basso a destra del Tableau} rappresenta il valore:
+
+$$z = x_1 -27.3x_3 + 63.3$$
+
+dove essendo $x_1$ e $x_3$ non di base:
+
+$$\overline{z} = 63.3$$
+
+quindi rappresenta il \hl{valore della soluzione di base associato a questa forma canonica}.
+
+
+% Generalizzazione forma canonica
+\subsection{Generalizzazione forma canonica}
+
+Generalizzando avrò come \hl{funzione obiettivo}:
+
+$$\min z = \sum_{j \in  I_N} \overline{c}_jx_j + \overline{z}$$
+
+e con \hl{vincoli}:
+
+$$x_{\beta(i)} + \sum_{j \in  I_N} \overline{a}_{ij}x_j = \overline{b}_i\ \ \ \forall\ \ \ i = 0, ..., m - 1$$
+
+con ovviamente $x_j \geq 0, j \in J_N \cup J_B$
+
+L'\hl{equazione di base associata} sarà:
+
+$$x_j := 0\ \ \ \forall\ \ \ j \in J_N$$
+$$x_{\beta(i)} = \overline{b}_i \leq \geq 0\ \ \ \forall\ \ \ i = 0, ..., m-1$$
+
+
+
+
+
+
+pseudocodice algoritmo del simplesso:
+
+1. trovo la prima BFS
+2. in loop faccio:
+	- un test di ottimalità
+	- se fallisce allora sarà migliorabile
+	- allora mi muovo nei dintorni del suo spazio per migliorare la situazione
+3. se trovo una soluzione di base ammissibile ottia faccio un analisi per capire se è unica o meno
+
+
+vediamo meglio il blocco 1. :
+in generale la situaizone è complessa, sarà semplice in forma generale quando è $\leq$ e $\underline{b} \geq 0$
+
+per 2. :
+abbiamo in test di ottimalità che si trova in forma canonica:
+
+$$\min z = \sum_{j \in  I_N} \overline{c}_jx_j + \overline{z}$$
+
+il che significa che per $\underline{x}$ qualsiasi soluzione ammissibile:
+
+$$z(\underline{x}) = \sum_{j \in  I_N} \overline{c}_jx_j + \overline{z}$$
+
+allora se $\overline{c}_j \geq 0$ avremo una forma ottimale 
+
+per 3. :
