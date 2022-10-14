@@ -717,7 +717,7 @@ quindi la \hl{funzione obiettivo} è:
 
 $$\min z = 10x_1 + 10x_2 - 2x_3 + 2x_4 + 0$$
 
-ed avrà ovviamente tutte le variabili $\geq  0$.
+e avrà ovviamente tutte le variabili $\geq  0$.
 
 
 Se effettuo un'\hl{operazione di Pivot} su $(0, 3)$:
@@ -751,7 +751,7 @@ quindi avremo una \hl{soluzione base}:
 
 $$\underline{x} = (0, 6.6, 0, -1.6)$$
 
-Questa soluzine è \hl{inammissibile perche' $x_4 \leq 0$} quindi non è Basic Feasible Solution (BFS).
+Questa soluzione è \hl{inammissibile perche' $x_4 \leq 0$} quindi non è Basic Feasible Solution (BFS).
 
 Per esprimere la forma canonica diciamo che gli \hl{indici di colonna delle variabili di $B$ e $N$} sono:
 
@@ -806,11 +806,11 @@ pseudocodice algoritmo del simplesso:
 	- un test di ottimalità
 	- se fallisce allora sarà migliorabile
 	- allora mi muovo nei dintorni del suo spazio per migliorare la situazione
-3. se trovo una soluzione di base ammissibile ottia faccio un analisi per capire se è unica o meno
+3. se trovo una soluzione di base ammissibile ottima faccio un analisi per capire se è unica o meno
 
 
 vediamo meglio il blocco 1. :
-in generale la situaizone è complessa, sarà semplice in forma generale quando è $\leq$ e $\underline{b} \geq 0$
+in generale la situazione è complessa, sarà semplice in forma generale quando è $\leq$ e $\underline{b} \geq 0$
 
 per 2. :
 abbiamo in test di ottimalità che si trova in forma canonica:
