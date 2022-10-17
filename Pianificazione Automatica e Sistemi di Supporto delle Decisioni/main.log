@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  14 OCT 2022 13:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  17 OCT 2022 15:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -923,19 +923,69 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 752.
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.752 $
-       $\underline{x} = (0, 6.6, 0, -1.6)$$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//inssol.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_p/6_p.tex
+       $\underline{x} = (0, 6.6, 0, -1.6)$$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//inssol.jpeg>]
+<./img//2sol.jpeg, id=448, 642.4pt x 385.44pt>
+File: ./img//2sol.jpeg Graphic file (type jpg)
+<use ./img//2sol.jpeg>
+Package pdftex.def Info: ./img//2sol.jpeg  used on input line 840.
+(pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 862.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [15])
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.862 ...n z = \overline{c}_s x_s + \overline{z}$$
+                                                   </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//2sol.jpeg>]
+<./img//bi.jpeg, id=457, 642.4pt x 445.665pt>
+File: ./img//bi.jpeg Graphic file (type jpg)
+<use ./img//bi.jpeg>
+Package pdftex.def Info: ./img//bi.jpeg  used on input line 899.
+(pdftex.def)             Requested size: 256.95544pt x 178.26283pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 899--900
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--923
+
+ []
+
+<./img//disc.jpeg, id=458, 642.4pt x 390.45876pt>
+File: ./img//disc.jpeg Graphic file (type jpg)
+<use ./img//disc.jpeg>
+Package pdftex.def Info: ./img//disc.jpeg  used on input line 940.
+(pdftex.def)             Requested size: 256.95544pt x 156.18073pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 940--941
+ [][] 
+ []
+
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 962.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.962 		\end{itemize}
+                     pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.962 		\end{itemize}
+                      </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//bi.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//disc.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_p/6_p.tex)
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 144.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [16
-
-] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
+ [17] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -946,18 +996,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 79FDD11B2DACDD435E08A31D6067D843;8529.
  ) 
 Here is how much of TeX's memory you used:
- 14880 strings out of 478994
- 224777 string characters out of 5858185
- 711342 words of memory out of 5000000
- 31871 multiletter control sequences out of 15000+600000
+ 14911 strings out of 478994
+ 225181 string characters out of 5858185
+ 713272 words of memory out of 5000000
+ 31889 multiletter control sequences out of 15000+600000
  443689 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  81i,15n,88p,540b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (16 pages, 938329 bytes).
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (17 pages, 1058790 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 488 compressed objects within 5 object streams
- 162 named destinations out of 1000 (max. 500000)
- 488 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 503 words of extra memory for PDF output out of 10000 (max. 10000000)
 

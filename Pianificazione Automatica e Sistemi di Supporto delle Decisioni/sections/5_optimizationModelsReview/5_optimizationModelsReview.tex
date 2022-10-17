@@ -794,33 +794,170 @@ L'\hl{equazione di base associata} sarà:
 $$x_j := 0\ \ \ \forall\ \ \ j \in J_N$$
 $$x_{\beta(i)} = \overline{b}_i \leq \geq 0\ \ \ \forall\ \ \ i = 0, ..., m-1$$
 
+\hl{Pseudocodice} dell'algoritmo del simplesso:
+
+Andremo a:
+
+\begin{enumerate}
+	\item trovo la prima \hl{BFS}
+	\item in loop faccio:
+		\begin{itemize}
+			\item un \hl{test di ottimalita'}
+			\item se fallisce allora \textbf{sarà migliorabile}
+			\item allora mi \textbf{muovo nei dintorni} del suo spazio per migliorare la situazione
+		\end{itemize}
+	\item se trovo una soluzione di base ammissibile ottima faccio un \hl{analisi per capire se e' unica} o meno
+\end{enumerate}
 
 
+Avremo la \hl{forma generale} quando è \hl{$\leq$ e $\underline{b} \geq 0$}.
 
-
-
-pseudocodice algoritmo del simplesso:
-
-1. trovo la prima BFS
-2. in loop faccio:
-	- un test di ottimalità
-	- se fallisce allora sarà migliorabile
-	- allora mi muovo nei dintorni del suo spazio per migliorare la situazione
-3. se trovo una soluzione di base ammissibile ottima faccio un analisi per capire se è unica o meno
-
-
-vediamo meglio il blocco 1. :
-in generale la situazione è complessa, sarà semplice in forma generale quando è $\leq$ e $\underline{b} \geq 0$
-
-per 2. :
-abbiamo in test di ottimalità che si trova in forma canonica:
+Per il \hl{test di ottimalita' in forma canonica}:
 
 $$\min z = \sum_{j \in  I_N} \overline{c}_jx_j + \overline{z}$$
 
-il che significa che per $\underline{x}$ qualsiasi soluzione ammissibile:
+il che significa che per $\underline{x}$ la soluzione ammissibile sarà:
 
 $$z(\underline{x}) = \sum_{j \in  I_N} \overline{c}_jx_j + \overline{z}$$
 
-allora se $\overline{c}_j \geq 0$ avremo una forma ottimale 
+allora \hl{se $\overline{c}_j \geq 0$ avremo una forma ottimale}, dato che $z(\underline{x}) \geq \overline{z}$
 
-per 3. :
+Se \hl{parto dalla soluzione di base ammissibile e prendo una variabile fuori base rendendola positiva}, la funzione obiettivo varia in base alla relazione:
+
+$$z = \sum_{j \in J_N} \overline{c}_j...(slide)$$
+
+cioè \hl{$x_j = 0 \to 1$}
+
+Avremo quindi che la variazione della funzione obiettivo è uguale al coefficiente di posto ridotto $\overline{c}_j$: \hl{$\Delta z = \overline{c}_j$}.
+
+Riusciamo così a \hl{diminuire $z$} il che ci piace perché stiamo minimizzando.
+
+Se il \hl{test di ottimalita' fallisce} perché esiste una variabile di base con coefficiente di costo ridotto negativo potremo avere 2 situazioni:
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{2sol.jpeg}
+\caption{Soluzioni per ottimalità} 
+\label{2sol}
+\end{figure}
+
+
+Se ho più variabili di base negative allora devo capire \hl{quale delle due devo perturbare}, cioè rendere $> 0$, e la \hl{scegliamo con un "euristica"} che è una scelta algoritmica basata sull'intuizione e info pregresse.
+
+Sceglieremo come variabile, detta variabile entrante, quella con \hl{coefficiente di costo piu' negativo}:
+
+$$x_s = \min_{j \in I_N} \overline{c}_j$$
+
+quindi se $\Delta z = \overline{c}_s x_s$
+
+Se dobbiamo \hl{minimizzare avremo l'interesse e far raggiungere a $x_s$ il valore piu' elevato possibile} dato che ci sarà un miglioramento.
+
+Applichiamo un \hl{vincolo sul massimo valore che $x_s$ puo' raggiungere}:
+
+$$x_s = 0 \to\ > 0$$
+$$x_j = 0\ \ \ \forall\ \ \ j \in I_N,\ j \neq s$$
+
+allora avremo:
+$$\min z = \overline{c}_s x_s + \overline{z}$$
+
+con vincoli:
+
+\begin{itemize}
+	\item $x_{\beta(i)} + \overline{a}_{is}x_s = \overline{b}_i\ \ \ \forall\ \ \ i = 1, ..., m$
+	\item $x_j \geq 0\ \ \ \forall\ \ \ j = 1, ..., m$
+\end{itemize}
+
+avremo quindi che \hl{$x_s$ cresce fino al non superamento dei vincoli}:
+
+$$x_{\beta(i)} = \overline{b}_i - \overline{a}_{is}x_s \geq 0$$
+
+A questo punto avremo 2 casi possibili:
+\begin{enumerate}
+	\item avremo:
+		$$\overline{a}_{is} \leq 0\ \ \ \forall\ \ \ i = 1, ..., m$$
+		allora:
+		$$x_{\beta(i)} \geq 0\ \ \ \forall\ \ \ x_s \to +\infty$$
+		
+		con: $z \to -\infty$
+	
+	\item avremo:
+		$$\exists\ i : \overline{a}_{is} > 0$$
+
+		per calcolare il \hl{massimo valore che $x_s$ puo' assumere} è dato da:
+
+		$$-\overline{a}_{is} x_s \geq -\overline{b}_i$$
+		$$\Rightarrow x_s \leq \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$$
+
+		di conseguenza i \hl{valori con $\overline{a}_{is}$ negativo non ci danno problemi dato che $x_{\beta(i)}$ sara' positivo lo stesso} e poi avremo che che:
+
+		$$x_s = \min \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$$
+
+
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{bi.jpeg}
+		\caption{Possibilità con i valori di $\overline{a}_{is}$} 
+		\label{bi}
+		\end{figure}
+
+
+		Per \hl{$\overline{a}_{is} > 0$} avremo che ad un certo punto \hl{$x_s$ arrivera' a 0}. Ma potrebbe capitare che ci sia \hl{un'altra variabile che diventi 0 prima}, per un valore inferiore di $x_s$.
+
+		Per \hl{esempio} se abbiamo una f.o.:
+		$$\min z = -10x_1 - 10x_2 + 0$$
+
+		vincoli:
+		\begin{itemize}
+			\item $2x_1 + x_2 + x_3 = 10$
+			\item $x_1 + 2x_2 + x_4 = 10$
+			\item $x_1, x_2, x_3, x_4 \geq 0$\\
+		\end{itemize}
+
+		BFS:
+		\begin{itemize}
+			\item $x_1 = x_2 = 0$
+			\item $x_3 = 10$
+			\item $x_4 = 10$
+			\item $\hat{z} = 0$\\
+		\end{itemize}
+
+		\hl{allora}:
+		$$x_s = \text{argmin} (-10, -10) = x_1$$
+
+		annullando $x_2$, $x_3$, $x_4$:
+		$$x_2 \leq \min (\frac{10}{2}, \frac{10}{1}) = 5$$
+
+		il che significa che $x_s = x_1$, ed abbiamo:
+		$$x_3 = 10 - 2x_1 \geq 0$$
+		$$x_4 = 10 - x_1 \geq 0$$
+
+		allora abbiamo:
+
+
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{disc.jpeg}
+		\caption{Permutazione di $x_1$} 
+		\label{disc}
+		\end{figure}
+
+
+		Dopo la nostra perturbazione $x_1 = 0 \to\ 5$ e $x_3 = 10 \to\ 0$, per determinare quale sia la \hl{variabile, detta variabile uscente, che si annulla per prima}:
+
+		$$x_r = \text{argmin} (\frac{10}{2}, \frac{10}{1}) = x_3$$
+
+\end{enumerate}
+
+Lo \hl{pseudocodice} sarà:
+
+\begin{enumerate}
+	\item prendere una \hl{BFS}: $x_{BFS}$
+	\item in un loop mentre $\exists\ \overline{c}_j \leq 0\ \ \ \forall\ \ \ j \in I_N$:
+		\begin{itemize}
+			\item $x_s = \text{argmin}_{j \in I_N} \overline{c}_j$
+			\item se $\overline{a}_{is} \leq 0\ \ \ \forall\ \ \ i = 1, ..., m$ fa return del problem unbounded
+			\item altrimenti $x_2 = \text{argmin} \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$ detta variabile uscente
+			\item makePivot(r, s) sennò non posso fare il test di ottimalità una volta reiniziato il loop
+		\end{itemize}
+\end{enumerate}
