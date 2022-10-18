@@ -74,6 +74,19 @@ WHERE Ssn LIKE "yes"
 				\item \textbf{\_}: indica un solo carattere in una specifica posizione
 			\end{itemize}
 
+\begin{lstlisting}
+WHERE column IN (SELECT Statement)
+\end{lstlisting}
+
+vado a selezionare da Statement gli attributi column
+
+
+\begin{lstlisting}
+WHERE column BETWEEN value1 AND value2
+\end{lstlisting}
+
+vado a selezionare i valori tra value1 e value2 gli attributi column
+
 \end{itemize}
 
 
@@ -82,3 +95,113 @@ WHERE Ssn LIKE "yes"
 
 Per ordinare i risultati con DESC o ASC.
 
+
+% Statement - INSERT
+\subsection{Statement - INSERT}
+
+Usata per inserire dei nuovi dati nei DB. 
+
+
+% Statement - GROUP BY
+\subsection{Statement - GROUP BY}
+
+Usato per raggruppare uno o più attributi in base ad un certo valore.
+
+\begin{lstlisting}
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+\end{lstlisting}
+
+
+% Statement - HAVING
+\subsection{Statement - HAVING}
+
+Usata come un WHERE, quindi filtro, ma usando delle funzioni aggregate
+
+\begin{lstlisting}
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+\end{lstlisting}
+
+
+% Statement - UNION
+\subsection{Statement - UNION}
+
+Usato per combinare il risultato di 2 o più statement SELECT
+
+\begin{lstlisting}
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+\end{lstlisting}
+
+
+% Statement - JOIN
+\subsection{Statement - JOIN}
+
+Usata per unire più risultati di operazioni disseminate tra più tabelle.
+
+\begin{lstlisting}
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+JOIN Customers
+ON Orders.CustomerID=Customers.CustomerID;
+\end{lstlisting}
+
+
+% Values - NULL
+\subsection{Values - NULL}
+
+Rappresenta un valore nullo che può dare problemi nel caso di machine learning o raccoglimento di dati.
+
+Usandolo come statement:
+
+\begin{lstlisting}
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+\end{lstlisting}
+
+
+% Function - Aggregate
+\subsection{Function - Aggregate}
+
+Eseguono un operazioe su n valori dati e possono essere:
+
+\begin{itemize}
+	\item COUNT
+	\item AVG
+	\item SUM
+	\item MAX
+	\item MIN
+\end{itemize}
+
+\begin{lstlisting}
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+\end{lstlisting}
+
+
+% Function - Window
+\subsection{Function - Window}
+
+\begin{itemize}
+	\item LAG
+	\item LEAD
+\end{itemize}
+
+
+% Function - String
+\subsection{Function - String}
+
+\begin{itemize}
+	\item CONCAT
+	\item LEN
+	\item UPPER
+	\item LOWER
+\end{itemize}
