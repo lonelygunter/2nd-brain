@@ -205,7 +205,7 @@ main(void)
 % I/O efficiency
 \subsection{I/O efficiency}
 
-Se devo \hl{tranferire una grande quantita' di dati} avrò una dimensione ottimale con la quale posso \hl{ottimizzare il passaggio dei blocchi di dati}. I tempi possono essere misurati con "time" per capire in che modo il nostro GB debba essere sezionato (in K, M, ...).
+Se devo \hl{trasferire una grande quantita' di dati} avrò una dimensione ottimale con la quale posso \hl{ottimizzare il passaggio dei blocchi di dati}. I tempi possono essere misurati con "time" per capire in che modo il nostro GB debba essere sezionato (in K, M, ...).
 
 (provare a fare ciò tramite intro/mycat e tramite time capire le tempistiche (A CASA))
 
@@ -220,106 +220,130 @@ Se devo \hl{tranferire una grande quantita' di dati} avrò una dimensione ottima
 % File sharing
 \subsection{File sharing}
 
-Potrebbe capitare che più processi si contengano un file tra di loro per poterci accedere.
+Quando \hl{un processo accede ad un file} per utilizzarlo accade che:
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{1proc.jpeg}
-\caption{Unico processo} 
+\caption{Unico processo accede a un file} 
 \label{1proc}
 \end{figure}
 
 
-abbiamo una process table entry con i vari file descriptor con il loro flag ed il puntatore ala memoria delle file table entry.Ogni file dscriptor avrà una file table entry, quidni ci saranno tanti file table quanti fd ci sono. le quali hanno:
+Il processo è rappresentato dal "\hl{process table entry}" con i vari file descriptor con la loro flag e puntatore alla memoria delle \hl{file table entry}. Ogni \hl{file descriptor avra' una file table entry}, quindi ci saranno tanti file table quanti fd ci sono, con i seguenti dati:
 
 \begin{itemize}
-	\item file status flags: 
-	\item current file offset: 
-	\item v-node pointer: (con v=virtual) puntatore ad una v-node table entry che contiene i dati, cioè:
+	\item \textbf{file status flags}: 
+	\item \textbf{current file offset}: 
+	\item \textbf{v-node pointer}: (con v=virtual) puntatore ad una v-node table entry che contiene i dati, cioè:
 		\begin{itemize}
-			\item v-node information
-			\item v\_data: puntatore all'inode
+			\item \textbf{v-node information}
+			\item \textbf{v\_data}: puntatore all'inode
 		\end{itemize}
 \end{itemize}
 
 
-ora vediamo un caso con più processi che puntano allo stesso file:
+Potrebbe capitare che \hl{piu' processi si contengano un file} tra di loro per poterci accedere.
 
 
-img 3.8
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{2proc.jpeg}
+\caption{Più processi accedono a file} 
+\label{2proc}
+\end{figure}
 
 
-ogniuno ci arriva con un suo file offset e flags. se 2 processi si mettono a scrivere insieme servirà qualcuno che gestisce il tutto altrimenti ci sarà un override della scrittura del secondo sul primo.
+Ogni processo arriverà al file tramite 2 file table diverse ma con un \hl{"v-node prointer" allo stesso file}. Dato che 2 processi stanno contemporaneamente scrivendo servirà chi gestisce il tutto altrimenti ci sarà una \hl{sovrascrittura} dell'ultimo processo sugli altri.
+
+In queste situazioni \hl{il kernel si intromette} per evitare di far "intromettere" altri processi durante l'esecuzione delle system call. Questo è possibile grazie alle \hl{operazioni atomiche} (tutto gestito dal programmatore del kernel). Un'esempio di operazioni atomiche è l'inserimento della \hl{flag O\_APPEND}.
+
+Le \hl{chiamate per creare operazioni atomiche} con più system call sono:
+
+\begin{itemize}
+	\item \hl{pread()}: è come chiamare lseek() e dopo read()
+	\item \hl{pwrite()}: come write() ma con un parametro offset che permette di effettuare un'operazione atomica scrivendo in un punto del file \textbf{senza rischio che le operazione di lseek e write si diano fastidio}. Vanno allora a fare più operazioni in una unica ma atomica
+\end{itemize}
 
 
+Un'altro flag da tenere sott'occhio è \hl{O\_EXCL}, in questo caso se il file da creare esite non viene creato. Potrebbe succedere che se il file non esiste e viene \hl{dato l'OK per crearlo} ma nel frattempo viene creato da un altro processo, allora \hl{il primo andra' a sovrascrivere}.
+
+Quest'operazione viene usata per poter \hl{usare in modo esclusivo} il nome di un file da un processo in modo da non farlo utilizzare da un altro mentre lui esegue le sue operazioni su altri file (il file provvisorio verrà poi eliminato).
 
 
+% dup & dup2
+\subsection{dup \& dup2}
+
+Vediamo le seguenti funzioni:
+
+\begin{itemize}
+	\item \hl{dup}: \textbf{prende un fd e restituisce un duplicato del fd}. Quindi \textbf{abbiamo 2 fd che puntano alla stessa file table}.
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{dup.jpeg}
+	\caption{dup function} 
+	\label{dup}
+	\end{figure}
 
 
+	\item \hl{dup2}: prende un fd da duplicare \textbf{dicendogli anche il numero del fd}, se il numero che gli passiamo è già preso allora si \textbf{forza la chiusura} del fd e lo si assegna a ciò che vogliamo
 
-per fare un'append senza avere il flag O\_APPEND, allora usiamo la funzione lseek() per mettersi alla fine del file e poi scrivere.
-
-dato che abbiamo lseek che ancora non ha scritto e qualcun'altro chiama lseek avremo una sovrascirtzzion. il kernel mentre fa questa cosa fa solo quella e non permette a un altra systemcall di intromettersi in modo da avere delle operazioni atomiche. questo lo gestisce il porgrammatore del kernel.O\_APPEND fa diventare atomica lseek e write.
-
-esistono delle chiamate che fanno cio1 che fa O\_APPEND ma se 2 processi vogliano scrive nello stesso file esistoon 2 chiamata per fare lseek e write insieme:
-
-pwrite(): identica ala write ma ha un paramentri di offset quindi di effettua un'operazione atomica andando a scriere proprio in quel punto senza rischio che le operazione di spostarsi e scrivere non si pestino i piedi tra loro. se 2 processi vogliono srivere nello stesso punto si sposta il primo in un punto e srive tutto nel pochi millisencondi per poter fare entrambe le system call rendendo il tutto atomico.
-
-altra operazione atomica: creazione di un file con flag O\_EXCL. in questo caso ci sono dei problemi: se un prcesso vuole aprire un file in modo esclusivo, se esite non lo crea ma possono scedre particci dato che se il file non ci fosse il sistema ti dice che puoio creare il file ma nello stesso momento un altro porcesso va a crearlo allora tu vai a sovrascrivere. usanto queti flag si fara1 creazioene e scrittura del file nello stesso momento rendendo l'operaizone atomica.
-
-se c'e1 la necessità che due file non si pestino i piedi allora un pircesso crea in modo esclisivo un file facendo le operazioni che deve fare, l'altro processo ricevera1 un errore daro che il file esiste. alla il primo potrà eliminare il file in modo da potrlo far scrivere dal primo qundo riproverà. questo serve per effettuare una sincronizzazione. quidni il primo porcesso scrive quello che deve in un file e v=crea quello "farlocco" per potersi prenotare il nome del file. 
+\end{itemize}
 
 
+Con le \hl{fork} avremo:
 
 
-
-2 funzioni:
-
-up: prende un file descriptor e restituisce un numero che e1 un duplicato di quel fd. quidi abbiamo 2 fd che puntano alla stedda file table.
-
-
-img 3.9
-
-
-dup2: prende un fd da duplicare dicendogli anche il numero del fd. ma se il numero che gli passiamo è già preso allora sifoza la chiusura del fd e lo si assegna a ciò che vogliamo.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{forkproc.jpeg}
+\caption{Fork con process table entry} 
+\label{forkproc}
+\end{figure}
 
 
-
-vediamo cosa succede in questo ambito con fork e child:
-
-
-img 8.2 
+dopo una fork i processi child e parent sono uno la copia dell'altro quindi avremo che i \hl{fd del child punteranno alle stesse file table} e quindi agli stessi spazi di memoria alla quale \hl{accedono entrambi}. Abbiamo quindi il problema che se il child modifica qualcosa lo vedrà anche il parent.
 
 
-dopo una fork i processi child e parent sono uno la copia dell'altro quindi avremo che i fd del child punteranno alle stesse file table e quindi agli stessi spazi di memoria alla quale accedono entrambi. Abbiamo quindi il problema che se il child modifica qualcosa lo vedrà anche il parent
+% Ridirezione ad un file
+\subsection{Ridirezione ad un file}
+
+Quindi apriamo un file ci viene dato un fd con numero minore (in genere 3), se faccio una \hl{dup2(3, 1)} abbiamo la ridirezione a file. \hl{A fare tutte le operazioni e' lo shell} e grazie alla eredità dei fd i processi child avranno già tutti i dati.
+
+La gestire di queste operazioni dipende dal flag \hl{CLOEXEC}. Infatti quando lo shell vede la ridirezione ($>$) allora:
+
+\begin{itemize}
+	\item se sei il child esegui l'apertura del file
+	\item ottiene fd 3
+	\item esegui dup(3, 1)
+	\item esegui una exec
+	\item se il \hl{flag e' 0} (cioè non chiudere quando fai un exec) allora il child avrà in input l'output del parent
+	\item se il \hl{flag e' 1} vogliamo che il file venga chiuso ed il fd riassegnato
+\end{itemize}
 
 
+% Funzione fcntl()
+\subsection{Funzione fcntl()}
 
+È un \hl{coltellino svizzero per controlli sul fd} e ha come parametri: 
 
+\begin{itemize}
+	\item fd
+	\item \hl{cmd}: usato per \textbf{chiamare delle funzionalità} specifiche tramite flags:
 
-ridirezzione ad un file:
+		\begin{itemize}
+			\item \textbf{F\_DUPFD}: si \textbf{duplica il fd} e tramite il terzo argomento avremo all'\textbf{assegnazione di un fd $\geq$ del valore di quell'argomento}
+			\item \textbf{F\_GETFD, F\_SETFD}: get/set fd flag
+			\item \textbf{F\_GETFL, F\_SETFL}: get/set file status flag (per cambiare il flag \textbf{mentre il file è ancora aperto})
+			\item \textbf{F\_GETLK, F\_SETLK}: get/set record locks: servono a \textbf{bloccare parti di file}
+		\end{itemize}
+	
+	\item "args"
+\end{itemize}
 
-quindi abbiamo che quando apriamo un file civiende dato un fd 3, se favvio una dup2(3, 1) abbiamo la ridirezione a file. a fare tutte queste operazioni è lo shell e grazie alla eredità fd i processi dopo la fork avranno già tutti i dati.
-
-avremo a gestire questo il flag CLOEXEC: quanto lo shell vede la ridirezione ($>$) allora dice che se sei il child fai un'apertura del file ed ottiene fd 3 allora da una dup(3, 1) poi fa una exec e se il flag è 0 (cioè non chiudere quando fai un exec) allora il processo successivo avrà in input l'output del precedente  processo
-
-invece è ad 1 il flag quando vogliamo che il fd venga chiuso nel prossimo processo e quindi potrà essere usato come fd più basso da attribuire
-
-
-funzione fcntl:
- effettua controlli sul fd. è un coltellino svizzero dat che ha come paramentri fd, cmd e altri dove cmd è usto per dichiamare delle funzionalità specifiche:
-
-- F\_DUPFD: si duplica il fd. tramite il terzo argomento avremo all'assegnazione di un fd $\geq$ del valore di quell'argomento
-
-- F\_GETFD, F\_SETFD: get/set fd flag
-
-- F\_GETFL, F\_SETFL: get/set file status flag (per cambiare il flag mentre il file è ancora aperto)
-
-- F\_GETLK, F\_SETLK: get/set record locks: servono a bloccare parti di file
-
-
-notiamo l'apertura diversa dei fiel tramite:
+Grazie al file fileflags.c possiamo vedere come è stato aperto il file:
 
 \begin{lstlisting}
 #include "apue.h"
@@ -331,7 +355,7 @@ main(int argc, char *argv[])
 	int		val;
 
 	if (argc != 2)
-		err_quit("usage: a.out <descriptor#>");
+		\
 
 	if ((val = fcntl(atoi(argv[1]), F_GETFL, 0)) < 0)
 		err_sys("fcntl error for fd %d", atoi(argv[1]));
@@ -392,55 +416,4 @@ per inserire o togliere i flag usiamo:
 \begin{lstlisting}
 val |= flags;		/* turn on flags */
 val &= ~flag;		/* turn off flags */
-\end{lstlisting}
-
-
-
-
-
-sappiamo che unix vedo tutto come un file con le sue funzion open read write close. la funzione ioctl() è detta catchall per operazioni I/O.
-
-
-
-
-
-CAP 4:
-
-funzione stat: legge l'inode e ti dice le cose che puoi sapere riferite all'inode. tramite il comando dumpe2fs ceh fa il dump di tutta la struttura dati nella patizione disignata. dove abiamo la desrizione del file system.
-
-se vogliamo trovare i puntatori ed i blocchi di un file dato il suo nome andiamo a guardare l'inode del file e poi atrovare i blocchi. tramite il comando dd posisamo andare tagliare i blocchi nel file che rappresenat la nostra partizione dove ci saranno da rispettare alcune regole sul qualti byte rappresentano un blocco ecc (regole del file system) 
-
-stat prendere:
-
-\begin{lstlisting}
-int stat(const char *restrict pathname, struct stat *restrict buf);
-\end{lstlisting}
-
-- path: del quale dire i dati
-- struct: parametri di uscita dato che è un puntatore
-
-abbiamo delle varianti:
-fstat: usa un fd al posto del path
-lstat: prende dei link simbolici in pathname (può esser usata anche per file normali)
-fstatat: prende sia un fd che un pathname
-
-
-nella struttura stat abbiamo tutti i dati che abiamo come output dalla funzione:
-
-\begin{lstlisting}
-struct stat {
-	mode_t		st_mode;		/* file type & mode (permissions) */
-	ino_t		st_ino;			/* i-node number (serial number) */
-	dev_t		st_dev;			/* device number (file system) */
-	dev_t		st_rdev;		/* device number for special files */
-	nlink_t		st_nlink;		/* number of links */
-	uid_t		st_uid;			/* user ID of owner */
-	gid_t		st_gid;			/* group ID of owner */
-	off_t		st_size;		/* size in bytes, for regular files */
-	struct timespec st_atim;	/* time of last access */
-	struct timespec st_mtim;	/* time of last modification */
-	struct timespec st_ctim;	/* time of last file status change */
-	blksize_t	st_blksize;		/* best I/O block size */
-	blkcnt_t	st_blocks;		/* number of disk blocks allocated */
-};
 \end{lstlisting}

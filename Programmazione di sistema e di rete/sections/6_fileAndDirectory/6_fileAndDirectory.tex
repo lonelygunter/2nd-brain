@@ -1,0 +1,51 @@
+\newpage
+\section{File and directory}
+
+% Chiamata stat()
+\subsection{Chiamata stat()}
+
+Legge l'inode e ti fornisce i \hl{dati che puoi sapere riferiti a quell'inode}. Tramite il comando \hl{dumpe2fs} che fa il \hl{dump di tutta la struttura dati nella partizione designata}.
+
+Se vogliamo \hl{trovare i puntatori ed i blocchi di un file dato il suo nome andiamo a guardare l'inode}, troviamo i blocchi che gli appartengono e poi tramite il comando \hl{dd} possiamo andare \hl{tagliare i blocchi nel file che rappresenta la nostra partizione} dove ci saranno da rispettare alcune regole sul quanti byte rappresentano un blocco ecc (regole del file system).
+
+La funzione stat prende come \hl{parametri}:
+
+\begin{lstlisting}
+int stat(const char *restrict pathname, struct stat *restrict buf);
+\end{lstlisting}
+
+con:
+
+\begin{itemize}
+    \item \hl{path}: del quale dire i dati
+    \item \hl{struct}: parametri di uscita dato che è un puntatore
+\end{itemize}
+
+
+Le sue \hl{varianti} sono:
+
+\begin{itemize}
+    \item \hl{fstat}: usa un \textbf{fd al posto del path}
+    \item \hl{lstat}: prende dei \textbf{link simbolici} in pathname (può esser usata anche per file normali)
+    \item \hl{fstatat}: prende \textbf{sia un fd che un pathname}
+\end{itemize}
+
+Nella \hl{struttura stat} abbiamo tutti i dati come output dalla funzione:
+
+\begin{lstlisting}
+struct stat {
+	mode_t		st_mode;		/* file type & mode (permissions) */
+	ino_t		st_ino;			/* i-node number (serial number) */
+	dev_t		st_dev;			/* device number (file system) */
+	dev_t		st_rdev;		/* device number for special files */
+	nlink_t		st_nlink;		/* number of links */
+	uid_t		st_uid;			/* user ID of owner */
+	gid_t		st_gid;			/* group ID of owner */
+	off_t		st_size;		/* size in bytes, for regular files */
+	struct timespec st_atim;	/* time of last access */
+	struct timespec st_mtim;	/* time of last modification */
+	struct timespec st_ctim;	/* time of last file status change */
+	blksize_t	st_blksize;		/* best I/O block size */
+	blkcnt_t	st_blocks;		/* number of disk blocks allocated */
+};
+\end{lstlisting}
