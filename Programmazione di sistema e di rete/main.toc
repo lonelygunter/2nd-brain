@@ -39,6 +39,8 @@
 \contentsline {subsection}{\numberline {\mbox {VII-A}}Chiamata open}{11}{subsection.7.1}%
 \contentsline {subsection}{\numberline {\mbox {VII-B}}Read e write flag}{11}{subsection.7.2}%
 \contentsline {subsection}{\numberline {\mbox {VII-C}}Chiamata openat()}{11}{subsection.7.3}%
-\contentsline {subsection}{\numberline {\mbox {VII-D}}Open flags}{11}{subsection.7.4}%
+\contentsline {subsection}{\numberline {\mbox {VII-D}}Open flags}{12}{subsection.7.4}%
 \contentsline {subsection}{\numberline {\mbox {VII-E}}Builtin umask}{12}{subsection.7.5}%
 \contentsline {subsection}{\numberline {\mbox {VII-F}}Chiamata lseek()}{12}{subsection.7.6}%
+\contentsline {subsection}{\numberline {\mbox {VII-G}}I/O efficiency}{12}{subsection.7.7}%
+\contentsline {subsection}{\numberline {\mbox {VII-H}}File sharing}{13}{subsection.7.8}%

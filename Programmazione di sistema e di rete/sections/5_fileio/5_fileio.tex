@@ -41,6 +41,16 @@ I \hl{bit delle flag} abbiamo un modo "scomodo" per rappresentarle dato che non 
 
 sono dette \hl{maschere} per leggere o scrivere.
 
+Per quanto riguarda la chiamata read ci sono più casi in cui il numero di \hl{byte restituito e' minore di quello chiesto}:
+
+\begin{enumerate}
+	\item possiamo avere un valore di ritorno di 50 se chiedo di leggere 100 perché \textbf{ci sono solo 50 byte}
+	\item quando legge da un \textbf{terminale}: la read ritorna quando dai invio
+	\item quando legge da una \textbf{rete}: puoi leggere 100 byte ma se ne leggi 10 interrompe la lettura e ritorna, invece se non arriva nulla rimane in attesa
+	\item quando legge da una \textbf{pipe}: se non arriva nulla rimane appesa, se arriva qualcosa interrompe e restituisce quello che ha letto
+	\item quando \textbf{interrotta da un segnale} e alcuni dati sono stati letti gli restituisce
+\end{enumerate} 
+
 
 % Chiamata openat()
 \subsection{Chiamata openat()}
@@ -192,27 +202,12 @@ main(void)
 \end{lstlisting}
 
 
+% I/O efficiency
+\subsection{I/O efficiency}
 
+Se devo \hl{tranferire una grande quantita' di dati} avrò una dimensione ottimale con la quale posso \hl{ottimizzare il passaggio dei blocchi di dati}. I tempi possono essere misurati con "time" per capire in che modo il nostro GB debba essere sezionato (in K, M, ...).
 
-
-
-
-
-ci sono più casi in cui il numero di byte letto è minore di quello chiesto:
-1. possiamo avere un valore di ritorno di 50 se chiedo di leggere 100 perchè ci sono solo 50 byte
-2. quando legge da un terminale: la read ritorna quando dai invio
-3. quando legge da una rete: puoi leggere 100 byte ma se ne leggi 10 puoi gestire tu cosa fare, in genere se non arriva nulla la read rimane in attesa e non gli arrivano byte rimane appesa sennò se sono arrivati rimane appesa e poi interrompe quando non sente più nulla
-4. quando legge da una pipe: se non arriva nulla rimane appesa, se arriva qualcosa interrompe e restituisce quello che ha letto
-5. quando interrotta da un segnale e alcuni dati sono stati letti gli restituisce
-
-
-
-
-
-
-
-
-i/o effitiency:
+(provare a fare ciò tramite intro/mycat e tramite time capire le tempistiche (A CASA))
 
 \begin{figure}[H]
 \centering
@@ -221,23 +216,19 @@ i/o effitiency:
 \label{unbuffio}
 \end{figure}
 
-se devo tranferier una grande quanità di dati e la write ha un buffer limitato quanto posso mandare alla volta? ci sara1 una dimensione ottimale da trovare. i tempi possono essere misurati con time per capire in nostro giga di byte in che modo debba essere sezionato se in K o M ecc fino ad ottenere un valore ottimale.
 
-(provare a fare ciò tramite intro/mycat e tramite time capire le tempistiche (A CASA))
+% File sharing
+\subsection{File sharing}
 
-
-
-
+Potrebbe capitare che più processi si contengano un file tra di loro per poterci accedere.
 
 
-
-
-file shaing:
-
-noi abbiamo un file e potrebbero essere ci più processi che se lo contengono tra di loro per poterci accedere.
-
-
-img 3.7
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{1proc.jpeg}
+\caption{Unico processo} 
+\label{1proc}
+\end{figure}
 
 
 abbiamo una process table entry con i vari file descriptor con il loro flag ed il puntatore ala memoria delle file table entry.Ogni file dscriptor avrà una file table entry, quidni ci saranno tanti file table quanti fd ci sono. le quali hanno:
