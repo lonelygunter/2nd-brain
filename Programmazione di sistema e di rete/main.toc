@@ -10,6 +10,7 @@
 \contentsline {subsection}{\numberline {\mbox {II-F}}gcc -g: debugging debole}{2}{subsection.2.6}%
 \contentsline {subsection}{\numberline {\mbox {II-G}}gcc -ggbd: debugging forte}{2}{subsection.2.7}%
 \contentsline {subsection}{\numberline {\mbox {II-H}}xattr: usato per i file che entrano in quarantena su MacOS}{2}{subsection.2.8}%
+\contentsline {subsection}{\numberline {\mbox {II-I}}apropos: per fare un a grep sulla riga name nelle pagine di manuale}{2}{subsection.2.9}%
 \contentsline {section}{\numberline {III}Variabili di sistema definite in .bashrc}{2}{section.3}%
 \contentsline {subsection}{\numberline {\mbox {III-A}}INC}{2}{subsection.3.1}%
 \contentsline {section}{\numberline {IV}Introduzione}{3}{section.4}%
@@ -49,3 +50,8 @@
 \contentsline {subsection}{\numberline {\mbox {VII-K}}Funzione fcntl()}{14}{subsection.7.11}%
 \contentsline {section}{\numberline {VIII}File and directory}{15}{section.8}%
 \contentsline {subsection}{\numberline {\mbox {VIII-A}}Chiamata stat()}{15}{subsection.8.1}%
+\contentsline {subsection}{\numberline {\mbox {VIII-B}}User-ID e Group-ID}{16}{subsection.8.2}%
+\contentsline {subsection}{\numberline {\mbox {VIII-C}}Funzioni access() e faccessat()}{16}{subsection.8.3}%
+\contentsline {subsection}{\numberline {\mbox {VIII-D}}Funzione umask()}{16}{subsection.8.4}%
+\contentsline {subsection}{\numberline {\mbox {VIII-E}}Sticky bit}{16}{subsection.8.5}%
+\contentsline {subsection}{\numberline {\mbox {VIII-F}}File truncation}{16}{subsection.8.6}%

@@ -34,18 +34,194 @@ Nella \hl{struttura stat} abbiamo tutti i dati come output dalla funzione:
 
 \begin{lstlisting}
 struct stat {
-	mode_t		st_mode;		/* file type & mode (permissions) */
-	ino_t		st_ino;			/* i-node number (serial number) */
-	dev_t		st_dev;			/* device number (file system) */
-	dev_t		st_rdev;		/* device number for special files */
-	nlink_t		st_nlink;		/* number of links */
-	uid_t		st_uid;			/* user ID of owner */
-	gid_t		st_gid;			/* group ID of owner */
-	off_t		st_size;		/* size in bytes, for regular files */
-	struct timespec st_atim;	/* time of last access */
-	struct timespec st_mtim;	/* time of last modification */
-	struct timespec st_ctim;	/* time of last file status change */
-	blksize_t	st_blksize;		/* best I/O block size */
-	blkcnt_t	st_blocks;		/* number of disk blocks allocated */
+	mode_t		st_mode;	/*file type & mode (permissions)*/
+	ino_t		st_ino;		/*i-node number (serial number)*/
+	dev_t		st_dev;		/*device number (file system)*/
+	dev_t		st_rdev;	/*device number for special files*/
+	nlink_t		st_nlink;	/*number of links*/
+	uid_t		st_uid;		/*user ID of owner*/
+	gid_t		st_gid;		/*group ID of owner*/
+	off_t		st_size;	/*size in bytes, for regular files*/
+	struct timespec st_atim;/*time of last access*/
+	struct timespec st_mtim;/*time of last modification*/
+	struct timespec st_ctim;/*time of last file status change*/
+	blksize_t	st_blksize;	/*best I/O block size*/
+	blkcnt_t	st_blocks;	/*number of disk blocks allocated*/
 };
 \end{lstlisting}
+
+dove \hl{st\_mode contiene sia il tipo di file che i privilegi}. Per vedere che file è ci sono delle \hl{function like macro}:
+
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Macro} & \textbf{Type of file} \\\hline\hline
+		S\_ISREG() & regular file \\
+		S\_ISDIR() & directory file \\
+		S\_ISCHR() & character special file \\
+		S\_ISBLK() & block special file \\
+		S\_ISFIFO() & pipe or FIFO \\
+		S\_ISLNK() & symbolic link \\
+		S\_ISSOCK() & socket \\\hline
+	\end{tabular}
+	\caption{\label{tab:widgets}File type macros in <sys/stat.h>}
+\end{table}
+
+è un'esempio di check del tipo di file il file filetype.c:
+
+\begin{lstlisting}
+#include "apue.h"
+
+int
+main(int argc, char *argv[])
+{
+	int			i;
+	struct stat	buf;
+	char		*ptr;
+
+	for (i = 1; i < argc; i++) {
+		printf("%s: ", argv[i]);
+		if (lstat(argv[i], &buf) < 0) {
+			err_ret("lstat error");
+			continue;
+		}
+		if (S_ISREG(buf.st_mode))
+			ptr = "regular";
+		else if (S_ISDIR(buf.st_mode))
+			ptr = "directory";
+		else if (S_ISCHR(buf.st_mode))
+			ptr = "character special";
+		else if (S_ISBLK(buf.st_mode))
+			ptr = "block special";
+		else if (S_ISFIFO(buf.st_mode))
+			ptr = "fifo";
+		else if (S_ISLNK(buf.st_mode))
+			ptr = "symbolic link";
+		else if (S_ISSOCK(buf.st_mode))
+			ptr = "socket";
+		else
+			ptr = "** unknown mode **";
+		printf("%s\n", ptr);
+	}
+	exit(0);
+}	
+\end{lstlisting}
+
+
+% User-ID e Group-ID
+\subsection{User-ID e Group-ID}
+
+\hl{Ogni processo ha piu' ID associati} a lui:
+
+\begin{itemize}
+	\item \hl{real user/group ID}: indica chi siamo
+	\item \hl{effective user/group ID}: usato quando c'è il set user id attivo e si \textbf{presenta come proprietario del file} e potrà quindi leggerlo, scriverlo ecc
+	\item supplementary group ID: quando un utente è stato aggiunto ad un gruppo
+	\item \hl{saved set-user/group-ID}: sono delle identità associate ad un processo e fa si che \textbf{se è stato root} e lascia i privilegi \textbf{potrà riconquistarli}
+\end{itemize}
+
+I permessi saranno verificabili tramite delle macro che hanno accesso un solo bit:
+
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{st\_mode mask} & \textbf{Meaning} \\\hline\hline
+		S\_IRUSR & user-read \\
+		S\_IWUSR & user-write \\
+		S\_IXUSR & user-execute \\\hline
+		S\_IRGRP & group-read \\
+		S\_IWGRP & group-write \\
+		S\_IXGRP & group-execute \\\hline
+		S\_IROTH & other-read \\
+		S\_IWOTH & other-write \\
+		S\_IXOTH & other-execute \\\hline
+	\end{tabular}
+	\caption{\label{tab:widgets}The nine file access permission bits, from <sys/stat.h>}
+\end{table}
+
+
+Notare che \hl{per eliminare un file esistente} non ci vuole il permesso di scrittura sul file ma il \hl{permesso di srittura sulla directory} dato che stai scrivendo la directory.
+
+Grazie alle ACL (sono delle estenzioni) possiamo dare il permesso al file e dire che non può essere cancellato da un utente specifico o meno. Usiamo l'opzione:
+
+\begin{lstlisting}
+ls -le file
+\end{lstlisting}
+
+Il test di accesso al file che il kernel esegue quando si lavroa conun file dipende dal proprietario del file. Il test sono:
+
+\begin{itemize}
+	\item effective user ID = 0: ...
+	\item effective user ID = owner ID: ... se non c'è il permesso ma lo ha il gruppo allora non potrò accederci dato che il test guarda user e poi group (in pratica non viene proprio guardato)
+\end{itemize}
+
+
+% Funzioni access() e faccessat()
+\subsection{Funzioni access() e faccessat()}
+
+\hl{Dice in anticipo se si puo' o no fare una cosa}. Il processo ha i suoi ID ed in base ai permessi potrà, o no, fare delle operazioni. Usiamo questa funzione:
+
+\begin{lstlisting}
+int access(const char *pathname, int mode);
+\end{lstlisting}
+
+con mode:
+
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{mode} & \textbf{Description} \\\hline\hline
+		R\_OK & test for read permission \\
+		W\_OK & test for write permission \\
+		X\_OK & test for execute permission \\\hline
+	\end{tabular}
+	\caption{\label{tab:widgets}The mode flags for access function, from <unistd.h>}
+\end{table}
+
+
+% Funzione umask()
+\subsection{Funzione umask()}
+
+Mostra in ottale i \hl{privilegi che verrano tolti al file} in merito a lettura e scrittura:
+
+\begin{lstlisting}
+mode_t umask(mode_t mask);
+\end{lstlisting}
+
+viene \hl{ereditata dai processi} data la loro possiblità di creare file.
+
+Su linux la troviamo in:
+
+\begin{lstlisting}
+$ cat /proc/$$/status
+...
+Umask:		0022
+...
+\end{lstlisting}
+
+
+% Sticky bit
+\subsection{Sticky bit}
+
+Permesso che ha senso per le cartelle \hl{quando piu' persone ci lavorano}, ma senza che un utente possa eliminare file che non gli appartengono.
+
+\begin{lstlisting}
+drwxrwxrwt  15 root  wheel   480 Oct 14 22:00 Shared
+\end{lstlisting}
+
+la stessa cosa esiste per le cartelle temporanee.
+
+
+% File truncation
+\subsection{File truncation}
+
+È possibile da file \hl{tagliare una parte di file} esprimendo la lunghezza:
+
+\begin{lstlisting}
+int truncate(const char *pathname, off_t length); 
+int ftruncate(int fd, off_t length);
+\end{lstlisting}
+
