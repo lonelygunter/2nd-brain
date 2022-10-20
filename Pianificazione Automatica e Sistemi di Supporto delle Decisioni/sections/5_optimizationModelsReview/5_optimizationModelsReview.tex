@@ -961,3 +961,253 @@ Lo \hl{pseudocodice} sarà:
 			\item makePivot(r, s) sennò non posso fare il test di ottimalità una volta reiniziato il loop
 		\end{itemize}
 \end{enumerate}
+
+
+% Esercizio 1
+\subsection{Esercizio 1}
+
+Funzione obiettivo:
+
+$$\max z = 10x_1 + 10x_2$$
+
+vincoli:
+
+\begin{itemize}
+	\item $2x_1 + x_2 \leq 10$
+	\item $x_1 + 2x_2 \leq 10$
+	\item $x_1, x_2 \geq 0$
+\end{itemize}
+
+Graficiamente abbiamo:
+
+...
+
+Forma standard:
+
+$$\min z = -10x_1 - 10x_2$$
+
+vincoli:
+
+\begin{itemize}
+	\item $2x_1 + x_2 + x_3 = 10$
+	\item $x_1 + 2x_2 + x_4 = 10$
+	\item $x_1, x_2, x_3, x_4 \geq 0$
+\end{itemize}
+
+avremo che:
+
+\begin{itemize}
+	\item $A = (3.\overline{3}, 3.\overline{3}, 0, 0)$
+	\item $B = (5, 0, 0, > 0)$
+	\item $O = (0, 0, > 0, > 0)$
+\end{itemize}
+
+dove nei vertici abbiamo 2 variabili $> 0$. Quindi ad ogni vertice abbiamo una BFS con cardinalità $1:M$.
+
+Tableau:
+
+$$
+\left[ {\begin{array}{ccccc}
+	2 & 1 & 1 & 0 & 10\\
+	1 & 2 & 0 & 1 & 10\\
+	-10 & -10 & 0 & 0 & 0\\
+\end{array} } \right]
+$$
+
+con variabili in base B e non in base N:
+
+\begin{itemize}
+	\item $J_B = <X_3, x_4>$
+	\item $J_N = <X_1, x_2>$
+\end{itemize}
+
+BFS:
+
+\begin{itemize}
+	\item $x_1 = x_2 = 0$
+	\item $x_3 = 10$
+	\item $x_4 = 10$
+	\item $\overline{z} = 0$
+\end{itemize}
+
+il test si ottimalità fallisce e quindi possiamo avere una soluzione migliore e quindi applico l'euristica del valore di costo ridotto. Sceglo a caso $x_s = x_1$.
+
+Prendiamo i valori di $x_1$ e in base al valore unitario presente in $x_3$ e $x_4$ allora avremo:
+$$\min (\frac{10}{2}, \frac{10}{1}) = 5$$
+
+non posso avere che $x_3 > 5$ dato che si deve fermare lì perchè $x_3$ diventa negativa e quindi non ammissibile dato che superiamo in punto $B$.
+
+Allora dato che $x_3 = 0$ e $x_1$ prende il suo posto avremo che le variabili di base saranno:
+$$J_B = <x_1, x_4>$$
+
+Dobbiamo allora effettuare un'operazione di Pivot:
+
+\begin{itemize}
+	\item divido per $2$ la riga 2:
+		$$
+		\left[ {\begin{array}{ccccc}
+			1 & \frac{1}{2} & \frac{1}{2} & 0 & 5\\
+			1 & 2 & 0 & 1 & 10\\
+			-10 & -10 & 0 & 0 & 0\\
+		\end{array} } \right]
+		$$
+
+		\item moltiplico per $-1$ la prima riga e poi sommo alla seconda:
+		$$
+		\left[ {\begin{array}{ccccc}
+			1 & \frac{1}{2} & \frac{1}{2} & 0 & 5\\
+			0 & 1.5 & -\frac{1}{2} & 1 & 5\\
+			-10 & -10 & 0 & 0 & 0\\
+		\end{array} } \right]
+		$$
+
+		\item moltiplico per $-10$ la prima riga e poi sommo alla terza:
+		$$
+		\left[ {\begin{array}{ccccc}
+			1 & \frac{1}{2} & \frac{1}{2} & 0 & 5\\
+			0 & 1.5 & -\frac{1}{2} & 1 & 5\\
+			0 & -5 & 5 & 0 & 50\\
+		\end{array} } \right]
+		$$
+\end{itemize}
+
+allora abbiamo che l asoluzione di base ammissibile BFS è:
+
+\begin{itemize}
+	\item $x_2 = x_3 = 0$
+	\item $x_1 = 5$
+	\item $x_4 = 5$
+	\item $\overline{z} = -50$
+\end{itemize}
+
+
+il test di ottimalità fallisce data la presenza del $-5$, quindi la variabile entrante è $x_2 = x_s$ quindi:
+$$x_r = \text{argmin} (\frac{5}{0.5}, \frac{5}{1.5}) = x_4$$
+
+il che corrisponde allo stare nel punto $B$ dove $x_2 = 0$, quindi ci spostiamo in direzione di $A = (> 0, > 0, 0, 0)$. avremo allora:
+$$J_B = <x_1, x_2>$$
+
+dato che $x_2$ è entrante ed $x_4$ uscente.
+
+Il perno del nuovo Pivot sarà 1.5:
+
+$$
+\left[ {\begin{array}{ccccc}
+	1 & 0 & 0.\overline{6} & -0.\overline{3} & 3.\overline{3}\\
+	0 & 1 & -0.\overline{3} & 0.\overline{6} & 3.\overline{3}\\
+	0 & 0 & 3.\overline{3} & 3.\overline{3} & 66.\overline{6}\\
+\end{array} } \right]
+$$
+
+avrmeo allora: 
+$x_3 = x_4 = 0$
+$x_1 = 3.\overline{3}$
+$x_2 = 3.\overline{3}$
+$\overline{z} = -66.\overline{6}$
+
+allora abbiamo ottenuto una soluzione ottima.
+
+
+
+
+Individuiamo soluzioni ottime multiple. come le individuiamo? Per poter esaminare questo caso partiamo col dire che esiste una sluzione ottima se 
+
+$$\overline{c_j} \geq 0$$
+
+essitono soluzioni multiple se esiste $j^{*} \in J_N$ e quidni ha i coeficient id costo ridotti maggiori di zero sium oppure se i corff delle varibiali non di base sono > 0 e quidni almeno uno sia = 0. allora se faccio il solito ragionamento: se prendo una variabile $x_{j*} = 0 \to\ > 0$ allora avrò che:
+
+$$\Delta z = \overline{c}_{j*} x_{j*} = 0$$
+
+
+es: 
+
+Funzione obiettivo:
+
+$$\max z = 20x_1 + 10x_2$$
+
+vincoli:
+
+\begin{itemize}
+	\item $2x_1 + x_2 \leq 10$
+	\item $x_1 + 2x_2 \leq 10$
+	\item $x_1, x_2 \geq 0$
+\end{itemize}
+
+Graficamente abbiamo:
+
+...
+
+Gradiente:
+
+$$\nabla z =
+\left[ {\begin{array}{c}
+	20 \\
+	10 \\
+\end{array} } \right]
+$$
+
+Con Tableau:
+
+$$
+\left[ {\begin{array}{ccccc}
+	2 & 1 & 1 & 0 & 10\\
+	1 & 2 & 0 & 1 & 10\\
+	-20 & -10 & 0 & 0 & 0\\
+\end{array} } \right]
+$$
+
+con BFS:
+
+\begin{itemize}
+	\item $x_1 = x_2 = 0$
+	\item $x_3 = 10$
+	\item $x_4 = 10$
+	\item $\overline{z} = 0$
+\end{itemize}
+
+tramite Pivot:
+
+$$
+\left[ {\begin{array}{ccccc}
+	1 & 0.5 & 0.5 & 0 & 5\\
+	0 & 1.5 & -0.5 & 1 & 5\\
+	0 & 0 & 10 & 0 & 100\\
+\end{array} } \right]
+$$
+
+BFS:
+
+\begin{itemize}
+	\item $x_2 = x_3 = 0$
+	\item $x_1 = 5$
+	\item $x_4 = 5$
+	\item $\overline{z} = -100$
+\end{itemize}
+
+= B
+
+quindi il test di ottimalità sulle variabili fuorni base $J_N = <x_2, x_3>$ è OK. ma non è una soluione unica dato che abbiamo $0$ per la variabile $x_2$ che andrà perturbata assegnandole un valore $> 0$. allora la varaizione della funzione obiettivo per una perturbazopne è $\overline{c}_{j*}x_{j*}$ con $\overline{c}_{j*}=0$ e $x_{j*} > 0$. allora abbiamo che lungpo tutto lo spigolo $AB$ avremo un costo minimo.
+
+infatti forzando Pivot in $x_2$ esce $x_4$:
+
+$$
+\left[ {\begin{array}{ccccc}
+	1 & 0 & 0.\overline{6} & -0.\overline{3} & 3.\overline{3}\\
+	0 & 1 & -0.\overline{3} & -0.\overline{6} & 3.\overline{3}\\
+	0 & 0 & 10 & 0 & 100\\
+\end{array} } \right]
+$$
+
+BFS:
+
+\begin{itemize}
+	\item $x_3 = x_4 = 0$
+	\item $x_1 = 3.\overline{3}$
+	\item $x_2 = 3.\overline{3}$
+	\item $\overline{z} = -100$
+\end{itemize}
+
+= A
+
+
+quindi abbiamo generato i due punti estremi che sono A e B allor avremo infinite soluzioni ottime dato che ci muoveremo nel segmento AB
