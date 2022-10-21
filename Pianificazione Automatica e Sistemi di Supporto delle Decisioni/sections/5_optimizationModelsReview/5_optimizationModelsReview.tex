@@ -963,8 +963,8 @@ Lo \hl{pseudocodice} sarà:
 \end{enumerate}
 
 
-% Esercizio 1
-\subsection{Esercizio 1}
+% Esercizio forma canonica
+\subsection{Esercizio forma canonica}
 
 Funzione obiettivo:
 
@@ -978,9 +978,23 @@ vincoli:
 	\item $x_1, x_2 \geq 0$
 \end{itemize}
 
-Graficiamente abbiamo:
+gradiente:
 
-...
+$$\nabla z =
+\left[ {\begin{array}{c}
+	10 \\
+	10 \\
+\end{array} } \right]
+$$
+
+grafico:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{grafescan.jpeg}
+\caption{Graficazione dei vincoli} 
+\label{grafescan}
+\end{figure}
 
 Forma standard:
 
@@ -1002,7 +1016,7 @@ avremo che:
 	\item $O = (0, 0, > 0, > 0)$
 \end{itemize}
 
-dove nei vertici abbiamo 2 variabili $> 0$. Quindi ad ogni vertice abbiamo una BFS con cardinalità $1:M$.
+dove nei vertici abbiamo \hl{2 variabili $> 0$}. Quindi ad ogni vertice abbiamo una BFS con \hl{cardinalita' $1:M$}.
 
 Tableau:
 
@@ -1014,7 +1028,7 @@ $$
 \end{array} } \right]
 $$
 
-con variabili in base B e non in base N:
+con \hl{variabili} in base $B$ e non in base $N$:
 
 \begin{itemize}
 	\item $J_B = <X_3, x_4>$
@@ -1030,23 +1044,23 @@ BFS:
 	\item $\overline{z} = 0$
 \end{itemize}
 
-il test si ottimalità fallisce e quindi possiamo avere una soluzione migliore e quindi applico l'euristica del valore di costo ridotto. Sceglo a caso $x_s = x_1$.
+Il \hl{test di ottimalita' fallisce} e quindi possiamo avere una soluzione migliore. Applico l'\hl{euristica del valore di costo ridotto}. Sceglo a caso $x_s = x_1$.
 
-Prendiamo i valori di $x_1$ e in base al valore unitario presente in $x_3$ e $x_4$ allora avremo:
+Prendiamo la \hl{colonna $x_1$ e in base al valore unitario} presente in $x_3$ e $x_4$ allora avremo:
 $$\min (\frac{10}{2}, \frac{10}{1}) = 5$$
 
-non posso avere che $x_3 > 5$ dato che si deve fermare lì perchè $x_3$ diventa negativa e quindi non ammissibile dato che superiamo in punto $B$.
+\hl{non posso avere che $x_3 > 5$} dato che si deve fermare per non diventare negativo, cioè non ammissibile, dato che superiamo in punto $B$.
 
-Allora dato che $x_3 = 0$ e $x_1$ prende il suo posto avremo che le variabili di base saranno:
+Allora dato che \hl{$x_3 = 0$ e $x_1$ prende il suo posto} avremo che le \hl{variabili di base cambiano} in:
 $$J_B = <x_1, x_4>$$
 
-Dobbiamo allora effettuare un'operazione di Pivot:
+Dobbiamo allora effettuare un'\hl{operazione di Pivot}:
 
 \begin{itemize}
 	\item divido per $2$ la riga 2:
 		$$
 		\left[ {\begin{array}{ccccc}
-			1 & \frac{1}{2} & \frac{1}{2} & 0 & 5\\
+			1 & 0.5 & 0.5 & 0 & 5\\
 			1 & 2 & 0 & 1 & 10\\
 			-10 & -10 & 0 & 0 & 0\\
 		\end{array} } \right]
@@ -1055,8 +1069,8 @@ Dobbiamo allora effettuare un'operazione di Pivot:
 		\item moltiplico per $-1$ la prima riga e poi sommo alla seconda:
 		$$
 		\left[ {\begin{array}{ccccc}
-			1 & \frac{1}{2} & \frac{1}{2} & 0 & 5\\
-			0 & 1.5 & -\frac{1}{2} & 1 & 5\\
+			1 & 0.5 & 0.5 & 0 & 5\\
+			0 & 1.5 & -0.5 & 1 & 5\\
 			-10 & -10 & 0 & 0 & 0\\
 		\end{array} } \right]
 		$$
@@ -1064,14 +1078,14 @@ Dobbiamo allora effettuare un'operazione di Pivot:
 		\item moltiplico per $-10$ la prima riga e poi sommo alla terza:
 		$$
 		\left[ {\begin{array}{ccccc}
-			1 & \frac{1}{2} & \frac{1}{2} & 0 & 5\\
-			0 & 1.5 & -\frac{1}{2} & 1 & 5\\
+			1 & 0.5 & 0.5 & 0 & 5\\
+			0 & 1.5 & -0.5 & 1 & 5\\
 			0 & -5 & 5 & 0 & 50\\
 		\end{array} } \right]
 		$$
 \end{itemize}
 
-allora abbiamo che l asoluzione di base ammissibile BFS è:
+allora abbiamo che la \hl{soluzione di base ammissibile} (BFS) è:
 
 \begin{itemize}
 	\item $x_2 = x_3 = 0$
@@ -1080,16 +1094,15 @@ allora abbiamo che l asoluzione di base ammissibile BFS è:
 	\item $\overline{z} = -50$
 \end{itemize}
 
-
-il test di ottimalità fallisce data la presenza del $-5$, quindi la variabile entrante è $x_2 = x_s$ quindi:
+Nuovamente il test di \hl{ottimalita' fallisce} per la presenza di $-5$, quindi la variabile entrante è $x_s = x_2$ quindi:
 $$x_r = \text{argmin} (\frac{5}{0.5}, \frac{5}{1.5}) = x_4$$
 
-il che corrisponde allo stare nel punto $B$ dove $x_2 = 0$, quindi ci spostiamo in direzione di $A = (> 0, > 0, 0, 0)$. avremo allora:
+il che corrisponde a stare in $B$ dove $x_2 = 0$, quindi ci spostiamo in direzione di $A = (> 0, > 0, 0, 0)$. Avremo allora:
 $$J_B = <x_1, x_2>$$
 
-dato che $x_2$ è entrante ed $x_4$ uscente.
+dato che abbiamo \hl{$x_2$ entrante e $x_4$ uscente}.
 
-Il perno del nuovo Pivot sarà 1.5:
+Il perno del nuovo \hl{Pivot} sarà $1.5$:
 
 $$
 \left[ {\begin{array}{ccccc}
@@ -1099,27 +1112,38 @@ $$
 \end{array} } \right]
 $$
 
-avrmeo allora: 
-$x_3 = x_4 = 0$
-$x_1 = 3.\overline{3}$
-$x_2 = 3.\overline{3}$
-$\overline{z} = -66.\overline{6}$
+avremo allora: 
+\begin{itemize}
+	\item $x_3 = x_4 = 0$
+	\item $x_1 = 3.\overline{3}$
+	\item $x_2 = 3.\overline{3}$
+	\item $\overline{z} = -66.\overline{6}$
+\end{itemize}
 
-allora abbiamo ottenuto una soluzione ottima.
+dove abbiamo ottenuto una \hl{soluzione ottima}.
 
 
+% Soluzioni ottime multiple
+\subsection{Soluzioni ottime multiple}
 
-
-Individuiamo soluzioni ottime multiple. come le individuiamo? Per poter esaminare questo caso partiamo col dire che esiste una sluzione ottima se 
+Per individuarle ricordiamo che esiste una soluzione ottima se: 
 
 $$\overline{c_j} \geq 0$$
 
-essitono soluzioni multiple se esiste $j^{*} \in J_N$ e quidni ha i coeficient id costo ridotti maggiori di zero sium oppure se i corff delle varibiali non di base sono > 0 e quidni almeno uno sia = 0. allora se faccio il solito ragionamento: se prendo una variabile $x_{j*} = 0 \to\ > 0$ allora avrò che:
+\hl{esistono soluzioni multiple se esiste $j^{*} \in J_N$} e quindi se ha:
+
+\begin{itemize}
+	\item \textbf{coefficienti di costo} ridotti $> 0$
+	\item coefficienti delle \textbf{varibiali non di base} sono $> 0$
+\end{itemize}
+
+allora \hl{almeno uno sara' $= 0$}. Facendo il solito ragionamento \hl{prendo una variabile $x_{j*} = 0 \to\ > 0$}, allora avrò che:
 
 $$\Delta z = \overline{c}_{j*} x_{j*} = 0$$
 
 
-es: 
+% Esempio soluzioni ottime multiple
+\subsection{Esempio soluzioni ottime multiple}
 
 Funzione obiettivo:
 
@@ -1133,11 +1157,7 @@ vincoli:
 	\item $x_1, x_2 \geq 0$
 \end{itemize}
 
-Graficamente abbiamo:
-
-...
-
-Gradiente:
+gradiente:
 
 $$\nabla z =
 \left[ {\begin{array}{c}
@@ -1146,7 +1166,16 @@ $$\nabla z =
 \end{array} } \right]
 $$
 
-Con Tableau:
+grafico:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{grafsolmult.jpeg}
+\caption{Graficazione dei vincoli} 
+\label{grafsolmult}
+\end{figure}
+
+tableau:
 
 $$
 \left[ {\begin{array}{ccccc}
@@ -1156,7 +1185,7 @@ $$
 \end{array} } \right]
 $$
 
-con BFS:
+BFS:
 
 \begin{itemize}
 	\item $x_1 = x_2 = 0$
@@ -1165,7 +1194,7 @@ con BFS:
 	\item $\overline{z} = 0$
 \end{itemize}
 
-tramite Pivot:
+Usiamo le operazioni di Pivot:
 
 $$
 \left[ {\begin{array}{ccccc}
@@ -1177,18 +1206,19 @@ $$
 
 BFS:
 
-\begin{itemize}
-	\item $x_2 = x_3 = 0$
-	\item $x_1 = 5$
-	\item $x_4 = 5$
-	\item $\overline{z} = -100$
-\end{itemize}
+$$B =
+\begin{cases} 
+    x_2 = x_3 = 0 \\ 
+    x_1 = 5 \\
+	x_4 = 5 \\
+	\overline{z} = -100
+\end{cases}
+$$
 
-= B
+Il \hl{test di ottimalita'} sulle variabili non di base $J_N = <x_2, x_3>$ è OK, \hl{ma non e' una soluzione unica} dato che \hl{abbiamo $0$ per $x_2$} che andrà \hl{perturbata} assegnandole un valore $> 0$. Allora la variazione della funzione obiettivo per una perturbazione è:
+$$\overline{c}_{j*}x_{j*}\ \ \ \forall\ \ \ \overline{c}_{j*}=0,\ x_{j*} > 0$$
 
-quindi il test di ottimalità sulle variabili fuorni base $J_N = <x_2, x_3>$ è OK. ma non è una soluione unica dato che abbiamo $0$ per la variabile $x_2$ che andrà perturbata assegnandole un valore $> 0$. allora la varaizione della funzione obiettivo per una perturbazopne è $\overline{c}_{j*}x_{j*}$ con $\overline{c}_{j*}=0$ e $x_{j*} > 0$. allora abbiamo che lungpo tutto lo spigolo $AB$ avremo un costo minimo.
-
-infatti forzando Pivot in $x_2$ esce $x_4$:
+allora \hl{lungo lo spigolo $\overline{AB}$ avremo un costo minimo}. \hl{Forziamo il Pivot in $x_2$} facendo uscire $x_4$:
 
 $$
 \left[ {\begin{array}{ccccc}
@@ -1200,14 +1230,14 @@ $$
 
 BFS:
 
-\begin{itemize}
-	\item $x_3 = x_4 = 0$
-	\item $x_1 = 3.\overline{3}$
-	\item $x_2 = 3.\overline{3}$
-	\item $\overline{z} = -100$
-\end{itemize}
 
-= A
+$$A =
+\begin{cases} 
+    x_3 = x_4 = 0 \\ 
+    x_1 = 3.\overline{3} \\
+	x_2 = 3.\overline{3} \\
+	\overline{z} = -100
+\end{cases}
+$$
 
-
-quindi abbiamo generato i due punti estremi che sono A e B allor avremo infinite soluzioni ottime dato che ci muoveremo nel segmento AB
+Abbiamo generato i due punti estremi $A$ e $B$ riuscendo ad avere \hl{infinite soluzioni ottime} dato che ci muoveremo nel segmento $\overline{AB}$.
