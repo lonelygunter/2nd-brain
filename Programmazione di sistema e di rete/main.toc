@@ -55,3 +55,6 @@
 \contentsline {subsection}{\numberline {\mbox {VIII-D}}Funzione umask()}{16}{subsection.8.4}%
 \contentsline {subsection}{\numberline {\mbox {VIII-E}}Sticky bit}{16}{subsection.8.5}%
 \contentsline {subsection}{\numberline {\mbox {VIII-F}}File truncation}{16}{subsection.8.6}%
+\contentsline {subsection}{\numberline {\mbox {VIII-G}}Hard link e link simbolici}{17}{subsection.8.7}%
+\contentsline {subsection}{\numberline {\mbox {VIII-H}}File times}{17}{subsection.8.8}%
+\contentsline {subsection}{\numberline {\mbox {VIII-I}}Reading directories}{18}{subsection.8.9}%
