@@ -1240,4 +1240,77 @@ $$A =
 \end{cases}
 $$
 
-Abbiamo generato i due punti estremi $A$ e $B$ riuscendo ad avere \hl{infinite soluzioni ottime} dato che ci muoveremo nel segmento $\overline{AB}$.
+Abbiamo generato i due punti estremi $A$ e $B$ riuscendo ad avere \hl{infinite soluzioni ottime} dato che ci muoveremo nel segmento $\overline{AB}$. Al massimo potrenno essere:
+
+$$\binom{n}{m}$$ 
+
+
+% Algoritmo della convergenza
+\subsection{Algoritmo della convergenza}
+
+Abbiamo che \hl{se $c_s$ e' la varibiale entrante} allora il costo è dato dalla relazione:
+
+$$\Delta z = \overline{c}_s \min_{i = 1, ..., m}\frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ \overline{a}_{is} > 0$$
+
+con $\overline{c}_s < 0$ e $\min_{i = 1, ..., m}\frac{\overline{b}_i}{\overline{a}_{is}} \geq 0$
+
+
+L'algoritmo del simplesso si comporta in modo decrescete e ad ogni iterazione genera una nuova BFS. Se ad ogni iterazione $\Delta z < 0$ vuol dire che avremo come \hl{casi sfavorevoli}:
+
+\begin{itemize}
+	\item $\min < 0$: l'algoritmo visita tutte le BFS
+	\item $\min = 0$: uno dei numeratori è nullo
+\end{itemize}
+
+
+se il minimo dei rapporti è = 0 icoe x\_s puo essere 0 se esiste un certo temine noto $\overline{b}_i = 0$ per $\overline{a}_{is} > 0$
+
+es è / 0 allora non c'e un miglioramenteo nel passare da un BFS corrente ad un altra allora quidni la sluzione succesiva ha la stessa soluzione della precendte ma poi dopo posso comeunque trovare delle soluzioni migliorative
+
+img
+
+posso avere un caso sfortunato detto cycling dove parto da una soluzione, arriva ad un altra dove c'e questo problema dove no c'e una variazione di z, questo problema si verifica anche oer le iterazioni successive. opiche l'algoritmo è derministico, contineuro a generare la stessa sequenza all'inifnito.
+quindi l'algoritmo non converge. questo aspetto potrebbe produrre il cycling quindi la mancata convergenza dell'algoritmo.
+
+img
+
+es:
+
+tab
+
+abbiamo uan variabile in base = 0 quidni abiamo una soluzione degenere
+
+$$x_s = x_1$$
+
+quindi 
+$$x_r = \text{argmin} (\frac{0}{1}) = x_3$$
+
+con $x_1 \leq \min (\frac{0}{1}) = 0$
+
+
+
+tab
+
+
+
+abbiamo un'altra soluzione degenere quidni ci troviamo su un plateau. dal punti di vista grafico abbiamo che x\_1 rimane 0 e quidi rimaniamo sempre nel punto 0,0 quisto perche c'e una differenza enorme tra O e A dato che ha il numero minimo ed indispenzabile id vincoli. inveceO è dato da un numero ridondadnte  e superfluo di vincoli. abbiamo quidni 2 rappresentaizoni in termini di soluzioni di base ammissibili.
+
+
+tab
+
+
+$$x_s = x_2$$
+$$x_r = \text{argmin}(\frac{1}{1}) = x_4$$
+
+con $x_2 \leq \min("\frac{1}{1}) = 1$
+
+$$\Delta z = -20 * 1$$
+
+dove $1$ è il valore che assume $x_2$
+
+
+prendendo come perno un second ovalore di $x_2$ avremo un miglioramnte:
+
+tab
+
+quidni con $\Delta z = - 20$
