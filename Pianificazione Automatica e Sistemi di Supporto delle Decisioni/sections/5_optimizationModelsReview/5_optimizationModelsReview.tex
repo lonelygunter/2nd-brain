@@ -1255,62 +1255,287 @@ $$\Delta z = \overline{c}_s \min_{i = 1, ..., m}\frac{\overline{b}_i}{\overline{
 con $\overline{c}_s < 0$ e $\min_{i = 1, ..., m}\frac{\overline{b}_i}{\overline{a}_{is}} \geq 0$
 
 
-L'algoritmo del simplesso si comporta in modo decrescete e ad ogni iterazione genera una nuova BFS. Se ad ogni iterazione $\Delta z < 0$ vuol dire che avremo come \hl{casi sfavorevoli}:
+L'algoritmo del simplesso \hl{si comporta in modo decrescete} e ad ogni iterazione \hl{genera una nuova BFS}. Se ad ogni iterazione $\Delta z < 0$ vuol dire che avremo come \hl{casi sfavorevoli}:
 
 \begin{itemize}
-	\item $\min < 0$: l'algoritmo visita tutte le BFS
-	\item $\min = 0$: uno dei numeratori è nullo
+	\item \hl{$\min < 0$}: l'algoritmo visita tutte le BFS
+	\item \hl{$\min = 0$}: uno dei numeratori è nullo
 \end{itemize}
 
+Se abbiamo che $x_s = 0$ esisterà un termine noto $\overline{b}_i = 0$ per $\overline{a}_{is} > 0$.
 
-se il minimo dei rapporti è = 0 icoe x\_s puo essere 0 se esiste un certo temine noto $\overline{b}_i = 0$ per $\overline{a}_{is} > 0$
+Avremo allora che \hl{se non abbiamo variazioni di $z$} allora \hl{non ci sara' un miglioramento}, dato che l'algoritmo è deterministico genererò la stessa sequenza all'infinito. Questo fenomeno è detto \hl{cycling} e avremo che l'algoritmo non converge.
 
-es è / 0 allora non c'e un miglioramenteo nel passare da un BFS corrente ad un altra allora quidni la sluzione succesiva ha la stessa soluzione della precendte ma poi dopo posso comeunque trovare delle soluzioni migliorative
 
-img
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{notconv.jpeg}
+\caption{Cycling algorithm result} 
+\label{notconv}
+\end{figure}
+	
 
-posso avere un caso sfortunato detto cycling dove parto da una soluzione, arriva ad un altra dove c'e questo problema dove no c'e una variazione di z, questo problema si verifica anche oer le iterazioni successive. opiche l'algoritmo è derministico, contineuro a generare la stessa sequenza all'inifnito.
-quindi l'algoritmo non converge. questo aspetto potrebbe produrre il cycling quindi la mancata convergenza dell'algoritmo.
+Potrebbe anche capitare di \hl{avere un miglioramento dopo $n$ iterazioni}.
 
-img
 
-es:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{conv.jpeg}
+\caption{Not cycling algorithm result} 
+\label{conv}
+\end{figure}
+		
+	
+% Esempio BFS degenere
+\subsection{Esempio BFS degenere}
 
-tab
+Funzione obiettivo:
+$$\max z = 10x_1 + 10x_2$$
 
-abbiamo uan variabile in base = 0 quidni abiamo una soluzione degenere
+vincoli:
 
-$$x_s = x_1$$
+\begin{itemize}
+	\item $x_1 - x_2 \leq 0$
+	\item $x_2 \leq 1$
+	\item $x_1, x_2 \geq 0$
+\end{itemize}
 
-quindi 
+grafico:
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{esdegen.jpeg}
+\caption{Grafico di un sistema inizialmente degenere} 
+\label{esdegen}
+\end{figure}
+
+tabelau:
+
+$$
+\left[ {\begin{array}{ccccc}
+	1 & -1 & 1 & 0 & 0\\
+	0 & 1 & 0 & 1 & 1\\
+	-10 & -10 & 0 & 0 & 0\\
+\end{array} } \right]
+$$
+
+dove $\Delta z = 0 * x_1 = 0 * 0 = 0$
+
+Notiamo di avere una variabile in base $= 0$ che sarà detta \hl{variabile degenere}. Dato che abbiamo dei termini negativi, nell'ultima riga, allora \hl{prendiamo quello con numero piu' negativo}, in questo caso anche con l'\hl{indice piu' negativo}$x_s = x_1$, allora:
+
 $$x_r = \text{argmin} (\frac{0}{1}) = x_3$$
 
 con $x_1 \leq \min (\frac{0}{1}) = 0$
 
+Notiamo che abbiamo preso $x_3$ dato che \hl{in corrispondenza del numero piu' grande} abbiamo il valore unitario della colonna di $x_3$. 
+
+Abbiamo un'altra soluzione degenere quindi ci troviamo su un \hl{plateau}. Graficamente abbiamo che $x_1$ rimane 0 nel punto $(0,0)$, avremo allora che nel segmento $\overline{0A}$ ci sarà un \hl{numero ridondante e superfluo di vincoli}. 
 
 
-tab
+$$
+\left[ {\begin{array}{ccccc}
+	1 & -1 & 1 & 0 & 0\\
+	0 & 1 & 0 & 1 & 1\\
+	0 & -20 & 10 & 0 & 0\\
+\end{array} } \right]
+$$
 
 
+Dove seguendo i motivi detti prima avremo $x_s = x_2$, allora:
 
-abbiamo un'altra soluzione degenere quidni ci troviamo su un plateau. dal punti di vista grafico abbiamo che x\_1 rimane 0 e quidi rimaniamo sempre nel punto 0,0 quisto perche c'e una differenza enorme tra O e A dato che ha il numero minimo ed indispenzabile id vincoli. inveceO è dato da un numero ridondadnte  e superfluo di vincoli. abbiamo quidni 2 rappresentaizoni in termini di soluzioni di base ammissibili.
-
-
-tab
-
-
-$$x_s = x_2$$
 $$x_r = \text{argmin}(\frac{1}{1}) = x_4$$
 
-con $x_2 \leq \min("\frac{1}{1}) = 1$
+con $x_2 \leq \min(\frac{1}{1}) = 1$
 
-$$\Delta z = -20 * 1$$
+Abbiamo quindi che:
+$$\Delta z = -20 * x_2 = -20 * 1 = -20$$
 
-dove $1$ è il valore che assume $x_2$
+prendendo come perno il valore più alto della colonna $x_2$ avremo un miglioramento:
 
 
-prendendo come perno un second ovalore di $x_2$ avremo un miglioramnte:
+$$
+\left[ {\begin{array}{ccccc}
+	1 & 0 & 1 & 1 & 1\\
+	0 & 1 & 0 & 1 & 1\\
+	0 & 0 & 10 & 20 & 20\\
+\end{array} } \right]
+$$
 
-tab
+quindi con $\Delta z = - 20$.
 
-quidni con $\Delta z = - 20$
+
+% Regola dell'anticycling: Bland rule
+\subsection{Regola dell'anticycling: Bland rule}
+
+Possiamo \hl{evitare di avere variabili degeneri} usando la Bland Rule. Andremo semplicemente, \hl{a parita' di valore}, a prendere quello con \hl{indice piu' negativo}. Quindi in:
+
+
+% Variabili artificiali
+\subsection{Variabili artificiali}
+
+Iniziamo aggiungendo \hl{ad ogni vicolo} una variabile artificiale:
+$$\sum_j a_{ij}x_j + \alpha_i = b_i\ \ \ \forall\ \ \ i = 1, ..., m$$
+
+con $\alpha_i \geq 0\ \ \ \forall\ \ \ i = 1, ..., m$.
+
+Indicato con \hl{$P_a$ il problema artificiale}, la sua \hl{regione ammissibile sara'}:
+$$\Omega(P_a) = \{\underline{x} \in R^m : \underline{\underline{A}}\ \underline{x} + \underline{\alpha} = \underline{b},\ \underline{x} \geq 0,\ \underline{\alpha} \geq 0,\ \underline{\alpha} \in R^m\}$$
+
+Invece per il \hl{problema di partenza $P$}, la regione ammissibile è:
+$$\Omega(P) = \{\underline{x} \in R^m : \underline{\underline{A}}\ \underline{x} = \underline{b},\ \underline{x} \geq 0\}$$
+
+Avremo allora che:
+$$\Omega(P_a) \geq \Omega(P) \Leftrightarrow x \in \Omega(P) \Rightarrow x \in \Omega(P_a)$$
+
+La soluzione \hl{potrebbe comunque non essere ammissibile} per $P$. Allora cerchiamo una soluzione quivalente ma che sia valida sia per $P_a$ che per $P$.
+
+Il problema artificiale (teorema 1) avrebbe come \hl{funzione obiettivo}:
+$$\min \rho = \underline{e}^T \underline{\alpha}\ \ \ \forall\ \ \ e = [1, ..., 1]$$
+
+vincoli:
+
+\begin{itemize}
+	\item $\underline{\underline{A}}\ \underline{x} + \underline{\alpha} = \underline{b}$
+	\item $\underline{x}, \underline{\alpha} \geq 0$
+\end{itemize}
+
+Notare che \hl{ammette sempre soluzioni ottime}.
+
+Per il teorema 2 avremo che $P$ è \hl{ammissibile $\Leftrightarrow$ $P_a$ ha $\rho^* = 0$}.
+
+Dati quesi 2 problemi avremo che per:
+
+\begin{enumerate}
+	\item \hl{$\rho^* > 0$}: il problema $P$ è \textbf{inammissibile}
+	\item \hl{$\rho^* = 0$}: alla soluzione ottima $P_a$ \textbf{corrispone una BFS per $P$}
+\end{enumerate}
+
+
+% Metodo del simplesso in 2 fasi
+\subsection{Metodo del simplesso in 2 fasi}
+
+Per prima cosa risolviamo il $P_a$ con il metodo del simplesso. Se \hl{$\rho^* = 0$ usiamo la soluzione ottima di $P_a$} senza le variabili artificiali. Prenderemo poi la \hl{f.o. $z$ come BFS per $P$} e da questa applicare il metodo del simplesso. 
+
+
+% Costruzione del problema artificiale
+\subsection{Costruzione del problema artificiale}
+
+Funzione obiettivo:
+$$\min z = \sum_{j = 1}^n c_jx_j$$
+
+vincoli:
+
+\begin{itemize}
+	\item $\sum_{j=1}^n a_{ij}x_j \leq b_i\ \ \ \forall\ \ \ i = 1, ..., m_1$
+	\item $\sum_{j=1}^n a_{ij}x_j \geq b_i\ \ \ \forall\ \ \ i = m_1+1, ..., m_2$
+	\item $\sum_{j=1}^n a_{ij}x_j = b_i\ \ \ \forall\ \ \ i = m_2+1, ..., m$
+\end{itemize}
+
+con $x_j \geq 0\ \ \ \forall\ \ \ j = 1, ..., m$.
+
+Forma standard abbiamo che la funzione obiettivo:
+$$\min z = \sum_{j = 1}^n c_jx_j$$
+
+vincoli:
+
+\begin{itemize}
+	\item $\sum_{j=1}^n a_{ij}x_j + x_{n+i} = b_i\ \ \ \forall\ \ \ i = 1, ..., m_1$
+	\item $\sum_{j=1}^n a_{ij}x_j - x_{n+i} = b_i\ \ \ \forall\ \ \ i = m_1+1, ..., m_2$
+	\item $\sum_{j=1}^n a_{ij}x_j = b_i\ \ \ \forall\ \ \ i = m_2+1, ..., m$
+\end{itemize}
+
+con 
+
+\begin{itemize}
+	\item $x_j \geq 0\ \ \ \forall\ \ \ j = 1, ..., n$
+	\item $x_{n+i} \geq 0\ \ \ \forall\ \ \ i = 1, ..., m_2$
+\end{itemize}
+
+Per fare in modo di avere un problema artificiale con il \hl{minor numero di variabili artificiali} dovremo:
+
+\begin{enumerate}
+	\item per \hl{$i = 1, ..., m_1$ NON aggiungiamo variabili artificiali}, dato che abbiamo quelle di slack
+	\item per \hl{$i = m_2 + 1, ..., m$ aggiungo una variabile artificiale} per ogni vincolo
+	\item per \hl{$i = m_1 + 1, ..., m_2$ aggiungo una $\alpha_0$} in ogni vincolo
+\end{enumerate}
+
+Indichiamo un l'\hl{indice $h(m_1+1 \leq h \leq m_2)$} t.c.:
+$$h = \text{argmax}_i\{b_i,\ i = m_1+1, ..., m_2\}$$
+
+\hl{Rimpiazziamo ogni vincolo $i \neq h$ con} un vincolo quivalente:
+$$\sum (a_{hj} - a_{ij})x_j - x_{n+h} + x_{n+i} = b_n - b_i\ \ \ \forall\ \ \ i = m_1 + 1, ..., m_2,\ i \neq h$$
+
+avremo allora:
+$$\sum a_{hj}x_j - x_{n+h} + \alpha_0 = b_n$$
+$$\sum a_{ij}x_j - x_{n+i} + \alpha_0 = b_i$$
+
+
+% Esempio problema artificiale
+\subsection{Esempio problema artificiale}
+
+Funzione obiettivo:
+$$\min z = 4x_1 + 5x_2$$
+
+vincoli:
+
+\begin{itemize}
+	\item $x_1 - x_3 = 6$
+	\item $x_2 - x_4 = 4$
+	\item $x_1 + 3x_2 = 21$
+	\item $x_1, x_2, x_3, x_4 \geq 0$
+\end{itemize}
+
+Il problema artificiale è dato dalla funzione obiettivo:
+$$\min \rho = \alpha_1 + \alpha_2$$
+
+con vincoli:
+
+\begin{itemize}
+	\item $x_1 - x_3 + \alpha_1 = 6$
+	\item $x_2 - x_4 + \alpha_1 = 4$
+	\item $x_1 + 3x_2 + \alpha_2 = 21$
+	\item $x_1, x_2, x_3, x_4, \alpha_1, \alpha_2 \geq 0$
+\end{itemize}
+
+Vado ora a \hl{sostituire al vincolo 2 la differenza tra il vincolo 1 e il 2}:
+$$x_1 - x_2 - x_3 + x_4 = 2$$
+
+Avremo allora che \hl{$P_a$ e' data da} una funzione obiettivo:
+$$\min \rho = \alpha_1 + \alpha_2$$
+
+e dai vincoli:
+
+\begin{itemize}
+	\item $x_1 - x_3 + \alpha_1 = 6$
+	\item $x_1 - x_2 -x_3 + x_4 = 2$
+	\item $x_1 + 3x_2 + \alpha_2 = 21$
+	\item $x_1, x_2, x_3, x_4, \alpha_1, \alpha_2 \geq 0$
+\end{itemize}
+
+Applichiamo al \hl{prima fase del metodo a 2 fasi}:
+
+
+$$
+\left[ {\begin{array}{ccccccc}
+	1 & 0 & -1 & 0 & 1 & 0 & 6\\
+	1 & -1 & -1 & 1 & 0 & 0 & 2\\
+	1 & 3 & 0 & 0 & 0 & 1 & 21\\
+	0 & 0 & 0 & 0 & 1 & 1 & 0\\
+\end{array} } \right]
+$$
+
+Per poter \hl{ripristinare la forma canonica} dovremo avere i \hl{coefficienti di $\alpha_1,\ \alpha_2 = 0$}. Tramite vari \hl{operazioni di Pivot} arriviamo a non avere più in base $\alpha_1$ e $\alpha_2$. In fine avremo:
+
+
+$$
+\left[ {\begin{array}{ccccc}
+	1 & 0 & -1 & 0 & 6\\
+	0 & 0 & 0.\overline{3} & 1 & 1\\
+	0 & 1 & 0.\overline{3} & 0 & 5\\
+	0 & 0 & 2.\overline{3} & 0 & -49\\
+\end{array} } \right]
+$$
+
+Avremo allora \hl{verificato il criterio di arresto}, perciò avremo una soluzione ottima:
+$$x^* = (6, 5, 0, 1),\ z^* = 49$$

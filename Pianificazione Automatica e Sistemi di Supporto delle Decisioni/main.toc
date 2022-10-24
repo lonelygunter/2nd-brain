@@ -51,5 +51,11 @@
 \contentsline {subsection}{\numberline {\mbox {V-N}}Soluzioni ottime multiple}{18}{subsection.5.14}%
 \contentsline {subsection}{\numberline {\mbox {V-O}}Esempio soluzioni ottime multiple}{18}{subsection.5.15}%
 \contentsline {subsection}{\numberline {\mbox {V-P}}Algoritmo della convergenza}{18}{subsection.5.16}%
-\contentsline {section}{\numberline {VI}}{19}{section.6}%
-\contentsline {subsection}{\numberline {\mbox {VI-A}}}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {V-Q}}Esempio BFS degenere}{19}{subsection.5.17}%
+\contentsline {subsection}{\numberline {\mbox {V-R}}Regola dell'anticycling: Bland rule}{20}{subsection.5.18}%
+\contentsline {subsection}{\numberline {\mbox {V-S}}Variabili artificiali}{20}{subsection.5.19}%
+\contentsline {subsection}{\numberline {\mbox {V-T}}Metodo del simplesso in 2 fasi}{20}{subsection.5.20}%
+\contentsline {subsection}{\numberline {\mbox {V-U}}Costruzione del problema artificiale}{20}{subsection.5.21}%
+\contentsline {subsection}{\numberline {\mbox {V-V}}Esempio problema artificiale}{20}{subsection.5.22}%
+\contentsline {section}{\numberline {VI}}{21}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}}{21}{subsection.6.1}%
