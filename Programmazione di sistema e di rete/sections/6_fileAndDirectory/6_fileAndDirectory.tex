@@ -500,8 +500,9 @@ Questa memoria (in questo per sistemi a 32bit) è suddivisa in:
 	\item \hl{Text}: \textbf{codice eseguibile} del programma, utile al processore
 	\item \hl{Initialized globals}: variabili dichiarate globali ed inizializzate
 	\item \hl{Uninitialized globals}: 
-	\item \hl{Heap}: 
+	\item \hl{Heap}: parte alla quale ci si accede tramite delle richieste, per esempio con la malloc. Notare che la maggior parte di queste zone di memoria sono preallocate. Nell'heap ci finiscono anche le librerie dinamiche, dato che è codice di sola lettura. Queste sono allocate in modo randomico per rendere cmplicata la loro ricerca
 	\item \hl{...}: spazio virtuale super mega ampio
+	\item \hl{Kernel space}: zona vietata al programmatore dove il kernel fa le sue cose
 	\item \hl{Environment + arguments}:
 		\begin{itemize}
 			\item \textbf{arguments}: stringhe passate al programma che le interpreterà
@@ -529,3 +530,8 @@ virtual memory          (kbytes, -v) unlimited
 \end{lstlisting}
 
 di default sono a 8MB
+
+
+
+
+

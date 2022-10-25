@@ -43,7 +43,6 @@ $ gcc -H lib.a
 $ gcc -E file.c
 \end{lstlisting}
 
-
 \subsection{gcc -g: debugging debole}
 
 \begin{lstlisting}
@@ -55,6 +54,32 @@ $ gcc -g -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L..
 
 \begin{lstlisting}
 $ gcc -ggbd -ansi -I../include -Wall -DMACOS -D_DARWIN_C_SOURCE  ls1.c -o ls1  -L../lib -lapue
+\end{lstlisting}
+
+con opzioni (ggbd per Linux e lldb per MacOS):
+\begin{itemize}
+    \item s: per fare stepping
+    \item n: per fare stepping over delle funzioni
+    \item c: per continuare con il run
+    \item b [\# linea]: per impostare un breakpoint
+    \item p [nome variabile]: per stampare le variabili
+    \item bt: per vedere lo stato dello stack
+    \item l: (list) per vedere il codice sorgente
+    \item r [args]: (run) per dare gli argomenti e runnare
+\end{itemize}
+
+per vedere il numero dell'indirizzo come decimale e quindi poi KB, MB, GB o TB...:
+\begin{lstlisting}
+$ echo $((0x000000016fdffa1e))
+6171916830
+\end{lstlisting}
+
+per vedere il contenuto in char (c), decimale (d), esadeciamle (x) di un indirizzo di memoria:
+\begin{lstlisting}
+(lldb) memory read --size 1 -l4 --format c --count 10 0x000000016fdffa1e
+0x16fdffa1e: dd2.
+0x16fdffa22: c\0ch
+0x16fdffa26: un
 \end{lstlisting}
 
 
