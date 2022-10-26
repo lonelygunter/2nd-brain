@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666775286 "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.tex" "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" "main" 1666775288
+["pdflatex"] 1666775286 "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.tex" "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf" "main" 1666775312
   "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.aux" 1666775288 11810 4257f1f7379684143c30b069bc31c2b1 ""
   "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.tex" 1666108998 4087 d1aaf1e213ee939d9293ecbaa75a71d3 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -175,10 +175,10 @@
   "sections/5_fileio/5_fileio.tex" 1666109456 13359 160528115841377721bbd8ff6ffb5f9b ""
   "sections/6_fileAndDirectory/6_fileAndDirectory.tex" 1666775283 18006 dbb6437ffbedce22292f12d8f0e3ed4c ""
   (generated)
-  "main.log"
-  "main.toc"
-  "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf"
   "main.out"
+  "main.log"
   "main.pdf"
-  "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.log"
   "main.aux"
+  "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.pdf"
+  "main.toc"
+  "/Users/matt/Documents/Github/latex-2nd-brain/Programmazione di sistema e di rete/main.log"
