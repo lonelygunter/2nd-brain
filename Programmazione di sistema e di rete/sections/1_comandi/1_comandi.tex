@@ -63,6 +63,50 @@ con opzioni (ggbd per Linux e lldb per MacOS):
     \item c: per continuare con il run
     \item b [\# linea]: per impostare un breakpoint
     \item p [nome variabile]: per stampare le variabili
+        possiamo avere la possibilità di vedere la memoria di una variabile: 
+
+\begin{lstlisting}
+(lldb) p &fd1
+\end{lstlisting}
+
+        notare che \hl{andando a guardarle possiamo capire dove si trova lo stack}. 
+
+        Per capire fin dove arriva la "punta" dello stack possiamo usare:
+
+\begin{lstlisting}
+(lldb)register read
+\end{lstlisting}
+
+        per poter leggere tutti i registri. Per leggere la "punta" usiamo come indirizzo quello dello stack pointer $\$sp$:
+
+\begin{lstlisting}
+(lldb) memory read --size 4 --fromat x --count 160 $sp
+\end{lstlisting}
+
+        rax registrodove c'e1 il numero della system call
+        rsp: stack frame pointer
+
+        rbx, rcx, rdx, rdi, rsi: paramentri di funzioni e system call 
+
+        rbp: base dello stack frame
+
+        rsp e rbp salgono quando lo stack frame viene rilasciato
+
+
+        rip: registro di instruction pointer e dice quale istruzione sara1 eseguita e sara1 un valore basso se punta ad un istruzione che sta nel text invece altro se si trova in una libreria
+
+
+        (lldb) disassemble: fa vedere il codice eseguibile in assembly delle funzoine che sto eseguendo. indica con -> la prossima istruzione che sta per essere eseguita
+
+
+        sara1 possibile eseguire le chiamata in codice assembly una alla volta tramite:
+
+        (lldb) register read [nome registro]
+
+        per eseguire una sola istruzione usiamo 
+
+        (lldb) si
+
     \item bt: per vedere lo stato dello stack
     \item l: (list) per vedere il codice sorgente
     \item r [args]: (run) per dare gli argomenti e runnare
