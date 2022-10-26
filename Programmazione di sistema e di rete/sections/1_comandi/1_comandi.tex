@@ -74,38 +74,8 @@ con opzioni (ggbd per Linux e lldb per MacOS):
         Per capire fin dove arriva la "punta" dello stack possiamo usare:
 
 \begin{lstlisting}
-(lldb)register read
+(lldb) register read [nome registro]
 \end{lstlisting}
-
-        per poter leggere tutti i registri. Per leggere la "punta" usiamo come indirizzo quello dello stack pointer $\$sp$:
-
-\begin{lstlisting}
-(lldb) memory read --size 4 --fromat x --count 160 $sp
-\end{lstlisting}
-
-        rax registrodove c'e1 il numero della system call
-        rsp: stack frame pointer
-
-        rbx, rcx, rdx, rdi, rsi: paramentri di funzioni e system call 
-
-        rbp: base dello stack frame
-
-        rsp e rbp salgono quando lo stack frame viene rilasciato
-
-
-        rip: registro di instruction pointer e dice quale istruzione sara1 eseguita e sara1 un valore basso se punta ad un istruzione che sta nel text invece altro se si trova in una libreria
-
-
-        (lldb) disassemble: fa vedere il codice eseguibile in assembly delle funzoine che sto eseguendo. indica con -> la prossima istruzione che sta per essere eseguita
-
-
-        sara1 possibile eseguire le chiamata in codice assembly una alla volta tramite:
-
-        (lldb) register read [nome registro]
-
-        per eseguire una sola istruzione usiamo 
-
-        (lldb) si
 
     \item bt: per vedere lo stato dello stack
     \item l: (list) per vedere il codice sorgente
@@ -125,6 +95,25 @@ per vedere il contenuto in char (c), decimale (d), esadeciamle (x) di un indiriz
 0x16fdffa22: c\0ch
 0x16fdffa26: un
 \end{lstlisting}
+
+Per poter leggere tutti i registri. Per leggere la "punta" usiamo come indirizzo quello dello stack pointer $\$sp$:
+
+\begin{lstlisting}
+(lldb) memory read --size 4 --fromat x --count 160 $sp
+\end{lstlisting}
+
+Per i \hl{registri} abbiamo:
+
+\begin{itemize}
+        \item \textbf{rax}: registro dove c'è il numero della system call chiamata
+        \item \textbf{rsp}: stack frame pointer. Salve una volta che lo stack viene rilasciato
+        \item \textbf{rbx, rcx, rdx, rdi, rsi}: paramentri di funzioni e systemcall
+        \item \textbf{rbp}: base dello stack frame. Salve una volta che lo stack viene rilasciato
+        \item \textbf{rip}: pointer all'istruzione successiva. Avrà un valore basso se punta nel text, viceversa se punta ad una libreria
+\end{itemize}
+
+
+(lldb) disassemble: per fa vedere il codice eseguibile in assembly delle funzione che sto eseguendo, dove indica con "->" la prossima istruzione che sta per essere eseguita.
 
 
 % xattr

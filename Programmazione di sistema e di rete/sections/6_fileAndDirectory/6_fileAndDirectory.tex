@@ -531,23 +531,22 @@ virtual memory          (kbytes, -v) unlimited
 
 di default sono a 8MB.
 
+Per quanto riguarda il codice di ftw8.c (File Three Walk) sarà importante da padroneggiare per poter \hl{visitare tutti i nodi} a partire da una root decidendo, per ogni nodo, quale programma eseguire tramite una variabile \hl{Myfunc} creata da un typedef:
 
+\begin{lstlisting}
+typedef int     Myfunc(const char *, const struct stat *, int);
+\end{lstlisting}
 
+dove il tipo può assumere più valori da usare come \hl{coltellino svizzero}: 
 
+\begin{itemize}
+	\item \hl{FTW\_F}: ha uno switch annidato dove prende, da st\_mode, un campo della struttura attraverso un puntatore "->". Viene poi messo in "and" con una maschera per poter prendere il tipo di file sul quale fare i case
+\end{itemize}
 
+con questi case si potrà effettuare una statistica dei tipi di file nell'albero.
 
+abremo anche:
 
-vediamo il programma lunghissimo:
-
-importante da padroneggiare dato che puo1 tornare utile (file three walk ftw). ci permettera1 di visitare tutti i nodi a partire da una root dove puo1 decidere, per ogni nodo, quale programma eseguire tramite una variabile Myfunc creata in un typedef prima definito che viene poi passata come argomento ad altre funzioni
-
-
-myfunc prende un pathname ....
-
-dove il tipo puo1 assumere piu1 valori. interessanti FTW\_F dove c'e1 uno switch annidato dove va a prendere un campo della struttura attraverso un puntatore (->) e lo prende da st\_mode dove c'e1 permesso e tipo dei file in and con una maschera per poter prendere il tipo di file sul quale fa i case.
-
-dove si va a fare una statistica dei nodi di un albero andadno ad incrementare il counter ogni volta che incontra tutti i tipi di  file avendo cosi1 quanti ce ne sono di ogniuno
-
-tenere conto che myfunc e1 una funzione ma resa a variabile (?) 
-
-path\_alloc restituisce la massima dinezione disponibile per un path in un determinato sistema operativo cioe1 PATH\_MAX + 1
+\begin{itemize}
+	\item \textbf{path\_alloc}: restituisce la massima dimenzione disponibile per un path in un determinato sistema operativo: PATH\_MAX + 1
+\end{itemize}
