@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  25 OCT 2022 08:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  27 OCT 2022 17:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -606,7 +606,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \openout4 = `main.toc'.
 
  (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/1_definizioni/1_definizioni.tex
-<./img//logoUnisalento.jpg, id=300, 565.11125pt x 197.73875pt>
+<./img//logoUnisalento.jpg, id=305, 565.11125pt x 197.73875pt>
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
@@ -619,7 +619,7 @@ Underfull \hbox (badness 1824) in paragraph at lines 18--19
 [][]\OT1/ptm/m/n/10 de[]-[]scrip[]-[]ti[]-[]ve[] [][][]ana[]-[]ly[]-[]tics: ca-pi-re \OT1/ptm/b/n/10 co-sa sia suc-ces-so nel
  []
 
-<./img//businessAnalytics.jpeg, id=313, 459.7175pt x 343.2825pt>
+<./img//businessAnalytics.jpeg, id=320, 459.7175pt x 343.2825pt>
 File: ./img//businessAnalytics.jpeg Graphic file (type jpg)
 <use ./img//businessAnalytics.jpeg>
 Package pdftex.def Info: ./img//businessAnalytics.jpeg  used on input line 25.
@@ -629,7 +629,7 @@ Underfull \hbox (badness 4353) in paragraph at lines 55--56
 []\OT1/ptm/b/n/10 decisioni stra-te-gi-che\OT1/ptm/m/n/10 : di \OT1/ptm/b/n/10 lun-go pe-rio-do non
  []
 
-<./img//dectax.jpeg, id=314, 642.4pt x 464.73625pt>
+<./img//dectax.jpeg, id=321, 642.4pt x 464.73625pt>
 File: ./img//dectax.jpeg Graphic file (type jpg)
 <use ./img//dectax.jpeg>
 Package pdftex.def Info: ./img//dectax.jpeg  used on input line 65.
@@ -647,7 +647,7 @@ l.107 P
                                                   
 l.107 P
        ossiamo classificarli come: </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//businessAnalytics.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//dectax.jpeg>]
-<./img//agents.jpeg, id=327, 612.2875pt x 303.1325pt>
+<./img//agents.jpeg, id=334, 612.2875pt x 303.1325pt>
 File: ./img//agents.jpeg Graphic file (type jpg)
 <use ./img//agents.jpeg>
 Package pdftex.def Info: ./img//agents.jpeg  used on input line 118.
@@ -662,7 +662,7 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
                                                   
 l.1 \newpage
              </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//agents.jpeg>]
-<./img//descapp.jpeg, id=339, 642.4pt x 480.79625pt>
+<./img//descapp.jpeg, id=346, 642.4pt x 480.79625pt>
 File: ./img//descapp.jpeg Graphic file (type jpg)
 <use ./img//descapp.jpeg>
 Package pdftex.def Info: ./img//descapp.jpeg  used on input line 30.
@@ -682,7 +682,7 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
                                                   
 l.1 \newpage
              </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//descapp.jpeg>]
-<./img//st12.jpeg, id=352, 642.4pt x 98.3675pt>
+<./img//st12.jpeg, id=359, 642.4pt x 98.3675pt>
 File: ./img//st12.jpeg Graphic file (type jpg)
 <use ./img//st12.jpeg>
 Package pdftex.def Info: ./img//st12.jpeg  used on input line 39.
@@ -723,7 +723,7 @@ l.161 	\item p
                                                   
 l.161 	\item p
               resa $x_B \leq 120$: (0, 120) </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//st12.jpeg>]
-<./img//es.jpeg, id=370, 321.2pt x 320.19624pt>
+<./img//es.jpeg, id=377, 321.2pt x 320.19624pt>
 File: ./img//es.jpeg Graphic file (type jpg)
 <use ./img//es.jpeg>
 Package pdftex.def Info: ./img//es.jpeg  used on input line 230.
@@ -732,7 +732,7 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 24
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<./img//es1.jpeg, id=371, 320.19624pt x 321.2pt>
+<./img//es1.jpeg, id=378, 320.19624pt x 321.2pt>
 File: ./img//es1.jpeg Graphic file (type jpg)
 <use ./img//es1.jpeg>
 Package pdftex.def Info: ./img//es1.jpeg  used on input line 282.
@@ -749,17 +749,17 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 286.
                                                   
 l.286 		
          </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es.jpeg>]
-<./img//es2.jpeg, id=406, 321.2pt x 318.18875pt>
+<./img//es2.jpeg, id=413, 321.2pt x 318.18875pt>
 File: ./img//es2.jpeg Graphic file (type jpg)
 <use ./img//es2.jpeg>
 Package pdftex.def Info: ./img//es2.jpeg  used on input line 320.
 (pdftex.def)             Requested size: 160.59961pt x 159.09398pt.
-<./img//es3.jpeg, id=407, 321.2pt x 318.18875pt>
+<./img//es3.jpeg, id=414, 321.2pt x 318.18875pt>
 File: ./img//es3.jpeg Graphic file (type jpg)
 <use ./img//es3.jpeg>
 Package pdftex.def Info: ./img//es3.jpeg  used on input line 349.
 (pdftex.def)             Requested size: 160.59961pt x 159.09398pt.
-<./img//es4.jpeg, id=408, 320.19624pt x 321.2pt>
+<./img//es4.jpeg, id=415, 320.19624pt x 321.2pt>
 File: ./img//es4.jpeg Graphic file (type jpg)
 <use ./img//es4.jpeg>
 Package pdftex.def Info: ./img//es4.jpeg  used on input line 375.
@@ -803,7 +803,7 @@ File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [9]
-<./img//aon.jpeg, id=440, 642.4pt x 241.90375pt>
+<./img//aon.jpeg, id=447, 642.4pt x 241.90375pt>
 File: ./img//aon.jpeg Graphic file (type jpg)
 <use ./img//aon.jpeg>
 Package pdftex.def Info: ./img//aon.jpeg  used on input line 65.
@@ -826,7 +826,7 @@ l.156 			\item $
                                                   
 l.156 			\item $
                 s_1 + 10 \leq s_3 (p_{13} = 1)$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//aon.jpeg>]
-<./img//budget.jpeg, id=449, 642.4pt x 318.18875pt>
+<./img//budget.jpeg, id=456, 642.4pt x 318.18875pt>
 File: ./img//budget.jpeg Graphic file (type jpg)
 <use ./img//budget.jpeg>
 Package pdftex.def Info: ./img//budget.jpeg  used on input line 189.
@@ -836,12 +836,12 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-<./img//prodline.jpeg, id=450, 642.4pt x 207.77625pt>
+<./img//prodline.jpeg, id=457, 642.4pt x 207.77625pt>
 File: ./img//prodline.jpeg Graphic file (type jpg)
 <use ./img//prodline.jpeg>
 Package pdftex.def Info: ./img//prodline.jpeg  used on input line 235.
 (pdftex.def)             Requested size: 192.72148pt x 62.33334pt.
-<./img//invlev.jpeg, id=451, 642.4pt x 328.22626pt>
+<./img//invlev.jpeg, id=458, 642.4pt x 328.22626pt>
 File: ./img//invlev.jpeg Graphic file (type jpg)
 <use ./img//invlev.jpeg>
 Package pdftex.def Info: ./img//invlev.jpeg  used on input line 250.
@@ -863,17 +863,17 @@ l.279 		A
                                                   
 l.279 		A
          vremo quindi: </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//budget.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//prodline.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//invlev.jpeg>]
-<./img//casipart.jpeg, id=464, 642.4pt x 549.05125pt>
+<./img//casipart.jpeg, id=471, 642.4pt x 549.05125pt>
 File: ./img//casipart.jpeg Graphic file (type jpg)
 <use ./img//casipart.jpeg>
 Package pdftex.def Info: ./img//casipart.jpeg  used on input line 291.
 (pdftex.def)             Requested size: 192.72148pt x 164.71664pt.
-<./img//lottoec.jpeg, id=465, 642.4pt x 398.48875pt>
+<./img//lottoec.jpeg, id=472, 642.4pt x 398.48875pt>
 File: ./img//lottoec.jpeg Graphic file (type jpg)
 <use ./img//lottoec.jpeg>
 Package pdftex.def Info: ./img//lottoec.jpeg  used on input line 324.
 (pdftex.def)             Requested size: 192.72148pt x 119.54755pt.
-<./img//linlivnonlin.jpeg, id=466, 642.4pt x 386.44376pt>
+<./img//linlivnonlin.jpeg, id=473, 642.4pt x 386.44376pt>
 File: ./img//linlivnonlin.jpeg Graphic file (type jpg)
 <use ./img//linlivnonlin.jpeg>
 Package pdftex.def Info: ./img//linlivnonlin.jpeg  used on input line 373.
@@ -905,7 +905,7 @@ File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 584.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [13]
-<./img//inssol.jpeg, id=490, 642.4pt x 227.85126pt>
+<./img//inssol.jpeg, id=497, 642.4pt x 227.85126pt>
 File: ./img//inssol.jpeg Graphic file (type jpg)
 <use ./img//inssol.jpeg>
 Package pdftex.def Info: ./img//inssol.jpeg  used on input line 607.
@@ -924,7 +924,7 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 752.
                                                   
 l.752 $
        $\underline{x} = (0, 6.6, 0, -1.6)$$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//inssol.jpeg>]
-<./img//2sol.jpeg, id=498, 642.4pt x 385.44pt>
+<./img//2sol.jpeg, id=505, 642.4pt x 385.44pt>
 File: ./img//2sol.jpeg Graphic file (type jpg)
 <use ./img//2sol.jpeg>
 Package pdftex.def Info: ./img//2sol.jpeg  used on input line 840.
@@ -938,7 +938,7 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 862.
                                                   
 l.862 ...n z = \overline{c}_s x_s + \overline{z}$$
                                                    </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//2sol.jpeg>]
-<./img//bi.jpeg, id=507, 642.4pt x 445.665pt>
+<./img//bi.jpeg, id=514, 642.4pt x 445.665pt>
 File: ./img//bi.jpeg Graphic file (type jpg)
 <use ./img//bi.jpeg>
 Package pdftex.def Info: ./img//bi.jpeg  used on input line 899.
@@ -958,7 +958,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 922--923
 
  []
 
-<./img//disc.jpeg, id=508, 642.4pt x 390.45876pt>
+<./img//disc.jpeg, id=515, 642.4pt x 390.45876pt>
 File: ./img//disc.jpeg Graphic file (type jpg)
 <use ./img//disc.jpeg>
 Package pdftex.def Info: ./img//disc.jpeg  used on input line 940.
@@ -981,7 +981,7 @@ l.962 		\end{itemize}
                                                   
 l.962 		\end{itemize}
                       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//bi.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//disc.jpeg>]
-<./img//grafescan.jpeg, id=519, 642.4pt x 385.44pt>
+<./img//grafescan.jpeg, id=526, 642.4pt x 385.44pt>
 File: ./img//grafescan.jpeg Graphic file (type jpg)
 <use ./img//grafescan.jpeg>
 Package pdftex.def Info: ./img//grafescan.jpeg  used on input line 994.
@@ -1000,7 +1000,7 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1117.
                                                   
 l.1117 	\item $
                x_3 = x_4 = 0$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafescan.jpeg>]
-<./img//grafsolmult.jpeg, id=525, 642.4pt x 422.57875pt>
+<./img//grafsolmult.jpeg, id=532, 642.4pt x 422.57875pt>
 File: ./img//grafsolmult.jpeg Graphic file (type jpg)
 <use ./img//grafsolmult.jpeg>
 Package pdftex.def Info: ./img//grafsolmult.jpeg  used on input line 1173.
@@ -1019,17 +1019,17 @@ Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1261.
                                                   
 l.1261 	\item \hl
                  {$\min < 0$}: l'algoritmo visita tutte le BFS </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafsolmult.jpeg>]
-<./img//notconv.jpeg, id=531, 642.4pt x 483.8075pt>
+<./img//notconv.jpeg, id=539, 642.4pt x 483.8075pt>
 File: ./img//notconv.jpeg Graphic file (type jpg)
 <use ./img//notconv.jpeg>
 Package pdftex.def Info: ./img//notconv.jpeg  used on input line 1272.
 (pdftex.def)             Requested size: 192.72148pt x 145.14337pt.
-<./img//conv.jpeg, id=532, 642.4pt x 547.04375pt>
+<./img//conv.jpeg, id=540, 642.4pt x 547.04375pt>
 File: ./img//conv.jpeg Graphic file (type jpg)
 <use ./img//conv.jpeg>
 Package pdftex.def Info: ./img//conv.jpeg  used on input line 1283.
 (pdftex.def)             Requested size: 192.72148pt x 164.11438pt.
-<./img//esdegen.jpeg, id=533, 642.4pt x 378.41376pt>
+<./img//esdegen.jpeg, id=541, 642.4pt x 378.41376pt>
 File: ./img//esdegen.jpeg Graphic file (type jpg)
 <use ./img//esdegen.jpeg>
 Package pdftex.def Info: ./img//esdegen.jpeg  used on input line 1308.
@@ -1064,12 +1064,29 @@ File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1512.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[20]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_p/6_p.tex)
+[20]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_p/6_p.tex
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [21]
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 129.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [22]
+Underfull \hbox (badness 3271) in paragraph at lines 132--133
+[]\OT1/ptm/m/n/10 ma in real-ta1 que-sti so-to-pro-ble-mi so-no in-si-se-mi di
+ []
+
+)
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 144.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [21] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
+ [23
+
+] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1077,21 +1094,21 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 20AB3BBA48D8DCB1C8C60F02EA9CB014;10589.
+(rerunfilecheck)             Checksum: B1767814E71B77D45D54DF2D93ED4BEE;11432.
  ) 
 Here is how much of TeX's memory you used:
- 14980 strings out of 478994
- 226300 string characters out of 5858185
- 713541 words of memory out of 5000000
- 31929 multiletter control sequences out of 15000+600000
+ 14984 strings out of 478994
+ 226346 string characters out of 5858185
+ 713633 words of memory out of 5000000
+ 31930 multiletter control sequences out of 15000+600000
  443689 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  81i,15n,88p,540b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (21 pages, 1251604 bytes).
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (23 pages, 1260505 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 581 compressed objects within 6 object streams
- 197 named destinations out of 1000 (max. 500000)
- 608 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 670 PDF objects out of 1000 (max. 8388607)
+ 595 compressed objects within 6 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 616 words of extra memory for PDF output out of 10000 (max. 10000000)
 
