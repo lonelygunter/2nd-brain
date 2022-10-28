@@ -147,6 +147,8 @@ e vincoli:
     \item $x_1,\ x_2 \geq 0$
 \end{itemize}
 
+che avrà come \hl{soluzione} $(3, 3)$ con uppeboound $z = 39$.
+
 invece per il \hl{sottoproblema $P_2$} con f.o:
 $$\max z = 5x_1 + 8x_2$$
 
@@ -158,32 +160,21 @@ e vincoli:
     \item $x_1,\ x_2 \geq 0$
 \end{itemize}
 
+che avrà come \hl{soluzione} $(1.8, 4)$ con uppeboound $z = 41$.
 
-ma in realtà questi sotoproblemi sono insisemi di ammissibiilita del problema rilassato dei sottoproblemi
-
-
-analizzando i due sottoproblemi abbiamo che al primo abiamo che risolvendo il sottoproblema 1 con soluzione 3, 3 con z = 39 allora non ho bisogno di eplorare ancora dato che ho già la soluzione ottima:
-
-img
-
-dato che è intera la soluzione allora non devo più cercarne nel sottoprob 1 (soluizone ammissible che possono implemntare che ha un oprfitto di 39 ma non sono certo ceh si a soluzione ottiam di tuto il porblema ma sicuro di quello $P_1$)
+Avendo \hl{numeri interi in $P_1$} ho una soluzione ottima e non dovrò fare branch su $P_1$ e dato il suo valore di $z$ che è \hl{cerco in $P_2$} con f.o:
+risolveremo allora risolvendo il sottoproblema 1 con soluzione 3, 3 con z = 39 allora non ho bisogno di eplorare ancora dato che ho già la soluzione ottima \hl{minore di quello di $P_2$} allora: \hl{scarto $P_1$ e continuo i branch su $P_2$}.
 
 
-in $P_2$ invece abbiamo che la soluzione ottima del rilassamento è 1.8, 4 z = 41 sone z è l'upperbound che è una stima per eccesso ottistica che limita le soluzioni.
-
-arrestando ora l'algoritmo abbiamo che non potremo sapere se il secondo sottoproblema darà un valore migliore. dato che è una "promessa" posso arrivarci ma non è detto
-
-se entrambe le sottopblb sono uguali e mi serve una sla soluzione posso fermarmi
-
-
-
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{nop1.jpeg}
+\caption{Scarto del primo child} 
+\label{nop1}
+\end{figure}
 
 
-
-
-
-
-risolvendo il rilassamento di $P_2$ so che possono avere un porfitot al masisimo di 41. avendo com esoluzione un valore continuo allora effetttuo un branch, e quindi scartiamo la soluzione di $P_1$, ed effettuando i l bamch con $P_3$ che ha  $x_1 \leq 1$ e $P_4$ che ha $x_1 \geq 2$
+Effettuando il branch avremo con $P_3$ che ha  $x_1 \leq 1$ e $P_4$ che ha $x_1 \geq 2$
 
 risolviamo i loro rilassamenti 
 
