@@ -1625,18 +1625,40 @@ $$
 \end{array} } \right]
 $$
 
-che non e1 ottima. Entra in base $x_5$:
+che non è ottima. Entra in base $x_5$:
 $$\min (\frac{12}{3},\ \frac{4}{1}) = 4$$
 
 Notiamo che, avendo valori uguali, ci conviene prendere $r = 3$ in modo che se ne vada $\alpha_1$:
 
 $$
 \left[ {\begin{array}{ccccccc}
-	0 & 0 & 1 & 0.4 & 1 & -0.2 & 4\\
-	0 & 1 & 1 & 0.2 & 0 & 0.4 & 5\\
-	1 & 0 & 1 & 0.2 & 0 & -0.6 & 0\\
+	5 & 0 & 5 & 1 & 0 & 0 & 0\\
+	-1 & 1 & 0 & 0 & 0 & 0 & 5\\
+	-2 & 0 & -1 & 0 & 1 & -1 & 4\\
 	0 & 0 & 0 & 0 & 0 & 1 & 0\\
 \end{array} } \right]
 $$
 
-che e1 soluzione ottima per il problema artificiale.
+che è soluzione ottima per il problema artificiale.
+
+Dato che $\rho = 0$, la soluzione ottima di ($P_a$) è ammissibile per ($P$). Eliminiamo la colonna di $\alpha_1$ e risciviamo la f.o. originale:
+
+$$
+\left[ {\begin{array}{cccccc}
+	5 & 0 & 5 & 1 & 0 & 0\\
+	-1 & 1 & 0 & 0 & 0 & 5\\
+	-2 & 0 & -1 & 0 & 1 & 4\\
+	3 & -7 & 2 & 0 & 0 & 0\\
+\end{array} } \right]
+$$
+
+si porta in forma canonica f.o. portanto a $0$ il valore di $x_2$ della f.o.:
+
+$$
+\left[ {\begin{array}{cccccc}
+	5 & 0 & 5 & 1 & 0 & 0\\
+	-1 & 1 & 0 & 0 & 0 & 5\\
+	-2 & 0 & -1 & 0 & 1 & 4\\
+	-4 & 0 & 2 & 0 & 0 & 35\\
+\end{array} } \right]
+$$

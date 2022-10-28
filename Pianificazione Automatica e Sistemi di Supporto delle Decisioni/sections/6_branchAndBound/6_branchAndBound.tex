@@ -4,22 +4,21 @@
 % Principio di funzionamento dell'argoritmo Branch-and-Bound
 \subsection{Principio di funzionamento dell'argoritmo Branch-and-Bound}
 
-l'imoportanza dell'ottimizzazzione di questi problemi sono date da alcune considerazioni:
+I problemi che cerchiamo di risolvere sono \hl{lineari con variabli decisionali}, il problema è che \hl{alcune variabili possono essere intere}, o anche binarie, al posto di essere continue. Per questi casi abbiamo alcuni \hl{approcci naive} da usare:
 
-i nostri problemi sono lineari con variabli decisionali i vincoli sono lineare. ma c'e1 di diverso che alcune variabili non sono continue ma posso assumere solo valori di tipo intero a volte anche binerie qiuidni 0 o 1:
-
-approcci da usare:
-
+\begin{enumerate}
+    \item 
+\end{enumerate}
 brute force:
 abbaimo un problema con n variabili di tipo binario, sappiamo che le soluzioni ammissimisi e non sono $2^n$. un approccio di brute force consiste nel generare tutte le soluzioni e per ciascune verificare se i vincoli sono soddisfatti e se si calcolare i lvalore della misura di performance
 
 es:
 \dots
 
-ma questo approccio e1 naive dato che non e1 compitazionalemte ammissibile.
+ma questo approccio è naive dato che non è compitazionalemte ammissibile.
 
 approccio 2:
-non so risolvere i problemi con le variabili intere, ma appossimo il problema a variabili intere e "rilasso" il vincolo di intergita1:
+non so risolvere i problemi con le variabili intere, ma appossimo il problema a variabili intere e "rilasso" il vincolo di intergità:
 
 chiamo allora P  il problema:
 
@@ -27,7 +26,7 @@ chiamo allora P  il problema:
 
 nel rilassamento continuo notiamo che non abbiamo il vincolo di =0/1, invece le variabili sono contenute tra 0 <= x >= 1.
 
-risolvendo il problema puo1 uscire un valore frazionario dato che potrebbe uscire esattamente la meta1. avremo allora un caso fortunato (soluzione ottima) lo e1 anche per entrambi i problemi, quidni abbiamo che la soluzione e1 quella di partenza
+risolvendo il problema può uscire un valore frazionario dato che potrebbe uscire esattamente la metà. avremo allora un caso fortunato (soluzione ottima) lo è anche per entrambi i problemi, quidni abbiamo che la soluzione è quella di partenza
 
 
 caso sfortunato: abbiamo delle variabili trazioniarie allora arrotondo 0.53 -> 1, 0.35 -> 0
@@ -37,25 +36,25 @@ dopo un arrotondamento la soluzione potrebbe comunque essere non ammissibile o n
 
 
 altro approccio:
-possiamo solstituire il vincolo di binarieta con quello ci continuita questa sostituizione porta ad una soluzione non lineare allora e1 un prbema di ottimizazione non lineare per il quale non si conoscono procedimenti risolutivi ottimi.
+possiamo solstituire il vincolo di binarieta con quello ci continuita questa sostituizione porta ad una soluzione non lineare allora è un prbema di ottimizazione non lineare per il quale non si conoscono procedimenti risolutivi ottimi.
 
 
 
 approccio branch-and-bound:
-e1 detta tecnica di enumeramerazione perasiale
+è detta tecnica di enumeramerazione perasiale
 
-1. ci si procura una stima del valore della soluzione ottima che e1 ottenuta andando a rialssare il vinclo di integratia1 sulle veriabili intere. 
+1. ci si procura una stima del valore della soluzione ottima che è ottenuta andando a rialssare il vinclo di integratià sulle veriabili intere. 
 
-che relazione c'e1 tra il problema lineare con variabili intere P e quello rilassaro R(P) con variabili rese continue
+che relazione c'è tra il problema lineare con variabili intere P e quello rilassaro R(P) con variabili rese continue
 
-il rilassamento posso risolverlo tramite una blackbox che lo risolve cioe1 che dice se il problem e1 inammissibile soluzione illimitata, mi da la soluzione ottima. 
+il rilassamento posso risolverlo tramite una blackbox che lo risolve cioè che dice se il problem è inammissibile soluzione illimitata, mi da la soluzione ottima. 
 
 
-1 caso: rilassamento di P e1 inammissibile. in questo caso il porblema P sara1 inammissiible datoche che R(P) contiene P:
+1 caso: rilassamento di P è inammissibile. in questo caso il porblema P sarà inammissiible datoche che R(P) contiene P:
 
 img
 
-2 caso: la blackbox ci dice che i lproblema e1 unbounded, allora si possono verificare i casi in cui:
+2 caso: la blackbox ci dice che i lproblema è unbounded, allora si possono verificare i casi in cui:
 
 es: $x_1 \leq 0.5$
 
@@ -63,7 +62,7 @@ img
 
 dove avremo sempre intersezioni con il regime ottimo, allora z tente a + infinito anche per quanto riguarda le variabili intere.
 
-allora trovo che per R(P) unbounded avro1 P unbounded o non ammissibile:
+allora trovo che per R(P) unbounded avrò P unbounded o non ammissibile:
 
 es: $x_1 \geq \frac{1}{3},\ x_1 \leq \frac{2}{3}$
 
@@ -78,7 +77,7 @@ stiamo allora cercando di risolver il problema P a variaibli intere tramite il s
 
 3 caso: abbiamo la soluzione ottima, ma:
 
-1. potrebbe capitare che il rilassamento R(P) ha soluzione ottima ma e1 inammissible P:
+1. potrebbe capitare che il rilassamento R(P) ha soluzione ottima ma è inammissible P:
 
 es:
 
@@ -90,22 +89,22 @@ vincoli:
 
 img
 
-avremo come soluzioni intere 0,0 0,1 1,0 quindi il rilassamento e1 ammissibile ma se gaurdiamo le soluzioni ottime 
+avremo come soluzioni intere 0,0 0,1 1,0 quindi il rilassamento è ammissibile ma se gaurdiamo le soluzioni ottime 
 
 
 vado a traslare la curva di livello fino a trovare la soluzione R(P) data dal primo punto ammissibile del quadrante. per la soluzione ottima di P dobbiamo prendere la prima soluzione ocntinua
 
 
-avremo come soluizione ottima di ottimizzazione sempre quella di R(P) quindi quella del rilassamento continuo dato che ha meno vincoli quindi fornisce una soluzione ottimistica, cioe1 che ci da1 una soluzione miglioe o ugulae della nostra stima. quindi ci fornisce una stima per eccesso
+avremo come soluizione ottima di ottimizzazione sempre quella di R(P) quindi quella del rilassamento continuo dato che ha meno vincoli quindi fornisce una soluzione ottimistica, cioè che ci dà una soluzione miglioe o ugulae della nostra stima. quindi ci fornisce una stima per eccesso
 
 
-quindi in ogni caso la soluzione ottima del problema se stiamo massimizzando e1 sempre sovfrastata dalla soluzojne ottiam del continuo. se sto massimizzando allora la soluzione ottiam continua e1 maggiore = ottima della solzioine ottima a variaibli intere se sto minimizzando ragiono al contrario
+quindi in ogni caso la soluzione ottima del problema se stiamo massimizzando è sempre sovfrastata dalla soluzojne ottiam del continuo. se sto massimizzando allora la soluzione ottiam continua è maggiore = ottima della solzioine ottima a variaibli intere se sto minimizzando ragiono al contrario
 
 
 
-ma notiamo che se risolvo il rilassamento che mi viene dato dalla black box non posso sapere se il problema P e1 unbounded o non ammissibile.
+ma notiamo che se risolvo il rilassamento che mi viene dato dalla black box non posso sapere se il problema P è unbounded o non ammissibile.
 
-poi abbiamo capiteo che poiche1 c'e1 l'ambiguita1 e non so cosa sucede a P, oltre a conoscere il bounding si usa un branch cioe1 una suddivisione del problema in sottoproblemi. 
+poi abbiamo capiteo che poichè c'è l'ambiguità e non so cosa sucede a P, oltre a conoscere il bounding si usa un branch cioè una suddivisione del problema in sottoproblemi. 
 
 es: 
 
@@ -113,10 +112,10 @@ do alla blackbox il rilassamento dove abbiamoche ha soluzione ottima in 2.25, 3.
 
 sul problema P possi dire che se fosse ammissiible no avrebbe un valore di z superiore a 41.25 
 
-sappiamoche se P ha soluzione ottiama non puo1 esserea superiore a 41.25
+sappiamoche se P ha soluzione ottiama non può esserea superiore a 41.25
 
 
-effetttuo allora un branch per creare dei sottoproblmi allora la soluzione si trova in uno die due. la nostra soluzione e1 frazionaria, una soluzonedl problema a variabili intere o si trova in un sottoproblema o nellaltro:
+effetttuo allora un branch per creare dei sottoproblmi allora la soluzione si trova in uno die due. la nostra soluzione è frazionaria, una soluzonedl problema a variabili intere o si trova in un sottoproblema o nellaltro:
 
 sottoprob p1:\dots
 
@@ -129,18 +128,18 @@ allora una soluzoone interea del porblema P si traova per forza in uno dei 2 sot
 
 img
 
-ma in realta1 questi sotoproblemi sono insisemi di ammissibiilita del problema rilassato dei sottoproblemi
+ma in realtà questi sotoproblemi sono insisemi di ammissibiilita del problema rilassato dei sottoproblemi
 
 
-analizzando i due sottoproblemi abbiamo che al primo abiamo che risolvendo il sottoproblema 1 con soluzione 3, 3 con z = 39 allora non ho bisogno di eplorare ancora dato che ho gia1 la soluzione ottima:
+analizzando i due sottoproblemi abbiamo che al primo abiamo che risolvendo il sottoproblema 1 con soluzione 3, 3 con z = 39 allora non ho bisogno di eplorare ancora dato che ho già la soluzione ottima:
 
 img
 
-dato che e1 intera la soluzione allora non devo piu1 cercarne nel sottoprob 1 (soluizone ammissible che possono implemntare che ha un oprfitto di 39 ma non sono certo ceh si a soluzione ottiam di tuto il porblema ma sicuro di quello p1)
+dato che è intera la soluzione allora non devo più cercarne nel sottoprob 1 (soluizone ammissible che possono implemntare che ha un oprfitto di 39 ma non sono certo ceh si a soluzione ottiam di tuto il porblema ma sicuro di quello p1)
 
 
-in p2 invece abbiamo che la soluzione ottima del rilassamento e1 1.8, 4 z = 41 sone z e1 l'upperbound che e1 una stima per eccesso ottistica che limita le soluzioni.
+in p2 invece abbiamo che la soluzione ottima del rilassamento è 1.8, 4 z = 41 sone z è l'upperbound che è una stima per eccesso ottistica che limita le soluzioni.
 
-arrestando ora l'algoritmo abbiamo che non potremo sapere se il secondo sottoproblema dara1 un valore migliore. dato che e1 una "promessa" posso arrivarci ma non e1 detto
+arrestando ora l'algoritmo abbiamo che non potremo sapere se il secondo sottoproblema darà un valore migliore. dato che è una "promessa" posso arrivarci ma non è detto
 
 se entrambe le sottopblb sono uguali e mi serve una sla soluzione posso fermarmi
