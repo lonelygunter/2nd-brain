@@ -174,36 +174,82 @@ risolveremo allora risolvendo il sottoproblema 1 con soluzione 3, 3 con z = 39 a
 \end{figure}
 
 
-Effettuando il branch avremo con $P_3$ che ha  $x_1 \leq 1$ e $P_4$ che ha $x_1 \geq 2$
+Effettuando il branch avremo:
 
-risolviamo i loro rilassamenti 
+\begin{itemize}
+    \item \hl{$P_3$}: con vincolo $x_1 \leq 1$
+    \item \hl{$P_4$}: con vincolo $x_1 \geq 2$
+\end{itemize}
 
-tenendo in conto che i child ereditano i vincoli del parent
+tenendo in conto che \hl{i child ereditano i vincoli del parent}, risolviamo i loro rilassamenti:
 
-
-avremo che $R(P_4)$ è inammissibile allora anche P lo sarà
-invece per $P_3$ abbiamo che $R(P_3)$ avrà $(1, 4.44)$ con $z = 40.55$
-
-allora continuamo con il branch ed avremo:
-
-$P_5 x_2 \leq 4$ con $(1, 4)$ con $z = 37$
-$P_6 x_2 \geq 5$ con $(0, 5)$ con $z = 40$
-
-scartiamo allora $P_5$ che ci fa arrivare ad un massimo di 37 < 40 di $P_6$
-
-abiamo allora che non ci sono piu branch da creare.
-
-fathoming: posso eliminare un sottoprob se
-
-- il rilassmento suo è inammissible
-- il rilassamento di $P$ ($R(P)$) ha soluzione ottima intera, allora è anche osluzione di $P$
-- fenomeno di dominanza: una $z$ è più grande delle altre
+\begin{itemize}
+    \item \hl{$P_4$}: $R(P_4)$ inammissibile, dato che non ha intersezioni, allora anche P lo sarà
+    \item \hl{$P_3$}:$R(P_3)$ avrà $(1, 4.44)$ con $z = 40.55$
+\end{itemize}
 
 
-per scrivere lo pseudocodice dobbimao veder come fare branch se abbiamo più variabili: prender la parte frazionaria che più si avvicina a $0.5$
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{child2.jpeg}
+\caption{Secondo child} 
+\label{child2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{nop4.jpeg}
+\caption{Scarto del secondo child} 
+\label{nop4}
+\end{figure}
 
 
-avremo una convergenza se l'insieme di ammissibilità è limitato, allo raad ogni branch avremo un numero di nodi finito. es per variabili binarie avremo: $2^n$ nodi nel caso peggiore. in realtà in genre è molto più piccolo
+continuando con il branch avremo:
+
+\begin{itemize}
+    \item \hl{$P_5$}: con $x_2 \leq 4$ con $(1, 4)$ con $z = 37$
+    \item \hl{$P_6$}: con $x_2 \geq 5$ con $(0, 5)$ con $z = 40$
+\end{itemize} 
+
+scartiamo allora $P_5$ che ci fa arrivare ad un massimo di $37 < 40$ di $P_6$:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{nop56.jpeg}
+\caption{Scarto del terzo child} 
+\label{nop56}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{child3.jpeg}
+\caption{Terzo child} 
+\label{child3}
+\end{figure}
+
+
+siamo quindi arrivati nella situazione in cui \hl{non ci sono piu' branch da creare}.
+
+
+% Fathoming
+\subsection{Fathoming}
+
+Completa l'analisi dei sottoproblemi dicendo che \hl{posso eliminare un sottoproblema} se:
+
+\begin{itemize}
+    \item il \hl{rilassamento è inammissible}
+    \item il rilassamento di $P$ \hl{($R(P)$) ha soluzione ottima intera}, allora è anche soluzione di $P$
+    \item è verificato il \hl{fenomeno di dominanza}, quindi una $z$ è più grande delle altre
+\end{itemize}
+
+Lo \hl{pseudocodice} è:
+
+\begin{itemize}
+    \item[] $L := \{P\}$
+    \item[] $z^{\text{best}} := -\infty$
+    \item[] $x^{\text{best}} := \text{NULL}$
+    \item[]
+\end{itemize}
 
 
 % Esercizio Branch-and-Bound
