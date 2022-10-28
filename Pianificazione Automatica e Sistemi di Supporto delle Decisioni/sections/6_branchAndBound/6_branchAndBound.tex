@@ -9,6 +9,7 @@ I problemi che cerchiamo di risolvere sono \hl{lineari con variabli decisionali}
 \begin{enumerate}
     \item 
 \end{enumerate}
+
 brute force:
 abbaimo un problema con n variabili di tipo binario, sappiamo che le soluzioni ammissimisi e non sono $2^n$. un approccio di brute force consiste nel generare tutte le soluzioni e per ciascune verificare se i vincoli sono soddisfatti e se si calcolare i lvalore della misura di performance
 
@@ -143,3 +144,79 @@ in p2 invece abbiamo che la soluzione ottima del rilassamento è 1.8, 4 z = 41 s
 arrestando ora l'algoritmo abbiamo che non potremo sapere se il secondo sottoproblema darà un valore migliore. dato che è una "promessa" posso arrivarci ma non è detto
 
 se entrambe le sottopblb sono uguali e mi serve una sla soluzione posso fermarmi
+
+
+
+
+
+
+
+
+
+risolvendo il rilassamento di p2 so che possono avere un porfitot al masisimo di 41. avendo com esoluzione un valore continuo allora effetttuo un branch, e quindi scartiamo la soluzione di p1, ed effettuando i l bamch con p3 che ha  x1 <= 1 e p4 che ha x1 >= 2
+
+risolviamo i loro rilassamenti 
+
+tenendo in conto che i child ereditano i vincoli del parent
+
+
+avremo che R(P4) è inammissibile allora anche P lo sarà
+invece per p3 abbiamo che R(P3) avrà 1, 4.44 con z = 40.55
+
+allora continuamo con il branch ed avremo:
+
+p5 x2 <= 4 con 1, 4 con z = 37
+p6 x2 >= 5 con 0, 5 con z = 40
+
+scartiamo allora p5 che ci fa arrivare ad un massimo di 37 < 40 di p6
+
+abiamo allora che non ci sono piu branch da creare.
+
+fathoming: posso eliminare un sottoprob se
+
+- il rilassmento suo è inammissible
+- il rilassamento di P (R(P)) ha soluzione ottima intera, allora è anche osluzione di P
+- fenomeno di dominanza: una z è più grande delle altre
+
+
+per scrivere lo pseudocodice dobbimao veder come fare branch se abbiamo più variabili: prender la parte frazionaria che più si avvicina a 0.5
+
+
+avremo una convergenza se l'insieme di ammissibilità è limitato, allo raad ogni branch avremo un numero di nodi finito. es per variabili binarie avremo: $2^n$ nodi nel caso peggiore. in realtà in genre è molto più piccolo
+
+
+% Esercizio Branch-and-Bound
+\subsection{Esercizio Branch-and-Bound}
+
+Funzione obiettivo:
+$$\max z = x_1 + x_2$$
+
+v.o:
+
+\begin{itemize}
+    \item $-6x_1 + 12x_2 \leq 9$
+    \item $6x_1 - 4x_2 \leq 9$
+    \item $x_1, x_2 \geq 0$
+\end{itemize}
+
+grafico:
+
+\dots
+
+abbiamo che la soluzione ottima (l'intersezione) del risultato ocntinuo è $x_1 = 3,\ x_2 = 2.25$ con $z = 5.25$. Allora prenderemo come upper bound $5.25 \approx 5$.
+
+La variabile $x_2$ ha valore non intero compreso tra 2 e 3. Effettuiamo un branch tramite intersezioni con i semipiani $x_2 \leq 2$ e $x_2 \geq 3$:
+
+img
+
+per p2 non avremo intersezione quindi è inammissibile. per p1 con soluzione ottima in x1 = 2.83, x2 = 2 con z = 4.83 quindi upperbound: 4
+
+x1 ha valore frazionario allora sara compreso tra 2 e 3. allora ramifichiamo e quindi creaiamo dei branch con x1 <= 2 e x1 >= 3.
+
+avermo allora che p4 non ha intresezione quindi sarà soluzione inammissibile e per p3 avremo che ha soluzione ottima in x1 = 2, x2 = 1.75 con z = 3.75 quindi arrotonodo l'upperbound a 3
+
+x2 ha valore frazionario allora sarà compreso tra 1 e 2. allora ramifichiamo e quini craei i branch con x2 <= 1 e x2 >= 2
+
+allora p6 sara inammissible e per p5 avremo che la sluzione ottima è in x1 = 1, x2 = 2 con z = 3
+
+allora la soluzione ottima è intera e quindi il branch and bound si interrompe
