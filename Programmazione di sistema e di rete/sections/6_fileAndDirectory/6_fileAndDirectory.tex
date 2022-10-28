@@ -550,3 +550,49 @@ abremo anche:
 \begin{itemize}
 	\item \textbf{path\_alloc}: restituisce la massima dimenzione disponibile per un path in un determinato sistema operativo: PATH\_MAX + 1
 \end{itemize}
+
+in myftw la funzione dopath e1 ricorsiva e richiama se stessa per poter entrare nei nodi dell'albero
+
+strcopy soggetta a stack overflow meglio usare strncopy
+
+in fullpath avremo ttutti i path dei file da dare alla lstat() (lstat perchè ci serve che i link simboklici vengano visti come tali)
+
+in dopath if 1 entra se in errore if 2 check se abbiamo una directory se non lo è fa un return perchè saremo arrivati alla foglia quindi torna indietro infatti FTW\_F if 3 se è una directory in ret = 0 e si continua 
+
+notrare che pre far fermare la lettura si usa un 0 dato che null = 0 ma != "0"
+
+
+
+
+chdir():
+equivamente a cd, apssiamo un path e lui cambia cwd
+
+fchdir():
+fd si usa con open con flag per le direcotory
+
+getcwd():
+path abbastanza grande per path + null 
+
+
+
+CAP 6
+
+password file:
+/etc/passwd in linux in mac sono se in modalità single user
+
+
+uname():
+dà le stesse info di uname -a
+
+
+time and date routines:
+sono le routine per fare il conto del tempo utile per il profiling di un programma dove si va a capire quando il programma ha tardato:
+time() che ritorna il tempo in sec. funzione che da un valore assoluto con riferimento alle epoch. 
+gettimeofday(): aggiunge i microsecondi quindi abbiamo unas truttura di 2 interi
+clock\_gettime(): aggiugne i nanosec quindi abbiamo una struttura di 2 interi
+
+questi secondi dono delle date infatti possiamo andare dai dec ad una struttra gmttime(): tempo del meridiano 0 localtime(): info sulla timezone. andiamo alloa ad una struttura tm che registra ore min sec ecc per fare in processo opposto usiamo mktime()
+
+
+
+(sapere quando compiremo un miliardo di secondi)
