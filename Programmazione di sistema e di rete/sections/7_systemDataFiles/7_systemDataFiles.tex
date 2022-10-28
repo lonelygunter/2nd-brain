@@ -1,0 +1,39 @@
+\newpage
+\section{System Data Files and Information}
+
+
+% Password file
+\subsection{Password file}
+
+Nei sistemi Linux è presente come: 
+
+\begin{lstlisting}
+/etc/passwd
+\end{lstlisting}
+
+Nei sistemi MacOS, invece, non può essere vista in modalità "normale", infatti si può vedere solo se in modalità single user.
+
+
+% Time and Date Routines
+\subsection{Time and Date Routines}
+
+Sono delle \hl{routine per effettuare il conto del tempo utile} per il profiling di un programma dove si va a capire quando il programma si è tardato con l'esecuzione:
+
+\begin{itemize}
+    \item \hl{time()}: che ritorna il tempo in sec facendo riferimento alla epoch
+    \item \hl{gettimeofday()}: aggiunge i microsec quindi abbiamo una struttura di 2 interi
+    \item \hl{clock\_gettime()}: aggiunge i nanosec quindi abbiamo una struttura di 2 interi
+\end{itemize}
+
+Questo tempo può essere \hl{trasformato in una data}, infatti possiamo andare dai sec ad una struttura data tramite:
+
+\begin{itemize}
+    \item \hl{gmttime()}: tempo del meridiano 0
+    \item \hl{localtime()}: info sulla timezone raggruppate nella struttura "tm"
+    \item \hl{mktime()}: per effettuare il processo opposto
+\end{itemize}  
+
+Per vedere quando compiremo 1.000.000.000 di sec:
+\begin{lstlisting}
+date -r $(($(date -j -f %Y%m%d-%H%M%S 20010101-190000  +%s) + 1000000000)) '+%m/%d/%Y:%H:%M:%S'
+\end{lstlisting}

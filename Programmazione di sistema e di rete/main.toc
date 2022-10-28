@@ -58,3 +58,7 @@
 \contentsline {subsection}{\numberline {\mbox {VIII-G}}Hard link e link simbolici}{17}{subsection.8.7}%
 \contentsline {subsection}{\numberline {\mbox {VIII-H}}File times}{17}{subsection.8.8}%
 \contentsline {subsection}{\numberline {\mbox {VIII-I}}Reading directories}{18}{subsection.8.9}%
+\contentsline {subsection}{\numberline {\mbox {VIII-J}}Funzione chdir()}{20}{subsection.8.10}%
+\contentsline {section}{\numberline {IX}System Data Files and Information}{20}{section.9}%
+\contentsline {subsection}{\numberline {\mbox {IX-A}}Password file}{20}{subsection.9.1}%
+\contentsline {subsection}{\numberline {\mbox {IX-B}}Time and Date Routines}{20}{subsection.9.2}%
