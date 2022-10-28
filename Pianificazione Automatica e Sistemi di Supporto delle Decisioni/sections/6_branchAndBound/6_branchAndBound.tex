@@ -1,133 +1,163 @@
 \newpage
 \section{Branch-and-Bound Technique for Solving Integer Programs}
 
-% Principio di funzionamento dell'argoritmo Branch-and-Bound
-\subsection{Principio di funzionamento dell'argoritmo Branch-and-Bound}
+% Principi dell'algoritmo Branch-and-Bound
+\subsection{Principi dell'argoritmo Branch-and-Bound}
 
 I problemi che cerchiamo di risolvere sono \hl{lineari con variabli decisionali}, il problema è che \hl{alcune variabili possono essere intere}, o anche binarie, al posto di essere continue. Per questi casi abbiamo alcuni \hl{approcci naive} da usare:
 
 \begin{enumerate}
-    \item 
+    \item \hl{brute force}: se abbiamo n variabili binarie le soluzioni ammissibili sono $2^n$. Andremo quindi a \textbf{generare tutte le soluzioni e verficarne i vincoli} sono soddisfatti (non computazionalmente possibile)
+    \item \hl{rounding}: sostituisco le variabili intere con un "rilassamento" del vincolo di integrità. Quindi il problema \textbf{$P$}:
+        $$\max z = 3x_1 + 4x_2 - 2x_3 + 3x_4 - 2x_5$$
+
+        con vincoli:
+        \begin{itemize}
+            \item $2x_1 + 2x_2 + 2x_3 + 2x_4 + 2x_5 \leq 4$
+            \item $x_1, x_2, x_3, x_4, x_5 = 0/1$
+        \end{itemize}
+
+        diventa \textbf{$R(P)$}:
+        $$\max z = 3x_1 + 4x_2 – 2x_3 + 3x_4 – 2x_5$$
+        
+        con vincoli:
+        \begin{itemize}
+            \item $2x_1 + 2x_2 + 2x_3 + 2x_4 + 2x_5 \leq 4$
+            \item $0 \leq x_1, x_2, x_3, x_4, x_5 \leq 1$
+        \end{itemize}
+        
+        Avremo un \textbf{caso fortunato} se la soluzione di $R(P)$ è anche quella di $P$.
+
 \end{enumerate}
 
-brute force:
-abbaimo un problema con n variabili di tipo binario, sappiamo che le soluzioni ammissimisi e non sono $2^n$. un approccio di brute force consiste nel generare tutte le soluzioni e per ciascune verificare se i vincoli sono soddisfatti e se si calcolare i lvalore della misura di performance
 
-es:
-\dots
+% Approccio Branch-and-Bound
+\subsection{Approccio Branch-and-Bound}
 
-ma questo approccio è naive dato che non è compitazionalemte ammissibile.
+È detta tecnica di enumeramerazione parsiale dove \hl{ci si procura una stima del valore della soluzione ottima rilassando il vincolo di integrita'} sulle veriabili intere.
 
-approccio 2:
-non so risolvere i problemi con le variabili intere, ma appossimo il problema a variabili intere e "rilasso" il vincolo di intergità:
+Nella sua risoluzione tramite blackbox potremo avere \hl{4 casistiche}:
 
-chiamo allora P  il problema:
+\begin{enumerate}
+    \item \hl{$R(P)$ inammissibile} $\to$ $P$ inammissibile:
+    
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{rpp.jpeg}
+        \caption{$R(P)$ che contiene $P$} 
+        \label{rpp}
+        \end{figure}
+    
+    \item $R(P)$ unbounded $\to$ \hl{$P$ puo' essere unbounded} (dove abbiamo variabili intere):
+    
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{cas1.jpeg}
+        \caption{In caso di $P$ unbounded} 
+        \label{cas1}
+        \end{figure}
+    
+    \item $R(P)$ unbounded $\to$ \hl{$P$ puo' essere inammissibile} (dove non abbiamo variabili intere):
+    
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.25]{cas2.jpeg}
+        \caption{In caso di $P$ inammissibile} 
+        \label{cas2}
+        \end{figure}
 
-\dots
+        (p.s: non posso saperlo dato che la blackbox mi sa solo $R(P)$)
 
-nel rilassamento continuo notiamo che non abbiamo il vincolo di =0/1, invece le variabili sono contenute tra 0 <= x >= 1.
+    \item \hl{$R(P)$ ha soluzione ottima} $\to$ $P$ inammissibile
+        
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.25]{pin.jpeg}
+        \caption{$R(P)$ ottima ma $P$ inammissibile} 
+        \label{pin}
+        \end{figure}
 
-risolvendo il problema può uscire un valore frazionario dato che potrebbe uscire esattamente la metà. avremo allora un caso fortunato (soluzione ottima) lo è anche per entrambi i problemi, quidni abbiamo che la soluzione è quella di partenza
+        (p.s: non posso saperlo dato che la blackbox mi sa solo $R(P)$)
 
+    \item \hl{$R(P)$ ha soluzione ottima} $\to$ $P$ ammissibile
+        
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.25]{pam.jpeg}
+        \caption{$R(P)$ ottima ma $P$ ammissibile} 
+        \label{pam}
+        \end{figure}
 
-caso sfortunato: abbiamo delle variabili trazioniarie allora arrotondo 0.53 -> 1, 0.35 -> 0
+        dove avremo come \textbf{soluzioni intere}:
+        $$O(0,0),\ A(1,0),\ B(0, 1)$$
 
-dopo un arrotondamento la soluzione potrebbe comunque essere non ammissibile o non ottima. i rounding allora avranno $2^{n}$
+        Andrò allora a \textbf{traslare al curva di livello} fino a trovare la \textbf{soluzione $R(P)$: primo numero ammissibile} nella regione ammissibile, nceve \textbf{per $P$: primo numero intero ammissibile}
 
+\end{enumerate}
 
+La \hl{soluzione ottima di ottimizzazione sara' quella di $R(P)$} di rilassamento continuo, perché \hl{ha meno vincoli} fornendo una soluzione migliore o uguale della nostra stima. Allora se massimizziamo:
+$$Z^*_{R(P)} \geq Z^*_P$$
 
-altro approccio:
-possiamo solstituire il vincolo di binarieta con quello ci continuita questa sostituizione porta ad una soluzione non lineare allora è un prbema di ottimizazione non lineare per il quale non si conoscono procedimenti risolutivi ottimi.
+se sto minimizzando:
+$$Z^*_{R(P)} \leq Z^*_P$$
 
-
-
-approccio branch-and-bound:
-è detta tecnica di enumeramerazione perasiale
-
-1. ci si procura una stima del valore della soluzione ottima che è ottenuta andando a rialssare il vinclo di integratià sulle veriabili intere. 
-
-che relazione c'è tra il problema lineare con variabili intere P e quello rilassaro R(P) con variabili rese continue
-
-il rilassamento posso risolverlo tramite una blackbox che lo risolve cioè che dice se il problem è inammissibile soluzione illimitata, mi da la soluzione ottima. 
-
-
-1 caso: rilassamento di P è inammissibile. in questo caso il porblema P sarà inammissiible datoche che R(P) contiene P:
-
-img
-
-2 caso: la blackbox ci dice che i lproblema è unbounded, allora si possono verificare i casi in cui:
-
-es: $x_1 \leq 0.5$
-
-img
-
-dove avremo sempre intersezioni con il regime ottimo, allora z tente a + infinito anche per quanto riguarda le variabili intere.
-
-allora trovo che per R(P) unbounded avrò P unbounded o non ammissibile:
-
-es: $x_1 \geq \frac{1}{3},\ x_1 \leq \frac{2}{3}$
-
-img
-
-allora non avremo delle variaibli intere
-
-
-
-
-stiamo allora cercando di risolver il problema P a variaibli intere tramite il suo rilassamento.
-
-3 caso: abbiamo la soluzione ottima, ma:
-
-1. potrebbe capitare che il rilassamento R(P) ha soluzione ottima ma è inammissible P:
-
-es:
-
-img
-
-2. abbiamo f.o:
-
-vincoli:
-
-img
-
-avremo come soluzioni intere 0,0 0,1 1,0 quindi il rilassamento è ammissibile ma se gaurdiamo le soluzioni ottime 
+dove avrò rispettivamente \hl{upper-bound} e \hl{lower-bound}.
 
 
-vado a traslare la curva di livello fino a trovare la soluzione R(P) data dal primo punto ammissibile del quadrante. per la soluzione ottima di P dobbiamo prendere la prima soluzione ocntinua
+% Branching
+\subsection{Branching}
 
+Oltre ad upper-bound e lower-bound su effettua un \hl{branch} cioè una \hl{suddivisione del problema in sottoproblemi}, dove per le soluzioni ammissibili (s.a.):
 
-avremo come soluizione ottima di ottimizzazione sempre quella di R(P) quindi quella del rilassamento continuo dato che ha meno vincoli quindi fornisce una soluzione ottimistica, cioè che ci dà una soluzione miglioe o ugulae della nostra stima. quindi ci fornisce una stima per eccesso
+\begin{itemize}
+    \item $P$ s.a. = $P_1$ s.a. $\cup$ $P_2$ s.a.
+    \item $P_1$ s.a. $\cap$ $P_2$ s.a. = insieme vuoto
+    \item $\underline{x}^*$ $\notin$ $P_1$ s.a., $P_2$ s.a.
+\end{itemize}
 
+con $\underline{x}^*$ possibile vincolo applicabile a $x_1$ o $x_2$. Infatti per un problema a 2 variabili abbiamo:
 
-quindi in ogni caso la soluzione ottima del problema se stiamo massimizzando è sempre sovfrastata dalla soluzojne ottiam del continuo. se sto massimizzando allora la soluzione ottiam continua è maggiore = ottima della solzioine ottima a variaibli intere se sto minimizzando ragiono al contrario
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{branchprob.jpeg}
+\caption{Problema di branching} 
+\label{branchprob}
+\end{figure}
 
+con soluzione ottima in $(2.25, 3.75)$ con upper: $z = 41.25$.
 
+\hl{Avendo dei valori frazionari effetttuo un branch} per creare dei sottoproblemi. Avendo la soluzione in $(2.25, 3.75)$ allora effettuo il "troncamento" in:
+$$x_2 \leq 3,\ x_2 \geq 4$$
 
-ma notiamo che se risolvo il rilassamento che mi viene dato dalla black box non posso sapere se il problema P è unbounded o non ammissibile.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{child1.jpeg}
+\caption{Primo child} 
+\label{child1}
+\end{figure}
 
-poi abbiamo capiteo che poichè c'è l'ambiguità e non so cosa sucede a P, oltre a conoscere il bounding si usa un branch cioè una suddivisione del problema in sottoproblemi. 
+Quindi per il \hl{sottoproblema $P_1$} con f.o:
+$$\max z = 5x_1 + 8x_2$$
 
-es: 
+e vincoli:
+\begin{itemize}
+    \item $x_1 + x_2 \leq 6$
+    \item $5x_1 + 9x_2 \leq 45$
+    \item $x_2 \leq 3$
+    \item $x_1,\ x_2 \geq 0$
+\end{itemize}
 
-do alla blackbox il rilassamento dove abbiamoche ha soluzione ottima in 2.25, 3.75 con z = 41.25
+invece per il \hl{sottoproblema $P_2$} con f.o:
+$$\max z = 5x_1 + 8x_2$$
 
-sul problema P possi dire che se fosse ammissiible no avrebbe un valore di z superiore a 41.25 
+e vincoli:
+\begin{itemize}
+    \item $x_1 + x_2 \leq 6$
+    \item $5x_1 + 9x_2 \leq 45$
+    \item $x_2 \geq 4$
+    \item $x_1,\ x_2 \geq 0$
+\end{itemize}
 
-sappiamoche se P ha soluzione ottiama non può esserea superiore a 41.25
-
-
-effetttuo allora un branch per creare dei sottoproblmi allora la soluzione si trova in uno die due. la nostra soluzione è frazionaria, una soluzonedl problema a variabili intere o si trova in un sottoproblema o nellaltro:
-
-sottoprob p1:\dots
-
-sotttoprob P2:\dots
-
-
-allora una soluzoone interea del porblema P si traova per forza in uno dei 2 sottoproblemi dato che nel gp tra i due non ci sono valori interi. allora
-1 caratt: dividi il polema di partenza in sottoprob con una soluzoine ch ei strov ain p1 o p2 
-2 careatt: il branch taglia la soluzione frazionario (scegliendo arbitrariamente $x_1$ o $x_2$)
-
-img
 
 ma in realtà questi sotoproblemi sono insisemi di ammissibiilita del problema rilassato dei sottoproblemi
 
@@ -136,10 +166,10 @@ analizzando i due sottoproblemi abbiamo che al primo abiamo che risolvendo il so
 
 img
 
-dato che è intera la soluzione allora non devo più cercarne nel sottoprob 1 (soluizone ammissible che possono implemntare che ha un oprfitto di 39 ma non sono certo ceh si a soluzione ottiam di tuto il porblema ma sicuro di quello p1)
+dato che è intera la soluzione allora non devo più cercarne nel sottoprob 1 (soluizone ammissible che possono implemntare che ha un oprfitto di 39 ma non sono certo ceh si a soluzione ottiam di tuto il porblema ma sicuro di quello $P_1$)
 
 
-in p2 invece abbiamo che la soluzione ottima del rilassamento è 1.8, 4 z = 41 sone z è l'upperbound che è una stima per eccesso ottistica che limita le soluzioni.
+in $P_2$ invece abbiamo che la soluzione ottima del rilassamento è 1.8, 4 z = 41 sone z è l'upperbound che è una stima per eccesso ottistica che limita le soluzioni.
 
 arrestando ora l'algoritmo abbiamo che non potremo sapere se il secondo sottoproblema darà un valore migliore. dato che è una "promessa" posso arrivarci ma non è detto
 
@@ -153,33 +183,33 @@ se entrambe le sottopblb sono uguali e mi serve una sla soluzione posso fermarmi
 
 
 
-risolvendo il rilassamento di p2 so che possono avere un porfitot al masisimo di 41. avendo com esoluzione un valore continuo allora effetttuo un branch, e quindi scartiamo la soluzione di p1, ed effettuando i l bamch con p3 che ha  x1 <= 1 e p4 che ha x1 >= 2
+risolvendo il rilassamento di $P_2$ so che possono avere un porfitot al masisimo di 41. avendo com esoluzione un valore continuo allora effetttuo un branch, e quindi scartiamo la soluzione di $P_1$, ed effettuando i l bamch con $P_3$ che ha  $x_1 \leq 1$ e $P_4$ che ha $x_1 \geq 2$
 
 risolviamo i loro rilassamenti 
 
 tenendo in conto che i child ereditano i vincoli del parent
 
 
-avremo che R(P4) è inammissibile allora anche P lo sarà
-invece per p3 abbiamo che R(P3) avrà 1, 4.44 con z = 40.55
+avremo che $R(P_4)$ è inammissibile allora anche P lo sarà
+invece per $P_3$ abbiamo che $R(P_3)$ avrà $(1, 4.44)$ con $z = 40.55$
 
 allora continuamo con il branch ed avremo:
 
-p5 x2 <= 4 con 1, 4 con z = 37
-p6 x2 >= 5 con 0, 5 con z = 40
+$P_5 x_2 \leq 4$ con $(1, 4)$ con $z = 37$
+$P_6 x_2 \geq 5$ con $(0, 5)$ con $z = 40$
 
-scartiamo allora p5 che ci fa arrivare ad un massimo di 37 < 40 di p6
+scartiamo allora $P_5$ che ci fa arrivare ad un massimo di 37 < 40 di $P_6$
 
 abiamo allora che non ci sono piu branch da creare.
 
 fathoming: posso eliminare un sottoprob se
 
 - il rilassmento suo è inammissible
-- il rilassamento di P (R(P)) ha soluzione ottima intera, allora è anche osluzione di P
-- fenomeno di dominanza: una z è più grande delle altre
+- il rilassamento di $P$ ($R(P)$) ha soluzione ottima intera, allora è anche osluzione di $P$
+- fenomeno di dominanza: una $z$ è più grande delle altre
 
 
-per scrivere lo pseudocodice dobbimao veder come fare branch se abbiamo più variabili: prender la parte frazionaria che più si avvicina a 0.5
+per scrivere lo pseudocodice dobbimao veder come fare branch se abbiamo più variabili: prender la parte frazionaria che più si avvicina a $0.5$
 
 
 avremo una convergenza se l'insieme di ammissibilità è limitato, allo raad ogni branch avremo un numero di nodi finito. es per variabili binarie avremo: $2^n$ nodi nel caso peggiore. in realtà in genre è molto più piccolo
@@ -209,14 +239,14 @@ La variabile $x_2$ ha valore non intero compreso tra 2 e 3. Effettuiamo un branc
 
 img
 
-per p2 non avremo intersezione quindi è inammissibile. per p1 con soluzione ottima in x1 = 2.83, x2 = 2 con z = 4.83 quindi upperbound: 4
+per $P_2$ non avremo intersezione quindi è inammissibile. per $P_1$ con soluzione ottima in $x_1 = 2.83,\ x_2 = 2$ con $z = 4.83$ quindi upperbound: $4$
 
-x1 ha valore frazionario allora sara compreso tra 2 e 3. allora ramifichiamo e quindi creaiamo dei branch con x1 <= 2 e x1 >= 3.
+$x_1$ ha valore frazionario allora sara compreso tra $2$ e $3$. allora ramifichiamo e quindi creaiamo dei branch con $x_1 \leq 2 e x_1 \geq 3$.
 
-avermo allora che p4 non ha intresezione quindi sarà soluzione inammissibile e per p3 avremo che ha soluzione ottima in x1 = 2, x2 = 1.75 con z = 3.75 quindi arrotonodo l'upperbound a 3
+avermo allora che $P_4$ non ha intresezione quindi sarà soluzione inammissibile e per $P_3$ avremo che ha soluzione ottima in $x_1 = 2,\ x_2 = 1.75$ con $z = 3.75$ quindi arrotonodo l'upperbound a $3$.
 
-x2 ha valore frazionario allora sarà compreso tra 1 e 2. allora ramifichiamo e quini craei i branch con x2 <= 1 e x2 >= 2
+$x_2$ ha valore frazionario allora sarà compreso tra $1$ e $2$. allora ramifichiamo e quini craei i branch con $x_2 \leq 1 e x_2 \geq 2$
 
-allora p6 sara inammissible e per p5 avremo che la sluzione ottima è in x1 = 1, x2 = 2 con z = 3
+allora $P_6$ sara inammissible e per $P_5$ avremo che la sluzione ottima è in $x_1 = 1, x_2 = 2$ con $z = 3$
 
 allora la soluzione ottima è intera e quindi il branch and bound si interrompe

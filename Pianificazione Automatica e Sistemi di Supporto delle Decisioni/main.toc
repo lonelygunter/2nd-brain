@@ -59,5 +59,7 @@
 \contentsline {subsection}{\numberline {\mbox {V-V}}Esempio problema artificiale}{20}{subsection.5.22}%
 \contentsline {subsection}{\numberline {\mbox {V-W}}Esercitazione variabili artificiali}{21}{subsection.5.23}%
 \contentsline {section}{\numberline {VI}Branch-and-Bound Technique for Solving Integer Programs}{22}{section.6}%
-\contentsline {subsection}{\numberline {\mbox {VI-A}}Principio di funzionamento dell'argoritmo Branch-and-Bound}{22}{subsection.6.1}%
-\contentsline {subsection}{\numberline {\mbox {VI-B}}Esercizio Branch-and-Bound}{23}{subsection.6.2}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}Principi dell'argoritmo Branch-and-Bound}{22}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {VI-B}}Approccio Branch-and-Bound}{22}{subsection.6.2}%
+\contentsline {subsection}{\numberline {\mbox {VI-C}}Branching}{23}{subsection.6.3}%
+\contentsline {subsection}{\numberline {\mbox {VI-D}}Esercizio Branch-and-Bound}{24}{subsection.6.4}%

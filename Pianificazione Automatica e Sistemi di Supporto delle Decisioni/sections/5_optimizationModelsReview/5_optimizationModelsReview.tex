@@ -1609,12 +1609,12 @@ $$
 \end{array} } \right]
 $$
 
-Ora dobbiamo andare a far uscire le due cariabili $\alpha_1$ e $\alpha_2$.
+Ora dobbiamo andare a far uscire le due variabili $\alpha_1$ e $\alpha_2$.
 
 Non essendo una soluzione ottima entriamo in base $x_2$ ($s = 2$):
 $$\min (\frac{15}{3}, \frac{1}{1}, \frac{5}{1}) = 1$$
 
-quidni abbiamo $r = 2$ facendo uscire $\alpha_1$. Facendo il Pivot abbiamo:
+quindi abbiamo $r = 2$ facendo uscire $\alpha_1$. Facendo il Pivot abbiamo:
 
 $$
 \left[ {\begin{array}{cccccccc}
@@ -1641,7 +1641,7 @@ $$
 
 che è soluzione ottima per il problema artificiale.
 
-Dato che $\rho = 0$, la soluzione ottima di ($P_a$) è ammissibile per ($P$). Eliminiamo la colonna di $\alpha_1$ e risciviamo la f.o. originale:
+Dato che $\rho = 0$, la soluzione ottima di ($P_a$) è ammissibile per ($P$). Eliminiamo la colonna di $\alpha_1$ e riscriviamo la f.o. originale:
 
 $$
 \left[ {\begin{array}{cccccc}
@@ -1652,7 +1652,8 @@ $$
 \end{array} } \right]
 $$
 
-si porta in forma canonica f.o. portanto a $0$ il valore di $x_2$ della f.o.:
+si porta in forma canonica f.o. portando a $0$ il valore di $x_2$ della f.o., dato che abbiamo solo 2 variabili in base e 3 vincoli, mentre \hl{serve avere tante variabili in base quanti sono i vincoli}. Allora avremo:
+$$(\text{riga 2} * 7) + \text{f.o.}$$
 
 $$
 \left[ {\begin{array}{cccccc}
@@ -1660,5 +1661,16 @@ $$
 	-1 & 1 & 0 & 0 & 0 & 5\\
 	-2 & 0 & -1 & 0 & 1 & 4\\
 	-4 & 0 & 2 & 0 & 0 & 35\\
+\end{array} } \right]
+$$
+
+dove quindi eseguiamo il Pivot in $a_{11}$ ed avremo:
+
+$$
+\left[ {\begin{array}{cccccc}
+	1 & 0 & 1 & 0.2 & 0 & 0\\
+	0 & 1 & 1 & 0.2 & 0 & 5\\
+	0 & 0 & -1 & 0.4 & 1 & 4\\
+	0 & 0 & 6 & 0.8 & 0 & 35\\
 \end{array} } \right]
 $$
