@@ -62,4 +62,5 @@
 \contentsline {subsection}{\numberline {\mbox {VI-A}}Principi dell'argoritmo Branch-and-Bound}{22}{subsection.6.1}%
 \contentsline {subsection}{\numberline {\mbox {VI-B}}Approccio Branch-and-Bound}{22}{subsection.6.2}%
 \contentsline {subsection}{\numberline {\mbox {VI-C}}Branching}{23}{subsection.6.3}%
-\contentsline {subsection}{\numberline {\mbox {VI-D}}Esercizio Branch-and-Bound}{24}{subsection.6.4}%
+\contentsline {subsection}{\numberline {\mbox {VI-D}}Fathoming}{25}{subsection.6.4}%
+\contentsline {subsection}{\numberline {\mbox {VI-E}}Esercizio Branch-and-Bound}{25}{subsection.6.5}%

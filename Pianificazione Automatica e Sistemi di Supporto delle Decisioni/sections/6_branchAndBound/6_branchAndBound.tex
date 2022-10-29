@@ -237,7 +237,7 @@ siamo quindi arrivati nella situazione in cui \hl{non ci sono piu' branch da cre
 Completa l'analisi dei sottoproblemi dicendo che \hl{posso eliminare un sottoproblema} se:
 
 \begin{itemize}
-    \item il \hl{rilassamento è inammissible}
+    \item il \hl{rilassamento e' inammissibile}
     \item il rilassamento di $P$ \hl{($R(P)$) ha soluzione ottima intera}, allora è anche soluzione di $P$
     \item è verificato il \hl{fenomeno di dominanza}, quindi una $z$ è più grande delle altre
 \end{itemize}
@@ -245,10 +245,33 @@ Completa l'analisi dei sottoproblemi dicendo che \hl{posso eliminare un sottopro
 Lo \hl{pseudocodice} è:
 
 \begin{itemize}
-    \item[] $L := \{P\}$
+    \item[] $L := \{P\}$ // lista dei sottoproblemi da analizzare
     \item[] $z^{\text{best}} := -\infty$
     \item[] $x^{\text{best}} := \text{NULL}$
-    \item[]
+    \item[] while $L$ è vuoto:
+    \begin{itemize}
+        \item[] estrarre un sottoproblema $k$ da $L$
+        \item[] branching da $1 \to n_k$
+        \item[] risolvo $R(P)$ e trovo i limiti e l'upperbound $UB$
+        \item[] for $i = 1$ to $n_k$:
+        \begin{itemize}
+            \item[] if $UB_i \leq z^{\text{best}}$ then:
+            \begin{itemize}
+                \item[] kill $\text{child}_i$
+            \end{itemize}
+            \item[] elif $R(P)$ è una soluzione intera:
+            \begin{itemize}
+                \item[] $z^{\text{best}} := LB_i$
+                \item[] $x^{\text{best}} := \text{child}_i$
+            \end{itemize}
+            \item[] elif $R(P)$ è una soluzione frazionaria:
+            \begin{itemize}
+                \item[] add $\text{child}_i$ to $L$
+            \end{itemize}
+        \end{itemize}
+        \item[] end for
+    \end{itemize}
+    \item[] end while
 \end{itemize}
 
 
@@ -266,24 +289,83 @@ v.o:
     \item $x_1, x_2 \geq 0$
 \end{itemize}
 
+gradiente:
+
+$$\nabla z =
+\left[ {\begin{array}{c}
+	1 \\
+	1 \\
+\end{array} } \right]
+$$
+
 grafico:
 
-\dots
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{grafbab.jpeg}
+\caption{Regione ammissibile} 
+\label{grafbab}
+\end{figure}
 
-abbiamo che la soluzione ottima (l'intersezione) del risultato ocntinuo è $x_1 = 3,\ x_2 = 2.25$ con $z = 5.25$. Allora prenderemo come upper bound $5.25 \approx 5$.
+abbiamo che la soluzione ottima (l'intersezione) del risultato continuo è:
+$$x_1 = 3,\ x_2 = 2.25,\ z = 5.25$$
 
-La variabile $x_2$ ha valore non intero compreso tra 2 e 3. Effettuiamo un branch tramite intersezioni con i semipiani $x_2 \leq 2$ e $x_2 \geq 3$:
+allora prenderemo come upper-bound $5$.
 
-img
+La variabile $x_2$ ha valore frazionario compreso tra $2$ e $3$. Effettuiamo un branch con vincoli $x_2 \leq 2$ e $x_2 \geq 3$:
 
-per $P_2$ non avremo intersezione quindi è inammissibile. per $P_1$ con soluzione ottima in $x_1 = 2.83,\ x_2 = 2$ con $z = 4.83$ quindi upperbound: $4$
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{grafbab2.jpeg}
+\caption{Regione ammissibile} 
+\label{grafbab2}
+\end{figure}
 
-$x_1$ ha valore frazionario allora sara compreso tra $2$ e $3$. allora ramifichiamo e quindi creaiamo dei branch con $x_1 \leq 2 e x_1 \geq 3$.
+dove:
 
-avermo allora che $P_4$ non ha intresezione quindi sarà soluzione inammissibile e per $P_3$ avremo che ha soluzione ottima in $x_1 = 2,\ x_2 = 1.75$ con $z = 3.75$ quindi arrotonodo l'upperbound a $3$.
+\begin{itemize}
+    \item $P_2$ non abbiamo intersezioni quindi è inammissibile
+    \item $P_1$ con soluzione ottima in:
+        $$x_1 = 2.83,\ x_2 = 2,\ z = 4.83$$
+        
+        quindi abbiamo upper-bound $4$
+\end{itemize}
 
-$x_2$ ha valore frazionario allora sarà compreso tra $1$ e $2$. allora ramifichiamo e quini craei i branch con $x_2 \leq 1 e x_2 \geq 2$
+LA variabile $x_1$ ha valore frazionario compreso tra $2$ e $3$. Effettuiamo un branch con vincoli $x_1 \leq 2$ e $x_1 \geq 3$:
 
-allora $P_6$ sara inammissible e per $P_5$ avremo che la sluzione ottima è in $x_1 = 1, x_2 = 2$ con $z = 3$
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{grafbab3.jpeg}
+\caption{Regione ammissibile} 
+\label{grafbab3}
+\end{figure}
 
-allora la soluzione ottima è intera e quindi il branch and bound si interrompe
+dove:
+
+\begin{itemize}
+    \item $P_4$ non ha intersezione quindi sarà soluzione inammissibile
+    \item $P_3$ con soluzione ottima in:
+        $$x_1 = 2,\ x_2 = 1.75,\ z = 3.75$$
+        
+        quindi abbiamo upper-bound $3$
+\end{itemize}
+
+La variabile $x_2$ ha valore frazionario compreso tra $1$ e $2$. Effettuiamo un branch con vincoli $x_2 \leq 1$ e $x_2 \geq 2$:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{grafbab4.jpeg}
+\caption{Regione ammissibile} 
+\label{grafbab4}
+\end{figure}
+
+dove:
+
+\begin{itemize}
+    \item $P_6$ sarà inammissible
+    \item $P_5$ con soluzione ottima in:
+        $$x_1 = 1, x_2 = 2,\ z = 3$$
+
+\end{itemize}
+
+La soluzione ottima è intera e quindi il branch and bound si interrompe.
