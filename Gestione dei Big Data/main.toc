@@ -40,3 +40,13 @@
 \contentsline {subsection}{\numberline {\mbox {VII-D}}Autonomia}{8}{subsection.7.4}%
 \contentsline {subsection}{\numberline {\mbox {VII-E}}Frammenti}{8}{subsection.7.5}%
 \contentsline {subsection}{\numberline {\mbox {VII-F}}DDBMS}{8}{subsection.7.6}%
+\contentsline {section}{\numberline {VIII}Introduction to Transaction Processing Concepts and Theory}{9}{section.8}%
+\contentsline {subsection}{\numberline {\mbox {VIII-A}}Introduzione alle transazioni}{9}{subsection.8.1}%
+\contentsline {subsection}{\numberline {\mbox {VIII-B}}Problemi durante le transazioni}{10}{subsection.8.2}%
+\contentsline {subsection}{\numberline {\mbox {VIII-C}}Le operazioni di una transazione}{10}{subsection.8.3}%
+\contentsline {subsection}{\numberline {\mbox {VIII-D}}Proprietà delle transazioni}{10}{subsection.8.4}%
+\contentsline {subsection}{\numberline {\mbox {VIII-E}}Scheduling basato sulla recoverability}{11}{subsection.8.5}%
+\contentsline {subsection}{\numberline {\mbox {VIII-F}}La serializzazione}{11}{subsection.8.6}%
+\contentsline {section}{\numberline {IX}NOSQL (Not Only SQL)}{11}{section.9}%
+\contentsline {subsection}{\numberline {\mbox {IX-A}}Introduzione}{11}{subsection.9.1}%
+\contentsline {subsection}{\numberline {\mbox {IX-B}}CAP Theorem}{11}{subsection.9.2}%

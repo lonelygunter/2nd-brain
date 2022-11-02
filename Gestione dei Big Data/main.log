@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  26 OCT 2022 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  2 NOV 2022 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -606,7 +606,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \openout4 = `main.toc'.
 
  (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/1_libri/1_libri.tex) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/2_databases/2_databases.tex
-<img//logoUnisalento.jpg, id=204, 565.11125pt x 197.73875pt>
+<img//logoUnisalento.jpg, id=255, 565.11125pt x 197.73875pt>
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
@@ -639,7 +639,7 @@ Underfull \hbox (badness 3623) in paragraph at lines 33--34
 [][]\OT1/ptm/m/n/10 sche[]-[]ma[] [][][]dia[]-[]gram: \OT1/ptm/b/n/10 vi-sio-ne rap-pre-sen-ta-ti-va \OT1/ptm/m/n/10 del DB
  []
 
-<img//schcon.jpeg, id=231, 642.4pt x 430.60875pt>
+<img//schcon.jpeg, id=282, 642.4pt x 430.60875pt>
 File: img//schcon.jpeg Graphic file (type jpg)
 <use img//schcon.jpeg>
 Package pdftex.def Info: img//schcon.jpeg  used on input line 38.
@@ -663,7 +663,7 @@ Underfull \hbox (badness 1418) in paragraph at lines 8--9
 []\OT1/ptm/m/n/10 Partendo dal mini-world ser-ve []ca[]-[]pi[]-[]re[] [][][]i[] [][][]re[]-[]qui[]-[]si[]-[]ti[] [][][]uti[]-[]li.
  []
 
-<img//relazlivalt.jpeg, id=240, 321.2pt x 286.06876pt>
+<img//relazlivalt.jpeg, id=291, 321.2pt x 286.06876pt>
 File: img//relazlivalt.jpeg Graphic file (type jpg)
 <use img//relazlivalt.jpeg>
 Package pdftex.def Info: img//relazlivalt.jpeg  used on input line 93.
@@ -678,7 +678,7 @@ Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
                                                   
 l.1 \newpage
              </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//relazlivalt.jpeg>]
-<img//gerardisg.jpeg, id=250, 642.4pt x 374.39874pt>
+<img//gerardisg.jpeg, id=302, 642.4pt x 374.39874pt>
 File: img//gerardisg.jpeg Graphic file (type jpg)
 <use img//gerardisg.jpeg>
 Package pdftex.def Info: img//gerardisg.jpeg  used on input line 13.
@@ -688,7 +688,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-<img//union.jpeg, id=251, 468.75125pt x 642.4pt>
+<img//union.jpeg, id=303, 468.75125pt x 642.4pt>
 File: img//union.jpeg Graphic file (type jpg)
 <use img//union.jpeg>
 Package pdftex.def Info: img//union.jpeg  used on input line 44.
@@ -696,7 +696,7 @@ Package pdftex.def Info: img//union.jpeg  used on input line 44.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<img//notaz.jpeg, id=252, 642.4pt x 370.38374pt>
+<img//notaz.jpeg, id=304, 642.4pt x 370.38374pt>
 File: img//notaz.jpeg Graphic file (type jpg)
 <use img//notaz.jpeg>
 Package pdftex.def Info: img//notaz.jpeg  used on input line 80.
@@ -723,12 +723,12 @@ l.86 ...nito di valori} si usa: $$...[... , ...]$$
                                                   
 l.86 ...nito di valori} si usa: $$...[... , ...]$$
                                                    </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//gerardisg.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//union.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//notaz.jpeg>]
-<img//reifi.jpeg, id=261, 642.4pt x 574.145pt>
+<img//reifi.jpeg, id=313, 642.4pt x 574.145pt>
 File: img//reifi.jpeg Graphic file (type jpg)
 <use img//reifi.jpeg>
 Package pdftex.def Info: img//reifi.jpeg  used on input line 94.
 (pdftex.def)             Requested size: 192.72148pt x 172.24483pt.
-<img//termformtab.jpeg, id=262, 642.4pt x 181.67876pt>
+<img//termformtab.jpeg, id=314, 642.4pt x 181.67876pt>
 File: img//termformtab.jpeg Graphic file (type jpg)
 <use img//termformtab.jpeg>
 Package pdftex.def Info: img//termformtab.jpeg  used on input line 129.
@@ -765,7 +765,7 @@ File: img//logoUnisalento.jpg Graphic file (type jpg)
 Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [7]
-<img//partoriz.jpeg, id=323, 642.4pt x 359.3425pt>
+<img//partoriz.jpeg, id=374, 642.4pt x 359.3425pt>
 File: img//partoriz.jpeg Graphic file (type jpg)
 <use img//partoriz.jpeg>
 Package pdftex.def Info: img//partoriz.jpeg  used on input line 36.
@@ -789,7 +789,7 @@ Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 108.
                                                   
 l.108 Q
        uando noi \hl{eseguiamo una query in ambiente distribuito} possiamo u... </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//partoriz.jpeg>]
-<img//dimddbms.jpeg, id=329, 642.4pt x 476.78125pt>
+<img//dimddbms.jpeg, id=380, 642.4pt x 476.78125pt>
 File: img//dimddbms.jpeg Graphic file (type jpg)
 <use img//dimddbms.jpeg>
 Package pdftex.def Info: img//dimddbms.jpeg  used on input line 130.
@@ -799,37 +799,170 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 130--131
  [][] 
  []
 
-)
+) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/8_transaction/8_transaction.tex
+Underfull \hbox (badness 3635) in paragraph at lines 11--12
+[]\OT1/ptm/m/n/10 query: ese-cu-zio-ne di iscru-zio-ni per ot-te-ne-re del-le
+ []
+
+<img//multiuser.jpeg, id=381, 642.4pt x 245.91875pt>
+File: img//multiuser.jpeg Graphic file (type jpg)
+<use img//multiuser.jpeg>
+Package pdftex.def Info: img//multiuser.jpeg  used on input line 27.
+(pdftex.def)             Requested size: 256.95544pt x 98.36575pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 27--28
+ [][] 
+ []
+
+<img//2trans.jpeg, id=382, 642.4pt x 302.12875pt>
+File: img//2trans.jpeg Graphic file (type jpg)
+<use img//2trans.jpeg>
+Package pdftex.def Info: img//2trans.jpeg  used on input line 56.
+(pdftex.def)             Requested size: 256.95544pt x 120.84935pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
+
+Underfull \vbox (badness 5862) has occurred while \output is active []
+
 File: img//logoUnisalento.jpg Graphic file (type jpg)
 <use img//logoUnisalento.jpg>
-Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 146.
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 60.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [9pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.146 \end{document}
+l.60 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.60 
+      </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//dimddbms.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//multiuser.jpeg>]
+<img//lostupdate.jpeg, id=391, 597.23125pt x 223.83624pt>
+File: img//lostupdate.jpeg Graphic file (type jpg)
+<use img//lostupdate.jpeg>
+Package pdftex.def Info: img//lostupdate.jpeg  used on input line 73.
+(pdftex.def)             Requested size: 238.88826pt x 89.5329pt.
+<img//dirtyread.jpeg, id=392, 642.4pt x 253.94875pt>
+File: img//dirtyread.jpeg Graphic file (type jpg)
+<use img//dirtyread.jpeg>
+Package pdftex.def Info: img//dirtyread.jpeg  used on input line 85.
+(pdftex.def)             Requested size: 256.95544pt x 101.5777pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 85--86
+ [][] 
+ []
+
+<img//incsum.jpeg, id=393, 642.4pt x 356.33125pt>
+File: img//incsum.jpeg Graphic file (type jpg)
+<use img//incsum.jpeg>
+Package pdftex.def Info: img//incsum.jpeg  used on input line 95.
+(pdftex.def)             Requested size: 256.95544pt x 142.52997pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1694) has occurred while \output is active []
+
+<img//opertrans.jpeg, id=394, 642.4pt x 202.7575pt>
+File: img//opertrans.jpeg Graphic file (type jpg)
+<use img//opertrans.jpeg>
+Package pdftex.def Info: img//opertrans.jpeg  used on input line 120.
+(pdftex.def)             Requested size: 256.95544pt x 81.10156pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 120--121
+ [][] 
+ []
+
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 145.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[10pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.145     \item \textbf
+                       {ordine di esecuzione delle operazioni} da tutte le t...pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.145     \item \textbf
+                       {ordine di esecuzione delle operazioni} da tutte le t...pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.145     \item \textbf
+                       {ordine di esecuzione delle operazioni} da tutte le t...pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.145     \item \textbf
+                       {ordine di esecuzione delle operazioni} da tutte le t...pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.145     \item \textbf
+                       {ordine di esecuzione delle operazioni} da tutte le t... </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//2trans.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//lostupdate.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//dirtyread.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//incsum.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//opertrans.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/sections/9_nosql/9_nosql.tex
+<img//masterslave.jpeg, id=406, 642.4pt x 520.94624pt>
+File: img//masterslave.jpeg Graphic file (type jpg)
+<use img//masterslave.jpeg>
+Package pdftex.def Info: img//masterslave.jpeg  used on input line 41.
+(pdftex.def)             Requested size: 256.95544pt x 208.3748pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 41--42
+ [][] 
+ []
+
+<img//cap.jpeg, id=407, 642.4pt x 488.82625pt>
+File: img//cap.jpeg Graphic file (type jpg)
+<use img//cap.jpeg>
+Package pdftex.def Info: img//cap.jpeg  used on input line 54.
+(pdftex.def)             Requested size: 256.95544pt x 195.52702pt.
+
+Overfull \hbox (4.95544pt too wide) in paragraph at lines 54--55
+ [][] 
+ []
+
+)
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 145.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.145 
+       </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//masterslave.jpeg>]
+File: img//logoUnisalento.jpg Graphic file (type jpg)
+<use img//logoUnisalento.jpg>
+Package pdftex.def Info: img//logoUnisalento.jpg  used on input line 148.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.148 \end{document}
                     
 
- </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//dimddbms.jpeg>] (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.aux)
+ </Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/img//cap.jpeg>] (/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3CF4E20535B6DAF998A2B7D8B535B068;6469.
+(rerunfilecheck)             Checksum: 7FAAD0F8AA59097B1D798797CF0D7317;8485.
  ) 
 Here is how much of TeX's memory you used:
- 14743 strings out of 478994
- 221438 string characters out of 5858185
- 636068 words of memory out of 5000000
- 31782 multiletter control sequences out of 15000+600000
+ 14844 strings out of 478994
+ 223596 string characters out of 5858185
+ 636499 words of memory out of 5000000
+ 31843 multiletter control sequences out of 15000+600000
  441954 words of font info for 107 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  81i,15n,88p,597b,1153s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.pdf" (9 pages, 560529 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Gestione dei Big Data/main.pdf" (12 pages, 837503 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 123 named destinations out of 1000 (max. 500000)
- 371 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 
