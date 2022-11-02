@@ -1,0 +1,49 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {I}Libri di testo consigliati}{1}{section.1}%
+\contentsline {section}{\numberline {II}Databases}{2}{section.2}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Definizioni di base}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Tipologie di DB}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {\mbox {II-C}}Ciclo di vita del DB}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {\mbox {II-D}}Livelli di un DB}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {\mbox {II-E}}Data Base Managment System}{2}{subsection.2.5}%
+\contentsline {subsection}{\numberline {\mbox {II-F}}Mini-world}{2}{subsection.2.6}%
+\contentsline {section}{\numberline {III}Database System Concepts and Architecture}{3}{section.3}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Definizioni sui modelli}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {\mbox {III-B}}Definizioni fondamentali}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Schema}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {\mbox {III-D}}Tipologie di DBMS}{3}{subsection.3.4}%
+\contentsline {section}{\numberline {IV}Data Modeling Using the Entity–Relationship (ER) Model}{4}{section.4}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Entity-Relationship (ER)}{4}{subsection.4.1}%
+\contentsline {section}{\numberline {V}The Enhanced Entity–Relationship (EER) Model}{5}{section.5}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}Superclassi e sottoclassi}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Graficazione superclassi e sottoclassi}{5}{subsection.5.2}%
+\contentsline {subsection}{\numberline {\mbox {V-C}}Notazioni}{5}{subsection.5.3}%
+\contentsline {subsection}{\numberline {\mbox {V-D}}Terminologia}{6}{subsection.5.4}%
+\contentsline {section}{\numberline {VI}Basic SQL}{6}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}Statement - SELECT}{6}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {VI-B}}Statement - WHERE}{6}{subsection.6.2}%
+\contentsline {subsection}{\numberline {\mbox {VI-C}}Statement - ORDER BY}{6}{subsection.6.3}%
+\contentsline {subsection}{\numberline {\mbox {VI-D}}Statement - INSERT}{6}{subsection.6.4}%
+\contentsline {subsection}{\numberline {\mbox {VI-E}}Statement - GROUP BY}{7}{subsection.6.5}%
+\contentsline {subsection}{\numberline {\mbox {VI-F}}Statement - HAVING}{7}{subsection.6.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-G}}Statement - UNION}{7}{subsection.6.7}%
+\contentsline {subsection}{\numberline {\mbox {VI-H}}Statement - JOIN}{7}{subsection.6.8}%
+\contentsline {subsection}{\numberline {\mbox {VI-I}}Values - NULL}{7}{subsection.6.9}%
+\contentsline {subsection}{\numberline {\mbox {VI-J}}Function - Aggregate}{7}{subsection.6.10}%
+\contentsline {subsection}{\numberline {\mbox {VI-K}}Function - Window}{7}{subsection.6.11}%
+\contentsline {subsection}{\numberline {\mbox {VI-L}}Function - String}{7}{subsection.6.12}%
+\contentsline {section}{\numberline {VII}Distributed Database Concepts}{8}{section.7}%
+\contentsline {subsection}{\numberline {\mbox {VII-A}}Distributed Databases}{8}{subsection.7.1}%
+\contentsline {subsection}{\numberline {\mbox {VII-B}}Forme di trasparenza}{8}{subsection.7.2}%
+\contentsline {subsection}{\numberline {\mbox {VII-C}}Affidabilità e disponibilità}{8}{subsection.7.3}%
+\contentsline {subsection}{\numberline {\mbox {VII-D}}Autonomia}{8}{subsection.7.4}%
+\contentsline {subsection}{\numberline {\mbox {VII-E}}Frammenti}{8}{subsection.7.5}%
+\contentsline {subsection}{\numberline {\mbox {VII-F}}DDBMS}{8}{subsection.7.6}%
+\contentsline {section}{\numberline {VIII}Introduction to Transaction Processing Concepts and Theory}{9}{section.8}%
+\contentsline {subsection}{\numberline {\mbox {VIII-A}}Introduzione alle transazioni}{9}{subsection.8.1}%
+\contentsline {subsection}{\numberline {\mbox {VIII-B}}Problemi durante le transazioni}{10}{subsection.8.2}%
+\contentsline {subsection}{\numberline {\mbox {VIII-C}}Le operazioni di una transazione}{10}{subsection.8.3}%
+\contentsline {subsection}{\numberline {\mbox {VIII-D}}Proprietà delle transazioni}{10}{subsection.8.4}%
+\contentsline {subsection}{\numberline {\mbox {VIII-E}}Scheduling basato sulla recoverability}{11}{subsection.8.5}%
+\contentsline {subsection}{\numberline {\mbox {VIII-F}}La serializzazione}{11}{subsection.8.6}%
