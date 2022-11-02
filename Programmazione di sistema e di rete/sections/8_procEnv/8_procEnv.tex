@@ -1,0 +1,48 @@
+
+cap 7:
+process environment:
+
+per terminare un porcesso usiamo:
+
+\begin{enumerate}
+    \item return dal main
+    \item chiamando exit: chiudo la singola thread ma poi passa da un gestore di exit tramite una exit function che chiama deli exit handler che posson essere installati e aggiunti tramite la funzione
+\begin{lstlisting}
+int atexit(void (*func)(void));
+\end{lstlisting}
+    e verranno richiamate in ordine contrario alla dichiarazione
+    
+    \item chiamando \_exit oppure \_Exit: usate per terminare il processo e finire direttamente nel kernel senza passare dall'exit function
+    \item return dell'ultima thread
+    \item chiando pthread\_exit dall'ultima thread
+    \item chiamando abort (che genera un segnale che può essere gestito SIGABRT, ma fa finire comunque il processo)
+    \item ricevendo un segnale: come SIGKILL e SIGSTOP che non potranno essere gestiti o fermati
+    \item l'ultima thread riceve una richiesta di cancellazione
+\end{enumerate}
+
+
+
+Environment list:
+uando si lancia a=100 nello schell e poi ne lancio un altrola variabile creata non viene passara al child schell. per faglielo conoscere si usa il biltin export
+
+in un processo sappiamo che possiamo vedere le varaiibli di ambiente anche in runtime ma non nello stesso punto in cui si trovano. guardndo fig 7.5 tutti i valori, ogniuno separato da un null $\backslash 0$ stara in un array di puntatori a quisti valori, aray che termina con un null e tramire quest puntator iarivaimo agle varaiibli di ambiente.
+
+i porgrammi posson oallora creare un environment pointer tramite un handle (punttaore a puntatori) al nostro array detto environment list. 
+
+\begin{lstlisting}
+extern char **environ;
+\end{lstlisting}
+
+in alternativa si pu`o usare o un valore *envp[] nei parametri dei main, oppure si usa la funzine 
+
+\begin{lstlisting}
+char *getenv(const vhar *name);
+\end{lstlisting}
+
+passando direttamente il nome della variaible di ambiente restituendo un puntatore al suo contenuto
+
+abbiamo che la malloc usa zone globali allora non è rientrant (vediamo poi cosa vuol dire)
+
+(VEDERE memory\_dump.c) che vede e sampa tutte le variabili di mabinete, aspetta un p`o e poi lo ri fa stampandone anche di nuove e modificandone una esistente e poi va a vedere rispetto ai punttori precendenti c se sno ancora buoni  o se stanno da un altra parte 
+
+vedere a mush simpler way to print addresses used in process memory per stampare semplicemtne gli indirizzi delle variabili di ambiente
