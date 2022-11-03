@@ -369,3 +369,157 @@ dove:
 \end{itemize}
 
 La soluzione ottima è intera e quindi il branch and bound si interrompe.
+
+
+
+
+
+
+
+
+
+
+
+nel caso perggiore di variabili binarie il livello computazionele sara dato da O(2^n) quindi il tempo di calcolo cresce esposnenzialmente con il numero di variabili. ma e1 caratteristica di questi problemi  e basta?
+
+se il numero delle varraibili intere n cresce, nel caso perggiore in tempo di calcolo cresce 2^n
+
+in molte applicazionei qundi avremo un tempo di calcolao spaziale di alcune ore o giorni per risolver eil porblema all’ottimo cioe per certificare se un problem non ha soluzioni quidni asssibbile, ci sono sluzioni ammissibili e ela f.o. va da -inf a + inf unbounded o sol ottima. noi vogliamo una soluzione ottima e certificare che avvenga
+
+il porblema e1 il tempo di calcolo ceh ci mette tipo nelgi agenti ceh devono sceglie di fare alcune azioni al posto di altre 
+in molte applicazioni si fa affidamente a d algoritimi detti insesatti che CERCANO di generare delle soluzioni ammissibili. ma possono fallire per loro natura
+
+cercano soluzioni ammissibili di buona qualita in un tempo dato 
+
+riesntrano gli algoritmi euristici dove e1 imporporata una conoscenza che ha il progettista e la infonde nell’algoritmo che quindi e1 customizzato 
+
+
+gli algortimi euristiici sono
+- costruttivivi che cercano di generare una priam soluz ammisiibile
+- migliorativi che prendo una pirma soluzione e la vcercano di migliiorare e quindi trovare una nuova soluzione con f.o. maggiore se massimizziamo
+
+per alcuni porblemi e§ difficile (time consuming) e quidni ridchied eu ntempo non noto a priori, per questi e1 difficile trvare una soluzoione ottima e risolvere il problema, epr alcuni problemi e1 anche difficile capire se esiste una sluzioe ammissible o no
+
+slide 5
+
+
+es:
+problema del traveling salesman problem
+data una matrice C di transizione dve ho che er andare dal punto 1 al 2 pago c_{12} ecc. devo traovare un circuito che tocchi ttutti i punti una sola volta e che abbia costo minimo = somma dei costi di transizione.
+
+tempo di ciclo determina la produttivita della macchina in questo caso immaginiamo un robot che fa n fori e conclusi gli n fori finisce oil cilo
+
+i costi di transizione quindi sono i tempi che il braccio impiega a spostare il braccio da un unto all’altro
+
+troveremo una soluzioneabbissibile tramite unq qualsiasi permutazione in questo caso  ma no  tutte hanno lo stesso costo
+
+le matrici potranno ovviamente essere simmetriche in alcuni casi
+
+
+
+cambiando problema prendiamo un veicolo che deve toccare n punti per esempio le consegne di amazon con un solo veicolo e ci potrebbero essere una combinazione come delle finestra temporali di serviziozio dovquindi il veicolo parte da un certo punte a t=0 dal deposito e deve visitare n putnti in finestre temporali prestabiliti come per sempio il punto i nella finestratemporale a_i e b_i
+queste finestrre temporali rendono computazionelmente piu difficile o a volte inammissibile il problema
+
+quindi nel caso peggiore il tempo cresce esponenzialmente ad un numero n di cleinti sia pe troavare la solzuione ottima sia per potersi procurare una soluzione ammissiile. la complessita dipende dai dati  e quindi potrebbe esserci una instabilita e uindi cambiando anche solo un datp potremmoavere una soluzioen ammsisibile o una crescita esposnenziale dell’infattiibilita.
+ daquesto e1 dovuta l’instabilita
+
+
+il primo approccio inesatto consiste nell;urae un algorti o branch and bound di tipo troncato
+
+unaltro approccio possibile e1 generare un maniera casuale numeri interi quidni il nostro problema ad n varaibili, generiamo i valori random interi \overline{x}, … ma la soluzione sara ammissibile ma non ottima
+
+
+approcio di tipo greedy: ingordo
+
+cerca di massimizzare nel breve periodo. procedura sequenzaiale ch costruisce la solzuone un  passo alla volta 
+e1 euristica di tipo costruttivo costruiendo la soluzione con un tipo sequenzizale ad ogni passo fa una scelta e massimizza solo l’utilizzo immediato ma cosi puo capirea che
+- ho sluzione inammissibile
+- non garantisce una soluzione ottima
+
+es: 
+
+pseudocodice greedy o anche detto nearest neighbour: adattamenteo dell’algoritmok greedy al commesso viaggiatore
+
+parto dal punto 1 e lo identifico cole last cioe ultimo punto tocacto 
+S={…}e poi una lista di punti da visitare
+
+while non ho toccato tutti i punto S != insieme vuoto
+estraggo un punto da S
+cerco il punto a costo minimo rispetto al last 
+storicizzo il valore del last succesivo
+imposto il last alnuovo punto 
+end while
+riporto il succ last = 1 per poterlo riportare all’inizio
+
+
+il vantaggio e1 che possiamo prevedere le iterazioni del loop 
+
+es:
+n = 4
+C = 
+0 10 5 8
+10 0 2 1 
+5 2 0 4
+8 1 4 0
+
+last = 1 rho = <2,3,4>
+last = 3 ; rho=<2,4>; succ_1 = 3
+last = 2; rho=<4>; succ_3 = 2
+last = 4; rho =<>; succ_2 =4
+succ_4 = 1
+
+ovviamente se abbiamo delle time window l’algoritmo deve essser adattato. quento greedy infati serve per poter essere customizzato per i problemi
+
+
+
+
+classkwork
+
+tramite TSP
+
+usiamo libreira pulp
+
+
+modello a varaibili binare x_{ij} per ogni coppia di punti i e j ed e1 
+- =1 se l’arco x{ij} e1 visistato
+- =0 se non e1 viositato
+
+quindi orendiamo le x_{ij} che ci interessano e le imporiamo ad 1 e le altre a 0 dato che queste non fanno parte del nostro “percorso”
+
+img
+
+vogliamo usare la sommatoria {della f.o. }dei costi  dove voglio minimizzarli quindi sostituiamo le x con quelle sopra e le c in base alla tabella dei costi data
+
+secnda somm quindi ogni punto aha un successore
+terza sum ogni punto ha un precedessore
+
+quesnti vincoli non basta no per poter risolvere il modello infatti non possiamo esculudere che la soluzione sia disconnessa (sub-tour)
+
+
+img
+
+
+dato che mancano dei vincoli di connessione della soluzione
+
+
+siamo quindi il modello MTZ: miller-zucker0zemlin:
+avremo delle variabili addizzionaliu_i una per ogni punto e conu_i rappresenta l’oridine di visitade punto i
+
+imporiamo pertendo dal pnto 1
+u_i = 1
+
+abbiamo allora u1 =1 -> x_13 = 1 -> u3 = 2 -> x34 = 1 -> u4 = 3 -> x42 = 1 -> u2 = 4 -> x21 = 1
+
+allora agigungo quenste variabili ui per rappresentare l’ordine di vista e non avere disconitnuita della soluzione
+
+altri vincoli saranno alora:
+2 <= ui <= n
+
+dato che le ui con i != 1 saranno comprese tra 2 a n dato che dobbiamo assegnare la 2 posizione finio alla n-esima
+
+poi una ltro vincolo:
+ui - uj + 1 <= n(1-xij)
+
+lega le variabili u con xji che dicono cihi viene dopo chi e u l’ordine. questa relaione e1 corretta dato che abbiamo 2 casi:”
+- se xij = 0 allora ui - uj +1 <= n ovvio dato che tutte le variabili u son ocomprese in n 
+- se xij = 1 allora ui - uj + 1 <= 0 dato che uj >= ui + 1 allora i e1 predecessore di j  alora l;odine di visita di j e1 almeno successivo a i 
