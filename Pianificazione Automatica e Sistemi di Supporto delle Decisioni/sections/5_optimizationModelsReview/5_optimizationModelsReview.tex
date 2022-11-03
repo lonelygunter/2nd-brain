@@ -794,21 +794,6 @@ L'\hl{equazione di base associata} sarà:
 $$x_j := 0\ \ \ \forall\ \ \ j \in J_N$$
 $$x_{\beta(i)} = \overline{b}_i \leq \geq 0\ \ \ \forall\ \ \ i = 0, ..., m-1$$
 
-\hl{Pseudocodice} dell'algoritmo del simplesso:
-
-Andremo a:
-
-\begin{enumerate}
-	\item trovo la prima \hl{BFS}
-	\item in loop faccio:
-		\begin{itemize}
-			\item un \hl{test di ottimalita'}
-			\item se fallisce allora \textbf{sarà migliorabile}
-			\item allora mi \textbf{muovo nei dintorni} del suo spazio per migliorare la situazione
-		\end{itemize}
-	\item se trovo una soluzione di base ammissibile ottima faccio un \hl{analisi per capire se e' unica} o meno
-\end{enumerate}
-
 
 Avremo la \hl{forma generale} quando è \hl{$\leq$ e $\underline{b} \geq 0$}.
 
@@ -949,18 +934,26 @@ A questo punto avremo 2 casi possibili:
 
 \end{enumerate}
 
-Lo \hl{pseudocodice} sarà:
+\hl{Pseudocodice} dell'algoritmo del simplesso:
 
-\begin{enumerate}
-	\item prendere una \hl{BFS}: $x_{BFS}$
-	\item in un loop mentre $\exists\ \overline{c}_j \leq 0\ \ \ \forall\ \ \ j \in I_N$:
+\begin{itemize}
+	\item[] trovo la prima \hl{BFS}
+	\item[] while $\exists \overline{c}_j<0\ \ \ \forall\ \ \ j \in I_N$:
+	
+	\begin{itemize}
+		\item[] trovo \hl{argmin per "c" del Pivot}: $x_s = \text{argmin}_{j \in I_N} \overline{c}_j$
+		\item[] if $\overline{a}_{is} \leq 0$:
+		
 		\begin{itemize}
-			\item $x_s = \text{argmin}_{j \in I_N} \overline{c}_j$
-			\item se $\overline{a}_{is} \leq 0\ \ \ \forall\ \ \ i = 1, ..., m$ fa return del problem unbounded
-			\item altrimenti $x_2 = \text{argmin} \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$ detta variabile uscente
-			\item makePivot(r, s) sennò non posso fare il test di ottimalità una volta reiniziato il loop
+			\item[] abbiamo un problema unbounded
 		\end{itemize}
-\end{enumerate}
+		
+		\item[] trovo \hl{argmin per "r" del Pivot}: $x_s = \text{argmin}_{i = 1,...,m} \frac{\overline{b}_i}{\overline{a}_{is}}$
+	\end{itemize}
+	
+	\item[] eseguo il \hl{Pivot}
+	\item[] se trovo una soluzione di base ammissibile ottima faccio un \hl{analisi per capire se e' unica} o meno
+\end{itemize}
 
 
 % Esercizio forma canonica
