@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  3 NOV 2022 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  4 NOV 2022 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1562,17 +1562,347 @@ Underfull \hbox (badness 1661) in paragraph at lines 513--514
 []\OT1/ptm/m/n/10 allora agi-gun-go quen-ste va-ria-bi-li ui per rap-pre-sen-ta-re
  []
 
-)
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 142.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 526.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [26]
+[26]
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:545: Missing $ inserted.
+<inserted text> 
+                $
+l.545 ...oroblema aursiliario dove le variaibli x_
+                                                  1 del primo gurppo , sono ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:546: Missing $ inserted.
+<inserted text> 
+                $
+l.546 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 2368) in paragraph at lines 545--546
+\OT1/ptm/m/n/10 con-to che la diff-fi-col-ta sta nel-le mol-te va-ri-bi-li in-te-re,
+ []
+
+
+Overfull \hbox (915.33453pt too wide) in paragraph at lines 545--546
+\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 delprimogurppo; sonointerementrelerestatnifacciounrilassamento; quindiilproblemaasuliairioe\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 gualeall[]originalemasololex[]sonointereelealtrerilasate:quetoproblemae\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ancoraavaraibiliintere; peroe\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 piusemplicedelprobdipartenzadatochesololevarx[]sonointere:$ 
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:547: Missing $ inserted.
+<inserted text> 
+                $
+l.547 ...ette soluzione ottima, allora avro che x_
+                                                  1 e1 intera e faccio un fi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:549: Missing $ inserted.
+<inserted text> 
+                $
+l.549 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
+[]\OT1/ptm/m/n/10 risolto que-sto pe-ble-ma, se e1 inam-mis-si-bi-le,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
+\OT1/ptm/m/n/10 ac-n-he quel-lo di par-ten-za lo e1, se pe-ro1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
+\OT1/ptm/m/n/10 am-met-te so-lu-zio-ne ot-ti-ma, al-lo-ra avro che
+ []
+
+
+Overfull \hbox (295.39526pt too wide) in paragraph at lines 547--549
+\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 interaefacciounfixingquindinelliterazionisuccessviefossox[]alvalorechemie\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 veniutonellarisoluzioendelproblemax[] \OT1/cmr/m/n/10 =
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:550: Missing $ inserted.
+<inserted text> 
+                $
+l.550 ...olo di x fa parte del problema e uindi x_
+                                                  1 e1 fissato al valore ott...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:550: Undefined control sequence.
+l.550 ...ha successo, risolvendo troviamo \oveline
+                                                  \overline{x}_2 facciamo un...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:550: Undefined control sequence.
+l.550 ...2 facciamo un fix fissando x_2 = \oveline
+                                                  \overline{x}_2
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:551: Missing $ inserted.
+<inserted text> 
+                $
+l.551 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
+[]\OT1/ptm/m/n/10 alliterazione suc-ces-si-va il vin-co-lo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
+\OT1/ptm/m/n/10 di x fa par-te del pro-ble-ma e uin-di
+ []
+
+
+Overfull \hbox (726.26744pt too wide) in paragraph at lines 550--551
+\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 fissatoalvaloreottenutoprima; ax[]richiedodiessereinteraelevariaiblideigruppisuccessivisonoancorarilassateseilpromebarisltoe\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 inamissibile; fallisce:sehasuccesso; risolvendotroviamo[][]facciamounfixfissandox[] \OT1/cmr/m/n/10 =
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:563: Missing $ inserted.
+<inserted text> 
+                $
+l.563 ... sottoproblema con alcune varaibili da x_
+                                                  1 a x_k e transcuro quelle...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:564: Missing $ inserted.
+<inserted text> 
+                $
+l.564 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 4316) in paragraph at lines 562--564
+[]\OT1/ptm/m/n/10 approcci orol-ling ho-ri-zon: dy-ran-te il pri-mo pe-rio-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 562--564
+\OT1/ptm/m/n/10 con-si-de-ro un sot-to-pro-ble-ma con al-cu-ne va-rai-bi-li da
+ []
+
+
+Overfull \hbox (749.74448pt too wide) in paragraph at lines 562--564
+\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 ax[]etranscuroquelledeiperiodisuccessivi; consideroalaloraunsottproblemaconsoloelevaraibilix[]finox[]efacciounfixsux[]efacciounpassoinavanti; quindiconsiderounsottoproblemconx[]fissatoeconsiderolevariabilix[]finoax[] \OT1/cmr/m/n/10 +
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:578: Missing $ inserted.
+<inserted text> 
+                $
+l.578 ...zzazare o min non una solo af.o. ma da z_
+                                                  1 a z_p.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:579: Missing $ inserted.
+<inserted text> 
+                $
+l.579 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:582: Missing $ inserted.
+<inserted text> 
+                $
+l.582 S_
+        i starting time dell'attivita i
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:585: Missing $ inserted.
+<inserted text> 
+                $
+l.585 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--585
+[]\OT1/ptm/m/n/10 es: pro-ble-ma si sche-di-ling: abia-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--585
+\OT1/ptm/m/n/10 mo n at-ti-vi-ta e co-me pa-ra-men-tri:
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 580--585
+\OT1/ptm/m/n/10 S$[]\OML/cmm/m/it/10 startingtimedell[]attivitaid[]duratadell[]attivitaipij \OT1/cmr/m/n/10 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--585
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 sel[]attivtaje\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 prerequinistitodell[]attivitai; \OT1/cmr/m/n/10 =
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:592: Missing $ inserted.
+<inserted text> 
+                $
+l.592 T >= S_
+             i + d_i ....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:593: Missing $ inserted.
+<inserted text> 
+                $
+l.593 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:597: Missing $ inserted.
+<inserted text> 
+                $
+l.597 D_
+        i max durata dell'attivita i
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:601: Missing $ inserted.
+<inserted text> 
+                $
+l.601 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--601
+[]\OT1/ptm/m/n/10 formulare un at-ti-v-ta in mo-do fat-tii-bi-le:
+ []
+
+
+Overfull \hbox (293.07443pt too wide) in paragraph at lines 596--601
+\OT1/ptm/m/n/10 D$[]\OML/cmm/m/it/10 maxduratadell[]attivitaib[]minduratadell[]attivitaid[]duratadell[]attivitaiX[]costoperaccellerareilcomletamentodell[]attivitai$ 
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:603: Missing $ inserted.
+<inserted text> 
+                $
+l.603 d_
+        i = D_i-a_iX_i con a_i coefficente di ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:605: Missing $ inserted.
+<inserted text> 
+                $
+l.605 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:607: Missing $ inserted.
+<inserted text> 
+                $
+l.607 min \sum
+               .....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:611: Missing $ inserted.
+<inserted text> 
+                $
+l.611 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--611
+[]\OT1/ptm/m/n/10 allora bbia-mo da mi-ni-miz-za-re 2 obiet-ti-vi: min
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:648: Missing $ inserted.
+<inserted text> 
+                $
+l.648 T <= T^
+             *
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:649: Missing $ inserted.
+<inserted text> 
+                $
+l.649 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:650: Missing $ inserted.
+<inserted text> 
+                $
+l.650 con T^
+            * tra Tmin e Tmax in base al fatto che se vogliamo minimizzare o...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:651: Missing $ inserted.
+<inserted text> 
+                $
+l.651 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (108.91756pt too wide) in paragraph at lines 650--651
+[]\OT1/ptm/m/n/10 con T$[]\OML/cmm/m/it/10 traTmineTmaxinbasealfattochesevogliamominimizzareomassimizzare$ 
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:656: Missing $ inserted.
+<inserted text> 
+                $
+l.656 \sum
+           wi fi
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:657: Missing $ inserted.
+<inserted text> 
+                $
+l.657 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 665.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[27])
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
 Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 144.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [27
+ [28
 
 ] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
 
@@ -1594,18 +1924,18 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D407AA7AB4F4272E43A97AB3DE73E275;11929.
  ) 
 Here is how much of TeX's memory you used:
- 15056 strings out of 478994
- 227053 string characters out of 5858185
+ 15057 strings out of 478994
+ 227060 string characters out of 5858185
  689028 words of memory out of 5000000
  31966 multiletter control sequences out of 15000+600000
  443689 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,15n,88p,571b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,15n,88p,669b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (27 pages, 1762792 bytes).
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (28 pages, 1769774 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 389 compressed objects within 4 object streams
- 226 named destinations out of 1000 (max. 500000)
+ 486 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
+ 227 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

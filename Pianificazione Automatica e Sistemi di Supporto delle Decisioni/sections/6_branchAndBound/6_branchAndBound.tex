@@ -522,4 +522,186 @@ ui - uj + 1 <= n(1-xij)
 
 lega le variabili u con xji che dicono cihi viene dopo chi e u l’ordine. questa relaione e1 corretta dato che abbiamo 2 casi:”
 - se xij = 0 allora ui - uj +1 <= n ovvio dato che tutte le variabili u son ocomprese in n 
-- se xij = 1 allora ui - uj + 1 <= 0 dato che uj >= ui + 1 allora i e1 predecessore di j  alora l;odine di visita di j e1 almeno successivo a i 
+- se xij = 1 allora ui - uj + 1 <= 0 dato che uj >= ui + 1 allora i e1 predecessore di j  alora l;odine di visita di j e1 almeno successivo a i
+
+
+altro paradigma che si adata bene ad altre classi di problemi:
+relax and fix algorithm
+
+sono problemi multiperiodali dato che voglio poter avere un approccio ora per ora. uso un idea algortimo dvoe suppongo di voler risolvere ik prob di ottimizzazione:
+min z = ..
+s.a.
+Ax = b
+x >= 0 e intera
+
+alora vado a partizionare le variaibli in n gruppi. quijdi un in problema multi periodiale di pianificazione da quoi a un tempo t, le variabili si dividono in gruppi, decisioniali dche mi dicocosa fare qui alle 12, quelle delale 12 alle 13 eccecc.
+
+abbiamo alloradelle applicazioni ndove le varaibili naturalemte si dividono in gruppi datoun osviluppo temporale, il orblema allora diventa:
+
+min z = sum..
+s.a.
+sum...
+
+il prblema nel complsso e1 complicato, allorami rendo conto che la diffficolta sta nelle molte varibili intere, alllora definisco un oroblema aursiliario dove le variaibli x_1 del primo gurppo , sono intere mentre le restatni faccio un rilassamento, quindi i l problema asuliairio e1 guale all'originale ma solo le x_1 sono intere e le altre rilasate. queto problema e1 ancora a varaibili intere, pero e1 piu semplice del prob di partenza dato che solo le var x_1 sono intere.
+
+risolto questo peblema, se e1 inammissibile, acnhe quello di partenza lo e1, se pero1 ammette soluzione ottima, allora avro che x_1 e1 intera e faccio un fixing quindi nell iterazioni successvie fosso x_1 al valore che mi e1 veniuto nella risoluzioen del problema 
+x_1 = \overline{x}_1
+
+alliterazione successiva il vincolo di x fa parte del problema e uindi x_1 e1 fissato al valore ottenuto prima, a x_2 richiedo di essere intera e le variaibli dei gruppi successivi sono ancora rilassate se il promeba rislto e1 inamissibile, fallisce. se ha successo, risolvendo troviamo \oveline\overline{x}_2 facciamo un fix fissando x_2 = \oveline\overline{x}_2
+
+tengo quindi conto anche delle variabili "future" ma non richiede un grande sforzo computazione dato che labvora sul singolo gruppo.
+
+la genereica iterazione e1:
+....
+
+pseudocodice:
+.....
+
+
+
+approcci orolling horizon:
+dyrante il primo periodo considero un sottoproblema con alcune varaibili da x_1 a x_k e transcuro quelle dei periodi successivi, considero alalora un sottproblema con solo ele varaibili x_1 fino x_k e faccio un fix su x_1 e faccio un passo in avanti, quindi considero un sottoproblem con x_1 fissato e considero le variabili x_2 fino a x_k+1.
+
+un porblem acon k varaibiali riwco a risolverlo.
+
+quidn risolvo dedei sottoporbemi con variavili legate con tempi consecutivi ma non quelli troppo successivi
+
+(notare che e1 meno accurato del relax and fix dato che considero certe varaibili e non tutte assieme)
+
+
+
+
+
+MULTIPLE CRITERIA DECISION MAKING:
+dato che spesso abbiamo piu obbiettivi non riusciamo a scegliere in anticipo quale ha rpiorita allora spesso vanno in conflitto, allora per capire come fare. 
+
+usiamo la materemati multecreatirea dove abbmiamo da trovare una soluzione con le migliore soluzioni che devon orispettare alcuni vincoli, pero abbiamo un numero p cioe1 il creiterio. quidni dobbiamo massimizzazare o min non una solo af.o. ma da z_1 a z_p.
+
+es: problema si schediling:
+abiamo n attivita e come paramentri:
+S_i starting time dell'attivita i
+d_i durata dell'attivita i
+pij = 1 se l'attivta j e1 prerequinistito dell'attivita i, =0 altrimenti
+
+obiettivo: minimizare il tempo di completamento = T
+
+
+avremo allora che:
+min T
+s.t.
+T >= S_i + d_i ....
+
+
+
+formulare un attivta in modo fattiibile:
+D_i max durata dell'attivita i
+b_i min durata dell'attivita i
+d_i durata dell'attivita i
+X_i costo per accellerare il comletamento dell'attivita i
+
+allora:
+d_i = D_i-a_iX_i con a_i coefficente di ...
+...
+
+allora bbiamo da minimizzare 2 obiettivi:
+min \sum .....
+min T
+s.t.
+.....
+
+
+considerato un oroibkem acon piu obiettvi allor apossimo consederaene uno con obiettivo singolo. quindi le soluzioni ottimali dei singoli porblemi per rappresentarle scrivo nello spazio ammissibile, lo spazio dei criteri rappresentando i singoli obiettivi. a volte puo succedere che presi i du epunto la loro unione non fa parte della zona ammissibile (utopia)
+
+img
+
+ma noi allora adiamo a prendere il punto migiore nella zona ammissibile come in questo caso C dato che e1 migliore di A per certe cose e per altre rispetto a B
+
+potrmo prender per o un punto D che sara1pegio re rispetto ad entrambi gil obiettivi dato che son osoluiozni dominate dareo che f1(D) >= f1(C), e f2(D) >= f2(C)
+
+a noi interesse di trovare le soluzioni non inferioir e quindi efficienti e dobbiamo traovare tra tutte la migliore. per capire qual e1 quella migliore dipende dal 
+
+
+si usa allor aun trade off ratio dove prendiamo le soluzioni A e B e calcolipmo il rapporto di trade off facendo:
+....
+
+che rappresenta il miglioramento dell'obiettivo iesimo in base al miglioramentodi un altro obiettivo ?!
+
+noi allora ci interessiamok delle soluzioni sulle frontiere dato ceh quel einterne sono dominate da altre piu vicine alla frontiera
+
+se abbiamo una zona convessa avremo che si colleghera1 in modo immaginario i punti togliendo la convessita1 e quindi prendiamo i punti sulla forntiera tranne sulla parte immaginaria
+
+
+per trovare le soluzioni effcienti abbiamo 2 metodi:
+- metodo dei vincoli-
+- metodo dei pesi
+
+
+1. prendiamo iun singolo obiettivp e per gli altri imponiamo una soglia dove per ogni obbiettco diverso da quello scelto la funzione obiettivo si a al amssismo:
+fk(x) <= uk (dato che minimizziamo)
+.....
+
+img
+
+
+es: nel caso di multischeduling:
+vogli ominimizzare il costo come obiettivo, impongo poi un valore soglia al tempo di compeltamento:
+T <= T^*
+
+con T^* tra Tmin e Tmax in base al fatto che se vogliamo minimizzare o massimizzare
+
+
+
+altro metodo: dei pesi:
+abbimao una sola f.o. come somma pesate degli altri obiettv:
+\sum wi fi
+
+com wi obiettivo: 'sum wi = 1
+
+a seconda del valore che diamo ai pesi andiamo a sposatre la retta trangente alla zona ammissibile
+
+img
+
+questo non funziona se e1 convesso dato che non possiamo traovare tutte le possibili soluzioni dato che la forntiera non e1 connessa. 
+
+es: con multiobeittvio:
+min.....
+
+
+
+
+
+per scegliere tra le diverse soluzione e traovare quella migliore, dipende dalle preferenze che posson essere espresse tramite una funzione che a seconda de valore dei diversiobiettivi assume un valore di verso allora traovando la suozlione che massimizza il valore della funzioen traviamo al soluzione migliroe per il decisore, il problemae1 che in gere non c'e1 una sluzione matematica per questa cosa ma  posiiamo:
+max U ....
+s.t.
+g(x) >= 0
+x >= 0
+
+metodo a priori
+se disponiamo di questa funzione in forma chiusa possiamo risolvere i lproblema monoobeittivo masismizzando la funzione (detto metodo a propri)
+
+in genre ono si trova questa solzione
+
+es: settiamo una soglia erapprensetiamko la distaza di f.o. e la soglia adeguata. al variare di r avremo  3 tipi di metriche:
+- r=1 ....
+- r=2 metrica euclidea ....
+- r=+infty .....
+
+sara difficile di re per ogni obeittvi oquale puo esser una solgia adeguata dato che spesso traovare singoli ottimi e1 complicato.
+
+
+
+
+altro apporccio: a posteriori
+andiamoa a genreare tutte le soluzioni effcienti e dire quale tra le soluzione e1 la migliore. e1 difficiel applicare al metodo perche1 potrebbe cresce in maniera espoenziale con la dimensione del problema
+
+
+
+allora usiamo un approccio interattivo:
+approccio di mezzo
+presi 2 obiettvi troviamo il punto ottimko per entrambi e poi troviamo la priam soluzioneefficiente che si atra A e B e poi si scegli a su quale parte della forntiera vogliamo posizionia=arci. es parte AB e trbiamo una oluizone efficente tra le 2 ecc ecc
+ 
+img
+
+mi fermo quando il segmento che mi rimane e1 cosi piccolo che i due punti con=incidono
+
+m isposto in base a cosa mi server

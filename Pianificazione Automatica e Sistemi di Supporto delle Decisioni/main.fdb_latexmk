@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1667492869 "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.tex" "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" "main" 1667492869
+["pdflatex"] 1667563336 "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.tex" "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" "main" 1667563336
   "./img//2sol.jpeg" 1666014816 28461 84841822171114491a40d3cca4d00da9 ""
   "./img//agents.jpeg" 1664024769 29200 a3c52b1d73339e061fa1df7d29700b25 ""
   "./img//aon.jpeg" 1665141817 26548 2bdea5881f9794f52766d4c5e7878061 ""
@@ -43,7 +43,7 @@
   "./img//prodline.jpeg" 1665155561 21791 80a6532482b69afed2ed6800a169311d ""
   "./img//rpp.jpeg" 1666970054 20373 40239fb2640fdde747de4fd53c38c47b ""
   "./img//st12.jpeg" 1664549133 14096 a24c42dbcd1e26cdf69772bd908a1809 ""
-  "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux" 1667492869 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux" 1667563336 8 a94a2480d3289e625eea47cd1b285758 ""
   "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.tex" 1666887201 4226 af7f2600335402d59f4348b90ca180d4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -249,12 +249,12 @@
   "sections/3_ottimizzazione/3_ottimizzazione.tex" 1665744880 11827 f8d659abcd263aeed6bc73cbaf233d51 ""
   "sections/4_formulazioniProgLineare/4_formulazioniProgLineare.tex" 1667459238 4765 41ec3d7a943bd22d8d1acc60b38e9e85 ""
   "sections/5_optimizationModelsReview/5_optimizationModelsReview.tex" 1667460281 44961 7ee7bce3a595d7aea1bc8874043ab780 ""
-  "sections/6_branchAndBound/6_branchAndBound.tex" 1667492866 17757 594d562a4cf05164fa6b17e33588afa9 ""
+  "sections/6_branchAndBound/6_branchAndBound.tex" 1667563332 25504 6adc94752f3e9076e33743b9ab6b9e24 ""
   (generated)
-  "main.aux"
-  "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf"
   "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.log"
-  "main.log"
+  "main.toc"
+  "main.aux"
   "main.out"
   "main.pdf"
-  "main.toc"
+  "main.log"
+  "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf"
