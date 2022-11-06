@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  4 NOV 2022 13:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  6 NOV 2022 18:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1254,391 +1254,466 @@ File: ./img//grafbab4.jpeg Graphic file (type jpg)
 <use ./img//grafbab4.jpeg>
 Package pdftex.def Info: ./img//grafbab4.jpeg  used on input line 357.
 (pdftex.def)             Requested size: 207.17032pt x 146.94638pt.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:383: Missing $ inserted.
-<inserted text> 
-                $
-l.383 ... livello computazionele sara dato da O(2^
-                                                  n) quindi il tempo di calc...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:384: Missing $ inserted.
-<inserted text> 
-                $
-l.384 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
-[]\OT1/ptm/m/n/10 nel ca-so perg-gio-re di va-ria-bi-li bi-na-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
-\OT1/ptm/m/n/10 rie il li-vel-lo com-pu-ta-zio-ne-le sa-ra da-to da
- []
-
-
-Overfull \hbox (284.89482pt too wide) in paragraph at lines 383--384
-\OT1/ptm/m/n/10 O(2$[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 quindiiltempodicalcolocresceesposnenzialmenteconilnumerodivariabili:mae\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 caratteristicadiquestiproblemiebasta\OT1/cmr/m/n/10 ?$ 
- []
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:385: Missing $ inserted.
-<inserted text> 
-                $
-l.385 ...o perggiore in tempo di calcolo cresce 2^
-                                                  n
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:386: Missing $ inserted.
-<inserted text> 
-                $
-l.386 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 388.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[25pdfTeX warning (ext4): destination with the same identifier (name{figure.39}) has been already used, duplicate ignored
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.39}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.388 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.40}) has been already used, duplicate ignored
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.40}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.388 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.41}) has been already used, duplicate ignored
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.41}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.388 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.42}) has been already used, duplicate ignored
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.42}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.388 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab3.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab4.jpeg>]
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:408: Missing $ inserted.
+l.1 \newpage
+             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab3.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab4.jpeg>]
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:63: Missing $ inserted.
 <inserted text> 
                 $
-l.408 ...ho che er andare dal punto 1 al 2 pago c_
-                                                  {12} ecc. devo traovare un...
+l.63 last = 3 ; rho=<2,4>; succ_
+                                1 = 3
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:409: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:67: Missing $ inserted.
 <inserted text> 
                 $
-l.409 
-      
+l.67 
+     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-
-Overfull \hbox (140.89374pt too wide) in paragraph at lines 406--409
-\OT1/ptm/m/n/10 c$[]\OML/cmm/m/it/10 ecc:devotraovareuncircuitochetocchittuttiipuntiunasolavoltaecheabbiacostominimo \OT1/cmr/m/n/10 =
- []
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:420: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:80: Missing $ inserted.
 <inserted text> 
                 $
-l.420 ...pio il punto i nella finestratemporale a_
-                                                  i e b_i
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:422: Missing $ inserted.
-<inserted text> 
-                $
-l.422 
-      
+l.80 modello a varaibili binare x_
+                                  {ij} per ogni coppia di punti i e j ed è
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 2119) in paragraph at lines 420--422
-[]\OT1/ptm/m/n/10 cambiando pro-ble-ma pren-dia-mo un vei-co-lo che de-ve
- []
+LaTeX Warning: Command \` invalid in math mode on input line 80.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:80: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.80 ..._{ij} per ogni coppia di punti i e j ed è
+                                                  
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:80: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.80 ..._{ij} per ogni coppia di punti i e j ed è
+                                                  
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Underfull \hbox (badness 3724) in paragraph at lines 420--422
-\OT1/ptm/m/n/10 co-me del-le fi-ne-stra tem-po-ra-li di ser-vi-zio-zio do-v-quin-di
- []
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 81.
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 420--422
-\OT1/ptm/m/n/10 il vei-co-lo par-te da un cer-to pun-te a t=0 dal de-po-si-to
- []
+LaTeX Warning: Command \` invalid in math mode on input line 81.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:81: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.81 - =1 se l’arco x{ij} è
+                               visistato
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:81: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.81 - =1 se l’arco x{ij} è
+                               visistato
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Underfull \hbox (badness 7451) in paragraph at lines 420--422
-\OT1/ptm/m/n/10 co-me per sem-pio il pun-to i nel-la fi-ne-stra-tem-po-ra-le
- []
+LaTeX Warning: Command \` invalid in math mode on input line 82.
 
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:82: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.82 - =0 se non è
+                    viositato
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
 
-Overfull \hbox (208.43205pt too wide) in paragraph at lines 420--422
-\OT1/ptm/m/n/10 a$[]\OML/cmm/m/it/10 eb[]questefinestrretemporalirendonocomputazionelmentepiudifficileoavolteinammissibileilproblema$ 
- []
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:82: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.82 - =0 se non è
+                    viositato
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:429: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:83: Missing $ inserted.
 <inserted text> 
                 $
-l.429 ...riamo i valori random interi \overline{x}
-                                                  , … ma la soluzione sara...
+l.83 
+     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 429.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:430: Missing $ inserted.
-<inserted text> 
-                $
-l.430 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 4328) in paragraph at lines 429--430
-[]\OT1/ptm/m/n/10 unaltro ap-proc-cio pos-si-bi-le e1 ge-ne-ra-re un ma-nie-ra
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
-\OT1/ptm/m/n/10 ca-sua-le nu-me-ri in-te-ri quid-ni il no-stro pro-ble-ma
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
-\OT1/ptm/m/n/10 ad n va-rai-bi-li, ge-ne-ria-mo i va-lo-ri ran-dom in-te-ri
- []
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:466: Missing $ inserted.
-<inserted text> 
-                $
-l.466 last = 3 ; rho=<2,4>; succ_
-                                 1 = 3
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:470: Missing $ inserted.
-<inserted text> 
-                $
-l.470 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:483: Missing $ inserted.
-<inserted text> 
-                $
-l.483 modello a varaibili binare x_
-                                   {ij} per ogni coppia di punti i e j ed e1
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 484.
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:486: Missing $ inserted.
-<inserted text> 
-                $
-l.486 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--486
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
 []\OT1/ptm/m/n/10 modello a va-rai-bi-li bi-na-re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--486
-\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 perognicoppiadipuntiiejede\OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 =
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 perognicoppiadipuntiiejed[]\OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 =
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:487: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:84: Missing $ inserted.
 <inserted text> 
                 $
-l.487 quindi orendiamo le x_
-                            {ij} che ci interessano e le imporiamo ad 1 e le...
+l.84 quindi orendiamo le x_
+                           {ij} che ci interessano e le imporiamo ad 1 e le ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 487.
+LaTeX Warning: Command \textquotedblleft invalid in math mode on input line 84.
 
 
-LaTeX Warning: Command \textquotedblright invalid in math mode on input line 487.
+LaTeX Warning: Command \textquotedblright invalid in math mode on input line 84.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:488: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:85: Missing $ inserted.
 <inserted text> 
                 $
-l.488 
-      
+l.85 
+     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (269.20992pt too wide) in paragraph at lines 487--488
+Overfull \hbox (269.20992pt too wide) in paragraph at lines 84--85
 []\OT1/ptm/m/n/10 quindi oren-dia-mo le x$[]\OML/cmm/m/it/10 checiinteressanoeleimporiamoad\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 elealtrea\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 datochequestenonfannopartedelnostro\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 percorso\OT1/cmr/m/n/10 "$ 
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:506: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:103: Missing $ inserted.
 <inserted text> 
                 $
-l.506 avremo delle variabili addizzionaliu_
+l.103 avremo delle variabili addizzionaliu_
                                            i una per ogni punto e conu_i rap...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 506.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 103.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:507: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:104: Missing $ inserted.
 <inserted text> 
                 $
-l.507 
+l.104 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--507
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 []\OT1/ptm/m/n/10 siamo quin-di il mo-del-lo MTZ: miller-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--507
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 \OT1/ptm/m/n/10 zucker0zemlin: avre-mo del-le va-ria-bi-li
  []
 
 
-Overfull \hbox (75.2818pt too wide) in paragraph at lines 505--507
+Overfull \hbox (75.2818pt too wide) in paragraph at lines 102--104
 \OT1/ptm/m/n/10 addizzionaliu$[]\OML/cmm/m/it/10 unaperognipuntoeconu[]rappresental[]oridinedivisitadepuntoi$ 
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:509: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:106: Missing $ inserted.
 <inserted text> 
                 $
-l.509 u_
+l.106 u_
         i = 1
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:510: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:107: Missing $ inserted.
 <inserted text> 
                 $
-l.510 
+l.107 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:511: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:108: Missing $ inserted.
 <inserted text> 
                 $
-l.511 abbiamo allora u1 =1 -> x_
+l.108 abbiamo allora ù =1 -> x_
                                 13 = 1 -> u3 = 2 -> x34 = 1 -> u4 = 3 -> x42...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:512: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:109: Missing $ inserted.
 <inserted text> 
                 $
-l.512 
+l.109 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 513--514
+Underfull \hbox (badness 1661) in paragraph at lines 110--111
 []\OT1/ptm/m/n/10 allora agi-gun-go quen-ste va-ria-bi-li ui per rap-pre-sen-ta-re
  []
 
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 526.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[26]
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:545: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: Missing $ inserted.
 <inserted text> 
                 $
-l.545 ...oroblema aursiliario dove le variaibli x_
+l.142 ...oroblema aursiliario dove le variaibli x_
                                                   1 del primo gurppo , sono ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:546: Missing $ inserted.
+
+LaTeX Warning: Command \` invalid in math mode on input line 142.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.142 ...amento, quindi i l problema asuliairio è
+                                                   guale all'originale ma so...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.142 ...amento, quindi i l problema asuliairio è
+                                                   guale all'originale ma so...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 142.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.142 ...re e le altre rilasate. queto problema è
+                                                   ancora a varaibili intere...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.142 ...re e le altre rilasate. queto problema è
+                                                   ancora a varaibili intere...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 142.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.142 ...ema è ancora a varaibili intere, pero è
+                                                   piu semplice del prob di ...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:142: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.142 ...ema è ancora a varaibili intere, pero è
+                                                   piu semplice del prob di ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:143: Missing $ inserted.
 <inserted text> 
                 $
-l.546 
+l.143 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
 
-Underfull \hbox (badness 2368) in paragraph at lines 545--546
+Underfull \hbox (badness 2368) in paragraph at lines 142--143
 \OT1/ptm/m/n/10 con-to che la diff-fi-col-ta sta nel-le mol-te va-ri-bi-li in-te-re,
  []
 
 
-Overfull \hbox (915.33453pt too wide) in paragraph at lines 545--546
-\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 delprimogurppo; sonointerementrelerestatnifacciounrilassamento; quindiilproblemaasuliairioe\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 gualeall[]originalemasololex[]sonointereelealtrerilasate:quetoproblemae\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ancoraavaraibiliintere; peroe\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 piusemplicedelprobdipartenzadatochesololevarx[]sonointere:$ 
+Overfull \hbox (900.33449pt too wide) in paragraph at lines 142--143
+\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 delprimogurppo; sonointerementrelerestatnifacciounrilassamento; quindiilproblemaasuliairio[]gualeall[]originalemasololex[]sonointereelealtrerilasate:quetoproblema[]ancoraavaraibiliintere; pero[]piusemplicedelprobdipartenzadatochesololevarx[]sonointere:$ 
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:547: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:144: Missing $ inserted.
 <inserted text> 
                 $
-l.547 ...ette soluzione ottima, allora avro che x_
-                                                  1 e1 intera e faccio un fi...
+l.144 ...ette soluzione ottima, allora avro che x_
+                                                  1 è intera e faccio un fi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:549: Missing $ inserted.
+
+LaTeX Warning: Command \` invalid in math mode on input line 144.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:144: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.144 ... soluzione ottima, allora avro che x_1 è
+                                                   intera e faccio un fixing...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:144: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.144 ... soluzione ottima, allora avro che x_1 è
+                                                   intera e faccio un fixing...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 144.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:144: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.144 ... successvie fosso x_1 al valore che mi è
+                                                   veniuto nella risoluzioen...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:144: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.144 ... successvie fosso x_1 al valore che mi è
+                                                   veniuto nella risoluzioen...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:146: Missing $ inserted.
 <inserted text> 
                 $
-l.549 
+l.146 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
-[]\OT1/ptm/m/n/10 risolto que-sto pe-ble-ma, se e1 inam-mis-si-bi-le,
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
+[]\OT1/ptm/m/n/10 risolto que-sto pe-ble-ma, se []e inam-mis-si-bi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
-\OT1/ptm/m/n/10 ac-n-he quel-lo di par-ten-za lo e1, se pe-ro1
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
+\OT1/ptm/m/n/10 le, ac-n-he quel-lo di par-ten-za lo []e, se per[]o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 \OT1/ptm/m/n/10 am-met-te so-lu-zio-ne ot-ti-ma, al-lo-ra avro che
  []
 
 
-Overfull \hbox (295.39526pt too wide) in paragraph at lines 547--549
-\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 interaefacciounfixingquindinelliterazionisuccessviefossox[]alvalorechemie\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 veniutonellarisoluzioendelproblemax[] \OT1/cmr/m/n/10 =
+Overfull \hbox (285.39523pt too wide) in paragraph at lines 144--146
+\OT1/ptm/m/n/10 x$[][]\OML/cmm/m/it/10 interaefacciounfixingquindinelliterazionisuccessviefossox[]alvalorechemi[]veniutonellarisoluzioendelproblemax[] \OT1/cmr/m/n/10 =
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:550: Missing $ inserted.
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 146.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[26]
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: Missing $ inserted.
 <inserted text> 
                 $
-l.550 ...olo di x fa parte del problema e uindi x_
-                                                  1 e1 fissato al valore ott...
+l.147 ...olo di x fa parte del problema e uindi x_
+                                                  1 è fissato al valore ott...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:550: Undefined control sequence.
-l.550 ...ha successo, risolvendo troviamo \oveline
+
+LaTeX Warning: Command \` invalid in math mode on input line 147.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.147 ...di x fa parte del problema e uindi x_1 è
+                                                   fissato al valore ottenut...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.147 ...di x fa parte del problema e uindi x_1 è
+                                                   fissato al valore ottenut...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 147.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.147 ... ancora rilassate se il promeba rislto è
+                                                   inamissibile, fallisce. s...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.147 ... ancora rilassate se il promeba rislto è
+                                                   inamissibile, fallisce. s...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: Undefined control sequence.
+l.147 ...ha successo, risolvendo troviamo \oveline
                                                   \overline{x}_2 facciamo un...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1646,8 +1721,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:550: Undefined control sequence.
-l.550 ...2 facciamo un fix fissando x_2 = \oveline
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:147: Undefined control sequence.
+l.147 ...2 facciamo un fix fissando x_2 = \oveline
                                                   \overline{x}_2
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1655,252 +1730,271 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:551: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:148: Missing $ inserted.
 <inserted text> 
                 $
-l.551 
+l.148 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+Missing character: There is no � in font cmex10!
+Missing character: There is no � in font cmex10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 []\OT1/ptm/m/n/10 alliterazione suc-ces-si-va il vin-co-lo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 \OT1/ptm/m/n/10 di x fa par-te del pro-ble-ma e uin-di
  []
 
 
-Overfull \hbox (726.26744pt too wide) in paragraph at lines 550--551
-\OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 fissatoalvaloreottenutoprima; ax[]richiedodiessereinteraelevariaiblideigruppisuccessivisonoancorarilassateseilpromebarisltoe\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 inamissibile; fallisce:sehasuccesso; risolvendotroviamo[][]facciamounfixfissandox[] \OT1/cmr/m/n/10 =
+Overfull \hbox (716.26741pt too wide) in paragraph at lines 147--148
+\OT1/ptm/m/n/10 x$[][]\OML/cmm/m/it/10 fissatoalvaloreottenutoprima; ax[]richiedodiessereinteraelevariaiblideigruppisuccessivisonoancorarilassateseilpromebarislto[]inamissibile; fallisce:sehasuccesso; risolvendotroviamo[][]facciamounfixfissandox[] \OT1/cmr/m/n/10 =
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:563: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:160: Missing $ inserted.
 <inserted text> 
                 $
-l.563 ... sottoproblema con alcune varaibili da x_
+l.160 ... sottoproblema con alcune varaibili da x_
                                                   1 a x_k e transcuro quelle...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:564: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:161: Missing $ inserted.
 <inserted text> 
                 $
-l.564 
+l.161 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 562--564
+Underfull \hbox (badness 4316) in paragraph at lines 159--161
 []\OT1/ptm/m/n/10 approcci orol-ling ho-ri-zon: dy-ran-te il pri-mo pe-rio-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--564
+Underfull \hbox (badness 10000) in paragraph at lines 159--161
 \OT1/ptm/m/n/10 con-si-de-ro un sot-to-pro-ble-ma con al-cu-ne va-rai-bi-li da
  []
 
 
-Overfull \hbox (749.74448pt too wide) in paragraph at lines 562--564
+Overfull \hbox (749.74448pt too wide) in paragraph at lines 159--161
 \OT1/ptm/m/n/10 x$[]\OML/cmm/m/it/10 ax[]etranscuroquelledeiperiodisuccessivi; consideroalaloraunsottproblemaconsoloelevaraibilix[]finox[]efacciounfixsux[]efacciounpassoinavanti; quindiconsiderounsottoproblemconx[]fissatoeconsiderolevariabilix[]finoax[] \OT1/cmr/m/n/10 +
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:578: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:175: Missing $ inserted.
 <inserted text> 
                 $
-l.578 ...zzazare o min non una solo af.o. ma da z_
+l.175 ...zzazare o min non una solo af.o. ma da z_
                                                   1 a z_p.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:579: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:176: Missing $ inserted.
 <inserted text> 
                 $
-l.579 
+l.176 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:582: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:179: Missing $ inserted.
 <inserted text> 
                 $
-l.582 S_
+l.179 S_
         i starting time dell'attivita i
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:585: Missing $ inserted.
+
+LaTeX Warning: Command \` invalid in math mode on input line 181.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:181: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.181 pij = 1 se l'attivta j è
+                                prerequinistito dell'attivita i, =0 altrimenti
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:181: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.181 pij = 1 se l'attivta j è
+                                prerequinistito dell'attivita i, =0 altrimenti
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:182: Missing $ inserted.
 <inserted text> 
                 $
-l.585 
+l.182 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+Missing character: There is no � in font cmex10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 177--182
 []\OT1/ptm/m/n/10 es: pro-ble-ma si sche-di-ling: abia-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 177--182
 \OT1/ptm/m/n/10 mo n at-ti-vi-ta e co-me pa-ra-men-tri:
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 580--585
+Underfull \hbox (badness 7944) in paragraph at lines 177--182
 \OT1/ptm/m/n/10 S$[]\OML/cmm/m/it/10 startingtimedell[]attivitaid[]duratadell[]attivitaipij \OT1/cmr/m/n/10 =
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
-\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 sel[]attivtaje\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 prerequinistitodell[]attivitai; \OT1/cmr/m/n/10 =
- []
-
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:592: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:189: Missing $ inserted.
 <inserted text> 
                 $
-l.592 T >= S_
+l.189 T >= S_
              i + d_i ....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:593: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:190: Missing $ inserted.
 <inserted text> 
                 $
-l.593 
+l.190 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:597: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:194: Missing $ inserted.
 <inserted text> 
                 $
-l.597 D_
+l.194 D_
         i max durata dell'attivita i
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:601: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:198: Missing $ inserted.
 <inserted text> 
                 $
-l.601 
+l.198 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--601
+Underfull \hbox (badness 10000) in paragraph at lines 193--198
 []\OT1/ptm/m/n/10 formulare un at-ti-v-ta in mo-do fat-tii-bi-le:
  []
 
 
-Overfull \hbox (293.07443pt too wide) in paragraph at lines 596--601
+Overfull \hbox (293.07443pt too wide) in paragraph at lines 193--198
 \OT1/ptm/m/n/10 D$[]\OML/cmm/m/it/10 maxduratadell[]attivitaib[]minduratadell[]attivitaid[]duratadell[]attivitaiX[]costoperaccellerareilcomletamentodell[]attivitai$ 
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:603: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:200: Missing $ inserted.
 <inserted text> 
                 $
-l.603 d_
+l.200 d_
         i = D_i-a_iX_i con a_i coefficente di ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:605: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:202: Missing $ inserted.
 <inserted text> 
                 $
-l.605 
+l.202 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:607: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:204: Missing $ inserted.
 <inserted text> 
                 $
-l.607 min \sum
+l.204 min \sum
                .....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:611: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:208: Missing $ inserted.
 <inserted text> 
                 $
-l.611 
+l.208 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--611
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
 []\OT1/ptm/m/n/10 allora bbia-mo da mi-ni-miz-za-re 2 obiet-ti-vi: min
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:648: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:245: Missing $ inserted.
 <inserted text> 
                 $
-l.648 T <= T^
+l.245 T <= T^
              *
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:649: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:246: Missing $ inserted.
 <inserted text> 
                 $
-l.649 
+l.246 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:650: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:247: Missing $ inserted.
 <inserted text> 
                 $
-l.650 con T^
+l.247 con T^
             * tra Tmin e Tmax in base al fatto che se vogliamo minimizzare o...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:651: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:248: Missing $ inserted.
 <inserted text> 
                 $
-l.651 
+l.248 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (108.91756pt too wide) in paragraph at lines 650--651
+Overfull \hbox (108.91756pt too wide) in paragraph at lines 247--248
 []\OT1/ptm/m/n/10 con T$[]\OML/cmm/m/it/10 traTmineTmaxinbasealfattochesevogliamominimizzareomassimizzare$ 
  []
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:656: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:253: Missing $ inserted.
 <inserted text> 
                 $
-l.656 \sum
+l.253 \sum
            wi fi
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex:657: Missing $ inserted.
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex:254: Missing $ inserted.
 <inserted text> 
                 $
-l.657 
+l.254 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 665.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 299.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
 [27])
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 144.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 145.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
  [28
 
@@ -1921,21 +2015,21 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D407AA7AB4F4272E43A97AB3DE73E275;11929.
+(rerunfilecheck)             After:  A91ED0861333633ACD458DBDEC80D782;12583.
  ) 
 Here is how much of TeX's memory you used:
- 15057 strings out of 478994
- 227060 string characters out of 5858185
- 689028 words of memory out of 5000000
+ 15066 strings out of 478994
+ 227703 string characters out of 5858185
+ 689913 words of memory out of 5000000
  31966 multiletter control sequences out of 15000+600000
  443689 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,15n,88p,669b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 81i,15n,88p,678b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (28 pages, 1769774 bytes).
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (28 pages, 1771907 bytes).
 PDF statistics:
- 486 PDF objects out of 1000 (max. 8388607)
- 392 compressed objects within 4 object streams
- 227 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 397 compressed objects within 4 object streams
+ 231 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

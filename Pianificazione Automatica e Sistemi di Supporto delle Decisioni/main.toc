@@ -64,3 +64,7 @@
 \contentsline {subsection}{\numberline {\mbox {VI-C}}Branching}{23}{subsection.6.3}%
 \contentsline {subsection}{\numberline {\mbox {VI-D}}Fathoming}{24}{subsection.6.4}%
 \contentsline {subsection}{\numberline {\mbox {VI-E}}Esercizio Branch-and-Bound}{24}{subsection.6.5}%
+\contentsline {section}{\numberline {VII}Constructive heuristics}{26}{section.7}%
+\contentsline {subsection}{\numberline {\mbox {VII-A}}Introduzione}{26}{subsection.7.1}%
+\contentsline {subsection}{\numberline {\mbox {VII-B}}Travellig Salesman Problem (TSP)}{26}{subsection.7.2}%
+\contentsline {subsection}{\numberline {\mbox {VII-C}}Algoritmo Greedy}{26}{subsection.7.3}%
