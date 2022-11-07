@@ -28,181 +28,250 @@ Un vincolo ulteriore potrebbero essere le \hl{finestre temporali} che potrebbero
 % Algoritmo greedy
 \subsection{Algoritmo Greedy}
 
-cerca di massimizzare nel breve periodo. procedura sequenzaiale ch costruisce la solzuone un  passo alla volta 
-è euristica di tipo costruttivo costruiendo la soluzione con un tipo sequenzizale ad ogni passo fa una scelta e massimizza solo l’utilizzo immediato ma cosi puo capirea che
-- ho sluzione inammissibile
-- non garantisce una soluzione ottima
+Algoritmo che \hl{cerca di massimizzare nel breve periodo} (usato per essere adattato a qualsiasi problema). È un'\hl{euristica di tipo costruttivo}, infatti ha una \hl{procedura sequenziale} che costruisce la soluzione passo passo \hl{massimizzando solo l'utilizzo immediato} andando però in contro a:
 
-es: 
+\begin{itemize}
+    \item una soluzione inammissibile
+    \item non garantire una soluzione ottima
+\end{itemize}
 
-pseudocodice greedy o anche detto nearest neighbour: adattamenteo dell’algoritmok greedy al commesso viaggiatore
+il suo \hl{pseudocodice} è un adattamenteo sull'algoritmo del Travellig Salesman Problem (TSP):
 
-parto dal punto 1 e lo identifico cole last cioe ultimo punto tocacto 
-S={…}e poi una lista di punti da visitare
+\begin{itemize}
+    \item[] last = 1 (last = ultimo punto toccato)
+    \item[] $S = \{2,3,...,n\}$
+    \item[] while ($S \neq$ insieme vuoto)
+    \begin{itemize}
+        \item[] estrarre da $S$ un punto
+        \begin{itemize}
+            \item[] $i = \text{argmin}_{i \in S} c_{\text{last}, i}$
+            \item[] $\text{succ}_{last} = i$
+            \item[] last $= i$
+        \end{itemize}
+    \end{itemize}
+    \item[] $\text{succ}_{last} = 1$ 
+\end{itemize}
 
-while non ho toccato tutti i punto S != insieme vuoto
-estraggo un punto da S
-cerco il punto a costo minimo rispetto al last 
-storicizzo il valore del last succesivo
-imposto il last alnuovo punto 
-end while
-riporto il succ last = 1 per poterlo riportare all’inizio
+Vediamo un esempio con dati: $n = 4$ e
+$$C=
+\left[ {\begin{array}{cccc}
+    0 & 10 & 5 & 8 \\
+    10 & 0 & 2 & 1 \\
+    5 & 2 & 0 & 4 \\
+    8 & 1 & 4 & 0 \\
+\end{array} } \right]
+$$
 
+dove applicando l'algoritmo abbiamo:
 
-il vantaggio è che possiamo prevedere le iterazioni del loop 
-
-es:
-n = 4
-C = 
-0 10 5 8
-10 0 2 1 
-5 2 0 4
-8 1 4 0
-
-last = 1 rho = <2,3,4>
-last = 3 ; rho=<2,4>; succ_1 = 3
-last = 2; rho=<4>; succ_3 = 2
-last = 4; rho =<>; succ_2 =4
-succ_4 = 1
-
-ovviamente se abbiamo delle time window l’algoritmo deve essser adattato. quento greedy infati serve per poter essere customizzato per i problemi
-
-
-
-
-classkwork
-
-tramite TSP
-
-usiamo libreira pulp
+\begin{itemize}
+    \item last = 1; $\rho = <2,3,4>$
+    \item last = 3 ; $\rho=<2,4>$; $\text{succ}_1 = 3$
+    \item last = 2; $\rho=<4>$; $\text{succ}_3 = 2$
+    \item last = 4; $\rho =<>$; $\text{succ}_2 =4$
+    \item $\text{succ}_4 = 1$
+\end{itemize}
 
 
-modello a varaibili binare x_{ij} per ogni coppia di punti i e j ed è 
-- =1 se l’arco x{ij} è visistato
-- =0 se non è viositato
+% Miller-Tucker-Zemlin
+\subsection{Miller-Tucker-Zemlin}
 
-quindi orendiamo le x_{ij} che ci interessano e le imporiamo ad 1 e le altre a 0 dato che queste non fanno parte del nostro “percorso”
+Questo modello definisce delle \hl{variabili binare $x_{ij}$} per ogni coppia di punti $i$ e $j$:
 
-img
+$$ x_{ij} =
+\begin{cases} 
+    1, \text{ se } i,\ j \text{ sono/saranno visitati} \\ 
+    0, \text{altrimenti}
+\end{cases}
+$$
 
-vogliamo usare la sommatoria {della f.o. }dei costi  dove voglio minimizzarli quindi sostituiamo le x con quelle sopra e le c in base alla tabella dei costi data
+avremo allora che:
+$$\min \sum_{i,j} c_{i,j} x_{i,j}$$
+s.t
+\begin{itemize}
+    \item $\sum{j} x_{ij} = 1\ \ \ \forall i$
+    \item $\sum{j} x_{ji} = 1\ \ \ \forall i\ ->$ dice che ogni punto ha un suo successore
+    \item $0 \leq x_{ij} \leq 1\ \ \ \forall x_{ij} \text{ integer} ->$ dice ogni punto ha un predecessore
+\end{itemize}
 
-secnda somm quindi ogni punto aha un successore
-terza sum ogni punto ha un precedessore
-
-quesnti vincoli non basta no per poter risolvere il modello infatti non possiamo esculudere che la soluzione sia disconnessa (sub-tour)
-
-
-img
-
-
-dato che mancano dei vincoli di connessione della soluzione
-
-
-siamo quindi il modello MTZ: miller-zucker0zemlin:
-avremo delle variabili addizzionaliu_i una per ogni punto e conu_i rappresenta l’oridine di visitade punto i
-
-imporiamo pertendo dal pnto 1
-u_i = 1
-
-abbiamo allora ù =1 -> x_13 = 1 -> u3 = 2 -> x34 = 1 -> u4 = 3 -> x42 = 1 -> u2 = 4 -> x21 = 1
-
-allora agigungo quenste variabili ui per rappresentare l’ordine di vista e non avere disconitnuita della soluzione
-
-altri vincoli saranno alora:
-2 <= ui <= n
-
-dato che le ui con i != 1 saranno comprese tra 2 a n dato che dobbiamo assegnare la 2 posizione finio alla n-esima
-
-poi una ltro vincolo:
-ui - uj + 1 <= n(1-xij)
-
-lega le variabili u con xji che dicono cihi viene dopo chi e u l’ordine. questa relaione è corretta dato che abbiamo 2 casi:”
-- se xij = 0 allora ui - uj +1 <= n ovvio dato che tutte le variabili u son ocomprese in n 
-- se xij = 1 allora ui - uj + 1 <= 0 dato che uj >= ui + 1 allora i è predecessore di j  alora l;odine di visita di j è almeno successivo a i
+Questi \hl{vincoli non bastano} per poter risolvere il modello, infatti non possiamo escludere di avere una \hl{soluzione disconnessa (sub-tour)}
 
 
-altro paradigma che si adata bene ad altre classi di problemi:
-relax and fix algorithm
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{sep.jpeg}
+\caption{Soluzione disconnessa} 
+\label{sep}
+\end{figure}
 
-sono problemi multiperiodali dato che voglio poter avere un approccio ora per ora. uso un idea algortimo dvoe suppongo di voler risolvere ik prob di ottimizzazione:
-min z = ..
+
+Si introducono allora dei \hl{vincoli di connessione} della soluzione tramite una \hl{variabile per l'ordine di vista: $u_i$} (una per ogni punto).
+
+Poniamo allora un punto iniziale con $u_i = 1$:
+
+\begin{itemize}
+    \item[] $u_1 = 1 -> x_{1,3} = 1$
+    \item[] $u_3 = 2 -> x_{3,4} = 1$
+    \item[] $u_4 = 3 -> x_{4,2} = 1$
+    \item[] $u_2 = 4 -> x_{2,1} = 1$
+\end{itemize}
+
+altri \hl{vincoli da imporre su $u_i$}:
+
+\begin{itemize}
+    \item $2 \leq u_i \leq 1\ \ \ \forall i \neq 1$
+    \item $u_i - u_j + 1 <= n(1-x_{ij})\ \ \ \forall i,j \neq 1$
+\end{itemize}
+
+Avremo quidni \hl{2 casi}:
+
+\begin{itemize}
+    \item $x_{ij} = 0\ \Rightarrow\ u_i - u_j +1 \leq n$: ovvio dato che tutte le variabili \textbf{$u$ sono comprese in $n$}
+    \item $x_{ij} = 1\ \Rightarrow\ u_i - u_j + 1 \leq 0$: dato che $u_j \geq u_i + 1$ allora \textbf{$i$ predecessore di $j$}
+\end{itemize}
+
+
+% Algoritmo relax-and-fix
+\subsection{Algoritmo relax-and-fix}
+
+Si usa per \hl{problemi multiperiodali} dato che voglio poter avere un approccio con \hl{suddivisione in piu' periodi temporali}:
+
+$$\min z = c^Tx$$
 s.a.
-Ax = b
-x >= 0 e intera
+\begin{itemize}
+    \item $Ax=b$
+    \item $x \geq 0$ (integer)
+\end{itemize}
 
-alora vado a partizionare le variaibli in n gruppi. quijdi un in problema multi periodiale di pianificazione da quoi a un tempo t, le variabili si dividono in gruppi, decisioniali dche mi dicocosa fare qui alle 12, quelle delale 12 alle 13 eccecc.
+\hl{Partiziono le variabli in $n$ gruppi} in modo da avere variabili impiegate per un solo intervallo di tempo. Allora il problema diventa:
 
 abbiamo alloradelle applicazioni ndove le varaibili naturalemte si dividono in gruppi datoun osviluppo temporale, il orblema allora diventa:
 
-min z = sum..
+$$\min z = \sum_{i=1}^n c_i^Tx_i$$
 s.a.
-sum...
+\begin{itemize}
+    \item $\sum_{i=1}^na_ix_i=b$
+    \item $x_i \geq 0$ (integer)
+\end{itemize}
 
-il prblema nel complsso è complicato, allorami rendo conto che la diffficolta sta nelle molte varibili intere, alllora definisco un oroblema aursiliario dove le variaibli x_1 del primo gurppo , sono intere mentre le restatni faccio un rilassamento, quindi i l problema asuliairio è guale all'originale ma solo le x_1 sono intere e le altre rilasate. queto problema è ancora a varaibili intere, pero è piu semplice del prob di partenza dato che solo le var x_1 sono intere.
-
-risolto questo peblema, se è inammissibile, acnhe quello di partenza lo è, se però ammette soluzione ottima, allora avro che x_1 è intera e faccio un fixing quindi nell iterazioni successvie fosso x_1 al valore che mi è veniuto nella risoluzioen del problema 
-x_1 = \overline{x}_1
-
-alliterazione successiva il vincolo di x fa parte del problema e uindi x_1 è fissato al valore ottenuto prima, a x_2 richiedo di essere intera e le variaibli dei gruppi successivi sono ancora rilassate se il promeba rislto è inamissibile, fallisce. se ha successo, risolvendo troviamo \oveline\overline{x}_2 facciamo un fix fissando x_2 = \oveline\overline{x}_2
-
-tengo quindi conto anche delle variabili "future" ma non richiede un grande sforzo computazione dato che labvora sul singolo gruppo.
-
-la genereica iterazione è:
-....
-
-pseudocodice:
-.....
+la difficoltà del problema si trova nelle molte varibili intere. Posso allora \hl{definire un problema con variaibli $x_1$ del primo gurppo intere}, per le restanti faccio un rilassamento. Potremo avere che:
 
 
+\begin{itemize}
+    \item ausiliario: inammissibile $\to$ iniziale: inammissibile
+    \item ausiliario: sol. ottima $\to$ fisso $x_1$ alla soluzione: $x_1 = \overline{x}_1$
+\end{itemize}
 
-approcci orolling horizon:
-dyrante il primo periodo considero un sottoproblema con alcune varaibili da x_1 a x_k e transcuro quelle dei periodi successivi, considero alalora un sottproblema con solo ele varaibili x_1 fino x_k e faccio un fix su x_1 e faccio un passo in avanti, quindi considero un sottoproblem con x_1 fissato e considero le variabili x_2 fino a x_k+1.
+Quindi per \hl{risolvere il problema} dobbiamo:
 
-un porblem acon k varaibiali riwco a risolverlo.
+\begin{enumerate}
+    \item $\underline{x}_1$ diventa \textbf{intera}
+    \begin{itemize}
+        \item \textbf{rilasso} le altre variabili
+        \item \textbf{risolvo} il problema e \textbf{fissiamo} $x_1 = \overline{x}_1$ che viene "rimossa" dal modello
+    \end{itemize}
 
-quidn risolvo dedei sottoporbemi con variavili legate con tempi consecutivi ma non quelli troppo successivi
+    \item ecc, ecc...
+\end{enumerate}
 
-(notare che è meno accurato del relax and fix dato che considero certe varaibili e non tutte assieme)
+Così facendo \hl{tengo conto delle variabili "future"} senza richiede un grande sforzo computazione, dato che lavora sul singolo gruppo.
+
+\hl{Generallizzando}:
+$$\min x = \sum_{i=1}^{k-1} c_i \overline{x}_i + c_k x_k + \sum_{i=k+1}^n c_i x+i$$
+s.t
+
+\begin{itemize}
+    \item $\sum_{i=1}^{k-1} a_i \overline{x}_i + a+k x+k + \sum_{i=k+1}^n a_i x_i = b$
+    \item $x_k \geq 0$ (integer)
+    \item $x_i \geq 0$
+\end{itemize}
+
+Lo \hl{pseudocodice} sarà:
+
+\begin{itemize}
+    \item[] found = true
+    \item[] for (k = 1 $\to$ n):
+    \begin{itemize}
+        \item[] solve $P_k(\overline{x}_1,...,\overline{x}_{k-1})$
+        \item[] if è inammissibile:
+        \begin{itemize}
+            \item[] found = false
+            \item[] break;
+        \end{itemize}
+        \item[] else: $(x'_{k+1},...,x'_n)$ è soluzione
+        fissare $\overline{x}_k = x'_{k}$
+    \end{itemize}
+\end{itemize}
 
 
+% Algoritmo rolling horizon
+\subsection{Algoritmo rolling horizon}
+
+Durante il primo periodo considero di:
+
+\begin{enumerate}
+    \item creare un \hl{sottoproblema con alcune variabili} da $x_1$ a $x_k$
+    \item \hl{trascurare le variabili dei periodi successivi}
+    \item fisso $x_1$
+    \item mi \hl{muovo di uno step}
+    \item considero un \hl{sottoproblema con $x_1$}
+    \item \hl{fisso $x_2$} e considero le variabili fino a $x_k+1$.
+    \item ecc, ecc...
+\end{enumerate}
+
+Andiamo quindi a \hl{risolvere un problema a $k$ variabili} ma \hl{senza tenere in conto le variabili troppo successive}, quindi sarà meno accurato.
 
 
+% Multiple criteria decision making
+\subsection{Multiple criteria decision making}
 
-MULTIPLE CRITERIA DECISION MAKING:
-dato che spesso abbiamo piu obbiettivi non riusciamo a scegliere in anticipo quale ha rpiorita allora spesso vanno in conflitto, allora per capire come fare. 
+Spesso abbiamo \hl{piu' obbiettivi} e \hl{non riusciamo a scegliere in anticipo quale ha priorita'} allora spesso vanno in \hl{conflitto}, allora cerchiamo di trovare le migliori soluzioni che devono \hl{rispettare alcuni vincoli}:
 
-usiamo la materemati multecreatirea dove abbmiamo da trovare una soluzione con le migliore soluzioni che devon orispettare alcuni vincoli, pero abbiamo un numero p cioè il creiterio. quidni dobbiamo massimizzazare o min non una solo af.o. ma da z_1 a z_p.
+$$p \text{ criteria } =
+\begin{cases} 
+    z_1 = f_1(x) \text{ da }\min \text{ o }\max \\ 
+    z_2 = f_2(x) \text{ da }\min \text{ o }\max \\ 
+    ... \\
+    z_p = f_p(x) \text{ da }\min \text{ o }\max
+\end{cases}
+$$
+s.t
 
-es: problema si schediling:
+\begin{itemize}
+    \item $g(x) \geq 0$
+    \item $x \geq 0$
+\end{itemize}
+
+
+Preso un problema di schediling:
 abiamo n attivita e come paramentri:
-S_i starting time dell'attivita i
-d_i durata dell'attivita i
-pij = 1 se l'attivta j è prerequinistito dell'attivita i, =0 altrimenti
+$S_i$ starting time dell'attivita i
+$d_i$ durata dell'attivita i
+$pij = 1$ se l'attivta j è prerequinistito dell'attivita i, $=0$ altrimenti
 
 obiettivo: minimizare il tempo di completamento = T
 
 
 avremo allora che:
-min T
+$min T$
 s.t.
-T >= S_i + d_i ....
+$T >= S_i + d_i ....$
 
 
 
 formulare un attivta in modo fattiibile:
-D_i max durata dell'attivita i
-b_i min durata dell'attivita i
-d_i durata dell'attivita i
-X_i costo per accellerare il comletamento dell'attivita i
+$D_i$ max durata dell'attivita i
+$b_i$ min durata dell'attivita i
+$d_i$ durata dell'attivita i
+$X_i$ costo per accellerare il comletamento dell'attivita i
 
 allora:
-d_i = D_i-a_iX_i con a_i coefficente di ...
+$d_i = D_i-a_iX_i$ con $a_i$ coefficente di ...
 ...
 
 allora bbiamo da minimizzare 2 obiettivi:
-min \sum .....
-min T
+$min \sum .....$
+$min T$
 s.t.
 .....
 
@@ -242,15 +311,15 @@ img
 
 es: nel caso di multischeduling:
 vogli ominimizzare il costo come obiettivo, impongo poi un valore soglia al tempo di compeltamento:
-T <= T^*
+$T <= T^*$
 
-con T^* tra Tmin e Tmax in base al fatto che se vogliamo minimizzare o massimizzare
+con $T^*$ tra Tmin e Tmax in base al fatto che se vogliamo minimizzare o massimizzare
 
 
 
 altro metodo: dei pesi:
 abbimao una sola f.o. come somma pesate degli altri obiettv:
-\sum wi fi
+$\sum wi fi$
 
 com wi obiettivo: 'sum wi = 1
 
