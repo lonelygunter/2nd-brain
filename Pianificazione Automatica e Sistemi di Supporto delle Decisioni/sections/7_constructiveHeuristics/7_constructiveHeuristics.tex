@@ -243,131 +243,175 @@ s.t
 \end{itemize}
 
 
-Preso un problema di schediling:
-abiamo n attivita e come paramentri:
-$S_i$ starting time dell'attivita i
-$d_i$ durata dell'attivita i
-$pij = 1$ se l'attivta j è prerequinistito dell'attivita i, $=0$ altrimenti
+% Esempio problema scheduling
+\subsection{Esempio problema scheduling}
 
-obiettivo: minimizare il tempo di completamento = T
+Preso un problema di scheduling, abbiamo $n$ attività con paramentri:
 
+\begin{itemize}
+    \item $S_i$: starting time dell'attività $i$
+    \item $d_i$: durata dell'attività $i$
+    \item $p_{ij} = 1$ se l'attivtà $j$ è prerequinistito dell'attività $i$
+    \item $p_{ij} = 0$ altrimenti
+\end{itemize}
 
-avremo allora che:
-$min T$
+come f.o: $\min T$ con $T$ tempo di completamento:
+$$\min T$$
 s.t.
-$T >= S_i + d_i ....$
 
+\begin{itemize}
+    \item $T \geq S_i + d_i,\ i = 1, ..., n$
+    \item $S_i \geq p_{ij} (S_j + d_j),\ i,j = 1, ..., n$
+\end{itemize}
 
+Per poter \hl{formulare un'attivita' in modo fattibile}:
 
-formulare un attivta in modo fattiibile:
-$D_i$ max durata dell'attivita i
-$b_i$ min durata dell'attivita i
-$d_i$ durata dell'attivita i
-$X_i$ costo per accellerare il comletamento dell'attivita i
+\begin{itemize}
+    \item $D_i$: max durata dell'attività $i$
+    \item $b_i$: min durata dell'attività $i$
+    \item $d_i$: durata dell'attività $i$
+    \item $X_i$: costo per accellerare il completamento dell'attività $i$
+\end{itemize}
+
 
 allora:
-$d_i = D_i-a_iX_i$ con $a_i$ coefficente di ...
-...
 
-allora bbiamo da minimizzare 2 obiettivi:
-$min \sum .....$
-$min T$
+\begin{itemize}
+    \item $d_i = D_i-a_iX_i$ con $a_i$ coefficente in unità di tempo
+    \item $d_i \geq b_i$
+\end{itemize}
+
+abbiamo da minimizzare 2 obiettivi:
+$$min \sum_{i=1}^n X_i$$
+$$min T$$
 s.t.
-.....
+
+\begin{itemize}
+    \item $T \geq S_i + d_i\ \ \ \forall\ \ \ i$
+    \item $S_i \geq p_{ij} (S_j + d_j)\ \ \ \forall\ \ \ i, j, i \neq j$
+    \item $d_i \geq b_i\ \ \ \forall\ \ \ i$
+    \item $d_i = D_i - a_i X_i\ \ \ \forall\ \ \ i$
+\end{itemize}
 
 
-considerato un oroibkem acon piu obiettvi allor apossimo consederaene uno con obiettivo singolo. quindi le soluzioni ottimali dei singoli porblemi per rappresentarle scrivo nello spazio ammissibile, lo spazio dei criteri rappresentando i singoli obiettivi. a volte puo succedere che presi i du epunto la loro unione non fa parte della zona ammissibile (utopia)
+% Superior solutions
+\subsection{Superior solutions}
 
-img
+Preson un problema con \hl{piu' obiettivi} allora ne consideriamo uno con obiettivo singolo, allora \hl{rappresento i singoli obiettivi} nello spazio.
 
-ma noi allora adiamo a prendere il punto migiore nella zona ammissibile come in questo caso C dato che è migliore di A per certe cose e per altre rispetto a B
+Presa una soluzione potremo trovarne una migliore ma solo \hl{se si trova nella zona ammissibile e che sia nella frontiera}, in caso contrario è detta \hl{utopia}.
 
-potrmo prender per o un punto D che saràpegio re rispetto ad entrambi gil obiettivi dato che son osoluiozni dominate dareo che f1(D) >= f1(C), e f2(D) >= f2(C)
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{utop.jpeg}
+\caption{Utopia} 
+\label{utop}
+\end{figure}
 
-a noi interesse di trovare le soluzioni non inferioir e quindi efficienti e dobbiamo traovare tra tutte la migliore. per capire qual è quella migliore dipende dal 
+Definiamo invece \hl{soluzione superiore} la soluzione che minimizza o massimizza meglio di tutte (come U se fosse nella zona ammissibile).
 
+Si parla allora di soluzioni dominate e soluzioni non dominate (di \hl{Pareto}).
 
-si usa allor aun trade off ratio dove prendiamo le soluzioni A e B e calcolipmo il rapporto di trade off facendo:
-....
+Per \hl{confrontare due soluzioni di Pareto} usiamo il \hl{trade-off ratio} tamite:
 
-che rappresenta il miglioramento dell'obiettivo iesimo in base al miglioramentodi un altro obiettivo ?!
+$$|\frac{z_i(x_A)-z_i(x_B)}{z_j(x_A)-z_j(x_B)}|$$
 
-noi allora ci interessiamok delle soluzioni sulle frontiere dato ceh quel einterne sono dominate da altre piu vicine alla frontiera
+che rappresenta il \hl{miglioramento dell'obiettivo i-esimo in base al miglioramento di un altro obiettivo}.
 
-se abbiamo una zona convessa avremo che si collegherà in modo immaginario i punti togliendo la convessità e quindi prendiamo i punti sulla forntiera tranne sulla parte immaginaria
+Nel caso di una \hl{zona convessa} collegneremo i punti limite tramite una \hl{tangente immagginaria}, dalla quale però non prendere mo i punti di frontiera.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{conv.jpeg}
+\caption{Zona convessa} 
+\label{conv}
+\end{figure}
 
-per trovare le soluzioni effcienti abbiamo 2 metodi:
-- metodo dei vincoli-
-- metodo dei pesi
+per \hl{trovare le soluzioni efficenti} abbiamo 2 metodi:
 
+\begin{enumerate}
+    \item \hl{metodo dei vincoli}: \textbf{considero un solo obiettivo}, per gli altri avrò:
+        $$\min f_i(x)$$
+        
+        s.t
+        
+        \begin{itemize}
+            \item $f_k(x) \leq u_k$
+            \item $g(x) \geq 0$
+            \item $x \geq 0$
+        \end{itemize}
 
-1. prendiamo iun singolo obiettivp e per gli altri imponiamo una soglia dove per ogni obbiettco diverso da quello scelto la funzione obiettivo si a al amssismo:
-fk(x) <= uk (dato che minimizziamo)
-.....
+        Prendo allora solo $A$ e $D$:
 
-img
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{vinc.jpeg}
+        \caption{Metodo dei vincoli} 
+        \label{vinc}
+        \end{figure} 
+    \item \hl{metodo dei pesi}: abbiamo una sola \textbf{f.o somma di tutti li obiettivi}:
+        $$\min \sum_{i=1}^p w_i f_i (x)$$
 
+        s.t
+        
+        \begin{itemize}
+            \item $\sum_{i=1}^p w_i = 1$
+            \item $g(x) \geq 0$
+            \item $x \geq 0$
+            \item $w_i \geq 0$
+        \end{itemize}
 
-es: nel caso di multischeduling:
-vogli ominimizzare il costo come obiettivo, impongo poi un valore soglia al tempo di compeltamento:
-$T <= T^*$
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{pesi.jpeg}
+        \caption{Metodo dei pesi} 
+        \label{pesi}
+        \end{figure}
 
-con $T^*$ tra Tmin e Tmax in base al fatto che se vogliamo minimizzare o massimizzare
-
-
-
-altro metodo: dei pesi:
-abbimao una sola f.o. come somma pesate degli altri obiettv:
-$\sum wi fi$
-
-com wi obiettivo: 'sum wi = 1
-
-a seconda del valore che diamo ai pesi andiamo a sposatre la retta trangente alla zona ammissibile
-
-img
-
-questo non funziona se è convesso dato che non possiamo traovare tutte le possibili soluzioni dato che la forntiera non è connessa. 
-
-es: con multiobeittvio:
-min.....
-
-
-
-
-
-per scegliere tra le diverse soluzione e traovare quella migliore, dipende dalle preferenze che posson essere espresse tramite una funzione che a seconda de valore dei diversiobiettivi assume un valore di verso allora traovando la suozlione che massimizza il valore della funzioen traviamo al soluzione migliroe per il decisore, il problemaè che in gere non c'è una sluzione matematica per questa cosa ma  posiiamo:
-max U ....
-s.t.
-g(x) >= 0
-x >= 0
-
-metodo a priori
-se disponiamo di questa funzione in forma chiusa possiamo risolvere i lproblema monoobeittivo masismizzando la funzione (detto metodo a propri)
-
-in genre ono si trova questa solzione
-
-es: settiamo una soglia erapprensetiamko la distaza di f.o. e la soglia adeguata. al variare di r avremo  3 tipi di metriche:
-- r=1 ....
-- r=2 metrica euclidea ....
-- r=+infty .....
-
-sara difficile di re per ogni obeittvi oquale puo esser una solgia adeguata dato che spesso traovare singoli ottimi è complicato.
-
+        dove a seconda del valore che diamo ai pesi andiamo a \hl{spostare la retta trangente alla zona ammissibile}.
+\end{enumerate}
 
 
+% Metodo a priori
+\subsection{Metodo a priori}
 
-altro apporccio: a posteriori
-andiamoa a genreare tutte le soluzioni effcienti e dire quale tra le soluzione è la migliore. è difficiel applicare al metodo perchè potrebbe cresce in maniera espoenziale con la dimensione del problema
+Per \hl{risolvere il singolo problema} usiamo:
+$$\max U(f_1(x), f_2(x), ..., f_p(x))$$
+
+s.t
+\begin{itemize}
+    \item $g(x) \geq 0$
+    \item $x \geq 0$
+\end{itemize}
+
+ma in genere \hl{non si trova} questa soluzione.
 
 
+% Metodo a posteriori
+\subsection{Metodo a posteriori}
 
-allora usiamo un approccio interattivo:
-approccio di mezzo
-presi 2 obiettvi troviamo il punto ottimko per entrambi e poi troviamo la priam soluzioneefficiente che si atra A e B e poi si scegli a su quale parte della forntiera vogliamo posizionia=arci. es parte AB e trbiamo una oluizone efficente tra le 2 ecc ecc
- 
-img
+Generiamo tutte le \hl{soluzioni efficienti per dire quale e' la migliore}. Notare che così facendo si potrebbe avere una \hl{crescita esponenziale} del problema.
 
-mi fermo quando il segmento che mi rimane è cosi piccolo che i due punti con=incidono
+Una buona \hl{alternativa} è il metodo interattivo.
 
-m isposto in base a cosa mi server
+
+% Metodo interattivo
+\subsection{Metodo interattivo}
+
+Presi 2 obiettivi:
+
+\begin{itemize}
+    \item troviamo il \hl{punto ottimo per entrambi}
+    \item troviamo la \hl{prima soluzione efficiente che sia tra $A$ e $C$}
+    \item scegliere su \hl{quale parte della frontiera posizionarsi}
+    \item ecc, ecc...
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{intent.jpeg}
+\caption{Metodo interattivo} 
+\label{intent}
+\end{figure}
+
+mi fermerò quando il segmento che rimane è \hl{cosi piccolo che i due punti conincidono}.

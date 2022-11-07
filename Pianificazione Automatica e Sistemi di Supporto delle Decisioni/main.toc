@@ -72,3 +72,8 @@
 \contentsline {subsection}{\numberline {\mbox {VII-E}}Algoritmo relax-and-fix}{27}{subsection.7.5}%
 \contentsline {subsection}{\numberline {\mbox {VII-F}}Algoritmo rolling horizon}{28}{subsection.7.6}%
 \contentsline {subsection}{\numberline {\mbox {VII-G}}Multiple criteria decision making}{28}{subsection.7.7}%
+\contentsline {subsection}{\numberline {\mbox {VII-H}}Esempio problema scheduling}{28}{subsection.7.8}%
+\contentsline {subsection}{\numberline {\mbox {VII-I}}Superior solutions}{28}{subsection.7.9}%
+\contentsline {subsection}{\numberline {\mbox {VII-J}}Metodo a priori}{29}{subsection.7.10}%
+\contentsline {subsection}{\numberline {\mbox {VII-K}}Metodo a posteriori}{29}{subsection.7.11}%
+\contentsline {subsection}{\numberline {\mbox {VII-L}}Metodo interattivo}{29}{subsection.7.12}%
