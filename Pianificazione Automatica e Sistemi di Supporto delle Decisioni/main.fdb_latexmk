@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1667833821 "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.tex" "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" "main" 1667833824
+["pdflatex"] 1667833821 "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.tex" "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" "main" 1667833846
   "./img//2sol.jpeg" 1666014816 28461 84841822171114491a40d3cca4d00da9 ""
   "./img//agents.jpeg" 1664024769 29200 a3c52b1d73339e061fa1df7d29700b25 ""
   "./img//aon.jpeg" 1665141817 26548 2bdea5881f9794f52766d4c5e7878061 ""
@@ -263,10 +263,10 @@
   "sections/6_branchAndBound/6_branchAndBound.tex" 1667748437 11076 9e48841090e2c8ff3aa006075ac48196 ""
   "sections/7_constructiveHeuristics/7_constructiveHeuristics.tex" 1667833819 13592 24e31a53314d5664c9ee9facb6b33a7c ""
   (generated)
-  "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.log"
-  "main.aux"
-  "main.out"
-  "main.log"
   "main.pdf"
-  "main.toc"
+  "main.aux"
+  "main.log"
   "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf"
+  "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.log"
+  "main.toc"
+  "main.out"
