@@ -124,3 +124,169 @@ setjump e longjump:
 
 serve quando hai tanti stack frame che hanno fatto elaborazioni lunghe e lo stack siallunga, allora nell'ultima chiamata potremmo volr uscre e rifare il corcorso al contratrio per chiuderela tendina degli stack frame allora quando dienta lunga puo esser comodo dire di togliere tutti li stack frame e andare direttametn allinizio. fiunziona con le chiamate setjump e longjump
 1. la fa nella funzione chiamante nela qule si vuole fare il return per esmpio di puo ritorna alla prima, eliminando tutti le azioni intermedie perche no nci soddisfa un valore e vlgiamo rincomunicare da zero. allora si passa al setjump una fotografica del tipo della variabile jmp\_buf env. questa prima chiamata fa return di zero per dirti che la foto della varaibiel sta storizzata bene. se poi volgiamo ritornare allinizion tramite longjumop si ritorna setjump passandogli la fotografi jmp\_buf env e anceh un int val che rappresenta, come se avessi fatto la setjump solo che gil fa ritornare la variabile val impostando il valore del return della setjump. dato che puoessere chiamata da tanti posti al longjump allora ritorna un numero diverso in base a dove si trovano
+
+
+ad ogni processo si posson ogestire is uoi limiti: come con setrlimit e gerlimit
+
+si basa tutto su una struttura fatta da un campo con illimite corrente ed uno con li limite massimok (hard limit)
+
+struct rlimit{
+...
+}
+
+la chiamata è fatta da: 
+
+RLIMIT_NPROC
+RLIMIT_CPU
+
+
+soft limit: il prcesso funziona e podo n min non può piu andare
+
+int getrlimit(...)
+
+setrlimit: gli passi una struttra che è stata già riempita e poi gli dai i limiti da iporre:
+1. il porcesso puo cambaire un soft limit sotto all'hard limit puoi fare tutto so[ra no
+
+
+hard limit: il porcesso non puo duperarlo mai come limite 
+
+2. un porocesso puo autolimitarsi abbassando l'hard limit corrente, questo abbassamento è irreversibile per un utente normal
+3. solo il superuser puo cambiare l'hardlimit
+
+l'hard limit di un tuo porcessoi lo puo cambiare come ti pare
+un porcesso puo fare o no qualcosa tramite i limiti, user normale puo cambiare i soft, il superuser puo cambiare l'hard
+
+
+in base ai constanti possiamo trovare i limite per piu misurazioni (?)
+sono delle costanti dato che vanno a restituire un valore intero che raffigura il limite
+
+fig7.16
+
+il programma inizia con una particolarità sta nella macro dato he è una funztion like ma c'è un #name dove viene passato il nome della costante e poi in name il suo valore
+
+vediamo che RLIM_INFINITY è dati da ((_uint64)1 << 63) - 1)
+
+RLIMIT_CORE: limite current che se 0 vuol dire che al momento del crash del sistema le immagini non vengono salvate 
+
+per vedere i limiti correnti uso:
+
+$ ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+file size               (blocks, -f) unlimited
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 2560
+pipe size            (512 bytes, -p) 1
+stack size              (kbytes, -s) 8176
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 2666
+virtual memory          (kbytes, -v) unlimited
+
+
+questo, se lanciati in bash sono i limiti di bash
+
+
+
+
+
+
+
+
+
+cap 8: process control
+
+nonostante abbiamo un parent ed un child avremoche i file desriptor del child puntano agli stessi del parent sullo status flag (che possiamo cambiare tramite i un'opzione di fcntl
+abbiamo ainfatti che intern process communications ara necessaria dato che se qualcosa la sciver ilhild se la rtrova il parent
+
+besides the open files, numerous other properties of the parent are inherited by the child:
+- real user id, real group id, effective user id, effective group id
+- terminale di controllo: terminale colquale sta dialogando il porcesso i deamon non ne hanno
+- root direcorty: dove sta la root
+- fil emode creation mask: umask
+- memory mappings
+- resource limits
+
+differenza tra parent e child
+- file locks per mettere daccordo 2 file su un blocco di memoria da usare
+
+
+funzione wait
+	undo un poiircesso fa un child il parent vuole sapre cosa stia facendo il chidld, allor ail sistemama mantine delle info per capire cosa fa es: se sta continuando o è stato killato ad un cero punto il child conclude e chiude allora il kernel non butta via le infodato che le deve dare al parent aspetando che lo interroghi
+
+questo stato viene detto lo stato dei porcessi zombie dato che il prcesso child è morto ed il parent non vuole saperne nulla, allora le info rimangono li ma senza che mai interrogate, per questo zombie
+
+se il nostro procesos parent è uscito ed ha chiuso allo rarimuove l'info zombie 
+
+per evitare di fare la wait si fa una dobbia fork chiudendo il proc di mezzo reclamendo prima la info dal secondo.
+
+un altra tecnica per risolvere il problema della wait è di non fare wait & subito. usiamo il segnale SIGCHILD che viene mandato al proceso quando un child ha terminato, allora mettiamo al wai t all'arrvi di equesto segnali, infatti la wait non chiede u pid del porcesso che stai a septtando termini allora potra cosi termianre per un qualsiasi child termini 
+
+sai come è andato a finire tutto in 
+pid_t wait(int *statloc);
+waitpid puo esser bloccante 
+pid_t waitpid(pid_t pid, int *statloc, int options);
+
+
+se abbiamo che è il parent a chiudere prima del child, allora il parent diventa il processi 1 che per definizione non ha wait quindi le info andreanno perse
+
+ per capire da quale segnale il porocesso è stato fermato EIFSTOPPED(status)
+
+ WIFSIGNALED(status) dice ceh segnaele `e stato inviato al processo
+
+ wai t puo essere fatta inq ualsiasi processo il chiamante puo daprer che il child e1 stato stoppato e non chiuso e quindi poter usare uina tlra wait per poter aspettare che le info arrivino
+
+
+ es:
+ fig8.6
+
+ la wait fa il return del pid del child (correggere sopra)
+
+ pr_exit mettere code1
+
+
+ se vogliamo aspettare la temrinazione di uno specifico processo
+
+ watipid jha delle opzioni: la poiu importante WNOHANG (non rimane appenso ad aspettare)il return è 0 sara o oinvocaara tramite sifchild o ogni tanto si vede se ha temrinato, WCONTINUED se si supporta il job control per poter conrollare l'esegiuimento del processo, fermarlo, metterlo in background.
+
+
+fig8.8 chiamo una doppia fork
+
+
+
+
+
+race conditions:
+situioni dove il risultato di una elaborazione cambia in base a chi arriva prima in maniera imprevedibile edindesiderata
+
+fig8.12
+
+permette di veder il race condition in azione ma con lepresatzioni dei pc di ora non funzione quidni usare suna sleep o meglio una usleep
+
+per evitare le race condiioniton ci vengono in cotnro le sincoronizzazioni dato che vogliamo che siano sincronizzati tra loro i porcessi
+i modi sono tantissimi, nel nostro esempi ousiamo delle unfioni in apue.h tramite dei segnali 
+
+
+il sistema fa ad ogni porceso u ntime slice cio che quel porcesso riesce a fare in quel time slice 
+
+come soluzioni possiamo vedere:
+TELLWAIT() inizializza la faccenda
+
+
+tellwait2
+
+va tutto bene
+
+
+
+
+
+
+exec functions:
+
+execl (list)
+execv (vector)
+exece (environment)
+execp (path)
+
+
