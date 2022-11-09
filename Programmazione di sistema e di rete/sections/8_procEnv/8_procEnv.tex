@@ -284,9 +284,139 @@ va tutto bene
 
 exec functions:
 
-execl (list)
-execv (vector)
-exece (environment)
-execp (path)
+execl (list): sequenza di argomentiseparati da una "," e castati con 0 , paso i parametri trami telista
+int execl(cost char *pathname, const char *arg0, ... /* (char *) */;
+
+terminatore lista (char *)0
+allora possiamo avere che pathname e1 il path del programmae in arg0 mettiamo il nome del porgramma che potrebbe anceh essere un altro ed in queto caso alcuni programmi possono fare cose diverse in base al nome
+
+execlp (path): passo il path del filename
+int execlp(
+
+execv (vector): passiamko gli argomenti come vettore
+char *vector[] = {..,...,}
+...
+
+exece (environment): varaibili di ambiente pasare tramite vettore
+...
 
 
+se si fa una exec il pid cambia del porcesso. vengono ereditate:
+
+- value ...
+- close-onoexec flag che indica se il file descriptor deve essere chiuso o meno 
+
+
+fig8.16
+
+con flag 0 andiamo ad aspettare che l'altro child finista (waitpid)
+env_int[] per sceglieere quale e1 l'ambiente ceh vogliamo usare, in alternativa lo eredita. ha un NULL finale per dire che e1 finito il vettore
+
+terzo if eredito l'ambinte
+
+
+
+guardare perche non si mette il punto nel path
+
+per evitare questa cosa scriviamo 
+
+$ PAH=. ./exec1
+
+in modo da passargli . come path senza incorrere in porblemi di sicurezza
+
+
+guarda echoall.c
+
+
+
+
+chenge userID:
+si vuole cambiare identia quando si e1 eseguito un orogramacon set uaser id attivo, vuoi uscire dalla root. alcuni programmi con pswd danno i privileggi e settano il set user id bit solo mentre fanno quell'alzione e poi la rilasciano per farti ritornare ad essere un normal user. i nuovi sistemi ofrono un timbro che ti permette di avere un saved set user id per poter permettere delle porzioni di programma senza essere super user e poi diventarlo solo quando serve. rappresenta un migliormeto di sicurezza dal settare sempre i lset user id bit.
+
+
+
+interpreter files:
+si riferisce ai programmi che iniziano con
+#! pathname[ptional-argument]
+
+es: #!/bin/sh
+
+serve per poter eseguire il file in un certo modo come se facessimo sh [filename]
+
+
+
+
+
+system function:
+la "system" call delega le operazioni del programma a dei programmi esterni (pericolosa dato che i file pure se vengono cambiati saranno eseguiti
+system()
+
+
+
+
+
+valore di nice: permette di abbassare la priorita1 piu e1 alta piu sei carino (nice) men opirorita hai quindi si incemnte il numero per aumentarla si usa un -1
+
+setpriority
+getpriority
+
+
+
+
+
+
+process times:
+lo otteniamo di sonolito in bashcon la keyword "time"
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+
+lo usiamok ora come porgramatori che ti da i tempo dei porcesso e la puoi fare qundo ti pare durante il programma per monitorare l'evolzione del programma. si lavora con i ticks cioe una suddivisione dei sevondi che pero non e1 un valore fissato ma dipende dalla macchina (in genere e1 100) sarebbero i clock ticks
+
+CLOCKTICKSPERSECOND = 100
+sysconf(SC_CLK_TCK)
+
+clock_t times(struct tms *buf)
+
+un budf vengon omessi i risultati
+
+struct tms {
+	...
+}
+
+il valore di ritorno da il tempo reale passato
+
+times1.c
+
+
+getrusage: (esempi su moodlis)
+int getrusage(int who, struct rusage *r_usage);
+
+timeval = microsecondi
+
+struct rusage {
+             struct timeval ru_utime; /* user time used */
+             struct timeval ru_stime; /* system time used */
+             long ru_maxrss;          /* max resident set size */
+             long ru_ixrss;           /* integral shared text memory size */
+             long ru_idrss;           /* integral unshared data size */
+             long ru_isrss;           /* integral unshared stack size */
+             long ru_minflt;          /* page reclaims */
+	     long ru_majflt;          /* page (4k byte) faults (dice se delle pagine sono state mappate dato che non è nella memoria fisica)*/
+             long ru_nswap;           /* swaps */
+             long ru_inblock;         /* block input operations */
+             long ru_oublock;         /* block output operations */
+             long ru_msgsnd;          /* messages sent */
+             long ru_msgrcv;          /* messages received */
+             long ru_nsignals;        /* signals received */
+             long ru_nvcsw;           /* voluntary context switches */
+             long ru_nivcsw;          /* involuntary context switches */
+};
+
+ma non restituisce il valore di clock reale
+
+il tempo viene dato in microsecondi per avere quello reale usiamo gettimeofday
+
+
+vedere come funziona il programma
