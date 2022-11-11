@@ -420,3 +420,96 @@ il tempo viene dato in microsecondi per avere quello reale usiamo gettimeofday
 
 
 vedere come funziona il programma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+inseriamo la nuova cartella e vediamo il numero di eseguibili: find . -type f -perm -0100
+
+compiliamo il make file ignorando gli errori: make -i 
+
+crea il file di compilazione .sh
+-D_XOPNE_SOURCE=600 forzata da fuori fa rispettare il susv3
+
+
+per leggere i core file che osno una foto del porcesso della sua meroira e dei registri nel moento in cui il porcesso riceve un segnale. il rilascio del core non e1 garantito dato che c'e1 ilproblema del core file size
+
+lo vediamo cin ulimit -a che ce lo dice a proporito di un processo ovviamnente che lo fara ereditare ai suoi child.
+per cambiarlo e farlo unlimited:
+ulimit -c unlimited
+
+il che e1 molto pericoloso dato che crea moltissime "foto"
+
+bash prima che arrivi il sengale al child fa una wait, fa la foto e poi continua. i fleg sono WIFSIGNALED e poi per sapere se ha rilasciato il core usa WCOREDUMP
+il core viene messo in:
+
+
+su mac usiamo "sysctl -a" che tira fuori molti parametri alcuni scrivibili solo da amministratore 
+il aprametro che ci interessa e1 kern,coredump
+
+$ sysctl -a | grep core
+kern.corefile: /cores/core.%P
+kern.coredump: 1
+kern.sugid_coredump: 0
+machdep.cpu.cores_per_package: 8
+machdep.cpu.core_count: 8
+
+
+
+guardando il file producecore.c vediamo che fallisce dato che il puntatore int *p = 0 e1 assegnato ad una variabile id memoria non accessibili cioe 0
+
+questo con core file size = 0
+
+se la modifichiamo il programma andra1 
+
+il file creato avra lo stickybit attivo
+
+
+guardare file how to examine ...
+
+per linux gdb producecore core.1234
+
+pe rmacos lldb producecore e poi diamok il numero di core
+
+con info reg o register read possiamo vedere su linux e mac i registri nel memtno i ncui e1 successo il pasticcio cioe1 e1 arrivato il segnale
+
+
+
+
+
+
+
+
+
+VEDERE SYSTEM CALL 
+su linux:
+
+eseguire un prgramma e vedere tutte le system call che il porgramma fa:
+strace -t -v
+
+dove t trappresenta la raffinatezza per quanto rigurada il tempo
+dove v fa il verbose di tutti dati e non gli tronca
