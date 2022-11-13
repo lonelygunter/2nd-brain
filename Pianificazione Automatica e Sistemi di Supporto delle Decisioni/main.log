@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  8 NOV 2022 09:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.9)  13 NOV 2022 17:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -514,11 +514,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box62
-) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux
-
-LaTeX Warning: Label `tabprof' multiply defined.
-
-)
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
@@ -584,85 +580,78 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 106.
 LaTeX Info: Redefining \pageref on input line 106.
 LaTeX Info: Redefining \nameref on input line 106.
- (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.out) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 \c@lstlisting=\count321
- (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 4.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-))
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/1_definizioni/1_definizioni.tex
-<./img//logoUnisalento.jpg, id=390, 565.11125pt x 197.73875pt>
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
- </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//logoUnisalento.jpg>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 129.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 129.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 129.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/1_definizioni/1_definizioni.tex
 Underfull \hbox (badness 1824) in paragraph at lines 18--19
 [][]\OT1/ptm/m/n/10 de[]-[]scrip[]-[]ti[]-[]ve[] [][][]ana[]-[]ly[]-[]tics: ca-pi-re \OT1/ptm/b/n/10 co-sa sia suc-ces-so nel
  []
 
-<./img//businessAnalytics.jpeg, id=405, 459.7175pt x 343.2825pt>
+<./img//businessAnalytics.jpeg, id=4, 459.7175pt x 343.2825pt>
 File: ./img//businessAnalytics.jpeg Graphic file (type jpg)
 <use ./img//businessAnalytics.jpeg>
 Package pdftex.def Info: ./img//businessAnalytics.jpeg  used on input line 25.
 (pdftex.def)             Requested size: 229.85818pt x 171.64082pt.
+<./img//logoUnisalento.jpg, id=5, 565.11125pt x 197.73875pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 46.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.46 	\end{itemize}
+                    </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//logoUnisalento.jpg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//businessAnalytics.jpeg>]
 Underfull \hbox (badness 4353) in paragraph at lines 55--56
 []\OT1/ptm/b/n/10 decisioni stra-te-gi-che\OT1/ptm/m/n/10 : di \OT1/ptm/b/n/10 lun-go pe-rio-do non
  []
 
-<./img//dectax.jpeg, id=406, 642.4pt x 464.73625pt>
+<./img//dectax.jpeg, id=23, 642.4pt x 464.73625pt>
 File: ./img//dectax.jpeg Graphic file (type jpg)
 <use ./img//dectax.jpeg>
 Package pdftex.def Info: ./img//dectax.jpeg  used on input line 65.
 (pdftex.def)             Requested size: 192.72148pt x 139.42194pt.
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 107.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.107 P
-       ossiamo classificarli come:pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.107 P
-       ossiamo classificarli come: </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//businessAnalytics.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//dectax.jpeg>]
-<./img//agents.jpeg, id=418, 612.2875pt x 303.1325pt>
+<./img//agents.jpeg, id=24, 612.2875pt x 303.1325pt>
 File: ./img//agents.jpeg Graphic file (type jpg)
 <use ./img//agents.jpeg>
 Package pdftex.def Info: ./img//agents.jpeg  used on input line 118.
 (pdftex.def)             Requested size: 183.68767pt x 90.94044pt.
-) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/2_softwareSolution/2_softwareSolution.tex
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 152.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1 \newpage
-             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//agents.jpeg>]
-<./img//descapp.jpeg, id=430, 642.4pt x 480.79625pt>
+l.152 \subsection
+                 {Data Mining (DM)}pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.152 \subsection
+                 {Data Mining (DM)} </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//dectax.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//agents.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/2_softwareSolution/2_softwareSolution.tex
+
+LaTeX Warning: Reference `diadec' on page 3 undefined on input line 8.
+
+<./img//descapp.jpeg, id=38, 642.4pt x 480.79625pt>
 File: ./img//descapp.jpeg Graphic file (type jpg)
 <use ./img//descapp.jpeg>
 Package pdftex.def Info: ./img//descapp.jpeg  used on input line 30.
@@ -672,17 +661,16 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 30--31
  [][] 
  []
 
-) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/3_ottimizzazione/3_ottimizzazione.tex
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 53.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1 \newpage
-             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//descapp.jpeg>]
-<./img//st12.jpeg, id=443, 642.4pt x 98.3675pt>
+l.53 I
+      l linguaggio più usato è \textbf{Python} ma non è la soluzione più... </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//descapp.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/3_ottimizzazione/3_ottimizzazione.tex
+<./img//st12.jpeg, id=59, 642.4pt x 98.3675pt>
 File: ./img//st12.jpeg Graphic file (type jpg)
 <use ./img//st12.jpeg>
 Package pdftex.def Info: ./img//st12.jpeg  used on input line 39.
@@ -704,35 +692,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 161.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 113.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.161 	\item p
-              resa $x_B \leq 120$: (0, 120)pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+l.113 	\item \hl
+                {identificare le variabili decisionali}:pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.161 	\item p
-              resa $x_B \leq 120$: (0, 120)pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.161 	\item p
-              resa $x_B \leq 120$: (0, 120)pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.161 	\item p
-              resa $x_B \leq 120$: (0, 120) </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//st12.jpeg>]
-<./img//es.jpeg, id=462, 321.2pt x 320.19624pt>
+l.113 	\item \hl
+                {identificare le variabili decisionali}: </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//st12.jpeg>]
+<./img//es.jpeg, id=76, 321.2pt x 320.19624pt>
 File: ./img//es.jpeg Graphic file (type jpg)
 <use ./img//es.jpeg>
 Package pdftex.def Info: ./img//es.jpeg  used on input line 230.
 (pdftex.def)             Requested size: 160.59961pt x 160.09772pt.
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 234.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.234 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.234 
+      ]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 240.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<./img//es1.jpeg, id=463, 320.19624pt x 321.2pt>
+<./img//es1.jpeg, id=94, 320.19624pt x 321.2pt>
 File: ./img//es1.jpeg Graphic file (type jpg)
 <use ./img//es1.jpeg>
 Package pdftex.def Info: ./img//es1.jpeg  used on input line 282.
@@ -740,26 +733,34 @@ Package pdftex.def Info: ./img//es1.jpeg  used on input line 282.
 
 Underfull \vbox (badness 7308) has occurred while \output is active []
 
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 286.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.286 		
-         </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es.jpeg>]
-<./img//es2.jpeg, id=498, 321.2pt x 318.18875pt>
+<./img//es2.jpeg, id=95, 321.2pt x 318.18875pt>
 File: ./img//es2.jpeg Graphic file (type jpg)
 <use ./img//es2.jpeg>
 Package pdftex.def Info: ./img//es2.jpeg  used on input line 320.
 (pdftex.def)             Requested size: 160.59961pt x 159.09398pt.
-<./img//es3.jpeg, id=499, 321.2pt x 318.18875pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 332.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.332 		$$
+          pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.332 		$$
+          pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.332 		$$
+           </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es1.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es2.jpeg>]
+<./img//es3.jpeg, id=135, 321.2pt x 318.18875pt>
 File: ./img//es3.jpeg Graphic file (type jpg)
 <use ./img//es3.jpeg>
 Package pdftex.def Info: ./img//es3.jpeg  used on input line 349.
 (pdftex.def)             Requested size: 160.59961pt x 159.09398pt.
-<./img//es4.jpeg, id=500, 320.19624pt x 321.2pt>
+<./img//es4.jpeg, id=136, 320.19624pt x 321.2pt>
 File: ./img//es4.jpeg Graphic file (type jpg)
 <use ./img//es4.jpeg>
 Package pdftex.def Info: ./img//es4.jpeg  used on input line 375.
@@ -767,43 +768,31 @@ Package pdftex.def Info: ./img//es4.jpeg  used on input line 375.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/4_formulazioniProgLineare/4_formulazioniProgLineare.tex
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 379.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.379 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.379 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.379 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es1.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es3.jpeg>]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/4_formulazioniProgLineare/4_formulazioniProgLineare.tex
+l.1 \newpage
+             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es3.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es4.jpeg>]
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 74.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 131.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.74 		$
-        $\sum_{j=i}^n a_{ij} x_j \leq b_i$$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//es4.jpeg>]
+ [8]
 Underfull \hbox (badness 4752) in paragraph at lines 145--146
 []\OT1/ptm/m/n/10 quindi nel-la for-mu-la-zio-ne stan-dard avre-mo $\OML/cmm/m/it/10 j \OT1/cmr/m/n/10 =
  []
 
 ) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/5_optimizationModelsReview/5_optimizationModelsReview.tex
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [9]
-<./img//aon.jpeg, id=531, 642.4pt x 241.90375pt>
+<./img//aon.jpeg, id=165, 642.4pt x 241.90375pt>
 File: ./img//aon.jpeg Graphic file (type jpg)
 <use ./img//aon.jpeg>
 Package pdftex.def Info: ./img//aon.jpeg  used on input line 65.
@@ -815,18 +804,18 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 65--66
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 156.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 74.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[10pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.156 			\item $
-                s_1 + 10 \leq s_3 (p_{13} = 1)$pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+l.74 	\item s
+             tart: lo colleghiamo tutte le attività che non hanno predecessoripdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.156 			\item $
-                s_1 + 10 \leq s_3 (p_{13} = 1)$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//aon.jpeg>]
-<./img//budget.jpeg, id=540, 642.4pt x 318.18875pt>
+l.74 	\item s
+             tart: lo colleghiamo tutte le attività che non hanno predecessori </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//aon.jpeg>]
+<./img//budget.jpeg, id=180, 642.4pt x 318.18875pt>
 File: ./img//budget.jpeg Graphic file (type jpg)
 <use ./img//budget.jpeg>
 Package pdftex.def Info: ./img//budget.jpeg  used on input line 189.
@@ -836,44 +825,57 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-<./img//prodline.jpeg, id=541, 642.4pt x 207.77625pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 218.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[10pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.218 			\item $
+                d_i^N - w_i x_i \geq d_i^m\ \ \ \forall\ \ \ i \in TASKS$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//budget.jpeg>]
+<./img//prodline.jpeg, id=192, 642.4pt x 207.77625pt>
 File: ./img//prodline.jpeg Graphic file (type jpg)
 <use ./img//prodline.jpeg>
 Package pdftex.def Info: ./img//prodline.jpeg  used on input line 235.
 (pdftex.def)             Requested size: 192.72148pt x 62.33334pt.
-<./img//invlev.jpeg, id=542, 642.4pt x 328.22626pt>
+<./img//invlev.jpeg, id=193, 642.4pt x 328.22626pt>
 File: ./img//invlev.jpeg Graphic file (type jpg)
 <use ./img//invlev.jpeg>
 Package pdftex.def Info: ./img//invlev.jpeg  used on input line 250.
 (pdftex.def)             Requested size: 192.72148pt x 98.46863pt.
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 279.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.279 		A
-         vremo quindi:pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.279 		A
-         vremo quindi:pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.279 		A
-         vremo quindi: </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//budget.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//prodline.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//invlev.jpeg>]
-<./img//casipart.jpeg, id=555, 642.4pt x 549.05125pt>
+<./img//casipart.jpeg, id=194, 642.4pt x 549.05125pt>
 File: ./img//casipart.jpeg Graphic file (type jpg)
 <use ./img//casipart.jpeg>
 Package pdftex.def Info: ./img//casipart.jpeg  used on input line 291.
 (pdftex.def)             Requested size: 192.72148pt x 164.71664pt.
-<./img//lottoec.jpeg, id=556, 642.4pt x 398.48875pt>
+<./img//lottoec.jpeg, id=195, 642.4pt x 398.48875pt>
 File: ./img//lottoec.jpeg Graphic file (type jpg)
 <use ./img//lottoec.jpeg>
 Package pdftex.def Info: ./img//lottoec.jpeg  used on input line 324.
 (pdftex.def)             Requested size: 192.72148pt x 119.54755pt.
-<./img//linlivnonlin.jpeg, id=557, 642.4pt x 386.44376pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 334.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.334 	\item s
+              pazio limite di un magazzinopdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.334 	\item s
+              pazio limite di un magazzinopdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.334 	\item s
+              pazio limite di un magazzinopdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.334 	\item s
+              pazio limite di un magazzino </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//prodline.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//invlev.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//casipart.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//lottoec.jpeg>]
+<./img//linlivnonlin.jpeg, id=211, 642.4pt x 386.44376pt>
 File: ./img//linlivnonlin.jpeg Graphic file (type jpg)
 <use ./img//linlivnonlin.jpeg>
 Package pdftex.def Info: ./img//linlivnonlin.jpeg  used on input line 373.
@@ -885,27 +887,14 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 373--374
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 380.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 491.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.380 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.380 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.380 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//casipart.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//lottoec.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//linlivnonlin.jpeg>]
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 584.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [13]
-<./img//inssol.jpeg, id=582, 642.4pt x 227.85126pt>
+l.491 		$$
+           </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//linlivnonlin.jpeg>]
+<./img//inssol.jpeg, id=220, 642.4pt x 227.85126pt>
 File: ./img//inssol.jpeg Graphic file (type jpg)
 <use ./img//inssol.jpeg>
 Package pdftex.def Info: ./img//inssol.jpeg  used on input line 607.
@@ -917,28 +906,24 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 607--608
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 752.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 651.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.752 $
-       $\underline{x} = (0, 6.6, 0, -1.6)$$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//inssol.jpeg>]
-<./img//2sol.jpeg, id=590, 642.4pt x 385.44pt>
+l.651 $$
+         </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//inssol.jpeg>]
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 811.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [14]
+<./img//2sol.jpeg, id=243, 642.4pt x 385.44pt>
 File: ./img//2sol.jpeg Graphic file (type jpg)
 <use ./img//2sol.jpeg>
 Package pdftex.def Info: ./img//2sol.jpeg  used on input line 825.
 (pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 862.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.862 	\item a
-              vremo: </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//2sol.jpeg>]
-<./img//bi.jpeg, id=596, 642.4pt x 445.665pt>
+<./img//bi.jpeg, id=244, 642.4pt x 445.665pt>
 File: ./img//bi.jpeg Graphic file (type jpg)
 <use ./img//bi.jpeg>
 Package pdftex.def Info: ./img//bi.jpeg  used on input line 884.
@@ -953,12 +938,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 899--900
 
  []
 
-
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 906.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.906 			\item $
+                x_4 = 10$pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.906 			\item $
+                x_4 = 10$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//2sol.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//bi.jpeg>]
 Underfull \hbox (badness 10000) in paragraph at lines 907--908
 
  []
 
-<./img//disc.jpeg, id=597, 642.4pt x 390.45876pt>
+<./img//disc.jpeg, id=253, 642.4pt x 390.45876pt>
 File: ./img//disc.jpeg Graphic file (type jpg)
 <use ./img//disc.jpeg>
 Package pdftex.def Info: ./img//disc.jpeg  used on input line 925.
@@ -973,20 +970,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 951--952
 []\OT1/ptm/m/n/10 trovo []arg[]-[]min[] [][][]per[] [][][]"r"[] [][][]del[] [][][]Pi[]-[]vot: $\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 =
  []
 
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 969.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.969 	\item $
-              2x_1 + x_2 \leq 10$pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.969 	\item $
-              2x_1 + x_2 \leq 10$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//bi.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//disc.jpeg>]
-<./img//grafescan.jpeg, id=606, 642.4pt x 385.44pt>
+<./img//grafescan.jpeg, id=254, 642.4pt x 385.44pt>
 File: ./img//grafescan.jpeg Graphic file (type jpg)
 <use ./img//grafescan.jpeg>
 Package pdftex.def Info: ./img//grafescan.jpeg  used on input line 987.
@@ -998,14 +982,18 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 987--988
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1120.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1038.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1120 \subsection
-                  {Soluzioni ottime multiple} </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafescan.jpeg>]
-<./img//grafsolmult.jpeg, id=612, 642.4pt x 422.57875pt>
+l.1038 \end{itemize}
+                    pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1038 \end{itemize}
+                     </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//disc.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafescan.jpeg>]
+<./img//grafsolmult.jpeg, id=262, 642.4pt x 422.57875pt>
 File: ./img//grafsolmult.jpeg Graphic file (type jpg)
 <use ./img//grafsolmult.jpeg>
 Package pdftex.def Info: ./img//grafsolmult.jpeg  used on input line 1166.
@@ -1017,109 +1005,125 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 1166--1167
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1255.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1185.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[18pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1255 	\item \hl
-                 {$\min = 0$}: uno dei numeratori è nullo </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafsolmult.jpeg>]
-<./img//notconv.jpeg, id=618, 642.4pt x 483.8075pt>
+l.1185 	\item $
+               x_3 = 10$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafsolmult.jpeg>]
+<./img//notconv.jpeg, id=271, 642.4pt x 483.8075pt>
 File: ./img//notconv.jpeg Graphic file (type jpg)
 <use ./img//notconv.jpeg>
 Package pdftex.def Info: ./img//notconv.jpeg  used on input line 1265.
 (pdftex.def)             Requested size: 192.72148pt x 145.14337pt.
-<./img//conv.jpeg, id=619, 642.4pt x 547.04375pt>
+<./img//conv.jpeg, id=272, 642.4pt x 547.04375pt>
 File: ./img//conv.jpeg Graphic file (type jpg)
 <use ./img//conv.jpeg>
 Package pdftex.def Info: ./img//conv.jpeg  used on input line 1276.
 (pdftex.def)             Requested size: 192.72148pt x 164.11438pt.
-<./img//esdegen.jpeg, id=620, 642.4pt x 378.41376pt>
+<./img//esdegen.jpeg, id=273, 642.4pt x 378.41376pt>
 File: ./img//esdegen.jpeg Graphic file (type jpg)
 <use ./img//esdegen.jpeg>
 Package pdftex.def Info: ./img//esdegen.jpeg  used on input line 1301.
 (pdftex.def)             Requested size: 192.72148pt x 113.525pt.
-
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1305.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1305 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1305 
+        </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//notconv.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//conv.jpeg>]
 Underfull \hbox (badness 4647) in paragraph at lines 1370--1371
 []\OT1/ptm/m/n/10 Iniziamo ag-giun-gen-do []ad[] [][][]ogni[] [][][]vi[]-[]co[]-[]lo una va-ria-bi-le
  []
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1371.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1431.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
+[19pdfTeX warning (ext4): destination with the same identifier (name{figure.26}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.1371 ... = b_i\ \ \ \forall\ \ \ i = 1, ..., m$$
-                                                  pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.1371 ... = b_i\ \ \ \forall\ \ \ i = 1, ..., m$$
-                                                  pdfTeX warning (ext4): destination with the same identifier (name{figure.26}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.1371 ... = b_i\ \ \ \forall\ \ \ i = 1, ..., m$$
-                                                   </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//notconv.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//conv.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//esdegen.jpeg>]
+l.1431 $$\min z = \sum_{j = 1}^n c_jx_j$$
+                                          </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//esdegen.jpeg>]
 Overfull \hbox (32.51796pt too wide) detected at line 1460
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[]   \OMS/cmsy/m/n/10 8   \OML/cmm/m/it/10 i \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 + 1\OML/cmm/m/it/10 ; :::; m[];  i \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h
  []
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1505.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1588.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[20]
+[20]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1658.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [21]) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/6_branchAndBound/6_branchAndBound.tex
+ [21]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 21.
 
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 21.
 
-<./img//rpp.jpeg, id=642, 425.59pt x 319.1925pt>
+<./img//rpp.jpeg, id=307, 425.59pt x 319.1925pt>
 File: ./img//rpp.jpeg Graphic file (type jpg)
 <use ./img//rpp.jpeg>
 Package pdftex.def Info: ./img//rpp.jpeg  used on input line 46.
 (pdftex.def)             Requested size: 85.11649pt x 63.83736pt.
-<./img//cas1.jpeg, id=643, 604.2575pt x 385.44pt>
+<./img//cas1.jpeg, id=308, 604.2575pt x 385.44pt>
 File: ./img//cas1.jpeg Graphic file (type jpg)
 <use ./img//cas1.jpeg>
 Package pdftex.def Info: ./img//cas1.jpeg  used on input line 55.
 (pdftex.def)             Requested size: 120.84935pt x 77.08662pt.
-<./img//cas2.jpeg, id=644, 642.4pt x 320.19624pt>
+<./img//cas2.jpeg, id=309, 642.4pt x 320.19624pt>
 File: ./img//cas2.jpeg Graphic file (type jpg)
 <use ./img//cas2.jpeg>
 Package pdftex.def Info: ./img//cas2.jpeg  used on input line 64.
 (pdftex.def)             Requested size: 160.59961pt x 80.04886pt.
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 67.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.67         \end{figure}
-                         pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.67         \end{figure}
-                          </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//rpp.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//cas1.jpeg>]
-<./img//pin.jpeg, id=655, 642.4pt x 441.65pt>
+<./img//pin.jpeg, id=310, 642.4pt x 441.65pt>
 File: ./img//pin.jpeg Graphic file (type jpg)
 <use ./img//pin.jpeg>
 Package pdftex.def Info: ./img//pin.jpeg  used on input line 75.
 (pdftex.def)             Requested size: 160.59961pt x 110.41222pt.
-<./img//pam.jpeg, id=656, 642.4pt x 607.26875pt>
+<./img//pam.jpeg, id=311, 642.4pt x 607.26875pt>
 File: ./img//pam.jpeg Graphic file (type jpg)
 <use ./img//pam.jpeg>
 Package pdftex.def Info: ./img//pam.jpeg  used on input line 86.
 (pdftex.def)             Requested size: 160.59961pt x 151.81682pt.
-<./img//branchprob.jpeg, id=657, 642.4pt x 452.69125pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 99.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 $$Z^*_{R(P)} \geq Z^*_P$$
+                              pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 $$Z^*_{R(P)} \geq Z^*_P$$
+                              pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 $$Z^*_{R(P)} \geq Z^*_P$$
+                              pdfTeX warning (ext4): destination with the same identifier (name{figure.30}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 $$Z^*_{R(P)} \geq Z^*_P$$
+                              pdfTeX warning (ext4): destination with the same identifier (name{figure.31}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 $$Z^*_{R(P)} \geq Z^*_P$$
+                               </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//rpp.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//cas1.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//cas2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//pin.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//pam.jpeg>]
+<./img//branchprob.jpeg, id=331, 642.4pt x 452.69125pt>
 File: ./img//branchprob.jpeg Graphic file (type jpg)
 <use ./img//branchprob.jpeg>
 Package pdftex.def Info: ./img//branchprob.jpeg  used on input line 122.
@@ -1129,7 +1133,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 122--123
  [][] 
  []
 
-<./img//child1.jpeg, id=658, 642.4pt x 428.60126pt>
+<./img//child1.jpeg, id=332, 642.4pt x 428.60126pt>
 File: ./img//child1.jpeg Graphic file (type jpg)
 <use ./img//child1.jpeg>
 Package pdftex.def Info: ./img//child1.jpeg  used on input line 134.
@@ -1142,28 +1146,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 134--135
 
 Underfull \vbox (badness 4660) has occurred while \output is active []
 
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 138.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [23pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.138 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.30}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.138 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.31}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.138 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.32}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.138 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//cas2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//pin.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//pam.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//branchprob.jpeg>]
-<./img//nop1.jpeg, id=670, 642.4pt x 325.215pt>
+<./img//nop1.jpeg, id=333, 642.4pt x 325.215pt>
 File: ./img//nop1.jpeg Graphic file (type jpg)
 <use ./img//nop1.jpeg>
 Package pdftex.def Info: ./img//nop1.jpeg  used on input line 171.
@@ -1173,7 +1156,24 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 171--172
  [][] 
  []
 
-<./img//child2.jpeg, id=671, 642.4pt x 443.6575pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 180.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.32}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.180     \item \hl
+                   {$P_3$}: con vincolo $x_1 \leq 1$pdfTeX warning (ext4): destination with the same identifier (name{figure.33}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.180     \item \hl
+                   {$P_3$}: con vincolo $x_1 \leq 1$pdfTeX warning (ext4): destination with the same identifier (name{figure.34}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.180     \item \hl
+                   {$P_3$}: con vincolo $x_1 \leq 1$ </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//branchprob.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//child1.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//nop1.jpeg>]
+<./img//child2.jpeg, id=342, 642.4pt x 443.6575pt>
 File: ./img//child2.jpeg Graphic file (type jpg)
 <use ./img//child2.jpeg>
 Package pdftex.def Info: ./img//child2.jpeg  used on input line 194.
@@ -1183,7 +1183,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 194--195
  [][] 
  []
 
-<./img//nop4.jpeg, id=672, 642.4pt x 249.93375pt>
+<./img//nop4.jpeg, id=343, 642.4pt x 249.93375pt>
 File: ./img//nop4.jpeg Graphic file (type jpg)
 <use ./img//nop4.jpeg>
 Package pdftex.def Info: ./img//nop4.jpeg  used on input line 201.
@@ -1193,7 +1193,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 201--202
  [][] 
  []
 
-<./img//nop56.jpeg, id=673, 642.4pt x 242.9075pt>
+<./img//nop56.jpeg, id=344, 642.4pt x 242.9075pt>
 File: ./img//nop56.jpeg Graphic file (type jpg)
 <use ./img//nop56.jpeg>
 Package pdftex.def Info: ./img//nop56.jpeg  used on input line 218.
@@ -1203,7 +1203,7 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 218--219
  [][] 
  []
 
-<./img//child3.jpeg, id=674, 642.4pt x 414.54875pt>
+<./img//child3.jpeg, id=345, 642.4pt x 414.54875pt>
 File: ./img//child3.jpeg Graphic file (type jpg)
 <use ./img//child3.jpeg>
 Package pdftex.def Info: ./img//child3.jpeg  used on input line 225.
@@ -1215,62 +1215,41 @@ Overfull \hbox (4.95544pt too wide) in paragraph at lines 225--226
 
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 229.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 299.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.33}) has been already used, duplicate ignored
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.35}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.229 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.34}) has been already used, duplicate ignored
+l.299 $$
+        pdfTeX warning (ext4): destination with the same identifier (name{figure.36}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.229 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.35}) has been already used, duplicate ignored
+l.299 $$
+        pdfTeX warning (ext4): destination with the same identifier (name{figure.37}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.229 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.36}) has been already used, duplicate ignored
+l.299 $$
+        pdfTeX warning (ext4): destination with the same identifier (name{figure.38}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.229 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.37}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.229 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//child1.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//nop1.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//child2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//nop4.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//nop56.jpeg>]
-<./img//grafbab.jpeg, id=685, 513.92pt x 379.4175pt>
+l.299 $$
+         </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//child2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//nop4.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//nop56.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//child3.jpeg>]
+<./img//grafbab.jpeg, id=356, 513.92pt x 379.4175pt>
 File: ./img//grafbab.jpeg Graphic file (type jpg)
 <use ./img//grafbab.jpeg>
 Package pdftex.def Info: ./img//grafbab.jpeg  used on input line 305.
 (pdftex.def)             Requested size: 205.56435pt x 151.7643pt.
-<./img//grafbab2.jpeg, id=686, 523.9575pt x 389.455pt>
+<./img//grafbab2.jpeg, id=357, 523.9575pt x 389.455pt>
 File: ./img//grafbab2.jpeg Graphic file (type jpg)
 <use ./img//grafbab2.jpeg>
 Package pdftex.def Info: ./img//grafbab2.jpeg  used on input line 319.
 (pdftex.def)             Requested size: 209.57928pt x 155.77924pt.
-<./img//grafbab3.jpeg, id=687, 515.9275pt x 399.4925pt>
+<./img//grafbab3.jpeg, id=358, 515.9275pt x 399.4925pt>
 File: ./img//grafbab3.jpeg Graphic file (type jpg)
 <use ./img//grafbab3.jpeg>
 Package pdftex.def Info: ./img//grafbab3.jpeg  used on input line 338.
 (pdftex.def)             Requested size: 206.36734pt x 159.79416pt.
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 342.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.38}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.342 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.39}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.342 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.40}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.342 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//child3.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab2.jpeg>]
-<./img//grafbab4.jpeg, id=696, 517.935pt x 367.3725pt>
+<./img//grafbab4.jpeg, id=359, 517.935pt x 367.3725pt>
 File: ./img//grafbab4.jpeg Graphic file (type jpg)
 <use ./img//grafbab4.jpeg>
 Package pdftex.def Info: ./img//grafbab4.jpeg  used on input line 357.
@@ -1278,56 +1257,60 @@ Package pdftex.def Info: ./img//grafbab4.jpeg  used on input line 357.
 ) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/7_constructiveHeuristics/7_constructiveHeuristics.tex
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 63.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.41}) has been already used, duplicate ignored
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.39}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.63 $$
-       pdfTeX warning (ext4): destination with the same identifier (name{figure.42}) has been already used, duplicate ignored
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.40}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.63 $$
-        </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab3.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab4.jpeg>]
-<./img//sep.jpeg, id=703, 642.4pt x 343.2825pt>
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.41}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.42}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab2.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab3.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//grafbab4.jpeg>]
+<./img//sep.jpeg, id=369, 642.4pt x 343.2825pt>
 File: ./img//sep.jpeg Graphic file (type jpg)
 <use ./img//sep.jpeg>
 Package pdftex.def Info: ./img//sep.jpeg  used on input line 102.
 (pdftex.def)             Requested size: 192.72148pt x 102.98553pt.
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 200.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 130.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.43}) has been already used, duplicate ignored
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.43}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.200         \end{itemize}
-                            </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//sep.jpeg>]
-<./img//utop.jpeg, id=711, 473.77pt x 359.3425pt>
+l.130     \item $
+                 x_{ij} = 1\ \Rightarrow\ u_i - u_j + 1 \leq 0$: dato che $u... </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//sep.jpeg>]
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 285.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [27]
+<./img//utop.jpeg, id=397, 473.77pt x 359.3425pt>
 File: ./img//utop.jpeg Graphic file (type jpg)
 <use ./img//utop.jpeg>
 Package pdftex.def Info: ./img//utop.jpeg  used on input line 306.
 (pdftex.def)             Requested size: 142.1321pt x 107.80357pt.
-<./img//convess.jpeg, id=712, 429.605pt x 323.2075pt>
+<./img//convess.jpeg, id=398, 429.605pt x 323.2075pt>
 File: ./img//convess.jpeg Graphic file (type jpg)
 <use ./img//convess.jpeg>
 Package pdftex.def Info: ./img//convess.jpeg  used on input line 325.
 (pdftex.def)             Requested size: 128.88249pt x 96.963pt.
-File: ./img//logoUnisalento.jpg Graphic file (type jpg)
-<use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 329.
-(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.44}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.329 
-       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//utop.jpeg>]
-<./img//vinc.jpeg, id=725, 604.2575pt x 459.7175pt>
+<./img//vinc.jpeg, id=399, 604.2575pt x 459.7175pt>
 File: ./img//vinc.jpeg Graphic file (type jpg)
 <use ./img//vinc.jpeg>
 Package pdftex.def Info: ./img//vinc.jpeg  used on input line 348.
 (pdftex.def)             Requested size: 181.27864pt x 137.9163pt.
-<./img//pesi.jpeg, id=726, 642.4pt x 456.70625pt>
+<./img//pesi.jpeg, id=400, 642.4pt x 456.70625pt>
 File: ./img//pesi.jpeg Graphic file (type jpg)
 <use ./img//pesi.jpeg>
 Package pdftex.def Info: ./img//pesi.jpeg  used on input line 366.
@@ -1335,55 +1318,658 @@ Package pdftex.def Info: ./img//pesi.jpeg  used on input line 366.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./img//intent.jpeg, id=727, 435.6275pt x 231.86626pt>
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 370.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.44}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.370 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.45}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.370 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.46}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.370 
+       </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//utop.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//convess.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//vinc.jpeg>]
+<./img//intent.jpeg, id=412, 435.6275pt x 231.86626pt>
 File: ./img//intent.jpeg Graphic file (type jpg)
 <use ./img//intent.jpeg>
 Package pdftex.def Info: ./img//intent.jpeg  used on input line 412.
 (pdftex.def)             Requested size: 217.81322pt x 115.93283pt.
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/8_localSearch/8_localSearch.tex
+<./img//localse.jpeg, id=413, 642.4pt x 516.93124pt>
+File: ./img//localse.jpeg Graphic file (type jpg)
+<use ./img//localse.jpeg>
+Package pdftex.def Info: ./img//localse.jpeg  used on input line 28.
+(pdftex.def)             Requested size: 192.72148pt x 155.08057pt.
+<./img//stopsol.jpeg, id=414, 642.4pt x 422.57875pt>
+File: ./img//stopsol.jpeg Graphic file (type jpg)
+<use ./img//stopsol.jpeg>
+Package pdftex.def Info: ./img//stopsol.jpeg  used on input line 52.
+(pdftex.def)             Requested size: 192.72148pt x 126.7746pt.
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 56.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.47}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.56 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.48}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.56 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.49}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.56 
+      </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//pesi.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//intent.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//localse.jpeg>]
+<./img//intorno.jpeg, id=430, 642.4pt x 534.99875pt>
+File: ./img//intorno.jpeg Graphic file (type jpg)
+<use ./img//intorno.jpeg>
+Package pdftex.def Info: ./img//intorno.jpeg  used on input line 85.
+(pdftex.def)             Requested size: 128.47772pt x 106.99785pt.
+<./img//intott.jpeg, id=431, 642.4pt x 493.845pt>
+File: ./img//intott.jpeg Graphic file (type jpg)
+<use ./img//intott.jpeg>
+Package pdftex.def Info: ./img//intott.jpeg  used on input line 105.
+(pdftex.def)             Requested size: 128.47772pt x 98.76724pt.
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/9_multiperiodLot/9_multiperiodLot.tex
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.50}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.51}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+            pdfTeX warning (ext4): destination with the same identifier (name{figure.52}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//stopsol.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//intorno.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//intott.jpeg>]
+<./img//discrettemp.jpeg, id=443, 343.2825pt x 200.75pt>
+File: ./img//discrettemp.jpeg Graphic file (type jpg)
+<use ./img//discrettemp.jpeg>
+Package pdftex.def Info: ./img//discrettemp.jpeg  used on input line 11.
+(pdftex.def)             Requested size: 68.65527pt x 40.14928pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\in' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+) (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 1.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.53}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.1 \newpage
+             </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//discrettemp.jpeg>]
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:30: Missing $ inserted.
+<inserted text> 
+                $
+l.30 se d_
+          i > 0 indica un afornitura
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:32: Missing $ inserted.
+<inserted text> 
+                $
+l.32 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:39: Missing $ inserted.
+<inserted text> 
+                $
+l.39 prendo un parametro c_
+                           {ij} cioe un arco che colega i nodi i e j. c_{ij}...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:41: Missing $ inserted.
+<inserted text> 
+                $
+l.41 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+[]\OT1/ptm/m/n/10 parametri per gli ar-chi pren-do un pa-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+\OT1/ptm/m/n/10 me-tro c$[]\OML/cmm/m/it/10 cioeunarcochecolegainodiiej:c[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (36.37906pt too wide) in paragraph at lines 38--41
+\OML/cmm/m/it/10 costo\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ditraspost\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 unitario\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 perunitadiflusso\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 altroparamentroq[] \OT1/cmr/m/n/10 :
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:44: Missing $ inserted.
+<inserted text> 
+                $
+l.44 le varaibili saranno: x_
+                             {ij} >= 0 fluso che transita da i a j per unita...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:45: Missing $ inserted.
+<inserted text> 
+                $
+l.45 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...e sommiamo su utti i vertici le quntita d_
+                                                  i devo avere 0:
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:49: Missing $ inserted.
+<inserted text> 
+                $
+l.49 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:71: Missing $ inserted.
+<inserted text> 
+                $
+l.71 dove l_
+            i quantita minimia in caso di evenienza
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:72: Missing $ inserted.
+<inserted text> 
+                $
+l.72 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:85: Missing $ inserted.
+<inserted text> 
+                $
+l.85 ad ognmi arco indico c_
+                            ij e q_ij e per ogni nodo d_i
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:86: Missing $ inserted.
+<inserted text> 
+                $
+l.86 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:88: Extra }, or forgotten $.
+l.88 ...{13} + 3x_{23} +3x_{24} + 3_{x32} + 4x_34}
+                                                   + 3x_{42}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:90: Display math should end with $$.
+<to be read again> 
+                   x
+l.90 per i = 1: $x
+                  _{12} + x_{13} = 10$
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Overfull \hbox (18.45699pt too wide) detected at line 90
+[] \OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 5\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 3\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 3\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 3[] + 4\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 4 + 3\OML/cmm/m/it/10 x[]s:tperi \OT1/cmr/m/n/10 = 1 :
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:90: Missing $ inserted.
+<inserted text> 
+                $
+l.90 per i = 1: $x_
+                   {12} + x_{13} = 10$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:93: Extra }, or forgotten $.
+l.93 per i = 4: $x_42}
+                       - x_{24} - x_{34} = -7$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:104: Missing $ inserted.
+<inserted text> 
+                $
+l.104 $x_{12}, $x_
+                  {13}, x_{23}, x_{24}, x_{32}, x_{34}, x_{42} \geq 0$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:110: Missing $ inserted.
+<inserted text> 
+                $
+l.110 ...ounded se esiste qualeche arco (i, j) \in
+                                                   A con costo negatico c_{i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:111: Missing $ inserted.
+<inserted text> 
+                $
+l.111 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:119: Missing $ inserted.
+<inserted text> 
+                $
+l.119 ...uella di interezza: dice che se i dati d_
+                                                  i e le capacita q_{ij} son...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 119.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:119: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.119 ...una soluizone ottima non unbounded che è
+                                                   anche esse interacioe x_{...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:119: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.119 ...una soluizone ottima non unbounded che è
+                                                   anche esse interacioe x_{...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmex10!
+
+Overfull \hbox (349.36035pt too wide) in paragraph at lines 119--120
+\OT1/ptm/m/n/10 d$[]\OML/cmm/m/it/10 elecapacitaq[]sonointeri; alloraesisteunasoluizoneottimanonunboundedche[]ancheesseinteracioex[]; cioeiflussiottimalisonointeri:$ 
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 ...a n). ad ogni soegente è associata un s_
+                                                  1, .., s_m \geq 0 che defi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 132.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:132: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.132 ...a di sorgente-pozzo e per ogni arco ij è
+                                                   associato un costo cij (c...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:132: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.132 ...a di sorgente-pozzo e per ogni arco ij è
+                                                   associato un costo cij (c...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:133: Missing $ inserted.
+<inserted text> 
+                $
+l.133 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmex10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+[]\OT1/ptm/m/n/10 PROBLEMA DI TRA-SPOR-TO: con-si-de-ria-mo la
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 131--133
+\OT1/ptm/m/n/10 gra-fo dia-pr-ti-to do-ve l'in-sie-me dei ver-ti-ci []e com-po-sto
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 131--133
+\OT1/ptm/m/n/10 da due in-sie-mi di-sgiun-ti: sor-gen-ti (fi-no a m) e poz-zi
+ []
+
+
+Overfull \hbox (453.20262pt too wide) in paragraph at lines 131--133
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 chedefinisconolafornituraeaipozziinveceabbiamounaqunatitab[]; :::; b[]cherappresentaladomanda:traquestiverticineidueinsiemiabbiamonacoppiadisorgente \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (82.37955pt too wide) in paragraph at lines 131--133
+\OML/cmm/m/it/10 pozzoeperogniarcoij[]associatouncostocij\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 costoitrasportoperunitadiflusso\OT1/cmr/m/n/10 )$ 
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:136: Missing $ inserted.
+<inserted text> 
+                $
+l.136 allora il grafo G è dato da: G = (V=v_
+                                             1 \cup V_2, A) con V_1 \cap V_2...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 136.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:136: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.136 ...uoto e viene detto grafo rbipartito ed è
+                                                   questo problemaun caso sp...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:136: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.136 ...uoto e viene detto grafo rbipartito ed è
+                                                   questo problemaun caso sp...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:139: Missing $ inserted.
+<inserted text> 
+                $
+l.139 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmex10!
+
+Overfull \hbox (322.09145pt too wide) in paragraph at lines 136--139
+\OML/cmm/m/it/10 insiemevuotoevienedettograforbipartitoed[]questoproblemauncasospecialedelproblemadiflussoacasominimo; nelquleabbiamoche \OT1/cmr/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
+\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 nonabbiamovincolidicapacita \OMS/cmsy/m/n/10 ^^@
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:144: Undefined control sequence.
+l.144 $$x_{ij}, i\inV
+                     _1, j\in V_2$$ che indica qunate unuta di flusso ("merc...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 144--145
+\OT1/ptm/m/n/10 che in-di-ca qu-na-te unu-ta di flus-so ("mer-ce") ven-go-no
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:147: Undefined control sequence.
+l.147 ...a: $\min z = \sum_{(i,j)\in A}\sum_{j\inV
+                                                  _2} c_{ij}x_{ij}$ alora mi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 147--148
+[]\OT1/ptm/m/n/10 l'obiettivo []e mi-ni-miz-za-re al f.o. quin-di la mi-su-ra di
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 147--148
+\OT1/ptm/m/n/10 pre-sta-zio-ne sa-ra: $[] \OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = [][] [][] \OML/cmm/m/it/10 c[]x[]$ \OT1/ptm/m/n/10 alo-ra
+ []
+
+File: ./img//logoUnisalento.jpg Graphic file (type jpg)
+<use ./img//logoUnisalento.jpg>
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 152.
+(pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
+[32]
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:162: Missing $ inserted.
+<inserted text> 
+                $
+l.162 assegnamo iun costo sll'arco ij con c_
+                                            {ij}.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:163: Missing $ inserted.
+<inserted text> 
+                $
+l.163 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:175: Missing $ inserted.
+<inserted text> 
+                $
+l.175 - s_
+          i = 1 \forall i
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:177: Missing $ inserted.
+<inserted text> 
+                $
+l.177 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:180: Missing $ inserted.
+<inserted text> 
+                $
+l.180 x_
+        {ij} = 1 se la rosorsa i è aasegnata ad un task j
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 180.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:180: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.180 x_{ij} = 1 se la rosorsa i è
+                                    aasegnata ad un task j
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:180: You can't use `\spacefactor' in math mode.
+\add@accent ... \accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.180 x_{ij} = 1 se la rosorsa i è
+                                    aasegnata ad un task j
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:182: Missing $ inserted.
+<inserted text> 
+                $
+l.182 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmex10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
+[]\OT1/ptm/m/n/10 le va-ria-bi-li sa-ran-no al-lo-ra: x$[] \OT1/cmr/m/n/10 =
+ []
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 185.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:186: Undefined control sequence.
+<recently read> \sun 
+                     
+l.186 - $\sun
+             _{i=1}^n x_{ij} = 1\ \ \ \forall\ \ \ j=1,...,n$ cioe ongi task...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
+[]\OT1/ptm/m/n/10 vorremo al-lo-ra mi-ni-miz-za-re la f.o.: $[] \OML/cmm/m/it/10 z \OT1/cmr/m/n/10 =
+ []
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:188: Missing $ inserted.
+<inserted text> 
+                $
+l.188 dato che s_
+                 i = 1 con i = 1,...,n e b_j = 1 con j=1,...,n
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:189: Missing $ inserted.
+<inserted text> 
+                $
+l.189 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:190: Missing $ inserted.
+<inserted text> 
+                $
+l.190 possiamo imporre che x_
+                             {ij} \geq 0 impedendo che la variabile sia <= 0...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/sections/10_networkModel/10_networkModel.tex:191: Missing $ inserted.
+<inserted text> 
+                $
+l.191 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+[]\OT1/ptm/m/n/10 possiamo im-por-re che x$[] \OMS/cmsy/m/n/10 ^^U
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 impedendochelavariabilesia <\OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (191.93454pt too wide) in paragraph at lines 190--191
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 qustograzieall\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 interezzadeidatieaivincoliquisopracheimpedisconochelevaraibiliassumanovalore >
+ []
+
 )
 File: ./img//logoUnisalento.jpg Graphic file (type jpg)
 <use ./img//logoUnisalento.jpg>
-Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 145.
+Package pdftex.def Info: ./img//logoUnisalento.jpg  used on input line 148.
 (pdftex.def)             Requested size: 85.35826pt x 29.86772pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.45}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.145 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier (name{figure.46}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.145 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier (name{figure.47}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.145 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier (name{figure.48}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.145 \end{document}
-                     </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//convess.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//vinc.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//pesi.jpeg> </Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/./img//intent.jpeg>] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
+ [33
+
+] (/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1552B69CCB925956F3A3BBF390F6ED26;14140.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  9014D6454DD734E985AD27A161FA3667;15827.
  ) 
 Here is how much of TeX's memory you used:
- 15219 strings out of 478994
- 230596 string characters out of 5858185
- 714052 words of memory out of 5000000
- 32080 multiletter control sequences out of 15000+600000
+ 15218 strings out of 478994
+ 231209 string characters out of 5858185
+ 690426 words of memory out of 5000000
+ 32036 multiletter control sequences out of 15000+600000
  443689 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 81i,15n,88p,592b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (29 pages, 2007391 bytes).
+ 81i,15n,88p,692b,1087s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "/Users/matt/Documents/Github/latex-2nd-brain/Pianificazione Automatica e Sistemi di Supporto delle Decisioni/main.pdf" (33 pages, 2220300 bytes).
 PDF statistics:
- 851 PDF objects out of 1000 (max. 8388607)
- 746 compressed objects within 8 object streams
- 258 named destinations out of 1000 (max. 500000)
- 862 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 593 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 287 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
