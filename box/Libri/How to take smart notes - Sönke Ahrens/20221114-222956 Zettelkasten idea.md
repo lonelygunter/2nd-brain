@@ -1,0 +1,12 @@
+---
+alias: Zettelkasten idea
+tags: 2022-11-14
+---
+
+Fonte: [[Libri/How to take smart notes - Sönke Ahrens/~TOC - How to take smart notes - Sönke Ahrens]]
+
+---
+
+L'idea principale è la creazione di ==note atomiche== (zettel) che vengono storicizzate in dei box (kasten). A ognuna viene ==assegnato un numero fisso== che permette di collegarle tra loro.
+
+Cosa FONDAMENTALE: ==non sono suddivise per categorie==. Abbiamo un ragionamento "buttom-top". Quindi si va a ==riorganizzare il topic tramite il sorting dei link== tra le note.

@@ -1,0 +1,22 @@
+{
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "trashOption": "system",
+  "newFileLocation": "current",
+  "newLinkFormat": "absolute",
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "livePreview": false,
+  "readableLineLength": false,
+  "showFrontmatter": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "vimMode": false,
+  "alwaysUpdateLinks": true,
+  "useTab": true
+}

@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "8fa6e8c728064998",
+    "type": "split",
+    "children": [
+      {
+        "id": "df2353864f992d8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e0571c725ca492d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Libri/Deep Work - Cal Newport/~TOC - Deep Work - Cal Newport.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6bc064dd6bb6a170",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bb0b7228256805f",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Libri/How to take smart notes - Sönke Ahrens/~TOC - How to take smart notes - Sönke Ahrens.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              },
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3275d057891c767b",
+    "type": "split",
+    "children": [
+      {
+        "id": "51acc5932b11095d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3b5dbc3fd30a5f0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e08e56df7249b686",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "26fa9bff6ec517ad",
+    "type": "split",
+    "children": [
+      {
+        "id": "27e76449ecf4e53f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "feb2fd0c0c0e463c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Libri/Deep Work - Cal Newport/~TOC - Deep Work - Cal Newport.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e83861e296da5869",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Libri/Deep Work - Cal Newport/~TOC - Deep Work - Cal Newport.md"
+              }
+            }
+          },
+          {
+            "id": "d102094e2b8d00ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Libri/Deep Work - Cal Newport/~TOC - Deep Work - Cal Newport.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c395fcb00e629660",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "e0571c725ca492d0",
+  "lastOpenFiles": [
+    "Libri/Come prevenire la prossima pandemia - Bill Gates/~TOC - Come prevenire la prossima pandemia - Bill Gates.md",
+    "Libri/Atomic Habits - Cal Newport/~TOC - Atomic Habits - Cal Newport.md",
+    "Libri/Deep Work - Cal Newport/~TOC - Deep Work - Cal Newport.md",
+    "Libri/Digital Minimalist - Cal Newport/~TOC - Digital Minimalist - Cal Newport.md",
+    "Libri/How to take smart notes - Sönke Ahrens/~TOC - How to take smart notes - Sönke Ahrens.md",
+    "Libri/So Good They Can Not Ignore You - Cal Newport/~TOC - So Good They Can Not Ignore You - Cal Newport.md",
+    "Libri/~TOC - Design your life - Burnett, Evans.md",
+    "Libri/How to take smart notes - Sönke Ahrens/20221114-220528 Tipi di note.md",
+    "20221114-222956 Zettelkasten idea.md",
+    "20221114-222145 QEC notes.md"
+  ]
+}

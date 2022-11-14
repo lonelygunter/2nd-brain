@@ -1,0 +1,13 @@
+{
+  "accentColor": "",
+  "theme": "system",
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "",
+  "textFontFamily": "Menlo",
+  "monospaceFontFamily": "Menlo",
+  "baseFontSize": 15,
+  "baseFontSizeAction": false,
+  "showViewHeader": true,
+  "nativeMenus": true,
+  "translucency": false
+}
