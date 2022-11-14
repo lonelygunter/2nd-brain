@@ -1,1 +1,1 @@
-# latex-2nd-brain
+# 2nd-brain
