@@ -3141,7 +3141,7 @@ Durante il ==periodo di arrivo degli ordini== le prime $l$ settimate non posso s
 
 # Network Flow Problems
 
-dove abbimao un grafo  con dei sui parametri che assieme formano un network. dobbiamo allora capire con=me un flusso di dati transitra nellarete.
+Abbiamo un grafo con dei sui parametri che assieme formano un network. dobbiamo allora capire con=me un flusso di dati transitra nellarete.
 primo porblema che vediamo
 PROBLEMA DI FLUSSO A COSTO MINIMO:
 

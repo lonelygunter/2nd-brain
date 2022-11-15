@@ -1,6 +1,6 @@
 ---
 alias: Cumulative distribution function (CDF)
-tags: 2022-11-14
+tags: 2022-11-14 PASD distribution CDF
 ---
 
 Rappresenta l'utilizzo di $g()$ per ==trovare dei valori $x_i$ da dei valori UNIF(0,1) $u_i$==.

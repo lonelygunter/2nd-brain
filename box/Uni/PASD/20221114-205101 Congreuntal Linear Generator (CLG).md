@@ -1,6 +1,6 @@
 ---
 alias: Congreuntal Linear Generator (CLG)
-tags: 2022-11-14
+tags: 2022-11-14 PASD random CLG
 ---
 
 Utilizzo un ==loop== nel quale innesto:

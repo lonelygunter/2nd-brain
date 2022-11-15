@@ -1,6 +1,6 @@
 ---
 alias: Generazione pseudo-casuale di numeri
-tags: 2022-11-14
+tags: 2022-11-14 PASD random number
 ---
 
 Durante le generazioni l'osservatore esterno vede solo una ==meccanismo deterministico== (blackbox) e una ==sequenza di simboli: $x_1,...,x_n$==
