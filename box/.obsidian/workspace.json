@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "24d6ab6c0fd763ee",
+        "id": "8860c22f42f107a6",
         "type": "tabs",
         "children": [
           {
-            "id": "d1d02c968aa8bfc3",
+            "id": "8d611f518fd2cae0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TODO.md",
+                "file": "Uni/BD/~TOC - BD.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -78,7 +78,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TODO.md",
+                "file": "Uni/BD/~TOC - BD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TODO.md"
+                "file": "Uni/BD/~TOC - BD.md"
               }
             }
           },
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TODO.md",
+                "file": "Uni/BD/~TOC - BD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d1d02c968aa8bfc3",
+  "active": "8d611f518fd2cae0",
   "lastOpenFiles": [
-    "Uni/BD/BD.md",
-    "Uni/PSR/PSR.md",
-    "Uni/PASD/PASD.md",
-    "20221115-185507 Background e foregound.md",
-    "20221115-183331 Process group.md",
-    "Uni/PSR/~TOC - PSR.md",
-    "Uni/PASD/20221114-205101 Congreuntal Linear Generator (CLG).md",
-    "Uni/PASD/20221114-182232 In cosa consiste la generazione pseudo-casuale di numeri.md",
+    "Uni/BD/20221113-000000 LaTeX BD.md",
+    "Uni/BD/20221115-173528 Database a grafo.md",
     "Uni/BD/20221115-181600 Database relazionale vs grafo.md",
-    "Uni/BD/20221115-173528 Database a grafo.md"
+    "Uni/PSR/20221113-000000 LaTeX PSR.md",
+    "Uni/PSR/~TOC - PSR.md",
+    "Uni/PASD/20221113-000000 LaTeX PASD.md",
+    "Uni/PASD/~TOC - PASD.md",
+    "Uni/BD/~TOC - BD.md",
+    "Uni/PASD/20221114-211746 Cumulative distribution function (CDF).md",
+    "20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem).md"
   ]
 }
