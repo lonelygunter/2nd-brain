@@ -14,3 +14,8 @@ tags: PASD ghiani manni
 	- ![[20221114-182232 In cosa consiste la generazione pseudo-casuale di numeri]]
 	- ![[20221114-205101 Congreuntal Linear Generator (CLG)]]
 	- ![[20221114-211746 Cumulative distribution function (CDF)]]
+
+- Metaheuristics
+	- ![[Uni/PASD/20221122-081443 Random Search]]
+	- ![[Uni/PASD/20221122-080610 Simulated Annealing]]
+	- ![[20221122-095756 Tabu Search]]

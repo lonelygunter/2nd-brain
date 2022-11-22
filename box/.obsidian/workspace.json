@@ -13,14 +13,51 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/~TOC - BD.md",
+                "file": "20221122-095756 Tabu Search.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
-            }
+            },
+            "group": "af58d1d612f30676"
           }
         ]
+      },
+      {
+        "id": "cf5ee4dada9a4c91",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f9c715ec1969339",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Uni/PASD/~TOC - PASD.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "a4d6d7ef4396eed0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20221122-095756 Tabu Search.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": true
+              }
+            },
+            "group": "af58d1d612f30676"
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +86,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/~TOC - BD.md",
+                "file": "20221122-095756 Tabu Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -90,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/~TOC - BD.md"
+                "file": "20221122-095756 Tabu Search.md"
               }
             }
           },
@@ -100,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/~TOC - BD.md",
+                "file": "20221122-095756 Tabu Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,15 +168,15 @@
   },
   "active": "8d611f518fd2cae0",
   "lastOpenFiles": [
-    "Uni/BD/20221113-000000 LaTeX BD.md",
-    "Uni/BD/20221115-173528 Database a grafo.md",
-    "Uni/BD/20221115-181600 Database relazionale vs grafo.md",
-    "Uni/PSR/20221113-000000 LaTeX PSR.md",
-    "Uni/PSR/~TOC - PSR.md",
     "Uni/PASD/20221113-000000 LaTeX PASD.md",
+    "20221122-095756 Tabu Search.md",
     "Uni/PASD/~TOC - PASD.md",
-    "Uni/BD/~TOC - BD.md",
-    "Uni/PASD/20221114-211746 Cumulative distribution function (CDF).md",
-    "20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem).md"
+    "Uni/PASD/20221122-080610 Simulated Annealing.md",
+    "Uni/PASD/20221122-081443 Random Search.md",
+    "Uni/PASD/20221121-163558 Problema di assegnamento (Assignment problem).md",
+    "20221121-163808 Problema di massimo flusso (Maxiumum flow problem).md",
+    "Uni/PASD/20221121-142928 Flow problem - costo fisso.md",
+    "20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem).md",
+    "Uni/BD/20221113-000000 LaTeX BD.md"
   ]
 }
