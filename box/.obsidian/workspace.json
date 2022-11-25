@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "8860c22f42f107a6",
+        "id": "7af99a0ee28192a7",
         "type": "tabs",
         "children": [
           {
-            "id": "8d611f518fd2cae0",
+            "id": "afcd425939f9d909",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20221124-115549 Decisions under uncertainty and risk.md",
+                "file": "20221125-183812 Decision maker attitude to risk.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "af58d1d612f30676"
+            "group": "5829d9b8891e96cb"
           }
         ]
       },
@@ -43,21 +43,20 @@
             }
           },
           {
-            "id": "a4d6d7ef4396eed0",
+            "id": "e440d3f3dcdda8f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20221124-115549 Decisions under uncertainty and risk.md",
+                "file": "20221125-183812 Decision maker attitude to risk.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "af58d1d612f30676"
+            "group": "5829d9b8891e96cb"
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20221124-115549 Decisions under uncertainty and risk.md",
+                "file": "Uni/PASD/~TOC - PASD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20221124-115549 Decisions under uncertainty and risk.md"
+                "file": "Uni/PASD/~TOC - PASD.md"
               }
             }
           },
@@ -137,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20221124-115549 Decisions under uncertainty and risk.md",
+                "file": "Uni/PASD/~TOC - PASD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,17 +165,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a4d6d7ef4396eed0",
+  "active": "8f9c715ec1969339",
   "lastOpenFiles": [
+    "20221125-183812 Decision maker attitude to risk.md",
+    "Uni/PASD/20221125-174751 Genetics Algorithms.md",
+    "Uni/PASD/~TOC - PASD.md",
+    "Uni/PASD/20221124-115549 Decisions under uncertainty and risk.md",
+    "Uni/PASD/20221125-163946 Variable Neighborhood Descent-Search.md",
     "Uni/PASD/20221124-082411 Criterio di aspirazione.md",
     "Uni/PASD/20221124-081111 Short Term Memory.md",
     "Uni/PASD/20221122-095756 Tabu Search.md",
     "Uni/PASD/20221122-081443 Random Search.md",
-    "Uni/PASD/20221122-080610 Simulated Annealing.md",
-    "Uni/PASD/20221121-163808 Problema di massimo flusso (Maxiumum flow problem).md",
-    "Uni/PASD/20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem).md",
-    "Uni/PASD/20221121-163558 Problema di assegnamento (Assignment problem).md",
-    "Uni/PASD/20221121-163322 Problema di trasporto (Transportation problem).md",
-    "Uni/PASD/20221121-142928 Flow problem - costo fisso.md"
+    "Uni/PASD/20221122-080610 Simulated Annealing.md"
   ]
 }

@@ -21,5 +21,9 @@ tags: PASD ghiani manni
 	- ![[Uni/PASD/20221122-095756 Tabu Search]]
 
 - # Decisions under uncertainty and risk
-	- ![[20221124-115549 Decisions under uncertainty and risk]]
-	- 
+	- ![[Uni/PASD/20221124-115549 Decisions under uncertainty and risk]]
+	- ![[20221125-183812 Decision maker attitude to risk]]
+
+- # Variable Neighborhood Descent/Search
+	- ![[Uni/PASD/20221125-163946 Variable Neighborhood Descent-Search]]
+	- ![[Uni/PASD/20221125-174751 Genetics Algorithms]]
