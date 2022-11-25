@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20221122-095756 Tabu Search.md",
+                "file": "20221124-115549 Decisions under uncertainty and risk.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -48,7 +48,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20221122-095756 Tabu Search.md",
+                "file": "20221124-115549 Decisions under uncertainty and risk.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20221122-095756 Tabu Search.md",
+                "file": "20221124-115549 Decisions under uncertainty and risk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20221122-095756 Tabu Search.md"
+                "file": "20221124-115549 Decisions under uncertainty and risk.md"
               }
             }
           },
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20221122-095756 Tabu Search.md",
+                "file": "20221124-115549 Decisions under uncertainty and risk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,17 +166,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8d611f518fd2cae0",
+  "active": "a4d6d7ef4396eed0",
   "lastOpenFiles": [
-    "Uni/PASD/20221113-000000 LaTeX PASD.md",
-    "20221122-095756 Tabu Search.md",
-    "Uni/PASD/~TOC - PASD.md",
-    "Uni/PASD/20221122-080610 Simulated Annealing.md",
+    "Uni/PASD/20221124-082411 Criterio di aspirazione.md",
+    "Uni/PASD/20221124-081111 Short Term Memory.md",
+    "Uni/PASD/20221122-095756 Tabu Search.md",
     "Uni/PASD/20221122-081443 Random Search.md",
+    "Uni/PASD/20221122-080610 Simulated Annealing.md",
+    "Uni/PASD/20221121-163808 Problema di massimo flusso (Maxiumum flow problem).md",
+    "Uni/PASD/20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem).md",
     "Uni/PASD/20221121-163558 Problema di assegnamento (Assignment problem).md",
-    "20221121-163808 Problema di massimo flusso (Maxiumum flow problem).md",
-    "Uni/PASD/20221121-142928 Flow problem - costo fisso.md",
-    "20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem).md",
-    "Uni/BD/20221113-000000 LaTeX BD.md"
+    "Uni/PASD/20221121-163322 Problema di trasporto (Transportation problem).md",
+    "Uni/PASD/20221121-142928 Flow problem - costo fisso.md"
   ]
 }
