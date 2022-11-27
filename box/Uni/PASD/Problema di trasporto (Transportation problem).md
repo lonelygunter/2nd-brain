@@ -25,4 +25,4 @@ con rispettivamente ==cardinalità 1:N== associando i rispettivi costi $c_{ij}$
 	- per ogni ==$x_{ij}==: $$x_{ij} \geq 0\ \ \ \forall\ \ \ i\in V_1, j\in v_2$$
 
 - ***Casi speciali***:
-	- ![[Uni/PASD/20221121-163558 Problema di assegnamento (Assignment problem)|Problema di assegnamento]]
+	- ![[Uni/PASD/Problema di assegnamento (Assignment problem)|Problema di assegnamento]]

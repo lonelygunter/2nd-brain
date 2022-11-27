@@ -26,4 +26,4 @@ Lo shell mette ==tutti i processi di un job in uno stesso gruppo== per fare in m
 
 Notare che:
 - session ID = session leader ID
-- ==controlling terminal==: esterno alla sessione e gestisce [[20221115-185507 Background e foregound|Background e foregound]]
+- ==controlling terminal==: esterno alla sessione e gestisce [[Uni/PSR/Background e foregound|Background e foregound]]

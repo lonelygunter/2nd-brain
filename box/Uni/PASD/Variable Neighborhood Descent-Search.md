@@ -3,7 +3,7 @@ alias: Variable Neighborhood Descent/Search, VND, VNS
 tags: 2022-11-25 PASD search neighbothood risk
 ---
 
-- ***Problemi con [[Uni/PASD/20221113-000000 LaTeX PASD#Local Search]]***:
+- ***Problemi con [[Uni/PASD/LaTeX PASD#Local Search]]***:
 	- **$N(x^{(k)})$ small**: ==esplorazione veloce== ma rimane incastrato in ottimi locali
 	- **$N(x^{(k)})$ large**: esplorazione lenta ma ha ==soluzioni di qualità migliore==
 

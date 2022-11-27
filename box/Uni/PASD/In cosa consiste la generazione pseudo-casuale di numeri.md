@@ -13,9 +13,9 @@ Il nostro compito è ==simulare una variabile aleatoria== tramite la generazione
 ![](Uni/PASD/img/gennum.jpeg)
 
 dove:
-- ==[[20221114-205101 Congreuntal Linear Generator (CLG)|Congreuntal Linear Generator (CLG)]]==: genera dei numeri $u_n$ **compresi tra (0,1)**, stando certi che non siano auto-correlati (cioè che se ho un valore basso il prossimo pure lo sarà)
+- ==[[Uni/PASD/Congreuntal Linear Generator (CLG)|Congreuntal Linear Generator (CLG)]]==: genera dei numeri $u_n$ **compresi tra (0,1)**, stando certi che non siano auto-correlati (cioè che se ho un valore basso il prossimo pure lo sarà)
 	![](Uni/PASD/img/unplot.jpeg)
-- ==[[20221114-211746 Cumulative distribution function (CDF)|Cumulative distribution function (CDF)]]== ($x_i=g(u_i)$):
+- ==[[Uni/PASD/Cumulative distribution function (CDF)|Cumulative distribution function (CDF)]]== ($x_i=g(u_i)$):
 	1. ogni $u_i$ viene **trasformato** in $x_i$ tramite $g()$
 	2. genera numeri $x_n$ di una **variabile aleatoria**
 

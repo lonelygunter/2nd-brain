@@ -1,13 +1,4 @@
 {
-  "zk-prefixer": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "`"
-    }
-  ],
   "insert-template": [
     {
       "modifiers": [

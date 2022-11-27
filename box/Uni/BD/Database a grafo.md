@@ -27,4 +27,4 @@ I nodi lavorano con una ==matrice di adiacenza== per permettergli di **conoscere
 
 ---
 
-Abbiamo delle [[20221115-181600 Database relazionale vs grafo|Database relazionale vs grafo]].
+Abbiamo delle [[Uni/BD/Database relazionale vs grafo|Database relazionale vs grafo]].

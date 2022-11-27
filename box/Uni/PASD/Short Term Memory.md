@@ -3,7 +3,7 @@ alias: Short Term Memory
 tags: 2022-11-24 PASD tabu
 ---
 
-> si aggiunge al [[Uni/PASD/20221122-095756 Tabu Search|Tabu Search]] una ==lista $L$ con le ultime $k$ soluzioni==
+> si aggiunge al [[Uni/PASD/Tabu Search|Tabu Search]] una ==lista $L$ con le ultime $k$ soluzioni==
 
 - ***Pseudocodice***:
 ```python

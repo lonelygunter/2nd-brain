@@ -35,7 +35,7 @@ il che definisce una ==soluzione ammissibile==.
 - ==Condizione di incertezza==: se $d_i$ e $q_{ij}$ sono interi allora **esiste una soluzione OTTIMA non unbounded** con **flussi interi**
 
 - ***Casi speciali***:
-	- ![[Uni/PASD/20221121-163322 Problema di trasporto (Transportation problem)|Problema di trasporto]]
-	- ![[Uni/PASD/20221121-163558 Problema di assegnamento (Assignment problem)|Problema di assegnamento]]
-	- ![[Uni/PASD/20221121-163656 Problema di cammino più breve e rapido (Shortest quickest path problem)|Problema di cammino più breve e rapido]]
-	- ![[Uni/PASD/20221121-163808 Problema di massimo flusso (Maxiumum flow problem)|Problema di massimo flusso]]
+	- ![[Uni/PASD/Problema di trasporto (Transportation problem)|Problema di trasporto]]
+	- ![[Uni/PASD/Problema di assegnamento (Assignment problem)|Problema di assegnamento]]
+	- ![[Uni/PASD/Problema di cammino più breve e rapido (Shortest quickest path problem)|Problema di cammino più breve e rapido]]
+	- ![[Uni/PASD/Problema di massimo flusso (Maxiumum flow problem)|Problema di massimo flusso]]

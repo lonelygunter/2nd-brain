@@ -3,7 +3,7 @@ alias: Problema di assegnamento, Assignment problem
 tags: 2022-11-21 PASD network
 ---
 
-> ==caso speciale== del [[Uni/PASD/20221121-163322 Problema di trasporto (Transportation problem)|Problema di trasporto]]
+> ==caso speciale== del [[Uni/PASD/Problema di trasporto (Transportation problem)|Problema di trasporto]]
 
 - ***Grafo***: composto da 2 insiemi:
 	- ==risorse==: fino a n (con $s_i=1$)

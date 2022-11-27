@@ -3,7 +3,7 @@ alias: Tabu Search
 tags: 2022-11-22 PASD search tabu metaheuritics
 ---
 
-> rappresenta un ==[[Uni/PASD/20221113-000000 LaTeX PASD#Local Search]] con memoria== dato che ==escludo la soluzione corrente==
+> rappresenta un ==[[Uni/PASD/LaTeX PASD#Local Search]] con memoria== dato che ==escludo la soluzione corrente==
 
 - ***Pseudocodice***:
 ```python
@@ -16,5 +16,5 @@ while (...):
 ```
 
 - ***Casistiche***:
-	- ![[Uni/PASD/20221124-081111 Short Term Memory|Short Term Memory]]
-	- ![[Uni/PASD/20221124-082411 Criterio di aspirazione|Criterio di aspirazione]]
+	- ![[Uni/PASD/Short Term Memory|Short Term Memory]]
+	- ![[Uni/PASD/Criterio di aspirazione|Criterio di aspirazione]]

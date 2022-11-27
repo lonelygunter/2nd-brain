@@ -3,7 +3,7 @@ alias: Simulated Annealing
 tags: 2022-11-22 PASD metaheuristics
 ---
 
->  usata per ==sfuggire agli ottimi locali==: mix tra [[Uni/PASD/20221113-000000 LaTeX PASD#Local Search]] e [[Uni/PASD/20221122-081443 Random Search|Random Search]]
+>  usata per ==sfuggire agli ottimi locali==: mix tra [[Uni/PASD/LaTeX PASD#Local Search]] e [[Uni/PASD/Random Search|Random Search]]
 
 - ***Classificazione***: 
 	- ==single-solution==: **con una sola mossa** si migliora la f.o.
