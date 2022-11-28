@@ -1,6 +1,7 @@
 ---
 alias: Tabu Search
-tags: 2022-11-22 PASD search tabu metaheuritics
+tags: 2022-11-17
+PASD search tabu metaheuritics
 ---
 
 > rappresenta un ==[[Uni/PASD/LaTeX PASD#Local Search]] con memoria== dato che ==escludo la soluzione corrente==

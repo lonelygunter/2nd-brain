@@ -1,6 +1,6 @@
 ---
 alias: 
-tags: 2022-Nov-28 PASD farmer
+tags: 2022-Nov-23 PASD farmer
 ---
 
 > vogliamo ==massimizzare i guadagni== di un farmer 

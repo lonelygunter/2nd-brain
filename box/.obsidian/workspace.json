@@ -13,15 +13,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/Datawarehouse.md",
+                "file": "Uni/PSR/Background e foregound.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
             "group": "d15bc8fbeac4450e"
+          },
+          {
+            "id": "f789c1f848c18453",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Uni/PSR/Untitled.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "307c09c9f5f436b1",
@@ -33,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/Datawarehouse.md",
+                "file": "Uni/PSR/Background e foregound.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -112,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/Datawarehouse.md",
+                "file": "Uni/PSR/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/Datawarehouse.md"
+                "file": "Uni/PSR/Untitled.md"
               }
             }
           },
@@ -134,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/Datawarehouse.md",
+                "file": "Uni/PSR/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,17 +177,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "fd6335ed4540030b",
+  "active": "f789c1f848c18453",
   "lastOpenFiles": [
-    "Uni/BD/~TOC - BD.md",
-    "Uni/PASD/~TOC - PASD.md",
+    "Uni/PSR/Background e foregound.md",
+    "Uni/PASD/Tabu Search.md",
+    "Uni/PASD/Network Flow Problems.md",
+    "Uni/PASD/Flow problem - costo fisso.md",
+    "Uni/PASD/Short Term Memory.md",
+    "Uni/PASD/Simulated Annealing.md",
     "Uni/BD/Datawarehouse.md",
-    "Uni/BD/Database a grafo.md",
-    "Uni/BD/Database relazionale vs grafo.md",
-    "Uni/PASD/Sequential decision processes.md",
     "Uni/PASD/Decision maker attitude to risk.md",
     "Uni/PASD/The farmer problem.md",
-    "Uni/PASD/Simulated Annealing.md",
-    "Uni/PASD/Tabu Search.md"
+    "Uni/PASD/Sequential decision processes.md"
   ]
 }

@@ -1,6 +1,6 @@
 ---
 alias: Decision maker attitude to risk
-tags: 2022-11-25 PASD risk decision
+tags: 2022-11-23 PASD risk decision
 ---
 
 > aggiungiamo ai dati che abbiamo anche la ==varianza==

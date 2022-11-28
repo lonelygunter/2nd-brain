@@ -1,6 +1,6 @@
 ---
 alias: 
-tags: 2022-Nov-28 PASD sequential
+tags: 2022-Nov-25 PASD sequential
 ---
 
 - ***Marketing problem***:
