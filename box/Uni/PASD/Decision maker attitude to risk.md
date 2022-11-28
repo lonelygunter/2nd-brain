@@ -3,3 +3,32 @@ alias: Decision maker attitude to risk
 tags: 2022-11-25 PASD risk decision
 ---
 
+> aggiungiamo ai dati che abbiamo anche la ==varianza==
+
+- ***Varianza***: la possiamo calcolare con $$\sqrt{\frac{\sum{(v_{ij}-E[V])^2}}{\text{nº casi}}}$$
+
+|A|$\theta_1$|$\theta_2$|$\theta_3$|$\theta_4$|$\theta_5$|$E[V(a_i)]$|$\sigma_v$|
+|---|---|---|---|---|---|---|---|
+||16|17|18|19|20|||
+|16|8.00|8.00|8.00|8.00|8.00|8.0|0|
+|17|7.00|8.50|8.50|8.50|8.50|8.35|0.62|
+|18|6.00|7.50|9.00|9.00|9.00|8.40|1.23|
+|19|5.00|6.50|8.00|9.50|9.50|8.00|1.77|
+|20|4.00|5.50|7.00|8.50|10.00|7.80|2.14|
+
+![](Uni/PASD/img/paretovar.jpeg)
+
+- ***Categorie di rischio***:
+	- **risk averse**: si preferisce ==essere sicuri di avere un certo valore== (sceglierebbe $E[V(a_2)]=8.35$ con $\sigma_v=0.62$)
+	- **risk prone**: si preferisce ==essere rischiare per avere di più==
+	- **risk neutral**: si preferisce ==seguire il criterio di Bayes== (sceglierebbe $E[V(a_3)]=8.40$ con $\sigma_v=1.23$)
+
+- ***Target***: si imposta un ==valore minimo== sotto il quale dover ==stare in allerta== in base alla propensione al rischio che si ha
+	- $T$: **target**
+	- $p_s$: **probabilità** dello scenario
+	- $v(a,s)$: **reward** con azione $a$ e scenario $s$
+	- $D(a,s)=\max\{0,T-v(a,s)\}$: downside risk (indica la **distanza dal target**, ma se lo supera si indica come "0")
+
+- ***Expected Downside Risk***: usato nel ==lungo termine== $$ED=\sum{D_nP_n}$$
+
+- ***![[Uni/PASD/The farmer problem]]***

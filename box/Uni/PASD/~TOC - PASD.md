@@ -27,3 +27,6 @@ tags: PASD ghiani manni
 - # Variable Neighborhood Descent/Search
 	- ![[Uni/PASD/Variable Neighborhood Descent-Search]]
 	- ![[Uni/PASD/Genetics Algorithms]]
+
+- # Sequential decision processes
+	- ![[Uni/PASD/Sequential decision processes]]
