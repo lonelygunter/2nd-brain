@@ -36,5 +36,5 @@ con rewards:
 - $r(sm, \overline{l}\overline{n}) = 20000$
 - $r(\overline{s}m, Ln) = 150+300 = 450000$
 - $r(\overline{s}m, L\overline{n}) = 50000$
-- $r(\overline{s}\overline{m}, LN）= 150000$
+- $r(\overline{s}\overline{m}, LN) = 150000$
 - $r(s\overline{m}, LN) = 150-30 = 120000$
