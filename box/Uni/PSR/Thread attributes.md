@@ -1,0 +1,47 @@
+---
+alias: 
+tags: 2022-Nov-25 PSR thread
+---
+
+> permettono di effettuare delle ==sincronizzazioni tra thread== tramite la ==creazione di oggetti== `pthread_attr_t`
+
+- ***Inizializzazione***: che può essere usata per più attributi
+```c
+int pthread_attr_init(pthread_attr_t *attr);
+
+int pthread_attr_destroy(pthread_attr_t *attr);
+```
+
+- ***Detach state***: usato per indicare la ==volontà di rendere indipendente un thread==: `PTHREAD_CREATE_DETACHED`, `PTHREAD_CREATE_JOINABLE`
+```c
+int pthread_attr_getdetachstate(const pthread_attr_t *restrict attr, int *detachstate);
+
+int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate);
+```
+
+- ***Esempio***:
+```c
+#include "apue.h"
+#include <pthread.h>
+
+int
+makethread(void *(*fn)(void *), void *arg)
+{
+
+   int             err;
+   pthread_t       tid;
+   pthread_attr_t  attr;
+
+   err = pthread_attr_init(&attr);
+   if (err != 0)
+
+	   return(err);
+   err = pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
+   if (err == 0)
+
+	   err = pthread_create(&tid, &attr, fn, arg);
+   pthread_attr_destroy(&attr);
+   return(err);
+
+}
+```

@@ -13,60 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/Background e foregound.md",
+                "file": "Uni/PSR/Thread attributes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "d15bc8fbeac4450e"
-          },
-          {
-            "id": "f789c1f848c18453",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/PSR/Untitled.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
+            "group": "0aabdba2b9bea422"
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "307c09c9f5f436b1",
+        "id": "2ab15ffd5a895f31",
         "type": "tabs",
         "children": [
           {
-            "id": "fd6335ed4540030b",
+            "id": "26c872377ff0ab92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/Background e foregound.md",
+                "file": "Uni/PSR/Thread attributes.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "d15bc8fbeac4450e"
-          },
-          {
-            "id": "4d4fd31b056b86c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/BD/~TOC - BD.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
+            "group": "0aabdba2b9bea422"
           }
         ]
       }
@@ -126,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/Untitled.md",
+                "file": "Uni/PSR/Thread attributes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/Untitled.md"
+                "file": "Uni/PSR/Thread attributes.md"
               }
             }
           },
@@ -148,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/Untitled.md",
+                "file": "Uni/PSR/Thread attributes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,17 +150,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f789c1f848c18453",
+  "active": "32cf3ec0a09f4bd9",
   "lastOpenFiles": [
-    "Uni/PSR/Background e foregound.md",
-    "Uni/PASD/Tabu Search.md",
-    "Uni/PASD/Network Flow Problems.md",
-    "Uni/PASD/Flow problem - costo fisso.md",
-    "Uni/PASD/Short Term Memory.md",
+    "English vocabolary.md",
+    "Uni/PSR/Thread attributes.md",
+    "Uni/Addison_Wesley_Professional_Computing_Series_W_Richard_Stevens,.pdf",
+    "Uni/PSR/Thread limits.md",
+    "Uni/BD/~TOC - BD.md",
     "Uni/PASD/Simulated Annealing.md",
-    "Uni/BD/Datawarehouse.md",
+    "Uni/PASD/Tabu Search.md",
+    "Uni/PSR/Background e foregound.md",
     "Uni/PASD/Decision maker attitude to risk.md",
-    "Uni/PASD/The farmer problem.md",
-    "Uni/PASD/Sequential decision processes.md"
+    "Uni/PASD/Network Flow Problems.md"
   ]
 }

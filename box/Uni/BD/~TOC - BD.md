@@ -13,3 +13,8 @@ tags: BD zappatore
 
 - # Datawarehouse
 	- ![[Uni/BD/Datawarehouse]]
+
+- # 
+
+- # Thread Control
+	- ![[Uni/PSR/Thread limits]]
