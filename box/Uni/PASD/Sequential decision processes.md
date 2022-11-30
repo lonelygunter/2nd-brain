@@ -3,13 +3,13 @@ alias:
 tags: 2022-Nov-25 PASD sequential
 ---
 
-- ***Marketing problem***:
+- ***@ Marketing problem***:
 	1. ricerca locale
 	2. raccolta dei test locali
 	3. ricerca nazionale
 	4. raccolta dei test nazionali
 
-- ***Chance tree***: struttura ==tree-like== con:
+- ***@ Chance tree***: struttura ==tree-like== con:
 	- ==chance node==: valore della variabile aleatoria ($\sum{P(foglia)}=1$)
 
 	![](Uni/PASD/img/chancenode.jpeg)
@@ -18,7 +18,7 @@ tags: 2022-Nov-25 PASD sequential
 
 	![](Uni/PASD/img/decnode.jpeg)
 
-- ***Notazione***:
+- ***@ Notazione***:
 	- indagine $S=(s,\overline{s})$
 	- commercializzare $M=(m,\overline{m})$
 	- successo locale $L=(l,\overline{l})$

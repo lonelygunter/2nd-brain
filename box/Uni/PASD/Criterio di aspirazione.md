@@ -5,7 +5,7 @@ tags: 2022-11-24 PASD tabu
 
 > ==genero la migliore soluzione $x^{(k+1)}$ in $N(x^{(h)})$==
 
-- ***Pseudocodice***:
+- ***@ Pseudocodice***:
 ```python
 x^(0) = soluzione ammissibile iniziale
 N(x^(0)) = intorno

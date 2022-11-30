@@ -5,7 +5,7 @@ tags: 2022-11-22 PASD search metaheuritics
 
 > preso da solo è ovviamente ==poco intelligente==
 
-- ***Pseudocodice***:
+- ***@ Pseudocodice***:
 ```python
 INPUT = soluzione ammissibile iniziale
 xBest = x^(0)

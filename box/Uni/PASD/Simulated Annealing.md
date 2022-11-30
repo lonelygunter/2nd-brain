@@ -5,12 +5,12 @@ tags: 2022-11-22 PASD metaheuristics
 
 >  usata per ==sfuggire agli ottimi locali==: mix tra [[Uni/PASD/LaTeX PASD#Local Search]] e [[Uni/PASD/Random Search|Random Search]]
 
-- ***Classificazione***: 
+- ***@ Classificazione***: 
 	- ==single-solution==: **con una sola mossa** si migliora la f.o.
 	- ==population-based==: presenta **più soluzioni**
 
 
-- ***Pseudocodice***:
+- ***@ Pseudocodice***:
 ```python
 INPUT = soluzione iniziale x^(0)
 xBest = x^(0)
@@ -43,7 +43,7 @@ while (...): # n1
 
 ![](Uni/PASD/img/pdeltaz.jpeg)
 
-- ***Accettare una soluzione peggiore***: (caso del while n3) si entra nel loop una volta arrivati in un ==ottimo locale== per cercare una soluzione leggermente peggiorativa (per cercare un ==ottimo globale==)
-- ***Accettare un soluzione migliorativa***: (caso del while n2) continua a ciclare finché trova una ==soluzione migliorativa== arrivando poi in un ottimo locale
+- ***@ Accettare una soluzione peggiore***: (caso del while n3) si entra nel loop una volta arrivati in un ==ottimo locale== per cercare una soluzione leggermente peggiorativa (per cercare un ==ottimo globale==)
+- ***@ Accettare un soluzione migliorativa***: (caso del while n2) continua a ciclare finché trova una ==soluzione migliorativa== arrivando poi in un ottimo locale
 
 ![](Uni/PASD/img/globott.jpeg)

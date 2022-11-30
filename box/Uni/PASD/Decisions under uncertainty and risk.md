@@ -3,7 +3,7 @@ alias: Decisions under uncertainty and risk
 tags: 2022-11-24 PASD decision
 ---
 
-- ***Decision Table***: tabella per ==decidere il rapporto azione ($a_i$) - scenario ($\theta_j$) = ricompensa ($v_{ij}$)== che più conviene
+- ***@ Decision Table***: tabella per ==decidere il rapporto azione ($a_i$) - scenario ($\theta_j$) = ricompensa ($v_{ij}$)== che più conviene
 
 |azione|scenario 1|...|scenario n
 |---|---|---|---|
@@ -12,14 +12,14 @@ tags: 2022-11-24 PASD decision
 |...||||
 |$a_n$|$v_{m1}$|...|$v_{mn}$|
 
-- ***Caso di un solo scenario***: ho delle ==$v_m$ note==
-- ***Caso sotto rischio***: per ogni scenario ==associo una probabilità diversa== in base ai dati storici: $$P(\theta_1),...,P(\theta_n)$$
+- ***@ Caso di un solo scenario***: ho delle ==$v_m$ note==
+- ***@ Caso sotto rischio***: per ogni scenario ==associo una probabilità diversa== in base ai dati storici: $$P(\theta_1),...,P(\theta_n)$$
 
 	Abbiamo allora una ==variabile aleatoria $v_{ij}$== data dalle diverse combinazioni di $(a_{i}, \theta_j)$.
 
-- ***Valore Atteso***: usiamo il ==criterio di Bayes== per trovare delle ==decisioni che massimizzino il valore atteso di $a_i$== $$E[V(a_i)]=\sum_{j=1}^nP(\theta_j)v_{ij}$$
+- ***@ Valore Atteso***: usiamo il ==criterio di Bayes== per trovare delle ==decisioni che massimizzino il valore atteso di $a_i$== $$E[V(a_i)]=\sum_{j=1}^nP(\theta_j)v_{ij}$$
 
-- ***News Boy Problem***:
+- ***@ News Boy Problem***:
 	- **copie comprate** (decision variable): A = {16, 17, 18, 19, 20}
 	- **copie richieste** (chance variable): $\theta$ = {16, 17, 18, 19, 20}
 	- **frequenza della domanda**: $P(\theta=16)=0.1$, $P(\theta=17)=0.2$, $P(\theta=18)=0.3$, $P(\theta=19)=0.2$, $P(\theta=20)=0.2$
@@ -34,7 +34,7 @@ tags: 2022-11-24 PASD decision
 |19|5.00|6.50|8.00|9.50|9.50|8.00|
 |20|4.00|5.50|7.00|8.50|10.00|7.80|
 
-- ***Caso Cristall Ball***:
-	- ***Expected Reward Perfect Information (ERPI)***: nell'esempio del News Boy Problem andremo a prendere il ==profitto massimo per ogni giornata== per poi applicarci Bayes $$ERPI=\sum_{j=1}^nP(\theta_j)\max(v_{ij})$$
+- ***@ Caso Cristall Ball***:
+	- ***@ Expected Reward Perfect Information (ERPI)***: nell'esempio del News Boy Problem andremo a prendere il ==profitto massimo per ogni giornata== per poi applicarci Bayes $$ERPI=\sum_{j=1}^nP(\theta_j)\max(v_{ij})$$
 	
-	- ***Expected Value of Perfect Information (EVPI)***: indica il ==valore atteso dell'incremento id reward== (se il calcolatore per la previsione costa di più del EVPI non ne vale la pena) $$EVPI=ERPI-ER^*$$
+	- ***@ Expected Value of Perfect Information (EVPI)***: indica il ==valore atteso dell'incremento id reward== (se il calcolatore per la previsione costa di più del EVPI non ne vale la pena) $$EVPI=ERPI-ER^*$$

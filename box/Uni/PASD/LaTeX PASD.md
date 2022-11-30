@@ -2941,7 +2941,7 @@ Le ==procedure== da utilizzare si dividono in:
 
 Non essendo algoritmi precisi ==vanno adattati== al particolare problema che si intende affrontare.
 
-- ***Possibile cycling***: si può entrare in un ==loop== se l'algoritmo prende una soluzione che ==nel suo intorno include la soluzione precedente==
+- ***@ Possibile cycling***: si può entrare in un ==loop== se l'algoritmo prende una soluzione che ==nel suo intorno include la soluzione precedente==
 
 
 ## ☞ Progetto di ricerca locale

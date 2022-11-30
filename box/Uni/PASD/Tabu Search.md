@@ -6,7 +6,7 @@ PASD search tabu metaheuritics
 
 > rappresenta un ==[[Uni/PASD/LaTeX PASD#Local Search]] con memoria== dato che ==escludo la soluzione corrente==
 
-- ***Pseudocodice***:
+- ***@ Pseudocodice***:
 ```python
 x^(0) = soluzione ammissibile iniziale
 k = 0
@@ -16,6 +16,6 @@ while (...):
 	k += 1
 ```
 
-- ***Casistiche***:
+- ***@ Casistiche***:
 	- ![[Uni/PASD/Short Term Memory|Short Term Memory]]
 	- ![[Uni/PASD/Criterio di aspirazione|Criterio di aspirazione]]

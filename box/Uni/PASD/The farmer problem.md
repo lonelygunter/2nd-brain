@@ -10,9 +10,9 @@ tags: 2022-Nov-23 PASD farmer
 |corn|100€|-10€|molta|alto|
 |sorghum|70€|40€|poca|basso|
 
-- ***Funzione obiettivo***: $$\max ER=E[R]=0.7RW+0.3RD$$
+- ***@ Funzione obiettivo***: $$\max ER=E[R]=0.7RW+0.3RD$$
 
-- ***Vincoli***:
+- ***@ Vincoli***:
 	- wet reward: $RW=100*C+70*S$
 	- dry reward: $RD=-10*C+40*S$
 	- wet downside risk ($\geq 0$): $DW\geq 40-RW$

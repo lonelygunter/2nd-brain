@@ -3,7 +3,7 @@ alias: Problema di cammino più breve e rapido, Shortest quickest path problem
 tags: 2022-11-21
 ---
 
-- ***Nodi***:
+- ***@ Nodi***:
 	- $d_i=+1$: flusso uscente ($i=s$)
 	- $d_i=-1$: flusso entrante ($i=t$)
 	- $d_i=0$: neutro ($+1-1=0$)
@@ -11,14 +11,14 @@ tags: 2022-11-21
 
 ![](Uni/PASD/img/path.jpeg)
 
-- ***Funzione obiettivo***: avremo un ==costo diverso in base al path==
+- ***@ Funzione obiettivo***: avremo un ==costo diverso in base al path==
 $$\min z=\sum_{(i,j)\in A}c_{ij}x_{ij}$$
 
-- ***Vincoli***: per ogni nodo:
+- ***@ Vincoli***: per ogni nodo:
 	- $\sum_{(i,j)\in\delta^+(i)} x_{ij} - \sum_{(j,i)\in\delta^-(i)} x_{ji} =$
 		- $+1$: rappresenta l'origine ($i=s$)
 		- $-1$: rappresenta la destinazione ($i=t$)
 		- $0$: rappresenta nodi intermedi
 	- con $x_{ij}\in\{0,1\}$
 
-- ***Loop***: abbiamo un ==costo $c_{ij}\leq 0$ allora $z\to -\infty$==
+- ***@ Loop***: abbiamo un ==costo $c_{ij}\leq 0$ allora $z\to -\infty$==

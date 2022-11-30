@@ -5,7 +5,7 @@ tags: 2022-11-24 PASD tabu
 
 > si aggiunge al [[Uni/PASD/Tabu Search|Tabu Search]] una ==lista $L$ con le ultime $k$ soluzioni==
 
-- ***Pseudocodice***:
+- ***@ Pseudocodice***:
 ```python
 x^(0) = soluzione ammissibile iniziale
 L = {x^(0)} = lista delle ultime k soluzioni visitate
@@ -21,4 +21,4 @@ while (...):
 	h += 1
 ```
 
-- ***Attributo***: si ==associa un attributo alla soluzione $x^{(h)}$== e si dichiarano nella lista $L$ tutte le soluzioni con quell'attributo.
+- ***@ Attributo***: si ==associa un attributo alla soluzione $x^{(h)}$== e si dichiarano nella lista $L$ tutte le soluzioni con quell'attributo.
