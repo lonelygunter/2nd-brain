@@ -1,0 +1,30 @@
+---
+alias: 
+tags: 2022-Nov-29 PSR io
+---
+
+> strumento esterno per permettere di fare il ==lock su un solo record== tra loro
+
+- ***@ Problema***: due processi possono ==scrivere nello stesso file== e creare casini (quindi meglio fare una **sync**)
+
+- ***@ Record***: ==porzione di file== da un byte ad un altro
+
+- ***@ [[Uni/PSR/fcntl()|fcntl()]]***:
+	```c
+	#include <fcntl.h>  
+	int fcntl(int fd, int cmd, struct flock *flockptr);
+	``` 
+	- `cmd`:
+		- `F_GETLK`: per **capire chi ha il lock** ma così facendo non avremo mai la "versione aggiornata" del dato (potrebbe cambiare appena dopo il check)
+		- `F_SETLK`: **imposta il lock**
+		- `F_SETLKW`: F_SETLK **bloccante** (**W**aiting)
+	- struct flock:
+		```c
+		struct flock {
+            short  l_type;   /* F_RDLCK, F_WRLCK, or F_UNLCK */
+            short  l_whence; /* SEEK_SET, SEEK_CUR, or SEEK_END */
+            off_t  l_start;  /* offset in bytes, relative to l_whence */
+            off_t  l_len;    /* length, in bytes; 0 means lock to EOF; posso andare oltre il file ma non prima */
+            pid_t  l_pid;    /* returned with F_GETLK (indica chi ha il lock attualmente) */
+		};
+		```

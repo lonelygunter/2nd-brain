@@ -1,0 +1,20 @@
+---
+alias: 
+tags: 2022-Nov-30 PSR io
+---
+
+> usata per ==gestire tutti i fd insieme==
+
+- ***@ Statement***:
+	```c
+	#include <sys/select.h>
+
+	int select(int maxfdp1,
+		fd_set *restrict readfds,
+		fd_set *restrict writefds,
+		fd_set *restrict exceptfds,
+		struct timeval *restrict tvptr);
+	```
+	- `maxfdp1`: numero totale di ==fd da osservare==
+	- `read/write/exceptfds`: puntatori ad array per capire lo ==stato dei fd== per ogni mansione (0: non usati, 1: usati)
+	- `tvptr`: quanto tempo si ==monitorare i fd==

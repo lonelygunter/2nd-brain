@@ -1,0 +1,22 @@
+---
+alias: 
+tags: 2022-Nov-29 PSR io
+---
+
+> per fare in modo di chiamare delle ==system call che non si bloccano per sempre== (es: open, read, write, ...) tramite flag `O_NONBLOCK`
+```bash
+$ ./a.out < /etc/services 2>stderr.out
+
+$ cat stderr.out  
+read 500000 bytes  
+nwrite = 999, errno = 0
+nwrite = -1, errno = 35
+nwrite = -1, errno = 35
+nwrite = -1, errno = 35
+nwrite = -1, errno = 35
+nwrite = 1001, errno = 0
+nwrite = -1, errno = 35
+nwrite = 1002, errno = 0 
+nwrite = 1004, errno = 0
+...
+```

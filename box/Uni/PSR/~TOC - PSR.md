@@ -16,3 +16,10 @@ tags: PSR tommasi
 	- ![[Uni/PSR/Thread attributes]]
 	- ![[Uni/PSR/Threads and Signals]]
 	- ![[Uni/PSR/Thread and fork]]
+	- ![[Uni/PSR/Thread and IO]]
+
+- # Daemon processes
+	- ![[Uni/PSR/Daemon prosses]]
+
+- # Advanced I/O
+	- ![[Uni/PSR/Advanced IO]]
