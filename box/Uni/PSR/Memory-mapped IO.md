@@ -4,6 +4,7 @@ tags: 2022-Nov-30 PSR io mapping map
 ---
 
 > usata per ==mappare una regione di dati su memoria di massa nella memoria virtuale== di un processo
+> se ==modifico nella MV allora viene aggiornata quella di massa==
 
 - ***@ Statement***:
 	```c
@@ -20,5 +21,7 @@ tags: 2022-Nov-30 PSR io mapping map
 		- `MAP_PRIVATE`: per gestire la modifica della zona mappata creando una ==copia privata del file mappato quando si eseguono operazioni di archiviazione==
 	- `fd`: file che deve essere mappato
 	- `off`: inizio dell'==offset da mappare== nella memoria di massa
+
+- ***@ Returns***: ==indirizzo iniziale== della regione mappata o `MAP_FAILED` se abbiamo un errore
 
 ![](Uni/PSR/img/map.jpeg)

@@ -10,3 +10,10 @@ tags: 2022-Sett PSR function fd
 
 int fcntl(int fd, int cmd, ... /* int arg */ );
 ```
+
+- ***@ Returns***: restituisce uno dei seguenti `cmd`:
+	- `F_DUPFD`: un nuovo fd
+	- `F_GETFD`: valore del flag (solo con bit più bassi)
+	- `F_GETFL`: valore del flag
+	- `F_GETOWN`: valore del proprietario del fd
+	- altrimenti: -1
