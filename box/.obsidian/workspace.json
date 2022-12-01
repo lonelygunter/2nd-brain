@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/Memory-mapped IO.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/Memory-mapped IO.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/Memory-mapped IO.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/Memory-mapped IO.md"
+                "file": "Uni/PASD/esoneri/Domande Es 2.md"
               }
             }
           },
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/Memory-mapped IO.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,11 +166,11 @@
   },
   "active": "32cf3ec0a09f4bd9",
   "lastOpenFiles": [
-    "Uni/PASD/esoneri/Domande Es 2.md",
     "Uni/PASD/esoneri/Domande Es 1.md",
+    "Uni/PSR/Memory-mapped IO.md",
+    "Uni/PASD/esoneri/Domande Es 2.md",
     "Uni/PSR/Record Locking.md",
     "Uni/PSR/fcntl().md",
-    "Uni/PSR/Memory-mapped IO.md",
     "CP/~TOC - Competitive Programming.md",
     "Uni/PSR/~TOC - PSR.md",
     "Uni/PSR/Advanced IO.md",
