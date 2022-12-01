@@ -19,6 +19,9 @@ tags: 2022-Nov-30 PSR io mapping map
 		- `MAP_FIXED` / 0: per far inserire il ==mapping al kernel in modo dinamico==
 		- `MAP_SHARED`: per permettere la ==modifica== (scrittura) nella ==zona mappata== tramite le ==operazioni di archiviazione==
 		- `MAP_PRIVATE`: per gestire la modifica della zona mappata creando una ==copia privata del file mappato quando si eseguono operazioni di archiviazione==
+
+		![](Uni/PSR/img/maptype.jpeg)
+
 	- `fd`: file che deve essere mappato
 	- `off`: inizio dell'==offset da mappare== nella memoria di massa
 

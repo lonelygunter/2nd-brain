@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "2ab15ffd5a895f31",
+        "id": "8618adfb254a982d",
         "type": "tabs",
         "children": [
           {
@@ -13,21 +13,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/Record Locking.md",
+                "file": "Uni/PSR/Memory-mapped IO.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
             "group": "0aabdba2b9bea422"
-          },
+          }
+        ]
+      },
+      {
+        "id": "2ab15ffd5a895f31",
+        "type": "tabs",
+        "children": [
           {
             "id": "26c872377ff0ab92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/Record Locking.md",
+                "file": "Uni/PSR/Memory-mapped IO.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -48,8 +54,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/Record Locking.md",
+                "file": "Uni/PSR/Memory-mapped IO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/Record Locking.md"
+                "file": "Uni/PSR/Memory-mapped IO.md"
               }
             }
           },
@@ -129,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/Record Locking.md",
+                "file": "Uni/PSR/Memory-mapped IO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,17 +163,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "26c872377ff0ab92",
+  "active": "32cf3ec0a09f4bd9",
   "lastOpenFiles": [
+    "Uni/PASD/esoneri/Domande Es 2.md",
+    "Uni/PASD/esoneri/Domande Es 1.md",
+    "Uni/PSR/Record Locking.md",
     "Uni/PSR/fcntl().md",
     "Uni/PSR/Memory-mapped IO.md",
-    "Uni/PSR/Record Locking.md",
     "CP/~TOC - Competitive Programming.md",
     "Uni/PSR/~TOC - PSR.md",
     "Uni/PSR/Advanced IO.md",
     "CP/Time complexity.md",
-    "~Templates/<stdio.h>.md",
-    "Uni/PSR/readv() and writev().md",
-    "Uni/PSR/select().md"
+    "~Templates/<stdio.h>.md"
   ]
 }
