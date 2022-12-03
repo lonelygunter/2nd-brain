@@ -31,4 +31,4 @@ tags: 2022-11-23 PASD risk decision
 
 - ***@ Expected Downside Risk***: usato nel ==lungo termine== $$ED=\sum{D_nP_n}$$
 
-- ***@ ![[Uni/PASD/The farmer problem]]***
+- ***![[Uni/PASD/The farmer problem]]***

@@ -65,7 +65,7 @@ con vincoli:
 - $x_1 + 2x_2 \leq 10$
 - $x_1, x_2 \geq 0$
 
-![soluzione es 3.3](sol3-3.jpeg)
+![soluzione es 3.3](Uni/PASD/esoneri/img/sol3-3.jpeg)
 
 
 ## Ottimizzazione del modello

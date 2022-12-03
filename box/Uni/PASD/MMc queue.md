@@ -1,0 +1,14 @@
+---
+alias: 
+tags: 2022-Dec-01 PASD simulation queue
+---
+
+> si occupa di una singola coda, le quali ==entità vengono distribuite in $c$ server==
+
+![](Uni/PASD/img/mmcqueue.jpeg)
+
+- ***@ Scenario***: siamo in un sistema con:
+	- 1 sola ==coda==
+	- più ==server==
+	- ==tempo== in cui si svolge un servizio
+

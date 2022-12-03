@@ -1,6 +1,6 @@
 ---
 alias: Decisions under uncertainty and risk
-tags: 2022-11-24 PASD decision
+tags: 2022-Nov-24 PASD decision
 ---
 
 - ***@ Decision Table***: tabella per ==decidere il rapporto azione ($a_i$) - scenario ($\theta_j$) = ricompensa ($v_{ij}$)== che più conviene
@@ -34,7 +34,8 @@ tags: 2022-11-24 PASD decision
 |19|5.00|6.50|8.00|9.50|9.50|8.00|
 |20|4.00|5.50|7.00|8.50|10.00|7.80|
 
-- ***@ Caso Cristall Ball***:
-	- ***@ Expected Reward Perfect Information (ERPI)***: nell'esempio del News Boy Problem andremo a prendere il ==profitto massimo per ogni giornata== per poi applicarci Bayes $$ERPI=\sum_{j=1}^nP(\theta_j)\max(v_{ij})$$
-	
-	- ***@ Expected Value of Perfect Information (EVPI)***: indica il ==valore atteso dell'incremento id reward== (se il calcolatore per la previsione costa di più del EVPI non ne vale la pena) $$EVPI=ERPI-ER^*$$
+- ***@ Casi di infomazione***:
+	- ![[Uni/PASD/Expected Reward Perfect Information (ERPI)]]
+	- ![[Uni/PASD/Expected Value of Perfect Information (EVPI)]]
+	- ![[Uni/PASD/Expected Value of Sample Information (EVSI)]]
+	- ![[Uni/PASD/Efficiency of Sample Information (ESI)]]

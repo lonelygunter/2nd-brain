@@ -1,0 +1,6 @@
+---
+alias: 
+tags: 2022-11-24 PASD decision ERPI
+---
+
+> nell'esempio del News Boy Problem andremo a prendere il ==profitto massimo per ogni giornata== per poi applicarci Bayes $$ERPI=\sum_{j=1}^nP(\theta_j)\max(v_{ij})$$

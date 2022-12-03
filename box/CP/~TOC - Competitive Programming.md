@@ -5,6 +5,8 @@ tags: cp algorithms code
 
 # *TOC:*
 
-- # ![[CP/Time complexity]]
+- # Time complexity
+	- ![[CP/Time complexity]]
 
-- 
+- # Write good code
+	- ![[CP/Naming Things in Code]]
