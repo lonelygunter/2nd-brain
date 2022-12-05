@@ -1,6 +1,6 @@
 ---
 aliases: So Good They Can Not Ignore You - Cal Newport
-tags: 2021-Nov-18 book readed
+tags: 2021-11-18 book readed
 ---
 
 ###### Pag 18 - Passion is a side effect of mastery:

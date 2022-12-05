@@ -1,6 +1,6 @@
 ---
 alias: Digital Minimalist - Cal Newport
-tags: 2021-Nov-06 book readed 4S
+tags: 2021-11-06 book readed 4S
 ---
 
 ###### Pag 44 - Una soluzione minimalista:
