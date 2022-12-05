@@ -33,3 +33,6 @@ tags: PASD ghiani manni
 
 - ## \# Computer simulation
 	- ![[Uni/PASD/2022.12.01-00-Computer simulation]]
+
+- ## \# Exploratory Data Analysis
+	- ![[2022.12.06-00-Exploratory Data Analysis]]

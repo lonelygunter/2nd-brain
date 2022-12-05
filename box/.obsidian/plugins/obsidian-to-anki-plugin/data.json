@@ -105,14 +105,18 @@
     "Uni/PASD/img/probasslin.jpeg",
     "Uni/PASD/img/disret.jpeg",
     "Uni/PSR/img/iovec.jpeg",
-    "Uni/PSR/img/sesgroup.jpeg"
+    "Uni/PSR/img/sesgroup.jpeg",
+    "2022.12.06-01-Central Tendency measures",
+    "2022.12.06-05-Variability measures",
+    "2022.12.06-02-Media aritmetica",
+    "2022.12.06-03-Mediana"
   ],
   "File Hashes": {
     "~Templates/TOC.md": "161abb6dbabf381c4090b9807b9df407",
     "~Templates/<stdio.h>.md": "ff95f2766b6246f064dcedb65c174163",
     "WTODO.md": "bee99107ad075f17a9343fb8ecb67a37",
     "Uni/TOC - PSR.md": "84d6750623716d52430ccb6b88251a3e",
-    "Uni/TOC - PASD.md": "38ac50c89c4b6877fa362f784df09e81",
+    "Uni/TOC - PASD.md": "ef308644f932aa34f7e1b7b96e56bdfb",
     "Uni/TOC - BD.md": "0a88a98e16fce32ea65fbcf600396f42",
     "Uni/PSR/LaTeX PSR.md": "e4ef03c125ca311f73ed1d43bb019431",
     "Uni/PSR/2022.11.30-03-Memory-mapped IO.md": "73c13ca4679ccb3581056ac7840759a3",
@@ -214,7 +218,23 @@
     "CP/2022.12.02-00-Naming Things in Code.md": "552c515cffd5fe42e719ca848cb5d96a",
     "CP/2022.11.30-00-Time complexity.md": "96694ed44542368b602c20063f9a26fb",
     "Uni/PASD/2022.11.14-00-Generazione pseudo-casuale di numeri.md": "3c461deb60dd974cff6b5b88877fc9e4",
-    "Uni/PASD/2022.11.14-01-Congreuntial Linear Generator (CLG).md": "d8c36fc8f693fcef93b6b63418d96e83"
+    "Uni/PASD/2022.11.14-01-Congreuntial Linear Generator (CLG).md": "d8c36fc8f693fcef93b6b63418d96e83",
+    "Uni/PASD/2022.12.06-00-Make sense of data.md": "5f4bca63790b3e6bd79192f21d651332",
+    "2022.12.06-01-Central Tendency measures.md": "0292d02e6f2ea8d7b47c2cbc5fcd051d",
+    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md": "bcea41fa8fbff37455cffa8169390885",
+    "2022.12.06-02-Media aritmetica.md": "840b6d9ef8e90c932011cf770f978d37",
+    "2022.12.06-03-Mediana.md": "0aeaf321efcb1d411b675074adf1648a",
+    "2022.12.06-04-Outlaier.md": "c2e13d04ac8b0c3a05aff05d27ece830",
+    "2022.12.06-05-Variability measures.md": "d9e7ff359cd33b9f45dcc752085a0471",
+    "2022.12.06-00-Exploratory Data Analysis.md": "aebedb71144026fee00e37e051502173",
+    "2022.12.06-06-Quartili.md": "0fe1ed50df7dd60323ef928bc7621160",
+    "~Templates/intro.md": "bdf98d6af1394983cf2faf63ce3a0a79",
+    "Uni/PASD/2022.12.06-06-Quartili.md": "0fe1ed50df7dd60323ef928bc7621160",
+    "Uni/PASD/2022.12.06-05-Variability measures.md": "d9e7ff359cd33b9f45dcc752085a0471",
+    "Uni/PASD/2022.12.06-04-Outlaier.md": "c2e13d04ac8b0c3a05aff05d27ece830",
+    "Uni/PASD/2022.12.06-03-Mediana.md": "0aeaf321efcb1d411b675074adf1648a",
+    "Uni/PASD/2022.12.06-02-Media aritmetica.md": "840b6d9ef8e90c932011cf770f978d37",
+    "Uni/PASD/2022.12.06-01-Central Tendency measures.md": "0292d02e6f2ea8d7b47c2cbc5fcd051d"
   },
   "fields_dict": {
     "Basic": [

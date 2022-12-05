@@ -17,5 +17,14 @@
       ],
       "key": "P"
     }
+  ],
+  "zk-prefixer": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "`"
+    }
   ]
 }
