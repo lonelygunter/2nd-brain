@@ -8,8 +8,8 @@ tags: PASD ghiani manni
 - ![[Uni/PASD/LaTeX PASD]]
 
 - ## \# Generazione pseudo-casuale di numeri
-	- ![[Uni/PASD/2022.11.14-00-In cosa consiste la generazione pseudo-casuale di numeri]]
-	- ![[Uni/PASD/2022.11.14-01-Congreuntal Linear Generator (CLG)]]
+	- ![[Uni/PASD/2022.11.14-00-Generazione pseudo-casuale di numeri]]
+	- ![[Uni/PASD/2022.11.14-01-Congreuntial Linear Generator (CLG)]]
 	- ![[Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF)]]
 
 - ## \# Network Flow Problems

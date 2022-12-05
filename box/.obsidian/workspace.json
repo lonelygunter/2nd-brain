@@ -13,46 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libri/So Good They Can Not Ignore You - Cal Newport/TOC - So Good They Can Not Ignore You - Cal Newport.md",
+                "file": "Uni/PSR/2022.09.00-00-fcntl().md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "a4e8b7c7d751ecac"
+            "group": "d088268cdb1cf178"
           }
         ]
       },
       {
-        "id": "118c43720a5612ea",
+        "id": "1e68c857bafe9f73",
         "type": "tabs",
         "children": [
           {
-            "id": "b30abaf4abd2cf4b",
+            "id": "450e37bccc4dcd54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libri/So Good They Can Not Ignore You - Cal Newport/TOC - So Good They Can Not Ignore You - Cal Newport.md",
+                "file": "Uni/PSR/2022.09.00-00-fcntl().md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "a4e8b7c7d751ecac"
-          },
-          {
-            "id": "c36e8855963feb4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CP/TOC - Competitive Programming.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
+            "group": "d088268cdb1cf178"
           }
         ]
       }
@@ -112,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Libri/So Good They Can Not Ignore You - Cal Newport/TOC - So Good They Can Not Ignore You - Cal Newport.md",
+                "file": "Uni/PSR/2022.09.00-00-fcntl().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Libri/So Good They Can Not Ignore You - Cal Newport/TOC - So Good They Can Not Ignore You - Cal Newport.md"
+                "file": "Uni/PSR/2022.09.00-00-fcntl().md"
               }
             }
           },
@@ -134,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Libri/So Good They Can Not Ignore You - Cal Newport/TOC - So Good They Can Not Ignore You - Cal Newport.md",
+                "file": "Uni/PSR/2022.09.00-00-fcntl().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,17 +151,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c3b5dbc3fd30a5f0",
+  "active": "e1d8c356cf3e90ec",
   "lastOpenFiles": [
-    "Libri/How to take smart notes - Sönke Ahrens/TOC - How to take smart notes - Sönke Ahrens.md",
-    "Libri/How to take smart notes - Sönke Ahrens/2022.11.14-03-Zettelkasten idea.md",
-    "Libri/How to take smart notes - Sönke Ahrens/2022.11.14-02-QEC notes.md",
-    "Libri/How to take smart notes - Sönke Ahrens/2022.11.14-01-Zettelkasten compas.md",
-    "Libri/How to take smart notes - Sönke Ahrens/2022.11.14-00-Tipi di note.md",
-    "Libri/Digital Minimalist - Cal Newport/TOC - Digital Minimalist - Cal Newport.md",
-    "Libri/Deep Work - Cal Newport/TOC - Deep Work - Cal Newport.md",
-    "Libri/Come prevenire la prossima pandemia - Bill Gates/TOC - Come prevenire la prossima pandemia - Bill Gates.md",
-    "Libri/Atomic Habits - Cal Newport/TOC - Atomic Habits - Cal Newport.md",
-    "CP/2022.12.05-00-Sorting.md"
+    "Uni/PSR/2022.11.15-00-Process group.md",
+    "Uni/PSR/2022.11.15-01-Background e foregound.md",
+    "Uni/PSR/2022.11.25-00-Thread limits.md",
+    "Uni/PSR/2022.11.25-01-Thread attributes.md",
+    "Uni/PSR/2022.11.29-00-Advanced IO.md",
+    "Uni/PSR/2022.11.29-01-Nonblocking IO.md",
+    "Uni/PSR/2022.11.29-02-Record Locking.md",
+    "Uni/PSR/2022.11.29-03-Threads and Signals.md",
+    "Uni/PSR/2022.11.29-04-sigwait().md",
+    "Uni/PSR/2022.11.29-05-Thread and fork.md"
   ]
 }

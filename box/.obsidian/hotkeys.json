@@ -7,5 +7,15 @@
       "key": "T"
     }
   ],
-  "workspace:new-tab": []
+  "workspace:new-tab": [],
+  "obsidian-to-anki-plugin:anki-scan-vault": [
+    {
+      "modifiers": [
+        "Alt",
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ]
 }
