@@ -1,6 +1,6 @@
 ---
 alias: 
-tags: 2022-Nov-15
+tags: 2022-11-15
 ---
 
 # Books
