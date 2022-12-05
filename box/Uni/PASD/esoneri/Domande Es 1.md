@@ -1,6 +1,6 @@
 ---
 alias: 
-tags: 2022-Ott PASD esonero
+tags: 2022-10-00 PASD esonero
 ---
 
 ## Introduzione a Sistemi a Supporto delle Decisioni ed Intelligenza Artificiale
