@@ -109,15 +109,18 @@
     "2022.12.06-01-Central Tendency measures",
     "2022.12.06-05-Variability measures",
     "2022.12.06-02-Media aritmetica",
-    "2022.12.06-03-Mediana"
+    "2022.12.06-03-Mediana",
+    "Uni/BD/img/wordcount.jpeg",
+    "Uni/BD/2022.11.29-01-Map and reduce",
+    "Uni/BD/img/mapreduce.jpeg"
   ],
   "File Hashes": {
     "~Templates/TOC.md": "161abb6dbabf381c4090b9807b9df407",
     "~Templates/<stdio.h>.md": "ff95f2766b6246f064dcedb65c174163",
-    "WTODO.md": "bee99107ad075f17a9343fb8ecb67a37",
+    "WTODO.md": "ba00d9c483d7a9c9110ec5217c762aaf",
     "Uni/TOC - PSR.md": "84d6750623716d52430ccb6b88251a3e",
     "Uni/TOC - PASD.md": "ef308644f932aa34f7e1b7b96e56bdfb",
-    "Uni/TOC - BD.md": "0a88a98e16fce32ea65fbcf600396f42",
+    "Uni/TOC - BD.md": "b4203cfb6408603e40f4021821fb8107",
     "Uni/PSR/LaTeX PSR.md": "e4ef03c125ca311f73ed1d43bb019431",
     "Uni/PSR/2022.11.30-03-Memory-mapped IO.md": "73c13ca4679ccb3581056ac7840759a3",
     "Uni/PSR/2022.11.30-02-readv() and writev().md": "3debb30017936b70a98a75a4a496b979",
@@ -169,7 +172,7 @@
     "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md": "911038ba3fc87ccd10586cad5ccaab59",
     "Uni/PASD/2022.11.14-01-Congreuntal Linear Generator (CLG).md": "87d24c1e73ef78fd97910ea811ea42db",
     "Uni/PASD/2022.11.14-00-In cosa consiste la generazione pseudo-casuale di numeri.md": "040fe845d9dac0c4e7ae433fa2582936",
-    "Uni/BD/2022.11.29-00-Hadoop.md": "26a3354f1e8bea92874a36b7f237706b",
+    "Uni/BD/2022.11.29-00-Hadoop.md": "d7f298f76e0715568810fcb1ec8205b5",
     "Uni/BD/2022.11.23-01-Architettura Datawarehouse.md": "36185c92ee27f750c6b418b085904759",
     "Uni/BD/2022.11.23-00-Datawarehouse.md": "b7c404ca0ea99a77e018cdd4646cdf05",
     "Uni/BD/2022.11.15-01-Database relazionale vs grafo.md": "12d0dbd1d6068fa8eb43bb73a0bde366",
@@ -234,7 +237,9 @@
     "Uni/PASD/2022.12.06-04-Outlaier.md": "c2e13d04ac8b0c3a05aff05d27ece830",
     "Uni/PASD/2022.12.06-03-Mediana.md": "0aeaf321efcb1d411b675074adf1648a",
     "Uni/PASD/2022.12.06-02-Media aritmetica.md": "840b6d9ef8e90c932011cf770f978d37",
-    "Uni/PASD/2022.12.06-01-Central Tendency measures.md": "0292d02e6f2ea8d7b47c2cbc5fcd051d"
+    "Uni/PASD/2022.12.06-01-Central Tendency measures.md": "0292d02e6f2ea8d7b47c2cbc5fcd051d",
+    "~Templates/<intro.h>.md": "94a5c525e68f88fd92e435a5914f17df",
+    "Uni/BD/2022.11.29-01-Map and reduce.md": "5d787dcff5eb9d1dc625c7d6b638460c"
   },
   "fields_dict": {
     "Basic": [

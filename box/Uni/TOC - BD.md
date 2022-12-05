@@ -40,7 +40,6 @@ big dataL consepts technology and architecture 1st ed balusamy abirami gadomi
 
 - ## \# NOSQL (Not Only SQL)
 	- ![[Uni/BD/2022.11.09-00-NoSQL]]
-	- !
 
 - ## \# DataBase a Grafo
 	- ![[Uni/BD/2022.11.15-00-Database a grafo]]
@@ -48,3 +47,4 @@ big dataL consepts technology and architecture 1st ed balusamy abirami gadomi
 
 - ## \# Datawarehouse
 	- ![[Uni/BD/2022.11.23-00-Datawarehouse]]
+	- ![[Uni/BD/2022.11.29-00-Hadoop]]

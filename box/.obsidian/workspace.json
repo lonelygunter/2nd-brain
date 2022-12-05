@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.02-02-Terminating simulation.md",
+                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.02-02-Terminating simulation.md",
+                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -47,15 +47,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
-                "mode": "preview",
+                "file": "Uni/TOC - BD.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
+                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md"
+                "file": "Uni/BD/2022.11.29-01-Map and reduce.md"
               }
             }
           },
@@ -135,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
+                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,17 +164,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8ecc097810994fb2",
+  "active": "e1d8c356cf3e90ec",
   "lastOpenFiles": [
-    "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
+    "Uni/BD/2022.11.29-00-Hadoop.md",
+    "Uni/BD/2022.11.29-01-Map and reduce.md",
+    "~Templates/<intro.h>.md",
+    "Uni/BD/2022.11.23-00-Datawarehouse.md",
+    "Uni/TOC - BD.md",
     "Uni/PASD/2022.12.02-02-Terminating simulation.md",
+    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
+    "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
     "Uni/PASD/2022.12.01-00-Computer simulation.md",
-    "WTODO.md",
-    "2022.12.06-06-Quartili.md",
-    "2022.12.06-05-Variability measures.md",
-    "2022.12.06-04-Outlaier.md",
-    "2022.12.06-03-Mediana.md",
-    "2022.12.06-02-Media aritmetica.md",
-    "2022.12.06-01-Central Tendency measures.md"
+    "WTODO.md"
   ]
 }
