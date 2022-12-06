@@ -4,57 +4,70 @@
     "type": "split",
     "children": [
       {
-        "id": "bc784467f8a1a382",
+        "id": "249e2f2f55714790",
         "type": "tabs",
         "children": [
           {
-            "id": "e1d8c356cf3e90ec",
+            "id": "3a1c41b1dfe5630d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
+                "file": "Uni/PSR/2022.12.02-00-Pipe.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "798bb07a1c644fd4"
+            "group": "fb313c99b4e88062"
           }
         ]
       },
       {
-        "id": "1e68c857bafe9f73",
-        "type": "tabs",
+        "id": "2a0b3166276ec20c",
+        "type": "split",
         "children": [
           {
-            "id": "450e37bccc4dcd54",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": true
+            "id": "e5eb193709caac6f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "7e3c05b37ae3dc96",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Uni/PSR/2022.12.02-00-Pipe.md",
+                    "mode": "preview",
+                    "backlinks": true,
+                    "source": true
+                  }
+                },
+                "group": "fb313c99b4e88062"
               }
-            },
-            "group": "798bb07a1c644fd4"
+            ]
           },
           {
-            "id": "8ecc097810994fb2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/TOC - BD.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
+            "id": "8f56a58281321528",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "82be3ebff7e6db29",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Uni/TOC - PSR.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": true
+                  }
+                }
               }
-            }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -83,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "(ER)",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5
+    "width": 376.5
   },
   "right": {
     "id": "26fa9bff6ec517ad",
@@ -112,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
+                "file": "Uni/PSR/2022.12.02-00-Pipe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/2022.11.29-01-Map and reduce.md"
+                "file": "Uni/PSR/2022.12.02-00-Pipe.md"
               }
             }
           },
@@ -134,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/2022.11.29-01-Map and reduce.md",
+                "file": "Uni/PSR/2022.12.02-00-Pipe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,17 +177,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e1d8c356cf3e90ec",
+  "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/BD/2022.11.29-00-Hadoop.md",
-    "Uni/BD/2022.11.29-01-Map and reduce.md",
+    "Uni/PSR/2022.11.30-03-Memory-mapped IO.md",
+    "Uni/PSR/2022.12.02-00-Pipe.md",
+    "Uni/TOC - PSR.md",
     "~Templates/<intro.h>.md",
-    "Uni/BD/2022.11.23-00-Datawarehouse.md",
-    "Uni/TOC - BD.md",
-    "Uni/PASD/2022.12.02-02-Terminating simulation.md",
-    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
-    "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
-    "Uni/PASD/2022.12.01-00-Computer simulation.md",
-    "WTODO.md"
+    "~Templates/<H.h>.md",
+    "Uni/PSR/2022.11.30-02-readv() and writev().md",
+    "2022.12.02-00-.md",
+    "Untitled.md",
+    "Uni/TOC - PASD.md",
+    "Uni/TOC - BD.md"
   ]
 }

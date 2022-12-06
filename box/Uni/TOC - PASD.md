@@ -5,7 +5,22 @@ tags: PASD ghiani manni
 
 # *TOC:*
 
-- ![[Uni/PASD/LaTeX PASD]]
+- ## \# Definizioni
+	- ![[Uni/PASD/2022.09.23-00-Business Analytics]]
+	- ![[Uni/PASD/2022.09.23-01-Decision]]
+	- ![[Uni/PASD/2022.09.23-09-Business Intelligence (BI)]]
+	- ![[Uni/PASD/2022.09.23-10-Data visualization]]
+	- ![[Uni/PASD/2022.09.23-11-Decision Support Systems (DSS)]]
+	- ![[Uni/PASD/2022.09.23-12-Operations Research (OR)]]
+	- ![[Uni/PASD/2022.09.23-13-Agents]]
+	- ![[Uni/PASD/2022.09.23-14-Artificial Intelligence (AI)]]
+	- ![[Uni/PASD/2022.09.23-15-Machine Learning (ML)]]
+	- ![[Uni/PASD/2022.09.23-16-Deep Leaning]]
+	- ![[Uni/PASD/2022.09.23-17-Data Mining (DM)]]
+
+- ## \# Ottimizzazione matematica
+	- ![[Uni/PASD/2022.09.30-00-Ottimizzazione matematica]]
+	- 
 
 - ## \# Generazione pseudo-casuale di numeri
 	- ![[Uni/PASD/2022.11.14-00-Generazione pseudo-casuale di numeri]]

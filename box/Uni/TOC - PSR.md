@@ -23,3 +23,6 @@ tags: PSR tommasi
 
 - ## \# Advanced I/O
 	- ![[Uni/PSR/2022.11.29-00-Advanced IO]]
+
+- ## \# Interprocess Communication
+	- ![[Uni/PSR/2022.12.02-00-Pipe]]
