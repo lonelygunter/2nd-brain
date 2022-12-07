@@ -13,18 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.02-00-Pipe.md",
+                "file": "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "fb313c99b4e88062"
+            "group": "e3ea785096a8fa6b"
           }
         ]
       },
       {
-        "id": "2a0b3166276ec20c",
+        "id": "9605fae0ab8b6af5",
         "type": "split",
         "children": [
           {
@@ -37,18 +37,18 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Uni/PSR/2022.12.02-00-Pipe.md",
+                    "file": "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
                     "mode": "preview",
                     "backlinks": true,
                     "source": true
                   }
                 },
-                "group": "fb313c99b4e88062"
+                "group": "e3ea785096a8fa6b"
               }
             ]
           },
           {
-            "id": "8f56a58281321528",
+            "id": "a2d2a0eb39ca9645",
             "type": "tabs",
             "children": [
               {
@@ -57,7 +57,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Uni/TOC - PSR.md",
+                    "file": "Uni/TOC - BD.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": true
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/2022.12.02-00-Pipe.md",
+                "file": "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/2022.12.02-00-Pipe.md"
+                "file": "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/2022.12.02-00-Pipe.md",
+                "file": "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,15 +179,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/PSR/2022.11.30-03-Memory-mapped IO.md",
-    "Uni/PSR/2022.12.02-00-Pipe.md",
-    "Uni/TOC - PSR.md",
-    "~Templates/<intro.h>.md",
-    "~Templates/<H.h>.md",
+    "Uni/BD/2022.12.07-00-Modello multidimensionale.md",
+    "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
+    "Uni/BD/2022.11.29-01-Map and reduce.md",
+    "Uni/BD/2022.11.23-00-Datawarehouse.md",
+    "Uni/TOC - BD.md",
     "Uni/PSR/2022.11.30-02-readv() and writev().md",
-    "2022.12.02-00-.md",
-    "Untitled.md",
-    "Uni/TOC - PASD.md",
-    "Uni/TOC - BD.md"
+    "Uni/PASD/2022.09.30-00-Ottimizzazione matematica.md",
+    "Uni/PASD/LaTeX PASD.md",
+    "Uni/TOC - PSR.md",
+    "Uni/TOC - PASD.md"
   ]
 }
