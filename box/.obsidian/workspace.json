@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.07-05-Formati di scambio.md",
+                "file": "WTODO.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.07-05-Formati di scambio.md",
+                "file": "WTODO.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/2022.12.07-05-Formati di scambio.md",
+                "file": "WTODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/2022.12.07-05-Formati di scambio.md"
+                "file": "WTODO.md"
               }
             }
           },
@@ -142,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/2022.12.07-05-Formati di scambio.md",
+                "file": "WTODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,8 +174,8 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/PSR/2022.12.07-02-Socket addresses.md",
     "Uni/PSR/2022.12.07-05-Formati di scambio.md",
+    "Uni/PSR/2022.12.07-02-Socket addresses.md",
     "Uni/PSR/2022.12.07-00-Socket.md",
     "Uni/PSR/2022.12.07-01-Socket creation.md",
     "Uni/PSR/2022.12.07-03-IPv4.md",
