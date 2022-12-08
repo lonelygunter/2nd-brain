@@ -26,3 +26,7 @@ tags: PSR tommasi
 
 - ## \# Interprocess Communication
 	- ![[Uni/PSR/2022.12.02-00-Pipe]]
+	- ![[Uni/PSR/2022.12.06-00-XSI IPC]]
+
+- ## \# Socket
+	- ![[Uni/PSR/2022.12.07-00-Socket]]
