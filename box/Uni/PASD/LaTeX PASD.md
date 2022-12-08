@@ -1,37 +1,5 @@
 
 
-Per ==effettuare una modellazione== faremo:
-
-1. ==identificare le variabili decisionali==:
-	- $x_A$: \# di pallet di prodotto A da realizzare
-	- $x_B$: \# di pallet di prodotto B da realizzare
-2. ==definire la funzione obbiettivo (FO)==, per massimizzare il profitto
-3. ==definire i vincoli espressi come uguaglianza o disuguaglianza==
-	- vincolo 1: capacità produttiva dello stab 1 $4x_A+2x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti:
-        $$4x_A+2x_B \leq 400$$
-	- vincolo 2: capacità produttiva dello stabilimento 2 $2x_A+4x_B$ che non può superare $40*10$ cioè ore disponibili ogni settimana per un addetto * numero di addetti:
-        $$4x_A+2x_B \leq 400$$
-	- vincolo 3: vincolo sulla richiesta di A:
-        $$x_A \leq 40$$
-	- vincolo 4: vincolo sulla richiesta di B:
-        $$x_B \leq 120$$
-	- vincolo 5: vincolo di non-negatività:
-        $$x_A, x_B \geq 0$$
-	
-Nella forma completa il ==modello complessivo== è:
-
-$$\max = z = 15x_A+10x_B$$
-
-sottoposto ai vincoli (sv):
-
-
-- $4x_A+2x_B \leq 400$
-- $2x_A+4x_B \leq 400$
-- $x_A \leq 40$
-- $x_B \leq 120$
-- $x_A, x_B \geq 0$
-
-
 
 ## ☞ Risolvere il modello matematico
 

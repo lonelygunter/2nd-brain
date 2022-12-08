@@ -123,7 +123,7 @@
     "~Templates/TOC.md": "161abb6dbabf381c4090b9807b9df407",
     "~Templates/<stdio.h>.md": "ff95f2766b6246f064dcedb65c174163",
     "WTODO.md": "ba00d9c483d7a9c9110ec5217c762aaf",
-    "Uni/TOC - PSR.md": "6c89a7b3e0936b09425a38bd987dde92",
+    "Uni/TOC - PSR.md": "a57bf817c9597f752630ab560a93d708",
     "Uni/TOC - PASD.md": "d9605ba323e989dbc85d2a75294b0239",
     "Uni/TOC - BD.md": "b4203cfb6408603e40f4021821fb8107",
     "Uni/PSR/LaTeX PSR.md": "e4ef03c125ca311f73ed1d43bb019431",
@@ -272,7 +272,18 @@
     "2022.12.08-00-Modello multidimensionale.md": "2923d8a5cefddc505739c589e43ce857",
     "CP/2022.12.07-00-Never Nester.md": "79a8a5afa969ae2950ced0d096fd4354",
     "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md": "4daf6b6143efb68ecb4da2f14990ea2f",
-    "Uni/BD/2022.12.07-00-Modello multidimensionale.md": "15a29a887b082088ecbea8073633ea96"
+    "Uni/BD/2022.12.07-00-Modello multidimensionale.md": "879966fde12dd23a3de37b894c8d3aef",
+    "2022.12.06-00-XSI IPC.md": "468782b1f324673245222fe0805cba05",
+    "Uni/PSR/2022.12.06-01-Semaphore.md": "1b13ac441db54a769d9cb6cab8326eba",
+    "Uni/PSR/2022.12.06-00-XSI IPC.md": "db747cb36ffbd54f5f2990ad94e0e655",
+    "Uni/PSR/2022.12.06-02-System V.md": "ebbc569581201e2366fc0ea38e8caaf2",
+    "Uni/PSR/2022.12.06-03-POSIX semaphore.md": "75e3beb6e1d96aceb6c8515754e9e731",
+    "Uni/PSR/2022.12.07-00-Socket.md": "4d001d9d95341e6e9b83e529b0400e5e",
+    "Uni/PSR/2022.12.07-01-Socket creation.md": "e1f6e9e50f7c8b2aef3d3263e9b9470e",
+    "Uni/PSR/2022.12.07-02-Socket addresses.md": "c301f9fcfd514889a849518587d569bb",
+    "Uni/PSR/2022.12.07-04-IPv6.md": "e16044ad7f55f8ee993f85cb1a3afb1b",
+    "Uni/PSR/2022.12.07-03-IPv4.md": "3f9855e78c4a4de3932e5e84976b1419",
+    "Uni/PSR/2022.12.07-05-Formati di scambio.md": "cb7d51facd06b12080a53a73dd1d41c8"
   },
   "fields_dict": {
     "Basic": [
