@@ -34,7 +34,7 @@
       "Uni/PASD": "PASD",
       "Uni/PSR": "PSR",
       "Uni/BD/img": "",
-      "Uni/PASD/esoneri": "",
+      "Uni/PASD/esoneri": "PASD esonero",
       "Uni/PASD/img": "",
       "Uni/PSR/img": "",
       "Uni/PASD/esoneri/img": ""
@@ -117,12 +117,13 @@
     "Uni/PASD/img/chancenode.jpeg",
     "Uni/PASD/img/decnode.jpeg",
     "Uni/PASD/img/mark.jpeg",
-    "Uni/PSR/img/pipeparchi.jpeg"
+    "Uni/PSR/img/pipeparchi.jpeg",
+    "Uni/PASD/esoneri/img/nfm6.jpeg"
   ],
   "File Hashes": {
     "~Templates/TOC.md": "161abb6dbabf381c4090b9807b9df407",
     "~Templates/<stdio.h>.md": "ff95f2766b6246f064dcedb65c174163",
-    "WTODO.md": "ba00d9c483d7a9c9110ec5217c762aaf",
+    "WTODO.md": "121ef14f330f63c239590433c961c41d",
     "Uni/TOC - PSR.md": "a57bf817c9597f752630ab560a93d708",
     "Uni/TOC - PASD.md": "d9605ba323e989dbc85d2a75294b0239",
     "Uni/TOC - BD.md": "b4203cfb6408603e40f4021821fb8107",
@@ -144,7 +145,7 @@
     "Uni/PSR/2022.11.15-01-Background e foregound.md": "8aed1eaae5693118698b360fb86773da",
     "Uni/PSR/2022.11.15-00-Process group.md": "7bfa2d9d3921332113ca5efb6fc0b389",
     "Uni/PSR/2022.09.00-00-fcntl().md": "6b0f2fe222bb55418eafdd92b7481c75",
-    "Uni/PASD/esoneri/Domande Es 2.md": "12d3892ae662ab240da6d2a4893b717c",
+    "Uni/PASD/esoneri/Domande Es 2.md": "369e2333039b60c112c5c38338f0e90d",
     "Uni/PASD/esoneri/Domande Es 1.md": "cf7a59a1f2c448f5f3b90cd5be6d1a97",
     "Uni/PASD/LaTeX PASD.md": "78e2f2f9568575c625d724a8179812aa",
     "Uni/PASD/2022.12.02-03-Non terminating simulation.md": "472e73f4391a85c2788ded4d5f3e7b46",
@@ -170,7 +171,7 @@
     "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md": "c695ec668f78d68b5f38de86e44f8259",
     "Uni/PASD/2022.11.21-04-Problema di cammino più breve e rapido (Shortest quickest path problem).md": "bad4738feaa8e69c2f76c18ce5d3fc9f",
     "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md": "803daa9f0a29af992ba159c73c37f091",
-    "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md": "d11a50c94eeb8f3ce38aac1ade3d02fd",
+    "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md": "1aaa003ca356f116be2c6a2b5d92bf6b",
     "Uni/PASD/2022.11.21-01-Flow problem - costo fisso.md": "697c7584611aa520abb0d24dee477d4a",
     "Uni/PASD/2022.11.21-00-Network Flow Problems.md": "19ab6fee3ca2dcd33618eef916b8e617",
     "Uni/PASD/2022.11.17-00-Tabu Search.md": "b75b1805c4f66e3f79d57ede0a12335e",
