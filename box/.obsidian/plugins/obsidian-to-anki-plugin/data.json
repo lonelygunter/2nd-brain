@@ -120,7 +120,9 @@
     "Uni/PSR/img/pipeparchi.jpeg",
     "Uni/PASD/esoneri/img/nfm6.jpeg",
     "Uni/PASD/esoneri/img/da4.jpeg",
-    "Uni/PASD/esoneri/img/da5.jpeg"
+    "Uni/PASD/esoneri/img/da5.jpeg",
+    "Uni/PSR/2022.12.09-01-TCP Client",
+    "Uni/PSR/2022.12.09-02-TCP Server"
   ],
   "File Hashes": {
     "~Templates/TOC.md": "161abb6dbabf381c4090b9807b9df407",
@@ -281,12 +283,15 @@
     "Uni/PSR/2022.12.06-00-XSI IPC.md": "db747cb36ffbd54f5f2990ad94e0e655",
     "Uni/PSR/2022.12.06-02-System V.md": "ebbc569581201e2366fc0ea38e8caaf2",
     "Uni/PSR/2022.12.06-03-POSIX semaphore.md": "75e3beb6e1d96aceb6c8515754e9e731",
-    "Uni/PSR/2022.12.07-00-Socket.md": "4d001d9d95341e6e9b83e529b0400e5e",
+    "Uni/PSR/2022.12.07-00-Socket.md": "3f26d02ba68e2ffe53e8ea24c290cb55",
     "Uni/PSR/2022.12.07-01-Socket creation.md": "e1f6e9e50f7c8b2aef3d3263e9b9470e",
     "Uni/PSR/2022.12.07-02-Socket addresses.md": "c301f9fcfd514889a849518587d569bb",
     "Uni/PSR/2022.12.07-04-IPv6.md": "e16044ad7f55f8ee993f85cb1a3afb1b",
     "Uni/PSR/2022.12.07-03-IPv4.md": "3f9855e78c4a4de3932e5e84976b1419",
-    "Uni/PSR/2022.12.07-05-Formati di scambio.md": "cb7d51facd06b12080a53a73dd1d41c8"
+    "Uni/PSR/2022.12.07-05-Formati di scambio.md": "cb7d51facd06b12080a53a73dd1d41c8",
+    "Uni/PSR/2022.12.09-01-TCP Client.md": "9e9ba1762cad72cab1a2938a7c4e7192",
+    "Uni/PSR/2022.12.09-02-TCP Server.md": "cbe8f5c00edfaad35e3d8c9f9caf914f",
+    "Uni/PSR/2022.12.09-00-TCP client and server.md": "4881513adfd4ab063a306d9fe4d8c65c"
   },
   "fields_dict": {
     "Basic": [

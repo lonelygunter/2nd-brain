@@ -13,12 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md",
+                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
-            }
+            },
+            "group": "e86826ed7226a0e3"
           }
         ]
       },
@@ -32,12 +33,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
+                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
-            }
+            },
+            "group": "e86826ed7226a0e3"
           }
         ]
       }
@@ -51,7 +53,7 @@
       {
         "id": "51acc5932b11095d",
         "type": "tabs",
-        "dimension": 49.825378346915016,
+        "dimension": 76.71711292200233,
         "children": [
           {
             "id": "c3b5dbc3fd30a5f0",
@@ -83,7 +85,7 @@
       {
         "id": "7590126ebc98fe26",
         "type": "tabs",
-        "dimension": 50.174621653084984,
+        "dimension": 23.28288707799767,
         "children": [
           {
             "id": "82be3ebff7e6db29",
@@ -145,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md",
+                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md"
+                "file": "Uni/PSR/2022.12.09-01-TCP Client.md"
               }
             }
           },
@@ -167,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md",
+                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,15 +201,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
+    "Uni/PSR/2022.12.09-00-TCP client and server.md",
+    "Uni/PSR/2022.12.09-01-TCP Client.md",
+    "Uni/PSR/2022.12.09-02-TCP Server.md",
+    "Uni/PSR/2022.12.07-00-Socket.md",
+    "Uni/BD/2022.09.28-06-Astrazione di DB.md",
+    "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
     "Uni/BD/2022.09.28-05-Mini world.md",
     "Uni/BD/2022.09.28-04-Ciclo CRUD.md",
     "Uni/BD/2022.09.28-03-Data Base Managment System (DBMS).md",
-    "Uni/BD/2022.09.28-02-Database.md",
-    "Uni/BD/2022.09.28-00-Databases.md",
-    "Uni/BD/2022.09.28-10-Ciclo di vita del DB.md",
-    "Uni/BD/2022.09.28-14-Entity-Relationship (ER).md",
-    "Uni/BD/2022.11.08-00-Distributed DBMS.md",
-    "Uni/BD/2022.11.29-00-Hadoop.md",
-    "Uni/BD/2022.11.29-01-Map and reduce.md"
+    "Uni/BD/2022.09.28-02-Database.md"
   ]
 }
