@@ -4,7 +4,6 @@ tags: 2022-12-01 PASD esonero
 ---
 
 ## Improvement Heuristics
-
 - ***@ [Improvement Heuristics] Descrivere lo pseudocodice dell'algoritmo di "local search" (min):***
 	```python
 	x^k = soluzione
@@ -18,6 +17,8 @@ tags: 2022-12-01 PASD esonero
 	```
 
 <!--ID: 1670509702689-->
+
+
 
 - ***@ [Improvement Heuristics] Indicare la soluzione attuale $x=(0,1,0,1,1,0,0)$, definire il vincolo della vicinanza del raggio (distanza massima) $d=3$ secondo lo schema “local branching”:***
 	$$x_1 + (1-x_2) + x_3 + (1-x_4) + (1-x_5) + x_6 + x_7 \leq m$$
@@ -47,6 +48,7 @@ tags: 2022-12-01 PASD esonero
 	```
 
 <!--ID: 1670509756935-->
+
 
 
 - ***@ [Improvement Heuristics] Descrivere lo pseudocodice della Simulated Annealing:***
@@ -96,7 +98,6 @@ while (...):
 
 
 
-
 ## Network flow models
 - ***@ [Network flow models] Descrivere un minimum cost flow model:***
 	- serve a trovare il ==flusso con costo minimo== $$\min \sum_{(i,j)\in A} c_{ij} x_{ij}$$ tenendo in conto dei vincoli:
@@ -107,11 +108,11 @@ while (...):
 
 
 
-
 - ***@ [Network flow models] Descrivere un shortest path model:***
-	?
+	???
 
 <!--ID: 1670512079745-->
+
 
 
 - ***@ [Network flow models] Descrivere un max flow model:***
@@ -124,7 +125,6 @@ while (...):
 
 
 
-
 - ***@ [Network flow models] Descrivere un transportation model:***
 	- abbiamo ==$s_m \geq 0$== sorgenti e ==$b_n$== pozzi
 	- f.o: $$\min z = \sum_{(i,j)\in A}\sum_{j\in V_2} c_{ij}x_{ij}$$
@@ -134,8 +134,6 @@ while (...):
 		- per ogni ==$x_{ij}$==: $$x_{ij} \geq 0\ \ \ \forall\ \ \ i\in V_1, j\in v_2$$
 
 <!--ID: 1670514107081-->
-
-
 
 
 
@@ -153,59 +151,75 @@ while (...):
 
 
 
-
-
 - ***@ [Network flow models] Si consideri un ambiente di produzione cellulare. Ci sono nove cellule che hanno la capacità di assumere 1 o 2 posti di lavoro. Supponiamo che ci siano sette lavori e le ore per completare i lavori per cella sono riportate di seguito:
 	![](Uni/PASD/esoneri/img/nfm6.jpeg)
 	Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle possono gestire al massimo 1 lavoro. Tutti e sette i lavori devono essere gestiti da una cella. Scrivi un modello di ottimizzazione per questo problema di assegnazione.:***
-	da fare
+	???
 
 <!--ID: 1670514107088-->
 
 
+
 ## Random number generation
 - ***@ [Random number generation] Cos'è un generatore di numeri pseudo-casuali?:***
+	insieme di blackbox:
+	1. ==Congreuntial Linear Generator (CLG)==: genera numeri **pseudo-casuali tra (0,1) non autocorrelati** ($u_i$)
+	2. ==Cumulative distribution function (CDF)==: utilizza una funzione **g()** per **trasformare $u_i$ in $x_i$**
 
+<!--ID: 1670568178278-->
 
 
 
 - ***@ [Random number generation] Descrivere un congruential linear generator.:***
+	- si basa sulla ==creazione di numeri pseudo-casuali in (0,1)==  calcolati con un equazione lineare e non auto-correlati $$y_{k+1}=(ay_k+c)\mod m$$ $$u_{k+1}=y_{k+1}/m$$
+	- avremo un ==loop di valori== dato che questi andranno a riproporsi nella stessa sequenza
 
-
+<!--ID: 1670568455007-->
 
 
 
 - ***@ [Random number generation] Descrivere la scelta dei parametri in un generatore lineare congruenziale:***
+	???
 
-
+<!--ID: 1670568455013-->
 
 
 
 - ***@ [Random number generation] Descrivere il campionamento della trasformata inversa.:***
+	prendiamo in considerazion:
+	- community distribution function (CDF): $F_X(x)=P(F^{-1}(U)\leq x)=P(U\leq F(x))=F(x)$
+	- densità: $f(x)=\frac{d}{dx}F(x)$
 
-
+<!--ID: 1670568455018-->
 
 
 
 - ***@ [Random number generation] Descrivere come campionare la distribuzione esponenziale:***
+	- community distribution function (CDF): $F_X(x)=1-e^{-\lambda x}$
+	- densità: $f_X(x)=\lambda e^{-\lambda x}$
 
-
+<!--ID: 1670568455023-->
 
 
 
 - ***@ [Random number generation] Descrivere come campionare la distribuzione uniforme U(a,b):***
+	???
 
-
+<!--ID: 1670568455028-->
 
 
 
 - ***@ [Random number generation] Descrivere come campionare una distribuzione discreta:***
+	???
 
-
+<!--ID: 1670568455032-->
 
 
 
 - ***@ [Random number generation] Trasformare i campioni 0.5, 0.1, 0.9, 0.2 prelevati da U(0,1) in campioni di una variabile casuale discreta prendendo i valori UP, DOWN con probabilità 0.3 e 0.7, rispettivamente.:***
+	???
+
+<!--ID: 1670568455038-->
 
 
 
@@ -213,6 +227,11 @@ while (...):
 
 ## Decision Analysis
 - ***@ [Decision Analysis] Cos'è una matrice di ricompensa?:***
+	???
+
+<!--ID: 1670568455042-->
+
+
 
 
 
@@ -220,6 +239,9 @@ while (...):
 
 
 - ***@ [Decision Analysis] Qual è la differenza tra decisioni a rischio e decisioni in assoluta incertezza?:***
+	???
+
+<!--ID: 1670568455046-->
 
 
 
@@ -227,6 +249,11 @@ while (...):
 
 
 - ***@ [Decision Analysis] Qual è il criterio di Bayes?:***
+	???
+
+<!--ID: 1670568455051-->
+
+
 
 
 
@@ -235,6 +262,9 @@ while (...):
 
 - ***@ [Decision Analysis] Si consideri la seguente matrice di ricompensa per un problema Newsboy. Qual è la decisione selezionata in stretta incertezza?
 	![](Uni/PASD/esoneri/img/da4.jpeg):***
+	???
+
+<!--ID: 1670568455055-->
 
 
 
@@ -244,6 +274,10 @@ while (...):
 
 - ***@ [Decision Analysis] Ora si supponga che nel problema precedente le seguenti probabilità siano stimate a partire dai dati. Qual è la decisione ottimale secondo il criterio di Bayes?
 	![](Uni/PASD/esoneri/img/da5.jpeg):***
+	???
+
+<!--ID: 1670568455060-->
+
 
 
 
@@ -252,6 +286,9 @@ while (...):
 
 
 - ***@ [Decision Analysis] Che cosa è "le informazioni perfette"? Che cosa è la ricompensa prevista sotto le informazioni perfette? Che cosa è il valore previsto delle informazioni perfette?:***
+	???
+
+<!--ID: 1670568455064-->
 
 
 
@@ -266,6 +303,8 @@ while (...):
 14. Qual è l'efficienza delle informazioni sui campioni?
 15. Cos'è un decisore incline al rischio?
 16. Qual è il rischio al ribasso?
+
+
 
 
 

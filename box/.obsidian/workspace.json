@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -32,7 +32,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.11.14-00-Generazione pseudo-casuale di numeri.md",
+                "file": "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -145,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md"
+                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/BD/2022.09.28-06-Astrazione di DB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,15 +199,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/PASD/2022.11.14-00-Generazione pseudo-casuale di numeri.md",
-    "Uni/PASD/2022.11.25-01-Genetics Algorithms.md",
-    "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md",
-    "Uni/PASD/esoneri/Domande Es 2.md",
-    "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md",
-    "Uni/TOC - PASD.md",
-    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
-    "Uni/PASD/2022.11.21-04-Problema di cammino più breve e rapido (Shortest quickest path problem).md",
-    "Uni/PASD/2022.11.21-01-Flow problem - costo fisso.md",
-    "Uni/PASD/2022.11.21-00-Network Flow Problems.md"
+    "Uni/BD/2022.09.28-05-Mini world.md",
+    "Uni/BD/2022.09.28-04-Ciclo CRUD.md",
+    "Uni/BD/2022.09.28-03-Data Base Managment System (DBMS).md",
+    "Uni/BD/2022.09.28-02-Database.md",
+    "Uni/BD/2022.09.28-00-Databases.md",
+    "Uni/BD/2022.09.28-10-Ciclo di vita del DB.md",
+    "Uni/BD/2022.09.28-14-Entity-Relationship (ER).md",
+    "Uni/BD/2022.11.08-00-Distributed DBMS.md",
+    "Uni/BD/2022.11.29-00-Hadoop.md",
+    "Uni/BD/2022.11.29-01-Map and reduce.md"
   ]
 }
