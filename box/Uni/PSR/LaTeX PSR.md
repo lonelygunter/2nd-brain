@@ -756,7 +756,6 @@ Le system call rappresentano una barriera tra kernel e programmi, dove avremo ri
 
 Per ==ottimizzare la scrittura sulla memoria da parte del kernel si utilizza la libreria STDIOLIB== che incrementa le prestazioni dato che gestisce il passaggio di pacchetti con il kernel in modo da inviare dei pacchetti consistenti ogni tot e non piccoli pacchetti soni secondo. Per fare ciò usa un ==buffered i/o== che, una volta riempiti dei buffer, gli manda al kernel.
 
-
 ![](Uni/PSR/img/unbuffio.jpeg)
 
 
@@ -839,8 +838,7 @@ avremo allora:
 	- ==pid==: pid del child
 	- ==\&status==: reindirizza l'exit code del child, quando finisce, nella variabile status
 			
-			
-![](Uni/PSR/img/fork.jpeg)
+			![](Uni/PSR/img/fork.jpeg)
 
 
 ## ☞ Thread
@@ -1353,7 +1351,6 @@ main(void)
 Se devo ==trasferire una grande quantità di dati== avrò una dimensione ottimale con la quale posso ==ottimizzare il passaggio dei blocchi di dati==. I tempi possono essere misurati con "time" per capire in che modo il nostro GB debba essere sezionato (in K, M, ...).
 
 (provare a fare ciò tramite intro/mycat e tramite time capire le tempistiche (A CASA))
-
 ![](Uni/PSR/img/unbuffio.jpeg)
 
 
@@ -1361,7 +1358,6 @@ Se devo ==trasferire una grande quantità di dati== avrò una dimensione ottimal
 ## ☞ File sharing
 
 Quando ==un processo accede ad un file== per utilizzarlo accade che:
-
 
 ![](Uni/PSR/img/1proc.jpeg)
 
@@ -1380,7 +1376,6 @@ Il processo è rappresentato dal "==process table entry==" con i vari file descr
 
 
 Potrebbe capitare che ==più processi si contengano un file== tra di loro per poterci accedere.
-
 
 ![](Uni/PSR/img/2proc.jpeg)
 
@@ -1407,16 +1402,13 @@ Quest'operazione viene usata per poter ==usare in modo esclusivo== il nome di un
 Vediamo le seguenti funzioni:
 
 
-- ==dup==: **prende un fd e restituisce un duplicato del fd**. Quindi **abbiamo 2 fd che puntano alla stessa file table**.
-
-	![](Uni/PSR/img/dup.jpeg)
+- ==dup==: **prende un fd e restituisce un duplicato del fd**. Quindi **abbiamo 2 fd che puntano alla stessa file table**.![](Uni/PSR/img/dup.jpeg)
 
 
 - ==dup2==: prende un fd da duplicare **dicendogli anche il numero del fd**, se il numero che gli passiamo è già preso allora si **forza la chiusura** del fd e lo si assegna a ciò che vogliamo
 
 
 Con le ==fork== avremo:
-
 
 ![](Uni/PSR/img/forkproc.jpeg)
 
@@ -1794,7 +1786,6 @@ Abbiamo delle funzioni che seguiranno i link simbolici ed altre che seguiranno d
 
 Tramite i link simbolici è possibile ==creare dei loop== nei quali l'OS si può bloccarsi. 
 
-
 ![](Uni/PSR/img/linkloop.jpeg)
 
 
@@ -1999,7 +1990,6 @@ Un esempio di accesso a file è il programma ftw8.c al quale passiamo un path e 
 
 Riguardo l'accesso a un indirizzo di memoria, sappiamo che un qualsiasi processo per poter allocare memoria deve ==chiedere il permesso== al kernel. Sappiamo che 2 processi possono ==condividere la stessa memoria== dato che gli indirizzi reali sono mappati sullo stesso byte ma nella memoria virtuale di un processo non è così.
 
-
 ![](Uni/PSR/img/virtmemproc.jpeg)
 
 
@@ -2163,7 +2153,6 @@ $ a=100
 questa ==non viene passara al child schell==, come "env", a meno di non ==usare il builtin "export"==.
 
 In un processo ==possiamo vedere le variabli di ambiente in runtime==, tramite il debugger, ma non nello stesso punto in cui si trovano. ==Per le variabili di ambiente== abbiamo che:
-
 
 ![](Uni/PSR/img/varamb.jpeg)
 

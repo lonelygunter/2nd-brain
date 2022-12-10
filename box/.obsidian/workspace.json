@@ -13,33 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
+                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "e86826ed7226a0e3"
+            "group": "fd8292bfc8a1c6fa"
           }
         ]
       },
       {
-        "id": "e5eb193709caac6f",
+        "id": "443f12a1e284753c",
         "type": "tabs",
         "children": [
           {
-            "id": "7e3c05b37ae3dc96",
+            "id": "bf73eed2ceb97e97",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
-                "mode": "preview",
+                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "e86826ed7226a0e3"
+            "group": "fd8292bfc8a1c6fa"
           }
         ]
       }
@@ -71,8 +71,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "![]",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
+                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/2022.12.09-01-TCP Client.md"
+                "file": "Uni/PSR/2022.12.09-02-TCP Server.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/2022.12.09-01-TCP Client.md",
+                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,15 +201,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/PSR/2022.12.09-00-TCP client and server.md",
-    "Uni/PSR/2022.12.09-01-TCP Client.md",
+    "Uni/TOC - BD.md",
+    "Uni/PASD/2022.09.23-00-Business Analytics.md",
+    "Untitled.md",
+    "Uni/PASD/esoneri/Domande Es 2.md",
+    "Uni/PSR/LaTeX PSR.md",
+    "Uni/PASD/LaTeX PASD.md",
+    "Uni/PASD/esoneri/Domande Es 1.md",
     "Uni/PSR/2022.12.09-02-TCP Server.md",
-    "Uni/PSR/2022.12.07-00-Socket.md",
-    "Uni/BD/2022.09.28-06-Astrazione di DB.md",
-    "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
-    "Uni/BD/2022.09.28-05-Mini world.md",
-    "Uni/BD/2022.09.28-04-Ciclo CRUD.md",
-    "Uni/BD/2022.09.28-03-Data Base Managment System (DBMS).md",
-    "Uni/BD/2022.09.28-02-Database.md"
+    "Uni/PSR/2022.12.09-01-TCP Client.md",
+    "Uni/PSR/2022.12.09-00-TCP client and server.md"
   ]
 }

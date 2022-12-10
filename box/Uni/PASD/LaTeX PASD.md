@@ -88,7 +88,6 @@ Terminologie da sapere:
 		
 
 
-
 ![](Uni/PASD/img/es.jpeg)
 
 	
@@ -97,26 +96,20 @@ Terminologie da sapere:
 
 ```python
 import pulp as p
-
 # 1. creazione del modello
 model = p.LpProblem("ProductMix", p.LpMaximize)
-
 # 2. definisco le variabili decisionall
 x_A = p.LpVariable("x_A", cat="Continuous", lowBound=0)
 x_B = p.LpVariable("x_B", cat="LpContinuous", lowBound=0)
-
 # 3. definisco la funzione obiettivo in funzione delle variabili decisionali
 model += 15 * x_A + 10 * x_B
-
 # 4. definire i vincoli
 model += 4 * x_A + 2 * x_B \leq 400
 model += 2 * x_A + 4 * x_B \leq 400
 model += x_A \leq 40
 model += x_B \leq 120
-
 # 5. ricolvere il problema
 model.solve()
-
 # print della soluzione
 print("next week produce {} pallets of A".format(x_A.varValue))
 print("next week produce {} pallets of B".format(x_B.varValue))
@@ -472,7 +465,6 @@ Un progetto è ==rappresentato da diverse attività== in una tabella fornita dal
 
 e in un diagramma aciclico (Activity On Node (AoN)):
 
-
 ![](Uni/PASD/img/aon.jpeg)
 
 
@@ -583,7 +575,6 @@ Le ==3 risorse== alle quali si possono far riferimento sono le ==3M==:
 
 quindi $d_i = d_i^N$.
 
-
 ![](Uni/PASD/img/budget.jpeg)
 
 
@@ -616,7 +607,6 @@ Avremo un modello con:
 
 Sono in genere usati da aziende manifatturiere. 
 
-
 ![](Uni/PASD/img/prodline.jpeg)
 
 
@@ -625,7 +615,6 @@ Supponendo di avere un ==tasso di domanda $d$== costante in base al tipo di prod
 Questa differenziazione porta ad un ==costo di setup== delle macchine che andranno pulite, generando un costo fisso $k$.
 
 Il livello di scorte sarà rappresentato con dei picchi con ampiezza $q$:
-
 
 ![](Uni/PASD/img/invlev.jpeg)
 
@@ -655,7 +644,6 @@ In base alla strategia avremo:
     - grandi **costi di stockaggio**
     - pago $k$ solo una volta all'anno
 
-
 ![](Uni/PASD/img/casipart.jpeg)
 
 
@@ -679,7 +667,6 @@ $$\frac{dz}{dq} = 0 \Leftrightarrow -k \frac{d}{q^2} + \frac{h}{2} = 0$$
 Concludiamo che il ==lotto economico==, per minimizzare i costi, sarà raggiunto da:
 
 $$q^* = \sqrt{\frac{2kd}{h}}$$
-
 
 ![](Uni/PASD/img/lottoec.jpeg)
 
@@ -719,7 +706,6 @@ Dal ==punto di vista grafico== avremo 2 variabili $q_A$ e $q_B$ con dei vincoli 
 
 $q_A + q_B \leq Q$
 $c_Aq_A + c_Bq_B \leq C$
-
 
 ![](Uni/PASD/img/linlivnonlin.jpeg)
 
@@ -954,7 +940,6 @@ Tutto questo grazie al ==teorema fondamentale== che dice:
 
 Le soluzioni di base sono quindi più comode dato che sono più piccole in un insieme $R^n$ di soluzioni non ammissibili, ammissibili e ottime.
 
-
 ![](Uni/PASD/img/inssol.jpeg)
 
 
@@ -1168,7 +1153,6 @@ Riusciamo così a ==diminuire $z$== il che ci piace perché stiamo minimizzando.
 
 Se il ==test di ottimalità fallisce== perché esiste una variabile di base con coefficiente di costo ridotto negativo potremo avere 2 situazioni:
 
-
 ![](Uni/PASD/img/2sol.jpeg)
 
 
@@ -1287,7 +1271,6 @@ $$\nabla z =
 $$
 
 grafico:
-
 ![](Uni/PASD/img/grafescan.jpeg)
 
 Forma standard:
@@ -1465,7 +1448,6 @@ $$\nabla z =
 $$
 
 grafico:
-
 ![](Uni/PASD/img/grafsolmult.jpeg)
 
 tableau:
@@ -1560,12 +1542,10 @@ Se abbiamo che $x_s = 0$ esisterà un termine noto $\overline{b}_i = 0$ per $\ov
 
 Avremo allora che ==se non abbiamo variazioni di $z$== allora ==non ci sarà un miglioramento==, dato che l'algoritmo è deterministico genererò la stessa sequenza all'infinito. Questo fenomeno è detto ==cycling== e avremo che l'algoritmo non converge.
 
-
 ![](Uni/PASD/img/notconv.jpeg)
 	
 
 Potrebbe anche capitare di ==avere un miglioramento dopo $n$ iterazioni==.
-
 
 ![](Uni/PASD/img/conv.jpeg)
 		
@@ -1584,7 +1564,6 @@ vincoli:
 
 
 grafico:
-
 
 ![](Uni/PASD/img/esdegen.jpeg)
 
@@ -2053,14 +2032,12 @@ Oltre ad upper-bound e lower-bound su effettua un ==branch== cioè una ==suddivi
 
 
 con $\underline{x}^*$ possibile vincolo applicabile a $x_1$ o $x_2$. Infatti per un problema a 2 variabili abbiamo:
-
 ![](Uni/PASD/img/branchprob.jpeg)
 
 con soluzione ottima in $(2.25, 3.75)$ con upper: $z = 41.25$.
 
 ==Avendo dei valori frazionari effetttuo un branch== per creare dei sottoproblemi. Avendo la soluzione in $(2.25, 3.75)$ allora effettuo il "troncamento" in:
 $$x_2 \leq 3,\ x_2 \geq 4$$
-
 ![](Uni/PASD/img/child1.jpeg)
 
 Quindi per il ==sottoproblema $P_1$== con f.o:
@@ -2092,7 +2069,6 @@ che avrà come ==soluzione== $(1.8, 4)$ con uppeboound $z = 41$.
 Avendo ==numeri interi in $P_1$== ho una soluzione ottima e non dovrò fare branch su $P_1$ e dato il suo valore di $z$ che è ==cerco in $P_2$== con f.o:
 risolveremo allora risolvendo il sottoproblema 1 con soluzione 3, 3 con z = 39 allora non ho bisogno di eplorare ancora dato che ho già la soluzione ottima ==minore di quello di $P_2$== allora: ==scarto $P_1$ e continuo i branch su $P_2$==.
 
-
 ![](Uni/PASD/img/nop1.jpeg)
 
 
@@ -2110,9 +2086,7 @@ tenendo in conto che ==i child ereditano i vincoli del parent==, risolviamo i lo
 - ==$P_3$==:$R(P_3)$ avrà $(1, 4.44)$ con $z = 40.55$
 
 
-
 ![](Uni/PASD/img/child2.jpeg)
-
 ![](Uni/PASD/img/nop4.jpeg)
 
 
@@ -2124,9 +2098,7 @@ continuando con il branch avremo:
  
 
 scartiamo allora $P_5$ che ci fa arrivare ad un massimo di $37 < 40$ di $P_6$:
-
 ![](Uni/PASD/img/nop56.jpeg)
-
 ![](Uni/PASD/img/child3.jpeg)
 
 
@@ -2200,7 +2172,6 @@ $$\nabla z =
 $$
 
 grafico:
-
 ![](Uni/PASD/img/grafbab.jpeg)
 
 abbiamo che la soluzione ottima (l'intersezione) del risultato continuo è:
@@ -2209,7 +2180,6 @@ $$x_1 = 3,\ x_2 = 2.25,\ z = 5.25$$
 allora prenderemo come upper-bound $5$.
 
 La variabile $x_2$ ha valore frazionario compreso tra $2$ e $3$. Effettuiamo un branch con vincoli $x_2 \leq 2$ e $x_2 \geq 3$:
-
 ![](Uni/PASD/img/grafbab2.jpeg)
 
 dove:
@@ -2223,7 +2193,6 @@ dove:
 
 
 LA variabile $x_1$ ha valore frazionario compreso tra $2$ e $3$. Effettuiamo un branch con vincoli $x_1 \leq 2$ e $x_1 \geq 3$:
-
 ![](Uni/PASD/img/grafbab3.jpeg)
 
 dove:
@@ -2237,7 +2206,6 @@ dove:
 
 
 La variabile $x_2$ ha valore frazionario compreso tra $1$ e $2$. Effettuiamo un branch con vincoli $x_2 \leq 1$ e $x_2 \geq 2$:
-
 ![](Uni/PASD/img/grafbab4.jpeg)
 
 dove:
@@ -2349,7 +2317,6 @@ s.t
 
 
 Questi ==vincoli non bastano== per poter risolvere il modello, infatti non possiamo escludere di avere una ==soluzione disconnessa (sub-tour)==
-
 
 ![](Uni/PASD/img/sep.jpeg)
 
@@ -2543,7 +2510,6 @@ s.t.
 Preson un problema con ==più obiettivi== allora ne consideriamo uno con obiettivo singolo, allora ==rappresento i singoli obiettivi== nello spazio.
 
 Presa una soluzione potremo trovarne una migliore ma solo ==se si trova nella zona ammissibile e che sia nella frontiera==, in caso contrario è detta ==utopia==.
-
 ![](Uni/PASD/img/utop.jpeg)
 
 Definiamo invece ==soluzione superiore== la soluzione che minimizza o massimizza meglio di tutte (come U se fosse nella zona ammissibile).
@@ -2557,7 +2523,6 @@ $$|\frac{z_i(x_A)-z_i(x_B)}{z_j(x_A)-z_j(x_B)}|$$
 che rappresenta il ==miglioramento dell'obiettivo i-esimo in base al miglioramento di un altro obiettivo==.
 
 Nel caso di una ==zona convessa== collegneremo i punti limite tramite una ==tangente immagginaria==, dalla quale però non prendere mo i punti di frontiera.
-
 ![](Uni/PASD/img/convess.jpeg)
 
 per ==trovare le soluzioni efficenti== abbiamo 2 metodi:
@@ -2585,8 +2550,7 @@ per ==trovare le soluzioni efficenti== abbiamo 2 metodi:
     - $g(x) \geq 0$
     - $x \geq 0$
     - $w_i \geq 0$
-    
-	![](Uni/PASD/img/pesi.jpeg)
+    ![](Uni/PASD/img/pesi.jpeg)
 
     dove a seconda del valore che diamo ai pesi andiamo a ==spostare la retta trangente alla zona ammissibile==.
 
@@ -2622,8 +2586,6 @@ Presi 2 obiettivi:
 - troviamo la ==prima soluzione efficiente che sia tra $A$ e $C$==
 - scegliere su ==quale parte della frontiera posizionarsi==
 - ecc, ecc...
-
-
 ![](Uni/PASD/img/intent.jpeg)
 
 mi fermerò quando il segmento che rimane è ==cosi piccolo che i due punti conincidono==.
@@ -2654,9 +2616,7 @@ Non essendo algoritmi precisi ==vanno adattati== al particolare problema che si 
 
 Si parte da una ==soluzione $x^{(0)}$== e si considera il suo ==intorno $N(x^{(0)})$==, cioè un ==insieme di soluzioni vicine a $x^{(0)}$== dove la definizione di "vicine" viene data dal progettista, aggiungiamo allora il vincolo:
 $$\underline{x} \in N(\underline{x}^{(0)})$$
-
-
-![](./img/localse.jpeg)
+![](Uni/PASD/img/localse.jpeg)
 
 
 Avremo allora un problema con f.o:
@@ -2672,7 +2632,6 @@ s.t.
 trovando così una soluzione $\underline{x}^{(1)}$ nell'intorno di $\underline{x}^{(0)}$, ecc ecc...
 
 Sarà un algoritmo di ==discesa se minimizziamo== e di ==ascesa se massimizziamo==, ma entrambi si ==fermeranno in un ottimo locale==.
-
 
 ![](./img/stopsol.jpeg)
 
@@ -2700,7 +2659,6 @@ Lo ==pseudocodice== nel caso di minimizzazione è:
 
 Riprendendo il problema del TSP dovremo ==definire un introno== sui punti:
 
-
 ![](./img/intorno.jpeg)
 
 
@@ -2714,7 +2672,6 @@ Dobbiamo ==definire una perturbazione della soluzione== quindi usiamo un approcc
 Questo potrebbe portare ad una ==variazione di costo==:
 $$\text{var. costo } = \text{ archi aggiunti } - \text{archi tolti}$$
 $$\Delta z = c_{15} + c_{23} - c_{13} - c_{25}$$
-
 
 ![](./img/intott.jpeg)
 
@@ -2754,7 +2711,6 @@ $$x_1 + (1-x_2) + (1-x_3) + x_4 + (1-x_5) + (1-x_6) \leq m$$
 
 ## ☞ Introduzione
 ==Discretiziamo il tempo== e quindi divido la pianificazione in ==slot di tempo== esistenti come ore, settimane, mesi. Avremo allora una ==domanda $d_t$== che fa rferimento al ==periodo $t=1,...,T$== con $T$ lunghezza dell'orizzonte di pianificazione.
-
 
 ![](./img/discrettemp.jpeg)
 
