@@ -34,7 +34,7 @@
               "type": "markdown",
               "state": {
                 "file": "Uni/PASD/esoneri/Domande Es 2.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
@@ -47,8 +47,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.09-07-A* search.md",
-                "mode": "source",
+                "file": "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "![]",
+                "query": "cut",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "7590126ebc98fe26",
@@ -215,15 +216,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
+    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
+    "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md",
+    "Uni/PASD/esoneri/Domande Es 2.md",
+    "Uni/PASD/2022.11.21-01-Flow problem - costo fisso.md",
+    "Uni/PASD/2022.11.21-04-Problema di cammino più breve e rapido (Shortest quickest path problem).md",
+    "Uni/PASD/2022.11.25-01-Genetics Algorithms.md",
     "Uni/PASD/2022.12.09-07-A* search.md",
     "Uni/PASD/2022.12.09-03-Breadth first search.md",
-    "Uni/PASD/esoneri/Domande Es 2.md",
     "Uni/PASD/2022.12.09-01-Uninformed search.md",
-    "Uni/PASD/2022.12.09-02-Informed search.md",
-    "Uni/PASD/2022.12.09-06-Greedy search.md",
-    "Uni/PASD/2022.12.09-05-Uniform cost search.md",
-    "Uni/PASD/2022.12.09-04-Depth first search.md",
-    "Uni/PASD/2022.12.09-00-Autometed Planning.md",
-    "Uni/TOC - PASD.md"
+    "Uni/PASD/2022.12.09-02-Informed search.md"
   ]
 }

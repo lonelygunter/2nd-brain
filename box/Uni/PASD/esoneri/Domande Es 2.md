@@ -4,7 +4,7 @@ tags: 2022-12-01 PASD esonero
 ---
 
 ## Improvement Heuristics
-###### @ [Improvement Heuristics] Descrivere lo pseudocodice dell'algoritmo di "local search" (min):
+###### @ [Improvement Heuristics] Descrivere lo pseudocodice dell'algoritmo di "local search" (min)::
 ```python
 x^k = soluzione
 z(x^k) = valore della f.o. di x^k
@@ -13,18 +13,19 @@ while z(x^k) < z(x^(k-1)):
     < solve P con x in N(x^k) >
     < imposto x^(k+1) come soluzione ottima >
     k += 1
-```![](Uni/PASD/esoneri/img/localser.jpeg)
+```
+![](Uni/PASD/esoneri/img/localser.jpeg)
 <!--ID: 1670509702689-->
 
 
 
-###### @ [Improvement Heuristics] Indicare la soluzione attuale $x=(0,1,0,1,1,0,0)$, definire il vincolo della vicinanza del raggio (distanza massima) $d=3$ secondo lo schema “local branching”:
+###### @ [Improvement Heuristics] Indicare la soluzione attuale $x=(0,1,0,1,1,0,0)$, definire il vincolo della vicinanza del raggio (distanza massima) $d=3$ secondo lo schema “local branching”::
 $$x_1 + (1-x_2) + x_3 + (1-x_4) + (1-x_5) + x_6 + x_7 \leq m$$
 <!--ID: 1670509750158-->
 
 
 
-###### @ [Improvement Heuristics] Descriva lo pseudocodice della "Variable Neighborhood Search" (min):
+###### @ [Improvement Heuristics] Descriva lo pseudocodice della "Variable Neighborhood Search" (min)::
 ```python
 s0 = starting solution
 N_k = lista dei vicini con k = 1,...,kMax
@@ -41,14 +42,15 @@ while (k <= kMax):
 		k = 1
 	else:
 		k += 1
-```![](Uni/PASD/img/neigb.jpeg)
+```
+![](Uni/PASD/img/neigb.jpeg)
 <!--ID: 1670685721935-->
 
 
 
 
 
-###### @ [Improvement Heuristics] Descrivere lo pseudocodice della Simulated Annealing:
+###### @ [Improvement Heuristics] Descrivere lo pseudocodice della Simulated Annealing::
 ```python
 INPUT = soluzione iniziale x^(0)
 xBest = x^(0)
@@ -68,12 +70,13 @@ while (...): # n1
 			xBest = x^(h+1)
 		h += 1
 	T -= △T
-```![](Uni/PASD/img/globott.jpeg)
+```
+![](Uni/PASD/img/globott.jpeg)
 <!--ID: 1670509957202-->
 
 
 
-###### @ [Improvement Heuristics] Descrivere lo pseudocodice degli Genetic Algorithms:
+###### @ [Improvement Heuristics] Descrivere lo pseudocodice degli Genetic Algorithms::
 ```python
 h = 0
 while (...):
@@ -84,12 +87,13 @@ while (...):
 	< aggiorno xBest se serve >
 	h += 1
 ```
+![](Uni/PASD/img/parchils.jpeg)
 <!--ID: 1670509957207-->
 
 
 
 ## Network flow models
-###### @ [Network flow models] Descrivere un minimum cost flow model:
+###### @ [Network flow models] Descrivere un minimum cost flow model::
 - serve a trovare quanto ==flusso debba transitare su ogni arco== affinchè venga soddisfatta la domanda dei nodi pozzo $$\min \sum_{(i,j)\in A} c_{ij} x_{ij}$$ tenendo in conto dei vincoli:
 	- ==conservazione del flusso==: $$\sum_{(i,j)\in\delta^+(i)} x_{ij} - \sum_{(j,i)\in\delta^-(i)} x_{ji} = d_i\ \ \ \forall\ \ \ i\in V$$
 	- ==capacità==: $$x_{ij} \leq q_{ij}\ \  \forall\ \ \ i,j\in A$$
@@ -98,7 +102,7 @@ while (...):
 
 
 
-###### @ [Network flow models] Descrivere un shortest path model:
+###### @ [Network flow models] Descrivere un shortest path model::
 è un modello che ricerca con ==un singolo nodo di inizio e di fine==
 $$\min \sum_{(i,j)\in A} c_{ij} x_{ij}$$
 vincoli:
@@ -112,17 +116,22 @@ vincoli:
 
 
 
-###### @ [Network flow models] Descrivere un max flow model:
-- serve a trovare il ==flusso massimo== che si può trasportare da S a T
+###### @ [Network flow models] Descrivere un max flow model::
+- serve a trovare il ==flusso massimo $Q(S)$== che si può trasportare da S a T
 - ==non abbiamo costi== associati agli archi
-- avremo che il ==flusso che entra== nei nodi intermedi dovrà essere ==equamente distribuito==
-- effettuo un ==taglio== per ==individuare max e min carico== sommando solo i nodi entranti nel taglio
-- possibile trattarlo come min cost flow applicando un ==arco artificiale== avendo ==solo nodi intermedi== ed un arco artificiale che equilibra il costo
+- effettuo un ==taglio== per ==individuare max e min carico== sommando solo i nodi entranti nel taglio $$Q(s)=\sum_{(i,j)\in\delta^+(s)}q_{ij}$$ con f.o: $$\max z = v$$
+	s.t.
+	- sommatoria dei ==tagli uscenti== dall'origine $$\sum_{(s,j)\in\delta^+(s)}x_{sj}=v$$
+	- sommatoria dei ==tagli entranti== nella destinazione $$\sum_{(i,t)\in\delta^-(t)}x_{st}=v$$
+	- tutto ==ciò che entra deve uscire== $$\sum_{(i,j)\in\delta^+(i)} x_{ij} = \sum_{(j,i)\in\delta^-(i)} x_{ji}$$
+	$x_{ij}\leq q_{ij}$, $x_{ij}\geq 0$, $v\geq 0$
+- possibile trattarlo come min cost flow applicando un ==arco artificiale== avendo ==solo nodi intermedi $c_{ij}=0$== ed un arco artificiale che equilibra il costo ($c_{ts}=-1$, $q_{ts}=+\infty$)
+![](Uni/PASD/img/cut.jpeg)
 <!--ID: 1670514107075-->
 
 
 
-###### @ [Network flow models] Descrivere un transportation model:
+###### @ [Network flow models] Descrivere un transportation model::
 - abbiamo ==$s_m \geq 0$== sorgenti e ==$b_n$== pozzi
 - ==non ci sono vincoli di capavità o transito==
 - f.o: $$\min z = \sum_{(i,j)\in A}\sum_{j\in V_2} c_{ij}x_{ij}$$
@@ -130,11 +139,12 @@ vincoli:
 	- per ogni ==sorgente==: $$\sum_{j\in V_2} x_{ij} = s_i\ \ \ \forall\ \ \ i\in V_1$$
 	- per ogni ==pozzo==: $$\sum_{i\in V_1} x_{ij} = b_i\ \ \ \forall\ \ \ j\in V_2$$
 	- per ogni ==$x_{ij}$==: $$x_{ij} \geq 0\ \ \ \forall\ \ \ i\in V_1, j\in v_2$$
+![](Uni/PASD/img/probtrasp.jpeg)
 <!--ID: 1670514107081-->
 
 
 
-###### @ [Network flow models] Descrivere un assignment model:
+###### @ [Network flow models] Descrivere un assignment model::
 - abbiamo sorgenti ==$s_n$== e pozzi ==$b_n$==
 - bisogna assegnare ogni risorsa ad un task (==1:1==)
 - ==$x_{ij} = \{0,1\}$== se è rispettivamente non assegnata o ==assegnata la risorsa==
@@ -147,7 +157,7 @@ vincoli:
 
 
 
-###### @ [Network flow models] Si consideri un ambiente di produzione cellulare. Ci sono nove cellule che hanno la capacità di assumere 1 o 2 posti di lavoro. Supponiamo che ci siano sette lavori e le ore per completare i lavori per cella sono riportate di seguito:![](Uni/PASD/esoneri/img/nfm6.jpeg)
+###### @ [Network flow models] Si consideri un ambiente di produzione cellulare. Ci sono nove cellule che hanno la capacità di assumere 1 o 2 posti di lavoro. Supponiamo che ci siano sette lavori e le ore per completare i lavori per cella sono riportate di seguito:![](Uni/PASD/esoneri/img/nfm6.jpeg):
 Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle possono gestire al massimo 1 lavoro. Tutti e sette i lavori devono essere gestiti da una cella. Scrivi un modello di ottimizzazione per questo problema di assegnazione.:
 > $$\min \sum_{i=1}^9\sum_{j=1}^7c_{ij}x_{ij}$$
 > sv:
@@ -160,7 +170,7 @@ Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle poss
 
 
 ## Random number generation
-###### @ [Random number generation] Cos'è un generatore di numeri pseudo-casuali?:
+###### @ [Random number generation] Cos'è un generatore di numeri pseudo-casuali?::
 - per un'utente normale funziona con delle  blackbox:
 1. ==Congreuntial Linear Generator (CLG)==: genera numeri **pseudo-casuali tra (0,1) non autocorrelati** ($u_i$)
 2. ==Cumulative distribution function (CDF)==: utilizza una funzione **g()** per **trasformare $u_i$ in $x_i$**
@@ -168,7 +178,7 @@ Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle poss
 
 
 
-###### @ [Random number generation] Descrivere un congruential linear generator.:
+###### @ [Random number generation] Descrivere un congruential linear generator.::
 - si basa sulla ==creazione di numeri pseudo-casuali in (0,1)==  calcolati con un equazione lineare e non auto-correlati $$y_{k+1}=(ay_k+c)\mod m$$ $$u_{k+1}=y_{k+1}/m$$
 	dove abbiamo:
 	- $m$: modulo
@@ -180,7 +190,7 @@ Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle poss
 
 
 
-###### @ [Random number generation] Descrivere la scelta dei parametri in un congruential linear generator:
+###### @ [Random number generation] Descrivere la scelta dei parametri in un congruential linear generator::
 Per ottenere un periodo di generazione uguale a m:
 - $m$, $c$ devono essere ==primi tra loro==
 - $a$ ==divisibile== per tutti i ==fattori primi di $m$==
@@ -189,7 +199,7 @@ Per ottenere un periodo di generazione uguale a m:
 
 
 
-###### @ [Random number generation] Descrivere il campionamento della trasformata inversa.:
+###### @ [Random number generation] Descrivere il campionamento della trasformata inversa.::
 prendiamo in considerazion:
 - community distribution function (==CDF==): $F_X(x)=P(F^{-1}(U)\leq x)=P(U\leq F(x))=F(x)$
 - ==densità==: $f(x)=\frac{d}{dx}F(x)$
@@ -197,7 +207,7 @@ prendiamo in considerazion:
 
 
 
-###### @ [Random number generation] Descrivere come campionare la distribuzione esponenziale:
+###### @ [Random number generation] Descrivere come campionare la distribuzione esponenziale::
 Vogliamo generare dei ==numeri pseudo casuali== che seguono una ==distribuzione esponenziale==:
 - community distribution function (CDF): $F_X(x)=1-e^{-\lambda x}$
 - densità: $f_X(x)=\lambda e^{-\lambda x}$
@@ -205,7 +215,7 @@ Vogliamo generare dei ==numeri pseudo casuali== che seguono una ==distribuzione 
 
 
 
-###### @ [Random number generation] Descrivere come campionare la distribuzione uniforme U(a,b):
+###### @ [Random number generation] Descrivere come campionare la distribuzione uniforme U(a,b)::
 Vogliamo generare ==numeri pseudo casuali== che seguono una ==distribuzione uniforme su [a,b]==
 $F_X(x)=$
 - $\frac{x-a}{b-a}\ x\in[a,b]$
@@ -214,7 +224,7 @@ $F_X(x)=$
 
 
 
-###### @ [Random number generation] Descrivere come campionare una distribuzione discreta:
+###### @ [Random number generation] Descrivere come campionare una distribuzione discreta::
 prendo $p_1+...+p_n=1$ andando a:
 1. divido l'intervallo (0,1) in ==$n$ intervalli==
 2. capire ==dove cade $u$== (es: $u$ in $a_1$ se $0\leq u<p_1$)![](Uni/PASD/img/disdisc.jpeg)
@@ -222,7 +232,7 @@ prendo $p_1+...+p_n=1$ andando a:
 
 
 
-###### @ [Random number generation] Trasformare i campioni 0.5, 0.1, 0.9, 0.2 prelevati da U(0,1) in campioni di una variabile casuale discreta prendendo i valori UP, DOWN con probabilità 0.3 e 0.7, rispettivamente.:
+###### @ [Random number generation] Trasformare i campioni 0.5, 0.1, 0.9, 0.2 prelevati da U(0,1) in campioni di una variabile casuale discreta prendendo i valori UP, DOWN con probabilità 0.3 e 0.7, rispettivamente.::
 avremo che $P(UP)=0.3$, $P(DOWN)=0.7$ con
 - $UP\in\{0,0.3\}$ 
 - $DOWN\in\{0.3,0.3+0.7\}=\{0.3,1\}$
@@ -236,32 +246,32 @@ quindi avremo:
 
 
 ## Decision Analysis
-###### @ [Decision Analysis] Cos'è una reward matrix?:
+###### @ [Decision Analysis] Cos'è una reward matrix?::
 matrice che indica la =="ricompensa" per una certa azione in un determinato scenario==.
 <!--ID: 1670568455042-->
 
 
 
-###### @ [Decision Analysis] Qual è la differenza tra decisioni a rischio e decisioni in assoluta incertezza?:
+###### @ [Decision Analysis] Qual è la differenza tra decisioni a rischio e decisioni in assoluta incertezza?::
 che nella prima possiamo ==quantificare l'incertezza== e decidere come porsi verso di essa, nella seconda non possiamo quantificarla ma ==solo vedere dei possibili scenari futuri==
 <!--ID: 1670568455046-->
 
 
 
-###### @ [Decision Analysis] Qual è il criterio di Bayes?:
+###### @ [Decision Analysis] Qual è il criterio di Bayes?::
 usato per ==trovare delle decisioni che massimizzino il valore atteso== $$E[V(a_i)]=\sum_{j=1}^nP(\theta_j)v_{ij}$$
 viene detto ==rischio neutrale== dato che non tiene conto dei fattori di rischio
 <!--ID: 1670568455051-->
 
 
 
-###### @ [Decision Analysis] Si consideri la seguente matrice di ricompensa per un problema Newsboy. Qual è la decisione selezionata in stretta incertezza?![](Uni/PASD/esoneri/img/da4.jpeg):
+###### @ [Decision Analysis] Si consideri la seguente matrice di ricompensa per un problema Newsboy. Qual è la decisione selezionata in stretta incertezza?![](Uni/PASD/esoneri/img/da4.jpeg)::
 in una situazione di incertezza stretta, non potendo quantificare l'incertezza conviene prendere la decisione ==con meno varianza possibile== cioè 16 
 <!--ID: 1670568455055-->
 
 
 
-###### @ [Decision Analysis] Ora si supponga che nel problema precedente le seguenti probabilità siano stimate a partire dai dati. Qual è la decisione ottimale secondo il criterio di Bayes?![](Uni/PASD/esoneri/img/da5.jpeg):
+###### @ [Decision Analysis] Ora si supponga che nel problema precedente le seguenti probabilità siano stimate a partire dai dati. Qual è la decisione ottimale secondo il criterio di Bayes?![](Uni/PASD/esoneri/img/da5.jpeg)::
 applicando Bayes prendo ==18==: $$E[V(a_i)]=\sum_{j=1}^nP(\theta_j)v_{ij}$$
 |A|$\theta_1$|$\theta_2$|$\theta_3$|$\theta_4$|$\theta_5$|$E[V(a_i)]$|
 |---|---|---|---|---|---|---|
@@ -275,7 +285,7 @@ applicando Bayes prendo ==18==: $$E[V(a_i)]=\sum_{j=1}^nP(\theta_j)v_{ij}$$
 
 
 
-###### @ [Decision Analysis] Che cosa è "perfect information"? Che cosa è la reward under perfect information? Che cosa è il expected value of perfect information?:
+###### @ [Decision Analysis] Che cosa è "perfect information"? Che cosa è la reward under perfect information? Che cosa è il expected value of perfect information?::
 - reward under perfect information: es: ==newspaper boy== che tramite una ==palla di cristallo== può sapere quanti giornali vendrà e comprarne di conseguenza per poter avere il massimo profitto
 - EVPI: ==valore atteso all'incremento del reward==: $ERPI-ER^*$
 - Expected Reward Perfect Information (ERPI): nel newspaper boy problem è il ==profitto massimo per ogni giornata== (la diagonale in prratica) per poi applicarci Bayes $$ERPI=\sum_{j=1}^nP(\theta_j)\max(v_{ij})$$
@@ -283,7 +293,7 @@ applicando Bayes prendo ==18==: $$E[V(a_i)]=\sum_{j=1}^nP(\theta_j)v_{ij}$$
 
 
 
-###### @ [Decision Analysis] Cos'è un processo decisionale sequenziale?:
+###### @ [Decision Analysis] Cos'è un processo decisionale sequenziale?::
 processo che permette di ==costruire una soluzione passo passo massimizzando solo l'utilizzo immediato== della soluzione. Avremo allora:
 - una ==soluzione inammissibile==
 - ==non garantire== una soluzione ottima 
@@ -291,14 +301,14 @@ processo che permette di ==costruire una soluzione passo passo massimizzando sol
 
 
 
-###### @ [Decision Analysis] Di che cosa è fatto un albero decisionale?:
+###### @ [Decision Analysis] Di che cosa è fatto un albero decisionale?::
 - ==chance node==: valore della variabile aleatoria ($\sum{P(foglia)}=1$)![](Uni/PASD/img/chancenode.jpeg)
 - ==decision node==: indica una decisione da prendere![](Uni/PASD/img/decnode.jpeg)
 <!--ID: 1670605119709-->
 
 
 
-###### @ [Decision Analysis] How can the accuracy of a survey be expressed?:
+###### @ [Decision Analysis] How can the accuracy of a survey be expressed?::
 tramite l'Efficiency of Sample Information (ESI) cioè l'==efficienza dell'informazione== possiamo dedurre l'accuratezza controllando che il valore dell'efficienza tenda a:
 - $1$: allora l'informazione è **buona**
 - $0$: allora l'informazione **non è buona**
@@ -308,32 +318,32 @@ $$ESI=\frac{EVSI}{EVPI}$$
 
 
 
-###### @ [Decision Analysis] Qual è la relazione tra un sondaggio e una "sfera di cristallo"?:
+###### @ [Decision Analysis] Qual è la relazione tra un sondaggio e una "sfera di cristallo"?::
 che nel primo non sai cosa succederà ma sai con che probabilità accadranno gli ==eventi futuri== (stretta incertezza) nel secondo ==sappiamo già cosa succederà==
 <!--ID: 1670605119726-->
 
 
 
-###### @ [Decision Analysis] Che cos'è una strategia/politica?:
+###### @ [Decision Analysis] Che cos'è una strategia/politica?::
 è un ==piano che si vuole attuare== per una specifica situazione della quale ne vendono valutate le performance tramite la computer simulation
 <!--ID: 1670605119732-->
 
 
 
-###### @ [Decision Analysis] Determinare la politica ottimale per il seguente problema.![](Uni/PASD/esoneri/img/estree.jpeg):![](Uni/PASD/esoneri/img/estreeris.jpeg)
+###### @ [Decision Analysis] Determinare la politica ottimale per il seguente problema.![](Uni/PASD/esoneri/img/estree.jpeg):![](Uni/PASD/esoneri/img/estreeris.jpeg):
 <!--ID: 1670685688074-->
 
 
 
 
-###### @ [Decision Analysis] What is the value of sample information?:
+###### @ [Decision Analysis] What is the value of sample information?::
 Expected Value of Sample Information (==EVSI==) che rappresenta la ==cifra vantaggiosa== alla quale ==effettuare il sondaggio== con max reward $$EVSI=\text{ramo sondaggio a costo zero}-\text{ramo senza sondaggio}$$
 <!--ID: 1670685688076-->
 
 
 
 
-###### @ [Decision Analysis] What is the efficiency of sample information?:
+###### @ [Decision Analysis] What is the efficiency of sample information?::
 Efficiency of Sample Information (==ESI==) che rappresenta l'==efficienza dell'informazione== se tende a:
 - $1$: allora l'informazione è **buona**
 - $0$: allora l'informazione **non è buona**
@@ -343,14 +353,14 @@ Efficiency of Sample Information (==ESI==) che rappresenta l'==efficienza dell'i
 
 
 
-###### @ [Decision Analysis] What is a risk-prone decision maker?:
+###### @ [Decision Analysis] What is a risk-prone decision maker?::
 è un decisore che preferisce ==rischiare per avere di più==
 <!--ID: 1670685688080-->
 
 
 
 
-###### @ [Decision Analysis] What is the downside risk?:
+###### @ [Decision Analysis] What is the downside risk?::
 indica la ==distanza dal target== (target: valore "minimo" sotto il quale il rischio non si vuole che scenda) intesa come valore al di sotto di esso(se viene superato il target restituisce zero) $$D(a,s)=\max\{0,T-v(a,s)\}$$
 <!--ID: 1670685688082-->
 
@@ -358,14 +368,14 @@ indica la ==distanza dal target== (target: valore "minimo" sotto il quale il ris
 
 
 ## Exploratory data analysis: basics
-###### @ [Exploratory data analysis: basics] Fornire una definizione della popolazione e del campione:
+###### @ [Exploratory data analysis: basics] Fornire una definizione della popolazione e del campione::
 ==popolazione==: insieme dei ==soggetti== di interesse di uno studio
 ==campione==: ==sottoinsieme== della popolazione
 <!--ID: 1670605238770-->
 
 
 
-###### @ [Exploratory data analysis: basics] Definire Q1, Q2, Q3, Q4 e IQR per una funzione numerica:
+###### @ [Exploratory data analysis: basics] Definire Q1, Q2, Q3, Q4 e IQR per una funzione numerica::
 - Q1: 25% delle ==misurazioni==
 - Q2: 50% delle misurazioni
 - Q3: 75% delle misurazioni
@@ -375,7 +385,7 @@ indica la ==distanza dal target== (target: valore "minimo" sotto il quale il ris
 
 
 
-###### @ [Exploratory data analysis: basics] Fornire un criterio per identificare gli outliers di una caratteristica numerica:
+###### @ [Exploratory data analysis: basics] Fornire un criterio per identificare gli outliers di una caratteristica numerica::
 abbiamo un outlier se una misurazione è
 - $< (Q1-1.5) IQR$
 - $> (Q3+1.5) IQR$
@@ -384,7 +394,7 @@ abbiamo un outlier se una misurazione è
 
 
 
-###### @ [Exploratory data analysis: basics] Quali informazioni possiamo ricavare dai seguenti boxplot?![](Uni/PASD/esoneri/img/esqua.jpeg):
+###### @ [Exploratory data analysis: basics] Quali informazioni possiamo ricavare dai seguenti boxplot?![](Uni/PASD/esoneri/img/esqua.jpeg)::
 - Detroit ha una ==mediana== delle misurazioni più alta di quella di Millwaukee
 - Millwaukee ha le misurazioni più basse
 - Detroit ha le misurazioni più alte
@@ -395,13 +405,15 @@ abbiamo un outlier se una misurazione è
 
 
 
-###### @ [Exploratory data analysis: basics] Definire il punteggio z di un valore xij preso da una caratteristica numerica aj:
+###### @ [Exploratory data analysis: basics] Definire il punteggio z di un valore xij preso da una caratteristica numerica aj::
 ???
-<!--ID: 1670605238798-->
+<!--ID: 1670766972340-->
 
 
 
-###### @ [Exploratory data analysis: basics] Qual è un approccio alternativo per identificare gli outliers di una distribuzione normale?:
+
+
+###### @ [Exploratory data analysis: basics] Qual è un approccio alternativo per identificare gli outliers di una distribuzione normale?::
 le misurazioni in una distribuzione normale se
 - $< \mu -3\sigma$
 - $> \mu +3\sigma$
@@ -410,25 +422,25 @@ le misurazioni in una distribuzione normale se
 
 
 ## Computer simulation
-###### @ [Computer simulation] Che cos'è la simulazione?:
+###### @ [Computer simulation] Che cos'è la simulazione?::
 è la ==riproduzione==, con una certa accuratezza, di un ==sistema== per capire ==come si comporta in determiante condizioni==
 <!--ID: 1670605238811-->
 
 
 
-###### @ [Computer simulation] Cos'è un simulatore?:
+###### @ [Computer simulation] Cos'è un simulatore?::
 mira a valutare un indicatore di prestazioni di una ==determinata configuration or policy del sistema== 
 <!--ID: 1670605238819-->
 
 
 
-###### @ [Computer simulation] Perché dovremmo essere interessati a simulare un sistema?:
+###### @ [Computer simulation] Perché dovremmo essere interessati a simulare un sistema?::
 perchè rispetto alle sperimentazioni reali sono ==meno costose== e ==risparmiare molto tempo== andando a fare una simulazione di un anno. Può essere ==più sicuro== nel caso di condizioni estreme
 <!--ID: 1670605238824-->
 
 
 
-###### @ [Computer simulation] Descrivere lo pseudocodice di un simulatore di eventi discreto.:
+###### @ [Computer simulation] Descrivere lo pseudocodice di un simulatore di eventi discreto.::
 ```python
 C = lista di eventi futuri
 t = tempo corrente
@@ -449,7 +461,7 @@ C.append(E_k+)
 
 
 
-###### @ [Computer simulation] Descrivere il metodo delle independent runs:
+###### @ [Computer simulation] Descrivere il metodo delle independent runs::
 1. effettuo ==R run di simulazione==
 2. memorizzo il ==tempo di attesa $X_{1,i},...,X_{M_i,i}$== dei clienti
 3. calcolo il tempo di attesa medio, detta ==stima puntuale==, con $M_i$ numero totale clienti per run $$L_i=(X_{1,i}+,...,+X_{M_i,i})/M_i$$ oppure se devo calcolare un valore medio uso una ==stima per punti== $$\hat{\theta}_R=\frac{1}{R}\sum_{i=1}^RL_i$$ sulla quale ==eseguo più simulazione== fino a quando non ho "fiducia" dei risultati
@@ -458,26 +470,26 @@ C.append(E_k+)
 
 
 
-###### @ [Computer simulation] Come possiamo rendere riproducibili le simulazioni?:
+###### @ [Computer simulation] Come possiamo rendere riproducibili le simulazioni?::
 impostando un ==seed statico==
 <!--ID: 1670605238843-->
 
 
 
-###### @ [Computer simulation] Descrivere come possiamo stimare il numero di cicli di simulazione necessari per ottenere una determinata precisione:
+###### @ [Computer simulation] Descrivere come possiamo stimare il numero di cicli di simulazione necessari per ottenere una determinata precisione::
 ???
 <!--ID: 1670605238850-->
 
 
 
-###### @ [Computer simulation] Si supponga che, dopo 300 cicli di simulazione, l'intervallo di confidenza di una data misura di prestazione sia 200+-20 (con 1-alpha=0.90). Quante corse aggiuntive sono necessarie per ottenere una precisione del 5%?:
+###### @ [Computer simulation] Si supponga che, dopo 300 cicli di simulazione, l'intervallo di confidenza di una data misura di prestazione sia 200+-20 (con 1-alpha=0.90). Quante corse aggiuntive sono necessarie per ottenere una precisione del 5%?::
 ???
 <!--ID: 1670685688087-->
 
 
 
 ## Automated planning
-###### @ [Automated planning] Illustrate some industrial applications of automated planning:
+###### @ [Automated planning] Illustrate some industrial applications of automated planning::
 - Problemi di definizione dei percorsi
 - Problemi di instradamento
 - Problemi di pianificazione di risorse
@@ -491,7 +503,7 @@ impostando un ==seed statico==
 
 
 
-###### @ [Automated planning] Describe how a planning problem can be modeled as a search problem on a graph:
+###### @ [Automated planning] Describe how a planning problem can be modeled as a search problem on a graph::
 può essere modellato andando a definire i vari ==stati del problema== e le ==serie di azioni== che portano fino al suo goal, attraversando dei ==costi== da un nodo all'altro.
 <!--ID: 1670757133271-->
 
@@ -499,7 +511,7 @@ può essere modellato andando a definire i vari ==stati del problema== e le ==se
 
 
 
-###### @ [Automated planning] Illustrate the difference between uninformed and informed search:
+###### @ [Automated planning] Illustrate the difference between uninformed and informed search::
 nella prima si effettua la ricerca ma ==non si sa== quale percorso si rivelerà il migliore (breadth, depth, uniform), nella seconda invece abbiamo delle info in più es: ==costo== e ==distanza== dal goal (greedy, A*)
 <!--ID: 1670757133275-->
 
@@ -507,7 +519,7 @@ nella prima si effettua la ricerca ma ==non si sa== quale percorso si rivelerà 
 
 
 
-###### @ [Automated planning] Illustrate the pseudocode of a breadth search:
+###### @ [Automated planning] Illustrate the pseudocode of a breadth search::
 Pseudocodice:
 ```python
 OPEN = {start node}; # States generated but not examined.A FIFO queue
@@ -528,7 +540,7 @@ while (OPEN != empty):
 
 
 
-###### @ [Automated planning] Illustrate the pseudocode of the A* search:
+###### @ [Automated planning] Illustrate the pseudocode of the A* search::
 ```python
 OPEN = { (start node, f(start node)) } #f(x)=g(x)+h(x)
 CLOSED = empty;
@@ -548,49 +560,61 @@ while (OPEN != empty):
 
 
 
-###### @ [Automated planning] What is the role of the heuristic function in an A* search?:
+###### @ [Automated planning] What is the role of the heuristic function in an A* search?::
 ???
-<!--ID: 1670757133283-->
+<!--ID: 1670766972352-->
 
 
 
 
 
-###### @ [Automated planning] List the properties of the A* search (no proof is required):
+
+
+###### @ [Automated planning] List the properties of the A* search (no proof is required)::
 ???
-<!--ID: 1670757133286-->
+<!--ID: 1670766972358-->
 
 
 
 
 
-###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle:
+
+
+###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle::
 ???
-<!--ID: 1670757133288-->
+<!--ID: 1670766972364-->
 
 
 
 
 
-###### @ [Automated planning] What is the difference between progression planning and regression planning?:
+
+
+###### @ [Automated planning] What is the difference between progression planning and regression planning?::
 ???
-<!--ID: 1670757133290-->
+<!--ID: 1670766972371-->
 
 
 
 
 
-###### @ [Automated planning] What is the closed-world assumption?:
+
+
+###### @ [Automated planning] What is the closed-world assumption?::
 ???
-<!--ID: 1670757133293-->
+<!--ID: 1670766972378-->
 
 
 
 
 
-###### @ [Automated planning] A heuristic function estimates how far a “state” is from the “goal state”. How can we define a general heuristic function based on a STRIPS model?:
+
+
+###### @ [Automated planning] A heuristic function estimates how far a “state” is from the “goal state”. How can we define a general heuristic function based on a STRIPS model?::
 ???
-<!--ID: 1670757133295-->
+<!--ID: 1670766972382-->
+
+
 
 
 
