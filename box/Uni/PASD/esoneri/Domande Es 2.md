@@ -476,3 +476,122 @@ impostando un ==seed statico==
 
 
 
+## Automated planning
+###### @ [Automated planning] Illustrate some industrial applications of automated planning:
+- Problemi di definizione dei percorsi
+- Problemi di instradamento
+- Problemi di pianificazione di risorse
+- Pianificazione del movimento dei robot
+- Analisi del linguaggio
+- Videogames
+- Traduzione automatica di testo
+- Riconoscimento del parlato
+<!--ID: 1670757133266-->
+
+
+
+
+###### @ [Automated planning] Describe how a planning problem can be modeled as a search problem on a graph:
+può essere modellato andando a definire i vari ==stati del problema== e le ==serie di azioni== che portano fino al suo goal, attraversando dei ==costi== da un nodo all'altro.
+<!--ID: 1670757133271-->
+
+
+
+
+
+###### @ [Automated planning] Illustrate the difference between uninformed and informed search:
+nella prima si effettua la ricerca ma ==non si sa== quale percorso si rivelerà il migliore (breadth, depth, uniform), nella seconda invece abbiamo delle info in più es: ==costo== e ==distanza== dal goal (greedy, A*)
+<!--ID: 1670757133275-->
+
+
+
+
+
+###### @ [Automated planning] Illustrate the pseudocode of a breadth search:
+Pseudocodice:
+```python
+OPEN = {start node}; # States generated but not examined.A FIFO queue
+CLOSED = empty; # Already visited states
+while (OPEN != empty):
+	X = extract the "leftmost" state from OPEN
+	if (X = goal state):
+		return success
+	SUCCESSORS = Successor function (X)
+	CLOSED.put(X)
+	discard any successors contained in OPEN or CLOSED
+	OPEN = SUCCESSORS
+```
+![](Uni/PASD/img/amp.jpeg)
+<!--ID: 1670757133278-->
+
+
+
+
+
+###### @ [Automated planning] Illustrate the pseudocode of the A* search:
+```python
+OPEN = { (start node, f(start node)) } #f(x)=g(x)+h(x)
+CLOSED = empty;
+while (OPEN != empty):
+	X = extract the state with the "lowest value of f(X)" from OPEN
+	if (X = goal state):
+		return success # h=0
+	SUCCESSORS = Successor function (X)
+	CLOSED.put(X)
+	discard any successors contained in OPEN or CLOSED
+	OPEN = SUCCESSORS
+```
+![](Uni/PASD/img/astar.jpeg)
+<!--ID: 1670757133281-->
+
+
+
+
+
+###### @ [Automated planning] What is the role of the heuristic function in an A* search?:
+???
+<!--ID: 1670757133283-->
+
+
+
+
+
+###### @ [Automated planning] List the properties of the A* search (no proof is required):
+???
+<!--ID: 1670757133286-->
+
+
+
+
+
+###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle:
+???
+<!--ID: 1670757133288-->
+
+
+
+
+
+###### @ [Automated planning] What is the difference between progression planning and regression planning?:
+???
+<!--ID: 1670757133290-->
+
+
+
+
+
+###### @ [Automated planning] What is the closed-world assumption?:
+???
+<!--ID: 1670757133293-->
+
+
+
+
+
+###### @ [Automated planning] A heuristic function estimates how far a “state” is from the “goal state”. How can we define a general heuristic function based on a STRIPS model?:
+???
+<!--ID: 1670757133295-->
+
+
+
+
