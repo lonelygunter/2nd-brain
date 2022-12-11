@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
+                "file": "Uni/PSR/LaTeX PSR.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
+                "file": "Uni/PSR/LaTeX PSR.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
+                "file": "Uni/PSR/LaTeX PSR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/2022.12.09-02-TCP Server.md"
+                "file": "Uni/PSR/LaTeX PSR.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/2022.12.09-02-TCP Server.md",
+                "file": "Uni/PSR/LaTeX PSR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,15 +201,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/TOC - BD.md",
-    "Uni/PASD/2022.09.23-00-Business Analytics.md",
-    "Untitled.md",
-    "Uni/PASD/esoneri/Domande Es 2.md",
-    "Uni/PSR/LaTeX PSR.md",
-    "Uni/PASD/LaTeX PASD.md",
-    "Uni/PASD/esoneri/Domande Es 1.md",
-    "Uni/PSR/2022.12.09-02-TCP Server.md",
-    "Uni/PSR/2022.12.09-01-TCP Client.md",
-    "Uni/PSR/2022.12.09-00-TCP client and server.md"
+    "Uni/PSR/2022.11.29-00-Advanced IO.md",
+    "Uni/PSR/2022.11.25-01-Thread attributes.md",
+    "Uni/PSR/2022.11.25-00-Thread limits.md",
+    "Uni/PSR/2022.11.30-01-select().md",
+    "Uni/PSR/2022.11.30-02-readv() and writev().md",
+    "Uni/PSR/2022.12.02-00-Pipe.md",
+    "Uni/PSR/2022.11.30-03-Memory-mapped IO.md",
+    "Uni/PSR/2022.12.07-00-Socket.md",
+    "Uni/PSR/2022.12.07-01-Socket creation.md",
+    "Uni/PSR/2022.12.07-02-Socket addresses.md"
   ]
 }

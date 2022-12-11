@@ -33,11 +33,11 @@ Le annotazioni manuali devono limitarsi alle abitudini più importanti.
 
 # Pag 278 - Come rivedere le abitudini e apportare correttivi:
 1. Revisione annuale, dove rifletto sui miei progressi e valuto le mie abitudini):
-	- Cosa è andato bene quest’anno?
-	-  Cosa non è andato bene quest'anno?
-	- Cosa ho imparato?
+- Cosa è andato bene quest’anno?
+-  Cosa non è andato bene quest'anno?
+- Cosa ho imparato?
 
 2. Resoconto di integrità, annuale, per capire cosa ho sbagliato e motivarmi a rimettermi in carreggiata:
-	- Quali sono i valori fondamentali su cui si basano la mia vita e il mio lavoro?
-	- Con quanta integrità sto vivendo e lavorando in questo momento?
-	- Come posso stabilire standard più alti per il futuro?
+- Quali sono i valori fondamentali su cui si basano la mia vita e il mio lavoro?
+- Con quanta integrità sto vivendo e lavorando in questo momento?
+- Come posso stabilire standard più alti per il futuro?

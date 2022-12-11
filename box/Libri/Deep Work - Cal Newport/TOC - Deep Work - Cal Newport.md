@@ -25,13 +25,13 @@ Per trarre il massimo dalle vostre sessione di concentrazione intensa scegliete 
 1. Dove lavorare e per quanto tempo: utilizzare una sede specifica e a prescindere da dove si lavori assicurarsi di inquadrare in una specifica cornice temporale la sessione per offrire a voi stessi una sfida ben chiara invece di una fatica indefinita.
 
 2. Come lavorare: il rituale ha bisogno di regole per esempio:
-	- Il divieto di utilizzare internet
-	- Mantenere unità di misura come il numero di parole scritte per stabilire se state lavorando davvero seriamente
+- Il divieto di utilizzare internet
+- Mantenere unità di misura come il numero di parole scritte per stabilire se state lavorando davvero seriamente
 
 3. Come sostenere il vostro lavoro: il rituale deve sostenere Le vostre capacità cognitive perché possiate continuare a lavorare a un alto livello di concentrazione. Alcuni esempi sono:
-	- Bere una tazza di caffè
-	- Avere sempre a disposizione qualcosa da mangiare
-	- Effettuare dell'esercizio fisico leggero come una camminata per schiarire la mente
+- Bere una tazza di caffè
+- Avere sempre a disposizione qualcosa da mangiare
+- Effettuare dell'esercizio fisico leggero come una camminata per schiarire la mente
 
 ###### Pag 140 - Non lavorate da soli:
 Possiamo congedare la soluzione dell'open space, lo a chiave per farlo consiste nel preferire una soluzione hub-and-spoke. Esponetevi spesso alle idee in spazi di tipo hub ma conservate un vostro raggio al cui interno lavorare intensamente sulle idee e sui problemi che incontrate.
@@ -43,15 +43,15 @@ Importante generalmente due idee guida:
 ###### Pag 145 - Agite come manager:
 1. Disciplina n. 1:Focalizzatevi su ciò che è di fondamentale importanza.
 2. Disciplina n. 2Intervenite sulle misure lead.
-	- Le misure lag: descrivono ciò che in ultima istanza cerchiamo di migliorare.
-	- Le misure lead: misurano i nuovi comportamenti che condurranno al successo sul piano delle misure lag.
+- Le misure lag: descrivono ciò che in ultima istanza cerchiamo di migliorare.
+- Le misure lead: misurano i nuovi comportamenti che condurranno al successo sul piano delle misure lag.
 
 Per chi ha scelto di lavorare con la massima concentrazione, e semplice individuare la misura lead rilevante:
 è il tempo che trascorriamo in una condizione di concentrazione intensa diretta al ragionamento del nostro obiettivo di fondamentale importanza.
 
 3. Disciplina n. 3Compilate un tabellone segnapunti che sia di incoraggiamento.
 4. Disciplina n. 4Fate ciclicamente il punto della situazione.
-	- Instaurare un ritmo di incontri regolari e frequenti per ogni gruppo che abbia un obiettivo di fondamentale importanza. Impegnarsi a condurre azioni specifiche per aumentare il loro punteggio prima dell'incontro successivo e descrivere cosa hanno fatto rispetto agli impegni che si erano assunti nell'ultimo incontro.
+- Instaurare un ritmo di incontri regolari e frequenti per ogni gruppo che abbia un obiettivo di fondamentale importanza. Impegnarsi a condurre azioni specifiche per aumentare il loro punteggio prima dell'incontro successivo e descrivere cosa hanno fatto rispetto agli impegni che si erano assunti nell'ultimo incontro.
 
 ###### Pag 152 - Siate pigri:
 Voglio suggerire una soluzione semplice ma comunque molto efficace. Al termine della giornata lavorativa, smettete di pensare ai problemi di lavoro fino al mattino successivo.
@@ -142,9 +142,9 @@ Dopo trenta giorni di isolamento dai social network, rivolgetevi le due domande 
 
 - Gli ultimi trenta giorni sarebbero stati molto più interessanti o divertenti se avessi potuto accedere al servizio?
 - È importato a qualcuno che non abbia utilizzato il servizio?
-	1. Se la risposta è "no", lasciate il servizio per sempre.
-	2. Se la risposta è un chiaro sì, allora ri- tornate a utilizzarlo.
-	3. Se la risposta è un "si" con riserva vi consiglio di scegliere di abbandonarlo.
+1. Se la risposta è "no", lasciate il servizio per sempre.
+2. Se la risposta è un chiaro sì, allora ri- tornate a utilizzarlo.
+3. Se la risposta è un "si" con riserva vi consiglio di scegliere di abbandonarlo.
 
 ###### Pag 220 - Non utilizzate Internet come mezzo di intrattenimento:
 Bennett suggerisce che l'uomo tipico veda le sedici ore libere come "un giorno nel giorno", l'uomo tipico dovrebbe utilizzare invece il tempo libero come farebbe un aristocratico.

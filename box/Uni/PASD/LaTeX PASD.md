@@ -19,15 +19,15 @@ Avremo allora una ==regione ammissibile== dove valgono tutti i vincoli e nella q
 
 $$
 \nabla z = \left[
-	\begin{matrix}
-		\dfrac{dz}{dx_A}\\
-		\dfrac{dz}{dx_B}
-	\end{matrix}
+\begin{matrix}
+	\dfrac{dz}{dx_A}\\
+	\dfrac{dz}{dx_B}
+\end{matrix}
 \right] = \left[
-	\begin{matrix}
-		15\\
-		10
-	\end{matrix}
+\begin{matrix}
+	15\\
+	10
+\end{matrix}
 \right]
 $$
 
@@ -42,10 +42,10 @@ La soluzione ottimale sarà:
 
 $$
 sign(x) = \left\{
-	\begin{array}\\
+\begin{array}\\
     	x_A = 40 \\ 
     	2x_A+4x_B = 400
-	\end{array}
+\end{array}
 \right.
 \left\{
     \begin{array}\\
@@ -82,16 +82,16 @@ Terminologie da sapere:
 - ==regione ammissibile==: tutti i punti che rispettano i vincoli
 - ==prob inammissibile==: **regione ammissibile vuota**
 - ==prob ammissibile==:
-	- soluzione ottima singola
-	- soluzioni multiple
-	- fo illimitata
-		
+- soluzione ottima singola
+- soluzioni multiple
+- fo illimitata
+	
 
 
 ![](Uni/PASD/img/es.jpeg)
 
-	
-	
+
+
 ## ☞ Implementazione in Python
 
 ```python
@@ -124,8 +124,8 @@ print("next week produce {} pallets of B".format(x_B.varValue))
     - $x_2 \leq 7$
     - $4x_1 + 3x_2 \leq 29$
     - $x_1, x_2 \geq 0$
-		
-		
+	
+	
     ![](Uni/PASD/img/es1.jpeg)
     
     $$\nabla z = \left[
@@ -149,10 +149,10 @@ print("next week produce {} pallets of B".format(x_B.varValue))
     
     
     Quindi $z = 58$
-	
-	
+
+
 2. Minimizziamo la f.o. $z = 25x_1 + 22x_2$, con i vincoli:
-		
+	
     - $x_1 + x_2 \geq 5$
     - $3x_1 + 2x_2 \geq 12$
     - $3x_1 + 6x_2 \geq 18$
@@ -163,12 +163,12 @@ print("next week produce {} pallets of B".format(x_B.varValue))
 
     $$\nabla z = \left[
     \begin{matrix}
-	    \dfrac{dz}{dx_A}\\
-	    \dfrac{dz}{dx_B}
+    \dfrac{dz}{dx_A}\\
+    \dfrac{dz}{dx_B}
     \end{matrix}\right] = \left[
     \begin{matrix}
-	    25\\
-	    22
+    25\\
+    22
     \end{matrix}\right]
     $$
 
@@ -176,9 +176,9 @@ print("next week produce {} pallets of B".format(x_B.varValue))
     $$x_1 = 2, x_2 = 3$$
 
     Quindi $z= 116$
-		
+	
 3. Massimizziamo la f.o. $z = 2x_1 + x_2$, con i vincoli:
-		
+	
     - $x_1 - x_2 \leq 1$
     - $2x_1 + x_2 \geq 6$
     - $x_2 \geq 6$
@@ -199,9 +199,9 @@ print("next week produce {} pallets of B".format(x_B.varValue))
     $$
 
     ==Non raggiungeremo la regione ammissibile, quindi il problema non ammette una soluzione ottima==.
-		
+	
 4. Minimizziamo la f.o. $z = -2x_1 + 3x_2$, con i vincoli:
-		
+	
     - $x_1 - 2x_2 \geq -2$
     - $2x_1 - x_2 \leq 3$
     - $x_2 \geq 4$
@@ -223,7 +223,7 @@ print("next week produce {} pallets of B".format(x_B.varValue))
     $$
 
     ==La regione ammissibile è vuota e per tanto i problema è inammissibile, quindi non esiste un punto che soddisfa contemporaneamente tutti i vincoli==.
-		
+	
 5. L'azienda vuole decide oltre al piano di produzione anche la giusta riallocazione degli addetti (10-10) tra i due reparti.		
     Le variabili decisionali sono:
     
@@ -309,12 +309,12 @@ Nella forma standard abbiamo che:
 
 1. ==variabili non vincolate di segno==: $$x_j t.c. j \notin J$$
 
-	per trasformarla possiamo ==sostituire a $x_j$ la somma algebrica di 2 variabili non negative==: $$x_j = x_j^+ - x_j^-$$ $$\forall\ \ \ x_j^+ \geq 0, x_j^- \geq 0$$
+per trasformarla possiamo ==sostituire a $x_j$ la somma algebrica di 2 variabili non negative==: $$x_j = x_j^+ - x_j^-$$ $$\forall\ \ \ x_j^+ \geq 0, x_j^- \geq 0$$
 
-	Se abbiamo $k$ ($\leq n$) variabili non vincolate in segno, possiamo evitare di introdurre $k$ coppie di variabili non negative. È possibile considerare una variabile $x_0 \geq 0$ e sostituire la generica variabile non vincolata di segno con $x_j = x_j^+ - x_0$. ==Così introduciamo "solo" $k+1$ variabili==.
-	
+Se abbiamo $k$ ($\leq n$) variabili non vincolate in segno, possiamo evitare di introdurre $k$ coppie di variabili non negative. È possibile considerare una variabile $x_0 \geq 0$ e sostituire la generica variabile non vincolata di segno con $x_j = x_j^+ - x_0$. ==Così introduciamo "solo" $k+1$ variabili==.
+
 2. ==vincoli non espressi in forma di uguaglianza ($\leq$)==
-		
+	
     $$\sum_{j=i}^n a_{ij} x_j \leq b_i$$
 
     presa la ==variabile di Slack==: $S_i \geq 0$, avremo:
@@ -323,15 +323,15 @@ Nella forma standard abbiamo che:
 
 
     questa variabile misura lo Slack che esiste per far si che ==il vincolo sia rispettato per uguaglianza== o no (vincolo $>$ 0)
-		
-3. ==vincoli non espressi in forma di uguaglianza ($\geq$)==
 	
+3. ==vincoli non espressi in forma di uguaglianza ($\geq$)==
+
     $$\sum_{j=i}^n a_{ij} x_j \geq b_i$$
     
     presa una ==variabile di Surplus==: $S_i \geq 0$, avremo:
     
     $$\sum_{j=i}^n a_{ij} x_j - S_i = b_i$$
-		
+	
 4. ==trasformazione di vincoli da uguaglianza in disuguaglianza== sostituendo:
 
     $$\sum_{j=i}^n a_{ij} x_j = b_i$$
@@ -340,9 +340,9 @@ Nella forma standard abbiamo che:
     
     $$\sum_{j=i}^n a_{ij} x_j \geq b_i$$
     $$\sum_{j=i}^n a_{ij} x_j \leq b_i$$
-		
-5. ==funzione obiettivo==:
 	
+5. ==funzione obiettivo==:
+
     Se la f.o. è $\max z = c_x$, si può trasformare:
 
     $$\max z = -\min {-z}$$
@@ -352,7 +352,7 @@ Nella forma standard abbiamo che:
 
 
 1. DATI
-	
+
     f.o.: $\min z= x_1 + 2 x_2$
 
     vincoli:
@@ -361,10 +361,10 @@ Nella forma standard abbiamo che:
     - $4x_1 + 8x_2 \leq 32$
     - $x_2 \geq 3$
     - $x_1, x_2 \geq 0$
-		
-		
-2. TRASFORMAZIONE IN FORMA STANDARd
 	
+	
+2. TRASFORMAZIONE IN FORMA STANDARd
+
     Per il primo vincolo **del tipo $\leq$, aggiungiamo una variabile non negativa** (slack):
 
     $$6x_1 + 4x_2 + x_3 = 24$$
@@ -388,7 +388,7 @@ Nella forma standard abbiamo che:
 ## ☞ Esempio 2
 
 1. DATI
-	
+
     f.o.: $\max z = z_1 + z_2$
 
     vincoli:
@@ -398,10 +398,10 @@ Nella forma standard abbiamo che:
     - $5x_1 + 10x_2 \geq 50$
     - $13x_1 + 10x_2 \leq 130$
     - $x_1 \geq 0$
-		
-		
-2. TRASFORMAZIONE IN FORMA STANDARD
 	
+	
+2. TRASFORMAZIONE IN FORMA STANDARD
+
     Dato che non abbiamo vincoli su $x_2$ poniamo:
     
     $$x_2 = x_2^+ - x_2^-$$
@@ -479,7 +479,7 @@ Una funzione fondamentale del Project Manager è la possibilità di accelerare a
 
 
 - ==Variabili decisionali==:
-		
+	
     nel nostro caso, è lo ==start time $s_i$==. Ipotizziamo che il progetto inizi al tempo $t = 0$, quindi per ogni task abbiamo che:
 
     $$s_i \geq 0\ \ \ \forall\ \ \ i \in TASKS$$
@@ -491,9 +491,9 @@ Una funzione fondamentale del Project Manager è la possibilità di accelerare a
     $$\min z = T$$
 
     con $z = 1T + 0s_1 + 0s_2 + ... + 0s_n$
-		
-- ==relazioni di precedenza==:
 	
+- ==relazioni di precedenza==:
+
     relazioni che portano alcuni nodi a dipendere da altri:
     
     $$
@@ -515,9 +515,9 @@ Una funzione fondamentale del Project Manager è la possibilità di accelerare a
         0 & 0 & 0 & 0 \\
     \end{matrix}\right]
     $$
-		
-- ==vincoli di precedenza==:
 	
+- ==vincoli di precedenza==:
+
     Sia ==$T$ maggiorante del tempo di completamento delle task==:
     $$s_i + d_i \leq T$$
 
@@ -546,7 +546,7 @@ Un modello espanso per problemi di istanza:
 
 1. funzione obiettivo: $\min z = T$
 2. vincoli:
-		
+	
     - $s_1 + 10 \leq T$
     - $s_2 + 10 \leq T$
     - $s_3 + 10 \leq T$
@@ -626,7 +626,7 @@ Ovviamente avremo dei ==costi medi di stockaggio $h$== dato che le scorte si "mu
 In base alla strategia avremo:
 
 1. ==caso estermo==:
-	
+
     gestione di tipo **just in time** dove **produco solo sotto commissione del cliente**.
 
     Avremo quindi:
@@ -634,9 +634,9 @@ In base alla strategia avremo:
     - **livello di scorte molto basso** con un livello medio delle scorte molto basso e dei **costi di stockaggio bassi**
     - **maggioramento dei costi del setup**
     - pago $k$ più volte durante l'anno
-		
-2. ==caso produzione annua==:
 	
+2. ==caso produzione annua==:
+
     si produce un **quantitativo pari alla domanda annua**.
     
     Avremo quindi:
@@ -741,23 +741,23 @@ sarà:
 $$
 \left[
 \begin{matrix}
-	4 & 1 & 5 & 7 \\
-	2 & 3 & 2 & 1
+4 & 1 & 5 & 7 \\
+2 & 3 & 2 & 1
 \end{matrix}
 \right]
 \left[
 \begin{matrix}
-	x_1 \\
-	x_2 \\
-	x_3 \\
-	x_4 
+x_1 \\
+x_2 \\
+x_3 \\
+x_4 
 \end{matrix}
 \right]
 \text{=}
 \left[
 \begin{matrix}
-	10 \\
-	10
+10 \\
+10
 \end{matrix}
 \right]
 $$
@@ -785,21 +785,21 @@ Per eseguire l'operazione di Pivot andremo a far si che ==in corrispondenza dell
 $$
 \left[
 \begin{matrix}
-	? & ? & 1 & ? \\
-	? & ? & 0 & ? \\
+? & ? & 1 & ? \\
+? & ? & 0 & ? \\
 \end{matrix}\right]
 \left[
 \begin{matrix}
-	x_1 \\
-	x_2 \\
-	x_3 \\
-	x_4 \\
+x_1 \\
+x_2 \\
+x_3 \\
+x_4 \\
 \end{matrix}\right]
 \text{=}
 \left[
 \begin{matrix}
-	? \\
-	? \\
+? \\
+? \\
 \end{matrix}\right]
 $$
 
@@ -807,7 +807,7 @@ Gli steps da seguire sono:
 
 
 1. facciamo ==$\frac{r}{a_{rs}}$==, con:
-		
+	
     - $r$: riga Pivot
     - $a_{rs} \neq 0$: valore che si trova dal Pivot, nel nostro caso $5$
 
@@ -818,12 +818,12 @@ Gli steps da seguire sono:
 
     $$
     \left[
-	 \begin{matrix}
+ \begin{matrix}
     \frac{4}{5} & \frac{1}{4} & 1 & \frac{7}{5} \\
     ? & ? & 0 & ? \\
     \end{matrix}\right]
     \left[
-	 \begin{matrix}
+ \begin{matrix}
     x_1 \\
     x_2 \\
     x_3 \\
@@ -831,14 +831,14 @@ Gli steps da seguire sono:
     \end{matrix}\right]
     \text{=}
     \left[
-	\begin{matrix}
+\begin{matrix}
     2 \\
     ? \\
     \end{matrix}\right]
     $$
-	
+
 2. per ogni riga non Pivot $i \neq r$ applichiamo il principio di equivalenza per eq non lineari:
-	
+
     $$\text{riga } i = \text{riga } i + (-a_{is}) * \text{nuova riga } r$$
     
     in questo caso andiamo a sommare $-2$ in modo da avere la configurazione $(1, 3) = 1$ e $(2, 3) = 0$.
@@ -885,8 +885,8 @@ Possiamo quindi riscrivere la forma standard con il Tableau con una ==forma tabe
 $$ \underline{\underline{\overline{A}}} =
 \left[
 \begin{matrix}
-	\underline{\underline{A}} & \underline{b} \\
-	c^T & 0 \\
+\underline{\underline{A}} & \underline{b} \\
+c^T & 0 \\
 \end{matrix}\right]
 $$
 
@@ -977,9 +977,9 @@ Andiamo allora a prendere i termini delle variabili e a inserirli in $A$:
 $$A =
 \left[
 \begin{matrix}
-	1 & -1 & 1 & 2\\
-	0 & 2 & 0 & 1\\
-	1 & 0 & 2 & 0\\
+1 & -1 & 1 & 2\\
+0 & 2 & 0 & 1\\
+1 & 0 & 2 & 0\\
 \end{matrix}\right]
 $$
 
@@ -992,9 +992,9 @@ Andremo poi a distribuire a ogni matrice i suoi dati:
 $$B =
 \left[
 \begin{matrix}
-	1 & 1 & 2 \\
-	0 & 0 & 1 \\
-	1 & 2 & 0 \\
+1 & 1 & 2 \\
+0 & 0 & 1 \\
+1 & 2 & 0 \\
 \end{matrix}\right]
 $$
 
@@ -1003,9 +1003,9 @@ $$\underline{c}_B = (2, 4, -5)$$
 $$N =
 \left[
 \begin{matrix}
-	-1 \\
-	2 \\
-	0 \\
+-1 \\
+2 \\
+0 \\
 \end{matrix}\right]
 $$
 
@@ -1027,9 +1027,9 @@ Con le operazioni Pivot ==poniamo il problema in forma canonica rispetto a una b
 $$
 \left[
 \begin{matrix}
-	2  & 1  & 4   & -2 & 10\\
-	1  & 2  & 4   & 2  & 10\\
-	10 & 10 & -2  & 2  & 0 \\
+2  & 1  & 4   & -2 & 10\\
+1  & 2  & 4   & 2  & 10\\
+10 & 10 & -2  & 2  & 0 \\
 \end{matrix}\right]
 $$
 
@@ -1039,9 +1039,9 @@ dove:
 
 - **vincoli** (prime righe):
 
-	- $2x_1 + x_2 + 4x_3 - 2x_4 = 10$
-	- $x_1 + 2x_2 + 4x_3 - 2x_4 = 10$
-		
+- $2x_1 + x_2 + 4x_3 - 2x_4 = 10$
+- $x_1 + 2x_2 + 4x_3 - 2x_4 = 10$
+	
 - **funzione obiettivo** (ultima riga): $$10x_1 + 10x_2 - 2x_3 + 2x_4 + (-z) = 0$$
 
 
@@ -1059,9 +1059,9 @@ Se effettuo un'==operazione di Pivot== su $(0, 3)$:
 $$
 \left[
 \begin{matrix}
-	-1 & -0.5 & -2 & 1 & -5\\
-	3  &   3  & 8  & 0 & 20\\
-	12 &   11 & 2  & 0 & 10\\
+-1 & -0.5 & -2 & 1 & -5\\
+3  &   3  & 8  & 0 & 20\\
+12 &   11 & 2  & 0 & 10\\
 \end{matrix}\right]
 $$
 
@@ -1071,9 +1071,9 @@ ed un'altra operazione di Pivot su $(1, 1)$:
 $$
 \left[
 \begin{matrix}
-	-0.5 & 0 & -0.6   & 1 & -1.6\\
-	1  	 & 1 & 2.6    & 0 &  6.6\\
-	1    & 0 & -27.6  & 0 & -63.3\\
+-0.5 & 0 & -0.6   & 1 & -1.6\\
+1  	 & 1 & 2.6    & 0 &  6.6\\
+1    & 0 & -27.6  & 0 & -63.3\\
 \end{matrix}\right]
 $$
 
@@ -1188,59 +1188,59 @@ $$x_{\beta(i)} = \overline{b}_i - \overline{a}_{is}x_s \geq 0$$
 A questo punto avremo 2 casi possibili:
 
 1. avremo:
-		$$\overline{a}_{is} \leq 0\ \ \ \forall\ \ \ i = 1, ..., m$$
-		allora:
-		$$x_{\beta(i)} \geq 0\ \ \ \forall\ \ \ x_s \to +\infty$$
-		con: $z \to - \infty$
-	
+	$$\overline{a}_{is} \leq 0\ \ \ \forall\ \ \ i = 1, ..., m$$
+	allora:
+	$$x_{\beta(i)} \geq 0\ \ \ \forall\ \ \ x_s \to +\infty$$
+	con: $z \to - \infty$
+
 2. avremo:
-		$$\exists\ i : \overline{a}_{is} > 0$$
-		per calcolare il ==massimo valore che $x_s$ può assumere== è dato da:
-		$$-\overline{a}_{is} x_s \geq -\overline{b}_i$$
-		$$\Rightarrow x_s \leq \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$$
-		di conseguenza i ==valori con $\overline{a}_{is}$== negativo non ci danno problemi dato che $x_{\beta(i)}$ sarà positivo lo stesso} e poi avremo che che:
-		$$x_s = \min \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$$
-		![](Uni/PASD/img/bi.jpeg)
-		Per ==$\overline{a}_{is} > 0$== avremo che ad un certo punto ==$x_s$ arriverà a 0==. Ma potrebbe capitare che ci sia ==un'altra variabile che diventi 0 prima==, per un valore inferiore di $x_s$.
-		Per ==esempio== se abbiamo una f.o.:
-		$$\min z = -10x_1 - 10x_2 + 0$$
-		vincoli:
-		- $2x_1 + x_2 + x_3 = 10$
-		- $x_1 + 2x_2 + x_4 = 10$
-		- $x_1, x_2, x_3, x_4 \geq 0$
-		BFS:
-		- $x_1 = x_2 = 0$
-		- $x_3 = 10$
-		- $x_4 = 10$
-		- $\hat{z} = 0$
-		==allora==:
-		$$x_s = \text{argmin} (-10, -10) = x_1$$
-		annullando $x_2$, $x_3$, $x_4$:
-		$$x_2 \leq \min (\frac{10}{2}, \frac{10}{1}) = 5$$
-		il che significa che $x_s = x_1$, ed abbiamo:
-		$$x_3 = 10 - 2x_1 \geq 0$$
-		$$x_4 = 10 - x_1 \geq 0$$
-		allora abbiamo:
-		![](Uni/PASD/img/disc.jpeg)
-		Dopo la nostra perturbazione $x_1 = 0 \to\ 5$ e $x_3 = 10 \to\ 0$, per determinare quale sia la ==variabile, detta variabile uscente, che si annulla per prima==:
-		$$x_r = \text{argmin} (\frac{10}{2}, \frac{10}{1}) = x_3$$
+	$$\exists\ i : \overline{a}_{is} > 0$$
+	per calcolare il ==massimo valore che $x_s$ può assumere== è dato da:
+	$$-\overline{a}_{is} x_s \geq -\overline{b}_i$$
+	$$\Rightarrow x_s \leq \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$$
+	di conseguenza i ==valori con $\overline{a}_{is}$== negativo non ci danno problemi dato che $x_{\beta(i)}$ sarà positivo lo stesso} e poi avremo che che:
+	$$x_s = \min \frac{\overline{b}_i}{\overline{a}_{is}}\ \ \ \forall\ \ \ i = 1, ..., m;\ \overline{a}_{is} > 0$$
+	![](Uni/PASD/img/bi.jpeg)
+	Per ==$\overline{a}_{is} > 0$== avremo che ad un certo punto ==$x_s$ arriverà a 0==. Ma potrebbe capitare che ci sia ==un'altra variabile che diventi 0 prima==, per un valore inferiore di $x_s$.
+	Per ==esempio== se abbiamo una f.o.:
+	$$\min z = -10x_1 - 10x_2 + 0$$
+	vincoli:
+	- $2x_1 + x_2 + x_3 = 10$
+	- $x_1 + 2x_2 + x_4 = 10$
+	- $x_1, x_2, x_3, x_4 \geq 0$
+	BFS:
+	- $x_1 = x_2 = 0$
+	- $x_3 = 10$
+	- $x_4 = 10$
+	- $\hat{z} = 0$
+	==allora==:
+	$$x_s = \text{argmin} (-10, -10) = x_1$$
+	annullando $x_2$, $x_3$, $x_4$:
+	$$x_2 \leq \min (\frac{10}{2}, \frac{10}{1}) = 5$$
+	il che significa che $x_s = x_1$, ed abbiamo:
+	$$x_3 = 10 - 2x_1 \geq 0$$
+	$$x_4 = 10 - x_1 \geq 0$$
+	allora abbiamo:
+	![](Uni/PASD/img/disc.jpeg)
+	Dopo la nostra perturbazione $x_1 = 0 \to\ 5$ e $x_3 = 10 \to\ 0$, per determinare quale sia la ==variabile, detta variabile uscente, che si annulla per prima==:
+	$$x_r = \text{argmin} (\frac{10}{2}, \frac{10}{1}) = x_3$$
 
 ==Pseudocodice== dell'algoritmo del simplesso:
 
 - trovo la prima ==BFS==
 - while $\exists \overline{c}_j<0\ \ \ \forall\ \ \ j \in I_N$:
+
+
+- trovo ==argmin per "c" del Pivot==: $x_s = \text{argmin}_{j \in I_N} \overline{c}_j$
+- if $\overline{a}_{is} \leq 0$:
 	
 	
-	- trovo ==argmin per "c" del Pivot==: $x_s = \text{argmin}_{j \in I_N} \overline{c}_j$
-	- if $\overline{a}_{is} \leq 0$:
-		
-		
-		- abbiamo un problema unbounded
-		
-		
-	- trovo ==argmin per "r" del Pivot==: $x_s = \text{argmin}_{i = 1,...,m} \frac{\overline{b}_i}{\overline{a}_{is}}$
+	- abbiamo un problema unbounded
 	
 	
+- trovo ==argmin per "r" del Pivot==: $x_s = \text{argmin}_{i = 1,...,m} \frac{\overline{b}_i}{\overline{a}_{is}}$
+
+
 - eseguo il ==Pivot==
 - se trovo una soluzione di base ammissibile ottima faccio un ==analisi per capire se è unica== o meno
 
@@ -1265,8 +1265,8 @@ gradiente:
 $$\nabla z =
 \left[
 \begin{matrix}
-	10 \\
-	10 \\
+10 \\
+10 \\
 \end{matrix}\right]
 $$
 
@@ -1300,9 +1300,9 @@ Tableau:
 $$
 \left[
 \begin{matrix}
-	2 & 1 & 1 & 0 & 10\\
-	1 & 2 & 0 & 1 & 10\\
-	-10 & -10 & 0 & 0 & 0\\
+2 & 1 & 1 & 0 & 10\\
+1 & 2 & 0 & 1 & 10\\
+-10 & -10 & 0 & 0 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1336,34 +1336,34 @@ Dobbiamo allora effettuare un'==operazione di Pivot==:
 
 
 - divido per $2$ la riga 1:
-		$$
-		\left[
+	$$
+	\left[
 \begin{matrix}
-			1 & 0.5 & 0.5 & 0 & 5\\
-			1 & 2 & 0 & 1 & 10\\
-			-10 & -10 & 0 & 0 & 0\\
-		\end{matrix}\right]
-		$$
+		1 & 0.5 & 0.5 & 0 & 5\\
+		1 & 2 & 0 & 1 & 10\\
+		-10 & -10 & 0 & 0 & 0\\
+	\end{matrix}\right]
+	$$
 
-	- moltiplico per $-1$ la prima riga e poi sommo alla seconda:
-		$$
-		\left[
+- moltiplico per $-1$ la prima riga e poi sommo alla seconda:
+	$$
+	\left[
 \begin{matrix}
-			1 & 0.5 & 0.5 & 0 & 5\\
-			0 & 1.5 & -0.5 & 1 & 5\\
-			-10 & -10 & 0 & 0 & 0\\
-		\end{matrix}\right]
-		$$
+		1 & 0.5 & 0.5 & 0 & 5\\
+		0 & 1.5 & -0.5 & 1 & 5\\
+		-10 & -10 & 0 & 0 & 0\\
+	\end{matrix}\right]
+	$$
 
-	- moltiplico per $-10$ la prima riga e poi sommo alla terza:
-		$$
-		\left[
+- moltiplico per $-10$ la prima riga e poi sommo alla terza:
+	$$
+	\left[
 \begin{matrix}
-			1 & 0.5 & 0.5 & 0 & 5\\
-			0 & 1.5 & -0.5 & 1 & 5\\
-			0 & -5 & 5 & 0 & 50\\
-		\end{matrix}\right]
-		$$
+		1 & 0.5 & 0.5 & 0 & 5\\
+		0 & 1.5 & -0.5 & 1 & 5\\
+		0 & -5 & 5 & 0 & 50\\
+	\end{matrix}\right]
+	$$
 
 
 allora abbiamo che la ==soluzione di base ammissibile== (BFS) è:
@@ -1388,9 +1388,9 @@ Il perno del nuovo ==Pivot== sarà $1.5$:
 $$
 \left[
 \begin{matrix}
-	1 & 0 & 0.\overline{6} & -0.\overline{3} & 3.\overline{3}\\
-	0 & 1 & -0.\overline{3} & 0.\overline{6} & 3.\overline{3}\\
-	0 & 0 & 3.\overline{3} & 3.\overline{3} & 66.\overline{6}\\
+1 & 0 & 0.\overline{6} & -0.\overline{3} & 3.\overline{3}\\
+0 & 1 & -0.\overline{3} & 0.\overline{6} & 3.\overline{3}\\
+0 & 0 & 3.\overline{3} & 3.\overline{3} & 66.\overline{6}\\
 \end{matrix}\right]
 $$
 
@@ -1442,8 +1442,8 @@ gradiente:
 $$\nabla z =
 \left[
 \begin{matrix}
-	20 \\
-	10 \\
+20 \\
+10 \\
 \end{matrix}\right]
 $$
 
@@ -1455,9 +1455,9 @@ tableau:
 $$
 \left[
 \begin{matrix}
-	2 & 1 & 1 & 0 & 10\\
-	1 & 2 & 0 & 1 & 10\\
-	-20 & -10 & 0 & 0 & 0\\
+2 & 1 & 1 & 0 & 10\\
+1 & 2 & 0 & 1 & 10\\
+-20 & -10 & 0 & 0 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1474,9 +1474,9 @@ Usiamo le operazioni di Pivot:
 $$
 \left[
 \begin{matrix}
-	1 & 0.5 & 0.5 & 0 & 5\\
-	0 & 1.5 & -0.5 & 1 & 5\\
-	0 & 0 & 10 & 0 & 100\\
+1 & 0.5 & 0.5 & 0 & 5\\
+0 & 1.5 & -0.5 & 1 & 5\\
+0 & 0 & 10 & 0 & 100\\
 \end{matrix}\right]
 $$
 
@@ -1486,8 +1486,8 @@ $$B =\left\{
 \begin{array}
     x_2 = x_3 = 0 \\ 
     x_1 = 5 \\
-	x_4 = 5 \\
-	\overline{z} = -100
+x_4 = 5 \\
+\overline{z} = -100
 \end{array}\right.
 $$
 
@@ -1499,9 +1499,9 @@ allora ==lungo lo spigolo $\overline{AB}$ avremo un costo minimo==. ==Forziamo i
 $$
 \left[
 \begin{matrix}
-	1 & 0 & 0.\overline{6} & -0.\overline{3} & 3.\overline{3}\\
-	0 & 1 & -0.\overline{3} & -0.\overline{6} & 3.\overline{3}\\
-	0 & 0 & 10 & 0 & 100\\
+1 & 0 & 0.\overline{6} & -0.\overline{3} & 3.\overline{3}\\
+0 & 1 & -0.\overline{3} & -0.\overline{6} & 3.\overline{3}\\
+0 & 0 & 10 & 0 & 100\\
 \end{matrix}\right]
 $$
 
@@ -1512,8 +1512,8 @@ $$A =\left\{
 \begin{array}
     x_3 = x_4 = 0 \\ 
     x_1 = 3.\overline{3} \\
-	x_2 = 3.\overline{3} \\
-	\overline{z} = -100
+x_2 = 3.\overline{3} \\
+\overline{z} = -100
 \end{array}\right.
 $$
 
@@ -1543,13 +1543,13 @@ Se abbiamo che $x_s = 0$ esisterà un termine noto $\overline{b}_i = 0$ per $\ov
 Avremo allora che ==se non abbiamo variazioni di $z$== allora ==non ci sarà un miglioramento==, dato che l'algoritmo è deterministico genererò la stessa sequenza all'infinito. Questo fenomeno è detto ==cycling== e avremo che l'algoritmo non converge.
 
 ![](Uni/PASD/img/notconv.jpeg)
-	
+
 
 Potrebbe anche capitare di ==avere un miglioramento dopo $n$ iterazioni==.
 
 ![](Uni/PASD/img/conv.jpeg)
-		
 	
+
 ## ☞ Esempio BFS degenere
 
 Funzione obiettivo:
@@ -1572,9 +1572,9 @@ tabelau:
 $$
 \left[
 \begin{matrix}
-	1 & -1 & 1 & 0 & 0\\
-	0 & 1 & 0 & 1 & 1\\
-	-10 & -10 & 0 & 0 & 0\\
+1 & -1 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1\\
+-10 & -10 & 0 & 0 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1594,9 +1594,9 @@ Abbiamo un'altra soluzione degenere quindi ci troviamo su un ==plateau==. Grafic
 $$
 \left[
 \begin{matrix}
-	1 & -1 & 1 & 0 & 0\\
-	0 & 1 & 0 & 1 & 1\\
-	0 & -20 & 10 & 0 & 0\\
+1 & -1 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1\\
+0 & -20 & 10 & 0 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1616,9 +1616,9 @@ prendendo come perno il valore più alto della colonna $x_2$ avremo un miglioram
 $$
 \left[
 \begin{matrix}
-	1 & 0 & 1 & 1 & 1\\
-	0 & 1 & 0 & 1 & 1\\
-	0 & 0 & 10 & 20 & 20\\
+1 & 0 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 1\\
+0 & 0 & 10 & 20 & 20\\
 \end{matrix}\right]
 $$
 
@@ -1773,10 +1773,10 @@ Applichiamo al ==prima fase del metodo a 2 fasi==:
 $$
 \left[
 \begin{matrix}
-	1 & 0 & -1 & 0 & 1 & 0 & 6\\
-	1 & -1 & -1 & 1 & 0 & 0 & 2\\
-	1 & 3 & 0 & 0 & 0 & 1 & 21\\
-	0 & 0 & 0 & 0 & 1 & 1 & 0\\
+1 & 0 & -1 & 0 & 1 & 0 & 6\\
+1 & -1 & -1 & 1 & 0 & 0 & 2\\
+1 & 3 & 0 & 0 & 0 & 1 & 21\\
+0 & 0 & 0 & 0 & 1 & 1 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1789,10 +1789,10 @@ In fine avremo:
 $$
 \left[
 \begin{matrix}
-	1 & 0 & -1 & 0 & 6\\
-	0 & 0 & 0.\overline{3} & 1 & 1\\
-	0 & 1 & 0.\overline{3} & 0 & 5\\
-	0 & 0 & 2.\overline{3} & 0 & -49\\
+1 & 0 & -1 & 0 & 6\\
+0 & 0 & 0.\overline{3} & 1 & 1\\
+0 & 1 & 0.\overline{3} & 0 & 5\\
+0 & 0 & 2.\overline{3} & 0 & -49\\
 \end{matrix}\right]
 $$
 
@@ -1843,10 +1843,10 @@ Avremo allora:
 $$
 \left[
 \begin{matrix}
-	2 & 3 & 5 & 1 & 0 & 0 & 0 & 15\\
-	1 & 1 & 1 & 0 & -1 & 1 & 0 & 1\\
-	-1 & 1 & 0 & 0 & 0 & 0 & 1 & 5\\
-	0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+2 & 3 & 5 & 1 & 0 & 0 & 0 & 15\\
+1 & 1 & 1 & 0 & -1 & 1 & 0 & 1\\
+-1 & 1 & 0 & 0 & 0 & 0 & 1 & 5\\
+0 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1859,10 +1859,10 @@ $$\text{risultato} - \text{vincolo 3}$$
 $$
 \left[
 \begin{matrix}
-	2 & 3 & 5 & 1 & 0 & 0 & 0 & 15\\
-	1 & 1 & 1 & 0 & -1 & 1 & 0 & 1\\
-	-1 & 1 & 0 & 0 & 0 & 0 & 1 & 5\\
-	0 & -2 & -1 & 0 & 1 & 0 & 0 & -6\\
+2 & 3 & 5 & 1 & 0 & 0 & 0 & 15\\
+1 & 1 & 1 & 0 & -1 & 1 & 0 & 1\\
+-1 & 1 & 0 & 0 & 0 & 0 & 1 & 5\\
+0 & -2 & -1 & 0 & 1 & 0 & 0 & -6\\
 \end{matrix}\right]
 $$
 
@@ -1876,10 +1876,10 @@ quindi abbiamo $r = 2$ facendo uscire $\alpha_1$. Facendo il Pivot abbiamo:
 $$
 \left[
 \begin{matrix}
-	-1 & 0 & 2 & 1 & 3 & -3 & 0 & 12\\
-	1 & 1 & 1 & 0 & -1 & 1 & 0 & 1\\
-	-2 & 0 & -1 & 0 & 1 & -1 & 1 & 4\\
-	2 & 0 & 1 & 0 & -1 & -2 & 0 & -4\\
+-1 & 0 & 2 & 1 & 3 & -3 & 0 & 12\\
+1 & 1 & 1 & 0 & -1 & 1 & 0 & 1\\
+-2 & 0 & -1 & 0 & 1 & -1 & 1 & 4\\
+2 & 0 & 1 & 0 & -1 & -2 & 0 & -4\\
 \end{matrix}\right]
 $$
 
@@ -1891,10 +1891,10 @@ Notiamo che, avendo valori uguali, ci conviene prendere $r = 3$ in modo che se n
 $$
 \left[
 \begin{matrix}
-	5 & 0 & 5 & 1 & 0 & 0 & 0\\
-	-1 & 1 & 0 & 0 & 0 & 0 & 5\\
-	-2 & 0 & -1 & 0 & 1 & -1 & 4\\
-	0 & 0 & 0 & 0 & 0 & 1 & 0\\
+5 & 0 & 5 & 1 & 0 & 0 & 0\\
+-1 & 1 & 0 & 0 & 0 & 0 & 5\\
+-2 & 0 & -1 & 0 & 1 & -1 & 4\\
+0 & 0 & 0 & 0 & 0 & 1 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1905,10 +1905,10 @@ Dato che $\rho = 0$, la soluzione ottima di ($P_a$) è ammissibile per ($P$). El
 $$
 \left[
 \begin{matrix}
-	5 & 0 & 5 & 1 & 0 & 0\\
-	-1 & 1 & 0 & 0 & 0 & 5\\
-	-2 & 0 & -1 & 0 & 1 & 4\\
-	3 & -7 & 2 & 0 & 0 & 0\\
+5 & 0 & 5 & 1 & 0 & 0\\
+-1 & 1 & 0 & 0 & 0 & 5\\
+-2 & 0 & -1 & 0 & 1 & 4\\
+3 & -7 & 2 & 0 & 0 & 0\\
 \end{matrix}\right]
 $$
 
@@ -1918,10 +1918,10 @@ $$(\text{riga 2} * 7) + \text{f.o.}$$
 $$
 \left[
 \begin{matrix}
-	5 & 0 & 5 & 1 & 0 & 0\\
-	-1 & 1 & 0 & 0 & 0 & 5\\
-	-2 & 0 & -1 & 0 & 1 & 4\\
-	-4 & 0 & 2 & 0 & 0 & 35\\
+5 & 0 & 5 & 1 & 0 & 0\\
+-1 & 1 & 0 & 0 & 0 & 5\\
+-2 & 0 & -1 & 0 & 1 & 4\\
+-4 & 0 & 2 & 0 & 0 & 35\\
 \end{matrix}\right]
 $$
 
@@ -1930,10 +1930,10 @@ dove quindi eseguiamo il Pivot in $a_{11}$ ed avremo:
 $$
 \left[
 \begin{matrix}
-	1 & 0 & 1 & 0.2 & 0 & 0\\
-	0 & 1 & 1 & 0.2 & 0 & 5\\
-	0 & 0 & -1 & 0.4 & 1 & 4\\
-	0 & 0 & 6 & 0.8 & 0 & 35\\
+1 & 0 & 1 & 0.2 & 0 & 0\\
+0 & 1 & 1 & 0.2 & 0 & 5\\
+0 & 0 & -1 & 0.4 & 1 & 4\\
+0 & 0 & 6 & 0.8 & 0 & 35\\
 \end{matrix}\right]
 $$
 
@@ -2166,8 +2166,8 @@ gradiente:
 $$\nabla z =
 \left[
 \begin{matrix}
-	1 \\
-	1 \\
+1 \\
+1 \\
 \end{matrix}\right]
 $$
 
@@ -2188,8 +2188,8 @@ dove:
 - $P_2$ non abbiamo intersezioni quindi è inammissibile
 - $P_1$ con soluzione ottima in:
         $$x_1 = 2.83,\ x_2 = 2,\ z = 4.83$$
-	
-	quindi abbiamo upper-bound $4$
+
+quindi abbiamo upper-bound $4$
 
 
 LA variabile $x_1$ ha valore frazionario compreso tra $2$ e $3$. Effettuiamo un branch con vincoli $x_1 \leq 2$ e $x_1 \geq 3$:
@@ -2202,7 +2202,7 @@ dove:
 - $P_3$ con soluzione ottima in:
         $$x_1 = 2,\ x_2 = 1.75,\ z = 3.75$$
         
-	quindi abbiamo upper-bound $3$
+quindi abbiamo upper-bound $3$
 
 
 La variabile $x_2$ ha valore frazionario compreso tra $1$ e $2$. Effettuiamo un branch con vincoli $x_2 \leq 1$ e $x_2 \geq 2$:
@@ -2529,16 +2529,16 @@ per ==trovare le soluzioni efficenti== abbiamo 2 metodi:
 
 
 1. ==metodo dei vincoli==: **considero un solo obiettivo**, per gli altri avrò:
-	$$\min f_i(x)$$
+$$\min f_i(x)$$
         
-	s.t
+s.t
         
     - $f_k(x) \leq u_k$
     - $g(x) \geq 0$
     - $x \geq 0$
     
     Prendo allora solo $A$ e $D$:
-	
+
     ![](Uni/PASD/img/vinc.jpeg)
     
 2. ==metodo dei pesi==: abbiamo una sola **f.o somma di tutti li obiettivi**:
@@ -2609,7 +2609,7 @@ Le ==procedure== da utilizzare si dividono in:
 
 Non essendo algoritmi precisi ==vanno adattati== al particolare problema che si intende affrontare.
 
-- ***@ Possibile cycling***: si può entrare in un ==loop== se l'algoritmo prende una soluzione che ==nel suo intorno include la soluzione precedente==
+###### @ Possibile cycling: si può entrare in un ==loop== se l'algoritmo prende una soluzione che ==nel suo intorno include la soluzione precedente==
 
 
 ## ☞ Progetto di ricerca locale

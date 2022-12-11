@@ -141,15 +141,15 @@ con vincoli:
 
 4. descrivere lo pseudocodice dell'algoritmo del simplesso
 
-	```python
-	trovo la BFS
-	mentre esiste una $\overline{c}_j < 0$ con j variabile non di base $I_N$
-		trovo argmin per la colonna del Pivot tramite: $\text{argmin} \overline{c}_j$
-		se $\overline{a}_{is} \leq 0$ -> unbounded
-		trovo argmin per riga del Pivot tramite: $\text{arming} \frac{\overline{b}_i}{\overline{a}_{is}}$
-	eseguo il Pivot
-	se ho una soluzione di base ammissibile ottima esco dal loop
-	```
+```python
+trovo la BFS
+mentre esiste una $\overline{c}_j < 0$ con j variabile non di base $I_N$
+	trovo argmin per la colonna del Pivot tramite: $\text{argmin} \overline{c}_j$
+	se $\overline{a}_{is} \leq 0$ -> unbounded
+	trovo argmin per riga del Pivot tramite: $\text{arming} \frac{\overline{b}_i}{\overline{a}_{is}}$
+eseguo il Pivot
+se ho una soluzione di base ammissibile ottima esco dal loop
+```
    
 5. l'algoritmo del simplesso è convergente? discurre brevemente
    > può essere convergente se non si verifica il cycling. In caso contrario avremo che non convergerà dato che non avremo variazioni di $z$ che infatti resterà costante, senza mai decrescere come normalmente fa, e quindi non procurerà un miglioramento (potrebbe capitare che dopo $n$ iterazioni va a convergere)
@@ -228,40 +228,40 @@ con vincoli:
 
 1. descrivere lo peseudocodice branch and bound (ricerca del bound migliore)
 
-	```python
-	L := {P } // lista dei sottoproblemi da analizzare
-	zbest := −∞
-	xbest := NULL
-	while L e` vuoto:
-		estrarre un sottoproblema k da L
-		branching da 1 → nk
-		risolvo R(P) e trovo i limiti e l’upperbound UB
-		for i = 1 to nk:
-			if UBi ≤ zbest then:
-				kill childi
-			elif R(P) e` una soluzione intera:
-				zbest := UBi
-				xbest := childi
-			elif R(P) e` una soluzione frazionaria:
-				add childi to L
-	```
+```python
+L := {P } // lista dei sottoproblemi da analizzare
+zbest := −∞
+xbest := NULL
+while L e` vuoto:
+	estrarre un sottoproblema k da L
+	branching da 1 → nk
+	risolvo R(P) e trovo i limiti e l’upperbound UB
+	for i = 1 to nk:
+		if UBi ≤ zbest then:
+			kill childi
+		elif R(P) e` una soluzione intera:
+			zbest := UBi
+			xbest := childi
+		elif R(P) e` una soluzione frazionaria:
+			add childi to L
+```
 
 ## Ottimizzzione lineare intera (mix)
 
 1. descrivere lo pseudocodice dell'algoritmo di Branch-and-Bound (ricerca del bound migliore)
 
-	```python
-	$L$: contenitore per i sottoproblemi
-	$z^{best} = -\infty$
-	$x^{best} = NULL$
-	while $L$ è vuoto:
-		1. estraggo sottoproblema $k$ da $L$
-		2. branch
-		3. risolvo $R(P)$ e trovo upperbound $UB$
-		4. for $i = 1,...,n_k$
-			1. if $UB_i \leq z^{best}$: kill child
-			2. elif $R(P)$ ha sol. intera: $z^{best}=UB,\ x^{best}=child$
-			3. elif $R(P)$ ha sol. frazionaria: add child in $L$
+```python
+$L$: contenitore per i sottoproblemi
+$z^{best} = -\infty$
+$x^{best} = NULL$
+while $L$ è vuoto:
+	1. estraggo sottoproblema $k$ da $L$
+	2. branch
+	3. risolvo $R(P)$ e trovo upperbound $UB$
+	4. for $i = 1,...,n_k$
+		1. if $UB_i \leq z^{best}$: kill child
+		2. elif $R(P)$ ha sol. intera: $z^{best}=UB,\ x^{best}=child$
+		3. elif $R(P)$ ha sol. frazionaria: add child in $L$
    ```
 
 2. nell'algortimo di Branch-and-Bound quando un sottoproblema può essere preso in considerazione?
@@ -277,28 +277,28 @@ con vincoli:
 ## Euristica costruttiva
 1) Descrivi lo pseudocodice dell'algoritmo greedy
 
-	```python
-	last = 1 (last = ultimo punto toccato)
-	S = {2,3,...,n}
-	while (S ̸= insieme vuoto)
-	    estrarre da S un punto
-	    i = argmin c_last,i
-	    succlast = i
-	    last = i
-	succlast = 1
-	```
+```python
+last = 1 (last = ultimo punto toccato)
+S = {2,3,...,n}
+while (S ̸= insieme vuoto)
+    estrarre da S un punto
+    i = argmin c_last,i
+    succlast = i
+    last = i
+succlast = 1
+```
   
 2) Fornire lo pseudocodice dell'algoritmo relax-and-fix
 
-	```python
-	found=true
+```python
+found=true
     for(k=1→n):
     solvePk(x1,...,xk−1)
     if e` inammissibile:
         found = false
         break;
     else: (x′k+1, ..., x′n) e` soluzione fissare xk = x′k
-	```
+```
 
 3) Descrivere l'algoritmo dell'orizzonte mobile
    > al posto di trovare una soluzione per n variabili, prendo un sottoproblema di k variabili e risolvendolo fisso $x_1$ e poi continuo a risolvere non entendo conto delle variabili fissate.

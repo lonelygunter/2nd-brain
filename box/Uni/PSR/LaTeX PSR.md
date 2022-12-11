@@ -20,7 +20,7 @@ tags: 2022-11-13 PSR
 
 
 ## ☞ find: trovare tutti i file eseguibili
-	
+
 ```bash
 $ find . -type f -perm -0100
 ./standards/makeopt.awk
@@ -205,29 +205,29 @@ Andiamo a guardare ==cosa contiene Makefile==:
 
 ```
 DIRS = lib intro sockets advio daemons datafiles db environ \
-	fileio filedir ipc1 ipc2 proc pty relation signals standards \
-	stdio termios threadctl threads printer exercises
+fileio filedir ipc1 ipc2 proc pty relation signals standards \
+stdio termios threadctl threads printer exercises
 
 all:
-	for i in $(DIRS); do \
-		(cd $$i && echo "making $$i" && $(MAKE) ) || exit 1; \
-	done
+for i in $(DIRS); do \
+	(cd $$i && echo "making $$i" && $(MAKE) ) || exit 1; \
+done
 
 clean:
-	for i in $(DIRS); do \
-		(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
-	done
+for i in $(DIRS); do \
+	(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
+done
 ```
 
 dove:
 
 - ==DIRS==: lo si associa alle **stringhe singole== che gli sono state associate
 - ==all==: nel ciclo for:
-		
-	- manda un comando in subshell
-	- \$\$i: riferimento alla variabile "i" del for + simbolo escape per il Makefile
-	- \$(MAKE): macro predefinita per i Makefile
-		
+	
+- manda un comando in subshell
+- \$\$i: riferimento alla variabile "i" del for + simbolo escape per il Makefile
+- \$(MAKE): macro predefinita per i Makefile
+	
  
 
 
@@ -235,7 +235,7 @@ La struttura è:
 
 ```bash
 target: prerequisiti
-	rule
+rule
 ```
 
 dove:
@@ -254,7 +254,7 @@ In molti casi si ha un ==target "clean"== che permette di pulire i file .o che s
 file: file.o lib.o
 
 clean:
-	rm file.o
+rm file.o
 ```
 
 Abbiamo delle ==variabili automatiche== per rendere il lavoro più facile:
@@ -279,10 +279,10 @@ PROGS =	getcputc hello ls1 mycat shell1 shell2 testerror uidgid
 all:	$(PROGS)
 
 
-	$(CC) $(CFLAGS) $@.c -o $@ $(LDFLAGS) $(LDLIBS)
+$(CC) $(CFLAGS) $@.c -o $@ $(LDFLAGS) $(LDLIBS)
 
 clean:
-	rm -f $(PROGS) $(TEMPFILES) *.o
+rm -f $(PROGS) $(TEMPFILES) *.o
 
 include $(ROOT)/Make.libapue.inc
 ```
@@ -324,11 +324,11 @@ Iniziano tutte con '\#':
 
 - **\#include**: serve ad **includere delle librerie** di sistema ($<$lib.h$>$) oppure di librerie fatte da noi e non in directory standard ("lib.h")
 - **\#define**:
-		
-	- permette di **creare delle "macro"**, che vanno a sostituire una stringa con un'altra (es: \#define BUFLEN), può capitare che debbano essere definite delle macro prima che si compili il programma, in questi casi si usa scrivere es: '-DMACOS'
-	- permette di **creare delle "function like macro"** (es: \#define ABSOLUTE_VALUE(x) (((x$<$0)?-(x):(x))  
-		
-		
+	
+- permette di **creare delle "macro"**, che vanno a sostituire una stringa con un'altra (es: \#define BUFLEN), può capitare che debbano essere definite delle macro prima che si compili il programma, in questi casi si usa scrivere es: '-DMACOS'
+- permette di **creare delle "function like macro"** (es: \#define ABSOLUTE_VALUE(x) (((x$<$0)?-(x):(x))  
+	
+	
 - **\#ifdef, \#ifndef, \#endif**: usata per far accadere qualcosa nel caso un macro sia stata definita
 
 ```bash
@@ -362,12 +362,12 @@ Per quanto riguarda le ==funzioni di sistema== NON abbiamo il file sorgente ma a
 Abbiamo **2 tipi di librerie**:
 
 - ==statiche==: è una **collezione di file oggetto** che hanno il codice compilato delle funzioni e che verranno **linkati al momento della compilazione**. Il programma che si crea sarà possibile essere eseguito solo sullo stesso OS.
-		
-	Il **problema si ha nell'aggiornamento delle librerie al momento della scoperta di un bug**. Una volta coretto servirà ricevere la versione corretta per poter aggiornare il programma.
-		
-- ==dynamic==: ricordano il concetto di plug-in, quindi **viene invocato a runtime e caricato in memoria** (es: aggiornamenti dei OS). **L'eseguibile non viene toccato la correzione avviene solo nella libreria**.
 	
-	Il requisito maggiore è che chi si passa il codice debba avere lo stesso OS dell'altro utente. Notare che **non cambia il prototipo** dato che sennò bisognerà ricompilare l'intero programma.
+Il **problema si ha nell'aggiornamento delle librerie al momento della scoperta di un bug**. Una volta coretto servirà ricevere la versione corretta per poter aggiornare il programma.
+	
+- ==dynamic==: ricordano il concetto di plug-in, quindi **viene invocato a runtime e caricato in memoria** (es: aggiornamenti dei OS). **L'eseguibile non viene toccato la correzione avviene solo nella libreria**.
+
+Il requisito maggiore è che chi si passa il codice debba avere lo stesso OS dell'altro utente. Notare che **non cambia il prototipo** dato che sennò bisognerà ricompilare l'intero programma.
 
 
 
@@ -390,19 +390,19 @@ Per costruire una ==libreria statica per MacOS==:
 ```bash
 $ gcc -c libprova.c
 ```
-		
+	
 2. costruiamo la **libreria** (con ar=archive, c=create se lib.a non esiste):
 
 ```bash
 $ ar rcs libprova.a libprova.o
 ```
-			
+		
 3. costruire il **codice** che usa la libreria (con -Wall=verbose warning, -g=debugging, -c=create del file):
 
 ```bash
 $ gcc -Wall -g -c useprova.c
 ```
-	
+
 4. **linker** per risolve le chiamate incrociate (con -L.=dove prendere la libreira, -l[nomelib]=usare la libreria):
 
 ```bash
@@ -497,19 +497,19 @@ Se prendiamo un funzionamento più semplice del comando "ls" potrebbe essere:
 int
 main(int argc, char *argv[])
 {
-	DIR				*dp;
-	struct dirent	*dirp;
+DIR				*dp;
+struct dirent	*dirp;
 
-	if (argc != 2)
-		err_quit("usage: ls1 directory_name");
+if (argc != 2)
+	err_quit("usage: ls1 directory_name");
 
-	if ((dp = opendir(argv[1])) == NULL)
-		err_sys("can't open 
-	while ((dirp = readdir(dp)) != NULL)
-		printf("
+if ((dp = opendir(argv[1])) == NULL)
+	err_sys("can't open 
+while ((dirp = readdir(dp)) != NULL)
+	printf("
 
-	closedir(dp);
-	exit(0);
+closedir(dp);
+exit(0);
 }
 ```
 
@@ -519,9 +519,9 @@ dove abbiamo che:
 
 - ==DIR==: struttura dati
 - ==struct dirent==: **tipo struttura** che contiene al suo interno diversi tipi di variabili. 
+
+Per capire se è una funzione di sistema lanciamo:
 	
-	Per capire se è una funzione di sistema lanciamo:
-		
 ```bash
 $ grep -rw "struct dirent" $INC
 
@@ -544,11 +544,11 @@ $ grep -rw "struct dirent" $INC
 
 #if !__DARWIN_64_BIT_INO_T
 struct dirent {
-	ino_t d_ino;                    /* file number of entry */
-	__uint16_t d_reclen;            /* length of this record */
-	__uint8_t  d_type;              /* file type, see below */
-	__uint8_t  d_namlen;            /* length of string in d_name */
-	char d_name[__DARWIN_MAXNAMLEN + 1];    /* name must be no longer than this */
+ino_t d_ino;                    /* file number of entry */
+__uint16_t d_reclen;            /* length of this record */
+__uint8_t  d_type;              /* file type, see below */
+__uint8_t  d_namlen;            /* length of string in d_name */
+char d_name[__DARWIN_MAXNAMLEN + 1];    /* name must be no longer than this */
 };
 #endif /* !__DARWIN_64_BIT_INO_T */
 
@@ -557,12 +557,12 @@ struct dirent {
 #define __DARWIN_MAXPATHLEN     1024
 
 #define __DARWIN_STRUCT_DIRENTRY { \
-	__uint64_t  d_ino;      /* file number of entry */ \
-	__uint64_t  d_seekoff;  /* seek offset (optional, used by servers) */ \
-	__uint16_t  d_reclen;   /* length of this record */ \
-	__uint16_t  d_namlen;   /* length of string in d_name */ \
-	__uint8_t   d_type;     /* file type, see below */ \
-	char      d_name[__DARWIN_MAXPATHLEN]; /* entry name (up to MAXPATHLEN bytes) */ \
+__uint64_t  d_ino;      /* file number of entry */ \
+__uint64_t  d_seekoff;  /* seek offset (optional, used by servers) */ \
+__uint16_t  d_reclen;   /* length of this record */ \
+__uint16_t  d_namlen;   /* length of string in d_name */ \
+__uint8_t   d_type;     /* file type, see below */ \
+char      d_name[__DARWIN_MAXPATHLEN]; /* entry name (up to MAXPATHLEN bytes) */ \
 }
 
 #if __DARWIN_64_BIT_INO_T
@@ -599,15 +599,15 @@ struct dirent __DARWIN_STRUCT_DIRENTRY;
 ```
 
 dove vediamo che se la variabile "__DARWIN_64_BIT_INO_T" è stata definita avremo che la struttura di struct dirent è:
-		
+	
 ```c
 #define __DARWIN_STRUCT_DIRENTRY { \
-	__uint64_t  d_ino;      /* file number of entry */ \
-	__uint64_t  d_seekoff;  /* seek offset (optional, used by servers) */ \
-	__uint16_t  d_reclen;   /* length of this record */ \
-	__uint16_t  d_namlen;   /* length of string in d_name */ \
-	__uint8_t   d_type;     /* file type, see below */ \
-	char      d_name[__DARWIN_MAXPATHLEN]; /* entry name (up to MAXPATHLEN bytes) */ \
+__uint64_t  d_ino;      /* file number of entry */ \
+__uint64_t  d_seekoff;  /* seek offset (optional, used by servers) */ \
+__uint16_t  d_reclen;   /* length of this record */ \
+__uint16_t  d_namlen;   /* length of string in d_name */ \
+__uint8_t   d_type;     /* file type, see below */ \
+char      d_name[__DARWIN_MAXPATHLEN]; /* entry name (up to MAXPATHLEN bytes) */ \
 }
 
 #if __DARWIN_64_BIT_INO_T
@@ -615,30 +615,30 @@ struct dirent __DARWIN_STRUCT_DIRENTRY;
 #endif /* __DARWIN_64_BIT_INO_T */
 ```
 
-		
-- ==if==: esegue un controllo sugli args. Notiamo che "err_quit" non è una funzione di sistema da:
 	
+- ==if==: esegue un controllo sugli args. Notiamo che "err_quit" non è una funzione di sistema da:
+
 ```bash
 $ grep -rw "err_quit" $INC
 ```
 
 infatti non restituisce nulla. Deve allora essere una funzione di libreria create da noi quindi non presente nella directory standard.
-	
+
 La funzione andrà a dare un messaggio di errore e poi esce dal programma.
-		
+	
 - ==opendir==: serve ad aprire una directory andandola a caricare nella RAM. 
-	
+
 - ==while==: leggiamo la directory e la inseriamo nella struttura che poi sarà richiamata tramite:
-	
+
 ```bash
 dirp->d_name
 ```
 
 dove "d_name" è il nome dello slot in cui è contenuto il nome del file.
-		
-		
-- ==exit==: restituisce l'exit code del programma
 	
+	
+- ==exit==: restituisce l'exit code del programma
+
 
 
 
@@ -646,10 +646,10 @@ dove "d_name" è il nome dello slot in cui è contenuto il nome del file.
 ## ☞ Capire se una funzione è una system call
 
 Andiamo a ==vedere se è una funzione o una system call tramite "man"==, lo si capisce tramite la dicitura in alto alla pagina del manuale:
-	
+
 - **Library Functions** Manual
 - **System Calls** Manual
-	
+
 
 Abbiamo anche ==esempi più particolari==, come fork, dove è indicata come system call ma in realtà le richiama ma in prima persona.
 
@@ -678,17 +678,17 @@ Prendiamo un esempio semplificato del comando "cat":
 int
 main(void)
 {
-	int		n;
-	char	buf[BUFFSIZE];
+int		n;
+char	buf[BUFFSIZE];
 
-	while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0)
-		if (write(STDOUT_FILENO, buf, n) != n)
-			err_sys("write error");
+while ((n = read(STDIN_FILENO, buf, BUFFSIZE)) > 0)
+	if (write(STDOUT_FILENO, buf, n) != n)
+		err_sys("write error");
 
-	if (n < 0)
-		err_sys("read error");
+if (n < 0)
+	err_sys("read error");
 
-	exit(0);
+exit(0);
 }
 ```
 
@@ -697,15 +697,15 @@ main(void)
 
 - ==BUFFSIZE==: macro di preprocessore
 - ==read==: **system call** con parametri: 
+
 	
-		
-	- **STDIN_FILENO**: file descriptor per dire da quale "numero di deve leggere" si vuole leggere. Cioè per leggere dal file indicato nello standard input
-	- **buf**: indirizzo dell'**inizio dell'array**
-	- **BUFFSIZE**: quando deve leggere
-		
-		
-	==Restituisce il numero di char che ha letto==, dato che potrebbe leggere meno byte di quelli richiesti nel caso in cui il file ne contenga di meno. Ad ogni sua iterazione ==si ricorda la "posizione nel file"== che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato.
+- **STDIN_FILENO**: file descriptor per dire da quale "numero di deve leggere" si vuole leggere. Cioè per leggere dal file indicato nello standard input
+- **buf**: indirizzo dell'**inizio dell'array**
+- **BUFFSIZE**: quando deve leggere
 	
+	
+==Restituisce il numero di char che ha letto==, dato che potrebbe leggere meno byte di quelli richiesti nel caso in cui il file ne contenga di meno. Ad ogni sua iterazione ==si ricorda la "posizione nel file"== che gli permette di non leggere sempre i primi n byte ma di rincominciare da dove ha lasciato.
+
 - ==write==: richiede gli stessi valori di read tranne per **STDOUT_FILENO** e **ritorna il numero byte effettivamente letti**
 
 
@@ -770,29 +770,29 @@ Prendiamo il codice di shell1.c che crea uno schell dal quale poter eseguire pro
 int
 main(void)
 {
-	char	buf[MAXLINE];	/* from apue.h */
-	pid_t	pid;
-	int		status;
+char	buf[MAXLINE];	/* from apue.h */
+pid_t	pid;
+int		status;
 
-	printf("
-	while (fgets(buf, MAXLINE, stdin) != NULL) {
-		if (buf[strlen(buf) - 1] == '\n')
-			buf[strlen(buf) - 1] = 0; /* replace newline with null */
+printf("
+while (fgets(buf, MAXLINE, stdin) != NULL) {
+	if (buf[strlen(buf) - 1] == '\n')
+		buf[strlen(buf) - 1] = 0; /* replace newline with null */
 
-		if ((pid = fork()) < 0) {
-			err_sys("fork error");
-		} else if (pid == 0) {		/* child */
-			execlp(buf, buf, (char *)0);
-			err_ret("couldn't execute: 
-			exit(127);
-		}
-
-		/* parent */
-		if ((pid = waitpid(pid, &status, 0)) < 0)
-			err_sys("waitpid error");
-		printf("
+	if ((pid = fork()) < 0) {
+		err_sys("fork error");
+	} else if (pid == 0) {		/* child */
+		execlp(buf, buf, (char *)0);
+		err_ret("couldn't execute: 
+		exit(127);
 	}
-	exit(0);
+
+	/* parent */
+	if ((pid = waitpid(pid, &status, 0)) < 0)
+		err_sys("waitpid error");
+	printf("
+}
+exit(0);
 }
 ```
 
@@ -800,45 +800,45 @@ avremo allora:
 
 
 - ==fgets==: funzione dello **stdoutput che legge la stringa** che dai prima di dare invio, quando una system call viene interrotta la fgets restituisce null facendo fermare il loop. Ha come argomenti:
-	
-		
-	- **buf**: buffer nel quale mettere la stringa
-	
-	- **MAXLINE**: proviene da una nostra libreria
 
-	```bash
-	$ grep -rw "MAXLINE" include/
-	Binary file include//apue.h.gch matches
-	include//apue.h:#define	MAXLINE	4096			/* max line length */
-	```
+	
+- **buf**: buffer nel quale mettere la stringa
 
-	- **stdin**: presente in stdiolib ed è una **struttura file che definisce uno standard input** tramite un puntatore ad un "file"
-		
+- **MAXLINE**: proviene da una nostra libreria
+
+```bash
+$ grep -rw "MAXLINE" include/
+Binary file include//apue.h.gch matches
+include//apue.h:#define	MAXLINE	4096			/* max line length */
+```
+
+- **stdin**: presente in stdiolib ed è una **struttura file che definisce uno standard input** tramite un puntatore ad un "file"
+	
 
 - ==if 1==: permette di avere un null dove prima avevamo \n
-	
+
 - ==if 2==: abbiamo una fork() che dopo che ==viene invocata ritorna 2 volte==, questo perché andrà a creare 2 bash identici con memorie uguali nei contenuti ma indipendenti, l'unico cambiamento è il pid. fork() andrà quindi a restituire 0 nel child e il pid del child al parent tramite getppid().
 
-	Se pid $< 0$ vorrà dire che la fork e fallita.
-	Se pid $= 0$ vorrà dire che siamo nel child.
-	
-	Il che è molto importante dato che ==il codice verrà eseguito sia dal child che dal parent==, e sarà contenuto nella memora virtuale che hanno i programmi grande $2^{32}$ o $2^{64}$ in base all'OS.
-	
-	Appena viene eseguita l'==exec, lo spazio di memoria viene azzerato== ma a discrezione del programma, vengono salvate alcune variabili di ambiente.
+Se pid $< 0$ vorrà dire che la fork e fallita.
+Se pid $= 0$ vorrà dire che siamo nel child.
+
+Il che è molto importante dato che ==il codice verrà eseguito sia dal child che dal parent==, e sarà contenuto nella memora virtuale che hanno i programmi grande $2^{32}$ o $2^{64}$ in base all'OS.
+
+Appena viene eseguita l'==exec, lo spazio di memoria viene azzerato== ma a discrezione del programma, vengono salvate alcune variabili di ambiente.
 
 
-	- ==execlp==: serve a far **eseguire un codice** (buf) del quale abbiamo il sorgente e l'eseguibile
-	
+- ==execlp==: serve a far **eseguire un codice** (buf) del quale abbiamo il sorgente e l'eseguibile
 
-	- ==if 3==: serve a far andare aventi il parent.
 
-	- ==waitpid==: aspetta il child nel caso impieghi troppo tempo ad eseguire la sua azione, **tenendo appeso il prompt**. Con argomenti:
+- ==if 3==: serve a far andare aventi il parent.
 
-	
-	- ==pid==: pid del child
-	- ==\&status==: reindirizza l'exit code del child, quando finisce, nella variabile status
-			
-			![](Uni/PSR/img/fork.jpeg)
+- ==waitpid==: aspetta il child nel caso impieghi troppo tempo ad eseguire la sua azione, **tenendo appeso il prompt**. Con argomenti:
+
+
+- ==pid==: pid del child
+- ==\&status==: reindirizza l'exit code del child, quando finisce, nella variabile status
+		
+		![](Uni/PSR/img/fork.jpeg)
 
 
 ## ☞ Thread
@@ -894,10 +894,10 @@ Per la gestione degli errori useremo:
 int
 main(int argc, char *argv[])
 {
-	fprintf(stderr, "EACCES: 
-	errno = ENOENT;
-	perror(argv[0]);
-	exit(0);
+fprintf(stderr, "EACCES: 
+errno = ENOENT;
+perror(argv[0]);
+exit(0);
 }
 ```
 
@@ -947,38 +947,38 @@ static void	sig_int(int);		/* our signal-catching function */
 int
 main(void)
 {
-	char	buf[MAXLINE];	/* from apue.h */
-	pid_t	pid;
-	int		status;
+char	buf[MAXLINE];	/* from apue.h */
+pid_t	pid;
+int		status;
 
-	if (signal(SIGINT, sig_int) == SIG_ERR)
-		err_sys("signal error");
+if (signal(SIGINT, sig_int) == SIG_ERR)
+	err_sys("signal error");
 
-	printf("
-	while (fgets(buf, MAXLINE, stdin) != NULL) {
-		if (buf[strlen(buf) - 1] == '\n')
-			buf[strlen(buf) - 1] = 0; /* replace newline with null */
+printf("
+while (fgets(buf, MAXLINE, stdin) != NULL) {
+	if (buf[strlen(buf) - 1] == '\n')
+		buf[strlen(buf) - 1] = 0; /* replace newline with null */
 
-		if ((pid = fork()) < 0) {
-			err_sys("fork error");
-		} else if (pid == 0) {		/* child */
-			execlp(buf, buf, (char *)0);
-			err_ret("couldn't execute: 
-			exit(127);
-		}
-
-		/* parent */
-		if ((pid = waitpid(pid, &status, 0)) < 0)
-			err_sys("waitpid error");
-		printf("
+	if ((pid = fork()) < 0) {
+		err_sys("fork error");
+	} else if (pid == 0) {		/* child */
+		execlp(buf, buf, (char *)0);
+		err_ret("couldn't execute: 
+		exit(127);
 	}
-	exit(0);
+
+	/* parent */
+	if ((pid = waitpid(pid, &status, 0)) < 0)
+		err_sys("waitpid error");
+	printf("
+}
+exit(0);
 }
 
 void
 sig_int(int signo)
 {
-	printf("interrupt\n
+printf("interrupt\n
 }
 ```
 
@@ -987,12 +987,12 @@ dove rispetto a shell1 abbbiamo come differenze:
 
 - dichiarazione di funzione per ==gestire un segnale==
 - if 1: gestisce un segnale di errore
-		
-		
-	- ==signal==: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig_int. In caso contrario, viene restituito SIG_ERR e la variabile globale errno viene impostata per indicare l'errore.
-	- ==sig_int==: avrà in ingresso un numero intero, che rappresenta il segnale, dato dal kernel.
-		
-		
+	
+	
+- ==signal==: gli diciamo che se arriva il segnale SIGINT allora eseguire la nostra funzione sig_int. In caso contrario, viene restituito SIG_ERR e la variabile globale errno viene impostata per indicare l'errore.
+- ==sig_int==: avrà in ingresso un numero intero, che rappresenta il segnale, dato dal kernel.
+	
+	
 - definizione della funzione dove viene gestito tramite una stampa
 
 
@@ -1098,9 +1098,9 @@ Possiamo visualizzare i runtime limit che tramite le funzioni: sysconf (es: lung
 
 
 - ==sysconf==: usato per **determinare il valore corrente di un limite**
-	
+
 - ==pathconf==: da **informazioni sul file system** e per fare ciò gli serve poter arrivare ad un qualunque file del filesystem
-	
+
 - ==fpathconf==: come pathconf ma **prende anche il file descriptor**
 
 
@@ -1168,13 +1168,13 @@ open(file, O_RDWR | O_APPEND | O_CREAT | O_TRUNC, file_mode)
 ```
 
 avremo allora $11000001010$ con:
-	
+
 - O_RDWR = 2
 - O_APPEND = 8
 - O_CREAT = 512
 - O_TRUNC = 1024
-		
-		
+	
+	
 
 
 
@@ -1252,12 +1252,12 @@ Per un file appena creato la sua "current position" si trova all'inizio del file
 1. ==file descriptor==
 2. ==offset==: per dire **dove ci si vuole spostare**
 3. ==whence==: indica **da quale punto** si deve applicare l'offset:
+
+- SEEK_SET: valore preciso da dove partire
 	
-	- SEEK_SET: valore preciso da dove partire
-		
-	- SEEK_CUR: presa la current position inserire un **gap e poi scrivere** (può essere negativo)
-		
-	- SEEK_END: gap dal quale inserire **rispetto alla fine** del file. Se negativo scrivo prima, se positivo posso lasciare un **buco di byte** e poi scrivere. Nei nuovi sistemi i blocchi vuoti vengono allocati.
+- SEEK_CUR: presa la current position inserire un **gap e poi scrivere** (può essere negativo)
+	
+- SEEK_END: gap dal quale inserire **rispetto alla fine** del file. Se negativo scrivo prima, se positivo posso lasciare un **buco di byte** e poi scrivere. Nei nuovi sistemi i blocchi vuoti vengono allocati.
 
 
 Un esempio di buco in un file dato da un numero positivo con SEEK_END:
@@ -1272,24 +1272,24 @@ char	buf2[] = "ABCDEFGH";
 int
 main(void)
 {
-	int		fd;
+int		fd;
 
-	if ((fd = creat("file.hole", FILE_MODE)) < 0)
-		err_sys("creat error");
+if ((fd = creat("file.hole", FILE_MODE)) < 0)
+	err_sys("creat error");
 
-	if (write(fd, buf1, 10) != 10)
-		err_sys("buf1 write error");
-	/* offset now = 10 */
+if (write(fd, buf1, 10) != 10)
+	err_sys("buf1 write error");
+/* offset now = 10 */
 
-	if (lseek(fd, 16384, SEEK_SET) == -1)
-		err_sys("lseek error");
-	/* offset now = 16384 */
+if (lseek(fd, 16384, SEEK_SET) == -1)
+	err_sys("lseek error");
+/* offset now = 16384 */
 
-	if (write(fd, buf2, 10) != 10)
-		err_sys("buf2 write error");
-	/* offset now = 16394 */
+if (write(fd, buf2, 10) != 10)
+	err_sys("buf2 write error");
+/* offset now = 16394 */
 
-	exit(0);
+exit(0);
 }	
 ```
 
@@ -1336,11 +1336,11 @@ Possiamo avere dei ==file descriptor seekble== se il file è regolare o meno:
 int
 main(void)
 {
-	if (lseek(STDIN_FILENO, 0, SEEK_CUR) == -1)
-		printf("cannot seek\n");
-	else
-		printf("seek OK\n");
-	exit(0);
+if (lseek(STDIN_FILENO, 0, SEEK_CUR) == -1)
+	printf("cannot seek\n");
+else
+	printf("seek OK\n");
+exit(0);
 }
 ```
 
@@ -1368,10 +1368,10 @@ Il processo è rappresentato dal "==process table entry==" con i vari file descr
 - **file status flags**: 
 - **current file offset**: 
 - **v-node pointer**: (con v=virtual) puntatore ad una v-node table entry che contiene i dati, cioè:
-		
-	- **v-node information**
-	- **v_data**: puntatore all'inode
-		
+	
+- **v-node information**
+- **v_data**: puntatore all'inode
+	
 
 
 
@@ -1441,13 +1441,13 @@ La gestire di queste operazioni dipende dal flag ==CLOEXEC==. Infatti quando lo 
 - fd
 - ==cmd==: usato per **chiamare delle funzionalità** specifiche tramite flags:
 
-		
-	- **F_DUPFD**: si **duplica il fd** e tramite il terzo argomento avremo all'**assegnazione di un fd $\geq$ del valore di quell'argomento**
-	- **F_GETFD, F_SETFD**: get/set fd flag
-	- **F_GETFL, F_SETFL**: get/set file status flag (per cambiare il flag **mentre il file è ancora aperto**)
-	- **F_GETLK, F_SETLK**: get/set record locks: servono a **bloccare parti di file**
-		
 	
+- **F_DUPFD**: si **duplica il fd** e tramite il terzo argomento avremo all'**assegnazione di un fd $\geq$ del valore di quell'argomento**
+- **F_GETFD, F_SETFD**: get/set fd flag
+- **F_GETFL, F_SETFL**: get/set file status flag (per cambiare il flag **mentre il file è ancora aperto**)
+- **F_GETLK, F_SETLK**: get/set record locks: servono a **bloccare parti di file**
+	
+
 - "args"
 
 
@@ -1460,45 +1460,45 @@ Grazie al file fileflags.c possiamo vedere come è stato aperto il file:
 int
 main(int argc, char *argv[])
 {
-	int		val;
+int		val;
 
-	if (argc != 2)
-		\
+if (argc != 2)
+	\
 
-	if ((val = fcntl(atoi(argv[1]), F_GETFL, 0)) < 0)
-		err_sys("fcntl error for fd 
+if ((val = fcntl(atoi(argv[1]), F_GETFL, 0)) < 0)
+	err_sys("fcntl error for fd 
 
-	switch (val & O_ACCMODE) {
-	case O_RDONLY:
-		printf("read only");
-		break;
+switch (val & O_ACCMODE) {
+case O_RDONLY:
+	printf("read only");
+	break;
 
-	case O_WRONLY:
-		printf("write only");
-		break;
+case O_WRONLY:
+	printf("write only");
+	break;
 
-	case O_RDWR:
-		printf("read write");
-		break;
+case O_RDWR:
+	printf("read write");
+	break;
 
-	default:
-		err_dump("unknown access mode");
-	}
+default:
+	err_dump("unknown access mode");
+}
 
-	if (val & O_APPEND)
-		printf(", append");
-	if (val & O_NONBLOCK)
-		printf(", nonblocking");
-	if (val & O_SYNC)
-		printf(", synchronous writes");
+if (val & O_APPEND)
+	printf(", append");
+if (val & O_NONBLOCK)
+	printf(", nonblocking");
+if (val & O_SYNC)
+	printf(", synchronous writes");
 
 #if !defined(_POSIX_C_SOURCE) && defined(O_FSYNC) && (O_FSYNC != O_SYNC)
-	if (val & O_FSYNC)
-		printf(", synchronous writes");
+if (val & O_FSYNC)
+	printf(", synchronous writes");
 #endif
 
-	putchar('\n');
-	exit(0);
+putchar('\n');
+exit(0);
 }	
 ```
 
@@ -1570,19 +1570,19 @@ Nella ==struttura stat== abbiamo tutti i dati come output dalla funzione:
 
 ```c
 struct stat {
-	mode_t		st_mode;	/*file type & mode (permissions)*/
-	ino_t		st_ino;		/*i-node number (serial number)*/
-	dev_t		st_dev;		/*device number (file system)*/
-	dev_t		st_rdev;	/*device number for special files*/
-	nlink_t		st_nlink;	/*number of links*/
-	uid_t		st_uid;		/*user ID of owner*/
-	gid_t		st_gid;		/*group ID of owner*/
-	off_t		st_size;	/*size in bytes, for regular files*/
-	struct timespec st_atim;/*time of last access*/
-	struct timespec st_mtim;/*time of last modification*/
-	struct timespec st_ctim;/*time of last file status change*/
-	blksize_t	st_blksize;	/*best I/O block size*/
-	blkcnt_t	st_blocks;	/*number of disk blocks allocated*/
+mode_t		st_mode;	/*file type & mode (permissions)*/
+ino_t		st_ino;		/*i-node number (serial number)*/
+dev_t		st_dev;		/*device number (file system)*/
+dev_t		st_rdev;	/*device number for special files*/
+nlink_t		st_nlink;	/*number of links*/
+uid_t		st_uid;		/*user ID of owner*/
+gid_t		st_gid;		/*group ID of owner*/
+off_t		st_size;	/*size in bytes, for regular files*/
+struct timespec st_atim;/*time of last access*/
+struct timespec st_mtim;/*time of last modification*/
+struct timespec st_ctim;/*time of last file status change*/
+blksize_t	st_blksize;	/*best I/O block size*/
+blkcnt_t	st_blocks;	/*number of disk blocks allocated*/
 };
 ```
 
@@ -1607,35 +1607,35 @@ dove ==st_mode contiene sia il tipo di file che i privilegi==. Per vedere che fi
 int
 main(int argc, char *argv[])
 {
-	int			i;
-	struct stat	buf;
-	char		*ptr;
+int			i;
+struct stat	buf;
+char		*ptr;
 
-	for (i = 1; i < argc; i++) {
-		printf("
-		if (lstat(argv[i], &buf) < 0) {
-			err_ret("lstat error");
-			continue;
-		}
-		if (S_ISREG(buf.st_mode))
-			ptr = "regular";
-		else if (S_ISDIR(buf.st_mode))
-			ptr = "directory";
-		else if (S_ISCHR(buf.st_mode))
-			ptr = "character special";
-		else if (S_ISBLK(buf.st_mode))
-			ptr = "block special";
-		else if (S_ISFIFO(buf.st_mode))
-			ptr = "fifo";
-		else if (S_ISLNK(buf.st_mode))
-			ptr = "symbolic link";
-		else if (S_ISSOCK(buf.st_mode))
-			ptr = "socket";
-		else
-			ptr = "** unknown mode **";
-		printf("
+for (i = 1; i < argc; i++) {
+	printf("
+	if (lstat(argv[i], &buf) < 0) {
+		err_ret("lstat error");
+		continue;
 	}
-	exit(0);
+	if (S_ISREG(buf.st_mode))
+		ptr = "regular";
+	else if (S_ISDIR(buf.st_mode))
+		ptr = "directory";
+	else if (S_ISCHR(buf.st_mode))
+		ptr = "character special";
+	else if (S_ISBLK(buf.st_mode))
+		ptr = "block special";
+	else if (S_ISFIFO(buf.st_mode))
+		ptr = "fifo";
+	else if (S_ISLNK(buf.st_mode))
+		ptr = "symbolic link";
+	else if (S_ISSOCK(buf.st_mode))
+		ptr = "socket";
+	else
+		ptr = "** unknown mode **";
+	printf("
+}
+exit(0);
 }	
 ```
 
@@ -1835,7 +1835,7 @@ int futimes(int fd, const struct timespec times[2]);
 
 
 - ==utimensat==: uguale a futimens ma usa i **microsecondi**, che sono meno affidabili detti da un compilatore dato che la granularità promessa è minore di quella possibile
-	
+
 ```bash
 int utimensat(int fd, const char *pathname, const struct timespec times[2], int flag);
 ```
@@ -1873,26 +1873,26 @@ Per capire come funziona possiamo analizzare il file zap.c:
 int
 main(int argc, char *argv[])
 {
-	int				i, fd;
-	struct stat		statbuf;
-	struct timespec	times[2];
+int				i, fd;
+struct stat		statbuf;
+struct timespec	times[2];
 
-	for (i = 1; i < argc; i++) {
-		if (stat(argv[i], &statbuf) < 0) {	/* fetch current times */
-			err_ret("
-			continue;
-		}
-		if ((fd = open(argv[i], O_RDWR | O_TRUNC)) < 0) { /* truncate */
-			err_ret("
-			continue;
-		}
-		times[0] = statbuf.st_atim; /* per MacOS usare st_atimeprec */
-		times[1] = statbuf.st_mtim; /* per MacOS usare st_mtimeprec */
-		if (futimens(fd, times) < 0)		/* reset times */
-			err_ret("
-		close(fd);
+for (i = 1; i < argc; i++) {
+	if (stat(argv[i], &statbuf) < 0) {	/* fetch current times */
+		err_ret("
+		continue;
 	}
-	exit(0);
+	if ((fd = open(argv[i], O_RDWR | O_TRUNC)) < 0) { /* truncate */
+		err_ret("
+		continue;
+	}
+	times[0] = statbuf.st_atim; /* per MacOS usare st_atimeprec */
+	times[1] = statbuf.st_mtim; /* per MacOS usare st_mtimeprec */
+	if (futimens(fd, times) < 0)		/* reset times */
+		err_ret("
+	close(fd);
+}
+exit(0);
 }
 ```
 
@@ -2004,10 +2004,10 @@ Questa memoria (in questo per sistemi a 32bit) è suddivisa in:
 - ==...==: spazio virtuale super mega ampio
 - ==Kernel space==: zona vietata al programmatore dove il kernel fa le sue cose
 - ==Environment + arguments==:
-		
-	- **arguments**: stringhe passate al programma che le interpreterà
-	- **environment**: trovo i caratteri ASCII delle variabili di ambiente
-		
+	
+- **arguments**: stringhe passate al programma che le interpreterà
+- **environment**: trovo i caratteri ASCII delle variabili di ambiente
+	
 - ==Stack==: usato per **lavorare con le funzioni**, infatti quando una **funzione viene invocata mette in uno stack-frame le variabili locali** (o automatiche) allocate al momento della chiamata della funzione. Questa funzione potrebbe chiamarne un'altra, ecc ecc, allora lo **stack cresce verso il basso**. Ogni funzione può **accedere alle proprie variabili e a quelle globali**. È stata scelta questa organizzazione perché **non si può prevedere a priori quanto spazio servirà** perché potrebbe essere richiamata una funzione in modo ricorsivo, allora si usa lo ==swapping** e si fa di **non allocare nella RAM tutta la memoria del processo== ma solo quella necessaria. Il resto dei dati verranno pescati dalla memoria di massa tramite uno swap-in. 
 
 
@@ -2325,7 +2325,7 @@ differenza tra parent e child
 
 
 funzione wait
-	undo un poiircesso fa un child il parent vuole sapre cosa stia facendo il chidld, allor ail sistemama mantine delle info per capire cosa fa es: se sta continuando o è stato killato ad un cero punto il child conclude e chiude allora il kernel non butta via le infodato che le deve dare al parent aspetando che lo interroghi
+undo un poiircesso fa un child il parent vuole sapre cosa stia facendo il chidld, allor ail sistemama mantine delle info per capire cosa fa es: se sta continuando o è stato killato ad un cero punto il child conclude e chiude allora il kernel non butta via le infodato che le deve dare al parent aspetando che lo interroghi
 
 questo stato viene detto lo stato dei porcessi zombie dato che il prcesso child è morto ed il parent non vuole saperne nulla, allora le info rimangono li ma senza che mai interrogate, per questo zombie
 
@@ -2495,7 +2495,7 @@ clock_t times(struct tms *buf)
 un budf vengon omessi i risultati
 
 struct tms {
-	...
+...
 }
 
 il valore di ritorno da il tempo reale passato
@@ -2516,7 +2516,7 @@ struct rusage {
              long ru_idrss;           /* integral unshared data size */
              long ru_isrss;           /* integral unshared stack size */
              long ru_minflt;          /* page reclaims */
-	     long ru_majflt;          /* page (4k byte) faults (dice se delle pagine sono state mappate dato che non è nella memoria fisica)*/
+     long ru_majflt;          /* page (4k byte) faults (dice se delle pagine sono state mappate dato che non è nella memoria fisica)*/
              long ru_nswap;           /* swaps */
              long ru_inblock;         /* block input operations */
              long ru_oublock;         /* block output operations */
