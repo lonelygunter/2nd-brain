@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
+                "file": "Uni/PASD/2022.12.09-07-A* search.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,8 +33,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
-                "mode": "source",
+                "file": "Uni/PASD/2022.12.09-07-A* search.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
+                "file": "Uni/PASD/2022.12.09-07-A* search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md"
+                "file": "Uni/PASD/2022.12.09-07-A* search.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
+                "file": "Uni/PASD/2022.12.09-07-A* search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,15 +201,15 @@
   },
   "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
-    "Uni/PSR/2022.11.29-00-Advanced IO.md",
-    "Uni/PSR/2022.11.25-01-Thread attributes.md",
-    "Uni/PSR/2022.11.25-00-Thread limits.md",
-    "Uni/PSR/2022.11.30-01-select().md",
-    "Uni/PSR/2022.11.30-02-readv() and writev().md",
-    "Uni/PSR/2022.12.02-00-Pipe.md",
-    "Uni/PSR/2022.11.30-03-Memory-mapped IO.md",
-    "Uni/PSR/2022.12.07-00-Socket.md",
-    "Uni/PSR/2022.12.07-01-Socket creation.md",
-    "Uni/PSR/2022.12.07-02-Socket addresses.md"
+    "Uni/PASD/2022.12.09-06-Greedy search.md",
+    "Uni/PASD/2022.12.09-07-A* search.md",
+    "Uni/PASD/2022.12.09-04-Depth first search.md",
+    "Uni/PASD/2022.12.09-01-Uninformed search.md",
+    "Uni/PASD/2022.12.09-02-Informed search.md",
+    "Uni/PASD/2022.12.09-03-Breadth first search.md",
+    "Uni/PASD/2022.12.09-05-Uniform cost search.md",
+    "Uni/PASD/2022.12.09-00-Autometed Planning.md",
+    "Uni/PSR/LaTeX PSR.md",
+    "Uni/PSR/2022.11.29-00-Advanced IO.md"
   ]
 }
