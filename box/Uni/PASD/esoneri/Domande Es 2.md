@@ -153,12 +153,12 @@ vincoli:
 	- ==cardinalità 1:1== risorsa->task: $$\sum_{j=1}^n x_{ij} = 1\ \ \ \forall\ \ \ i=1,...,n$$
 	- ==cardinalità 1:1== task->risorsa: $$\sum_{i=1}^n x_{ij} = 1\ \ \ \forall\ \ \ j=1,...,n$$
 	- per ==mantenere un valore tra (0,1)==: $$x_{ij} \geq 0$$
+![](Uni/PASD/img/probasslin.jpeg)
 <!--ID: 1670514107085-->
 
 
 
-###### @ [Network flow models] Si consideri un ambiente di produzione cellulare. Ci sono nove cellule che hanno la capacità di assumere 1 o 2 posti di lavoro. Supponiamo che ci siano sette lavori e le ore per completare i lavori per cella sono riportate di seguito:![](Uni/PASD/esoneri/img/nfm6.jpeg):
-Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle possono gestire al massimo 1 lavoro. Tutti e sette i lavori devono essere gestiti da una cella. Scrivi un modello di ottimizzazione per questo problema di assegnazione.:
+###### @ [Network flow models] Si consideri un ambiente di produzione cellulare. Ci sono nove cellule che hanno la capacità di assumere 1 o 2 posti di lavoro. Supponiamo che ci siano sette lavori e le ore per completare i lavori per cella sono riportate di seguito:![](Uni/PASD/esoneri/img/nfm6.jpeg) Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle possono gestire al massimo 1 lavoro. Tutti e sette i lavori devono essere gestiti da una cella. Scrivi un modello di ottimizzazione per questo problema di assegnazione.::
 > $$\min \sum_{i=1}^9\sum_{j=1}^7c_{ij}x_{ij}$$
 > sv:
 > $$\sum_{j=1}^7 x_{ij} \leq 2\ \forall i\in\{C1,C3,C7,C9\}$$
@@ -178,15 +178,13 @@ Le celle 1, 3, 7 e 9 possono gestire fino a 2 lavori e tutte le altre celle poss
 
 
 
-###### @ [Random number generation] Descrivere un congruential linear generator.::
-- si basa sulla ==creazione di numeri pseudo-casuali in (0,1)==  calcolati con un equazione lineare e non auto-correlati $$y_{k+1}=(ay_k+c)\mod m$$ $$u_{k+1}=y_{k+1}/m$$
-	dove abbiamo:
-	- $m$: modulo
-	- $a$: moltiplicatore
-	- $c$: incremento
-	- $y_0$: seed
-- avremo un ==loop di valori== dato che questi andranno a riproporsi nella stessa sequenza
-<!--ID: 1670568455007-->
+###### @ [Random number generation] Descrivere un congruential linear generator::
+generatore di numeri casuali RNG è un dispositivo/algoritmo che ==genera una sequenza di simboli== che un osservatore esterno rappresenta come ==indipendenti di una distribuzione di probabilità==
+<!--ID: 1670777678460-->
+
+
+
+
 
 
 

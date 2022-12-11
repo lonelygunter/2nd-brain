@@ -47,15 +47,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
-                "mode": "preview",
+                "file": "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md",
+                "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "cut",
+                "query": "assign",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -146,7 +145,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 376.5,
+    "collapsed": true
   },
   "right": {
     "id": "26fa9bff6ec517ad",
@@ -214,17 +214,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3a1c41b1dfe5630d",
+  "active": "bf73eed2ceb97e97",
   "lastOpenFiles": [
-    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
+    "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md",
     "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md",
-    "Uni/PASD/esoneri/Domande Es 2.md",
     "Uni/PASD/2022.11.21-01-Flow problem - costo fisso.md",
+    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
+    "Uni/PASD/esoneri/Domande Es 2.md",
     "Uni/PASD/2022.11.21-04-Problema di cammino più breve e rapido (Shortest quickest path problem).md",
     "Uni/PASD/2022.11.25-01-Genetics Algorithms.md",
     "Uni/PASD/2022.12.09-07-A* search.md",
     "Uni/PASD/2022.12.09-03-Breadth first search.md",
-    "Uni/PASD/2022.12.09-01-Uninformed search.md",
-    "Uni/PASD/2022.12.09-02-Informed search.md"
+    "Uni/PASD/2022.12.09-01-Uninformed search.md"
   ]
 }
