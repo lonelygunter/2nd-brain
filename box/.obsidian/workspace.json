@@ -13,46 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "fd8292bfc8a1c6fa"
+            "group": "2e0d59ca84937449"
           }
         ]
       },
       {
-        "id": "443f12a1e284753c",
+        "id": "91672ca8ce60af95",
         "type": "tabs",
         "children": [
           {
-            "id": "bf73eed2ceb97e97",
+            "id": "f5bd07e28a611d15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "fd8292bfc8a1c6fa"
-          },
-          {
-            "id": "e798da94233ac655",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
+            "group": "2e0d59ca84937449"
           }
         ]
       }
@@ -84,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "assign",
+                "query": "deviazione standard",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,8 +80,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "7590126ebc98fe26",
@@ -145,8 +131,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.5,
-    "collapsed": true
+    "width": 376.5
   },
   "right": {
     "id": "26fa9bff6ec517ad",
@@ -162,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md"
+                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md"
               }
             }
           },
@@ -184,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -214,17 +199,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "bf73eed2ceb97e97",
+  "active": "3a1c41b1dfe5630d",
   "lastOpenFiles": [
+    "Uni/PASD/2022.12.01-00-Computer simulation.md",
+    "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
+    "Uni/PASD/2022.12.02-02-Terminating simulation.md",
+    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
+    "Uni/PASD/esoneri/Domande Es 2.md",
+    "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
     "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md",
     "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md",
     "Uni/PASD/2022.11.21-01-Flow problem - costo fisso.md",
-    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md",
-    "Uni/PASD/esoneri/Domande Es 2.md",
-    "Uni/PASD/2022.11.21-04-Problema di cammino più breve e rapido (Shortest quickest path problem).md",
-    "Uni/PASD/2022.11.25-01-Genetics Algorithms.md",
-    "Uni/PASD/2022.12.09-07-A* search.md",
-    "Uni/PASD/2022.12.09-03-Breadth first search.md",
-    "Uni/PASD/2022.12.09-01-Uninformed search.md"
+    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md"
   ]
 }

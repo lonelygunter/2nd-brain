@@ -198,9 +198,9 @@ Per ottenere un periodo di generazione uguale a m:
 
 
 ###### @ [Random number generation] Descrivere il campionamento della trasformata inversa.::
-prendiamo in considerazion:
+Impostiamo la seguente relazione considerando $F_X$ la ==funzione di ripartizione della variabile aleatoria== desiderata:
+$$F_X(x_i)=u_i\Leftrightarrow F_X^{-1}(u_i)=x_i$$
 - community distribution function (==CDF==): $F_X(x)=P(F^{-1}(U)\leq x)=P(U\leq F(x))=F(x)$
-- ==densità==: $f(x)=\frac{d}{dx}F(x)$
 <!--ID: 1670568455018-->
 
 
@@ -208,7 +208,7 @@ prendiamo in considerazion:
 ###### @ [Random number generation] Descrivere come campionare la distribuzione esponenziale::
 Vogliamo generare dei ==numeri pseudo casuali== che seguono una ==distribuzione esponenziale==:
 - community distribution function (CDF): $F_X(x)=1-e^{-\lambda x}$
-- densità: $f_X(x)=\lambda e^{-\lambda x}$
+con funzione 
 <!--ID: 1670568455023-->
 
 
