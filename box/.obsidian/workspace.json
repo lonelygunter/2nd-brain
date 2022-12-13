@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,13 +33,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
             "group": "2e0d59ca84937449"
+          },
+          {
+            "id": "ce90531192686998",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Uni/PASD/2022.12.02-02-Terminating simulation.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": true
+              }
+            }
           }
         ]
       }
@@ -71,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "deviazione standard",
+                "query": "R_i",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -131,7 +144,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 376.5,
+    "collapsed": true
   },
   "right": {
     "id": "26fa9bff6ec517ad",
@@ -147,7 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md"
+                "file": "Uni/PASD/esoneri/Domande Es 2.md"
               }
             }
           },
@@ -169,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
+                "file": "Uni/PASD/esoneri/Domande Es 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,20 +210,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "3a1c41b1dfe5630d",
+  "active": "f5bd07e28a611d15",
   "lastOpenFiles": [
-    "Uni/PASD/2022.12.01-00-Computer simulation.md",
-    "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md",
     "Uni/PASD/2022.12.02-02-Terminating simulation.md",
-    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
     "Uni/PASD/esoneri/Domande Es 2.md",
+    "Uni/PASD/2022.11.21-00-Network Flow Problems.md",
+    "Uni/PASD/2022.11.17-00-Tabu Search.md",
     "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
-    "Uni/PASD/2022.11.21-03-Problema di assegnamento (Assignment problem).md",
-    "Uni/PASD/2022.11.21-02-Problema di trasporto (Transportation problem).md",
-    "Uni/PASD/2022.11.21-01-Flow problem - costo fisso.md",
-    "Uni/PASD/2022.11.21-05-Problema di massimo flusso (Maxiumum flow problem).md"
+    "Uni/PASD/2022.12.02-01-Efficiency of Sample Information (ESI).md",
+    "Uni/PASD/2022.12.02-03-Non terminating simulation.md",
+    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
+    "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
+    "Uni/PASD/2022.12.09-05-Uniform cost search.md"
   ]
 }

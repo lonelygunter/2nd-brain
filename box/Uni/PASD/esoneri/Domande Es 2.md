@@ -208,7 +208,7 @@ $$F_X(x_i)=u_i\Leftrightarrow F_X^{-1}(u_i)=x_i$$
 ###### @ [Random number generation] Descrivere come campionare la distribuzione esponenziale::
 Vogliamo generare dei ==numeri pseudo casuali== che seguono una ==distribuzione esponenziale==:
 - community distribution function (CDF): $F_X(x)=1-e^{-\lambda x}$
-con funzione 
+con ==funzione quantile== $$u=1-e^{-\lambda x}\Rightarrow x_k=-\frac{1}{\lambda}\ln(1-u_k)$$
 <!--ID: 1670568455023-->
 
 
@@ -317,13 +317,13 @@ $$ESI=\frac{EVSI}{EVPI}$$
 
 
 ###### @ [Decision Analysis] Qual è la relazione tra un sondaggio e una "sfera di cristallo"?::
-che nel primo non sai cosa succederà ma sai con che probabilità accadranno gli ==eventi futuri== (stretta incertezza) nel secondo ==sappiamo già cosa succederà==
+che il primo fornisce delle ==informazioni che ti potrebbero aiutare a prendere una decisione== ma che ==non ti permettono di avere perfetta previsione== il secondo ==permette di scegliere e di sapere a prescindere le situazioni aleatorie che si presentano==
 <!--ID: 1670605119726-->
 
 
 
 ###### @ [Decision Analysis] Che cos'è una strategia/politica?::
-è un ==piano che si vuole attuare== per una specifica situazione della quale ne vendono valutate le performance tramite la computer simulation
+è un ==piano che si vuole attuare== per una specifica situazione della quale ne vengono valutate le performance tramite la computer simulation
 <!--ID: 1670605119732-->
 
 
@@ -394,8 +394,8 @@ abbiamo un outlier se una misurazione è
 
 ###### @ [Exploratory data analysis: basics] Quali informazioni possiamo ricavare dai seguenti boxplot?![](Uni/PASD/esoneri/img/esqua.jpeg)::
 - Detroit ha una ==mediana== delle misurazioni più alta di quella di Millwaukee
-- Millwaukee ha le misurazioni più basse
-- Detroit ha le misurazioni più alte
+- Q1, Q2 di Millwaukee sono minori di Ditroit
+- Q3, Q4 di Detroit sono maggiori di Millwaukee
 - Detroit ha più valori compresi nell'IQR di Millwaukee
 - Detroit ha un outilier
 <!--ID: 1670682749285-->
@@ -403,9 +403,11 @@ abbiamo un outlier se una misurazione è
 
 
 
-###### @ [Exploratory data analysis: basics] Definire il punteggio z di un valore xij preso da una caratteristica numerica aj::
+###### @ [Exploratory data analysis: basics] Definire il punteggio z di un valore xij preso da una caratteristica numerica aj:
 ???
-<!--ID: 1670766972340-->
+
+
+
 
 
 
@@ -448,12 +450,12 @@ s_k = stato k-esimo
 E_k+ = eventi di conseguenza ad altri
 E_k- = eventi resi impossibili dalla presenza di altri
 while (C != insieme vuoto):
-< estraggo A_k da C >
-t = t_k
-s_k = ϕ(s_{k-1},A_k)
-< aggiornare le statistiche >
-C = (C tranne E_k-)
-C.append(E_k+)
+	< estraggo A_k da C >
+	t = t_k
+	s_k = ϕ(s_{k-1},A_k)
+	< aggiornare le statistiche >
+	C.pop(E_k-)
+	C.append(E_k+)
 ```
 <!--ID: 1670605238830-->
 
@@ -475,13 +477,17 @@ impostando un ==seed statico==
 
 
 ###### @ [Computer simulation] Descrivere come possiamo stimare il numero di cicli di simulazione necessari per ottenere una determinata precisione::
-???
+$$R=R_i(\frac{acc_i}{acc_{target}})^2$$
+con
+- $R_i$: run attuali
+- $acc_i$: accuratezza con $R_i$ run
+- $acc_{target}$: accuratezza alla quale puntiamo
 <!--ID: 1670605238850-->
 
 
 
-###### @ [Computer simulation] Si supponga che, dopo 300 cicli di simulazione, l'intervallo di confidenza di una data misura di prestazione sia 200+-20 (con 1-alpha=0.90). Quante corse aggiuntive sono necessarie per ottenere una precisione del 5%?::
-???
+###### @ [Computer simulation] Si supponga che, dopo 300 cicli di simulazione, l'intervallo di confidenza di una data misura di prestazione sia $200\pm20$ (con $1-\alpha =0.90$). Quante corse aggiuntive sono necessarie per ottenere una precisione del 5%?::
+uso $R=R_i(\frac{acc_i}{acc_{target}})^2$ ed ottengo $$R=300(\frac{0.1}{0.05})^2$$
 <!--ID: 1670685688087-->
 
 
@@ -559,8 +565,19 @@ while (OPEN != empty):
 
 
 ###### @ [Automated planning] What is the role of the heuristic function in an A* search?::
+Il suo ruolo è di ==unire greedy e uniform cost algoritms== per avere un algoritmo che tiene conto sia del ==costo del nodo== che della ==distanza dal goal==: $$F(x)=g(x)+h(x)$$
+<!--ID: 1670918633687-->
+
+
+
+
+
+
+
+
+
+###### @ [Automated planning] List the properties of the A* search (no proof is required):
 ???
-<!--ID: 1670766972352-->
 
 
 
@@ -568,9 +585,9 @@ while (OPEN != empty):
 
 
 
-###### @ [Automated planning] List the properties of the A* search (no proof is required)::
+
+###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle:
 ???
-<!--ID: 1670766972358-->
 
 
 
@@ -578,9 +595,9 @@ while (OPEN != empty):
 
 
 
-###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle::
+
+###### @ [Automated planning] What is the difference between progression planning and regression planning?:
 ???
-<!--ID: 1670766972364-->
 
 
 
@@ -588,9 +605,9 @@ while (OPEN != empty):
 
 
 
-###### @ [Automated planning] What is the difference between progression planning and regression planning?::
+
+###### @ [Automated planning] What is the closed-world assumption?:
 ???
-<!--ID: 1670766972371-->
 
 
 
@@ -598,19 +615,10 @@ while (OPEN != empty):
 
 
 
-###### @ [Automated planning] What is the closed-world assumption?::
+
+###### @ [Automated planning] A heuristic function estimates how far a “state” is from the “goal state”. How can we define a general heuristic function based on a STRIPS model?:
 ???
-<!--ID: 1670766972378-->
 
-
-
-
-
-
-
-###### @ [Automated planning] A heuristic function estimates how far a “state” is from the “goal state”. How can we define a general heuristic function based on a STRIPS model?::
-???
-<!--ID: 1670766972382-->
 
 
 
