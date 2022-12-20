@@ -4,15 +4,16 @@ tags: 2022-12-01 PASD esonero
 ---
 
 ## Improvement Heuristics
-###### @ [Improvement Heuristics] Descrivere lo pseudocodice dell'algoritmo di "local search" (min)::
+###### @ [Improvement Heuristics] Descrivere lo pseudocodice dell'algoritmo di "local search"::
 ```python
-x^k = soluzione
+x^0 = soluzione ammissibile iniziale
 z(x^k) = valore della f.o. di x^k
 k = 0
-while z(x^k) < z(x^(k-1)):
-    < solve P con x in N(x^k) >
-    < imposto x^(k+1) come soluzione ottima >
+repeat:
+    < valuta ammissibilità e costo delle soluzioni in N(x^k) >
+    < prendo migliore soluzione possibile x^(k+1) in N(x^k) >
     k += 1
+until z(x^(k+1)) == z(x^k)
 ```
 ![](Uni/PASD/esoneri/img/localser.jpeg)
 <!--ID: 1670509702689-->
@@ -171,15 +172,14 @@ vincoli:
 
 ## Random number generation
 ###### @ [Random number generation] Cos'è un generatore di numeri pseudo-casuali?::
-- per un'utente normale funziona con delle  blackbox:
-1. ==Congreuntial Linear Generator (CLG)==: genera numeri **pseudo-casuali tra (0,1) non autocorrelati** ($u_i$)
-2. ==Cumulative distribution function (CDF)==: utilizza una funzione **g()** per **trasformare $u_i$ in $x_i$**
+generatore di numeri casuali RNG è un dispositivo/algoritmo che ==genera una sequenza di simboli== che un osservatore esterno rappresenta come ==indipendenti di una distribuzione di probabilità==
 <!--ID: 1670568178278-->
 
 
 
 ###### @ [Random number generation] Descrivere un congruential linear generator::
-generatore di numeri casuali RNG è un dispositivo/algoritmo che ==genera una sequenza di simboli== che un osservatore esterno rappresenta come ==indipendenti di una distribuzione di probabilità==
+==produce una sequenza di numeri pseudo-casuali== $u_n$ **compresi tra (0,1)**, calcolati con un'equazione lineare e non auto-correlati (cioè che se ho un valore basso il prossimo pure lo sarà)
+![](Uni/PASD/img/unplot.jpeg)
 <!--ID: 1670777678460-->
 
 
@@ -189,6 +189,14 @@ generatore di numeri casuali RNG è un dispositivo/algoritmo che ==genera una se
 
 
 ###### @ [Random number generation] Descrivere la scelta dei parametri in un congruential linear generator::
+in  un ==loop== nel quale innesto:
+$$y_{k+1}=(ay_k+c)\mod m$$
+$$u_{k+1}=y_{k+1}/m$$
+dove abbiamo:
+	- $m$: modulo
+	- $a$: moltiplicatore
+	- $c$: incremento
+	- $y_0$: seed
 Per ottenere un periodo di generazione uguale a m:
 - $m$, $c$ devono essere ==primi tra loro==
 - $a$ ==divisibile== per tutti i ==fattori primi di $m$==
@@ -311,6 +319,10 @@ tramite l'Efficiency of Sample Information (ESI) cioè l'==efficienza dell'infor
 - $1$: allora l'informazione è **buona**
 - $0$: allora l'informazione **non è buona**
 $$ESI=\frac{EVSI}{EVPI}$$
+con
+- EVSI che rappresenta la ==cifra vantaggiosa== alla quale ==effettuare il sondaggio== con max reward $$EVSI=\text{ramo sondaggio a costo zero}-\text{ramo senza sondaggio}$$
+- EVPI: ==valore atteso all'incremento del reward==: $ERPI-ER^*$
+- Expected Reward Perfect Information (ERPI): nel newspaper boy problem è il ==profitto massimo per ogni giornata== (la diagonale in prratica) per poi applicarci Bayes $$ERPI=\sum_{j=1}^nP(\theta_j)\max(v_{ij})$$
 <!--ID: 1670685688071-->
 
 
@@ -323,7 +335,7 @@ che il primo fornisce delle ==informazioni che ti potrebbero aiutare a prendere 
 
 
 ###### @ [Decision Analysis] Che cos'è una strategia/politica?::
-è un ==piano che si vuole attuare== per una specifica situazione della quale ne vengono valutate le performance tramite la computer simulation
+è un ==piano che si vuole attuare== per una specifica situazione della quale ne vengono valutate le performance tramite la computer simulation (aspetto, guardo i dati e poi riagisco. )
 <!--ID: 1670605119732-->
 
 
@@ -359,7 +371,11 @@ Efficiency of Sample Information (==ESI==) che rappresenta l'==efficienza dell'i
 
 
 ###### @ [Decision Analysis] What is the downside risk?::
-indica la ==distanza dal target== (target: valore "minimo" sotto il quale il rischio non si vuole che scenda) intesa come valore al di sotto di esso(se viene superato il target restituisce zero) $$D(a,s)=\max\{0,T-v(a,s)\}$$
+indica la ==distanza dal target $T$== (target: valore "minimo" sotto il quale il rischio non si vuole che scenda) intesa come valore al di sotto di esso(se viene superato il target restituisce zero) $$D(a,s)=\max\{0,T-v(a,s)\}$$
+con:
+- $a$: action
+- $s$: scenario
+- $v(a,s)$: reward ottenuto tramite l'azione $a$ se avviene lo scenario $s$
 <!--ID: 1670685688082-->
 
 
@@ -398,19 +414,10 @@ abbiamo un outlier se una misurazione è
 - Q3, Q4 di Detroit sono maggiori di Millwaukee
 - Detroit ha più valori compresi nell'IQR di Millwaukee
 - Detroit ha un outilier
+1. mediana più avanti
+2. più o meno variabilità data dal boxplot
+3. 
 <!--ID: 1670682749285-->
-
-
-
-
-###### @ [Exploratory data analysis: basics] Definire il punteggio z di un valore xij preso da una caratteristica numerica aj:
-???
-
-
-
-
-
-
 
 
 ###### @ [Exploratory data analysis: basics] Qual è un approccio alternativo per identificare gli outliers di una distribuzione normale?::
@@ -481,7 +488,7 @@ $$R=R_i(\frac{acc_i}{acc_{target}})^2$$
 con
 - $R_i$: run attuali
 - $acc_i$: accuratezza con $R_i$ run
-- $acc_{target}$: accuratezza alla quale puntiamo
+- $acc_{target}$: accuratezza alla quale puntiamo $$acc_{iniziale}=\frac{t_{\frac{\alpha}{2},R-1}\frac{S_R}{\sqrt{R}}}{\hat{\theta}_R}$$
 <!--ID: 1670605238850-->
 
 
@@ -565,63 +572,17 @@ while (OPEN != empty):
 
 
 ###### @ [Automated planning] What is the role of the heuristic function in an A* search?::
-Il suo ruolo è di ==unire greedy e uniform cost algoritms== per avere un algoritmo che tiene conto sia del ==costo del nodo== che della ==distanza dal goal==: $$F(x)=g(x)+h(x)$$
+Il suo ruolo è di ==stimare la distanza dal goal== andando ad ==unire greedy e uniform cost== algoritms per avere un algoritmo che tiene conto sia del ==costo del nodo== che della ==distanza dal goal==: $$F(x)=g(x)+h(x)$$
 <!--ID: 1670918633687-->
 
 
 
 
-
-
-
-
-
-###### @ [Automated planning] List the properties of the A* search (no proof is required):
-???
-
-
-
-
-
-
-
-
-###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle:
-???
-
-
-
-
-
-
-
-
-###### @ [Automated planning] What is the difference between progression planning and regression planning?:
-???
-
-
-
-
-
-
-
-
-###### @ [Automated planning] What is the closed-world assumption?:
-???
-
-
-
-
-
-
-
-
-###### @ [Automated planning] A heuristic function estimates how far a “state” is from the “goal state”. How can we define a general heuristic function based on a STRIPS model?:
-???
-
-
-
-
-
+###### @ [Automated planning] Illustrate two heuristic functions for the eight-tile puzzle::
+1. ==stimare la distanza dal goal== tramite le tessere messe fuori posto rispetto al goal
+2. ==distanza di Manattan==: vado a sommare le caselle che il tassello deve compiere per arrivare nella sua posizione goal
+	- $h_1$: numero tasselli non al loro posto
+	- $h_2$: sommatoria delle distanza di Manattan
+<!--ID: 1671123016265-->
 
 

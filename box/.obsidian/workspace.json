@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "249e2f2f55714790",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3a1c41b1dfe5630d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            },
-            "group": "2e0d59ca84937449"
-          }
-        ]
-      },
-      {
         "id": "91672ca8ce60af95",
         "type": "tabs",
         "children": [
@@ -33,28 +13,49 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "2022.09.01-01-System call.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            },
+            "group": "141cbbe42c4de3d6"
+          }
+        ]
+      },
+      {
+        "id": "fa8570f1787a8abe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1df73b9862ec04e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022.09.01-01-System call.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "2e0d59ca84937449"
+            "group": "141cbbe42c4de3d6"
           },
           {
-            "id": "ce90531192686998",
+            "id": "e8c68d5accf84b86",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.02-02-Terminating simulation.md",
-                "mode": "preview",
+                "file": "Uni/PSR/LaTeX PSR.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -66,7 +67,7 @@
       {
         "id": "51acc5932b11095d",
         "type": "tabs",
-        "dimension": 76.71711292200233,
+        "dimension": 48.19557625145518,
         "children": [
           {
             "id": "c3b5dbc3fd30a5f0",
@@ -84,8 +85,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "R_i",
-                "matchingCase": false,
+                "query": "\\mod",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -98,7 +99,7 @@
       {
         "id": "7590126ebc98fe26",
         "type": "tabs",
-        "dimension": 23.28288707799767,
+        "dimension": 51.804423748544814,
         "children": [
           {
             "id": "82be3ebff7e6db29",
@@ -139,13 +140,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 376.5,
-    "collapsed": true
+    "width": 376.5
   },
   "right": {
     "id": "26fa9bff6ec517ad",
@@ -161,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "2022.09.01-01-System call.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md"
+                "file": "2022.09.01-01-System call.md"
               }
             }
           },
@@ -183,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PASD/esoneri/Domande Es 2.md",
+                "file": "2022.09.01-01-System call.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -210,19 +209,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "f5bd07e28a611d15",
   "lastOpenFiles": [
-    "Uni/PASD/2022.12.02-02-Terminating simulation.md",
-    "Uni/PASD/esoneri/Domande Es 2.md",
-    "Uni/PASD/2022.11.21-00-Network Flow Problems.md",
-    "Uni/PASD/2022.11.17-00-Tabu Search.md",
-    "Uni/PASD/2022.11.14-02-Cumulative distribution function (CDF).md",
-    "Uni/PASD/2022.12.02-01-Efficiency of Sample Information (ESI).md",
-    "Uni/PASD/2022.12.02-03-Non terminating simulation.md",
-    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
-    "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
-    "Uni/PASD/2022.12.09-05-Uniform cost search.md"
+    "Uni/TOC - PSR.md",
+    "2022.09.01-01-System call.md",
+    "~Templates/<H.h>.md",
+    "~Templates/<intro.h>.md",
+    "~Templates/<stdio.h>.md",
+    "~Templates/TOC.md",
+    "Uni/PSR/LaTeX PSR.md",
+    "Uni/PSR/2022.09.01-00-Comandi utili.md",
+    "Uni/PSR/2022.09.01-01-fcntl().md",
+    "Uni/PSR/2022.10.01-00-Debugging ggbd.md"
   ]
 }

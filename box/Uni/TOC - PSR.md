@@ -3,9 +3,26 @@ alias:
 tags: PSR tommasi
 ---
 
+## Libri di testo consigliati
+
+- Advanced Programming in the Unix Environment, 3th ed, Stevens, Rago
+- TCP/IP 1, Stevens (facoltativo)
+- Unix Networking Programming the Socket Networking API, Stevens
+- The Linux Programing Interface, Kerrisk
+- manset
+- Gapil Guida alla Programmazione in Linux, Simone Piccardi
+
+
 # *TOC:*
 
-- ![[Uni/PSR/LaTeX PSR]]
+## \# Comandi utili
+- ![[Uni/PSR/2022.09.01-00-Comandi utili]]
+- ![[Uni/PSR/2022.10.01-00-Debugging ggbd]]
+
+
+## \# Introduzione
+- ![[2022.09.01-01-System call]]
+
 
 ## \# Process Group ID
 - ![[Uni/PSR/2022.11.15-00-Process group]]

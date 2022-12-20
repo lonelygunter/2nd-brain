@@ -212,16 +212,17 @@
     "Uni/PASD/img/parchils.jpeg",
     "Uni/PASD/img/cut.jpeg",
     "Uni/PASD/2022.12.12-00-Simulazioni senza termine",
-    "Uni/PASD/img/simnoterm.jpeg"
+    "Uni/PASD/img/simnoterm.jpeg",
+    "Uni/PSR/2022.12.13-00-UDP client and server"
   ],
   "File Hashes": {
     "~Templates/TOC.md": "161abb6dbabf381c4090b9807b9df407",
     "~Templates/<stdio.h>.md": "ff95f2766b6246f064dcedb65c174163",
     "WTODO.md": "121ef14f330f63c239590433c961c41d",
-    "Uni/TOC - PSR.md": "a321ef946695b13197dc2dcdee564069",
+    "Uni/TOC - PSR.md": "a4a4c3a02eaf536a0580c8099bbab8fc",
     "Uni/TOC - PASD.md": "43e203d2db14a7b1e9b2f685753aa48d",
     "Uni/TOC - BD.md": "860130c199d5e299fe7a850281c20a0a",
-    "Uni/PSR/LaTeX PSR.md": "b0d697b6e36fef1d99a2c47442f00be8",
+    "Uni/PSR/LaTeX PSR.md": "4a3e9aa4a43f00bba46a2fa16d018b56",
     "Uni/PSR/2022.11.30-03-Memory-mapped IO.md": "b9dfe93e960806d4b31facd93d4a7599",
     "Uni/PSR/2022.11.30-02-readv() and writev().md": "8ed96cda4ba345fdc835d829c61122e2",
     "Uni/PSR/2022.11.30-01-select().md": "d77f3a486c8e443eb369ac842acde389",
@@ -239,7 +240,7 @@
     "Uni/PSR/2022.11.15-01-Background e foregound.md": "17875ecc2402b6be62bac4ba31dad314",
     "Uni/PSR/2022.11.15-00-Process group.md": "7bfa1593a43523af5d23f057b9be39a0",
     "Uni/PSR/2022.09.00-00-fcntl().md": "0ae56a7d9bfb6f5b7e1e0c3b6b4d5e85",
-    "Uni/PASD/esoneri/Domande Es 2.md": "76c60749be8b3e209e071d7ee0a501ca",
+    "Uni/PASD/esoneri/Domande Es 2.md": "45adc991159b3b7bf3414c17dc3d478a",
     "Uni/PASD/esoneri/Domande Es 1.md": "380555034df7bf7112758b8b93c63375",
     "Uni/PASD/LaTeX PASD.md": "d5f618515160ab91566fccb4b2090dae",
     "Uni/PASD/2022.12.02-03-Non terminating simulation.md": "3946ff2931f6a8a1bf85e51c041b2469",
@@ -373,7 +374,7 @@
     "Uni/PSR/2022.12.06-00-XSI IPC.md": "1a9d0b37fca9cee2637ba8506a87c6b6",
     "Uni/PSR/2022.12.06-02-System V.md": "5cadba1fdb0dba951ef4d7e1ab23b2f3",
     "Uni/PSR/2022.12.06-03-POSIX semaphore.md": "2641258805c7f2a473015c04d2cf934e",
-    "Uni/PSR/2022.12.07-00-Socket.md": "967c8f1f657253d5ddbde24cbd085824",
+    "Uni/PSR/2022.12.07-00-Socket.md": "5e46a83563fd9a43e803abefe08c1abe",
     "Uni/PSR/2022.12.07-01-Socket creation.md": "41de3049151e75d03086ff04841f75cf",
     "Uni/PSR/2022.12.07-02-Socket addresses.md": "0472e04e615f88af29141e3f87493fd1",
     "Uni/PSR/2022.12.07-04-IPv6.md": "a173d75fe6925c486d3639677554a435",
@@ -391,7 +392,10 @@
     "Uni/PASD/2022.12.09-00-Autometed Planning.md": "73d3fd93748491a866a7227fd4c8c6e8",
     "Uni/PASD/2022.12.09-06-Greedy search.md": "c87ca3986efdc0993bfef36da219c26a",
     "Uni/PASD/2022.12.09-07-A* search.md": "58e8e4f7f738467f8bcfdc290fa66037",
-    "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md": "d4cfeadd5c0b297f1fc3c5065f929731"
+    "Uni/PASD/2022.12.12-00-Simulazioni senza termine.md": "d4cfeadd5c0b297f1fc3c5065f929731",
+    "Uni/PSR/2022.12.13-00-UDP client and server.md": "4717f7f6a9430a26088add572b8069a2",
+    "2022.10.00-00-Debugging ggbd.md": "2f13bca8eb03ba378931425f5e645bbd",
+    "Uni/PSR/2022.07.01-00-Comandi utili.md": "10d5ad2a74cd7df339e053b966149f96"
   },
   "fields_dict": {
     "Basic": [
