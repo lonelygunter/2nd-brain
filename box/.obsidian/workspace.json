@@ -4,45 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "91672ca8ce60af95",
+        "id": "fa8570f1787a8abe",
         "type": "tabs",
         "children": [
           {
-            "id": "f5bd07e28a611d15",
+            "id": "e8c68d5accf84b86",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022.09.01-01-System call.md",
+                "file": "Uni/PSR/2022.09.28-01-Librerie.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "141cbbe42c4de3d6"
+            "group": "18e76814328ec89a"
           }
         ]
       },
       {
-        "id": "fa8570f1787a8abe",
+        "id": "a74f689f460e32c5",
         "type": "tabs",
         "children": [
           {
-            "id": "1df73b9862ec04e1",
+            "id": "9ce1e702a5647779",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022.09.01-01-System call.md",
+                "file": "Uni/PSR/2022.09.28-01-Librerie.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
             },
-            "group": "141cbbe42c4de3d6"
+            "group": "18e76814328ec89a"
           },
           {
-            "id": "e8c68d5accf84b86",
+            "id": "80fa688a9138c4cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -54,8 +54,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -67,7 +66,7 @@
       {
         "id": "51acc5932b11095d",
         "type": "tabs",
-        "dimension": 48.19557625145518,
+        "dimension": 70.31431897555296,
         "children": [
           {
             "id": "c3b5dbc3fd30a5f0",
@@ -85,8 +84,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\\mod",
-                "matchingCase": true,
+                "query": "deep",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -99,7 +98,7 @@
       {
         "id": "7590126ebc98fe26",
         "type": "tabs",
-        "dimension": 51.804423748544814,
+        "dimension": 29.68568102444703,
         "children": [
           {
             "id": "82be3ebff7e6db29",
@@ -160,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022.09.01-01-System call.md",
+                "file": "Uni/PSR/2022.09.28-01-Librerie.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022.09.01-01-System call.md"
+                "file": "Uni/PSR/2022.09.28-01-Librerie.md"
               }
             }
           },
@@ -182,7 +181,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022.09.01-01-System call.md",
+                "file": "Uni/PSR/2022.09.28-01-Librerie.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -212,17 +211,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f5bd07e28a611d15",
+  "active": "e8c68d5accf84b86",
   "lastOpenFiles": [
-    "Uni/TOC - PSR.md",
-    "2022.09.01-01-System call.md",
-    "~Templates/<H.h>.md",
-    "~Templates/<intro.h>.md",
-    "~Templates/<stdio.h>.md",
-    "~Templates/TOC.md",
+    "Uni/PSR/2022.09.27-00-Comandi utili.md",
+    "Uni/PSR/2022.09.28-01-Librerie.md",
+    "Uni/PSR/2022.09.28-02-Librerie statiche.md",
+    "Uni/PSR/2022.09.28-03-Librerie dinamiche.md",
+    "Uni/PSR/2022.09.27-04-Make program.md",
+    "Uni/PSR/2022.09.27-03-File descriptor.md",
     "Uni/PSR/LaTeX PSR.md",
-    "Uni/PSR/2022.09.01-00-Comandi utili.md",
-    "Uni/PSR/2022.09.01-01-fcntl().md",
-    "Uni/PSR/2022.10.01-00-Debugging ggbd.md"
+    "Uni/TOC - PSR.md",
+    "Uni/PSR/2022.09.28-00-Direttive di preprocessore.md",
+    "Uni/PSR/2022.09.27-02-System call.md"
   ]
 }

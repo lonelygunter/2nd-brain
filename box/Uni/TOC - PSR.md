@@ -16,12 +16,15 @@ tags: PSR tommasi
 # *TOC:*
 
 ## \# Comandi utili
-- ![[Uni/PSR/2022.09.01-00-Comandi utili]]
-- ![[Uni/PSR/2022.10.01-00-Debugging ggbd]]
+- ![[Uni/PSR/2022.09.27-00-Comandi utili]]
+- ![[Uni/PSR/2022.09.30-00-Debugging ggbd]]
 
 
 ## \# Introduzione
-- ![[2022.09.01-01-System call]]
+- ![[Uni/PSR/2022.09.27-02-System call]]
+- ![[Uni/PSR/2022.09.27-04-Make program]]
+- ![[Uni/PSR/2022.09.28-00-Direttive di preprocessore]]
+- ![[Uni/PSR/2022.09.28-01-Librerie]]
 
 
 ## \# Process Group ID
