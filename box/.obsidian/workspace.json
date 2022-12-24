@@ -11,11 +11,51 @@
             "id": "4939e3d52b40a1eb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
+              "type": "markdown",
+              "state": {
+                "file": "2022.10.07-04-File sharing.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            },
+            "group": "0930b8fbf3f39fe9"
           }
         ]
+      },
+      {
+        "id": "49cdd18b9c94d468",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d298c8af39b94e03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022.10.07-04-File sharing.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": true
+              }
+            },
+            "group": "0930b8fbf3f39fe9"
+          },
+          {
+            "id": "bd7c80b3a462d216",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Uni/PSR/LaTeX PSR.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -27,7 +67,7 @@
       {
         "id": "51acc5932b11095d",
         "type": "tabs",
-        "dimension": 70.31431897555296,
+        "dimension": 56.11175785797439,
         "children": [
           {
             "id": "c3b5dbc3fd30a5f0",
@@ -59,10 +99,10 @@
       {
         "id": "7590126ebc98fe26",
         "type": "tabs",
-        "dimension": 29.68568102444703,
+        "dimension": 43.88824214202561,
         "children": [
           {
-            "id": "82be3ebff7e6db29",
+            "id": "373a4914ced6c43a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -120,6 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2022.10.07-04-File sharing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +171,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2022.10.07-04-File sharing.md"
+              }
             }
           },
           {
@@ -139,6 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2022.10.07-04-File sharing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,17 +223,17 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "c3b5dbc3fd30a5f0",
+  "active": "4939e3d52b40a1eb",
   "lastOpenFiles": [
-    "Uni/PSR/2022.09.28-03-Librerie dinamiche.md",
-    "Uni/PSR/2022.09.28-02-Librerie statiche.md",
-    "Uni/PSR/2022.09.28-01-Librerie.md",
-    "Uni/PSR/2022.09.28-00-Direttive di preprocessore.md",
-    "Uni/PSR/2022.09.27-04-Make program.md",
-    "Uni/PSR/2022.09.27-03-File descriptor.md",
+    "Uni/PSR/2022.10.07-00-File IO.md",
+    "2022.10.07-04-File sharing.md",
+    "Uni/PSR/LaTeX PSR.md",
     "Uni/PSR/2022.09.27-02-System call.md",
-    "Uni/PSR/2022.09.27-01-fcntl().md",
-    "Uni/PSR/2022.09.27-00-Comandi utili.md",
-    "Uni/PSR/LaTeX PSR.md"
+    "Uni/PSR/2022.09.27-06-write().md",
+    "Uni/PSR/2022.09.27-05-read().md",
+    "Uni/TOC - PSR.md",
+    "Uni/PSR/2022.10.04-01-fgets().md",
+    "Uni/PSR/2022.10.07-03-lseek().md",
+    "Uni/PSR/img/1proc.jpeg"
   ]
 }
