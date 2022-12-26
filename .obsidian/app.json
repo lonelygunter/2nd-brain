@@ -1,5 +1,7 @@
 {
   "showInlineTitle": true,
   "livePreview": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "newLinkFormat": "absolute",
+  "alwaysUpdateLinks": true
 }

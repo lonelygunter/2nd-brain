@@ -1,0 +1,4 @@
+{
+  "template": "box/~Templates/<stdio.h>",
+  "format": "Y.M.D-00-"
+}
