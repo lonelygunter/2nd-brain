@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
+                "file": "2022.10.11-03-access().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md"
+                "file": "2022.10.11-03-access().md"
               }
             }
           },
@@ -182,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
+                "file": "2022.10.11-03-access().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,10 +223,10 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "bd7c80b3a462d216",
+  "active": "4939e3d52b40a1eb",
   "lastOpenFiles": [
-    "2022.10.11-03-access().md",
     "Uni/PSR/LaTeX PSR.md",
+    "2022.10.11-03-access().md",
     "Uni/PSR/2022.10.11-00-File and directory.md",
     "Uni/PSR/2022.10.11-02-ID associati ai processi.md",
     "Uni/PSR/2022.09.27-00-Comandi utili.md",

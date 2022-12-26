@@ -232,7 +232,7 @@
     "Uni/TOC - PSR.md": "b8f0d829824e062ff9baad529cfa4e3e",
     "Uni/TOC - PASD.md": "8d7c92cbb70d2f4b0ce3c973d7c1599c",
     "Uni/TOC - BD.md": "2473d82631e29a925e8b087220880e75",
-    "Uni/PSR/LaTeX PSR.md": "8902451603fa5c58585a5b567015866e",
+    "Uni/PSR/LaTeX PSR.md": "ec87b3a9f7161a275c6faa9e57959fd4",
     "Uni/PSR/2022.11.30-03-Memory-mapped IO.md": "b9dfe93e960806d4b31facd93d4a7599",
     "Uni/PSR/2022.11.30-02-readv() and writev().md": "8ed96cda4ba345fdc835d829c61122e2",
     "Uni/PSR/2022.11.30-01-select().md": "d77f3a486c8e443eb369ac842acde389",
@@ -454,10 +454,12 @@
     "Uni/PSR/2022.10.07-05-dup().md": "1da77fb06233847ed5820032f4754e62",
     "Uni/PSR/2022.10.07-06-dup2().md": "f261225f00f3834dcff8008b4403e8da",
     "2022.10.11-00-stat().md": "b88294652bb95530afa9b6b161373bfd",
-    "Uni/PSR/2022.10.11-00-File and directory.md": "e002be6f7bc988a84c3591931b9c0ff5",
+    "Uni/PSR/2022.10.11-00-File and directory.md": "dd70d9e73074f45a648de9a3ef4dfa1e",
     "Uni/PSR/2022.10.07-07-fcntl().md": "af6ef8e28d6b6bb20b9c838f5154641f",
     "2022.10.11-01-ID associati ai processi.md": "02d4f47b7f488775607ad0d911fec679",
-    "Uni/PSR/2022.10.11-01-stat().md": "b88294652bb95530afa9b6b161373bfd"
+    "Uni/PSR/2022.10.11-01-stat().md": "b88294652bb95530afa9b6b161373bfd",
+    "2022.10.11-03-access().md": "84dbd81b575f9c3642617c8bf5520a73",
+    "Uni/PSR/2022.10.11-02-ID associati ai processi.md": "b6b18b41b80a1eaa194331d9caa0301a"
   },
   "fields_dict": {
     "Basic": [
