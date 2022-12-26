@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "315d23678e9a3964",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0a3dcb96efcaedf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d58475cf6553d64f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "box/2022.10.11-03-access().md",
+                "mode": "source",
+                "source": true
+              }
+            },
+            "group": "5eb760aaf4c4f799"
+          }
+        ]
+      },
+      {
+        "id": "e8a85e4c740c6425",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9dd36cc32ecbf9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "box/2022.10.11-03-access().md",
+                "mode": "preview",
+                "source": true
+              }
+            },
+            "group": "5eb760aaf4c4f799"
+          },
+          {
+            "id": "1a9bbc732cb99018",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "box/Uni/PSR/LaTeX PSR.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ba804b0811842ee5",
+    "type": "split",
+    "children": [
+      {
+        "id": "c16cc4c9fd66dca5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf267100b4056eda",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabeticalReverse"
+              }
+            }
+          },
+          {
+            "id": "730ef04ffa9f2fe2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7abe72ccf76ff6f7",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8cbe2429a98184b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "c801ab727647bb12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55d77b196f816c5c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "box/2022.10.11-03-access().md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5bfb0d8daf49efea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "box/2022.10.11-03-access().md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1afbc63ef7e107d3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ba8a1416596bccb3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "box/2022.10.11-03-access().md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d58475cf6553d64f",
+  "lastOpenFiles": [
+    "box/Uni/PSR/LaTeX PSR.md",
+    "box/2022.10.11-03-access().md"
+  ]
+}
