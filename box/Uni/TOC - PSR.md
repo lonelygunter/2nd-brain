@@ -44,6 +44,8 @@ tags: PSR tommasi
 ## \# File IO
 ![[Uni/PSR/2022.10.07-00-File IO]]
 
+## \# File and directory
+![[Uni/PSR/2022.10.11-00-File and directory]]
 
 ## \# Process Group ID
 ![[Uni/PSR/2022.11.15-00-Process group]]

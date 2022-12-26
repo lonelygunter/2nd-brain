@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022.10.07-04-File sharing.md",
+                "file": "2022.10.11-03-access().md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022.10.07-04-File sharing.md",
+                "file": "2022.10.11-03-access().md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022.10.07-04-File sharing.md",
+                "file": "Uni/PSR/LaTeX PSR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022.10.07-04-File sharing.md"
+                "file": "Uni/PSR/LaTeX PSR.md"
               }
             }
           },
@@ -182,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022.10.07-04-File sharing.md",
+                "file": "Uni/PSR/LaTeX PSR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -223,17 +223,17 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "4939e3d52b40a1eb",
+  "active": "bd7c80b3a462d216",
   "lastOpenFiles": [
-    "Uni/PSR/2022.10.07-00-File IO.md",
-    "2022.10.07-04-File sharing.md",
+    "2022.10.11-03-access().md",
     "Uni/PSR/LaTeX PSR.md",
-    "Uni/PSR/2022.09.27-02-System call.md",
-    "Uni/PSR/2022.09.27-06-write().md",
-    "Uni/PSR/2022.09.27-05-read().md",
+    "Uni/PSR/2022.10.11-00-File and directory.md",
+    "Uni/PSR/2022.10.11-02-ID associati ai processi.md",
+    "Uni/PSR/2022.09.27-00-Comandi utili.md",
     "Uni/TOC - PSR.md",
-    "Uni/PSR/2022.10.04-01-fgets().md",
-    "Uni/PSR/2022.10.07-03-lseek().md",
-    "Uni/PSR/img/1proc.jpeg"
+    "Uni/PSR/2022.10.11-01-stat().md",
+    "Uni/PSR/2022.10.07-07-fcntl().md",
+    "Uni/PSR/2022.10.04-02-fork().md",
+    "Uni/PSR/2022.10.07-06-dup2().md"
   ]
 }
