@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "box/Uni/PSR/2022.10.05-02-time().md",
+                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
                 "mode": "source",
                 "source": true
               }
             },
             "group": "5eb760aaf4c4f799"
-          },
-          {
-            "id": "02df988e6f6a9d13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "box/Uni/PSR/2022.10.11-00-File and directory.md",
-                "mode": "source",
-                "source": true
-              }
-            }
           }
         ]
       },
@@ -44,27 +32,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "box/Uni/PSR/2022.10.05-02-time().md",
-                "mode": "source",
+                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
+                "mode": "preview",
                 "source": true
               }
             },
             "group": "5eb760aaf4c4f799"
-          },
-          {
-            "id": "1a9bbc732cb99018",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "box/Uni/PSR/LaTeX PSR.md",
-                "mode": "source",
-                "source": true
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -117,7 +92,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cb68982d2606d8b4",
+            "id": "73dfb3585ac724b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -148,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "box/Uni/PSR/LaTeX PSR.md",
+                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "box/Uni/PSR/LaTeX PSR.md",
+                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,12 +163,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "box/Uni/PSR/LaTeX PSR.md"
+                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -211,17 +186,17 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "ba8a1416596bccb3",
+  "active": "a9dd36cc32ecbf9f",
   "lastOpenFiles": [
-    "box/Uni/PSR/2022.10.05-02-time().md",
+    "2022.10.21-01-Valore di NICE.md",
     "box/Uni/PSR/LaTeX PSR.md",
-    "box/Uni/PSR/2022.10.11-00-File and directory.md",
-    "box/Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
-    "box/Uni/PSR/2022.10.11-06-Last-time files.md",
-    "box/Uni/PSR/img/virtmemproc.jpeg",
-    "Untitled.md",
-    "README.md",
-    "box/Uni/PSR/2022.10.11-05-Hard link e link simbolici.md",
-    "box/Uni/PSR/2022.10.11-01-stat().md"
+    "box/Uni/PSR/2022.09.27-00-Comandi utili.md",
+    "box/Uni/TOC - PSR.md",
+    "box/Uni/PSR/2022.10.05-02-time().md",
+    "box/Uni/PSR/2022.10.19-00-Process control.md",
+    "2022.10.21-00-Race condition.md",
+    "box/Uni/PSR/2022.10.04-04-exec().md",
+    "box/Uni/PSR/2022.10.04-01-fgets().md",
+    "box/Uni/PSR/2022.10.04-02-fork().md"
   ]
 }
