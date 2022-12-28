@@ -48,10 +48,10 @@ tags: PSR tommasi
 ![[Uni/PSR/2022.10.11-00-File and directory]]
 
 ## \# Process Environment
-![[box/Uni/PSR/2022.10.14-00-Process Environment]]
+![[Uni/PSR/2022.10.14-00-Process Environment]]
 
 ## \# Process control
-![[box/Uni/PSR/2022.10.19-00-Process control]]
+![[Uni/PSR/2022.10.19-00-Process control]]
 
 ## \# Process Group ID
 ![[Uni/PSR/2022.11.15-00-Process group]]

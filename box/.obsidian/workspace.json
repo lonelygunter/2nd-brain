@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022.10.11-03-access().md",
+                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022.10.11-03-access().md",
+                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": true
@@ -45,17 +45,11 @@
             "id": "bd7c80b3a462d216",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/PSR/LaTeX PSR.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022.10.11-03-access().md",
+                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022.10.11-03-access().md"
+                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md"
               }
             }
           },
@@ -182,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022.10.11-03-access().md",
+                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -225,15 +219,15 @@
   },
   "active": "4939e3d52b40a1eb",
   "lastOpenFiles": [
-    "Uni/PSR/LaTeX PSR.md",
-    "2022.10.11-03-access().md",
+    "Uni/PSR/2022.10.14-00-Kill process in C.md",
     "Uni/PSR/2022.10.11-00-File and directory.md",
     "Uni/PSR/2022.10.11-02-ID associati ai processi.md",
+    "Uni/PSR/2022.10.11-03-access().md",
+    "Uni/PSR/2022.10.11-04-File truncation.md",
+    "Uni/PSR/2022.10.11-05-Hard link e link simbolici.md",
+    "2022.10.11-03-access().md",
+    "Uni/PSR/LaTeX PSR.md",
     "Uni/PSR/2022.09.27-00-Comandi utili.md",
-    "Uni/TOC - PSR.md",
-    "Uni/PSR/2022.10.11-01-stat().md",
-    "Uni/PSR/2022.10.07-07-fcntl().md",
-    "Uni/PSR/2022.10.04-02-fork().md",
-    "Uni/PSR/2022.10.07-06-dup2().md"
+    "Uni/TOC - PSR.md"
   ]
 }
