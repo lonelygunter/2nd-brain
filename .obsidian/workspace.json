@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
+                "file": "box/Uni/PSR/2022.11.29-04-sigwait().md",
                 "mode": "source",
                 "source": true
               }
@@ -32,7 +32,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
+                "file": "box/Uni/PSR/2022.11.29-04-sigwait().md",
                 "mode": "preview",
                 "source": true
               }
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": ".jpg]]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
+                "file": "box/Uni/PSR/2022.11.29-04-sigwait().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
+                "file": "box/Uni/PSR/2022.11.29-04-sigwait().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "box/Uni/PSR/2022.12.13-00-UDP client and server.md"
+                "file": "box/Uni/PSR/2022.11.29-04-sigwait().md"
               }
             }
           }
@@ -186,17 +186,17 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "a9dd36cc32ecbf9f",
+  "active": "cf267100b4056eda",
   "lastOpenFiles": [
-    "2022.10.21-01-Valore di NICE.md",
-    "box/Uni/PSR/LaTeX PSR.md",
-    "box/Uni/PSR/2022.09.27-00-Comandi utili.md",
-    "box/Uni/TOC - PSR.md",
-    "box/Uni/PSR/2022.10.05-02-time().md",
+    "box/Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
+    "box/Uni/BD/2022.11.09-00-NoSQL.md",
+    "box/CP/2022.11.30-00-Time complexity.md",
+    "box/Uni/PSR/2022.10.14-00-Kill process in C.md",
+    "box/Uni/PSR/2022.10.14-00-Process Environment.md",
+    "box/Uni/PSR/2022.10.18-00-Environment list.md",
     "box/Uni/PSR/2022.10.19-00-Process control.md",
-    "2022.10.21-00-Race condition.md",
-    "box/Uni/PSR/2022.10.04-04-exec().md",
-    "box/Uni/PSR/2022.10.04-01-fgets().md",
-    "box/Uni/PSR/2022.10.04-02-fork().md"
+    "box/Uni/PSR/2022.10.19-00-Zombie process.md",
+    "box/Uni/PSR/2022.12.13-00-UDP client and server.md",
+    "2022.10.21-01-Valore di NICE.md"
   ]
 }
