@@ -28,9 +28,6 @@ tags: PSR tommasi
 ## \# System calls
 ![[Uni/PSR/2022.09.27-02-System call]]
 
-## \# Thread
-![[Uni/PSR/2022.10.04-05-Thread]]
-
 ## \# Interrupts \& segnals
 ![[Uni/PSR/2022.10.05-00-Interrupt|Interrupt]]
 
@@ -58,6 +55,7 @@ tags: PSR tommasi
 ![[Uni/PSR/2022.11.15-01-Background e foregound]]
 
 ## \# Thread
+![[Uni/PSR/2022.10.04-05-Thread]]
 ![[Uni/PSR/2022.11.25-00-Thread limits]]
 ![[Uni/PSR/2022.11.25-01-Thread attributes]]
 ![[Uni/PSR/2022.11.29-03-Threads and Signals]]
@@ -76,3 +74,8 @@ tags: PSR tommasi
 
 ## \# Socket
 ![[Uni/PSR/2022.12.07-00-Socket]]
+![[box/Uni/PSR/2022.12.14-00-Domain Name System (DNS)]]
+
+## \# Communication
+![[box/Uni/PSR/2022.12.16-00-Broadcast]]
+![[box/Uni/PSR/2022.12.16-01-Multicast]]
