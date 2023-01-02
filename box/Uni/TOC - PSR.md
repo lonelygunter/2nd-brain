@@ -74,8 +74,8 @@ tags: PSR tommasi
 
 ## \# Socket
 ![[Uni/PSR/2022.12.07-00-Socket]]
-![[box/Uni/PSR/2022.12.14-00-Domain Name System (DNS)]]
+![[Uni/PSR/2022.12.14-00-Domain Name System (DNS)]]
 
 ## \# Communication
-![[box/Uni/PSR/2022.12.16-00-Broadcast]]
-![[box/Uni/PSR/2022.12.16-01-Multicast]]
+![[Uni/PSR/2022.12.16-00-Broadcast]]
+![[Uni/PSR/2022.12.16-01-Multicast]]
