@@ -13,40 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
+                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
               }
-            },
-            "group": "0930b8fbf3f39fe9"
-          }
-        ]
-      },
-      {
-        "id": "49cdd18b9c94d468",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d298c8af39b94e03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": true
-              }
-            },
-            "group": "0930b8fbf3f39fe9"
-          },
-          {
-            "id": "bd7c80b3a462d216",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ]
@@ -79,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "deep",
+                "query": "sockaddr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -154,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
+                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md"
+                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md"
               }
             }
           },
@@ -176,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
+                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,15 +190,15 @@
   },
   "active": "4939e3d52b40a1eb",
   "lastOpenFiles": [
+    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
+    "Uni/PASD/2022.09.23-01-Decision.md",
+    "Uni/TOC - PASD.md",
+    "Uni/PSR/2022.12.07-02-Socket addresses.md",
+    "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
     "Uni/PSR/2022.10.14-00-Kill process in C.md",
     "Uni/PSR/2022.10.11-00-File and directory.md",
     "Uni/PSR/2022.10.11-02-ID associati ai processi.md",
     "Uni/PSR/2022.10.11-03-access().md",
-    "Uni/PSR/2022.10.11-04-File truncation.md",
-    "Uni/PSR/2022.10.11-05-Hard link e link simbolici.md",
-    "2022.10.11-03-access().md",
-    "Uni/PSR/LaTeX PSR.md",
-    "Uni/PSR/2022.09.27-00-Comandi utili.md",
-    "Uni/TOC - PSR.md"
+    "Uni/PSR/2022.10.11-04-File truncation.md"
   ]
 }

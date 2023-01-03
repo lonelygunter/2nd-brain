@@ -50,7 +50,7 @@ tags: PASD ghiani manni
 ![[Uni/PASD/2022.12.01-00-Computer simulation]]
 
 ## \# Exploratory Data Analysis
-![[2022.12.06-00-Exploratory Data Analysis]]
+![[Uni/PASD/2022.12.06-00-Exploratory Data Analysis]]
 
 ## \# Automated Planning
 ![[Uni/PASD/2022.12.09-00-Autometed Planning]]
