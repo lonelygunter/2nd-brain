@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa8570f1787a8abe",
+        "id": "1f616b163fe629cd",
         "type": "tabs",
         "children": [
           {
-            "id": "4939e3d52b40a1eb",
+            "id": "619a31d0db261288",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
+                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": true
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
+                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md"
+                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/PASD/2022.12.06-01-Central Tendency measures.md",
+                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,17 +188,17 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "4939e3d52b40a1eb",
+  "active": "619a31d0db261288",
   "lastOpenFiles": [
-    "Uni/PASD/2022.12.06-00-Exploratory Data Analysis.md",
-    "Uni/PASD/2022.09.23-01-Decision.md",
-    "Uni/TOC - PASD.md",
-    "Uni/PSR/2022.12.07-02-Socket addresses.md",
-    "Uni/PSR/2022.10.12-00-Memoria virtuale di un processo.md",
-    "Uni/PSR/2022.10.14-00-Kill process in C.md",
-    "Uni/PSR/2022.10.11-00-File and directory.md",
-    "Uni/PSR/2022.10.11-02-ID associati ai processi.md",
-    "Uni/PSR/2022.10.11-03-access().md",
-    "Uni/PSR/2022.10.11-04-File truncation.md"
+    "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
+    "Screenshot 2023-01-03 at 11.59.16 1.png",
+    "Uni/BD/2023.01.03-02-Down-up.md",
+    "Uni/BD/2023.01.03-01-Top-down.md",
+    "Uni/BD/2023.01.03-00-Datawarehouse Design.md",
+    "Uni/BD/2022.11.23-00-Datawarehouse.md",
+    "Uni/BD/2023.1.2-00-Analisi dei dati - OLAP.md",
+    "Uni/BD/2023.1.2-06-Slice and dice.md",
+    "Uni/BD/2022.11.23-01-Architettura Datawarehouse.md",
+    "Uni/BD/2022.11.29-00-Hadoop.md"
   ]
 }
