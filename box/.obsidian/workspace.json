@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
-                "mode": "source",
+                "file": "Uni/BD/2023.01.03-01-Top-down.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
+                "file": "Uni/BD/2023.01.03-01-Top-down.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md"
+                "file": "Uni/BD/2023.01.03-01-Top-down.md"
               }
             }
           },
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
+                "file": "Uni/BD/2023.01.03-01-Top-down.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,15 +190,15 @@
   },
   "active": "619a31d0db261288",
   "lastOpenFiles": [
-    "Uni/BD/2023.01.03-03-Dimensional Fact Model (DFM).md",
-    "Screenshot 2023-01-03 at 11.59.16 1.png",
-    "Uni/BD/2023.01.03-02-Down-up.md",
-    "Uni/BD/2023.01.03-01-Top-down.md",
+    "Uni/PSR/2022.12.16-01-Multicast.md",
+    "Uni/BD/2022.09.28-06-Astrazione di DB.md",
     "Uni/BD/2023.01.03-00-Datawarehouse Design.md",
-    "Uni/BD/2022.11.23-00-Datawarehouse.md",
-    "Uni/BD/2023.1.2-00-Analisi dei dati - OLAP.md",
-    "Uni/BD/2023.1.2-06-Slice and dice.md",
-    "Uni/BD/2022.11.23-01-Architettura Datawarehouse.md",
-    "Uni/BD/2022.11.29-00-Hadoop.md"
+    "Uni/BD/2023.01.03-01-Top-down.md",
+    "Uni/BD/2023.01.03-02-Down-up.md",
+    "Uni/BD/2022.11.15-01-Database relazionale vs grafo.md",
+    "Uni/BD/2023.01.02-06-Slice and dice.md",
+    "Uni/BD/2023.01.02-05-Drill-across.md",
+    "Uni/BD/2023.01.02-04-Pivot.md",
+    "Uni/BD/2023.01.02-02-Drill-down.md"
   ]
 }
