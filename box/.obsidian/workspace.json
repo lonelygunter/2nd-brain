@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/2023.01.03-01-Top-down.md",
-                "mode": "preview",
+                "file": "Uni/BD/2022.11.02-04-Transaction.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": true
               }
@@ -32,7 +32,6 @@
       {
         "id": "51acc5932b11095d",
         "type": "tabs",
-        "dimension": 56.11175785797439,
         "children": [
           {
             "id": "c3b5dbc3fd30a5f0",
@@ -60,56 +59,10 @@
             }
           }
         ]
-      },
-      {
-        "id": "7590126ebc98fe26",
-        "type": "tabs",
-        "dimension": 43.88824214202561,
-        "children": [
-          {
-            "id": "373a4914ced6c43a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/TOC - PSR.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "273ec530bbba1d57",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/TOC - PASD.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "8b580f53e53bb6fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Uni/TOC - BD.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": true
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 361.5
   },
   "right": {
     "id": "26fa9bff6ec517ad",
@@ -125,7 +78,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/2023.01.03-01-Top-down.md",
+                "file": "Uni/BD/2022.11.02-04-Transaction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/2023.01.03-01-Top-down.md"
+                "file": "Uni/BD/2022.11.02-04-Transaction.md"
               }
             }
           },
@@ -147,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/2023.01.03-01-Top-down.md",
+                "file": "Uni/BD/2022.11.02-04-Transaction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,15 +143,15 @@
   },
   "active": "619a31d0db261288",
   "lastOpenFiles": [
-    "Uni/PSR/2022.12.16-01-Multicast.md",
-    "Uni/BD/2022.09.28-06-Astrazione di DB.md",
-    "Uni/BD/2023.01.03-00-Datawarehouse Design.md",
-    "Uni/BD/2023.01.03-01-Top-down.md",
+    "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
+    "Uni/BD/2022.09.28-03-Data Base Managment System (DBMS).md",
+    "Uni/BD/2022.09.28-02-Database.md",
+    "Uni/BD/2022.09.28-01-Dato.md",
+    "Uni/BD/2022.09.28-00-Databases.md",
+    "Uni/BD/2023.01.02-00-Analisi dei dati - OLAP.md",
+    "Uni/BD/2022.11.23-00-Datawarehouse.md",
     "Uni/BD/2023.01.03-02-Down-up.md",
-    "Uni/BD/2022.11.15-01-Database relazionale vs grafo.md",
-    "Uni/BD/2023.01.02-06-Slice and dice.md",
-    "Uni/BD/2023.01.02-05-Drill-across.md",
-    "Uni/BD/2023.01.02-04-Pivot.md",
-    "Uni/BD/2023.01.02-02-Drill-down.md"
+    "Uni/BD/2023.01.03-01-Top-down.md",
+    "Uni/BD/2022.10.05-00-Entity resolution.md"
   ]
 }

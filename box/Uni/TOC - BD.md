@@ -21,6 +21,7 @@ big dataL consepts technology and architecture 1st ed balusamy abirami gadomi
 ![[Uni/BD/2022.09.28-07-Modelli di DB]]
 ![[Uni/BD/2022.09.28-02-Database]]
 ![[Uni/BD/2022.09.28-12-Database schema]]
+![[Uni/BD/2022.10.05-00-Entity resolution]]
 
 ## \# Data Modeling Using the Entity–Relationship (ER) Model
 ![[Uni/BD/2022.09.28-14-Entity-Relationship (ER)]]
