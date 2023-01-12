@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Uni/BD/2022.11.02-04-Transaction.md",
-                "mode": "source",
+                "file": "Uni/BD/2022.09.28-14-Entity-Relationship (ER).md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": true
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Uni/BD/2022.11.02-04-Transaction.md",
+                "file": "Uni/BD/2022.09.28-14-Entity-Relationship (ER).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Uni/BD/2022.11.02-04-Transaction.md"
+                "file": "Uni/BD/2022.09.28-14-Entity-Relationship (ER).md"
               }
             }
           },
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Uni/BD/2022.11.02-04-Transaction.md",
+                "file": "Uni/BD/2022.09.28-14-Entity-Relationship (ER).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,15 +143,15 @@
   },
   "active": "619a31d0db261288",
   "lastOpenFiles": [
+    "Uni/BD/2022.11.09-00-NoSQL.md",
+    "Uni/BD/2022.11.09-03-MongoDB.md",
+    "Uni/BD/2022.11.29-00-Hadoop.md",
+    "Uni/BD/2022.11.09-04-Neo4j.md",
+    "Uni/BD/2022.11.09-01-CAP Theorem.md",
+    "Uni/BD/2022.11.02-04-Transaction.md",
     "Uni/BD/2022.12.07-01-Dimensional fact model (DFM).md",
     "Uni/BD/2022.09.28-03-Data Base Managment System (DBMS).md",
     "Uni/BD/2022.09.28-02-Database.md",
-    "Uni/BD/2022.09.28-01-Dato.md",
-    "Uni/BD/2022.09.28-00-Databases.md",
-    "Uni/BD/2023.01.02-00-Analisi dei dati - OLAP.md",
-    "Uni/BD/2022.11.23-00-Datawarehouse.md",
-    "Uni/BD/2023.01.03-02-Down-up.md",
-    "Uni/BD/2023.01.03-01-Top-down.md",
-    "Uni/BD/2022.10.05-00-Entity resolution.md"
+    "Uni/BD/2022.09.28-01-Dato.md"
   ]
 }

@@ -323,8 +323,8 @@
     "Uni/BD/2022.11.15-01-Database relazionale vs grafo.md": "86aee0cfb62e8f94d9e32972a74a3f31",
     "Uni/BD/2022.11.15-00-Database a grafo.md": "0bb255b1b5d713a99cb5884beb1a138b",
     "Uni/BD/2022.11.09-02-BASE.md": "4cdf1b64f808c6e94c1218955d2c7811",
-    "Uni/BD/2022.11.09-01-CAP Theorem.md": "b7892b9a698ae9907be99416d14e9847",
-    "Uni/BD/2022.11.09-00-NoSQL.md": "389357a9ad580663de62684f8a884fa2",
+    "Uni/BD/2022.11.09-01-CAP Theorem.md": "bd61934a2b12ad871dc5a9ae63fb532c",
+    "Uni/BD/2022.11.09-00-NoSQL.md": "2e5d8662de7eb531c180f47a0e850ae2",
     "Uni/BD/2022.11.08-01-Semi-join.md": "40ebf21547624a6e9a5f8dca868289c0",
     "Uni/BD/2022.11.08-00-Distributed DBMS.md": "675dc0607b383e366ec1a6afe6deeecb",
     "Uni/BD/2022.11.02-04-Transaction.md": "7092cf4613d013441b39ce0476864772",
@@ -532,7 +532,9 @@
     "Uni/BD/2023.01.02-01-Roll-up.md": "86f0635b7dc34d7ae6aaf90075521535",
     "Uni/BD/2023.01.02-00-Analisi dei dati - OLAP.md": "293744d39f4c8096d8a2d3d20c4cdb91",
     "Uni/BD/2022.11.09-03-MongoDB.md": "585c1a6a27bbffced86e1833a6a4fe1b",
-    "Uni/BD/2022.10.05-00-Entity resolution.md": "4c344187353bd5e07cdc77e5bc8a9ee0"
+    "Uni/BD/2022.10.05-00-Entity resolution.md": "4c344187353bd5e07cdc77e5bc8a9ee0",
+    "2022.11.09-04-Neo4j.md": "939bd75f0a07bf6b9875b45dc9e99dac",
+    "Uni/BD/2022.11.09-04-Neo4j.md": "939bd75f0a07bf6b9875b45dc9e99dac"
   },
   "fields_dict": {
     "Basic": [
